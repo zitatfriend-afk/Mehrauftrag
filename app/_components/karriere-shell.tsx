@@ -235,20 +235,30 @@ export default function KarriereShell() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Bewerbung: ${form.position || "Offene Stelle"} – ${form.name}`);
-    const body = encodeURIComponent(
-      `Neue Bewerbung über mehrauftrag.de/karriere\n` +
-      `${"─".repeat(40)}\n\n` +
-      `Name:       ${form.name}\n` +
-      `E-Mail:     ${form.email}\n` +
-      `Telefon:    ${form.phone || "nicht angegeben"}\n` +
-      `Position:   ${form.position || "nicht gewählt"}\n\n` +
-      `Vorstellung & Motivation:\n${form.motivation}\n\n` +
-      `${"─".repeat(40)}\n` +
-      `Lebenslauf: ${cvName || "nicht hochgeladen"}` +
-      `${cvName ? "\n→ Bitte Datei manuell als Anhang hinzufügen." : ""}`
-    );
-    window.open(`mailto:info@mehrauftrag.de?subject=${subject}&body=${body}`);
+    // Use location.href for mailto — more reliable than window.open() and
+    // not blocked by popup blockers. Wrapped in try/catch so any browser
+    // quirk (URL too long, CSP, etc.) never crashes the React tree.
+    try {
+      const subject = encodeURIComponent(
+        `Bewerbung: ${form.position || "Offene Stelle"} – ${form.name}`
+      );
+      const body = encodeURIComponent(
+        `Neue Bewerbung über mehrauftrag.de/karriere\n` +
+        `${"─".repeat(40)}\n\n` +
+        `Name:       ${form.name}\n` +
+        `E-Mail:     ${form.email}\n` +
+        `Telefon:    ${form.phone || "nicht angegeben"}\n` +
+        `Position:   ${form.position || "nicht gewählt"}\n\n` +
+        `Vorstellung & Motivation:\n${form.motivation}\n\n` +
+        `${"─".repeat(40)}\n` +
+        `Lebenslauf: ${cvName || "nicht hochgeladen"}` +
+        `${cvName ? "\n→ Bitte Datei manuell als Anhang hinzufügen." : ""}`
+      );
+      window.location.href = `mailto:info@mehrauftrag.de?subject=${subject}&body=${body}`;
+    } catch {
+      // If the email client can't be opened, the success state shows
+      // a manual fallback link (info@mehrauftrag.de) — no crash.
+    }
     setSubmitted(true);
   };
 
@@ -779,6 +789,7 @@ export default function KarriereShell() {
                   { href: "/#branchen", label: "Branchen" },
                   { href: "/#ueber-uns", label: "Über uns" },
                   { href: "/#kontakt", label: "Kontakt" },
+                  { href: "/karriere", label: "Karriere" },
                 ].map((n) => (
                   <Link key={n.href} href={n.href} className="text-[11px] font-medium tracking-wide text-white/28 hover:text-white/65 transition-colors">
                     {n.label}

@@ -345,6 +345,7 @@ const NAV_LINKS = [
   { href: "#branchen", label: "Branchen" },
   { href: "#referenzen", label: "Referenzen" },
   { href: "#faq", label: "FAQ" },
+  { href: "/karriere", label: "Karriere" },
 ];
 
 function PremiumNavLink({ href, label }: { href: string; label: string }) {
