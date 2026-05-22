@@ -879,7 +879,7 @@ export default function Home() {
             </div>
             {/* Mobile hamburger */}
             <button
-              className="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8"
+              className="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8 outline-none focus:outline-none"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Menu"
             >
@@ -899,7 +899,7 @@ export default function Home() {
               ))}
             </button>
           </div>
-          <div className="md:hidden overflow-hidden transition-all duration-300" style={{ maxHeight: menuOpen ? "280px" : "0" }}>
+          <div className="md:hidden overflow-hidden transition-all duration-300" style={{ maxHeight: menuOpen ? "280px" : "0", background: "rgba(4,8,28,0.97)" }}>
             <div
               className="px-5 py-4 space-y-0.5"
               style={{ background: "rgba(4,8,28,0.97)", borderBottom: "1px solid rgba(255,255,255,0.07)", backdropFilter: "blur(20px)" }}
