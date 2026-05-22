@@ -154,6 +154,16 @@ body {
   line-height: 1.0;
 }
 
+/* ─── Hero headline mobile: keep typing text on one line ─── */
+@media (max-width: 767px) {
+  .hero-headline {
+    font-size: clamp(20px, 7vw, 44px) !important;
+  }
+  .hero-headline .typewriter-wrap {
+    white-space: nowrap;
+  }
+}
+
 /* ─── Premium ambient star field ─── */
 /* 5 drift variants — slow organic float, different directions */
 @keyframes pdrift-a {
