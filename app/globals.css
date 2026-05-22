@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020818;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--background);
+  color: #e2e8f0;
+  font-family: var(--font-geist-sans), "Inter", system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── Cursor blink ─── */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.cursor-blink { animation: cursor-blink 1s ease-in-out infinite; }
+
+/* ─── Shimmer on CTA buttons ─── */
+@keyframes shimmer-move {
+  0%   { transform: translateX(-220%) skewX(-20deg); }
+  100% { transform: translateX(320%)  skewX(-20deg); }
+}
+.shimmer-btn { position: relative; overflow: hidden; }
+.shimmer-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 32%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.13), transparent);
+  animation: shimmer-move 3.5s ease-in-out infinite;
+}
+
+/* ─── Floating orbs (organic drift) ─── */
+@keyframes float-orb {
+  0%, 100% { transform: translateY(0px)   translateX(0px)   scale(1);    }
+  33%       { transform: translateY(-44px) translateX(26px)  scale(1.04); }
+  66%       { transform: translateY(28px)  translateX(-32px) scale(0.97); }
+}
+@keyframes float-orb-alt {
+  0%, 100% { transform: translateY(0px)   translateX(0px)   scale(1);    }
+  33%       { transform: translateY(36px)  translateX(-22px) scale(1.03); }
+  66%       { transform: translateY(-30px) translateX(38px)  scale(0.98); }
+}
+@keyframes float-orb-slow {
+  0%, 100% { transform: translateY(0px)  translateX(0px)   scale(1);    }
+  50%       { transform: translateY(20px) translateX(-16px) scale(1.02); }
+}
+.float-orb      { animation: float-orb      20s ease-in-out infinite; }
+.float-orb-alt  { animation: float-orb-alt  26s ease-in-out infinite; }
+.float-orb-slow { animation: float-orb-slow 34s ease-in-out infinite; }
+
+/* ─── Badge pulse ─── */
+@keyframes badge-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+  50%       { box-shadow: 0 0 18px 4px rgba(59, 130, 246, 0.22); }
+}
+.badge-glow { animation: badge-glow 3.2s ease-in-out infinite; }
+
+/* ─── Particles ─── */
+@keyframes particle-drift {
+  0%   { transform: translateY(0px)   translateX(0px); }
+  25%  { transform: translateY(-18px) translateX(10px); }
+  50%  { transform: translateY(-32px) translateX(-6px); }
+  75%  { transform: translateY(-14px) translateX(14px); }
+  100% { transform: translateY(0px)   translateX(0px); }
+}
+@keyframes particle-fade {
+  0%, 100% { opacity: 1;    }
+  40%       { opacity: 0.18; }
+  70%       { opacity: 0.75; }
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform, opacity;
+  animation:
+    particle-drift linear     infinite,
+    particle-fade  ease-in-out infinite;
+}
+
+/* ─── Scanlines (signature texture, ultra-subtle) ─── */
+@keyframes scan-slide {
+  from { background-position: 0 0; }
+  to   { background-position: 0 -120px; }
+}
+.scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(255,255,255,0.011) 3px,
+    rgba(255,255,255,0.011) 4px
+  );
+  animation: scan-slide 6s linear infinite;
+  will-change: background-position;
+}
+
+/* ─── Aurora shimmer bands (cinematic, replaces harsh line sweep) ─── */
+@keyframes aurora-shimmer {
+  0%   { transform: translateY(115vh) rotate(-5deg) scaleX(1.25); opacity: 0; }
+  16%  { opacity: 1; }
+  84%  { opacity: 1; }
+  100% { transform: translateY(-35vh) rotate(-2deg) scaleX(1.25); opacity: 0; }
+}
+@keyframes aurora-shimmer-b {
+  0%   { transform: translateY(112vh) rotate(4deg) scaleX(1.18); opacity: 0; }
+  18%  { opacity: 0.75; }
+  82%  { opacity: 0.75; }
+  100% { transform: translateY(-30vh) rotate(6deg) scaleX(1.18); opacity: 0; }
+}
+.aurora-shimmer   {
+  animation: aurora-shimmer   28s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+.aurora-shimmer-b {
+  animation: aurora-shimmer-b 36s ease-in-out 14s infinite;
+  will-change: transform, opacity;
+}
+
+/* ─── Noise overlay ─── */
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* ─── Gradient text ─── */
+.gradient-text-blue {
+  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 55%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Typewriter CLS guard ─── */
+.typewriter-wrap {
+  display: block;
+  min-height: 1.0em;
+  line-height: 1.0;
+}
+
+/* ─── Premium ambient star field ─── */
+/* 5 drift variants — slow organic float, different directions */
+@keyframes pdrift-a {
+  0%, 100% { transform: translateY(0px)   translateX(0px); }
+  50%       { transform: translateY(-18px) translateX(10px); }
+}
+@keyframes pdrift-b {
+  0%, 100% { transform: translateY(0px)   translateX(0px); }
+  50%       { transform: translateY(-13px) translateX(-15px); }
+}
+@keyframes pdrift-c {
+  0%, 100% { transform: translateY(0px)   translateX(0px); }
+  50%       { transform: translateY(-22px) translateX(7px); }
+}
+@keyframes pdrift-d {
+  0%, 100% { transform: translateY(0px)   translateX(0px); }
+  50%       { transform: translateY(-10px) translateX(-20px); }
+}
+@keyframes pdrift-e {
+  0%, 100% { transform: translateY(0px)   translateX(0px); }
+  50%       { transform: translateY(-20px) translateX(14px); }
+}
+/* Lifecycle fade: invisible wait → appear → hold → disappear → wait */
+@keyframes pfade-dim {
+  0%, 14%   { opacity: 0;    }
+  24%        { opacity: 0.14; }
+  76%        { opacity: 0.14; }
+  88%, 100%  { opacity: 0;    }
+}
+@keyframes pfade-mid {
+  0%, 14%   { opacity: 0;    }
+  24%        { opacity: 0.30; }
+  76%        { opacity: 0.30; }
+  88%, 100%  { opacity: 0;    }
+}
+@keyframes pfade-bright {
+  0%, 14%   { opacity: 0;    }
+  24%        { opacity: 0.58; }
+  76%        { opacity: 0.58; }
+  88%, 100%  { opacity: 0;    }
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar        { width: 3px; }
+::-webkit-scrollbar-track  { background: #020818; }
+::-webkit-scrollbar-thumb  { background: rgba(59,130,246,0.4); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(59, 130, 246, 0.24);
+  color: #ffffff;
+}
