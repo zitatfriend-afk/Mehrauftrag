@@ -1023,7 +1023,9 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-3 justify-center"
             >
               <motion.a
-                href="#kontakt"
+                href="https://calendly.com/mehrauftrag-info/30min?month=2026-05"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ y: -2, boxShadow: "0 12px 40px rgba(59,130,246,0.65), 0 0 0 1px rgba(59,130,246,0.45)" }}
                 whileTap={{ scale: 0.98 }}
                 transition={SPRING_FAST}
@@ -1514,7 +1516,9 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
                 <motion.a
-                  href="https://calendly.com"
+                  href="https://calendly.com/mehrauftrag-info/30min?month=2026-05"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ y: -2, boxShadow: "0 14px 48px rgba(59,130,246,0.68), 0 0 0 1px rgba(59,130,246,0.45)" }}
                   whileTap={{ scale: 0.97 }}
                   transition={SPRING_FAST}
@@ -1527,7 +1531,9 @@ export default function Home() {
                   <span className="relative z-10">Kostenloses Erstgespräch</span>
                 </motion.a>
                 <motion.a
-                  href="https://wa.me/4915XXXXXXXXX"
+                  href="https://wa.me/4915202069625"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ background: "rgba(74,222,128,0.1)", borderColor: "rgba(74,222,128,0.38)", boxShadow: "0 4px 24px rgba(74,222,128,0.14)" }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ duration: 0.18 }}
