@@ -1092,7 +1092,7 @@ export default function Home() {
             >
               {[
                 { n: 50,  suf: "+",  label: "Betreute Betriebe",     desc: "Aus über 12 Branchen" },
-                { n: 100, suf: "K+", label: "Monatliche Reichweite", desc: "Auf allen Plattformen" },
+                { n: 7,   suf: "",   label: "Tage Lieferzeit",       desc: "Schnelle Umsetzung garantiert" },
                 { n: 12,  suf: "+",  label: "Branchen",              desc: "Branchenübergreifende Expertise" },
               ].map((s, i) => (
                 <motion.div
