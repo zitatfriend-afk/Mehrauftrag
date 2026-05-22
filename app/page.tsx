@@ -977,16 +977,15 @@ export default function Home() {
               transition={{ duration: 0.75, delay: 0.14, ease: EASE_OUT }}
             >
               <h1
-                className="font-black tracking-tighter text-white mb-8"
+                className="font-black tracking-tighter text-white mb-8 text-[clamp(28px,9vw,44px)] md:text-[clamp(44px,8.5vw,100px)]"
                 style={{
-                  fontSize: "clamp(44px, 8.5vw, 100px)",
                   lineHeight: 1.0,
                   letterSpacing: "-0.03em",
                 }}
               >
                 {/* Lock height to max headline to eliminate CLS */}
                 <span
-                  className="typewriter-wrap relative inline-block"
+                  className="typewriter-wrap relative inline-block whitespace-nowrap"
                   style={{
                     minHeight: "1.0em",
                   }}
