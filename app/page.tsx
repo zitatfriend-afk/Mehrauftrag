@@ -351,7 +351,7 @@ function PremiumNavLink({ href, label }: { href: string; label: string }) {
       href={href}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative text-[13px] font-medium tracking-[0.03em]"
+      className="relative text-[15px] font-semibold tracking-[0.02em]"
       style={{
         color: hovered ? "rgba(255,255,255,0.95)" : "rgba(148,163,184,0.62)",
         transition: "color 220ms ease",
