@@ -899,10 +899,10 @@ export default function Home() {
               ))}
             </button>
           </div>
-          <div className="md:hidden overflow-hidden transition-all duration-300" style={{ maxHeight: menuOpen ? "280px" : "0", background: "#040c1c" }}>
+          <div className="md:hidden overflow-y-auto transition-all duration-300" style={{ maxHeight: menuOpen ? "calc(100dvh - 64px)" : "0", background: "#040c1c" }}>
             <div
               className="px-5 py-4 space-y-0.5"
-              style={{ background: "#040c1c", borderBottom: "1px solid rgba(255,255,255,0.07)" }}
+              style={{ background: "#040c1c", minHeight: "calc(100dvh - 64px)" }}
             >
               {NAV_LINKS.map((n) => (
                 <a
