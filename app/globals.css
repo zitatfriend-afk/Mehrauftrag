@@ -217,3 +217,25 @@ body {
   background: rgba(59, 130, 246, 0.24);
   color: #ffffff;
 }
+
+/* ─── prefers-reduced-motion: kill all animations ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Mobile: disable heavy background CSS animations ─── */
+@media (max-width: 767px) {
+  .float-orb,
+  .float-orb-alt,
+  .float-orb-slow     { animation: none; }
+  .aurora-shimmer,
+  .aurora-shimmer-b   { animation: none; }
+  .scanlines          { animation: none; }
+  .badge-glow         { animation: none; }
+  .shimmer-btn::after { display: none; }
+  .particle           { animation: none; }
+}

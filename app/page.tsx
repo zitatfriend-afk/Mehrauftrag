@@ -49,28 +49,32 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
   const [val, setVal] = useState(target);
   const spanRef = useRef<HTMLSpanElement>(null);
   const triggered = useRef(false);
+  const rafRef = useRef<number | null>(null);
+  const prefersReduced = useReducedMotion();
   useEffect(() => {
     const el = spanRef.current;
     if (!el) return;
-    let tick: ReturnType<typeof setInterval> | null = null;
     const obs = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting && !triggered.current) {
           triggered.current = true;
+          if (prefersReduced) { setVal(target); return; }
           setVal(0);
-          const dur = 2000, t0 = Date.now();
-          tick = setInterval(() => {
-            const p = Math.min((Date.now() - t0) / dur, 1);
+          const dur = 2000, t0 = performance.now();
+          const tick = (now: number) => {
+            const p = Math.min((now - t0) / dur, 1);
             setVal(Math.floor((1 - Math.pow(1 - p, 3)) * target));
-            if (p >= 1) { setVal(target); if (tick) { clearInterval(tick); tick = null; } }
-          }, 16);
+            if (p < 1) { rafRef.current = requestAnimationFrame(tick); }
+            else { setVal(target); rafRef.current = null; }
+          };
+          rafRef.current = requestAnimationFrame(tick);
         }
       },
       { threshold: 0.4 }
     );
     obs.observe(el);
-    return () => { obs.disconnect(); if (tick) clearInterval(tick); };
-  }, [target]);
+    return () => { obs.disconnect(); if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+  }, [target, prefersReduced]);
   return <span ref={spanRef} suppressHydrationWarning>{`${val}${suffix}`}</span>;
 }
 
@@ -300,10 +304,9 @@ function ServiceCard({ svc }: { svc: Svc }) {
       transition={SPRING_FAST}
       className="relative rounded-2xl p-6 sm:p-7 h-full flex flex-col"
       style={{
-        background: "rgba(255,255,255,0.03)",
+        background: "rgba(255,255,255,0.04)",
         border: "1px solid rgba(255,255,255,0.07)",
         boxShadow: "0 2px 12px rgba(0,0,0,0.2)",
-        backdropFilter: "blur(12px)",
       }}
     >
       <div
@@ -365,10 +368,8 @@ function PremiumNavLink({ href, label }: { href: string; label: string }) {
         className="absolute inset-0 pointer-events-none"
         style={{
           borderRadius: "8px",
-          background: "rgba(59,130,246,0.07)",
-          border: "1px solid rgba(59,130,246,0.13)",
-          backdropFilter: "blur(10px)",
-          boxShadow: "0 0 18px rgba(59,130,246,0.1), inset 0 1px 0 rgba(255,255,255,0.05)",
+          background: "rgba(59,130,246,0.08)",
+          border: "1px solid rgba(59,130,246,0.15)",
           opacity: hovered ? 1 : 0,
           transition: "opacity 220ms ease",
         }}
@@ -505,10 +506,11 @@ const DRIFT_NAMES = ["pdrift-a", "pdrift-b", "pdrift-c", "pdrift-d", "pdrift-e"]
 
 // ─── Hero star field — safe zones, lifecycle fade, 3-tier mouse parallax ─────
 function HeroStarField({
-  springX, springY,
+  springX, springY, isMobile,
 }: {
   springX: MotionValue<number>;
   springY: MotionValue<number>;
+  isMobile: boolean;
 }) {
   const prefersReduced = useReducedMotion();
   const [mounted, setMounted] = useState(false);
@@ -525,7 +527,7 @@ function HeroStarField({
   // Mouse proximity brightening — screen blend, zero re-renders
   const spotBg = useMotionTemplate`radial-gradient(360px circle at ${springX}px ${springY}px, rgba(96,165,250,0.042) 0%, transparent 65%)`;
 
-  if (!mounted || prefersReduced) return null;
+  if (!mounted || prefersReduced || isMobile) return null;
 
   const tier0 = STARS_V2.filter(s => s.t === 0);
   const tier1 = STARS_V2.filter(s => s.t === 1);
@@ -587,31 +589,25 @@ function HeroStarField({
 
 // ─── Background ambient layer — pure MotionValue, zero React re-renders ───────
 function AmbientBackground({
-  springX, springY, rawX, rawY,
+  springX, springY, rawX, rawY, isMobile,
 }: {
   springX: MotionValue<number>;
   springY: MotionValue<number>;
   rawX: MotionValue<number>;
   rawY: MotionValue<number>;
+  isMobile: boolean;
 }) {
-  // Tight inner spotlight follows raw mouse (instant)
+  // All hooks called unconditionally (React rules)
   const innerSpot = useMotionTemplate`radial-gradient(280px circle at ${rawX}px ${rawY}px, rgba(59,130,246,0.07), transparent 70%)`;
-  // Wider ambient glow follows spring mouse (smooth lag)
   const outerGlow = useMotionTemplate`radial-gradient(800px circle at ${springX}px ${springY}px, rgba(59,130,246,0.042), transparent 50%)`;
 
-  // ── SIGNATURE EFFECT: 3-layer parallax depth field ──
-  // Near layer (moves most — simulates foreground stars)
   const nearX = useTransform(springX, v => (v / 1440 - 0.5) * -32);
   const nearY = useTransform(springY, v => (v / 900  - 0.5) * -24);
-  // Mid layer
   const midX  = useTransform(springX, v => (v / 1440 - 0.5) * -16);
   const midY  = useTransform(springY, v => (v / 900  - 0.5) * -12);
-  // Far layer (barely moves — simulates background stars)
   const farX  = useTransform(springX, v => (v / 1440 - 0.5) *  -6);
   const farY  = useTransform(springY, v => (v / 900  - 0.5) *  -4);
 
-  // Aurora orbs: CSS drift animation + motion-value mouse-reactive offset
-  // (different elements so transforms don't conflict)
   const auroraAX = useTransform(springX, v => (v / 1440 - 0.5) * 60);
   const auroraAY = useTransform(springY, v => (v / 900  - 0.5) * 44);
   const auroraBX = useTransform(springX, v => (v / 1440 - 0.5) * -40);
@@ -619,11 +615,22 @@ function AmbientBackground({
   const auroraCX = useTransform(springX, v => (v / 1440 - 0.5) * 22);
   const auroraCY = useTransform(springY, v => (v / 900  - 0.5) * -18);
 
+  // Mobile: pure CSS static gradients — no JS-driven parallax, no blur filters
+  if (isMobile) {
+    return (
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(160deg, #020818 0%, #030d20 45%, #020b17 100%)" }} />
+        <div className="absolute pointer-events-none" style={{ top: "-280px", right: "-220px", width: "920px", height: "920px", background: "radial-gradient(circle, rgba(59,130,246,0.10) 0%, rgba(96,165,250,0.04) 52%, transparent 72%)", borderRadius: "50%" }} />
+        <div className="absolute pointer-events-none" style={{ bottom: "0", left: "-240px", width: "720px", height: "720px", background: "radial-gradient(circle, rgba(99,102,241,0.09) 0%, rgba(139,92,246,0.04) 50%, transparent 70%)", borderRadius: "50%" }} />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 110% 95% at 50% 50%, transparent 48%, rgba(2,8,24,0.65) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(2,8,24,0.18) 0%, transparent 8%, transparent 92%, rgba(2,8,24,0.22) 100%)" }} />
+        <div className="noise-overlay" />
+      </div>
+    );
+  }
+
   return (
-    <div
-      className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
-      style={{ willChange: "transform" }}
-    >
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* ── Base deep blue ── */}
       <div
         className="absolute inset-0"
@@ -637,14 +644,14 @@ function AmbientBackground({
       {/* ── Aurora A — large primary (top right), CSS float + mouse parallax ── */}
       <motion.div
         className="absolute pointer-events-none"
-        style={{ x: auroraAX, y: auroraAY, top: "-280px", right: "-220px" }}
+        style={{ x: auroraAX, y: auroraAY, top: "-280px", right: "-220px", willChange: "transform" }}
       >
         <div
           className="float-orb"
           style={{
             width: "920px", height: "920px",
             background: "radial-gradient(circle, rgba(59,130,246,0.13) 0%, rgba(96,165,250,0.06) 40%, transparent 68%)",
-            filter: "blur(48px)",
+            filter: "blur(40px)",
             borderRadius: "50%",
           }}
         />
@@ -653,14 +660,14 @@ function AmbientBackground({
       {/* ── Aurora B — secondary (bottom left), indigo tones ── */}
       <motion.div
         className="absolute pointer-events-none"
-        style={{ x: auroraBX, y: auroraBY, bottom: "0px", left: "-240px" }}
+        style={{ x: auroraBX, y: auroraBY, bottom: "0px", left: "-240px", willChange: "transform" }}
       >
         <div
           className="float-orb-alt"
           style={{
             width: "720px", height: "720px",
             background: "radial-gradient(circle, rgba(99,102,241,0.11) 0%, rgba(139,92,246,0.05) 40%, transparent 68%)",
-            filter: "blur(60px)",
+            filter: "blur(48px)",
             borderRadius: "50%",
           }}
         />
@@ -669,20 +676,20 @@ function AmbientBackground({
       {/* ── Aurora C — accent (mid right), electric blue ── */}
       <motion.div
         className="absolute pointer-events-none"
-        style={{ x: auroraCX, y: auroraCY, top: "35%", right: "8%" }}
+        style={{ x: auroraCX, y: auroraCY, top: "35%", right: "8%", willChange: "transform" }}
       >
         <div
           className="float-orb-slow"
           style={{
             width: "380px", height: "380px",
             background: "radial-gradient(circle, rgba(59,130,246,0.07) 0%, transparent 68%)",
-            filter: "blur(36px)",
+            filter: "blur(28px)",
             borderRadius: "50%",
           }}
         />
       </motion.div>
 
-      {/* ── Aurora shimmer bands — wide, soft, cinematic (no harsh lines) ── */}
+      {/* ── Aurora shimmer bands — wide, soft, cinematic ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="aurora-shimmer absolute"
@@ -704,8 +711,7 @@ function AmbientBackground({
         />
       </div>
 
-      {/* ── SIGNATURE EFFECT: 3-layer parallax dot field ── */}
-      {/* Far — tiny, barely visible, moves least */}
+      {/* ── 3-layer parallax dot field ── */}
       <motion.div
         className="absolute inset-0"
         style={{
@@ -715,7 +721,6 @@ function AmbientBackground({
           maskImage: "radial-gradient(ellipse 75% 72% at 50% 50%, black 15%, transparent 72%)",
         }}
       />
-      {/* Mid — medium */}
       <motion.div
         className="absolute inset-0"
         style={{
@@ -725,7 +730,6 @@ function AmbientBackground({
           maskImage: "radial-gradient(ellipse 80% 78% at 50% 45%, black 20%, transparent 76%)",
         }}
       />
-      {/* Near — brighter, moves most */}
       <motion.div
         className="absolute inset-0"
         style={{
@@ -736,26 +740,22 @@ function AmbientBackground({
         }}
       />
 
-      {/* ── Scanlines (ultra-subtle digital texture) ── */}
+      {/* ── Scanlines ── */}
       <div className="scanlines absolute inset-0 pointer-events-none" />
 
       {/* ── Film grain / noise ── */}
       <div className="noise-overlay" />
 
-      {/* ── Vignette: draws eye to centre ── */}
+      {/* ── Vignette ── */}
       <div
         className="absolute inset-0"
-        style={{
-          background: "radial-gradient(ellipse 110% 95% at 50% 50%, transparent 48%, rgba(2,8,24,0.65) 100%)",
-        }}
+        style={{ background: "radial-gradient(ellipse 110% 95% at 50% 50%, transparent 48%, rgba(2,8,24,0.65) 100%)" }}
       />
 
-      {/* ── Edge darkness (subtle frame) ── */}
+      {/* ── Edge darkness ── */}
       <div
         className="absolute inset-0"
-        style={{
-          background: "linear-gradient(to bottom, rgba(2,8,24,0.18) 0%, transparent 8%, transparent 92%, rgba(2,8,24,0.22) 100%)",
-        }}
+        style={{ background: "linear-gradient(to bottom, rgba(2,8,24,0.18) 0%, transparent 8%, transparent 92%, rgba(2,8,24,0.22) 100%)" }}
       />
     </div>
   );
@@ -764,6 +764,14 @@ function AmbientBackground({
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function Home() {
   const shouldReduceMotion = useReducedMotion();
+
+  // Mobile detection (pointer: coarse = touch device — no mouse parallax needed)
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    setIsMobile(
+      window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window
+    );
+  }, []);
 
   // Navbar scroll state
   const [scrolled, setScrolled] = useState(false);
@@ -793,13 +801,14 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    if (isMobile) return;
     const fn = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
     };
     window.addEventListener("mousemove", fn, { passive: true });
     return () => window.removeEventListener("mousemove", fn);
-  }, [mouseX, mouseY]);
+  }, [mouseX, mouseY, isMobile]);
 
 
   // Typewriter
@@ -831,7 +840,7 @@ export default function Home() {
   return (
     <>
       {/* Fixed ambient background — zero React re-renders, pure MotionValue */}
-      <AmbientBackground springX={smoothX} springY={smoothY} rawX={mouseX} rawY={mouseY} />
+      <AmbientBackground springX={smoothX} springY={smoothY} rawX={mouseX} rawY={mouseY} isMobile={isMobile} />
 
       <main style={{ color: "#e2e8f0", position: "relative", zIndex: 1 }} className="overflow-x-hidden">
 
@@ -936,7 +945,7 @@ export default function Home() {
           </div>
 
           {/* Premium hero star field — 3 depth layers, mouse parallax */}
-          <HeroStarField springX={smoothX} springY={smoothY} />
+          <HeroStarField springX={smoothX} springY={smoothY} isMobile={isMobile} />
 
           <motion.div
             style={{ y: heroParallax }}
@@ -1093,10 +1102,9 @@ export default function Home() {
                   transition={SPRING_FAST}
                   className="rounded-2xl px-7 py-8 text-center"
                   style={{
-                    background: "rgba(255,255,255,0.03)",
+                    background: "rgba(255,255,255,0.04)",
                     border: "1px solid rgba(255,255,255,0.07)",
                     boxShadow: "0 2px 16px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.03) inset",
-                    backdropFilter: "blur(12px)",
                   }}
                 >
                   <div className="text-5xl font-black mb-2 tracking-tighter gradient-text-blue">
@@ -1280,7 +1288,7 @@ export default function Home() {
                 <div className="relative flex flex-col items-center" style={{ width: "min(340px, 100%)" }}>
                   <div
                     className="absolute top-3 left-3 sm:-top-3 sm:-left-5 z-10 rounded-lg px-3 py-1.5 flex items-center gap-1.5"
-                    style={{ background: "rgba(245,158,11,0.1)", border: "1px solid rgba(245,158,11,0.22)", backdropFilter: "blur(12px)" }}
+                    style={{ background: "rgba(245,158,11,0.12)", border: "1px solid rgba(245,158,11,0.22)" }}
                   >
                     <span className="text-[#f59e0b] text-xs font-bold">⭐ 5.0</span>
                     <span className="text-slate-500 text-[10px]">Bewertung</span>
@@ -1298,7 +1306,7 @@ export default function Home() {
                   </div>
                   <div
                     className="mt-4 rounded-xl px-4 py-3 flex items-center gap-2.5"
-                    style={{ background: "rgba(4,8,28,0.92)", border: "1px solid rgba(255,255,255,0.09)", backdropFilter: "blur(16px)", boxShadow: "0 8px 32px rgba(0,0,0,0.4)" }}
+                    style={{ background: "rgba(4,8,28,0.96)", border: "1px solid rgba(255,255,255,0.09)", boxShadow: "0 8px 32px rgba(0,0,0,0.4)" }}
                   >
                     <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "rgba(59,130,246,0.15)" }}>
                       <svg className="w-3.5 h-3.5 text-[#60a5fa]" fill="currentColor" viewBox="0 0 20 20">
