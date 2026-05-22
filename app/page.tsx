@@ -899,10 +899,10 @@ export default function Home() {
               ))}
             </button>
           </div>
-          <div className="md:hidden overflow-hidden transition-all duration-300" style={{ maxHeight: menuOpen ? "280px" : "0", background: "rgba(4,8,28,0.97)" }}>
+          <div className="md:hidden overflow-hidden transition-all duration-300" style={{ maxHeight: menuOpen ? "280px" : "0", background: "#040c1c" }}>
             <div
               className="px-5 py-4 space-y-0.5"
-              style={{ background: "rgba(4,8,28,0.97)", borderBottom: "1px solid rgba(255,255,255,0.07)", backdropFilter: "blur(20px)" }}
+              style={{ background: "#040c1c", borderBottom: "1px solid rgba(255,255,255,0.07)" }}
             >
               {NAV_LINKS.map((n) => (
                 <a
