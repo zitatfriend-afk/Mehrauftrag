@@ -106,7 +106,7 @@ function Portrait() {
   return (
     <div className="relative w-full h-full overflow-hidden">
       <Image
-        src="/portrait.jpg"
+        src="/neuesprofilbild.png"
         alt="Patrick Sauna – Geschäftsführer MehrAuftrag"
         fill
         sizes="(max-width: 768px) 100vw, 340px"
