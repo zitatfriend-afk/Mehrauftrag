@@ -372,6 +372,41 @@ export default function DatenschutzPage() {
 
       {/* 5. Analyse-Tools und Werbung */}
       <LegalSection title="5. Analyse-Tools und Werbung">
+        <LegalSubsection title="Meta-Pixel (Facebook-Pixel)">
+          <LegalP>
+            Diese Website verwendet zur Reichweiten- und Werbewirkungsmessung den „Meta-Pixel"
+            der Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland
+            („Meta"). Damit lässt sich das Verhalten von Besuchern nachverfolgen, nachdem diese
+            durch Klick auf eine Meta-Werbeanzeige (Facebook bzw. Instagram) auf unsere Website
+            weitergeleitet wurden. So können wir die Wirksamkeit unserer Werbeanzeigen für
+            statistische Zwecke und zur Optimierung auswerten.
+          </LegalP>
+          <LegalP>
+            Der Meta-Pixel sowie die damit verbundene Conversions-API werden ausschließlich nach
+            Ihrer ausdrücklichen Einwilligung über unser Cookie-Banner geladen. Vor Erteilung
+            Ihrer Einwilligung wird der Pixel nicht aktiviert und es werden keine
+            entsprechenden Daten an Meta übermittelt.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage für die Verarbeitung ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a
+            DSGVO sowie § 25 Abs. 1 TDDDG (Speicherung von und Zugriff auf Informationen in Ihrem
+            Endgerät). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
+            widerrufen, indem Sie Ihre Cookie-Einstellungen über die Schaltfläche
+            „Cookie-Einstellungen" am unteren Bildschirmrand anpassen. Die Rechtmäßigkeit der bis
+            zum Widerruf erfolgten Verarbeitung bleibt unberührt.
+          </LegalP>
+          <LegalP>
+            Im Rahmen der Nutzung des Meta-Pixels kann es zu einer Übermittlung
+            personenbezogener Daten an Server von Meta, auch in die USA, kommen. Soweit Daten in
+            die USA übertragen werden, stützt sich Meta auf die Standardvertragsklauseln der
+            EU-Kommission. Weitere Informationen zum Umgang mit Ihren Daten finden Sie in der
+            Datenschutzerklärung von Meta:{" "}
+            <LegalLink href="https://www.facebook.com/privacy/policy/">
+              https://www.facebook.com/privacy/policy/
+            </LegalLink>
+          </LegalP>
+        </LegalSubsection>
+
         <LegalSubsection title="Google Analytics">
           <LegalP>
             Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist
