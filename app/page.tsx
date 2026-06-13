@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   motion,
@@ -43,40 +43,6 @@ const stagger = {
   hidden: {},
   show: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
 };
-
-// ─── Animated Counter ────────────────────────────────────────────────────────
-function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
-  const [val, setVal] = useState(target);
-  const spanRef = useRef<HTMLSpanElement>(null);
-  const triggered = useRef(false);
-  const rafRef = useRef<number | null>(null);
-  const prefersReduced = useReducedMotion();
-  useEffect(() => {
-    const el = spanRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting && !triggered.current) {
-          triggered.current = true;
-          if (prefersReduced) { setVal(target); return; }
-          setVal(0);
-          const dur = 2000, t0 = performance.now();
-          const tick = (now: number) => {
-            const p = Math.min((now - t0) / dur, 1);
-            setVal(Math.floor((1 - Math.pow(1 - p, 3)) * target));
-            if (p < 1) { rafRef.current = requestAnimationFrame(tick); }
-            else { setVal(target); rafRef.current = null; }
-          };
-          rafRef.current = requestAnimationFrame(tick);
-        }
-      },
-      { threshold: 0.4 }
-    );
-    obs.observe(el);
-    return () => { obs.disconnect(); if (rafRef.current) cancelAnimationFrame(rafRef.current); };
-  }, [target, prefersReduced]);
-  return <span ref={spanRef} suppressHydrationWarning>{`${val}${suffix}`}</span>;
-}
 
 // ─── Logo ─────────────────────────────────────────────────────────────────────
 function MALogo({ variant = "dark" }: { variant?: "light" | "dark" }) {
@@ -122,108 +88,128 @@ function Portrait() {
   );
 }
 
-// ─── Testimonials ─────────────────────────────────────────────────────────────
-const TESTIMONIALS = [
+// ─── Referenzen ───────────────────────────────────────────────────────────────
+const REFERENCES = [
   {
-    name: "Michael Bauer",
-    role: "Inhaber, Elektro Bauer GmbH",
-    text: "Seit wir mit MehrAuftrag zusammenarbeiten, haben sich unsere Anfragen mehr als verdreifacht. Die Website konvertiert extrem gut beste Investition des Jahres.",
-    emoji: "👷‍♂️",
+    name: "SOROKIN Mobiler Schweißservice",
+    branche: "Metallbau & Schweißservice · Sauerland",
+    text: "Moderner, conversion-orientierter Online-Auftritt für einen mobilen Schweißservice – mit klarer Leistungsübersicht, Galerie und direkter Anfrage per Telefon und WhatsApp.",
+    href: "https://www.sorokinschweisser.de/",
+    domain: "sorokinschweisser.de",
+    image: "/referenzen/sorokin.jpg",
+    emoji: "🔧",
   },
   {
-    name: "Sarah Müller",
-    role: "Inhaberin, Physiotherapie Zentrum München",
-    text: "+280% mehr Neupatienten im ersten Quartal. Das Team hält immer, was es verspricht pünktlich, professionell, messbar.",
-    emoji: "👩‍⚕️",
-  },
-  {
-    name: "Thomas Hoffmann",
-    role: "Geschäftsführer, Hoffmann Haustechnik",
-    text: "Professionelles Team, schnelle Umsetzung, messbare Ergebnisse. Genau das, was wachsende Betriebe brauchen.",
-    emoji: "🏗️",
+    name: "Blitzgebäudereinigung",
+    branche: "Gebäudereinigung · Hamburg",
+    text: "Professionelle Website für ein Hamburger Reinigungsunternehmen – alle Leistungen klar strukturiert, mit unkomplizierter Angebotsanfrage und durchgängig responsivem Design.",
+    href: "https://www.blitzgebaeudereinigung.com/",
+    domain: "blitzgebaeudereinigung.com",
+    image: "/referenzen/blitz.png",
+    emoji: "🧽",
   },
 ];
 
-function TestimonialSlider() {
-  const [cur, setCur] = useState(0);
-  const [fading, setFading] = useState(false);
-  const fadeRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const goTo = useCallback((i: number) => {
-    if (fadeRef.current) clearTimeout(fadeRef.current);
-    setFading(true);
-    fadeRef.current = setTimeout(() => { setCur(i); setFading(false); fadeRef.current = null; }, 240);
-  }, []);
-  useEffect(() => {
-    const t = setTimeout(() => goTo((cur + 1) % TESTIMONIALS.length), 6000);
-    return () => { clearTimeout(t); if (fadeRef.current) { clearTimeout(fadeRef.current); fadeRef.current = null; } };
-  }, [cur, goTo]);
-  const t = TESTIMONIALS[cur];
+const TRUST_POINTS = [
+  "Individuelle Webseitenentwicklung",
+  "Modernes responsives Design",
+  "SEO-optimierte Umsetzung",
+  "Persönlicher Ansprechpartner",
+  "Schnelle Umsetzung ohne Agentur-Bürokratie",
+];
+
+function ReferenceCards() {
   return (
-    <div>
-      <div style={{ transition: "opacity 0.24s ease", opacity: fading ? 0 : 1 }}>
-        <div
-          className="max-w-2xl mx-auto rounded-2xl p-8 md:p-10"
-          style={{
-            background: "rgba(255,255,255,0.04)",
-            backdropFilter: "blur(16px)",
-            border: "1px solid rgba(59,130,246,0.15)",
-            boxShadow: "0 4px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset",
-          }}
-        >
-          <div className="flex gap-1 mb-6">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <svg key={i} className="w-4 h-4 fill-[#f59e0b]" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-          </div>
-          <p className="text-slate-300 text-lg leading-relaxed mb-8 font-light">&ldquo;{t.text}&rdquo;</p>
-          <div className="flex items-center gap-3">
-            <div
-              className="w-10 h-10 rounded-full flex items-center justify-center text-xl flex-shrink-0"
-              style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        {REFERENCES.map((r) => (
+          <motion.div
+            key={r.domain}
+            variants={fadeUp}
+            whileHover={{ y: -6, borderColor: "rgba(59,130,246,0.3)" }}
+            transition={SPRING_FAST}
+            className="group flex flex-col overflow-hidden rounded-2xl"
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              backdropFilter: "blur(16px)",
+              border: "1px solid rgba(59,130,246,0.15)",
+              boxShadow: "0 4px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset",
+            }}
+          >
+            {/* Screenshot (klickbar) */}
+            <a
+              href={r.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${r.name} – Website ansehen`}
+              className="relative block overflow-hidden"
+              style={{ aspectRatio: "16 / 10", borderBottom: "1px solid rgba(255,255,255,0.07)" }}
             >
-              {t.emoji}
+              <Image
+                src={r.image}
+                alt={`Website von ${r.name}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 600px"
+                className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+              />
+              <div
+                className="absolute inset-0 pointer-events-none transition-opacity duration-300 opacity-60 group-hover:opacity-30"
+                style={{ background: "linear-gradient(to top, rgba(4,8,28,0.55) 0%, transparent 45%)" }}
+              />
+            </a>
+
+            {/* Inhalt */}
+            <div className="flex flex-col flex-1 p-7 md:p-8">
+              <div className="flex items-center gap-3 mb-3">
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
+                  style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}
+                >
+                  {r.emoji}
+                </div>
+                <div>
+                  <div className="font-bold text-[15px] text-white leading-tight">{r.name}</div>
+                  <div className="text-[#60a5fa] text-xs mt-1 font-medium tracking-wide">{r.branche}</div>
+                </div>
+              </div>
+              <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1">{r.text}</p>
+              <motion.a
+                href={r.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -2, boxShadow: "0 8px 32px rgba(59,130,246,0.5)" }}
+                whileTap={{ scale: 0.97 }}
+                transition={SPRING_FAST}
+                className="shimmer-btn inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl font-semibold text-white text-sm self-start"
+                style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 16px rgba(59,130,246,0.32)" }}
+              >
+                <span>Website ansehen</span>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H8M17 7v9" />
+                </svg>
+              </motion.a>
             </div>
-            <div>
-              <div className="font-semibold text-sm text-white">{t.name}</div>
-              <div className="text-slate-500 text-xs mt-0.5">{t.role}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center justify-center gap-3 mt-8">
-        <button
-          onClick={() => goTo((cur - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)}
-          className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200"
-          style={{ border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.04)" }}
-          aria-label="Zurück"
-        >
-          <svg className="w-3.5 h-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        {TESTIMONIALS.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => goTo(i)}
-            className="rounded-full transition-all duration-300"
-            style={{ width: i === cur ? "24px" : "6px", height: "6px", background: i === cur ? "#3b82f6" : "rgba(255,255,255,0.15)" }}
-            aria-label={`Testimonial ${i + 1}`}
-          />
+          </motion.div>
         ))}
-        <button
-          onClick={() => goTo((cur + 1) % TESTIMONIALS.length)}
-          className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200"
-          style={{ border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.04)" }}
-          aria-label="Weiter"
-        >
-          <svg className="w-3.5 h-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
       </div>
-    </div>
+
+      {/* Vertrauensbereich */}
+      <motion.div
+        variants={fadeUp}
+        className="max-w-5xl mx-auto mt-10 flex flex-wrap items-center justify-center gap-x-7 gap-y-3"
+      >
+        {TRUST_POINTS.map((point) => (
+          <div key={point} className="flex items-center gap-2.5">
+            <div className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0" style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}>
+              <svg className="w-2.5 h-2.5 text-[#3b82f6]" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <span className="text-sm text-slate-300">{point}</span>
+          </div>
+        ))}
+      </motion.div>
+    </>
   );
 }
 
@@ -1091,14 +1077,14 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-3 gap-4"
             >
               {[
-                { n: 50,  suf: "+",  label: "Betreute Betriebe",     desc: "Aus über 12 Branchen" },
-                { n: 7,   suf: "",   label: "Tage Lieferzeit",       desc: "Schnelle Umsetzung garantiert" },
-                { n: 12,  suf: "+",  label: "Branchen",              desc: "Branchenübergreifende Expertise" },
+                { head: "Handwerk & Dienstleistung", label: "Unsere Spezialität",       desc: "Vom Schweißbetrieb bis zur Gebäudereinigung" },
+                { head: "Schlüsselfertig",           label: "Deine Website gehört dir",  desc: "Keine Bindung, keine Abhängigkeit" },
+                { head: "Bundesweit",                label: "Von Hamburg bis ins Sauerland", desc: "Lokale Betriebe, echte Projekte" },
               ].map((s, i) => (
                 <motion.div
                   key={i}
                   variants={fadeUp}
-                 
+
                   whileHover={{ y: -4, borderColor: "rgba(59,130,246,0.28)" }}
                   transition={SPRING_FAST}
                   className="rounded-2xl px-7 py-8 text-center"
@@ -1108,8 +1094,8 @@ export default function Home() {
                     boxShadow: "0 2px 16px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.03) inset",
                   }}
                 >
-                  <div className="text-5xl font-black mb-2 tracking-tighter gradient-text-blue">
-                    <Counter target={s.n} suffix={s.suf} />
+                  <div className="text-2xl sm:text-3xl font-black mb-2 tracking-tight gradient-text-blue leading-tight">
+                    {s.head}
                   </div>
                   <div className="font-semibold text-sm mb-1 text-white">{s.label}</div>
                   <div className="text-xs text-slate-500">{s.desc}</div>
@@ -1289,10 +1275,10 @@ export default function Home() {
                 <div className="relative flex flex-col items-center" style={{ width: "min(340px, 100%)" }}>
                   <div
                     className="absolute top-3 left-3 sm:-top-3 sm:-left-5 z-10 rounded-lg px-3 py-1.5 flex items-center gap-1.5"
-                    style={{ background: "rgba(245,158,11,0.12)", border: "1px solid rgba(245,158,11,0.22)" }}
+                    style={{ background: "rgba(59,130,246,0.12)", border: "1px solid rgba(59,130,246,0.22)" }}
                   >
-                    <span className="text-[#f59e0b] text-xs font-bold">⭐ 5.0</span>
-                    <span className="text-slate-500 text-[10px]">Bewertung</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#3b82f6]" />
+                    <span className="text-[#60a5fa] text-[11px] font-semibold">Dein Ansprechpartner</span>
                   </div>
                   <div
                     className="relative overflow-hidden w-full"
@@ -1315,8 +1301,8 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <div className="text-white font-semibold text-[13px] leading-none mb-0.5">50+ Betriebe</div>
-                      <div className="text-white/40 text-[11px]">erfolgreich betreut</div>
+                      <div className="text-white font-semibold text-[13px] leading-none mb-0.5">Echte Projekte</div>
+                      <div className="text-white/40 text-[11px]">erfolgreich umgesetzt</div>
                     </div>
                   </div>
                 </div>
@@ -1344,7 +1330,7 @@ export default function Home() {
                   Pakete. Nur maßgeschneiderte Strategien, die messbar mehr Aufträge bringen.
                 </p>
                 <div className="space-y-2.5 mb-8">
-                  {["50+ Betriebe erfolgreich betreut", "Persönlicher Ansprechpartner", "100% Ergebnisorientiert", "90-Tage-Ergebnis-Garantie"].map((item) => (
+                  {["Echte Projekte aus Handwerk & Dienstleistung", "Persönlicher Ansprechpartner", "100% Ergebnisorientiert", "90-Tage-Ergebnis-Garantie"].map((item) => (
                     <div key={item} className="flex items-center gap-3">
                       <div className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0" style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}>
                         <svg className="w-2.5 h-2.5 text-[#3b82f6]" fill="currentColor" viewBox="0 0 20 20">
@@ -1444,17 +1430,24 @@ export default function Home() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
-              className="text-center mb-14 max-w-xl mx-auto"
+              className="text-center mb-14 max-w-2xl mx-auto"
             >
               <SectionLabel center>Referenzen</SectionLabel>
               <h2 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight mb-4 text-white">
-                Echte Ergebnisse.
+                Erfolgreich umgesetzte Kundenprojekte
               </h2>
               <p className="text-lg text-slate-400">
-                Keine inszenierten Testimonials. Echte Kunden, echte Zahlen.
+                Keine Musterbeispiele. Keine Demo-Projekte. Diese Webseiten wurden von uns für reale Kunden entwickelt.
               </p>
             </motion.div>
-            <TestimonialSlider />
+            <motion.div
+              variants={stagger}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <ReferenceCards />
+            </motion.div>
           </div>
         </section>
 
