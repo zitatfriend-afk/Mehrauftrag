@@ -151,15 +151,15 @@ const PRICE_INCLUDES = [
 
 const TESTIMONIALS = [
   {
-    text: "Seit der neuen Website kommen regelmäßig Anfragen rein. Hätte ich früher machen sollen.",
-    name: "M.H., Handwerksbetrieb, Region Frankfurt",
+    text: "Fester Preis, kein Kleingedrucktes. Sie wissen vorab genau, was Sie bekommen – und was es kostet. Monatlich kündbar, keine lange Bindung.",
+    name: "Unser Versprechen an Sie",
   },
   {
-    text: "Endlich werden wir bei Google gefunden. Die Seite war in einer Woche fertig, genau wie versprochen.",
-    name: "Elektrobetrieb, Rhein-Main",
+    text: "Persönlicher Ansprechpartner aus der Region – Sie reden mit einem Menschen, nicht mit einer Hotline. Rückruf innerhalb von 24 Stunden, ohne Verkaufsdruck.",
+    name: "MehrAuftrag · Patrick Sauna",
   },
 ];
-/* TODO: Echte Bewertungen einfügen, sobald Google Business Profile verifiziert ist */
+/* TODO: Sobald echte Google-Bewertungen vorliegen, hier als Kundenstimmen einsetzen. */
 
 const FAQS: { q: string; a: string }[] = [
   {
@@ -403,21 +403,33 @@ export default function ElektrikerLanding() {
             <Link href="/" aria-label="MehrAuftrag Startseite" className="flex items-center">
               <MALogo />
             </Link>
-            <a
-              href="#anfrage"
-              className="shimmer-btn inline-flex items-center gap-2 rounded-lg px-4 py-2 text-[13px] font-semibold text-white"
-              style={{
-                background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
-                boxShadow: "0 2px 12px rgba(59,130,246,0.4)",
-              }}
-            >
-              Kostenloses Gespräch
-            </a>
+            <div className="flex items-center gap-2">
+              <a
+                href="tel:+4915202069625"
+                className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-[13px] font-semibold text-slate-100"
+                style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.04)" }}
+              >
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span className="hidden sm:inline">Anrufen</span>
+              </a>
+              <a
+                href="#anfrage"
+                className="shimmer-btn inline-flex items-center gap-2 rounded-lg px-4 py-2 text-[13px] font-semibold text-white"
+                style={{
+                  background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+                  boxShadow: "0 2px 12px rgba(59,130,246,0.4)",
+                }}
+              >
+                Kostenlos anfragen
+              </a>
+            </div>
           </div>
         </header>
 
         {/* ─── Hero ─── */}
-        <section className="relative flex min-h-[88vh] items-center justify-center overflow-hidden px-5 sm:px-8">
+        <section className="relative flex items-center justify-center overflow-hidden px-5 pt-24 pb-12 sm:px-8 sm:pt-28 sm:pb-16">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 55% at 60% 26%, rgba(59,130,246,0.13) 0%, transparent 100%)" }} />
           </div>
@@ -425,7 +437,7 @@ export default function ElektrikerLanding() {
             initial="hidden"
             animate="show"
             variants={stagger}
-            className="relative z-10 mx-auto max-w-3xl pt-32 pb-20 text-center"
+            className="relative z-10 mx-auto max-w-2xl pt-6 pb-4 text-center"
           >
             <motion.div variants={fadeUp}>
               <div
@@ -444,8 +456,8 @@ export default function ElektrikerLanding() {
               className="font-black tracking-tighter text-white"
               style={{ fontSize: "clamp(34px, 6.5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em" }}
             >
-              Websites für Elektriker in{" "}
-              <span className="gradient-text-blue">Frankfurt &amp; Rhein-Main</span>
+              Mehr Anfragen für Ihren{" "}
+              <span className="gradient-text-blue">Elektrobetrieb</span>
             </motion.h1>
 
             <motion.p
@@ -453,23 +465,27 @@ export default function ElektrikerLanding() {
               className="mx-auto mt-7 max-w-xl text-lg font-light leading-relaxed sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              In 7 Tagen online. Mehr Anfragen. Fester Preis.
+              Eine Website, die bei Google gefunden wird — in 7 Tagen online, zum festen Preis. Für Elektriker in Frankfurt &amp; Rhein-Main.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="mt-10 flex justify-center">
-              <a
-                href="#anfrage"
-                className="shimmer-btn group inline-flex items-center justify-center gap-2.5 rounded-xl px-8 py-4 text-base font-semibold text-white"
-                style={{
-                  background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
-                  boxShadow: "0 4px 20px rgba(59,130,246,0.45), 0 0 0 1px rgba(59,130,246,0.3)",
-                }}
+            <motion.div variants={fadeUp} className="mx-auto mt-7 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300">
+              <span className="inline-flex items-center gap-1.5"><CheckIcon /> Fester Preis</span>
+              <span className="inline-flex items-center gap-1.5"><CheckIcon /> In 7 Tagen online</span>
+              <span className="inline-flex items-center gap-1.5"><CheckIcon /> Monatlich kündbar</span>
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="mx-auto mt-8 max-w-md">
+              <div
+                className="rounded-2xl p-6 text-left"
+                style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(59,130,246,0.28)", boxShadow: "0 12px 50px rgba(0,0,0,0.4)" }}
               >
-                <span className="relative z-10">Jetzt kostenloses Gespräch sichern</span>
-                <svg className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
+                <p className="mb-4 text-center text-[15px] font-bold text-white">Kostenloses Erstgespräch sichern</p>
+                <LeadForm />
+              </div>
+              <p className="mt-4 text-center text-sm text-slate-400">
+                Lieber direkt anrufen?{" "}
+                <a href="tel:+4915202069625" className="font-semibold text-[#60a5fa] hover:text-white">+49 152 02069625</a>
+              </p>
             </motion.div>
           </motion.div>
         </section>
@@ -635,10 +651,10 @@ export default function ElektrikerLanding() {
           <div className="mx-auto max-w-4xl">
             <div className="mb-10 text-center">
               <motion.div variants={fadeUp}>
-                <SectionLabel center>Stimmen</SectionLabel>
+                <SectionLabel center>Warum MehrAuftrag</SectionLabel>
               </motion.div>
               <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">
-                Was Betriebe sagen
+                Fair, transparent, persönlich
               </motion.h2>
             </div>
 

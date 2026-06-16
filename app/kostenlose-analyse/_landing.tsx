@@ -211,15 +211,15 @@ const STEPS = [
 
 const TESTIMONIALS = [
   {
-    text: "Die Analyse war ein Augenöffner – ich wusste gar nicht, wie viele Anfragen mir entgehen. Sehr hilfreich.",
-    name: "M.H., Handwerksbetrieb, Region Frankfurt",
+    text: "Komplett kostenlos und unverbindlich. Sie bekommen eine ehrliche Einschätzung Ihres Online-Auftritts – und entscheiden danach völlig frei.",
+    name: "Unser Versprechen an Sie",
   },
   {
-    text: "Kostenlos, ehrlich und ohne Verkaufsdruck. Genau so sollte das sein.",
-    name: "Elektrobetrieb, Rhein-Main",
+    text: "Persönlicher Ansprechpartner aus der Region, kein Fachchinesisch. Rückruf innerhalb von 24 Stunden, ganz ohne Verkaufsdruck.",
+    name: "MehrAuftrag · Patrick Sauna",
   },
 ];
-/* TODO: Echte Bewertungen einfügen, sobald Google Business Profile verifiziert ist */
+/* TODO: Sobald echte Google-Bewertungen vorliegen, hier als Kundenstimmen einsetzen. */
 
 const FAQS: { q: string; a: string }[] = [
   { q: "Ist die Analyse wirklich kostenlos?", a: "Ja, komplett kostenlos und unverbindlich. Kein Kleingedrucktes, keine versteckten Kosten." },
@@ -381,9 +381,17 @@ export default function AnalyseLanding() {
         <header className="absolute top-0 left-0 right-0 z-50">
           <div className="mx-auto flex h-[64px] max-w-6xl items-center justify-between px-5 sm:px-8">
             <Link href="/" aria-label="MehrAuftrag Startseite" className="flex items-center"><MALogo /></Link>
-            <a href="#anfrage" className="shimmer-btn inline-flex items-center gap-2 rounded-lg px-4 py-2 text-[13px] font-semibold text-white" style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 2px 12px rgba(59,130,246,0.4)" }}>
-              Kostenlos anfragen
-            </a>
+            <div className="flex items-center gap-2">
+              <a href="tel:+4915202069625" className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-[13px] font-semibold text-slate-100" style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.04)" }}>
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span className="hidden sm:inline">Anrufen</span>
+              </a>
+              <a href="#anfrage" className="shimmer-btn inline-flex items-center gap-2 rounded-lg px-4 py-2 text-[13px] font-semibold text-white" style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 2px 12px rgba(59,130,246,0.4)" }}>
+                Kostenlos anfragen
+              </a>
+            </div>
           </div>
         </header>
 
@@ -415,11 +423,15 @@ export default function AnalyseLanding() {
                 <div className="flex items-center gap-2.5 text-sm text-slate-200"><CheckIcon /> Konkrete Empfehlungen statt Fachchinesisch</div>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="mt-9">
-                <a href="#anfrage" className="shimmer-btn group inline-flex items-center justify-center gap-2.5 rounded-xl px-8 py-4 text-base font-semibold text-white" style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 20px rgba(59,130,246,0.45), 0 0 0 1px rgba(59,130,246,0.3)" }}>
-                  <span className="relative z-10">Kostenlose Analyse anfragen</span>
-                  <svg className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </a>
+              <motion.div variants={fadeUp} className="mt-8 max-w-md">
+                <div className="rounded-2xl p-6 text-left" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(59,130,246,0.28)", boxShadow: "0 12px 50px rgba(0,0,0,0.4)" }}>
+                  <p className="mb-4 text-center text-[15px] font-bold text-white">Kostenlose Analyse sichern</p>
+                  <LeadForm />
+                </div>
+                <p className="mt-4 text-center text-sm text-slate-400">
+                  Lieber direkt anrufen?{" "}
+                  <a href="tel:+4915202069625" className="font-semibold text-[#60a5fa] hover:text-white">+49 152 02069625</a>
+                </p>
               </motion.div>
             </motion.div>
 
@@ -472,8 +484,8 @@ export default function AnalyseLanding() {
         <motion.section initial="hidden" whileInView="show" viewport={SECTION_VIEWPORT} variants={stagger} className="relative px-5 py-16 sm:px-8 sm:py-20">
           <div className="mx-auto max-w-4xl">
             <div className="mb-10 text-center">
-              <motion.div variants={fadeUp}><SectionLabel center>Stimmen</SectionLabel></motion.div>
-              <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">Was Betriebe sagen</motion.h2>
+              <motion.div variants={fadeUp}><SectionLabel center>Warum MehrAuftrag</SectionLabel></motion.div>
+              <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">Ehrlich, kostenlos, ohne Risiko</motion.h2>
             </div>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               {TESTIMONIALS.map((t, i) => (
