@@ -19,8 +19,24 @@ import { motion, AnimatePresence } from "framer-motion";
 // ─── Konfiguration (öffentliche Werte) ───────────────────────────────────────
 const SUBMIT_URL =
   "https://ezrxxxilssmzcavdvvbe.supabase.co/functions/v1/submit-website-lead";
-const LEAD_SOURCE = "Website - Analyse Elektriker LP";
+const PAGE_LABEL = "Analyse Elektriker LP";
+const LEAD_SOURCE = `Website - ${PAGE_LABEL}`;
 const PIXEL_CONTENT = "Analyse Elektriker LP";
+
+/**
+ * Ermittelt den Traffic-Kanal aus den URL-Parametern (Meta = fbclid, Google = gclid),
+ * damit im CRM klar erkennbar ist, woher der Lead kam.
+ */
+function getLeadAttribution(): { source: string; campaign: string | null } {
+  if (typeof window === "undefined") return { source: LEAD_SOURCE, campaign: null };
+  const p = new URLSearchParams(window.location.search);
+  const us = (p.get("utm_source") || "").toLowerCase();
+  let channel = "Website";
+  if (p.get("gclid") || us.includes("google")) channel = "Google Ad";
+  else if (p.get("fbclid") || us.includes("facebook") || us.includes("instagram") || us.includes("meta")) channel = "Meta Ad";
+  else if (us.includes("tiktok") || us.includes("linkedin") || us.includes("youtube") || us.includes("social")) channel = "Social";
+  return { source: `${channel} - ${PAGE_LABEL}`, campaign: p.get("utm_campaign") };
+}
 
 declare global {
   interface Window {
@@ -245,10 +261,11 @@ function LeadForm() {
     }
     setState("loading");
     try {
+      const attr = getLeadAttribution();
       const res = await fetch(SUBMIT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), phone: phone.trim(), source: LEAD_SOURCE }),
+        body: JSON.stringify({ name: name.trim(), phone: phone.trim(), source: attr.source, campaign: attr.campaign }),
       });
       if (!res.ok) throw new Error("Request failed");
 
