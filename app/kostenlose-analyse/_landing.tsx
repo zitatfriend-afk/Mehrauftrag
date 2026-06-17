@@ -418,7 +418,8 @@ export default function AnalyseLanding() {
             <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 55% at 60% 24%, rgba(59,130,246,0.13) 0%, transparent 100%)" }} />
           </div>
           <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-            <motion.div initial="hidden" animate="show" variants={stagger}>
+            {/* initial={false}: Hero sofort sichtbar, unabhängig von der Animation */}
+            <motion.div initial={false} animate="show" variants={stagger}>
               <motion.div variants={fadeUp}>
                 <div className="badge-glow mb-7 inline-flex items-center gap-2 rounded-full px-4 py-1.5" style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.26)" }}>
                   <span className="h-1.5 w-1.5 rounded-full bg-[#60a5fa] animate-pulse" />
@@ -452,7 +453,7 @@ export default function AnalyseLanding() {
               </motion.div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE_OUT, delay: 0.15 }}>
+            <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE_OUT, delay: 0.15 }}>
               <AnalysisVisual />
             </motion.div>
           </div>

@@ -451,8 +451,11 @@ export default function ElektrikerLanding() {
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 55% at 60% 26%, rgba(59,130,246,0.13) 0%, transparent 100%)" }} />
           </div>
+          {/* initial={false}: Hero rendert sofort sichtbar (auch ohne JS/Animation).
+              Oberhalb der Falz für bezahlten Traffic darf Sichtbarkeit NIE von einer
+              Einblende-Animation abhängen. */}
           <motion.div
-            initial="hidden"
+            initial={false}
             animate="show"
             variants={stagger}
             className="relative z-10 mx-auto max-w-2xl pt-6 pb-4 text-center"
