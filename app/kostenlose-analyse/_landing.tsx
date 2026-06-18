@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import MaMark from "../_components/ma-mark";
 
@@ -240,6 +241,27 @@ const TESTIMONIALS = [
   },
 ];
 /* TODO: Sobald echte Google-Bewertungen vorliegen, hier als Kundenstimmen einsetzen. */
+
+const REFERENCES = [
+  {
+    name: "SOROKIN Mobiler Schweißservice",
+    branche: "Metallbau & Schweißservice · Sauerland",
+    text: "Conversion-orientierter Auftritt für einen mobilen Schweißservice – klare Leistungen, Galerie, direkte Anfrage per Anruf & WhatsApp.",
+    href: "https://www.sorokinschweisser.de/",
+    domain: "sorokinschweisser.de",
+    image: "/referenzen/sorokin.jpg",
+    emoji: "🔧",
+  },
+  {
+    name: "Blitzgebäudereinigung",
+    branche: "Gebäudereinigung · Hamburg",
+    text: "Professionelle Website für ein Hamburger Reinigungsunternehmen – Leistungen klar strukturiert, unkomplizierte Angebotsanfrage.",
+    href: "https://www.blitzgebaeudereinigung.com/",
+    domain: "blitzgebaeudereinigung.com",
+    image: "/referenzen/blitz.png",
+    emoji: "🧽",
+  },
+];
 
 const FAQS: { q: string; a: string }[] = [
   { q: "Ist die Analyse wirklich kostenlos?", a: "Ja, komplett kostenlos und unverbindlich. Kein Kleingedrucktes, keine versteckten Kosten." },
@@ -499,6 +521,35 @@ export default function AnalyseLanding() {
                   <h3 className="mb-2 text-base font-bold text-white">{s.title}</h3>
                   <p className="text-sm leading-relaxed text-slate-400">{s.desc}</p>
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Referenzen / Echte Kundenprojekte */}
+        <motion.section initial="hidden" whileInView="show" viewport={SECTION_VIEWPORT} variants={stagger} className="relative px-5 py-16 sm:px-8 sm:py-20">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-10 text-center">
+              <motion.div variants={fadeUp}><SectionLabel center>Echte Projekte</SectionLabel></motion.div>
+              <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">Websites, die wir für echte Betriebe gebaut haben</motion.h2>
+              <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400">Keine Musterbeispiele – echte Kunden aus Handwerk &amp; Dienstleistung. Schauen Sie selbst rein.</motion.p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {REFERENCES.map((r) => (
+                <motion.a key={r.domain} href={r.href} target="_blank" rel="noopener" variants={fadeUp} whileHover={{ y: -5 }} className="group flex flex-col overflow-hidden rounded-2xl" style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", boxShadow: "0 4px 30px rgba(0,0,0,0.3)" }}>
+                  <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16/10", background: "rgba(255,255,255,0.03)" }}>
+                    <Image src={r.image} alt={`Website von ${r.name}`} fill sizes="(max-width: 768px) 100vw, 500px" className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#60a5fa]">{r.branche}</p>
+                    <h3 className="mt-1.5 text-base font-bold text-white">{r.emoji} {r.name}</h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{r.text}</p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#60a5fa] group-hover:text-white">
+                      Live ansehen
+                      <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H8M17 7v9" /></svg>
+                    </span>
+                  </div>
+                </motion.a>
               ))}
             </div>
           </div>
