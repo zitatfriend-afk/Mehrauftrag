@@ -326,7 +326,7 @@ function LeadForm() {
         )}
       </button>
       <p className="text-center text-xs leading-relaxed text-slate-500">
-        Rückruf innerhalb von 24h. Kein Verkaufsdruck, keine Weitergabe Ihrer Daten.
+        Wir melden uns per WhatsApp oder Anruf — wie es Ihnen lieber ist. Kein Verkaufsdruck.
       </p>
     </form>
   );
@@ -451,7 +451,7 @@ export default function ElektrikerLanding() {
         </header>
 
         {/* ─── Hero ─── */}
-        <section className="relative flex items-center justify-center overflow-hidden px-5 pt-24 pb-12 sm:px-8 sm:pt-28 sm:pb-16">
+        <section className="relative flex items-center justify-center overflow-hidden px-5 pt-20 pb-10 sm:px-8 sm:pt-28 sm:pb-16">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 55% at 60% 26%, rgba(59,130,246,0.13) 0%, transparent 100%)" }} />
           </div>
@@ -466,7 +466,7 @@ export default function ElektrikerLanding() {
           >
             <motion.div variants={fadeUp}>
               <div
-                className="badge-glow mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5"
+                className="badge-glow mb-5 inline-flex items-center gap-2 rounded-full px-4 py-1.5 sm:mb-8"
                 style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.26)" }}
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-[#60a5fa] animate-pulse" />
@@ -479,7 +479,7 @@ export default function ElektrikerLanding() {
             <motion.h1
               variants={fadeUp}
               className="font-black tracking-tighter text-white"
-              style={{ fontSize: "clamp(34px, 6.5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em" }}
+              style={{ fontSize: "clamp(30px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em" }}
             >
               Mehr Anfragen für Ihren{" "}
               <span className="gradient-text-blue">Elektrobetrieb</span>
@@ -487,19 +487,19 @@ export default function ElektrikerLanding() {
 
             <motion.p
               variants={fadeUp}
-              className="mx-auto mt-7 max-w-xl text-lg font-light leading-relaxed sm:text-xl"
+              className="mx-auto mt-5 max-w-xl text-base font-light leading-relaxed sm:mt-7 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
               Eine Website, die bei Google gefunden wird — in 7 Tagen online, zum festen Preis. Für Elektriker in Frankfurt &amp; Rhein-Main.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="mx-auto mt-7 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300">
+            <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-7">
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> Fester Preis</span>
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> In 7 Tagen online</span>
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> Monatlich kündbar</span>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="mx-auto mt-8 max-w-md">
+            <motion.div variants={fadeUp} className="mx-auto mt-5 max-w-md sm:mt-8">
               <div
                 className="rounded-2xl p-6 text-left"
                 style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(59,130,246,0.28)", boxShadow: "0 12px 50px rgba(0,0,0,0.4)" }}
@@ -508,8 +508,10 @@ export default function ElektrikerLanding() {
                 <LeadForm />
               </div>
               <p className="mt-4 text-center text-sm text-slate-400">
-                Lieber direkt anrufen?{" "}
-                <a href="tel:+4915202069625" className="font-semibold text-[#60a5fa] hover:text-white">+49 152 02069625</a>
+                Lieber direkt schreiben?{" "}
+                <a href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20f%C3%BCr%20meinen%20Elektrobetrieb." target="_blank" rel="noopener" className="font-semibold text-[#25D366] hover:text-white">WhatsApp</a>
+                {" "}oder{" "}
+                <a href="tel:+4915202069625" className="font-semibold text-[#60a5fa] hover:text-white">anrufen</a>
               </p>
             </motion.div>
           </motion.div>
@@ -760,6 +762,19 @@ export default function ElektrikerLanding() {
             </motion.div>
           </div>
         </motion.section>
+
+        {/* ─── WhatsApp Floating-Button ─── */}
+        <a
+          href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20f%C3%BCr%20meinen%20Elektrobetrieb."
+          target="_blank"
+          rel="noopener"
+          aria-label="Per WhatsApp anfragen"
+          className="fixed bottom-5 right-5 z-[60] inline-flex items-center gap-2 rounded-full px-4 py-3.5 text-sm font-semibold text-white shadow-xl transition hover:scale-105"
+          style={{ background: "#25D366", boxShadow: "0 8px 28px rgba(37,211,102,0.5)" }}
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+          <span>WhatsApp</span>
+        </a>
 
         {/* ─── Footer ─── */}
         <footer className="relative border-t border-white/5 px-5 py-10 sm:px-8">
