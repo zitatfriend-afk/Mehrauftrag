@@ -3,23 +3,27 @@
 import React, { useState, useRef, FormEvent, ChangeEvent } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import MaMark from "./ma-mark";
 
 const EASE_OUT = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 // ── Logo ─────────────────────────────────────────────────────────────────────
 function MALogo() {
   return (
-    <span className="text-[18px] font-black leading-none tracking-[-0.04em] select-none">
-      <span style={{ color: "#ffffff" }}>Mehr</span>
-      <span
-        style={{
-          background: "linear-gradient(90deg, #3b82f6 0%, #60a5fa 55%, #93c5fd 100%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          backgroundClip: "text",
-        }}
-      >
-        Auftrag
+    <span className="inline-flex items-center gap-2.5 select-none">
+      <MaMark size={32} />
+      <span className="text-[18px] font-black leading-none tracking-[-0.04em]">
+        <span style={{ color: "#ffffff" }}>Mehr</span>
+        <span
+          style={{
+            background: "linear-gradient(90deg, #3b82f6 0%, #60a5fa 55%, #93c5fd 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          Auftrag
+        </span>
       </span>
     </span>
   );
@@ -801,6 +805,8 @@ export default function KarriereShell() {
                 <Link href="/impressum" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">Impressum</Link>
                 <span className="text-[10px] text-white/10">·</span>
                 <Link href="/datenschutz" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">Datenschutz</Link>
+                <span className="text-[10px] text-white/10">·</span>
+                <Link href="/agb" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">AGB</Link>
               </div>
             </div>
           </div>

@@ -90,11 +90,7 @@ body {
     particle-fade  ease-in-out infinite;
 }
 
-/* ─── Scanlines (signature texture, ultra-subtle) ─── */
-@keyframes scan-slide {
-  from { background-position: 0 0; }
-  to   { background-position: 0 -120px; }
-}
+/* ─── Scanlines (signature texture, ultra-subtle, static for 60fps) ─── */
 .scanlines {
   background-image: repeating-linear-gradient(
     0deg,
@@ -103,8 +99,6 @@ body {
     rgba(255,255,255,0.011) 3px,
     rgba(255,255,255,0.011) 4px
   );
-  animation: scan-slide 6s linear infinite;
-  will-change: background-position;
 }
 
 /* ─── Aurora shimmer bands (cinematic, replaces harsh line sweep) ─── */
@@ -141,7 +135,7 @@ body {
 
 /* ─── Gradient text ─── */
 .gradient-text-blue {
-  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 55%, #93c5fd 100%);
+  background: linear-gradient(90deg, #4f8cff 0%, #6aa8ff 52%, #a5cdff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

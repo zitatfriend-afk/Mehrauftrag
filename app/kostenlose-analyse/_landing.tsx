@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import MaMark from "../_components/ma-mark";
 
 /**
  * Landingpage /kostenlose-analyse für MehrAuftrag.
@@ -59,9 +60,12 @@ const SECTION_VIEWPORT = { once: true, amount: 0.25 };
 // ─── Kleine Bausteine ─────────────────────────────────────────────────────────
 function MALogo() {
   return (
-    <span className="text-[18px] font-black leading-none tracking-[-0.04em] select-none">
-      <span className="text-white">Mehr</span>
-      <span className="gradient-text-blue">Auftrag</span>
+    <span className="inline-flex items-center gap-2.5 select-none">
+      <MaMark size={32} />
+      <span className="text-[18px] font-black leading-none tracking-[-0.04em]">
+        <span className="text-white">Mehr</span>
+        <span className="gradient-text-blue">Auftrag</span>
+      </span>
     </span>
   );
 }
@@ -549,7 +553,8 @@ export default function AnalyseLanding() {
             <p className="text-xs text-slate-500">
               © {new Date().getFullYear()} MehrAuftrag ·{" "}
               <Link href="/impressum" className="hover:text-slate-300">Impressum</Link> ·{" "}
-              <Link href="/datenschutz" className="hover:text-slate-300">Datenschutz</Link>
+              <Link href="/datenschutz" className="hover:text-slate-300">Datenschutz</Link> ·{" "}
+              <Link href="/agb" className="hover:text-slate-300">AGB</Link>
             </p>
           </div>
         </footer>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import MaMark from "./_components/ma-mark";
 import {
   motion,
   useScroll,
@@ -48,9 +49,12 @@ const stagger = {
 function MALogo({ variant = "dark" }: { variant?: "light" | "dark" }) {
   const mehrColor = variant === "dark" ? "#ffffff" : "#0a0f2a";
   return (
-    <span className="text-[18px] font-black leading-none tracking-[-0.04em] select-none">
-      <span style={{ color: mehrColor }}>Mehr</span>
-      <span className="gradient-text-blue">Auftrag</span>
+    <span className="inline-flex items-center gap-2.5 select-none">
+      <MaMark size={32} />
+      <span className="text-[18px] font-black leading-none tracking-[-0.04em]">
+        <span style={{ color: mehrColor }}>Mehr</span>
+        <span className="gradient-text-blue">Auftrag</span>
+      </span>
     </span>
   );
 }
@@ -511,9 +515,6 @@ function HeroStarField({
   const t2x = useTransform(springX, v => (v / 1440 - 0.5) * -36);
   const t2y = useTransform(springY, v => (v / 900  - 0.5) * -27);
 
-  // Mouse proximity brightening — screen blend, zero re-renders
-  const spotBg = useMotionTemplate`radial-gradient(360px circle at ${springX}px ${springY}px, rgba(96,165,250,0.042) 0%, transparent 65%)`;
-
   if (!mounted || prefersReduced || isMobile) return null;
 
   const tier0 = STARS_V2.filter(s => s.t === 0);
@@ -567,26 +568,22 @@ function HeroStarField({
           );
         })}
       </motion.div>
-
-      {/* Mouse proximity — screen blend brightens stars near the cursor */}
-      <motion.div className="absolute inset-0" style={{ background: spotBg, mixBlendMode: "screen" }} />
     </div>
   );
 }
 
 // ─── Background ambient layer — pure MotionValue, zero React re-renders ───────
 function AmbientBackground({
-  springX, springY, rawX, rawY, isMobile,
+  springX, springY, isMobile,
 }: {
   springX: MotionValue<number>;
   springY: MotionValue<number>;
-  rawX: MotionValue<number>;
-  rawY: MotionValue<number>;
   isMobile: boolean;
 }) {
   // All hooks called unconditionally (React rules)
-  const innerSpot = useMotionTemplate`radial-gradient(280px circle at ${rawX}px ${rawY}px, rgba(59,130,246,0.07), transparent 70%)`;
-  const outerGlow = useMotionTemplate`radial-gradient(800px circle at ${springX}px ${springY}px, rgba(59,130,246,0.042), transparent 50%)`;
+  // Premium blue-white cursor glow — both spring-driven for soft, fluid motion
+  const innerSpot = useMotionTemplate`radial-gradient(240px circle at ${springX}px ${springY}px, rgba(191,219,254,0.09) 0%, rgba(96,165,250,0.05) 42%, transparent 64%)`;
+  const outerGlow = useMotionTemplate`radial-gradient(720px circle at ${springX}px ${springY}px, rgba(59,130,246,0.05), transparent 56%)`;
 
   const nearX = useTransform(springX, v => (v / 1440 - 0.5) * -32);
   const nearY = useTransform(springY, v => (v / 900  - 0.5) * -24);
@@ -681,18 +678,18 @@ function AmbientBackground({
         <div
           className="aurora-shimmer absolute"
           style={{
-            left: "-30%", width: "160%", height: "72px",
-            background: "linear-gradient(to right, transparent 4%, rgba(59,130,246,0.055) 22%, rgba(96,165,250,0.09) 50%, rgba(59,130,246,0.055) 78%, transparent 96%)",
-            filter: "blur(52px)",
+            left: "-30%", width: "160%", height: "64px",
+            background: "linear-gradient(to right, transparent 6%, rgba(59,130,246,0.032) 24%, rgba(96,165,250,0.055) 50%, rgba(59,130,246,0.032) 76%, transparent 94%)",
+            filter: "blur(40px)",
             borderRadius: "50%",
           }}
         />
         <div
           className="aurora-shimmer-b absolute"
           style={{
-            left: "-25%", width: "150%", height: "56px",
-            background: "linear-gradient(to right, transparent 6%, rgba(99,102,241,0.04) 28%, rgba(139,92,246,0.07) 50%, rgba(99,102,241,0.04) 72%, transparent 94%)",
-            filter: "blur(44px)",
+            left: "-25%", width: "150%", height: "50px",
+            background: "linear-gradient(to right, transparent 8%, rgba(99,102,241,0.024) 30%, rgba(139,92,246,0.04) 50%, rgba(99,102,241,0.024) 70%, transparent 92%)",
+            filter: "blur(34px)",
             borderRadius: "50%",
           }}
         />
@@ -827,7 +824,7 @@ export default function Home() {
   return (
     <>
       {/* Fixed ambient background — zero React re-renders, pure MotionValue */}
-      <AmbientBackground springX={smoothX} springY={smoothY} rawX={mouseX} rawY={mouseY} isMobile={isMobile} />
+      <AmbientBackground springX={smoothX} springY={smoothY} isMobile={isMobile} />
 
       <main style={{ color: "#e2e8f0", position: "relative", zIndex: 1 }} className="overflow-x-hidden">
 
@@ -934,6 +931,15 @@ export default function Home() {
           {/* Premium hero star field — 3 depth layers, mouse parallax */}
           <HeroStarField springX={smoothX} springY={smoothY} isMobile={isMobile} />
 
+          {/* Soft readability scrim — lifts headline/CTA contrast over the star field */}
+          <div
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            style={{
+              width: "min(960px, 94vw)", height: "600px",
+              background: "radial-gradient(ellipse 58% 56% at 50% 50%, rgba(2,8,24,0.58) 0%, rgba(2,8,24,0.26) 45%, transparent 72%)",
+            }}
+          />
+
           <motion.div
             style={{ y: heroParallax }}
             className="relative z-10 text-center px-5 sm:px-8 max-w-5xl mx-auto pt-32 pb-28"
@@ -961,7 +967,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.08, ease: EASE_OUT }}
               className="text-sm sm:text-base font-medium tracking-[0.26em] uppercase mb-6"
-              style={{ color: "rgba(147,197,253,0.45)" }}
+              style={{ color: "rgba(147,197,253,0.62)" }}
             >
               Dein Betrieb verdient
             </motion.p>
@@ -978,6 +984,7 @@ export default function Home() {
                   fontSize: "clamp(44px, 8.5vw, 100px)",
                   lineHeight: 1.0,
                   letterSpacing: "-0.03em",
+                  textShadow: "0 2px 36px rgba(59,130,246,0.22), 0 1px 2px rgba(0,0,0,0.35)",
                 }}
               >
                 {/* Lock height to max headline to eliminate CLS */}
@@ -1002,10 +1009,10 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.22, ease: EASE_OUT }}
               className="text-lg sm:text-xl max-w-xl mx-auto mb-10 leading-relaxed font-light"
-              style={{ color: "rgba(148,163,184,0.78)" }}
+              style={{ color: "rgba(203,213,225,0.92)" }}
             >
               Websites, die verkaufen. Marketing, das messbar wirkt. Für{" "}
-              <span style={{ color: "rgba(147,197,253,0.85)", fontWeight: 500 }}>
+              <span style={{ color: "rgba(147,197,253,0.95)", fontWeight: 500 }}>
                 Handwerker, Therapeuten, Gastronomen
               </span>{" "}
               und Dienstleister.
@@ -1597,6 +1604,13 @@ export default function Home() {
                     className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors"
                   >
                     Datenschutz
+                  </a>
+                  <span className="text-[10px] text-white/10">·</span>
+                  <a
+                    href="/agb"
+                    className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors"
+                  >
+                    AGB
                   </a>
                 </div>
               </div>
