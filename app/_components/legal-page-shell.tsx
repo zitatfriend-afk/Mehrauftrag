@@ -10,7 +10,7 @@ const EASE_OUT = [0.16, 1, 0.3, 1] as [number, number, number, number];
 function MALogo() {
   return (
     <span className="inline-flex items-center gap-2.5 select-none">
-      <MaMark size={32} />
+      <MaMark size={40} priority />
       <span className="text-[18px] font-black leading-none tracking-[-0.04em]">
         <span style={{ color: "#ffffff" }}>Mehr</span>
         <span

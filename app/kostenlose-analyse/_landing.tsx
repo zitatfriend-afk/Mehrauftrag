@@ -61,7 +61,7 @@ const SECTION_VIEWPORT = { once: true, amount: 0.25 };
 function MALogo() {
   return (
     <span className="inline-flex items-center gap-2.5 select-none">
-      <MaMark size={32} />
+      <MaMark size={40} priority />
       <span className="text-[18px] font-black leading-none tracking-[-0.04em]">
         <span className="text-white">Mehr</span>
         <span className="gradient-text-blue">Auftrag</span>
