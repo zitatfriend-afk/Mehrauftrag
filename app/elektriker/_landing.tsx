@@ -314,7 +314,7 @@ function LeadForm() {
           boxShadow: "0 4px 20px rgba(59,130,246,0.45), 0 0 0 1px rgba(59,130,246,0.3)",
         }}
       >
-        <span className="relative z-10">{state === "loading" ? "Wird gesendet …" : "Kostenlos anfragen"}</span>
+        <span className="relative z-10">{state === "loading" ? "Wird gesendet …" : "Kostenloses Erstgespräch sichern"}</span>
         {state !== "loading" && (
           <svg className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -322,7 +322,7 @@ function LeadForm() {
         )}
       </button>
       <p className="text-center text-xs leading-relaxed text-slate-500">
-        Wir melden uns innerhalb von 24h telefonisch zurück. Kein Verkaufsdruck.
+        Rückruf innerhalb von 24h. Kein Verkaufsdruck, keine Weitergabe Ihrer Daten.
       </p>
     </form>
   );

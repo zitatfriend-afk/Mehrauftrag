@@ -330,14 +330,14 @@ function LeadForm() {
         className="shimmer-btn group inline-flex w-full items-center justify-center gap-2.5 rounded-xl px-7 py-4 text-base font-semibold text-white transition disabled:opacity-70"
         style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 20px rgba(59,130,246,0.45), 0 0 0 1px rgba(59,130,246,0.3)" }}
       >
-        <span className="relative z-10">{state === "loading" ? "Wird gesendet …" : "Kostenlos anfragen"}</span>
+        <span className="relative z-10">{state === "loading" ? "Wird gesendet …" : "Gratis-Analyse anfordern"}</span>
         {state !== "loading" && (
           <svg className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         )}
       </button>
-      <p className="text-center text-xs leading-relaxed text-slate-500">Kostenlos &amp; unverbindlich. Wir melden uns innerhalb von 24h telefonisch zurück.</p>
+      <p className="text-center text-xs leading-relaxed text-slate-500">Kostenlos &amp; unverbindlich. Rückruf in 24h, keine Weitergabe Ihrer Daten.</p>
     </form>
   );
 }
