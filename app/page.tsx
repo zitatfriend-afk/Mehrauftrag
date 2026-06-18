@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import MaMark from "./_components/ma-mark";
 import {
@@ -10,7 +10,6 @@ import {
   useSpring,
   AnimatePresence,
   useMotionValue,
-  useMotionTemplate,
   useReducedMotion,
   type MotionValue,
 } from "framer-motion";
@@ -572,6 +571,184 @@ function HeroStarField({
   );
 }
 
+// ─── Premium Cursor Energy-Trail (Desktop only, brand blue) ───────────────────
+// Ersetzt den alten weißen Maus-Glow. Feiner, getaperter Licht-Trail in Brand-Blau
+// + dezente Partikel-Akzente. Canvas + requestAnimationFrame, partikel-begrenzt,
+// auf Touch/Mobile und bei "prefers-reduced-motion" komplett deaktiviert.
+function CursorTrail({ isMobile, reduced }: { isMobile: boolean; reduced: boolean }) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    if (isMobile || reduced) return;
+    if (window.matchMedia && !window.matchMedia("(pointer: fine)").matches) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let W = window.innerWidth;
+    let H = window.innerHeight;
+    const resize = () => {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = window.innerWidth;
+      H = window.innerHeight;
+      canvas.width = Math.floor(W * dpr);
+      canvas.height = Math.floor(H * dpr);
+      canvas.style.width = W + "px";
+      canvas.style.height = H + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener("resize", resize, { passive: true });
+
+    // Brand-Palette: kräftiges Blau → helles Blau → dezentes Weiß
+    const COLORS = ["59,130,246", "96,165,250", "147,197,253", "191,219,254"];
+    let mx = W / 2;
+    let my = H / 2;
+    let hx = mx;
+    let hy = my;
+    let lastX = mx;
+    let lastY = my;
+    let hasMouse = false;
+
+    const TRAIL_MAX = 16;
+    const trail: { x: number; y: number }[] = [];
+
+    type P = { x: number; y: number; vx: number; vy: number; life: number; max: number; size: number; c: string };
+    const PARTICLE_MAX = 46;
+    const particles: P[] = [];
+
+    let raf = 0;
+    let idle = 0;
+
+    const spawn = (x: number, y: number, speed: number) => {
+      if (particles.length >= PARTICLE_MAX) return;
+      const a = Math.random() * Math.PI * 2;
+      const sp = Math.random() * 0.5 + speed * 0.05;
+      particles.push({
+        x,
+        y,
+        vx: Math.cos(a) * sp,
+        vy: Math.sin(a) * sp - 0.15,
+        life: 0,
+        max: 26 + Math.random() * 24,
+        size: Math.random() * 1.5 + 0.5,
+        c: COLORS[(Math.random() * COLORS.length) | 0],
+      });
+    };
+
+    const loop = () => {
+      // Kopf folgt der Maus direkt, aber weich (deutlich direkter als der alte Kreis)
+      hx += (mx - hx) * 0.32;
+      hy += (my - hy) * 0.32;
+      const dx = hx - lastX;
+      const dy = hy - lastY;
+      const speed = Math.hypot(dx, dy);
+      lastX = hx;
+      lastY = hy;
+
+      if (hasMouse) {
+        trail.push({ x: hx, y: hy });
+        if (trail.length > TRAIL_MAX) trail.shift();
+        if (speed > 1.1 && Math.random() < Math.min(0.85, speed / 16)) spawn(hx, hy, speed);
+      }
+
+      ctx.clearRect(0, 0, W, H);
+      ctx.globalCompositeOperation = "lighter";
+
+      // Getaperter Licht-Trail (Ribbon) durch die letzten Kopf-Positionen
+      if (trail.length > 1) {
+        ctx.lineCap = "round";
+        for (let i = 1; i < trail.length; i++) {
+          const t = i / trail.length;
+          const p0 = trail[i - 1];
+          const p1 = trail[i];
+          ctx.strokeStyle = `rgba(96,165,250,${t * 0.5})`;
+          ctx.lineWidth = t * 3 + 0.4;
+          ctx.beginPath();
+          ctx.moveTo(p0.x, p0.y);
+          ctx.lineTo(p1.x, p1.y);
+          ctx.stroke();
+        }
+        // Heller Kopf-Akzent
+        const head = trail[trail.length - 1];
+        const g = ctx.createRadialGradient(head.x, head.y, 0, head.x, head.y, 9);
+        g.addColorStop(0, "rgba(191,219,254,0.5)");
+        g.addColorStop(0.4, "rgba(96,165,250,0.25)");
+        g.addColorStop(1, "rgba(59,130,246,0)");
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(head.x, head.y, 9, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Partikel-Akzente
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.life++;
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.01;
+        p.vx *= 0.96;
+        p.vy *= 0.96;
+        const lt = 1 - p.life / p.max;
+        if (lt <= 0) {
+          particles.splice(i, 1);
+          continue;
+        }
+        ctx.fillStyle = `rgba(${p.c},${lt * 0.8})`;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * (0.6 + lt * 0.6), 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      ctx.globalCompositeOperation = "source-over";
+
+      // Trail langsam auflösen wenn die Maus steht, dann Loop pausieren (CPU sparen)
+      const headToMouse = Math.hypot(mx - hx, my - hy);
+      if (headToMouse < 0.5 && trail.length) trail.shift();
+      if (particles.length === 0 && headToMouse < 0.5 && trail.length === 0) {
+        idle++;
+      } else {
+        idle = 0;
+      }
+      if (idle > 24) {
+        ctx.clearRect(0, 0, W, H);
+        raf = 0;
+        return;
+      }
+      raf = requestAnimationFrame(loop);
+    };
+
+    const onMove = (e: MouseEvent) => {
+      mx = e.clientX;
+      my = e.clientY;
+      hasMouse = true;
+      idle = 0;
+      if (!raf) raf = requestAnimationFrame(loop);
+    };
+    window.addEventListener("mousemove", onMove, { passive: true });
+    raf = requestAnimationFrame(loop);
+
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("resize", resize);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [isMobile, reduced]);
+
+  if (isMobile || reduced) return null;
+  return (
+    <canvas
+      ref={canvasRef}
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-0 z-[30]"
+      style={{ mixBlendMode: "screen" }}
+    />
+  );
+}
+
 // ─── Background ambient layer — pure MotionValue, zero React re-renders ───────
 function AmbientBackground({
   springX, springY, isMobile,
@@ -581,10 +758,6 @@ function AmbientBackground({
   isMobile: boolean;
 }) {
   // All hooks called unconditionally (React rules)
-  // Premium blue-white cursor glow — both spring-driven for soft, fluid motion
-  const innerSpot = useMotionTemplate`radial-gradient(240px circle at ${springX}px ${springY}px, rgba(191,219,254,0.09) 0%, rgba(96,165,250,0.05) 42%, transparent 64%)`;
-  const outerGlow = useMotionTemplate`radial-gradient(720px circle at ${springX}px ${springY}px, rgba(59,130,246,0.05), transparent 56%)`;
-
   const nearX = useTransform(springX, v => (v / 1440 - 0.5) * -32);
   const nearY = useTransform(springY, v => (v / 900  - 0.5) * -24);
   const midX  = useTransform(springX, v => (v / 1440 - 0.5) * -16);
@@ -620,10 +793,6 @@ function AmbientBackground({
         className="absolute inset-0"
         style={{ background: "linear-gradient(160deg, #020818 0%, #030d20 45%, #020b17 100%)" }}
       />
-
-      {/* ── Mouse spotlights ── */}
-      <motion.div className="absolute inset-0" style={{ background: innerSpot }} />
-      <motion.div className="absolute inset-0" style={{ background: outerGlow }} />
 
       {/* ── Aurora A — large primary (top right), CSS float + mouse parallax ── */}
       <motion.div
@@ -825,6 +994,9 @@ export default function Home() {
     <>
       {/* Fixed ambient background — zero React re-renders, pure MotionValue */}
       <AmbientBackground springX={smoothX} springY={smoothY} isMobile={isMobile} />
+
+      {/* Premium Cursor Energy-Trail — Desktop only, brand blue */}
+      <CursorTrail isMobile={isMobile} reduced={!!shouldReduceMotion} />
 
       <main style={{ color: "#e2e8f0", position: "relative", zIndex: 1 }} className="overflow-x-hidden">
 
