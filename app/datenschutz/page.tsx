@@ -407,6 +407,39 @@ export default function DatenschutzPage() {
           </LegalP>
         </LegalSubsection>
 
+        <LegalSubsection title="Microsoft Clarity">
+          <LegalP>
+            Diese Website nutzt Microsoft Clarity, einen Webanalysedienst der Microsoft Corporation,
+            One Microsoft Way, Redmond, WA 98052, USA („Microsoft"). Mit Clarity werten wir die
+            Nutzung unserer Website aus, indem das Nutzungsverhalten – etwa Mausbewegungen, Klicks,
+            Scrollverhalten und Seitenaufrufe – in Form von Sitzungsaufzeichnungen und Heatmaps
+            erfasst wird. So erkennen wir, wie Besucher unsere Seiten verwenden, und können diese
+            verbessern. Clarity maskiert dabei standardmäßig eingegebene Texte und sensible Inhalte.
+          </LegalP>
+          <LegalP>
+            Microsoft Clarity wird ausschließlich nach Ihrer ausdrücklichen Einwilligung über unser
+            Cookie-Banner geladen. Vor Erteilung Ihrer Einwilligung wird Clarity nicht aktiviert und
+            es werden keine entsprechenden Daten an Microsoft übermittelt.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage für die Verarbeitung ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a
+            DSGVO sowie § 25 Abs. 1 TDDDG (Speicherung von und Zugriff auf Informationen in Ihrem
+            Endgerät). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen,
+            indem Sie Ihre Cookie-Einstellungen über die Schaltfläche „Cookie-Einstellungen" am
+            unteren Bildschirmrand anpassen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
+            Verarbeitung bleibt unberührt.
+          </LegalP>
+          <LegalP>
+            Im Rahmen der Nutzung von Microsoft Clarity kann es zu einer Übermittlung
+            personenbezogener Daten an Server von Microsoft, auch in die USA, kommen. Weitere
+            Informationen zum Umgang mit Ihren Daten finden Sie in der Datenschutzerklärung von
+            Microsoft:{" "}
+            <LegalLink href="https://privacy.microsoft.com/de-de/privacystatement">
+              https://privacy.microsoft.com/de-de/privacystatement
+            </LegalLink>
+          </LegalP>
+        </LegalSubsection>
+
         <LegalSubsection title="Google Analytics">
           <LegalP>
             Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist

@@ -16,6 +16,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const CONSENT_KEY = "ma-consent-v1";
 const META_PIXEL_ID = "1455997266296654";
+const CLARITY_PROJECT_ID = "x9wcbg119c";
 
 type Consent = {
   necessary: true;
@@ -70,6 +71,46 @@ function revokeMetaPixel() {
   callFbq("consent", "revoke");
 }
 
+// ─── Microsoft Clarity: wird erst bei Einwilligung geladen ───────────────────
+let clarityLoaded = false;
+
+// Liest window.clarity bei jedem Aufruf frisch.
+function callClarity(...args: unknown[]) {
+  if (typeof window === "undefined") return;
+  (window as unknown as { clarity?: (...a: unknown[]) => void }).clarity?.(...args);
+}
+
+function loadClarity() {
+  if (typeof window === "undefined") return;
+  if (clarityLoaded || (window as unknown as { clarity?: unknown }).clarity) {
+    callClarity("consent");
+    return;
+  }
+  clarityLoaded = true;
+
+  /* eslint-disable */
+  // @ts-ignore – offizielles Microsoft-Clarity-Snippet
+  !(function (c: any, l: any, a: any, r: any, i: any, t?: any, y?: any) {
+    c[a] =
+      c[a] ||
+      function () {
+        (c[a].q = c[a].q || []).push(arguments);
+      };
+    t = l.createElement(r);
+    t.async = 1;
+    t.src = "https://www.clarity.ms/tag/" + i;
+    y = l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", CLARITY_PROJECT_ID);
+  /* eslint-enable */
+
+  callClarity("consent");
+}
+
+function revokeClarity() {
+  callClarity("consent", false);
+}
+
 function readConsent(): Consent | null {
   if (typeof window === "undefined") return null;
   try {
@@ -93,7 +134,10 @@ export default function CookieConsent() {
       setOpen(true);
     } else {
       setMarketing(stored.marketing);
-      if (stored.marketing) loadMetaPixel();
+      if (stored.marketing) {
+        loadMetaPixel();
+        loadClarity();
+      }
     }
   }, []);
 
@@ -110,8 +154,13 @@ export default function CookieConsent() {
       /* localStorage nicht verfügbar – Einwilligung gilt nur für diese Sitzung */
     }
     setMarketing(acceptMarketing);
-    if (acceptMarketing) loadMetaPixel();
-    else revokeMetaPixel();
+    if (acceptMarketing) {
+      loadMetaPixel();
+      loadClarity();
+    } else {
+      revokeMetaPixel();
+      revokeClarity();
+    }
     setOpen(false);
     setShowSettings(false);
   }, []);
@@ -160,8 +209,9 @@ export default function CookieConsent() {
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-slate-300">
                 Wir verwenden Cookies, um unsere Website bereitzustellen und – mit Ihrer
-                Einwilligung – die Reichweite unserer Werbung zu messen (Meta-Pixel). Notwendige
-                Cookies sind für den Betrieb erforderlich. Marketing-Cookies werden nur gesetzt,
+                Einwilligung – die Reichweite unserer Werbung zu messen und die Nutzung unserer
+                Website zu analysieren (Meta-Pixel, Microsoft Clarity). Notwendige Cookies sind
+                für den Betrieb erforderlich. Marketing- und Analyse-Cookies werden nur gesetzt,
                 wenn Sie zustimmen. Sie können Ihre Einwilligung jederzeit mit Wirkung für die
                 Zukunft widerrufen. Mehr dazu in unserer{" "}
                 <Link href="/datenschutz" className="text-blue-400 underline hover:text-blue-300">
@@ -194,10 +244,13 @@ export default function CookieConsent() {
 
                       <label className="flex cursor-pointer items-start justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-4">
                         <div>
-                          <p className="text-sm font-medium text-white">Marketing (Meta-Pixel)</p>
+                          <p className="text-sm font-medium text-white">
+                            Marketing & Analyse (Meta-Pixel, Microsoft Clarity)
+                          </p>
                           <p className="mt-1 text-xs text-slate-400">
                             Hilft uns, die Wirkung unserer Werbung auf Facebook & Instagram zu
-                            messen und relevanter auszuspielen.
+                            messen und – anonymisiert – zu verstehen, wie unsere Website genutzt
+                            wird, um sie zu verbessern.
                           </p>
                         </div>
                         <input
