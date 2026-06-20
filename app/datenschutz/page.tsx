@@ -237,6 +237,26 @@ export default function DatenschutzPage() {
 
       {/* 3. Datenerfassung auf unserer Website */}
       <LegalSection title="3. Datenerfassung auf unserer Website">
+        <LegalSubsection title="Hosting (Vercel)">
+          <LegalP>
+            Diese Website wird bei der Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA
+            („Vercel") gehostet. Vercel verarbeitet in unserem Auftrag die beim Aufruf der Website
+            anfallenden Daten (u. a. IP-Adresse, Zugriffszeitpunkt, aufgerufene Seiten,
+            Browsertyp), soweit dies für die technische Bereitstellung und Sicherheit der Website
+            erforderlich ist.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren und effizienten
+            Bereitstellung unseres Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO). Wir haben mit
+            Vercel einen Vertrag zur Auftragsverarbeitung (Data Processing Agreement) geschlossen.
+            Soweit dabei personenbezogene Daten in die USA übermittelt werden, stützt sich diese
+            Übermittlung auf die Standardvertragsklauseln der EU-Kommission. Weitere Informationen:{" "}
+            <LegalLink href="https://vercel.com/legal/privacy-policy">
+              https://vercel.com/legal/privacy-policy
+            </LegalLink>
+          </LegalP>
+        </LegalSubsection>
+
         <LegalSubsection title="Cookies">
           <LegalP>
             Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem
@@ -313,6 +333,42 @@ export default function DatenschutzPage() {
             gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen – bleiben unberührt.
           </LegalP>
         </LegalSubsection>
+
+        <LegalSubsection title="Anfrageformulare auf unseren Landingpages">
+          <LegalP>
+            Auf einzelnen Landingpages (z.B. zu speziellen Angeboten) bieten wir Ihnen kurze
+            Anfrageformulare an, über die Sie uns Ihren Vornamen und Ihre Telefonnummer übermitteln
+            können, damit wir Sie für ein unverbindliches Erstgespräch zurückrufen können. Es werden
+            ausschließlich die von Ihnen aktiv eingegebenen Daten verarbeitet.
+          </LegalP>
+          <LegalP>
+            Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)
+            sowie zur Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage hin (Art. 6 Abs. 1
+            lit. b DSGVO). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
+            widerrufen. Die Daten werden gelöscht, sobald sie für die Bearbeitung Ihrer Anfrage
+            nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+          </LegalP>
+        </LegalSubsection>
+
+        <LegalSubsection title="Speicherung von Anfragedaten (Supabase)">
+          <LegalP>
+            Die über unsere Kontakt- und Anfrageformulare übermittelten Daten werden in einer
+            Datenbank gespeichert und verarbeitet, die wir über den Dienst Supabase (Supabase Inc.,
+            970 Toa Payoh North, #07-04, Singapur) betreiben. Supabase verarbeitet diese Daten
+            ausschließlich in unserem Auftrag und nach unseren Weisungen.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) bzw. unser
+            berechtigtes Interesse an einer zuverlässigen Bearbeitung Ihrer Anfragen (Art. 6 Abs. 1
+            lit. f DSGVO). Wir haben mit dem Anbieter einen Vertrag zur Auftragsverarbeitung
+            geschlossen. Soweit dabei personenbezogene Daten außerhalb der EU verarbeitet oder
+            übermittelt werden, erfolgt dies auf Grundlage der Standardvertragsklauseln der
+            EU-Kommission. Weitere Informationen:{" "}
+            <LegalLink href="https://supabase.com/privacy">
+              https://supabase.com/privacy
+            </LegalLink>
+          </LegalP>
+        </LegalSubsection>
       </LegalSection>
 
       {/* 4. Soziale Medien */}
@@ -368,6 +424,30 @@ export default function DatenschutzPage() {
             </LegalLink>
           </LegalP>
         </LegalSubsection>
+
+        <LegalSubsection title="WhatsApp-Kontakt">
+          <LegalP>
+            Auf unserer Website bieten wir Ihnen die Möglichkeit, uns über einen WhatsApp-Link direkt
+            zu kontaktieren. Anbieter ist die WhatsApp Ireland Limited, 4 Grand Canal Square, Grand
+            Canal Harbour, Dublin 2, Irland (Teil der Meta-Unternehmensgruppe). Wenn Sie den
+            WhatsApp-Button anklicken, werden Sie zu WhatsApp weitergeleitet und es wird – sofern Sie
+            WhatsApp nutzen – eine Verbindung zu den Servern von WhatsApp hergestellt. Inhalt und
+            Umfang der dabei verarbeiteten Daten richten sich nach den Bedingungen von WhatsApp; auf
+            diese Verarbeitung haben wir keinen Einfluss.
+          </LegalP>
+          <LegalP>
+            Wenn Sie uns über WhatsApp schreiben, verarbeiten wir die von Ihnen übermittelten Angaben
+            (z. B. Ihren Namen, Ihre Telefonnummer und den Inhalt Ihrer Nachricht), um Ihre Anfrage
+            zu bearbeiten. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sowie
+            unser berechtigtes Interesse bzw. die Durchführung vorvertraglicher Maßnahmen
+            (Art. 6 Abs. 1 lit. b und f DSGVO). Bei der Nutzung von WhatsApp kann es zu einer
+            Übermittlung von Daten in Drittländer kommen. Weitere Informationen finden Sie in der
+            Datenschutzerklärung von WhatsApp:{" "}
+            <LegalLink href="https://www.whatsapp.com/legal/privacy-policy-eea">
+              https://www.whatsapp.com/legal/privacy-policy-eea
+            </LegalLink>
+          </LegalP>
+        </LegalSubsection>
       </LegalSection>
 
       {/* 5. Analyse-Tools und Werbung */}
@@ -403,6 +483,49 @@ export default function DatenschutzPage() {
             Datenschutzerklärung von Meta:{" "}
             <LegalLink href="https://www.facebook.com/privacy/policy/">
               https://www.facebook.com/privacy/policy/
+            </LegalLink>
+          </LegalP>
+        </LegalSubsection>
+
+        <LegalSubsection title="Meta-Werbeanzeigen und Custom Audiences">
+          <LegalP>
+            Wir nutzen den Meta-Pixel auch, um unsere Werbeanzeigen auf den Plattformen von Meta
+            (Facebook und Instagram) gezielt auszuspielen und deren Erfolg zu messen
+            („Meta Ads"). Auf Basis der über den Pixel erfassten Informationen können wir Besucher
+            unserer Website zu sogenannten „Custom Audiences" zusammenfassen, um ihnen anschließend
+            passende Werbeanzeigen anzuzeigen (Remarketing), und ähnliche Zielgruppen
+            („Lookalike Audiences") bilden. Es werden dabei keine Klardaten (wie Name oder
+            E-Mail-Adresse) durch uns an Meta weitergegeben; die Zuordnung erfolgt pseudonymisiert
+            durch Meta.
+          </LegalP>
+          <LegalP>
+            Diese Verarbeitung erfolgt ausschließlich nach Ihrer Einwilligung über unser
+            Cookie-Banner (Art. 6 Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG). Sie können Ihre
+            Einwilligung jederzeit mit Wirkung für die Zukunft über die „Cookie-Einstellungen"
+            widerrufen. Zusätzlich können Sie personalisierte Werbung in den Einstellungen Ihres
+            Meta-Kontos deaktivieren.
+          </LegalP>
+        </LegalSubsection>
+
+        <LegalSubsection title="Google Ads und Conversion-Tracking">
+          <LegalP>
+            Wir nutzen das Online-Werbeprogramm „Google Ads" und in diesem Rahmen das
+            Conversion-Tracking sowie ggf. Remarketing-Funktionen der Google Ireland Limited, Gordon
+            House, Barrow Street, Dublin 4, Irland („Google"). Damit können wir auswerten, ob und wie
+            Nutzer mit unseren Anzeigen interagieren, nachdem sie auf eine Google-Anzeige geklickt
+            haben, und unsere Werbung relevanter ausspielen. Google setzt hierfür Cookies bzw.
+            vergleichbare Technologien ein. Wir erhalten von Google lediglich statistische
+            Auswertungen; eine Identifizierung einzelner Nutzer durch uns ist dabei nicht möglich.
+          </LegalP>
+          <LegalP>
+            Die Verarbeitung erfolgt ausschließlich nach Ihrer Einwilligung über unser Cookie-Banner
+            (Art. 6 Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG). Sie können Ihre Einwilligung
+            jederzeit mit Wirkung für die Zukunft widerrufen. Bei der Nutzung von Google-Diensten
+            kann es zu einer Übermittlung personenbezogener Daten an Server von Google, auch in den
+            USA, kommen; diese stützt sich auf die Standardvertragsklauseln der EU-Kommission.
+            Weitere Informationen finden Sie in der Datenschutzerklärung von Google:{" "}
+            <LegalLink href="https://policies.google.com/privacy">
+              https://policies.google.com/privacy
             </LegalLink>
           </LegalP>
         </LegalSubsection>
@@ -519,6 +642,16 @@ export default function DatenschutzPage() {
             </LegalP>
           </LegalSubsection>
         </LegalSubsection>
+      </LegalSection>
+
+      {/* 6. Stand */}
+      <LegalSection title="6. Stand und Aktualität dieser Datenschutzerklärung">
+        <LegalP>
+          Stand dieser Datenschutzerklärung: Juni 2026. Wir behalten uns vor, diese
+          Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen
+          entspricht oder um Änderungen unserer Leistungen umzusetzen – etwa bei der Einführung
+          neuer Dienste. Für Ihren erneuten Besuch gilt dann die jeweils aktuelle Fassung.
+        </LegalP>
       </LegalSection>
     </LegalPageShell>
   );
