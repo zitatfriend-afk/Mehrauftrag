@@ -439,35 +439,35 @@ export default function AnalyseLanding() {
         </header>
 
         {/* Hero */}
-        <section className="relative overflow-hidden px-5 pt-24 pb-12 sm:px-8 sm:pt-36 sm:pb-20">
+        <section className="relative overflow-hidden px-5 pt-20 pb-12 sm:px-8 sm:pt-36 sm:pb-20">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 55% at 60% 24%, rgba(59,130,246,0.13) 0%, transparent 100%)" }} />
           </div>
           <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
             {/* initial={false}: Hero sofort sichtbar, unabhängig von der Animation */}
-            <motion.div initial={false} animate="show" variants={stagger}>
-              <motion.div variants={fadeUp}>
+            <motion.div initial={false} animate="show" variants={stagger} className="flex flex-col">
+              <motion.div variants={fadeUp} className="order-1">
                 <div className="badge-glow mb-5 inline-flex items-center gap-2 rounded-full px-4 py-1.5 sm:mb-7" style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.26)" }}>
                   <span className="h-1.5 w-1.5 rounded-full bg-[#60a5fa] animate-pulse" />
                   <span className="text-[11px] font-semibold tracking-[0.06em]" style={{ color: "#93c5fd" }}>Kostenloser Potenzial-Check für Elektriker</span>
                 </div>
               </motion.div>
 
-              <motion.h1 variants={fadeUp} className="font-black tracking-tighter text-white" style={{ fontSize: "clamp(29px, 6vw, 58px)", lineHeight: 1.05, letterSpacing: "-0.03em" }}>
+              <motion.h1 variants={fadeUp} className="order-2 font-black tracking-tighter text-white" style={{ fontSize: "clamp(26px, 5.6vw, 58px)", lineHeight: 1.07, letterSpacing: "-0.03em" }}>
                 Kostenlose <span className="gradient-text-blue">Website-Analyse</span> für Ihren Elektrobetrieb
               </motion.h1>
 
-              <motion.p variants={fadeUp} className="mt-4 max-w-lg text-base font-light leading-relaxed sm:mt-6 sm:text-xl" style={{ color: "rgba(148,163,184,0.85)" }}>
+              <motion.p variants={fadeUp} className="order-4 mt-5 max-w-lg text-base font-light leading-relaxed sm:mt-6 sm:text-xl lg:order-3 lg:mt-6" style={{ color: "rgba(148,163,184,0.85)" }}>
                 Potenzial-Check für Ihr Online-Geschäft: Wir zeigen Ihnen, wo Ihnen Anfragen entgehen – und wie Sie mehr Kunden aus dem Internet gewinnen.
               </motion.p>
 
-              <motion.div variants={fadeUp} className="mt-4 flex flex-col gap-2.5 sm:mt-7">
+              <motion.div variants={fadeUp} className="order-5 mt-4 flex flex-col gap-2.5 sm:mt-7 lg:order-4">
                 <div className="flex items-center gap-2.5 text-sm text-slate-200"><CheckIcon /> Kostenlos &amp; unverbindlich</div>
                 <div className="flex items-center gap-2.5 text-sm text-slate-200"><CheckIcon /> Ergebnis-Gespräch in rund 30 Minuten</div>
                 <div className="flex items-center gap-2.5 text-sm text-slate-200"><CheckIcon /> Konkrete Empfehlungen statt Fachchinesisch</div>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="mt-5 max-w-md sm:mt-8">
+              <motion.div variants={fadeUp} className="order-3 mt-5 max-w-md sm:mt-8 lg:order-5">
                 <div className="rounded-2xl p-6 text-left" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(59,130,246,0.28)", boxShadow: "0 12px 50px rgba(0,0,0,0.4)" }}>
                   <p className="mb-4 text-center text-[15px] font-bold text-white">Kostenlose Analyse sichern</p>
                   <LeadForm />
