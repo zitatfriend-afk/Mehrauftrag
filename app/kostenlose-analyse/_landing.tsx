@@ -232,15 +232,14 @@ const STEPS = [
 
 const TESTIMONIALS = [
   {
-    text: "Komplett kostenlos und unverbindlich. Sie bekommen eine ehrliche Einschätzung Ihres Online-Auftritts – und entscheiden danach völlig frei.",
-    name: "Unser Versprechen an Sie",
+    text: "Sympatisches und junges Team, Patrick war immer gut zu erreichen. Jederzeit wieder!",
+    name: "Hdecebs · Google-Rezension",
   },
   {
-    text: "Persönlicher Ansprechpartner aus der Region, kein Fachchinesisch. Rückruf innerhalb von 24 Stunden, ganz ohne Verkaufsdruck.",
-    name: "MehrAuftrag · Patrick Sauna",
+    text: "Danke nochmal, sehr empfehlenswert!",
+    name: "Modjieb N. · Google-Rezension",
   },
 ];
-/* TODO: Sobald echte Google-Bewertungen vorliegen, hier als Kundenstimmen einsetzen. */
 
 const REFERENCES = [
   {
@@ -583,6 +582,14 @@ export default function AnalyseLanding() {
             <div className="mb-10 text-center">
               <motion.div variants={fadeUp}><SectionLabel center>Warum MehrAuftrag</SectionLabel></motion.div>
               <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">Ehrlich, kostenlos, ohne Risiko</motion.h2>
+              <motion.a
+                variants={fadeUp}
+                href="https://www.google.com/maps/place/Mehr+Auftrag/@51.0568152,5.175389,6z/data=!4m6!3m5!1s0xf92a7c83926ab59:0x497cfde85e781ac7!8m2!3d51.175807!4d10.4541194!16s%2Fg%2F11zf_v2z54"
+                target="_blank" rel="noopener"
+                className="mt-4 inline-flex items-center gap-2 text-sm text-slate-300 transition hover:text-white"
+              >
+                <Stars /> <span className="font-semibold text-white">5,0</span> · 9 Bewertungen auf Google
+              </motion.a>
             </div>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               {TESTIMONIALS.map((t, i) => (
