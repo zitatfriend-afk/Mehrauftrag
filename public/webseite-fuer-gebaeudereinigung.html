@@ -210,6 +210,9 @@
   }
   .field textarea{resize:vertical;min-height:84px}
   .form-note{font-size:.82rem;color:var(--muted-2);margin-top:12px;text-align:center}
+  .field-check{display:flex;gap:9px;align-items:flex-start;font-size:.82rem;color:var(--muted);margin:2px 0 14px;line-height:1.45;cursor:pointer}
+  .field-check input{margin-top:3px;width:16px;height:16px;flex:none;accent-color:var(--blue)}
+  .field-check a{color:var(--blue);text-decoration:underline}
   .form-success{
     display:none;padding:18px;border-radius:12px;text-align:center;
     background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.4);color:#bbf7d0;font-weight:500;
@@ -365,6 +368,7 @@
           <label for="h-phone">Telefonnummer</label>
           <input id="h-phone" name="phone" type="tel" autocomplete="tel" required placeholder="z. B. 0152 1234567">
         </div>
+        <label class="field-check"><input type="checkbox" required> Ich habe die <a href="https://www.mehrauftrag.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
         <button type="submit" class="btn btn-primary btn-block">Kostenlosen Entwurf anfragen</button>
         <div class="form-success" data-success>Danke. Wir melden uns innerhalb von 24 Stunden bei dir.</div>
         <p class="form-note">Kein Verkaufsdruck, keine Vertragsbindung.</p>
@@ -696,7 +700,8 @@
             <label for="f-msg">Worum geht's? (optional)</label>
             <textarea id="f-msg" name="message" placeholder="z. B. Büroreinigung, Treppenhaus für Hausverwaltung, Bau- und Sonderreinigung"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Kostenlos anfragen</button>
+          <label class="field-check"><input type="checkbox" required> Ich habe die <a href="https://www.mehrauftrag.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+        <button type="submit" class="btn btn-primary btn-block">Kostenlos anfragen</button>
           <div class="form-success" data-success>Danke. Wir melden uns innerhalb von 24 Stunden bei dir.</div>
           <p class="form-note">Kein Verkaufsdruck, keine Vertragsbindung.</p>
         </form>
