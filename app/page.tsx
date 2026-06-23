@@ -1256,7 +1256,7 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-3 gap-4"
             >
               {[
-                { head: "Handwerk & Dienstleistung", label: "Unsere Spezialität",       desc: "Vom Schweißbetrieb bis zur Gebäudereinigung" },
+                { head: "Handwerk & Dienstleistungen", label: "Unsere Spezialität",       desc: "Vom Schweißbetrieb bis zur Gebäudereinigung" },
                 { head: "Schlüsselfertig",           label: "Deine Website gehört dir",  desc: "Keine Bindung, keine Abhängigkeit" },
                 { head: "Bundesweit",                label: "Von Hamburg bis ins Sauerland", desc: "Lokale Betriebe, echte Projekte" },
               ].map((s, i) => (
@@ -1266,14 +1266,14 @@ export default function Home() {
 
                   whileHover={{ y: -4, borderColor: "rgba(59,130,246,0.28)" }}
                   transition={SPRING_FAST}
-                  className="rounded-2xl px-7 py-8 text-center"
+                  className="rounded-2xl px-7 py-8 text-center flex flex-col justify-center min-w-0 h-full"
                   style={{
                     background: "rgba(255,255,255,0.04)",
                     border: "1px solid rgba(255,255,255,0.07)",
                     boxShadow: "0 2px 16px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.03) inset",
                   }}
                 >
-                  <div className="text-2xl sm:text-3xl font-black mb-2 tracking-tight gradient-text-blue leading-tight">
+                  <div className="text-xl sm:text-2xl font-black mb-2 tracking-tight gradient-text-blue leading-snug pb-1 hyphens-auto break-words">
                     {s.head}
                   </div>
                   <div className="font-semibold text-sm mb-1 text-white">{s.label}</div>
