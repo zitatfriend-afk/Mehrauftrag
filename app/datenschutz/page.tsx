@@ -336,7 +336,7 @@ export default function DatenschutzPage() {
 
         <LegalSubsection title="Anfrageformulare auf unseren Landingpages">
           <LegalP>
-            Auf einzelnen Landingpages (z.B. zu speziellen Angeboten) bieten wir Ihnen kurze
+            Auf einzelnen Landingpages (z.B. zu speziellen Angeboten oder einzelnen Branchen) bieten wir Ihnen kurze
             Anfrageformulare an, über die Sie uns Ihren Vornamen und Ihre Telefonnummer übermitteln
             können, damit wir Sie für ein unverbindliches Erstgespräch zurückrufen können. Es werden
             ausschließlich die von Ihnen aktiv eingegebenen Daten verarbeitet.

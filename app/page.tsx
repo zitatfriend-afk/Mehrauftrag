@@ -1787,6 +1787,16 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Branchen-Landingpages – interne SEO-Verlinkung */}
+            <div className="mt-6 pt-5 flex flex-wrap justify-center gap-x-5 gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+              <a href="/webseite-fuer-gebaeudereinigung" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Website für Gebäudereinigung
+              </a>
+              <a href="/webseite-fuer-schweisser" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Website für Schweißer
+              </a>
+            </div>
           </div>
         </footer>
       </main>
