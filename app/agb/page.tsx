@@ -42,7 +42,7 @@ export default function AGBPage() {
         <LegalP>
           Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) gelten für alle Verträge,
           Leistungen, Angebote und Lieferungen zwischen Patrick Sauna, handelnd unter der
-          Geschäftsbezeichnung MehrAuftrag, Jostraße 28, 63512 Hainburg (nachfolgend „Agentur“ oder
+          Geschäftsbezeichnung MehrAuftrag, Josefstraße 28, 63512 Hainburg (nachfolgend „Agentur“ oder
           „wir“) und dem Auftraggeber (nachfolgend „Kunde“).
         </LegalP>
         <LegalP>

@@ -123,7 +123,7 @@ export default function DatenschutzPage() {
           <ContactCard
             name="Patrick Sauna"
             company="MehrAuftrag"
-            street="Jostraße 28"
+            street="Josefstraße 28"
             city="63512 Hainburg"
             email="info@mehrauftrag.de"
           />

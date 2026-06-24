@@ -25,7 +25,7 @@ export default function ImpressumPage() {
         <ContactCard
           name="Patrick Sauna"
           company="MehrAuftrag"
-          street="Jostraße 28"
+          street="Josefstraße 28"
           city="63512 Hainburg"
           country="Deutschland"
           email="info@mehrauftrag.de"
@@ -35,7 +35,7 @@ export default function ImpressumPage() {
       <LegalSection number="§ 55 RStV" title="Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV">
         <ContactCard
           name="Patrick Sauna"
-          street="Jostraße 28"
+          street="Josefstraße 28"
           city="63512 Hainburg"
         />
       </LegalSection>
