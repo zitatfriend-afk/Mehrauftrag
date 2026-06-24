@@ -1509,7 +1509,7 @@ export default function Home() {
                   Pakete. Nur maßgeschneiderte Strategien, die messbar mehr Aufträge bringen.
                 </p>
                 <div className="space-y-2.5 mb-8">
-                  {["Echte Projekte aus Handwerk & Dienstleistung", "Persönlicher Ansprechpartner", "100% Ergebnisorientiert", "90-Tage-Ergebnis-Garantie"].map((item) => (
+                  {["Echte Projekte aus Handwerk & Dienstleistung", "Persönlicher Ansprechpartner", "100% Ergebnisorientiert", "90 Tage Betreuung inklusive Optimierung"].map((item) => (
                     <div key={item} className="flex items-center gap-3">
                       <div className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0" style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}>
                         <svg className="w-2.5 h-2.5 text-[#3b82f6]" fill="currentColor" viewBox="0 0 20 20">
@@ -1693,7 +1693,7 @@ export default function Home() {
               </h2>
               <p className="text-lg max-w-lg mx-auto mb-10 leading-relaxed text-slate-400">
                 Kostenloses Erstgespräch. Wir analysieren deinen Betrieb und
-                zeigen dir in 30 Minuten, wie du in 90 Tagen mehr Aufträge gewinnst.
+                zeigen dir in 30 Minuten, wie du planbar mehr Aufträge gewinnst.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
                 <motion.a
