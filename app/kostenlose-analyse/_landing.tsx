@@ -46,6 +46,19 @@ declare global {
   }
 }
 
+/**
+ * Feuert ein Meta-Pixel "Contact"-Event, wenn jemand per WhatsApp oder Telefon
+ * Kontakt aufnimmt. So werden diese Kontaktversuche im Pixel sichtbar (bisher
+ * feuerte nur die Formular-Absendung) und Meta kann auf kontaktfreudige Nutzer
+ * optimieren. Feuert nur bei erteilter Cookie-Zustimmung (fbq wird sonst nicht
+ * geladen, siehe app/_components/cookie-consent.tsx).
+ */
+function trackContact(method: "whatsapp" | "phone") {
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    window.fbq("track", "Contact", { content_name: PIXEL_CONTENT, contact_method: method });
+  }
+}
+
 // ─── Shared Motion ────────────────────────────────────────────────────────────
 const EASE_OUT = [0.16, 1, 0.3, 1] as [number, number, number, number];
 const fadeUp = {
@@ -377,6 +390,7 @@ function LeadForm() {
       <a
         href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Elektrobetrieb."
         target="_blank" rel="noopener"
+        onClick={() => trackContact("whatsapp")}
         className="inline-flex w-full items-center justify-center gap-2.5 rounded-xl px-7 py-3.5 text-base font-semibold text-white transition hover:brightness-110"
         style={{ background: "#25D366", boxShadow: "0 4px 18px rgba(37,211,102,0.4)" }}
       >
@@ -446,7 +460,7 @@ export default function AnalyseLanding() {
           <div className="mx-auto flex h-[64px] max-w-6xl items-center justify-between px-5 sm:px-8">
             <Link href="/" aria-label="MehrAuftrag Startseite" className="flex items-center"><MALogo /></Link>
             <div className="flex items-center gap-2">
-              <a href="tel:+4915202069625" className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-[13px] font-semibold text-slate-100" style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.04)" }}>
+              <a href="tel:+4915202069625" onClick={() => trackContact("phone")} className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-[13px] font-semibold text-slate-100" style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.04)" }}>
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -495,9 +509,9 @@ export default function AnalyseLanding() {
                 </div>
                 <p className="mt-4 text-center text-sm text-slate-400">
                   Lieber direkt schreiben?{" "}
-                  <a href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Elektrobetrieb." target="_blank" rel="noopener" className="font-semibold text-[#25D366] hover:text-white">WhatsApp</a>
+                  <a href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Elektrobetrieb." target="_blank" rel="noopener" onClick={() => trackContact("whatsapp")} className="font-semibold text-[#25D366] hover:text-white">WhatsApp</a>
                   {" "}oder{" "}
-                  <a href="tel:+4915202069625" className="font-semibold text-[#60a5fa] hover:text-white">anrufen</a>
+                  <a href="tel:+4915202069625" onClick={() => trackContact("phone")} className="font-semibold text-[#60a5fa] hover:text-white">anrufen</a>
                 </p>
               </motion.div>
             </motion.div>
@@ -633,6 +647,7 @@ export default function AnalyseLanding() {
           href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Elektrobetrieb."
           target="_blank"
           rel="noopener"
+          onClick={() => trackContact("whatsapp")}
           aria-label="Per WhatsApp anfragen"
           className="fixed bottom-5 right-5 z-[60] inline-flex items-center gap-2 rounded-full px-4 py-3.5 text-sm font-semibold text-white shadow-xl transition hover:scale-105"
           style={{ background: "#25D366", boxShadow: "0 8px 28px rgba(37,211,102,0.5)" }}
