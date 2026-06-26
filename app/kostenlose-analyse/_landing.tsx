@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -289,12 +289,17 @@ function LeadForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [state, setState] = useState<SubmitState>("idle");
+  const nameRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (state === "loading") return;
     if (!name.trim() || !phone.trim()) {
       setState("error");
+      // Fokus auf das erste leere Feld: Tastatur öffnet sich, klare Aufforderung statt "nichts passiert"
+      if (!name.trim()) nameRef.current?.focus();
+      else phoneRef.current?.focus();
       return;
     }
     setState("loading");
@@ -347,25 +352,34 @@ function LeadForm() {
         <label htmlFor="lead-name" className="sr-only">Vorname</label>
         <input
           id="lead-name" type="text" autoComplete="given-name" placeholder="Ihr Vorname"
+          ref={nameRef}
           value={name}
           onChange={(e) => { setName(e.target.value); if (state === "error") setState("idle"); }}
           required
-          className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06]"
+          aria-invalid={state === "error" && !name.trim()}
+          className={`w-full rounded-xl border bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06] ${state === "error" && !name.trim() ? "border-red-500/70" : "border-white/10"}`}
         />
       </div>
       <div>
         <label htmlFor="lead-phone" className="sr-only">Telefonnummer</label>
         <input
           id="lead-phone" type="tel" inputMode="tel" autoComplete="tel" placeholder="Ihre Telefonnummer"
+          ref={phoneRef}
           value={phone}
           onChange={(e) => { setPhone(e.target.value); if (state === "error") setState("idle"); }}
           required
-          className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06]"
+          aria-invalid={state === "error" && !phone.trim()}
+          className={`w-full rounded-xl border bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06] ${state === "error" && !phone.trim() ? "border-red-500/70" : "border-white/10"}`}
         />
       </div>
 
       {state === "error" && (
-        <p className="text-sm text-red-400">Bitte Vorname und Telefonnummer eingeben. Klappt es nicht, rufen Sie uns gern direkt an.</p>
+        <p className="flex items-start gap-2 rounded-lg border border-red-500/40 bg-red-500/10 px-3 py-2.5 text-sm font-medium text-red-300">
+          <svg className="mt-0.5 h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m0 3.75h.008M10.34 3.94l-7.5 12.99A1.5 1.5 0 004.14 19.5h15.72a1.5 1.5 0 001.3-2.57l-7.5-12.99a1.5 1.5 0 00-2.6 0z" />
+          </svg>
+          <span>Bitte Vorname und Telefonnummer eingeben, dann auf „Gratis-Analyse anfordern&quot; tippen. Klappt es nicht, rufen Sie uns gern direkt an.</span>
+        </p>
       )}
 
       <button
