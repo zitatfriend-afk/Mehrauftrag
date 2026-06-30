@@ -565,8 +565,8 @@ export default function DatenschutzPage() {
 
         <LegalSubsection title="Google Analytics">
           <LegalP>
-            Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist
-            die Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
+            Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics 4. Anbieter ist
+            die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland („Google").
           </LegalP>
           <LegalP>
             Google Analytics verwendet so genannte „Cookies". Das sind Textdateien, die auf Ihrem
@@ -576,9 +576,17 @@ export default function DatenschutzPage() {
             gespeichert.
           </LegalP>
           <LegalP>
-            Die Speicherung von Google-Analytics-Cookies erfolgt auf Grundlage von Art. 6 Abs. 1
-            lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der Analyse des
-            Nutzerverhaltens, um sowohl sein Webangebot als auch seine Werbung zu optimieren.
+            Wir setzen Google Analytics mit dem von Google bereitgestellten Einwilligungsmodus
+            (Consent Mode) ein. Cookies werden erst gesetzt und eine Analyse mit Bezug zu Ihrem
+            Endgerät findet erst statt, nachdem Sie über unser Cookie-Banner eingewilligt haben.
+            Solange keine Einwilligung vorliegt, werden keine Analyse-Cookies gesetzt; es können
+            lediglich anonyme, cookielose Signale (ohne Kennungen) an Google übermittelt werden.
+            Rechtsgrundlage für das Setzen von Cookies und die anschließende Analyse ist Ihre
+            Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO sowie § 25 Abs. 1 TDDDG. Sie können Ihre
+            Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie Ihre
+            Cookie-Einstellungen über die Schaltfläche „Cookie-Einstellungen" am unteren
+            Bildschirmrand anpassen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung
+            bleibt unberührt.
           </LegalP>
           <LegalSubsection title="IP Anonymisierung">
             <LegalP>

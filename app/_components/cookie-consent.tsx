@@ -111,6 +111,33 @@ function revokeClarity() {
   callClarity("consent", false);
 }
 
+// ─── Google Analytics 4 (Consent Mode v2) ────────────────────────────────────
+// Das gtag-Basis-Tag wird global im Layout geladen und steht standardmäßig auf
+// "denied" (keine Cookies/kein Tracking ohne Einwilligung). Hier wird bei
+// Zustimmung bzw. Widerruf nur der Consent-Status aktualisiert.
+function callGtag(...args: unknown[]) {
+  if (typeof window === "undefined") return;
+  (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag?.(...args);
+}
+
+function grantGoogleAnalytics() {
+  callGtag("consent", "update", {
+    analytics_storage: "granted",
+    ad_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
+  });
+}
+
+function revokeGoogleAnalytics() {
+  callGtag("consent", "update", {
+    analytics_storage: "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  });
+}
+
 function readConsent(): Consent | null {
   if (typeof window === "undefined") return null;
   try {
@@ -137,6 +164,7 @@ export default function CookieConsent() {
       if (stored.marketing) {
         loadMetaPixel();
         loadClarity();
+        grantGoogleAnalytics();
       }
     }
   }, []);
@@ -157,9 +185,11 @@ export default function CookieConsent() {
     if (acceptMarketing) {
       loadMetaPixel();
       loadClarity();
+      grantGoogleAnalytics();
     } else {
       revokeMetaPixel();
       revokeClarity();
+      revokeGoogleAnalytics();
     }
     setOpen(false);
     setShowSettings(false);
@@ -210,7 +240,7 @@ export default function CookieConsent() {
               <p className="mt-2 text-sm leading-relaxed text-slate-300">
                 Wir verwenden Cookies, um unsere Website bereitzustellen und – mit Ihrer
                 Einwilligung – die Reichweite unserer Werbung zu messen und die Nutzung unserer
-                Website zu analysieren (Meta-Pixel, Microsoft Clarity). Notwendige Cookies sind
+                Website zu analysieren (Meta-Pixel, Google Analytics, Microsoft Clarity). Notwendige Cookies sind
                 für den Betrieb erforderlich. Marketing- und Analyse-Cookies werden nur gesetzt,
                 wenn Sie zustimmen. Sie können Ihre Einwilligung jederzeit mit Wirkung für die
                 Zukunft widerrufen. Mehr dazu in unserer{" "}
@@ -245,11 +275,11 @@ export default function CookieConsent() {
                       <label className="flex cursor-pointer items-start justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-4">
                         <div>
                           <p className="text-sm font-medium text-white">
-                            Marketing & Analyse (Meta-Pixel, Microsoft Clarity)
+                            Marketing & Analyse (Meta-Pixel, Google Analytics, Microsoft Clarity)
                           </p>
                           <p className="mt-1 text-xs text-slate-400">
-                            Hilft uns, die Wirkung unserer Werbung auf Facebook & Instagram zu
-                            messen und – anonymisiert – zu verstehen, wie unsere Website genutzt
+                            Hilft uns, die Wirkung unserer Werbung auf Facebook, Instagram & Google
+                            zu messen und – anonymisiert – zu verstehen, wie unsere Website genutzt
                             wird, um sie zu verbessern.
                           </p>
                         </div>
