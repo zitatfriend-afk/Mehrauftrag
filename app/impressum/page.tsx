@@ -9,8 +9,8 @@ import {
 } from "../_components/legal-content";
 
 export const metadata: Metadata = {
-  title: "Impressum – MehrAuftrag",
-  description: "Impressum der MehrAuftrag Digitalagentur gemäß § 5 TMG.",
+  title: "Impressum – Mehr Auftrag",
+  description: "Impressum der Mehr Auftrag Digitalagentur gemäß § 5 TMG.",
   robots: "noindex, nofollow",
 };
 
@@ -24,7 +24,7 @@ export default function ImpressumPage() {
       <LegalSection number="§ 5 TMG" title="Angaben gemäß § 5 TMG">
         <ContactCard
           name="Patrick Sauna"
-          company="MehrAuftrag"
+          company="Mehr Auftrag"
           street="Josefstraße 28"
           city="63512 Hainburg"
           country="Deutschland"

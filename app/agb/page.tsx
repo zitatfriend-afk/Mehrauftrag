@@ -9,9 +9,9 @@ import {
 } from "../_components/legal-content";
 
 export const metadata: Metadata = {
-  title: "AGB – MehrAuftrag",
+  title: "AGB – Mehr Auftrag",
   description:
-    "Allgemeine Geschäftsbedingungen (AGB) der MehrAuftrag Digitalagentur für Webentwicklung, Webseiten-Betreuung, SEO, Google Ads und Meta Ads.",
+    "Allgemeine Geschäftsbedingungen (AGB) der Mehr Auftrag Digitalagentur für Webentwicklung, Webseiten-Betreuung, SEO, Google Ads und Meta Ads.",
   robots: "noindex, follow",
 };
 
@@ -20,12 +20,12 @@ export default function AGBPage() {
     <LegalPageShell
       badge="Rechtliches"
       title="Allgemeine Geschäftsbedingungen"
-      subtitle="AGB der MehrAuftrag Digitalagentur · Stand: Juni 2026"
+      subtitle="AGB der Mehr Auftrag Digitalagentur · Stand: Juni 2026"
     >
       {/* Hinweis */}
       <LegalSection title="Hinweis vorab">
         <LegalP>
-          Diese Allgemeinen Geschäftsbedingungen regeln die Zusammenarbeit zwischen MehrAuftrag und
+          Diese Allgemeinen Geschäftsbedingungen regeln die Zusammenarbeit zwischen Mehr Auftrag und
           unseren Kunden. Sie sind bewusst praxisnah, klar und verständlich formuliert. Maßgeblich ist
           stets die zum Zeitpunkt des Vertragsschlusses gültige Fassung.
         </LegalP>
@@ -42,7 +42,7 @@ export default function AGBPage() {
         <LegalP>
           Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) gelten für alle Verträge,
           Leistungen, Angebote und Lieferungen zwischen Patrick Sauna, handelnd unter der
-          Geschäftsbezeichnung MehrAuftrag, Josefstraße 28, 63512 Hainburg (nachfolgend „Agentur“ oder
+          Geschäftsbezeichnung Mehr Auftrag, Josefstraße 28, 63512 Hainburg (nachfolgend „Agentur“ oder
           „wir“) und dem Auftraggeber (nachfolgend „Kunde“).
         </LegalP>
         <LegalP>

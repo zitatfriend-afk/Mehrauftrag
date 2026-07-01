@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 /**
- * MaMark — das offizielle MehrAuftrag-Logo (Bildmarke).
+ * MaMark — das offizielle Mehr Auftrag-Logo (Bildmarke).
  *
  * Rendert die echte Logo-Datei als transparentes PNG (/logo-mark.png), das aus
  * "Mehrauftrag logo.jpg" erzeugt wurde (schwarzer Hintergrund entfernt).
@@ -21,7 +21,7 @@ export default function MaMark({
   return (
     <Image
       src="/logo-mark.png"
-      alt="MehrAuftrag Logo"
+      alt="Mehr Auftrag Logo"
       width={size}
       height={size}
       priority={priority}

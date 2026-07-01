@@ -76,7 +76,7 @@ function Portrait() {
     <div className="relative w-full h-full overflow-hidden">
       <Image
         src="/neuesprofilbild.png"
-        alt="Patrick Sauna – Geschäftsführer MehrAuftrag"
+        alt="Patrick Sauna – Geschäftsführer Mehr Auftrag"
         fill
         sizes="(max-width: 768px) 100vw, 340px"
         priority
@@ -1011,7 +1011,7 @@ export default function Home() {
           }}
         >
           <div className="max-w-6xl mx-auto px-5 sm:px-8 h-[64px] flex items-center justify-between">
-            <a href="#" aria-label="MehrAuftrag" className="flex items-center">
+            <a href="#" aria-label="Mehr Auftrag" className="flex items-center">
               <MALogo variant="dark" />
             </a>
             <div className="hidden md:flex items-center gap-1">
@@ -1500,11 +1500,11 @@ export default function Home() {
                   <span className="gradient-text-blue">Dein Partner.</span>
                 </h2>
                 <p className="text-lg leading-relaxed mb-5 text-slate-300">
-                  Ich bin Patrick Sauna, Geschäftsführer von MehrAuftrag. Ich habe selbst erlebt,
+                  Ich bin Patrick Sauna, Geschäftsführer von Mehr Auftrag. Ich habe selbst erlebt,
                   wie schwer es ist, als kleiner Betrieb online gegen große Unternehmen mit riesigen Budgets zu bestehen.
                 </p>
                 <p className="leading-relaxed mb-8 text-slate-400">
-                  Deshalb haben wir MehrAuftrag gegründet eine Digitalagentur,
+                  Deshalb haben wir Mehr Auftrag gegründet eine Digitalagentur,
                   die wirklich liefert. Keine leeren Versprechen. Keine generischen
                   Pakete. Nur maßgeschneiderte Strategien, die messbar mehr Aufträge bringen.
                 </p>

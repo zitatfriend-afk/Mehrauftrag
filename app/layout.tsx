@@ -19,21 +19,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mehrauftrag.de"),
-  title: "MehrAuftrag – Die Digitalagentur die liefert",
+  title: "Mehr Auftrag – Die Digitalagentur die liefert",
   description:
-    "Mehr Aufträge, mehr Umsatz, mehr Wachstum. MehrAuftrag ist die Digitalagentur für Handwerk, Gastronomie, Physiotherapie und alle Branchen die online wachsen wollen.",
+    "Mehr Aufträge, mehr Umsatz, mehr Wachstum. Mehr Auftrag ist die Digitalagentur für Handwerk, Gastronomie, Physiotherapie und alle Branchen die online wachsen wollen.",
   openGraph: {
-    title: "MehrAuftrag – Die Digitalagentur die liefert",
+    title: "Mehr Auftrag – Die Digitalagentur die liefert",
     description:
       "Mehr Aufträge, mehr Umsatz, mehr Wachstum. Maßgeschneiderte Websites und Marketing für Handwerk, Gastronomie, Physiotherapie und alle Branchen.",
     url: "https://www.mehrauftrag.de",
-    siteName: "MehrAuftrag",
+    siteName: "Mehr Auftrag",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MehrAuftrag – Die Digitalagentur die liefert",
+        alt: "Mehr Auftrag – Die Digitalagentur die liefert",
       },
     ],
     locale: "de_DE",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MehrAuftrag – Die Digitalagentur die liefert",
+    title: "Mehr Auftrag – Die Digitalagentur die liefert",
     description:
       "Mehr Aufträge, mehr Umsatz, mehr Wachstum. Maßgeschneiderte Websites und Marketing für alle Branchen.",
     images: ["/og-image.jpg"],

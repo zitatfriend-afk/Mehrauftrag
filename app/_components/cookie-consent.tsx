@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 /**
- * DSGVO/TDDDG-konformer Cookie-Consent für MehrAuftrag.
+ * DSGVO/TDDDG-konformer Cookie-Consent für Mehr Auftrag.
  *
  * - Marketing-Cookies (Meta-Pixel) werden NUR nach aktiver Einwilligung geladen.
  * - "Alle akzeptieren" und "Nur notwendige" sind gleichwertig (kein Dark Pattern).

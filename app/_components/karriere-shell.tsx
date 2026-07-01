@@ -116,11 +116,11 @@ const JOBS = [
     title: "Vertriebsberatung",
     suffix: "(m/w/d)",
     type: "Freelance / Provision",
-    desc: "Du identifizierst neue Kunden für MehrAuftrag, führst Erstgespräche und begeisterst Unternehmer aus allen Branchen für unsere digitalen Lösungen.",
+    desc: "Du identifizierst neue Kunden für Mehr Auftrag, führst Erstgespräche und begeisterst Unternehmer aus allen Branchen für unsere digitalen Lösungen.",
     tasks: [
       "Gewinnung und Qualifizierung neuer Interessenten",
       "Durchführung von Erstgesprächen und Bedarfsanalysen",
-      "Präsentation der MehrAuftrag-Leistungen",
+      "Präsentation der Leistungen von Mehr Auftrag",
       "Übergabe qualifizierter Leads an das interne Team",
     ],
     requirements: [
@@ -281,7 +281,7 @@ export default function KarriereShell() {
         }}
       >
         <div className="max-w-6xl mx-auto flex items-center justify-between h-16">
-          <Link href="/" aria-label="MehrAuftrag Startseite">
+          <Link href="/" aria-label="Mehr Auftrag Startseite">
             <MALogo />
           </Link>
           <nav className="hidden md:flex items-center gap-7">
@@ -335,7 +335,7 @@ export default function KarriereShell() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: EASE_OUT }}
             >
-              <Badge>Karriere bei MehrAuftrag</Badge>
+              <Badge>Karriere bei Mehr Auftrag</Badge>
               <h1
                 className="font-black tracking-tighter text-white mb-6 leading-[1.05]"
                 style={{ fontSize: "clamp(36px, 7vw, 82px)" }}
@@ -356,7 +356,7 @@ export default function KarriereShell() {
                 className="text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
                 style={{ color: "rgba(148,163,184,0.78)" }}
               >
-                Bei MehrAuftrag helfen wir Handwerksbetrieben, Therapeuten, Gastronomen und Dienstleistern dabei, online sichtbar zu werden und messbar mehr Aufträge zu gewinnen. Wachse mit uns.
+                Bei Mehr Auftrag helfen wir Handwerksbetrieben, Therapeuten, Gastronomen und Dienstleistern dabei, online sichtbar zu werden und messbar mehr Aufträge zu gewinnen. Wachse mit uns.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -403,7 +403,7 @@ export default function KarriereShell() {
                 Wir bauen das digitale Fundament für echte Unternehmen.
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "rgba(148,163,184,0.75)" }}>
-                MehrAuftrag ist eine Digitalagentur, die Betriebe aus allen Branchen dabei unterstützt, professionell online aufzutreten und kontinuierlich neue Kunden zu gewinnen. Ob Handwerker, Physiotherapeut, Gastronom oder Dienstleister – wir liefern individuelle Lösungen, die messbar wirken.
+                Mehr Auftrag ist eine Digitalagentur, die Betriebe aus allen Branchen dabei unterstützt, professionell online aufzutreten und kontinuierlich neue Kunden zu gewinnen. Ob Handwerker, Physiotherapeut, Gastronom oder Dienstleister – wir liefern individuelle Lösungen, die messbar wirken.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "rgba(148,163,184,0.75)" }}>
                 Unser Team ist klein, aber wächst. Wir suchen Menschen, die mitdenken, anpacken und stolz auf das sind, was sie bauen.
@@ -547,7 +547,7 @@ export default function KarriereShell() {
               transition={{ duration: 0.6, ease: EASE_OUT }}
               className="text-center mb-14"
             >
-              <Badge>Warum MehrAuftrag</Badge>
+              <Badge>Warum Mehr Auftrag</Badge>
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white leading-tight">
                 Was dich bei uns erwartet.
               </h2>
@@ -724,7 +724,7 @@ export default function KarriereShell() {
                       value={form.motivation}
                       onChange={handleChange}
                       rows={5}
-                      placeholder="Wer bist du, was treibt dich an und warum möchtest du bei MehrAuftrag arbeiten?"
+                      placeholder="Wer bist du, was treibt dich an und warum möchtest du bei Mehr Auftrag arbeiten?"
                       style={{ ...inputBase, resize: "vertical", minHeight: "130px" }}
                       onFocus={(e) => (e.currentTarget.style.borderColor = "rgba(59,130,246,0.5)")}
                       onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}

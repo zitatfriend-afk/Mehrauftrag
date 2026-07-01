@@ -110,7 +110,7 @@ export default function LegalPageShell({
         }}
       >
         <div className="max-w-6xl mx-auto flex items-center justify-between h-16">
-          <Link href="/" aria-label="MehrAuftrag Startseite">
+          <Link href="/" aria-label="Mehr Auftrag Startseite">
             <MALogo />
           </Link>
           <nav className="hidden md:flex items-center gap-7">

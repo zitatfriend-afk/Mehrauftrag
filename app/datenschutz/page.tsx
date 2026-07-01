@@ -11,8 +11,8 @@ import {
 } from "../_components/legal-content";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung – MehrAuftrag",
-  description: "Datenschutzerklärung der MehrAuftrag Digitalagentur gemäß DSGVO.",
+  title: "Datenschutzerklärung – Mehr Auftrag",
+  description: "Datenschutzerklärung der Mehr Auftrag Digitalagentur gemäß DSGVO.",
   robots: "noindex, nofollow",
 };
 
@@ -122,7 +122,7 @@ export default function DatenschutzPage() {
           <LegalP>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</LegalP>
           <ContactCard
             name="Patrick Sauna"
-            company="MehrAuftrag"
+            company="Mehr Auftrag"
             street="Josefstraße 28"
             city="63512 Hainburg"
             email="info@mehrauftrag.de"

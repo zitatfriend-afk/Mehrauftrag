@@ -36,7 +36,7 @@ async function notify(name: string, phone: string, source: string, message: stri
     method: "POST",
     headers: { "api-key": key, "content-type": "application/json", "accept": "application/json" },
     body: JSON.stringify({
-      sender: { name: "MehrAuftrag Website", email: "Kontakt@zitatfriend.de" },
+      sender: { name: "Mehr Auftrag Website", email: "Kontakt@zitatfriend.de" },
       to: [{ email: "info@mehrauftrag.de" }],
       subject: `Neue Website-Anfrage: ${name} (${source})`,
       htmlContent: html,

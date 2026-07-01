@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import MaMark from "../_components/ma-mark";
 
 /**
- * Landingpage /elektriker für MehrAuftrag.
+ * Landingpage /elektriker für Mehr Auftrag.
  *
  * Zielgruppe: Elektriker-Betriebsinhaber (35–55), Region Frankfurt & Rhein-Main.
  * Branding konsistent zur Startseite (dunkles Blau, Glas-Cards, Shimmer-CTA, Geist).
@@ -178,7 +178,7 @@ const TESTIMONIALS = [
   },
   {
     text: "Persönlicher Ansprechpartner aus der Region – Sie reden mit einem Menschen, nicht mit einer Hotline. Rückruf innerhalb von 24 Stunden, ohne Verkaufsdruck.",
-    name: "MehrAuftrag · Patrick Sauna",
+    name: "Mehr Auftrag · Patrick Sauna",
   },
 ];
 /* TODO: Sobald echte Google-Bewertungen vorliegen, hier als Kundenstimmen einsetzen. */
@@ -444,7 +444,7 @@ export default function ElektrikerLanding() {
         {/* ─── Header ─── */}
         <header className="absolute top-0 left-0 right-0 z-50">
           <div className="mx-auto flex h-[64px] max-w-6xl items-center justify-between px-5 sm:px-8">
-            <Link href="/" aria-label="MehrAuftrag Startseite" className="flex items-center">
+            <Link href="/" aria-label="Mehr Auftrag Startseite" className="flex items-center">
               <MALogo />
             </Link>
             <div className="flex items-center gap-2">
@@ -752,7 +752,7 @@ export default function ElektrikerLanding() {
           <div className="mx-auto max-w-4xl">
             <div className="mb-10 text-center">
               <motion.div variants={fadeUp}>
-                <SectionLabel center>Warum MehrAuftrag</SectionLabel>
+                <SectionLabel center>Warum Mehr Auftrag</SectionLabel>
               </motion.div>
               <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">
                 Fair, transparent, persönlich
@@ -855,7 +855,7 @@ export default function ElektrikerLanding() {
           <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
             <MALogo />
             <p className="text-xs text-slate-500">
-              © {new Date().getFullYear()} MehrAuftrag ·{" "}
+              © {new Date().getFullYear()} Mehr Auftrag ·{" "}
               <Link href="/impressum" className="hover:text-slate-300">Impressum</Link> ·{" "}
               <Link href="/datenschutz" className="hover:text-slate-300">Datenschutz</Link> ·{" "}
               <Link href="/agb" className="hover:text-slate-300">AGB</Link>
