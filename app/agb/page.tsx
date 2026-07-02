@@ -20,7 +20,7 @@ export default function AGBPage() {
     <LegalPageShell
       badge="Rechtliches"
       title="Allgemeine Geschäftsbedingungen"
-      subtitle="AGB der Mehr Auftrag Digitalagentur · Stand: Juni 2026"
+      subtitle="AGB der Mehr Auftrag Digitalagentur · Stand: Juli 2026"
     >
       {/* Hinweis */}
       <LegalSection title="Hinweis vorab">
@@ -454,7 +454,7 @@ export default function AGBPage() {
           Textform.
         </LegalP>
         <LegalCallout>
-          Stand dieser AGB: Juni 2026. Diese Bedingungen wurden sorgfältig ausgearbeitet, stellen jedoch
+          Stand dieser AGB: Juli 2026. Diese Bedingungen wurden sorgfältig ausgearbeitet, stellen jedoch
           keine Rechtsberatung dar. Vor dem produktiven Einsatz empfehlen wir eine anwaltliche Prüfung und
           Anpassung an Ihre individuelle Geschäftssituation.
         </LegalCallout>
