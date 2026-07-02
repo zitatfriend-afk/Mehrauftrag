@@ -4,13 +4,12 @@ import {
   LegalSection,
   LegalSubsection,
   LegalP,
-  LegalLink,
   ContactCard,
 } from "../_components/legal-content";
 
 export const metadata: Metadata = {
   title: "Impressum – Mehr Auftrag",
-  description: "Impressum der Mehr Auftrag Digitalagentur gemäß § 5 TMG.",
+  description: "Impressum der Mehr Auftrag Digitalagentur gemäß § 5 DDG.",
   robots: "noindex, nofollow",
 };
 
@@ -19,9 +18,9 @@ export default function ImpressumPage() {
     <LegalPageShell
       badge="Rechtliches"
       title="Impressum"
-      subtitle="Angaben gemäß § 5 TMG"
+      subtitle="Angaben gemäß § 5 DDG"
     >
-      <LegalSection number="§ 5 TMG" title="Angaben gemäß § 5 TMG">
+      <LegalSection number="§ 5 DDG" title="Angaben gemäß § 5 DDG">
         <ContactCard
           name="Patrick Sauna"
           company="Mehr Auftrag"
@@ -29,27 +28,16 @@ export default function ImpressumPage() {
           city="63512 Hainburg"
           country="Deutschland"
           email="info@mehrauftrag.de"
+          vatId="DE454534138"
         />
       </LegalSection>
 
-      <LegalSection number="§ 55 RStV" title="Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV">
+      <LegalSection number="§ 18 MStV" title="Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV">
         <ContactCard
           name="Patrick Sauna"
           street="Josefstraße 28"
           city="63512 Hainburg"
         />
-      </LegalSection>
-
-      <LegalSection title="Online-Streitbeilegung">
-        <LegalP>
-          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{" "}
-          <LegalLink href="https://ec.europa.eu/consumers/odr">
-            https://ec.europa.eu/consumers/odr
-          </LegalLink>
-        </LegalP>
-        <LegalP>
-          Unsere E-Mail-Adresse finden Sie oben im Impressum.
-        </LegalP>
       </LegalSection>
 
       <LegalSection title="Außergerichtliche Streitbeilegung">

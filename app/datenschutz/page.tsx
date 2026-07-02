@@ -369,62 +369,34 @@ export default function DatenschutzPage() {
             </LegalLink>
           </LegalP>
         </LegalSubsection>
+
+        <LegalSubsection title="Terminbuchung (Calendly)">
+          <LegalP>
+            Für die Vereinbarung von Beratungs- und Erstgesprächen bieten wir Ihnen die Möglichkeit,
+            über den Dienst „Calendly" einen Termin zu buchen. Anbieter ist die Calendly LLC, 271
+            17th Street NW, Suite 1000, Atlanta, GA 30363, USA („Calendly"). Wenn Sie auf einen
+            Terminbuchungs-Button klicken, werden Sie zu Calendly weitergeleitet. Die von Ihnen im
+            Rahmen der Buchung angegebenen Daten (z. B. Name, E-Mail-Adresse, Terminwunsch sowie
+            ggf. weitere von Ihnen gemachte Angaben) werden von Calendly verarbeitet, um den Termin
+            zu organisieren und Sie ggf. daran zu erinnern.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage für die Verarbeitung ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)
+            sowie die Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage hin (Art. 6 Abs. 1
+            lit. b DSGVO). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
+            widerrufen. Bei der Nutzung von Calendly kann es zu einer Übermittlung
+            personenbezogener Daten in die USA kommen; diese stützt sich auf die
+            Standardvertragsklauseln der EU-Kommission. Weitere Informationen finden Sie in der
+            Datenschutzerklärung von Calendly:{" "}
+            <LegalLink href="https://calendly.com/de/privacy">
+              https://calendly.com/de/privacy
+            </LegalLink>
+          </LegalP>
+        </LegalSubsection>
       </LegalSection>
 
       {/* 4. Soziale Medien */}
       <LegalSection title="4. Soziale Medien">
-        <LegalSubsection title="Facebook-Plugins (Like & Share-Button)">
-          <LegalP>
-            Auf unseren Seiten sind Plugins des sozialen Netzwerks Facebook, Anbieter Facebook Inc.,
-            1 Hacker Way, Menlo Park, California 94025, USA, integriert. Die Facebook-Plugins
-            erkennen Sie an dem Facebook-Logo oder dem „Like-Button" („Gefällt mir") auf unserer
-            Seite. Eine Übersicht über die Facebook-Plugins finden Sie hier:{" "}
-            <LegalLink href="https://developers.facebook.com/docs/plugins/">
-              https://developers.facebook.com/docs/plugins/
-            </LegalLink>
-          </LegalP>
-          <LegalP>
-            Wenn Sie unsere Seiten besuchen, wird über das Plugin eine direkte Verbindung zwischen
-            Ihrem Browser und dem Facebook-Server hergestellt. Facebook erhält dadurch die
-            Information, dass Sie mit Ihrer IP-Adresse unsere Seite besucht haben. Wenn Sie den
-            Facebook „Like-Button" anklicken während Sie in Ihrem Facebook-Account eingeloggt sind,
-            können Sie die Inhalte unserer Seiten auf Ihrem Facebook-Profil verlinken. Dadurch kann
-            Facebook den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir weisen darauf hin,
-            dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie
-            deren Nutzung durch Facebook erhalten. Weitere Informationen hierzu finden Sie in der
-            Datenschutzerklärung von Facebook unter:{" "}
-            <LegalLink href="https://de-de.facebook.com/privacy/explanation">
-              https://de-de.facebook.com/privacy/explanation
-            </LegalLink>
-          </LegalP>
-          <LegalP>
-            Wenn Sie nicht wünschen, dass Facebook den Besuch unserer Seiten Ihrem
-            Facebook-Nutzerkonto zuordnen kann, loggen Sie sich bitte aus Ihrem
-            Facebook-Benutzerkonto aus.
-          </LegalP>
-        </LegalSubsection>
-
-        <LegalSubsection title="Instagram">
-          <LegalP>
-            Auf unseren Seiten sind Funktionen des Dienstes Instagram eingebunden. Diese Funktionen
-            werden angeboten durch die Instagram Inc., 1601 Willow Road, Menlo Park, CA 94025, USA
-            integriert.
-          </LegalP>
-          <LegalP>
-            Wenn Sie in Ihrem Instagram-Account eingeloggt sind, können Sie durch Anklicken des
-            Instagram-Buttons die Inhalte unserer Seiten mit Ihrem Instagram-Profil verlinken.
-            Dadurch kann Instagram den Besuch unserer Seiten Ihrem Benutzerkonto zuordnen. Wir
-            weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der
-            übermittelten Daten sowie deren Nutzung durch Instagram erhalten.
-          </LegalP>
-          <LegalP>
-            Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Instagram:{" "}
-            <LegalLink href="https://instagram.com/about/legal/privacy/">
-              https://instagram.com/about/legal/privacy/
-            </LegalLink>
-          </LegalP>
-        </LegalSubsection>
-
         <LegalSubsection title="WhatsApp-Kontakt">
           <LegalP>
             Auf unserer Website bieten wir Ihnen die Möglichkeit, uns über einen WhatsApp-Link direkt
@@ -476,6 +448,17 @@ export default function DatenschutzPage() {
             zum Widerruf erfolgten Verarbeitung bleibt unberührt.
           </LegalP>
           <LegalP>
+            Für die Erhebung und Übermittlung der Daten mittels des Meta-Pixels sind wir und Meta
+            gemeinsam Verantwortliche im Sinne des Art. 26 DSGVO. Die gemeinsame Verantwortlichkeit
+            beschränkt sich auf die Erhebung der Daten und deren Weiterleitung an Meta. Die
+            anschließende Verarbeitung durch Meta erfolgt in deren alleiniger Verantwortung. Die
+            Einzelheiten der gemeinsamen Verantwortlichkeit hat Meta im „Zusatz für Verantwortliche"
+            festgehalten:{" "}
+            <LegalLink href="https://www.facebook.com/legal/controller_addendum">
+              https://www.facebook.com/legal/controller_addendum
+            </LegalLink>
+          </LegalP>
+          <LegalP>
             Im Rahmen der Nutzung des Meta-Pixels kann es zu einer Übermittlung
             personenbezogener Daten an Server von Meta, auch in die USA, kommen. Soweit Daten in
             die USA übertragen werden, stützt sich Meta auf die Standardvertragsklauseln der
@@ -504,29 +487,6 @@ export default function DatenschutzPage() {
             Einwilligung jederzeit mit Wirkung für die Zukunft über die „Cookie-Einstellungen"
             widerrufen. Zusätzlich können Sie personalisierte Werbung in den Einstellungen Ihres
             Meta-Kontos deaktivieren.
-          </LegalP>
-        </LegalSubsection>
-
-        <LegalSubsection title="Google Ads und Conversion-Tracking">
-          <LegalP>
-            Wir nutzen das Online-Werbeprogramm „Google Ads" und in diesem Rahmen das
-            Conversion-Tracking sowie ggf. Remarketing-Funktionen der Google Ireland Limited, Gordon
-            House, Barrow Street, Dublin 4, Irland („Google"). Damit können wir auswerten, ob und wie
-            Nutzer mit unseren Anzeigen interagieren, nachdem sie auf eine Google-Anzeige geklickt
-            haben, und unsere Werbung relevanter ausspielen. Google setzt hierfür Cookies bzw.
-            vergleichbare Technologien ein. Wir erhalten von Google lediglich statistische
-            Auswertungen; eine Identifizierung einzelner Nutzer durch uns ist dabei nicht möglich.
-          </LegalP>
-          <LegalP>
-            Die Verarbeitung erfolgt ausschließlich nach Ihrer Einwilligung über unser Cookie-Banner
-            (Art. 6 Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG). Sie können Ihre Einwilligung
-            jederzeit mit Wirkung für die Zukunft widerrufen. Bei der Nutzung von Google-Diensten
-            kann es zu einer Übermittlung personenbezogener Daten an Server von Google, auch in den
-            USA, kommen; diese stützt sich auf die Standardvertragsklauseln der EU-Kommission.
-            Weitere Informationen finden Sie in der Datenschutzerklärung von Google:{" "}
-            <LegalLink href="https://policies.google.com/privacy">
-              https://policies.google.com/privacy
-            </LegalLink>
           </LegalP>
         </LegalSubsection>
 
@@ -655,7 +615,7 @@ export default function DatenschutzPage() {
       {/* 6. Stand */}
       <LegalSection title="6. Stand und Aktualität dieser Datenschutzerklärung">
         <LegalP>
-          Stand dieser Datenschutzerklärung: Juni 2026. Wir behalten uns vor, diese
+          Stand dieser Datenschutzerklärung: Juli 2026. Wir behalten uns vor, diese
           Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen
           entspricht oder um Änderungen unserer Leistungen umzusetzen – etwa bei der Einführung
           neuer Dienste. Für Ihren erneuten Besuch gilt dann die jeweils aktuelle Fassung.

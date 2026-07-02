@@ -97,6 +97,7 @@ export function ContactCard({
   country,
   email,
   phone,
+  vatId,
 }: {
   name: string;
   company?: string;
@@ -105,6 +106,7 @@ export function ContactCard({
   country?: string;
   email?: string;
   phone?: string;
+  vatId?: string;
 }) {
   return (
     <div
@@ -128,6 +130,11 @@ export function ContactCard({
         <a href={`tel:${phone.replace(/\s/g, "")}`} className="text-sm text-[#60a5fa] hover:text-white transition-colors">
           {phone}
         </a>
+      )}
+      {vatId && (
+        <span className="text-sm text-white/55 mt-1">
+          Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: {vatId}
+        </span>
       )}
     </div>
   );
