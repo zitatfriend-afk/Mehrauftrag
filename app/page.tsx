@@ -75,7 +75,7 @@ function Portrait() {
   return (
     <div className="relative w-full h-full overflow-hidden">
       <Image
-        src="/neuesprofilbild.png"
+        src="/neuesprofilbild.webp"
         alt="Patrick Sauna – Geschäftsführer Mehr Auftrag"
         fill
         sizes="(max-width: 768px) 100vw, 340px"
@@ -926,6 +926,21 @@ export default function Home() {
     );
   }, []);
 
+  // Low-power detection: weak CPU (≤4 cores), low RAM (≤4 GB) or the user's
+  // reduced-motion preference → render the lightweight static background
+  // (no blur filters, no mouse parallax). Keeps the full effect on capable
+  // devices, but guarantees smooth scrolling on older PCs/laptops/phones.
+  const [lowPower, setLowPower] = useState(false);
+  useEffect(() => {
+    const cores = navigator.hardwareConcurrency || 8;
+    const mem = (navigator as unknown as { deviceMemory?: number }).deviceMemory ?? 8;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (cores <= 4 || mem <= 4 || reduce) setLowPower(true);
+  }, []);
+
+  // When true, background components skip the heavy animated variant.
+  const reduceEffects = isMobile || lowPower;
+
   // Navbar scroll state
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -954,14 +969,14 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (isMobile) return;
+    if (reduceEffects) return;
     const fn = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
     };
     window.addEventListener("mousemove", fn, { passive: true });
     return () => window.removeEventListener("mousemove", fn);
-  }, [mouseX, mouseY, isMobile]);
+  }, [mouseX, mouseY, reduceEffects]);
 
 
   // Typewriter
@@ -993,7 +1008,7 @@ export default function Home() {
   return (
     <>
       {/* Fixed ambient background — zero React re-renders, pure MotionValue */}
-      <AmbientBackground springX={smoothX} springY={smoothY} isMobile={isMobile} />
+      <AmbientBackground springX={smoothX} springY={smoothY} isMobile={reduceEffects} />
 
       {/* Premium Cursor Energy-Trail — Desktop only, brand blue */}
       <CursorTrail isMobile={isMobile} reduced={!!shouldReduceMotion} />
@@ -1101,7 +1116,7 @@ export default function Home() {
           </div>
 
           {/* Premium hero star field — 3 depth layers, mouse parallax */}
-          <HeroStarField springX={smoothX} springY={smoothY} isMobile={isMobile} />
+          <HeroStarField springX={smoothX} springY={smoothY} isMobile={reduceEffects} />
 
           {/* Soft readability scrim — lifts headline/CTA contrast over the star field */}
           <div
