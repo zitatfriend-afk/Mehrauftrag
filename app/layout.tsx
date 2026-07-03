@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import CookieConsent from "./_components/cookie-consent";
+import StructuredData from "./_components/structured-data";
 
 // Google Analytics 4 – Measurement-ID
 const GA_MEASUREMENT_ID = "G-7ZLRDEFHNB";
@@ -19,6 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mehrauftrag.de"),
+  alternates: { canonical: "/" },
   title: "Mehr Auftrag – Die Digitalagentur die liefert",
   description:
     "Mehr Aufträge, mehr Umsatz, mehr Wachstum. Mehr Auftrag ist die Digitalagentur für Handwerk, Gastronomie, Physiotherapie und alle Branchen die online wachsen wollen.",
@@ -59,6 +61,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[#04081c]">
+        <StructuredData />
         {/* Google Consent Mode v2 – Standard: alles "denied" (keine Cookies/kein
             Tracking ohne Einwilligung). Das Cookie-Banner schaltet bei Zustimmung
             per gtag('consent','update', …) auf "granted". */}

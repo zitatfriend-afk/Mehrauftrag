@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description:
     "Allgemeine Geschäftsbedingungen (AGB) der Mehr Auftrag Digitalagentur für Webentwicklung, Webseiten-Betreuung, SEO, Google Ads und Meta Ads.",
   robots: "noindex, follow",
+  alternates: { canonical: "https://www.mehrauftrag.de/agb" },
 };
 
 export default function AGBPage() {

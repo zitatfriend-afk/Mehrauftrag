@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Impressum – Mehr Auftrag",
   description: "Impressum der Mehr Auftrag Digitalagentur gemäß § 5 DDG.",
   robots: "noindex, nofollow",
+  alternates: { canonical: "https://www.mehrauftrag.de/impressum" },
 };
 
 export default function ImpressumPage() {

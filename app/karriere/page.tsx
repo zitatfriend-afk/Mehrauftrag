@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Karriere – Mehr Auftrag",
   description:
     "Werde Teil des Teams von Mehr Auftrag. Wir suchen Webdesigner, Kundenbetreuer und Vertriebsberater für unser wachsendes Digitalagentur-Team.",
+  alternates: { canonical: "https://www.mehrauftrag.de/karriere" },
 };
 
 export default function KarrierePage() {
