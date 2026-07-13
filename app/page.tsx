@@ -330,6 +330,7 @@ function ServiceCard({ svc }: { svc: Svc }) {
 // ─── Static data ──────────────────────────────────────────────────────────────
 const NAV_LINKS = [
   { href: "#leistungen", label: "Leistungen" },
+  { href: "/google-ads", label: "Google Ads" },
   { href: "#ueber-uns", label: "Über uns" },
   { href: "#branchen", label: "Branchen" },
   { href: "#referenzen", label: "Referenzen" },

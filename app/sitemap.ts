@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const routes = [
     "",
+    "/google-ads",
     "/elektriker",
     "/kostenlose-analyse",
     "/webseite-fuer-gebaeudereinigung",
