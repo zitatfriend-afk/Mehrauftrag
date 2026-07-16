@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/google-ads",
     "/elektriker",
     "/kostenlose-analyse",
+    "/webseite-fuer-hausmeisterservice",
     "/webseite-fuer-gebaeudereinigung",
     "/webseite-fuer-schweisser",
     "/karriere",

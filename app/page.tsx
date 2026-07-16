@@ -111,6 +111,15 @@ const REFERENCES = [
     image: "/referenzen/blitz.png",
     emoji: "🧽",
   },
+  {
+    name: "Blitz Industrie & Gebäudereinigung",
+    branche: "Gebäudereinigung & Hausmeisterservice · Region Bebra",
+    text: "Website für ein Unternehmen aus der Region Bebra, das Gebäudereinigung und Hausmeisterservice unter einem Dach anbietet. Beide Bereiche klar getrennt, mit Galerie, Bewertungen und einfacher Anfrage, mobil optimiert und auf feste Objektverträge ausgerichtet.",
+    href: "https://reinigungblitz.com/",
+    domain: "reinigungblitz.com",
+    image: "/referenzen/reinigungblitz.jpg",
+    emoji: "🧹",
+  },
 ];
 
 const TRUST_POINTS = [
@@ -124,14 +133,14 @@ const TRUST_POINTS = [
 function ReferenceCards() {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
         {REFERENCES.map((r) => (
           <motion.div
             key={r.domain}
             variants={fadeUp}
             whileHover={{ y: -6, borderColor: "rgba(59,130,246,0.3)" }}
             transition={SPRING_FAST}
-            className="group flex flex-col overflow-hidden rounded-2xl"
+            className="group flex flex-col overflow-hidden rounded-2xl w-full md:w-[calc(50%-0.75rem)]"
             style={{
               background: "rgba(255,255,255,0.04)",
               backdropFilter: "blur(16px)",
@@ -1806,6 +1815,9 @@ export default function Home() {
 
             {/* Branchen-Landingpages – interne SEO-Verlinkung */}
             <div className="mt-6 pt-5 flex flex-wrap justify-center gap-x-5 gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+              <a href="/webseite-fuer-hausmeisterservice" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Website für Hausmeisterservice
+              </a>
               <a href="/webseite-fuer-gebaeudereinigung" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
                 Website für Gebäudereinigung
               </a>

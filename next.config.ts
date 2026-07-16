@@ -4,6 +4,10 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
+        source: "/webseite-fuer-hausmeisterservice",
+        destination: "/webseite-fuer-hausmeisterservice.html",
+      },
+      {
         source: "/webseite-fuer-gebaeudereinigung",
         destination: "/webseite-fuer-gebaeudereinigung.html",
       },
