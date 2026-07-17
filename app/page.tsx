@@ -101,6 +101,7 @@ const REFERENCES = [
     domain: "sorokinschweisser.de",
     image: "/referenzen/sorokin.jpg",
     emoji: "🔧",
+    wide: false,
   },
   {
     name: "Blitzgebäudereinigung",
@@ -110,6 +111,7 @@ const REFERENCES = [
     domain: "blitzgebaeudereinigung.com",
     image: "/referenzen/blitz.png",
     emoji: "🧽",
+    wide: false,
   },
   {
     name: "Blitz Industrie & Gebäudereinigung",
@@ -119,6 +121,7 @@ const REFERENCES = [
     domain: "reinigungblitz.com",
     image: "/referenzen/reinigungblitz.jpg",
     emoji: "🧹",
+    wide: true,
   },
 ];
 
@@ -140,7 +143,7 @@ function ReferenceCards() {
             variants={fadeUp}
             whileHover={{ y: -6, borderColor: "rgba(59,130,246,0.3)" }}
             transition={SPRING_FAST}
-            className="group flex flex-col overflow-hidden rounded-2xl w-full md:w-[calc(50%-0.75rem)]"
+            className={`group flex overflow-hidden rounded-2xl ${r.wide ? "w-full flex-col md:flex-row" : "w-full flex-col md:w-[calc(50%-0.75rem)]"}`}
             style={{
               background: "rgba(255,255,255,0.04)",
               backdropFilter: "blur(16px)",
@@ -154,8 +157,8 @@ function ReferenceCards() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${r.name} – Website ansehen`}
-              className="relative block overflow-hidden"
-              style={{ aspectRatio: "16 / 10", borderBottom: "1px solid rgba(255,255,255,0.07)" }}
+              className={`relative block overflow-hidden w-full ${r.wide ? "md:w-[46%] md:self-stretch" : ""}`}
+              style={r.wide ? { minHeight: "240px", borderBottom: "1px solid rgba(255,255,255,0.07)" } : { aspectRatio: "16 / 10", borderBottom: "1px solid rgba(255,255,255,0.07)" }}
             >
               <Image
                 src={r.image}
@@ -171,7 +174,7 @@ function ReferenceCards() {
             </a>
 
             {/* Inhalt */}
-            <div className="flex flex-col flex-1 p-7 md:p-8">
+            <div className={`flex flex-col flex-1 p-7 md:p-8 ${r.wide ? "md:justify-center" : ""}`}>
               <div className="flex items-center gap-3 mb-3">
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
