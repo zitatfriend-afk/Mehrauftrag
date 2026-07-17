@@ -109,7 +109,7 @@ const REFERENCES = [
     text: "Professionelle Website für ein Hamburger Reinigungsunternehmen – alle Leistungen klar strukturiert, mit unkomplizierter Angebotsanfrage und durchgängig responsivem Design.",
     href: "https://www.blitzgebaeudereinigung.com/",
     domain: "blitzgebaeudereinigung.com",
-    image: "/referenzen/blitz.png",
+    image: "/referenzen/blitz.jpg",
     emoji: "🧽",
     wide: false,
   },
