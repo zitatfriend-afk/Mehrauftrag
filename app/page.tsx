@@ -92,36 +92,97 @@ function Portrait() {
 }
 
 // ─── Referenzen ───────────────────────────────────────────────────────────────
-const REFERENCES = [
+interface Reference {
+  n: string;
+  name: string;
+  branche: string;
+  emoji: string;
+  href: string;
+  domain: string;
+  image: string;
+  imageAlt: string;
+  intro: string;
+  ausgang: string;
+  umsetzung: string;
+  ergebnis: string;
+  tags: string[];
+}
+
+const REFERENCES: Reference[] = [
   {
+    n: "01",
+    name: "SZ Innenausbau",
+    branche: "Renovierung & Sanierung · Frankfurt am Main",
+    emoji: "🛠️",
+    href: "https://sz-innenausbau.de/",
+    domain: "sz-innenausbau.de",
+    image: "/referenzen/sz-innenausbau.jpg",
+    imageAlt: "Website von SZ Innenausbau aus Frankfurt, Renovierungs- und Sanierungsbetrieb, erstellt von Mehr Auftrag",
+    intro: "Ein inhabergeführter Renovierungsbetrieb aus Frankfurt mit über fünfzehn Jahren Erfahrung, der online endlich zeigen wollte, was er wirklich kann.",
+    ausgang: "Das Können am Bau war da, im Netz aber kaum sichtbar. Interessenten konnten die vielen Gewerke von Fliesen bis Sandstrahlen nicht auf einen Blick erfassen und wanderten deshalb schnell wieder ab.",
+    umsetzung: "Wir haben einen hochwertigen Auftritt gebaut, der alle Leistungen klar ordnet. Ein interaktiver Vorher-nachher-Regler zeigt echte Ergebnisse, dazu kommen Kundenstimmen, ein Projektablauf in fünf Schritten und ein Kontaktformular mit direkter Leistungsauswahl.",
+    ergebnis: "Der Betrieb wirkt jetzt so verlässlich wie im echten Handwerk. Besucher sehen sofort, dass hier alles aus einer Hand kommt, und fragen gezielt die passende Leistung an.",
+    tags: ["Vorher-nachher-Galerie", "Alle Gewerke auf einen Blick", "Anfrage mit Leistungsauswahl"],
+  },
+  {
+    n: "02",
+    name: "Pizzeria Da Salvatore",
+    branche: "Gastronomie · Rotenburg (Wümme)",
+    emoji: "🍕",
+    href: "https://da-salvatore-rotenburg.de/",
+    domain: "da-salvatore-rotenburg.de",
+    image: "/referenzen/dasalvatore.jpg",
+    imageAlt: "Website der Pizzeria Da Salvatore in Rotenburg an der Wümme, italienisches Restaurant, erstellt von Mehr Auftrag",
+    intro: "Eine beliebte Pizzeria mit treuer Stammkundschaft, deren Auftritt im Netz noch nicht zur Qualität der Pizza aus dem Holzofen passte.",
+    ausgang: "Bestellung und Reservierung liefen umständlich und der bisherige Auftritt machte wenig Appetit. Die Leidenschaft, die im Lokal spürbar ist, kam online kaum an.",
+    umsetzung: "Wir haben einen appetitlichen Auftritt mit großformatiger Food-Fotografie gebaut, der die frische Pizza in den Mittelpunkt stellt. Speisekarte, Öffnungszeiten und der direkte Weg zur Online-Bestellung sind auf einen Blick erreichbar, dazu der Party-Service für Feiern.",
+    ergebnis: "Gäste finden sofort, wonach sie suchen, und bestellen mit wenigen Klicks. Der Auftritt macht Appetit und spiegelt endlich die Qualität wider, für die das Lokal seine guten Bewertungen bekommt.",
+    tags: ["Online-Bestellung integriert", "Speisekarte & Öffnungszeiten", "Party-Service für Feiern"],
+  },
+  {
+    n: "03",
     name: "SOROKIN Mobiler Schweißservice",
     branche: "Metallbau & Schweißservice · Sauerland",
-    text: "Moderner, conversion-orientierter Online-Auftritt für einen mobilen Schweißservice – mit klarer Leistungsübersicht, Galerie und direkter Anfrage per Telefon und WhatsApp.",
+    emoji: "🔧",
     href: "https://www.sorokinschweisser.de/",
     domain: "sorokinschweisser.de",
     image: "/referenzen/sorokin.jpg",
-    emoji: "🔧",
-    wide: false,
+    imageAlt: "Website des mobilen Schweißservice Sorokin aus dem Sauerland, Metallbau und Schweißarbeiten, erstellt von Mehr Auftrag",
+    intro: "Ein mobiler Schweißservice, der seine Aufträge fast nur über Empfehlung bekam und im Netz kaum zu finden war.",
+    ausgang: "Die Arbeit war erstklassig, ein Auftritt, der das zeigt, fehlte aber komplett. Wer den Betrieb online suchte, fand ihn schlicht nicht.",
+    umsetzung: "Wir haben einen modernen Auftritt gebaut, der die Leistungen klar auf den Punkt bringt. Eine übersichtliche Leistungsübersicht, eine Galerie echter Arbeiten und die direkte Anfrage per Telefon und WhatsApp führen Besucher ohne Umwege zur Kontaktaufnahme.",
+    ergebnis: "Interessenten sehen sofort, was der Betrieb kann, und melden sich mit wenigen Klicks. Aus einem Auftritt, den es vorher nicht gab, kommen jetzt echte Anfragen.",
+    tags: ["Klare Leistungsübersicht", "Anfrage per WhatsApp", "Mobil optimiert"],
   },
   {
+    n: "04",
     name: "Blitzgebäudereinigung",
     branche: "Gebäudereinigung · Hamburg",
-    text: "Professionelle Website für ein Hamburger Reinigungsunternehmen – alle Leistungen klar strukturiert, mit unkomplizierter Angebotsanfrage und durchgängig responsivem Design.",
+    emoji: "🧽",
     href: "https://www.blitzgebaeudereinigung.com/",
     domain: "blitzgebaeudereinigung.com",
     image: "/referenzen/blitz.jpg",
-    emoji: "🧽",
-    wide: false,
+    imageAlt: "Website der Blitzgebäudereinigung aus Hamburg, Reinigungsunternehmen, erstellt von Mehr Auftrag",
+    intro: "Ein Hamburger Reinigungsunternehmen wollte online genauso professionell wirken wie im täglichen Geschäft.",
+    ausgang: "Die Leistung stimmte, es fehlte aber eine Website, die diese Professionalität auch zeigt und Interessenten den Weg zur Anfrage leicht macht.",
+    umsetzung: "Wir haben alle Reinigungsleistungen sauber strukturiert, eine unkomplizierte Angebotsanfrage eingebaut und für ein durchgehend responsives Design gesorgt, das auf jedem Gerät gut aussieht.",
+    ergebnis: "Interessenten finden schnell die passende Leistung und fragen direkt an, statt woanders weiterzusuchen.",
+    tags: ["Alle Leistungen im Blick", "Einfache Angebotsanfrage", "Voll responsiv"],
   },
   {
+    n: "05",
     name: "Blitz Industrie & Gebäudereinigung",
     branche: "Gebäudereinigung & Hausmeisterservice · Region Bebra",
-    text: "Website für ein Unternehmen aus der Region Bebra, das Gebäudereinigung und Hausmeisterservice unter einem Dach anbietet. Beide Bereiche klar getrennt, mit Galerie, Bewertungen und einfacher Anfrage, mobil optimiert und auf feste Objektverträge ausgerichtet.",
+    emoji: "🧹",
     href: "https://reinigungblitz.com/",
     domain: "reinigungblitz.com",
     image: "/referenzen/reinigungblitz.jpg",
-    emoji: "🧹",
-    wide: true,
+    imageAlt: "Website von Blitz Industrie und Gebäudereinigung aus der Region Bebra, Gebäudereinigung und Hausmeisterservice, erstellt von Mehr Auftrag",
+    intro: "Ein Betrieb, der Gebäudereinigung und Hausmeisterservice unter einem Dach anbietet und beide Bereiche klar zeigen wollte.",
+    ausgang: "Zwei starke Leistungsbereiche unter einem Namen sorgen schnell für Verwirrung, wenn die Website das nicht sauber trennt. Genau das war die Herausforderung.",
+    umsetzung: "Wir haben beide Bereiche klar voneinander getrennt und trotzdem übersichtlich gehalten. Dazu kamen eine Galerie, echte Bewertungen und eine einfache Anfrage, alles mobil optimiert und auf feste Objektverträge ausgerichtet.",
+    ergebnis: "Kunden erkennen sofort, welcher Bereich zu ihnen passt, und der Betrieb wirkt online so verlässlich wie im echten Geschäft.",
+    tags: ["Zwei Bereiche klar getrennt", "Bewertungen & Galerie", "Auf Objektverträge ausgerichtet"],
   },
 ];
 
@@ -133,90 +194,151 @@ const TRUST_POINTS = [
   "Schnelle Umsetzung ohne Agentur-Bürokratie",
 ];
 
+// Kleiner Story-Baustein: Ausgangssituation / Umsetzung / Ergebnis
+function StoryRow({ label, text, highlight = false }: { label: string; text: string; highlight?: boolean }) {
+  return (
+    <div
+      className="relative pl-4 py-0.5"
+      style={{ borderLeft: `2px solid ${highlight ? "rgba(59,130,246,0.65)" : "rgba(255,255,255,0.1)"}` }}
+    >
+      <div
+        className="text-[10px] font-bold uppercase tracking-[0.18em] mb-1"
+        style={{ color: highlight ? "#60a5fa" : "rgba(148,163,184,0.7)" }}
+      >
+        {label}
+      </div>
+      <p className="text-sm leading-relaxed" style={{ color: highlight ? "#dbeafe" : "#94a3b8" }}>
+        {text}
+      </p>
+    </div>
+  );
+}
+
+function CaseStudyCard({ r, index }: { r: Reference; index: number }) {
+  const reversed = index % 2 === 1;
+  return (
+    <motion.div
+      variants={fadeUp}
+      whileHover={{ borderColor: "rgba(59,130,246,0.3)" }}
+      transition={SPRING_FAST}
+      className="group overflow-hidden rounded-3xl"
+      style={{
+        background: "rgba(255,255,255,0.04)",
+        backdropFilter: "blur(16px)",
+        border: "1px solid rgba(59,130,246,0.15)",
+        boxShadow: "0 4px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset",
+      }}
+    >
+      <div className={`flex flex-col ${reversed ? "lg:flex-row-reverse" : "lg:flex-row"}`}>
+        {/* Screenshot im Browser-Rahmen (klickbar) */}
+        <a
+          href={r.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${r.name}, Website ansehen`}
+          className="relative block w-full p-5 sm:p-7 lg:w-[48%] lg:self-center"
+        >
+          <div
+            className="relative overflow-hidden rounded-xl"
+            style={{ border: "1px solid rgba(255,255,255,0.1)", boxShadow: "0 20px 50px rgba(0,0,0,0.4)" }}
+          >
+            <div
+              className="flex items-center gap-1.5 px-3.5"
+              style={{ height: "32px", background: "rgba(8,12,30,0.92)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}
+            >
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#ff5f57" }} />
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#febc2e" }} />
+              <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#28c840" }} />
+              <span className="ml-3 truncate text-[10px] tracking-wide text-white/35">{r.domain}</span>
+            </div>
+            <div className="relative w-full" style={{ aspectRatio: "16 / 10" }}>
+              <Image
+                src={r.image}
+                alt={r.imageAlt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 620px"
+                className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+              />
+            </div>
+          </div>
+        </a>
+
+        {/* Inhalt: Story */}
+        <div className="flex flex-1 flex-col justify-center p-7 sm:p-9 lg:py-10">
+          <span className="mb-3 block text-[10px] font-bold uppercase tracking-[0.24em] text-[#3b82f6]">
+            Referenz {r.n}
+          </span>
+          <div className="mb-4 flex items-center gap-3">
+            <div
+              className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl text-xl"
+              style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}
+            >
+              {r.emoji}
+            </div>
+            <div>
+              <div className="text-lg font-bold leading-tight text-white">{r.name}</div>
+              <div className="mt-0.5 text-xs font-medium tracking-wide text-[#60a5fa]">{r.branche}</div>
+            </div>
+          </div>
+          <p className="mb-6 text-sm leading-relaxed text-slate-300">{r.intro}</p>
+          <div className="mb-6 space-y-4">
+            <StoryRow label="Ausgangssituation" text={r.ausgang} />
+            <StoryRow label="Unsere Umsetzung" text={r.umsetzung} />
+            <StoryRow label="Ergebnis" text={r.ergebnis} highlight />
+          </div>
+          <div className="mb-7 flex flex-wrap gap-2">
+            {r.tags.map((t) => (
+              <span
+                key={t}
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-medium text-slate-300"
+                style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.18)" }}
+              >
+                <svg className="h-2.5 w-2.5 flex-shrink-0 text-[#3b82f6]" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                {t}
+              </span>
+            ))}
+          </div>
+          <motion.a
+            href={r.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ y: -2, boxShadow: "0 8px 32px rgba(59,130,246,0.5)" }}
+            whileTap={{ scale: 0.97 }}
+            transition={SPRING_FAST}
+            className="shimmer-btn inline-flex items-center justify-center gap-2.5 self-start rounded-xl px-5 py-3 text-sm font-semibold text-white"
+            style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 16px rgba(59,130,246,0.32)" }}
+          >
+            <span>Website ansehen</span>
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H8M17 7v9" />
+            </svg>
+          </motion.a>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 function ReferenceCards() {
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
-        {REFERENCES.map((r) => (
-          <motion.div
-            key={r.domain}
-            variants={fadeUp}
-            whileHover={{ y: -6, borderColor: "rgba(59,130,246,0.3)" }}
-            transition={SPRING_FAST}
-            className={`group flex overflow-hidden rounded-2xl ${r.wide ? "w-full flex-col md:flex-row" : "w-full flex-col md:w-[calc(50%-0.75rem)]"}`}
-            style={{
-              background: "rgba(255,255,255,0.04)",
-              backdropFilter: "blur(16px)",
-              border: "1px solid rgba(59,130,246,0.15)",
-              boxShadow: "0 4px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset",
-            }}
-          >
-            {/* Screenshot (klickbar) */}
-            <a
-              href={r.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${r.name} – Website ansehen`}
-              className={`relative block overflow-hidden w-full ${r.wide ? "md:w-[46%] md:self-stretch" : ""}`}
-              style={r.wide ? { minHeight: "240px", borderBottom: "1px solid rgba(255,255,255,0.07)" } : { aspectRatio: "16 / 10", borderBottom: "1px solid rgba(255,255,255,0.07)" }}
-            >
-              <Image
-                src={r.image}
-                alt={`Website von ${r.name}`}
-                fill
-                sizes="(max-width: 768px) 100vw, 600px"
-                className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.04]"
-              />
-              <div
-                className="absolute inset-0 pointer-events-none transition-opacity duration-300 opacity-60 group-hover:opacity-30"
-                style={{ background: "linear-gradient(to top, rgba(4,8,28,0.55) 0%, transparent 45%)" }}
-              />
-            </a>
-
-            {/* Inhalt */}
-            <div className={`flex flex-col flex-1 p-7 md:p-8 ${r.wide ? "md:justify-center" : ""}`}>
-              <div className="flex items-center gap-3 mb-3">
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
-                  style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}
-                >
-                  {r.emoji}
-                </div>
-                <div>
-                  <div className="font-bold text-[15px] text-white leading-tight">{r.name}</div>
-                  <div className="text-[#60a5fa] text-xs mt-1 font-medium tracking-wide">{r.branche}</div>
-                </div>
-              </div>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-1">{r.text}</p>
-              <motion.a
-                href={r.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -2, boxShadow: "0 8px 32px rgba(59,130,246,0.5)" }}
-                whileTap={{ scale: 0.97 }}
-                transition={SPRING_FAST}
-                className="shimmer-btn inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl font-semibold text-white text-sm self-start"
-                style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 16px rgba(59,130,246,0.32)" }}
-              >
-                <span>Website ansehen</span>
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H8M17 7v9" />
-                </svg>
-              </motion.a>
-            </div>
-          </motion.div>
+      <div className="mx-auto max-w-6xl space-y-6 sm:space-y-8">
+        {REFERENCES.map((r, i) => (
+          <CaseStudyCard key={r.domain} r={r} index={i} />
         ))}
       </div>
 
       {/* Vertrauensbereich */}
       <motion.div
         variants={fadeUp}
-        className="max-w-5xl mx-auto mt-10 flex flex-wrap items-center justify-center gap-x-7 gap-y-3"
+        className="mx-auto mt-12 flex max-w-5xl flex-wrap items-center justify-center gap-x-7 gap-y-3"
       >
         {TRUST_POINTS.map((point) => (
           <div key={point} className="flex items-center gap-2.5">
-            <div className="w-4 h-4 rounded flex items-center justify-center flex-shrink-0" style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}>
-              <svg className="w-2.5 h-2.5 text-[#3b82f6]" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center rounded" style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}>
+              <svg className="h-2.5 w-2.5 text-[#3b82f6]" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             </div>
@@ -342,9 +464,9 @@ function ServiceCard({ svc }: { svc: Svc }) {
 // ─── Static data ──────────────────────────────────────────────────────────────
 const NAV_LINKS = [
   { href: "#leistungen", label: "Leistungen" },
+  { href: "/grafikdesign", label: "Grafikdesign" },
   { href: "/google-ads", label: "Google Ads" },
   { href: "#ueber-uns", label: "Über uns" },
-  { href: "#branchen", label: "Branchen" },
   { href: "#referenzen", label: "Referenzen" },
   { href: "#faq", label: "FAQ" },
   { href: "/karriere", label: "Karriere" },
@@ -1459,6 +1581,80 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ══════════════════════ GRAFIKDESIGN TEASER */}
+        <section className="py-16 sm:py-20 relative" style={sectionDark}>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse 55% 45% at 30% 50%, rgba(59,130,246,0.06), transparent 65%)" }}
+          />
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 relative">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.3 }}
+              className="overflow-hidden rounded-3xl"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                backdropFilter: "blur(16px)",
+                border: "1px solid rgba(59,130,246,0.2)",
+                boxShadow: "0 8px 50px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset",
+              }}
+            >
+              <div className="flex flex-col lg:flex-row lg:items-center gap-8 p-8 sm:p-10 lg:p-12">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div
+                      className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                      style={{ background: "rgba(59,130,246,0.12)", color: "#60a5fa", border: "1px solid rgba(59,130,246,0.2)" }}
+                    >
+                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                      </svg>
+                    </div>
+                    <span
+                      className="text-[10px] font-bold uppercase tracking-[0.2em] px-2.5 py-1 rounded-full"
+                      style={{ color: "#93c5fd", background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.22)" }}
+                    >
+                      Neu
+                    </span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl font-black tracking-tight leading-tight mb-4 text-white">
+                    Grafikdesign & Werbetechnik
+                  </h2>
+                  <p className="text-base leading-relaxed text-slate-300 mb-4 max-w-2xl">
+                    Von der Visitenkarte über den Flyer bis zur Fahrzeugbeschriftung gestalten wir alles, was deinen Betrieb sichtbar macht. Jedes Design entsteht bei uns im eigenen Grafikteam und wird individuell für dich erstellt, auf Wunsch bis zum fertigen Druck.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-7">
+                    {["Logo Design", "Visitenkarten", "Flyer", "Autoaufkleber", "Fahrzeugbeschriftung", "Corporate Design"].map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-lg px-3 py-1.5 text-[12px] font-medium text-slate-300"
+                        style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.16)" }}
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <motion.a
+                    href="/grafikdesign"
+                    whileHover={{ y: -2, boxShadow: "0 8px 32px rgba(59,130,246,0.5)" }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={SPRING_FAST}
+                    className="shimmer-btn inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-semibold text-white text-sm"
+                    style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 16px rgba(59,130,246,0.32)" }}
+                  >
+                    <span>Grafikdesign entdecken</span>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </motion.a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* ══════════════════════ ÜBER UNS */}
         <section id="ueber-uns" className="py-24 sm:py-32 relative" style={sectionDark}>
           <div
@@ -1644,7 +1840,7 @@ export default function Home() {
                 Erfolgreich umgesetzte Kundenprojekte
               </h2>
               <p className="text-lg text-slate-400">
-                Keine Musterbeispiele. Keine Demo-Projekte. Diese Webseiten wurden von uns für reale Kunden entwickelt.
+                Keine Musterbeispiele, keine Demo-Projekte. Bei jedem Projekt zeigen wir die Ausgangssituation, unsere Umsetzung und das Ergebnis, damit du genau siehst, was dahintersteckt.
               </p>
             </motion.div>
             <motion.div
@@ -1816,8 +2012,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Branchen-Landingpages – interne SEO-Verlinkung */}
+            {/* Leistungs- und Branchenseiten – interne SEO-Verlinkung */}
             <div className="mt-6 pt-5 flex flex-wrap justify-center gap-x-5 gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+              <a href="/grafikdesign" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Grafikdesign Frankfurt
+              </a>
+              <a href="/google-ads" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Google Ads
+              </a>
               <a href="/webseite-fuer-hausmeisterservice" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
                 Website für Hausmeisterservice
               </a>
