@@ -219,6 +219,9 @@ function CaseStudyCard({ r, index }: { r: Reference; index: number }) {
   return (
     <motion.div
       variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: "some" }}
       whileHover={{ borderColor: "rgba(59,130,246,0.3)" }}
       transition={SPRING_FAST}
       className="group overflow-hidden rounded-3xl"
@@ -333,6 +336,9 @@ function ReferenceCards() {
       {/* Vertrauensbereich */}
       <motion.div
         variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: "some" }}
         className="mx-auto mt-12 flex max-w-5xl flex-wrap items-center justify-center gap-x-7 gap-y-3"
       >
         {TRUST_POINTS.map((point) => (
@@ -1843,14 +1849,9 @@ export default function Home() {
                 Keine Musterbeispiele, keine Demo-Projekte. Bei jedem Projekt zeigen wir die Ausgangssituation, unsere Umsetzung und das Ergebnis, damit du genau siehst, was dahintersteckt.
               </p>
             </motion.div>
-            <motion.div
-              variants={stagger}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.2 }}
-            >
+            <div>
               <ReferenceCards />
-            </motion.div>
+            </div>
           </div>
         </section>
 
