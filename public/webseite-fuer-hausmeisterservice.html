@@ -270,7 +270,7 @@
     padding:12px 14px;font-size:.96rem;font-family:inherit;color:var(--ink);transition:border-color .15s,box-shadow .15s}
   .field input:focus,.field textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(21,128,61,.14);background:#fff}
   .field textarea{min-height:88px;resize:vertical}
-  .field-check{display:flex;gap:9px;align-items:flex-start;font-size:.82rem;color:var(--muted);margin:6px 0 16px}
+  .field-check{display:flex;gap:9px;align-items:flex-start;font-size:.92rem;color:#cdd9ea;margin:6px 0 16px;line-height:1.55;cursor:pointer}
   .field-check input{margin-top:3px;width:16px;height:16px;flex:none;accent-color:var(--green)}
   .field-check a{color:var(--green-d);text-decoration:underline}
   .form-success{display:none;background:var(--green-soft);border:1px solid rgba(21,128,61,.3);color:var(--green-d);
@@ -593,7 +593,7 @@
             <label for="f-msg">Worum geht's? (optional)</label>
             <textarea id="f-msg" name="message" placeholder="z. B. Objektbetreuung für Hausverwaltung, Winterdienst, Grünpflege"></textarea>
           </div>
-          <label class="field-check"><input type="checkbox" required> Ich habe die <a href="https://www.mehrauftrag.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</label>
+          <label class="field-check"><input type="checkbox" required> <span>Ich habe die <a href="https://www.mehrauftrag.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.</span></label>
           <button type="submit" class="btn btn-primary btn-block">Kostenlos anfragen</button>
           <div class="form-success" data-success>Danke. Wir melden uns innerhalb von 24 Stunden bei dir.</div>
           <p class="form-note">Kein Verkaufsdruck, keine Vertragsbindung.</p>
