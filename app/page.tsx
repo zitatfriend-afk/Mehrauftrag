@@ -2021,6 +2021,9 @@ export default function Home() {
               <a href="/google-ads" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
                 Google Ads
               </a>
+              <a href="/webseite-fuer-gastronomie" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Website für Gastronomie
+              </a>
               <a href="/webseite-fuer-hausmeisterservice" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
                 Website für Hausmeisterservice
               </a>
