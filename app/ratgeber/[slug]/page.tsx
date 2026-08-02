@@ -195,7 +195,7 @@ export default async function ArticlePage({
                 größtes Potenzial liegt, ganz unverbindlich.
               </p>
               <Link
-                href="/kostenlose-analyse"
+                href={`/analyse/${article.slug}`}
                 className="shimmer-btn mt-6 inline-flex rounded-full bg-[#3b82f6] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
               >
                 Kostenlose Analyse anfordern
@@ -209,7 +209,7 @@ export default async function ArticlePage({
                   Das könnte dich auch interessieren
                 </h2>
                 <div className="flex flex-wrap gap-3">
-                  {article.related.map((r, i) => (
+                  {article.related.filter((r) => r.href !== "/kostenlose-analyse").map((r, i) => (
                     <Link
                       key={i}
                       href={r.href}

@@ -22,7 +22,7 @@ export function RatgeberHeader() {
             Ratgeber
           </Link>
           <Link
-            href="/kostenlose-analyse"
+            href="/analyse/allgemein"
             className="shimmer-btn rounded-full bg-[#3b82f6] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
           >
             Kostenlose Analyse

@@ -146,7 +146,7 @@ export default function RatgeberPage() {
               wo dein größtes Potenzial für mehr Kunden liegt.
             </p>
             <Link
-              href="/kostenlose-analyse"
+              href="/analyse/allgemein"
               className="shimmer-btn mt-6 inline-flex rounded-full bg-[#3b82f6] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
             >
               Kostenlose Analyse anfordern
