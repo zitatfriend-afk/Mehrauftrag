@@ -475,6 +475,7 @@ const NAV_LINKS = [
   { href: "#ueber-uns", label: "Über uns" },
   { href: "#referenzen", label: "Referenzen" },
   { href: "#faq", label: "FAQ" },
+  { href: "/ratgeber", label: "Ratgeber" },
   { href: "/karriere", label: "Karriere" },
 ];
 
