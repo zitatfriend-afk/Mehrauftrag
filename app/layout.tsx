@@ -43,6 +43,11 @@ export const metadata: Metadata = {
       "Mehr Aufträge, mehr Umsatz, mehr Wachstum. Maßgeschneiderte Websites und Marketing für alle Branchen.",
     images: ["/og-image.jpg"],
   },
+  verification: {
+    other: {
+      "msvalidate.01": "A1839E1E4F43C847DC5B392E11117774",
+    },
+  },
 };
 
 export default function RootLayout({
