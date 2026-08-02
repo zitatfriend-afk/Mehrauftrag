@@ -244,6 +244,84 @@ export const ARTICLES: Article[] = [
   // GRUNDLAGEN & VERGLEICHE
   // ─────────────────────────────────────────────────────────────────────────
   {
+    slug: "ki-suche-google-2026",
+    category: "Grundlagen",
+    title: "KI-Suche und Google 2026: So wird dein Betrieb jetzt gefunden",
+    metaTitle: "KI-Suche & Google 2026: so wirst du gefunden | Ratgeber",
+    description:
+      "Wie kleine Betriebe 2026 über Google UND KI wie ChatGPT und Perplexity gefunden werden: Was sich in der Suche ändert und was du konkret tun musst.",
+    datePublished: "2026-08-02",
+    dateModified: "2026-08-02",
+    readingTime: "7 Min.",
+    intro: [
+      "Die Art, wie Menschen online nach Anbietern suchen, verändert sich gerade so stark wie seit Jahren nicht. Neben der klassischen Google-Liste geben immer mehr Menschen ihre Frage direkt in ChatGPT, Perplexity oder die KI-Übersicht von Google ein und bekommen eine fertige Antwort, oft mit einer konkreten Empfehlung.",
+      "Für kleine Betriebe ist das Chance und Risiko zugleich: Wer von diesen KI-Systemen als Quelle genannt wird, gewinnt Kunden, die die Konkurrenz nie zu Gesicht bekommt. Wer unsichtbar bleibt, verliert sie genauso lautlos. Dieser Artikel zeigt, worauf es 2026 ankommt.",
+    ],
+    sections: [
+      {
+        heading: "Was sich in der Suche gerade ändert",
+        paragraphs: [
+          "Früher tippte man einen Suchbegriff bei Google ein und wählte aus einer Liste von Links. Heute beantworten KI-Systeme die Frage oft direkt: Die KI-Übersicht steht ganz oben in den Google-Ergebnissen, und Werkzeuge wie ChatGPT oder Perplexity nennen auf Wunsch gleich einen passenden Anbieter samt Begründung.",
+          "Das heißt nicht, dass klassisches Google verschwindet. Aber es kommt eine zweite Ebene dazu: Es reicht nicht mehr nur, in der Linkliste zu erscheinen. Du musst auch die Quelle sein, aus der die KI ihre Antwort zieht.",
+        ],
+      },
+      {
+        heading: "Was das für kleine Betriebe bedeutet",
+        paragraphs: [
+          "Wenn jemand die KI fragt Welche Werbeagentur im Rhein-Main-Gebiet macht Websites für Handwerker, dann empfiehlt die KI die Betriebe, die sie versteht und für vertrauenswürdig hält. Diese Empfehlung ersetzt für viele Menschen die eigene Recherche.",
+          "Der entscheidende Punkt: KI-Systeme können nur empfehlen, was sie sauber lesen und einordnen können. Ein veralteter oder technisch unklarer Auftritt taucht in diesen Antworten schlicht nicht auf, egal wie gut die eigentliche Arbeit ist.",
+        ],
+      },
+      {
+        heading: "Wie du bei Google UND KI gefunden wirst",
+        paragraphs: [
+          "Die gute Nachricht: Die Grundlagen für gutes Google-Ranking und für KI-Sichtbarkeit überschneiden sich stark. Wer sauber aufgestellt ist, gewinnt auf beiden Ebenen.",
+        ],
+        bullets: [
+          "Klare, verständliche Inhalte, die echte Fragen direkt beantworten",
+          "Strukturierte Daten, damit Maschinen Leistungen und Standort sicher erkennen",
+          "Ein vollständiges, gepflegtes Google-Unternehmensprofil",
+          "Viele aktuelle Bewertungen als Vertrauenssignal",
+          "Einheitliche Kontaktdaten über Website, Google und Verzeichnisse",
+          "Eine schnelle, auf dem Handy einwandfreie Website",
+        ],
+      },
+      {
+        heading: "Inhalte, die von KI zitiert werden",
+        paragraphs: [
+          "KI-Systeme lieben Inhalte, die eine konkrete Frage klar und vollständig beantworten. Genau deshalb sind ein Ratgeber-Bereich und ausführliche Antworten auf häufige Fragen so wertvoll: Sie sind das Material, aus dem die KI ihre Empfehlungen baut.",
+          "Wichtig ist Regelmäßigkeit und thematische Tiefe. Wer zu seinem Fachgebiet immer wieder hilfreiche Inhalte veröffentlicht, wird von den Systemen mit der Zeit als Autorität für dieses Thema eingeordnet und häufiger genannt.",
+        ],
+      },
+      {
+        heading: "Der Vorsprung liegt im Handeln jetzt",
+        paragraphs: [
+          "KI-Suche ist noch jung, und die meisten kleinen Betriebe haben sich darauf nicht eingestellt. Genau darin liegt die Chance: Wer heute die Grundlagen sauber legt, sichert sich einen Vorsprung, den Nachzügler später nur schwer aufholen. Sichtbarkeit baut sich über Zeit auf, deshalb zahlt sich jeder frühe Schritt später doppelt aus.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Ersetzt die KI-Suche das klassische Google?",
+        a: "Nein, sie ergänzt es. Google bleibt wichtig, aber KI-Übersichten und Werkzeuge wie ChatGPT oder Perplexity kommen als zusätzliche Ebene dazu. Wer beide bedienen will, braucht saubere Inhalte und eine technisch klare Website, denn die Grundlagen sind für beide fast identisch.",
+      },
+      {
+        q: "Wie werde ich von ChatGPT oder Perplexity empfohlen?",
+        a: "Indem deine Website leicht lesbar und vertrauenswürdig ist: klare Inhalte, die echte Fragen beantworten, strukturierte Daten, ein gepflegtes Google-Profil, gute Bewertungen und einheitliche Kontaktdaten. So kann die KI dich sicher erkennen, einordnen und als Quelle nennen.",
+      },
+      {
+        q: "Verliere ich Besucher, wenn die KI die Antwort direkt zeigt?",
+        a: "Manche Informationssuchen enden künftig ohne Klick. Aber wer als empfohlener Anbieter genannt wird, bekommt genau die Menschen mit Kaufabsicht. Entscheidend ist deshalb, nicht nur gefunden, sondern als konkrete Empfehlung genannt zu werden.",
+      },
+    ],
+    related: [
+      { label: "SEO oder Google Ads?", href: "/ratgeber/seo-oder-google-ads" },
+      { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+    ],
+  },
+
+  {
     slug: "seo-oder-google-ads",
     category: "Grundlagen",
     title: "SEO oder Google Ads: was lohnt sich für kleine Unternehmen?",

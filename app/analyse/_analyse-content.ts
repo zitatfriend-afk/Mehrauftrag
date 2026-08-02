@@ -113,6 +113,28 @@ export const ANALYSE: Record<string, AnalyseContent> = {
   },
 
   // ─── Grundlagen & Vergleiche ────────────────────────────────────────────────
+  "ki-suche-google-2026": {
+    slug: "ki-suche-google-2026",
+    audience: "mehr Sichtbarkeit bei Google & KI",
+    metaTitle: "Kostenlose Sichtbarkeits-Analyse: Google & KI | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse: Wie gut wirst du bei Google und in KI-Systemen wie ChatGPT und Perplexity gefunden? Wir zeigen dir konkret, wo du nachlegen solltest.",
+    eyebrow: "Google & KI-Sichtbarkeit",
+    h1: "Kostenlose Sichtbarkeits-Analyse für Google & KI",
+    intro:
+      "Wir prüfen, wie gut dein Betrieb heute bei Google und in KI-Systemen wie ChatGPT und Perplexity gefunden wird – und zeigen dir konkret, an welchen Stellen du sichtbarer wirst und als Empfehlung genannt werden kannst.",
+    benefits: [
+      "Check deiner Sichtbarkeit bei Google und KI",
+      "Erkennen, ob KI-Systeme dich sauber lesen können",
+      "Konkrete Schritte, um als Quelle genannt zu werden",
+      "Klarer Fahrplan statt Fachchinesisch",
+    ],
+    formHeadline: "Kostenlose Sichtbarkeits-Analyse anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf – wie es dir lieber ist.",
+    leadSource: "Analyse - KI-Suche",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   "seo-oder-google-ads": {
     slug: "seo-oder-google-ads",
     audience: "mehr Sichtbarkeit bei Google",
