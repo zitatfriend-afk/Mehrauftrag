@@ -486,11 +486,11 @@ function PremiumNavLink({ href, label }: { href: string; label: string }) {
       href={href}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative text-[15px] font-semibold tracking-[0.02em]"
+      className="relative text-[14px] font-semibold tracking-[0.02em] whitespace-nowrap"
       style={{
         color: hovered ? "rgba(255,255,255,0.95)" : "rgba(148,163,184,0.62)",
         transition: "color 220ms ease",
-        padding: "6px 14px",
+        padding: "6px 10px",
         borderRadius: "8px",
         display: "inline-flex",
         alignItems: "center",
@@ -1171,15 +1171,15 @@ export default function Home() {
             <a href="#" aria-label="Mehr Auftrag" className="flex items-center">
               <MALogo variant="dark" />
             </a>
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-0.5">
               {NAV_LINKS.map((n) => (
                 <PremiumNavLink key={n.href} href={n.href} label={n.label} />
               ))}
             </div>
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
               <a
                 href="#kontakt"
-                className="shimmer-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold text-white transition-all duration-300"
+                className="shimmer-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold text-white transition-all duration-300 whitespace-nowrap"
                 style={{
                   background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
                   boxShadow: "0 2px 12px rgba(59,130,246,0.4)",
@@ -1201,7 +1201,7 @@ export default function Home() {
             </div>
             {/* Mobile hamburger */}
             <button
-              className="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8 outline-none focus:outline-none"
+              className="lg:hidden flex flex-col justify-center gap-1.5 w-8 h-8 outline-none focus:outline-none"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Menu"
             >
@@ -1221,7 +1221,7 @@ export default function Home() {
               ))}
             </button>
           </div>
-          <div className="md:hidden overflow-y-auto transition-all duration-300" style={{ maxHeight: menuOpen ? "calc(100dvh - 64px)" : "0", background: "#040c1c" }}>
+          <div className="lg:hidden overflow-y-auto transition-all duration-300" style={{ maxHeight: menuOpen ? "calc(100dvh - 64px)" : "0", background: "#040c1c" }}>
             <div
               className="px-5 py-4 space-y-0.5"
               style={{ background: "#040c1c", minHeight: "calc(100dvh - 64px)" }}
