@@ -527,6 +527,162 @@ export const ARTICLES: Article[] = [
     ],
   },
 
+  {
+    slug: "lokale-seo-google-maps",
+    category: "Grundlagen",
+    title: "Lokale SEO: so kommt dein Betrieb bei Google und auf der Karte nach oben",
+    metaTitle: "Lokale SEO: bei Google & auf der Karte nach oben | Ratgeber",
+    description:
+      "Lokale SEO für kleine Betriebe: Wie du in der Nähe-Suche und auf Google Maps ganz oben erscheinst – Google-Profil, NAP-Daten, Bewertungen und lokale Inhalte erklärt.",
+    datePublished: "2026-08-02",
+    dateModified: "2026-08-02",
+    readingTime: "7 Min.",
+    intro: [
+      "Wenn jemand in deiner Nähe nach einem Betrieb wie deinem sucht, entscheiden wenige Zeilen bei Google darüber, wer den Auftrag bekommt: die drei Einträge, die zusammen mit der Karte ganz oben erscheinen. Dieses sogenannte lokale Dreier-Paket bekommt mit Abstand die meisten Klicks und Anrufe. Wer dort steht, gewinnt, wer darunter landet, wird oft gar nicht mehr gesehen.",
+      "Dort hinzukommen ist kein Zufall, sondern das Ergebnis von lokaler Suchmaschinenoptimierung, kurz lokale SEO. Die gute Nachricht: Die wichtigsten Hebel kann jeder Betrieb selbst in die Hand nehmen. Dieser Leitfaden zeigt sie der Reihe nach.",
+    ],
+    sections: [
+      {
+        heading: "Das Google-Unternehmensprofil ist dein wichtigster Hebel",
+        paragraphs: [
+          "Für die lokale Suche ist das Google-Unternehmensprofil noch wichtiger als die Website. Es entscheidet darüber, ob du im Kartenausschnitt und im Dreier-Paket auftauchst. Damit das passiert, muss es vollständig und aktiv gepflegt sein: richtige Kategorie, alle Leistungen, korrekte Öffnungszeiten, Telefonnummer, Fotos und eine aussagekräftige Beschreibung.",
+          "Google bevorzugt Profile, die lebendig wirken. Wer regelmäßig Fotos hochlädt, Beiträge veröffentlicht und auf Bewertungen antwortet, sendet das Signal eines aktiven Betriebs und wird dafür mit besserer Sichtbarkeit belohnt. Ein einmal angelegtes und dann vergessenes Profil verliert dagegen mit der Zeit an Boden.",
+        ],
+        bullets: [
+          "Die passende Hauptkategorie wählen und alle Leistungen eintragen",
+          "Öffnungszeiten inklusive Feiertagen aktuell halten",
+          "Regelmäßig echte Fotos vom Betrieb und der Arbeit hochladen",
+          "Auf jede Bewertung antworten, freundlich und zeitnah",
+        ],
+      },
+      {
+        heading: "Einheitliche Kontaktdaten: der unterschätzte Rankingfaktor",
+        paragraphs: [
+          "Einer der stärksten und zugleich am häufigsten übersehenen Faktoren für lokale SEO sind einheitliche Kontaktdaten. Name, Adresse und Telefonnummer, oft mit NAP abgekürzt, müssen überall exakt gleich geschrieben sein: auf der Website, im Google-Profil und in jedem Branchenverzeichnis.",
+          "Schon kleine Abweichungen wie Straße gegen Str. oder eine alte Telefonnummer verwirren Google und schwächen das Vertrauen in deine Daten. Wer hier für saubere Konsistenz sorgt, verschafft sich einen Vorteil, den viele Mitbewerber schlicht liegen lassen.",
+        ],
+      },
+      {
+        heading: "Bewertungen entscheiden über deine Position",
+        paragraphs: [
+          "Anzahl, Bewertung und Aktualität der Google-Rezensionen zählen zu den wichtigsten Faktoren für die lokale Platzierung. Ein Betrieb mit vielen aktuellen, guten Bewertungen erscheint weiter oben und wird gleichzeitig häufiger angeklickt, weil die Sterne sofort Vertrauen schaffen.",
+          "Entscheidend ist der stetige Fluss: Lieber jeden Monat ein paar neue Bewertungen als einmal zwanzig auf einen Schlag und danach jahrelang nichts. Bitte deine Kunden aktiv und mach es ihnen mit einem direkten Link so leicht wie möglich.",
+        ],
+      },
+      {
+        heading: "Deine Website muss den Ort kennen",
+        paragraphs: [
+          "Auch die Website zahlt auf die lokale Sichtbarkeit ein. Sie sollte klar benennen, welche Leistungen du an welchen Orten anbietest, statt nur allgemein von deinem Fach zu sprechen. Eine eigene Seite pro wichtiger Leistung und Region hilft Google, dich der richtigen Suche zuzuordnen.",
+          "Wichtig sind außerdem strukturierte Daten, mit denen Adresse, Öffnungszeiten und Leistungen maschinenlesbar hinterlegt werden. So versteht nicht nur Google, sondern auch KI-Systeme wie ChatGPT deinen Standort korrekt und können dich für Suchen in deiner Region empfehlen.",
+        ],
+      },
+      {
+        heading: "Lokale SEO ist ein Marathon, kein Sprint",
+        paragraphs: [
+          "Lokale Sichtbarkeit baut sich über Wochen und Monate auf und bleibt dann stabil, ohne dass jeder Besucher Geld kostet. Genau das macht sie so wertvoll: Wer sein Profil, seine Bewertungen und seine Website konsequent pflegt, steht in der eigenen Region irgendwann dauerhaft vorn und wird von Nachzüglern nur schwer eingeholt.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Was ist lokale SEO einfach erklärt?",
+        a: "Lokale SEO umfasst alle Maßnahmen, mit denen ein Betrieb bei Suchen mit örtlichem Bezug besser gefunden wird, etwa Elektriker in der Nähe oder Friseur Hainburg. Ziel ist es, im lokalen Dreier-Paket mit der Karte und in den Ergebnissen der Umgebung ganz oben zu erscheinen.",
+      },
+      {
+        q: "Wie komme ich in das lokale Dreier-Paket bei Google?",
+        a: "Die wichtigsten Hebel sind ein vollständiges, aktiv gepflegtes Google-Unternehmensprofil, einheitliche Kontaktdaten über alle Plattformen hinweg, viele aktuelle Bewertungen und eine Website, die deine Leistungen und Orte klar benennt. Diese Faktoren zusammen entscheiden über die Platzierung.",
+      },
+      {
+        q: "Wie lange dauert es, bis lokale SEO wirkt?",
+        a: "Erste Verbesserungen sind oft schon nach wenigen Wochen sichtbar, vor allem nach dem Optimieren des Google-Profils. Eine stabile Top-Platzierung baut sich meist über einige Monate auf. Der Aufwand lohnt sich, weil die Wirkung anschließend dauerhaft und ohne Klickkosten anhält.",
+      },
+    ],
+    related: [
+      { label: "Google-Bewertungen: mehr Kunden gewinnen", href: "/ratgeber/google-bewertungen-mehr-kunden" },
+      { label: "KI-Suche & Google 2026", href: "/ratgeber/ki-suche-google-2026" },
+      { label: "SEO oder Google Ads?", href: "/ratgeber/seo-oder-google-ads" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+    ],
+  },
+
+  {
+    slug: "google-bewertungen-mehr-kunden",
+    category: "Grundlagen",
+    title: "Google-Bewertungen: warum sie über neue Kunden entscheiden und wie du mehr bekommst",
+    metaTitle: "Google-Bewertungen: mehr Kunden gewinnen | Ratgeber",
+    description:
+      "Warum Google-Bewertungen über neue Kunden und deine Platzierung entscheiden – und wie du als kleiner Betrieb systematisch mehr echte Bewertungen bekommst.",
+    datePublished: "2026-08-02",
+    dateModified: "2026-08-02",
+    readingTime: "6 Min.",
+    intro: [
+      "Kaum jemand ruft heute einen Betrieb an, beauftragt einen Handwerker oder geht essen, ohne vorher kurz auf die Sterne zu schauen. Google-Bewertungen sind zur wichtigsten Form der Mundpropaganda geworden, und sie wirken doppelt: Sie überzeugen unentschlossene Interessenten und sie verbessern gleichzeitig deine Position bei Google.",
+      "Trotzdem lassen viele Betriebe dieses Potenzial liegen, weil sie nicht aktiv nach Bewertungen fragen. Dabei ist genau das der Schlüssel. Dieser Leitfaden zeigt, warum Bewertungen so stark wirken und wie du systematisch mehr davon bekommst.",
+    ],
+    sections: [
+      {
+        heading: "Warum Bewertungen doppelt wirken",
+        paragraphs: [
+          "Der erste Effekt ist das Vertrauen: Ein Betrieb mit vielen guten Bewertungen wirkt sofort seriös, und die Entscheidung fällt zugunsten dessen, der die meisten überzeugenden Stimmen hat. Bei ansonsten ähnlichen Anbietern geben die Sterne oft den Ausschlag.",
+          "Der zweite Effekt ist die Sichtbarkeit: Anzahl, Durchschnitt und Aktualität der Bewertungen zählen zu den wichtigsten Faktoren für die lokale Platzierung bei Google. Mehr gute Bewertungen bedeuten also nicht nur mehr Vertrauen, sondern auch, dass mehr Menschen dich überhaupt erst sehen.",
+        ],
+      },
+      {
+        heading: "Der wichtigste Schritt: aktiv danach fragen",
+        paragraphs: [
+          "Die meisten zufriedenen Kunden bewerten nicht von allein, nicht aus Unzufriedenheit, sondern weil sie nicht daran denken. Verärgerte Kunden dagegen werden oft von selbst aktiv. Wer nicht aktiv nach Bewertungen fragt, bekommt deshalb häufig ein verzerrtes, zu negatives Bild.",
+          "Die Lösung ist einfach: Frag jeden zufriedenen Kunden im richtigen Moment um eine kurze Bewertung, direkt nach dem erledigten Auftrag, beim Bezahlen oder kurz danach. Genau dann ist die Zufriedenheit am größten und die Bereitschaft am höchsten.",
+        ],
+      },
+      {
+        heading: "Mach es dem Kunden so leicht wie möglich",
+        paragraphs: [
+          "Jede zusätzliche Hürde kostet Bewertungen. Niemand sucht dein Profil erst umständlich bei Google. Ein direkter Bewertungslink, der mit einem Klick genau zum Bewertungsfenster führt, ist deshalb der wirksamste Hebel überhaupt.",
+          "Diesen Link kannst du überall einsetzen, wo du mit Kunden in Kontakt bist. Am besten funktioniert er dort, wo der Kunde ohnehin schon sein Handy in der Hand hat.",
+        ],
+        bullets: [
+          "Direkten Bewertungslink per WhatsApp oder SMS nach dem Auftrag senden",
+          "QR-Code auf Rechnung, Kassenbon oder am Tisch platzieren",
+          "Link in die E-Mail-Signatur und die Auftragsbestätigung aufnehmen",
+          "Freundlich und persönlich fragen, nicht automatisiert wirken",
+        ],
+      },
+      {
+        heading: "Auf Bewertungen antworten, auch auf kritische",
+        paragraphs: [
+          "Antworten zeigen, dass hinter dem Betrieb echte Menschen stehen, die ihre Kunden ernst nehmen. Bei positiven Bewertungen genügt ein kurzer, ehrlicher Dank. Wichtiger ist der Umgang mit Kritik: Eine sachliche, freundliche Antwort auf eine negative Bewertung wirkt auf mitlesende Interessenten oft überzeugender als die Kritik selbst.",
+          "Google wertet das Antworten zudem als Zeichen eines aktiven Profils. Wer regelmäßig reagiert, stärkt damit indirekt auch seine Platzierung.",
+        ],
+      },
+      {
+        heading: "Echt bleiben: keine gekauften Bewertungen",
+        paragraphs: [
+          "Gekaufte oder gefälschte Bewertungen sind nicht nur gegen die Regeln von Google und können zur Löschung des Profils führen, sie fliegen auch schnell auf und beschädigen das Vertrauen dauerhaft. Der einzige tragfähige Weg sind echte Bewertungen von echten Kunden. Der wirkt dafür langfristig und lässt sich durch nichts ersetzen.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Wie bekomme ich mehr Google-Bewertungen?",
+        a: "Frag jeden zufriedenen Kunden aktiv im richtigen Moment und mach es ihm mit einem direkten Bewertungslink so leicht wie möglich, etwa per WhatsApp nach dem Auftrag oder über einen QR-Code auf der Rechnung. Regelmäßiges, freundliches Fragen ist der mit Abstand wirksamste Hebel.",
+      },
+      {
+        q: "Beeinflussen Bewertungen wirklich mein Google-Ranking?",
+        a: "Ja. Anzahl, Durchschnittsnote und Aktualität der Bewertungen gehören zu den wichtigsten Faktoren für die lokale Platzierung. Mehr aktuelle, gute Bewertungen verbessern also nicht nur das Vertrauen, sondern auch deine Sichtbarkeit in der Nähe-Suche.",
+      },
+      {
+        q: "Wie soll ich auf eine schlechte Bewertung reagieren?",
+        a: "Sachlich, freundlich und lösungsorientiert, ohne dich zu rechtfertigen oder emotional zu werden. Andere Interessenten lesen mit und achten mehr auf deine Reaktion als auf die Kritik selbst. Eine gute Antwort verwandelt eine negative Bewertung oft in einen Vertrauensbeweis.",
+      },
+    ],
+    related: [
+      { label: "Lokale SEO: bei Google nach oben", href: "/ratgeber/lokale-seo-google-maps" },
+      { label: "KI-Suche & Google 2026", href: "/ratgeber/ki-suche-google-2026" },
+      { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+    ],
+  },
+
   // ─────────────────────────────────────────────────────────────────────────
   // REGIONAL
   // ─────────────────────────────────────────────────────────────────────────

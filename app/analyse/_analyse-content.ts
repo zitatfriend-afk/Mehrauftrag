@@ -201,6 +201,50 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     successNote: DEFAULT_SUCCESS,
   },
 
+  "lokale-seo-google-maps": {
+    slug: "lokale-seo-google-maps",
+    audience: "mehr lokale Sichtbarkeit bei Google",
+    metaTitle: "Kostenlose Lokale-SEO-Analyse für deinen Betrieb | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse deiner lokalen Sichtbarkeit: Wie gut wirst du in der Nähe-Suche und auf Google Maps gefunden? Wir zeigen dir, wie du nach oben kommst.",
+    eyebrow: "Lokale Sichtbarkeit",
+    h1: "Kostenlose Lokale-SEO-Analyse für deinen Betrieb",
+    intro:
+      "Wir prüfen, wie gut du in der Nähe-Suche und auf Google Maps gefunden wirst – Google-Profil, Bewertungen, Kontaktdaten und Website – und zeigen dir konkret, wo du an deinen lokalen Mitbewerbern vorbeiziehst.",
+    benefits: [
+      "Check deiner Position im lokalen Dreier-Paket",
+      "Google-Profil und Kontaktdaten im Praxis-Check",
+      "Konkrete Schritte für die Nähe-Suche",
+      "Klarer Fahrplan statt Fachchinesisch",
+    ],
+    formHeadline: "Kostenlose Lokale-SEO-Analyse anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf – wie es dir lieber ist.",
+    leadSource: "Analyse - Lokale SEO",
+    successNote: DEFAULT_SUCCESS,
+  },
+
+  "google-bewertungen-mehr-kunden": {
+    slug: "google-bewertungen-mehr-kunden",
+    audience: "mehr Google-Bewertungen",
+    metaTitle: "Kostenlose Bewertungs-Analyse für deinen Betrieb | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse: Wie stehst du bei Google-Bewertungen da und wie bekommst du systematisch mehr? Wir zeigen dir den einfachsten Weg. Unverbindlich.",
+    eyebrow: "Mehr Bewertungen",
+    h1: "Kostenlose Bewertungs-Analyse für deinen Betrieb",
+    intro:
+      "Wir schauen uns an, wie du bei Google-Bewertungen dastehst und wie du im Vergleich zu deinen Mitbewerbern wirkst – und zeigen dir einen einfachen Weg, systematisch mehr echte Bewertungen zu bekommen.",
+    benefits: [
+      "Ehrlicher Blick auf deine aktuellen Bewertungen",
+      "Einfacher Weg zu mehr echten Bewertungen",
+      "Direkter Bewertungslink richtig eingesetzt",
+      "Mehr Vertrauen und bessere Platzierung",
+    ],
+    formHeadline: "Kostenlose Bewertungs-Analyse anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf – wie es dir lieber ist.",
+    leadSource: "Analyse - Bewertungen",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   // ─── Regional ───────────────────────────────────────────────────────────────
   "werbeagentur-rhein-main-finden": {
     slug: "werbeagentur-rhein-main-finden",
