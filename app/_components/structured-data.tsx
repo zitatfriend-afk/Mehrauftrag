@@ -109,7 +109,7 @@ export default function StructuredData() {
             name: "Welche Leistungen bietet Mehr Auftrag?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Webdesign und Website-Erstellung, lokale Suchmaschinenoptimierung (SEO), Google-Ads-Betreuung sowie Grafik- und Corporate Design.",
+              text: "Webdesign und Website-Erstellung, lokale Suchmaschinenoptimierung (SEO), Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel und Printdesign wie Visitenkarten, Flyer und Textildruck bzw. Kleidung mit Logo – alles aus einer Hand.",
             },
           },
           {
@@ -169,6 +169,26 @@ export default function StructuredData() {
         areaServed: { "@type": "Country", name: "Deutschland" },
         description:
           "Logos, Corporate Design und Grafikdesign fuer einen professionellen Markenauftritt.",
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.mehrauftrag.de/#service-print",
+        name: "Werbemittel & Printdesign",
+        serviceType: "Printdesign",
+        provider: { "@id": "https://www.mehrauftrag.de/#organization" },
+        areaServed: { "@type": "Country", name: "Deutschland" },
+        description:
+          "Gestaltung und Druck von Werbemitteln: Visitenkarten, Flyer und Broschueren.",
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.mehrauftrag.de/#service-textil",
+        name: "Textildruck & Merchandise",
+        serviceType: "Textildruck",
+        provider: { "@id": "https://www.mehrauftrag.de/#organization" },
+        areaServed: { "@type": "Country", name: "Deutschland" },
+        description:
+          "Arbeitskleidung und Kleidung mit Firmenlogo sowie Merchandise-Artikel.",
       },
     ],
   };
