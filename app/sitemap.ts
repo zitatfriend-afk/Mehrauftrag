@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
+import { getAllSlugs } from "./ratgeber/_articles";
 
 const BASE = "https://www.mehrauftrag.de";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+
   const routes = [
     "",
     "/grafikdesign",
@@ -20,9 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/webseite-fuer-gebaeudereinigung",
     "/webseite-fuer-schweisser",
     "/karriere",
+    "/ratgeber",
   ];
 
-  return routes.map((path) => ({
+  const ratgeberRoutes = getAllSlugs().map((slug) => `/ratgeber/${slug}`);
+
+  return [...routes, ...ratgeberRoutes].map((path) => ({
     url: `${BASE}${path}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
