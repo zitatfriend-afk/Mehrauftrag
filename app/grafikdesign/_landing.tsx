@@ -69,6 +69,26 @@ function CheckIcon({ color = "#3b82f6" }: { color?: string }) {
   );
 }
 
+// Story-Baustein für den Referenz-Block: Ausgangssituation / Umsetzung / Ergebnis
+function StoryRow({ label, text, highlight = false }: { label: string; text: string; highlight?: boolean }) {
+  return (
+    <div
+      className="relative pl-4 py-0.5"
+      style={{ borderLeft: `2px solid ${highlight ? "rgba(59,130,246,0.65)" : "rgba(255,255,255,0.1)"}` }}
+    >
+      <div
+        className="mb-1 text-[10px] font-bold uppercase tracking-[0.18em]"
+        style={{ color: highlight ? "#60a5fa" : "rgba(148,163,184,0.7)" }}
+      >
+        {label}
+      </div>
+      <p className="text-sm leading-relaxed" style={{ color: highlight ? "#dbeafe" : "#94a3b8" }}>
+        {text}
+      </p>
+    </div>
+  );
+}
+
 // ─── Leistungen (alle 21 Leistungen, in fünf Karten geordnet) ─────────────────
 const LEISTUNGEN: { title: string; desc: string; items: string[]; icon: React.ReactNode }[] = [
   {
