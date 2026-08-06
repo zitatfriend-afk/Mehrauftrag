@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import GrafikdesignLanding from "./_landing";
 
 export const metadata: Metadata = {
-  title: "Grafikdesign Frankfurt | Logo, Flyer & Werbetechnik | Mehr Auftrag",
+  title: "Grafikdesign & Textildruck Frankfurt | Logo, Flyer & Firmenkleidung | Mehr Auftrag",
   description:
-    "Grafikdesign aus Frankfurt und Rhein-Main mit eigenem Grafikteam. Visitenkarten, Flyer, Logo Design, Autoaufkleber, Fahrzeugbeschriftung und Werbetechnik, individuell gestaltet und auf Wunsch mit Druck.",
+    "Grafikdesign, Textildruck und Werbetechnik aus Frankfurt und Rhein-Main mit eigenem Grafikteam. Visitenkarten, Flyer, Logo Design, Autoaufkleber, Fahrzeugbeschriftung sowie Firmenkleidung und Firmenshirts mit Logo, individuell gestaltet und auf Wunsch mit Druck.",
   alternates: { canonical: "https://www.mehrauftrag.de/grafikdesign" },
   openGraph: {
-    title: "Grafikdesign Frankfurt | Logo, Flyer & Werbetechnik",
+    title: "Grafikdesign & Textildruck Frankfurt | Logo, Flyer & Firmenkleidung",
     description:
-      "Eigenes Grafikteam für Frankfurt und Rhein-Main. Visitenkarten, Flyer, Logo Design, Autoaufkleber und Fahrzeugbeschriftung, individuell gestaltet und auf Wunsch mit Druck.",
+      "Eigenes Grafikteam für Frankfurt und Rhein-Main. Visitenkarten, Flyer, Logo Design, Autoaufkleber, Fahrzeugbeschriftung sowie Firmenkleidung und Firmenshirts mit Logo, individuell gestaltet und auf Wunsch mit Druck.",
     url: "https://www.mehrauftrag.de/grafikdesign",
     siteName: "Mehr Auftrag",
     locale: "de_DE",
@@ -28,7 +28,7 @@ function GrafikdesignSchema() {
         name: "Grafikdesign & Werbetechnik",
         serviceType: "Grafikdesign",
         description:
-          "Individuelles Grafikdesign aus eigenem Grafikteam: Visitenkarten, Flyer, Falzflyer, Werbeflyer, Broschüren, Plakate, Speisekarten, Briefpapier, Geschäftsausstattung, Firmenschilder, Logo Design, Corporate Design, Social Media Grafiken, Autoaufkleber, Fahrzeugbeschriftung, Schaufensterbeschriftung, Roll-ups, Banner, Aufkleber sowie Druckdaten-Erstellung und Druckservice.",
+          "Individuelles Grafikdesign aus eigenem Grafikteam: Visitenkarten, Flyer, Falzflyer, Werbeflyer, Broschüren, Plakate, Speisekarten, Briefpapier, Geschäftsausstattung, Firmenschilder, Logo Design, Corporate Design, Social Media Grafiken, Autoaufkleber, Fahrzeugbeschriftung, Schaufensterbeschriftung, Roll-ups, Banner, Aufkleber, Textildruck und Firmenkleidung mit Logo (T-Shirts, Poloshirts, Hoodies, Arbeitskleidung), bedruckte Werbeartikel und Kugelschreiber sowie Druckdaten-Erstellung und Druckservice.",
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
         areaServed: [
           { "@type": "City", name: "Frankfurt am Main" },
@@ -59,6 +59,14 @@ function GrafikdesignSchema() {
             "Roll-ups",
             "Banner",
             "Aufkleber",
+            "Textildruck",
+            "Firmenkleidung mit Logo",
+            "T-Shirts bedrucken",
+            "Poloshirts mit Logo",
+            "Hoodies bedrucken",
+            "Arbeitskleidung mit Logo",
+            "Kugelschreiber bedrucken",
+            "Werbeartikel",
             "Druckdaten Erstellung",
             "Druckservice",
           ].map((n) => ({
@@ -85,6 +93,14 @@ function GrafikdesignSchema() {
             acceptedAnswer: {
               "@type": "Answer",
               text: "Auf Wunsch gern. Wir erstellen druckfertige Daten und kümmern uns auf Wunsch um den kompletten Druck. Wenn du eine eigene Druckerei hast, liefern wir die Daten im passenden Format.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Bedruckt ihr auch Kleidung mit unserem Logo?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Ja. Wir bedrucken Firmenkleidung mit deinem Logo, von einzelnen T-Shirts, Poloshirts und Hoodies bis zur kompletten Arbeitskleidung fürs Team. Auf Wunsch gibt es passende Werbeartikel wie bedruckte Kugelschreiber gleich dazu.",
             },
           },
           {

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MaMark from "../_components/ma-mark";
@@ -88,6 +89,16 @@ const LEISTUNGEN: { title: string; desc: string; items: string[]; icon: React.Re
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M7 10h4M7 13h2M15 6V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v1" />
+      </svg>
+    ),
+  },
+  {
+    title: "Textildruck & Firmenkleidung",
+    desc: "Deine Marke zum Anziehen. Wir bedrucken und besticken Kleidung mit deinem Logo, vom einzelnen Shirt bis zur kompletten Team-Ausstattung, sauber verarbeitet und langlebig.",
+    items: ["T-Shirts bedrucken", "Poloshirts", "Hoodies & Pullover", "Arbeitskleidung", "Kugelschreiber & Kulis", "Werbeartikel"],
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16 4l4 2.5-2 4-2-1v10.5H8V9.5l-2 1-2-4L8 4c0 1.657 1.79 3 4 3s4-1.343 4-3z" />
       </svg>
     ),
   },
@@ -218,6 +229,10 @@ const FAQS: { q: string; a: string }[] = [
   {
     q: "Übernehmt ihr auch den Druck?",
     a: "Auf Wunsch gern. Wir erstellen druckfertige Daten und kümmern uns auf Wunsch um den kompletten Druck. Wenn du eine eigene Druckerei hast, liefern wir die Daten im passenden Format.",
+  },
+  {
+    q: "Bedruckt ihr auch Kleidung mit unserem Logo?",
+    a: "Ja. Wir bedrucken Firmenkleidung mit deinem Logo, von einzelnen T-Shirts, Poloshirts und Hoodies bis zur kompletten Arbeitskleidung fürs Team. Auf Wunsch gibt es passende Werbeartikel wie bedruckte Kugelschreiber gleich dazu.",
   },
   {
     q: "Arbeitet ihr auch in Frankfurt und Umgebung?",
@@ -430,7 +445,7 @@ export default function GrafikdesignLanding() {
               className="mx-auto mt-6 max-w-2xl text-base font-light leading-relaxed sm:mt-7 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              Von der Visitenkarte über den Flyer bis zur Fahrzeugbeschriftung gestalten wir alles, was deinen Betrieb sichtbar macht. Jedes Design entsteht bei uns im eigenen Grafikteam und wird individuell für dich erstellt.
+              Von der Visitenkarte über den Flyer und bedruckte Firmenkleidung bis zur Fahrzeugbeschriftung gestalten wir alles, was deinen Betrieb sichtbar macht. Jedes Design entsteht bei uns im eigenen Grafikteam und wird individuell für dich erstellt.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-5 flex max-w-2xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-7">
@@ -544,6 +559,104 @@ export default function GrafikdesignLanding() {
                 </a>
               </motion.div>
             </div>
+          </div>
+        </motion.section>
+
+        {/* ─── Referenz: Textildruck / Firmenkleidung ─── */}
+        <motion.section
+          id="referenz-textildruck"
+          initial="hidden"
+          whileInView="show"
+          viewport={SECTION_VIEWPORT}
+          variants={stagger}
+          className="relative scroll-mt-20 px-5 py-16 sm:px-8 sm:py-24"
+        >
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-12 text-center">
+              <motion.div variants={fadeUp}>
+                <SectionLabel center>Referenz aus der Praxis</SectionLabel>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-3xl font-bold text-white sm:text-4xl">
+                Firmenkleidung mit Logo für ein Reinigungsteam
+              </motion.h2>
+              <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-base text-slate-400 sm:text-lg">
+                Ein Beispiel dafür, wie aus einem Logo ein einheitlicher Auftritt fürs ganze Team wird, den man auf jeder Baustelle sieht.
+              </motion.p>
+            </div>
+
+            <motion.div
+              variants={fadeUp}
+              className="grid grid-cols-1 items-center gap-8 overflow-hidden rounded-3xl p-6 sm:p-8 lg:grid-cols-2 lg:gap-12 lg:p-10"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(59,130,246,0.15)",
+                boxShadow: "0 4px 40px rgba(0,0,0,0.3)",
+              }}
+            >
+              <div
+                className="relative mx-auto w-full max-w-md overflow-hidden rounded-2xl"
+                style={{ border: "1px solid rgba(255,255,255,0.1)", boxShadow: "0 20px 50px rgba(0,0,0,0.4)" }}
+              >
+                <Image
+                  src="/referenzen/textildruck-firmenkleidung.jpg"
+                  alt="Bedruckte Firmenkleidung von Mehr Auftrag: dunkelblaue Shirts mit Logo Industrie und Gebäudereinigung Hausmeisterservice, Textildruck für ein Reinigungsteam"
+                  width={1000}
+                  height={1249}
+                  sizes="(max-width: 1024px) 90vw, 460px"
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+
+              <div>
+                <div className="mb-4 flex items-center gap-3">
+                  <div
+                    className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl text-xl"
+                    style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.2)" }}
+                  >
+                    🧹
+                  </div>
+                  <div>
+                    <div className="text-lg font-bold leading-tight text-white">Blitz Industrie &amp; Gebäudereinigung</div>
+                    <div className="mt-0.5 text-xs font-medium tracking-wide text-[#60a5fa]">Textildruck &amp; Firmenkleidung</div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <StoryRow
+                    label="Ausgangssituation"
+                    text="Das Team war im Einsatz gut, trat vor Ort aber uneinheitlich auf. Für einen professionellen Eindruck beim Kunden fehlte einheitliche Firmenkleidung mit dem eigenen Logo."
+                  />
+                  <StoryRow
+                    label="Unsere Umsetzung"
+                    text="Wir haben das Logo für den Textildruck aufbereitet und die Shirts damit bedruckt. Farbe, Platzierung und Größe des Drucks haben wir so abgestimmt, dass das Ergebnis sauber und langlebig ist."
+                  />
+                  <StoryRow
+                    label="Ergebnis"
+                    text="Das ganze Team tritt jetzt einheitlich auf und trägt die Marke auf jede Baustelle. Bedruckte Firmenkleidung ist Werbung, die den ganzen Tag mitläuft, und hat dem Kunden so gut gefallen, dass gleich nachbestellt wurde."
+                    highlight
+                  />
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Firmenshirts bedrucken", "Poloshirts mit Logo", "Arbeitskleidung", "Team-Ausstattung"].map((t) => (
+                    <span
+                      key={t}
+                      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-medium text-slate-300"
+                      style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.18)" }}
+                    >
+                      <svg className="h-2.5 w-2.5 flex-shrink-0 text-[#3b82f6]" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <p className="mt-6 text-sm leading-relaxed text-slate-400">
+                  Ob einzelnes T-Shirt, Poloshirt, Hoodie oder komplette Arbeitskleidung fürs Team: Wir bedrucken Kleidung mit deinem Logo und liefern auf Wunsch passende Werbeartikel wie bedruckte Kugelschreiber gleich mit dazu.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </motion.section>
 
