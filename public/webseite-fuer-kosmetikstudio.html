@@ -342,8 +342,23 @@
   .form-success{display:none;background:var(--rose-soft);border:1px solid var(--rose-line);color:var(--rose-d);
     border-radius:12px;padding:16px;font-weight:600;font-size:.95rem;text-align:center}
   .form-note{font-size:.78rem;color:var(--ink-3);text-align:center;margin-top:11px}
-  .call-hint{font-size:.86rem;color:var(--paper-2);text-align:center;margin-top:14px}
-  .call-hint a{color:var(--rose-2);font-weight:700}
+  .call-hint{font-size:.86rem;color:var(--ink-2);text-align:center;margin-top:14px}
+  .call-hint a{color:var(--rose-d);font-weight:700}
+  /* Formular liegt im dunklen Plum-Band, der Kasten ist aber weiß:
+     Textfarben im Kasten explizit auf dunkel zwingen, sonst hell auf weiß = unlesbar */
+  .band.plum .lead-box h3{color:var(--ink)}
+  .band.plum .lead-box p{color:var(--ink-2)}
+  .band.plum .lead-box .sub{color:var(--ink-2)}
+  .band.plum .lead-box label{color:var(--ink)}
+  .band.plum .lead-box .form-note{color:var(--ink-3)}
+  .band.plum .lead-box .call-hint{color:var(--ink-2)}
+  .band.plum .lead-box .call-hint a{color:var(--rose-d)}
+  .band.plum .lead-box .field-check{color:var(--ink-2)}
+  .band.plum .lead-box .field-check a{color:var(--rose-d)}
+  .band.plum .lead-box .form-success{color:var(--rose-d)}
+  /* Hero-Titel: "gebuchte Behandlung" zusammenhalten, "macht" in eigene Zeile */
+  .hero h1 .nowrap{white-space:nowrap}
+  @media(max-width:560px){.hero h1 .nowrap{white-space:normal}}
 
   .cta-final{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
   @media(max-width:920px){.cta-final{grid-template-columns:1fr;gap:32px}}
@@ -399,7 +414,7 @@
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Websites für Kosmetik &amp; Beauty</span>
-      <h1>Die Website, die aus „Kosmetikerin in der Nähe" eine <span class="accent">gebuchte Behandlung</span> macht</h1>
+      <h1>Die Website, die aus „Kosmetikerin in der Nähe" eine <span class="accent nowrap">gebuchte Behandlung</span><br>macht</h1>
       <p class="lead">Deine künftigen Kundinnen suchen dich zuerst bei Google, nicht auf Instagram. In wenigen Sekunden wollen sie wissen: Welche Behandlungen bietest du, was kostet es, und wie schnell bekomme ich einen Termin. Wir bauen dir genau diese Seite. Elegant, blitzschnell am Handy und in deiner Stadt bei Google ganz vorne.</p>
       <div class="trustbar">
         <span><span class="check">✓</span> Online-Terminbuchung rund um die Uhr</span>
