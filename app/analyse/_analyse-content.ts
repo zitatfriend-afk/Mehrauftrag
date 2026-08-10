@@ -112,6 +112,28 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     successNote: DEFAULT_SUCCESS,
   },
 
+  "kundinnen-gewinnen-kosmetikstudio": {
+    slug: "kundinnen-gewinnen-kosmetikstudio",
+    audience: "Kosmetikstudios & Kosmetikerinnen",
+    metaTitle: "Kostenlose Website-Analyse für Kosmetikstudios | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse für Kosmetikstudios und Kosmetikerinnen: Wie du online mehr Kundinnen gewinnst und Termine einfacher buchbar machst. Unverbindlich.",
+    eyebrow: "Für Kosmetikstudios & Kosmetikerinnen",
+    h1: "Kostenlose Website-Analyse für dein Kosmetikstudio",
+    intro:
+      "Wir prüfen, wie gut dein Studio online gefunden wird, über Google-Profil, Instagram und Terminbuchung, und zeigen dir, wo dir Kundinnen verloren gehen und wie du sie gewinnst.",
+    benefits: [
+      "Check deines Google-Profils und der Bewertungen",
+      "Terminbuchung rund um die Uhr statt Anrufe und DMs",
+      "Vorher-Nachher-Bilder überzeugend präsentieren",
+      "Bei Google in deiner Stadt besser gefunden werden",
+    ],
+    formHeadline: "Kostenlose Analyse für dein Kosmetikstudio",
+    formNote: "Wir melden uns per WhatsApp oder Anruf – wie es dir lieber ist.",
+    leadSource: "Analyse - Kosmetik",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   // ─── Grundlagen & Vergleiche ────────────────────────────────────────────────
   "ki-suche-google-2026": {
     slug: "ki-suche-google-2026",
