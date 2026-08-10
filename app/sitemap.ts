@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/google-ads",
     "/elektriker",
     "/kostenlose-analyse",
+    "/webseite-fuer-kosmetikstudio",
     "/webseite-fuer-gastronomie",
     "/webseite-fuer-restaurant",
     "/webseite-fuer-pizzeria",

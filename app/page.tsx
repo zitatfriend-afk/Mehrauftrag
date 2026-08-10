@@ -2016,6 +2016,9 @@ export default function Home() {
 
             {/* Leistungs- und Branchenseiten – interne SEO-Verlinkung */}
             <div className="mt-6 pt-5 flex flex-wrap justify-center gap-x-5 gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+              <a href="/webseite-fuer-kosmetikstudio" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Website für Kosmetikstudio
+              </a>
               <a href="/webseite-fuer-gastronomie" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
                 Website für Gastronomie
               </a>
