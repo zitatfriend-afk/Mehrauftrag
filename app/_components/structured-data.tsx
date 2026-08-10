@@ -3,6 +3,14 @@
 // Wird einmal im RootLayout gerendert und gilt damit für alle Seiten.
 // NAP exakt abgestimmt auf das Google-Unternehmensprofil.
 
+// Einzugsgebiet: ganze DACH-Region (Deutschland, Oesterreich, Schweiz).
+// Auf allen areaServed-Feldern unten verwendet, damit es ueberall konsistent ist.
+const DACH_AREA = [
+  { "@type": "Country", name: "Deutschland" },
+  { "@type": "Country", name: "Österreich" },
+  { "@type": "Country", name: "Schweiz" },
+];
+
 export default function StructuredData() {
   const data = {
     "@context": "https://schema.org",
@@ -24,7 +32,7 @@ export default function StructuredData() {
         },
         image: { "@id": "https://www.mehrauftrag.de/#logo" },
         description:
-          "Mehr Auftrag ist die Digitalagentur für Handwerk, Gastronomie, Physiotherapie und alle Branchen, die online wachsen wollen. Professionelle, SEO-optimierte Websites und Marketing für KMU – deutschlandweit.",
+          "Mehr Auftrag ist die Digitalagentur für Handwerk, Gastronomie, Physiotherapie und alle Branchen, die online wachsen wollen. Professionelle, SEO-optimierte Websites und Marketing für KMU – in der gesamten DACH-Region (Deutschland, Österreich, Schweiz).",
         email: "info@mehrauftrag.de",
         telephone: "+49 152 02069625",
         founder: { "@type": "Person", name: "Patrick Sauna" },
@@ -37,7 +45,7 @@ export default function StructuredData() {
           addressRegion: "Hessen",
           addressCountry: "DE",
         },
-        areaServed: { "@type": "Country", name: "Deutschland" },
+        areaServed: DACH_AREA,
         priceRange: "€€",
         openingHoursSpecification: [
           {
@@ -58,7 +66,7 @@ export default function StructuredData() {
           telephone: "+49 152 02069625",
           email: "info@mehrauftrag.de",
           contactType: "customer service",
-          areaServed: "DE",
+          areaServed: ["DE", "AT", "CH"],
           availableLanguage: ["German"],
         },
         // Verbindet Website ↔ Google-Eintrag ↔ Social (wichtig fürs Knowledge Panel).
@@ -67,6 +75,15 @@ export default function StructuredData() {
           "https://www.facebook.com/mehrauftrag",
           "https://g.page/r/CccaeF7o_XxJEBM",
         ],
+        // Spiegelt das Google-Unternehmensprofil (5,0 / 14 Bewertungen, Stand 10.08.2026).
+        // Bei neuen Bewertungen reviewCount hier mitpflegen, damit es synchron bleibt.
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "5.0",
+          reviewCount: "14",
+          bestRating: "5",
+          worstRating: "1",
+        },
       },
       {
         "@type": "WebSite",
@@ -85,7 +102,7 @@ export default function StructuredData() {
             name: "Was kostet eine Website bei Mehr Auftrag?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Mehr Auftrag arbeitet mit einem festen, transparenten Preis ohne versteckte Kosten. Jeder Interessent bekommt zuerst einen kostenlosen Entwurf und ein unverbindliches Angebot. Die Betreuung ist monatlich kuendbar, es gibt keine lange Vertragsbindung.",
+              text: "Mehr Auftrag ist beim Preis flexibel: schluesselfertig zum einmaligen Festpreis oder als laufende Betreuung mit einem guenstigen Monats-Abo, beides transparent und ohne versteckte Kosten. Jeder Interessent bekommt zuerst einen kostenlosen Entwurf und ein unverbindliches Angebot. Auch das Monats-Abo ist monatlich kuendbar, es gibt keine lange Vertragsbindung.",
             },
           },
           {
@@ -117,7 +134,7 @@ export default function StructuredData() {
             name: "Wo ist Mehr Auftrag ansaessig?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Mehr Auftrag sitzt in Hainburg im Rhein-Main-Gebiet bei Frankfurt am Main und betreut Kunden deutschlandweit.",
+              text: "Mehr Auftrag sitzt in Hainburg im Rhein-Main-Gebiet bei Frankfurt am Main und betreut Kunden in der gesamten DACH-Region, also Deutschland, Oesterreich und der Schweiz.",
             },
           },
           {
@@ -136,7 +153,7 @@ export default function StructuredData() {
         name: "Webdesign & Website-Erstellung",
         serviceType: "Webdesign",
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
-        areaServed: { "@type": "Country", name: "Deutschland" },
+        areaServed: DACH_AREA,
         description:
           "Individuelle, SEO-optimierte Websites fuer Unternehmen – zum festen Preis, in rund ein bis zwei Wochen online.",
       },
@@ -146,7 +163,7 @@ export default function StructuredData() {
         name: "Lokale Suchmaschinenoptimierung (SEO)",
         serviceType: "Suchmaschinenoptimierung",
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
-        areaServed: { "@type": "Country", name: "Deutschland" },
+        areaServed: DACH_AREA,
         description:
           "Lokale SEO, damit Betriebe in ihrer Stadt bei Google gefunden werden und mehr Anfragen erhalten.",
       },
@@ -156,7 +173,7 @@ export default function StructuredData() {
         name: "Google Ads Betreuung",
         serviceType: "Google Ads",
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
-        areaServed: { "@type": "Country", name: "Deutschland" },
+        areaServed: DACH_AREA,
         description:
           "Professionelle Einrichtung und Betreuung von Google-Ads-Kampagnen fuer planbare Anfragen.",
       },
@@ -166,7 +183,7 @@ export default function StructuredData() {
         name: "Grafik- & Corporate Design",
         serviceType: "Grafikdesign",
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
-        areaServed: { "@type": "Country", name: "Deutschland" },
+        areaServed: DACH_AREA,
         description:
           "Logos, Corporate Design und Grafikdesign fuer einen professionellen Markenauftritt.",
       },
@@ -176,7 +193,7 @@ export default function StructuredData() {
         name: "Werbemittel & Printdesign",
         serviceType: "Printdesign",
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
-        areaServed: { "@type": "Country", name: "Deutschland" },
+        areaServed: DACH_AREA,
         description:
           "Gestaltung und Druck von Werbemitteln: Visitenkarten, Flyer und Broschueren.",
       },
@@ -186,7 +203,7 @@ export default function StructuredData() {
         name: "Textildruck & Merchandise",
         serviceType: "Textildruck",
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
-        areaServed: { "@type": "Country", name: "Deutschland" },
+        areaServed: DACH_AREA,
         description:
           "Arbeitskleidung und Kleidung mit Firmenlogo sowie Merchandise-Artikel.",
       },
