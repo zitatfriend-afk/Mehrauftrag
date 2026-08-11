@@ -312,6 +312,149 @@ export const ARTICLES: Article[] = [
     ],
   },
 
+  {
+    slug: "auftraege-hausmeisterservice",
+    category: "Branchen",
+    title: "Aufträge für den Hausmeisterservice: Hausverwaltungen und Objekte gewinnen",
+    metaTitle: "Aufträge für den Hausmeisterservice gewinnen | Ratgeber",
+    description:
+      "Wie Hausmeisterservices an Daueraufträge von Hausverwaltungen, WEG und Gewerbeobjekten kommen: das Leistungsspektrum richtig zeigen, Zuverlässigkeit belegen und saisonale Chancen nutzen.",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
+    readingTime: "6 Min.",
+    intro: [
+      "Ein Hausmeisterservice lebt selten von einmaligen Aufträgen. Das Geschäft, das wirklich trägt, sind laufende Objektbetreuungen: eine Wohnanlage, ein Bürogebäude, mehrere Objekte einer Hausverwaltung, betreut über Jahre. Genau diese Verträge werden heute zunehmend online angebahnt.",
+      "Die Menschen, die darüber entscheiden, sind aber keine Privatleute. Es sind Hausverwalter, WEG-Verwalter und Objektmanager, die nach einem verlässlichen Partner für eine Dauerlösung suchen. Sie ticken anders als jemand, der kurzfristig einen Handwerker braucht, und darauf sollte dein Auftritt eingestellt sein.",
+    ],
+    sections: [
+      {
+        heading: "Wer wirklich sucht, ist die Hausverwaltung",
+        paragraphs: [
+          "Wer einen Hausmeisterservice sucht, sucht meistens beruflich: eine Verwaltung, die ein neues Objekt übernommen hat, ein WEG-Beirat, der mit dem bisherigen Dienstleister unzufrieden ist, oder ein Gewerbebetrieb, der die Betreuung auslagern will. Diese Personen vergleichen nüchtern und entscheiden für längere Zeit.",
+          "Das ändert die Ansprache. Statt Werbesprüchen zählen konkrete Angaben: welche Objektarten du betreust, wie groß deine Kapazität ist, welche Leistungen zum Grundpaket gehören und wie eine Zusammenarbeit praktisch abläuft. Wer diese Fragen auf seiner Website schon beantwortet, wird angerufen. Wer sie offenlässt, fällt aus der engeren Auswahl.",
+        ],
+        bullets: [
+          "Objektarten klar benennen: Wohnanlagen, WEG, Büro- und Gewerbeobjekte",
+          "Einsatzgebiet und Kapazität angeben, damit die Anfrage passt",
+          "Grundpaket und Zusatzleistungen unterscheidbar darstellen",
+          "Ablauf einer Zusammenarbeit in wenigen Schritten erklären",
+        ],
+      },
+      {
+        heading: "Das breite Leistungsspektrum ist Chance und Problem zugleich",
+        paragraphs: [
+          "Ein Hausmeisterservice macht selten nur eine Sache. Grünpflege, Winterdienst, Treppenhausreinigung, Kleinreparaturen, Müllmanagement, Kontrollgänge, oft noch mehr. Das ist ein Vorteil im Gespräch, aber online wird es zum Problem, wenn alles in einem einzigen Absatz zusammengefasst wird.",
+          "Google kann eine Seite nur dann für eine bestimmte Suche anzeigen, wenn diese Leistung dort klar und ausführlich genug vorkommt. Wer Winterdienst, Grünpflege und Treppenhausreinigung jeweils sichtbar und mit eigenen Worten beschreibt, wird für all diese Suchen gefunden. Wer nur allgemein von Objektbetreuung spricht, für keine davon.",
+        ],
+      },
+      {
+        heading: "Zuverlässigkeit ist dein eigentliches Verkaufsargument",
+        paragraphs: [
+          "Bei der Objektbetreuung geht es weniger um Perfektion als um Verlässlichkeit. Eine Verwaltung will nicht hinterhertelefonieren müssen. Was sie überzeugt, sind Dinge, die andere Anbieter oft gar nicht erwähnen: dass du erreichbar bist, dass bei Krankheit oder Urlaub eine Vertretung übernimmt, dass du versichert bist und dass Beschwerden schnell bearbeitet werden.",
+          "Diese Punkte gehören sichtbar auf die Website, nicht ins Kleingedruckte. Sie beantworten genau die Sorge, die ein Entscheider hat, bevor er eine Betreuung über Jahre vergibt.",
+        ],
+      },
+      {
+        heading: "Saisonale Suchen sind planbare Auftragschancen",
+        paragraphs: [
+          "Anders als in vielen Branchen ist die Nachfrage beim Hausmeisterservice stark saisonal. Nach Winterdienst wird ab dem Spätsommer gesucht, wenn Verwaltungen die kommende Saison planen, nicht erst beim ersten Schnee. Grünpflege und Heckenschnitt werden im Frühjahr angefragt.",
+          "Wer diese Leistungen ganzjährig gut auffindbar auf der Website hat, ist da, wenn die Suche losgeht. Denn bis Google eine Seite kennt und einordnet, vergehen Wochen. Erst im Oktober an den Winterdienst zu denken, ist zu spät.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Wie komme ich als Hausmeisterservice an Hausverwaltungen?",
+        a: "Über eine Website, die gezielt auf Entscheider ausgerichtet ist: betreute Objektarten, Leistungsumfang, Einsatzgebiet, Erreichbarkeit und Vertretungsregelung klar benannt, dazu Referenzen von vergleichbaren Objekten. Verwaltungen suchen zunehmend online und wählen nach Verlässlichkeit aus, nicht nach dem lautesten Werbespruch.",
+      },
+      {
+        q: "Soll ich jede Leistung einzeln auf der Website beschreiben?",
+        a: "Ja. Winterdienst, Grünpflege, Treppenhausreinigung und Kleinreparaturen sollten jeweils erkennbar und mit eigenen Worten beschrieben sein. Nur dann kann Google deine Seite bei der jeweiligen Suche anzeigen, und die Anfragen passen besser zu dem, was du tatsächlich anbietest.",
+      },
+      {
+        q: "Wann sollte ich Winterdienst auf der Website sichtbar machen?",
+        a: "Deutlich vor der Saison, idealerweise ganzjährig. Verwaltungen planen den Winterdienst oft schon im Spätsommer, und Google braucht ohnehin einige Wochen, bis eine Seite gut eingeordnet ist. Wer erst im Oktober anfängt, verpasst die Anfragen.",
+      },
+    ],
+    related: [
+      { label: "Website für Hausmeisterservice", href: "/webseite-fuer-hausmeisterservice" },
+      { label: "Mehr Aufträge für die Gebäudereinigung", href: "/ratgeber/auftraege-gebaeudereinigung" },
+      { label: "Lokale SEO", href: "/ratgeber/lokale-seo-google-maps" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+    ],
+  },
+
+  {
+    slug: "auftraege-schweisser-metallbau",
+    category: "Branchen",
+    title: "Aufträge gewinnen als Schweißfachbetrieb: online sichtbar für Industrie und Privatkunden",
+    metaTitle: "Aufträge gewinnen als Schweißer & Metallbauer | Ratgeber",
+    description:
+      "Wie Schweißfachbetriebe und Metallbauer online Aufträge gewinnen: zwei Zielgruppen richtig ansprechen, Verfahren und Qualifikationen zeigen, mit Projektfotos überzeugen.",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
+    readingTime: "6 Min.",
+    intro: [
+      "Schweißen ist eine Leistung, die kaum jemand beurteilen kann, bevor sie fertig ist. Weder der Industriekunde, der eine Reparatur an einer Anlage braucht, noch der Hausbesitzer, der ein Geländer will, kann von außen erkennen, ob eine Naht sauber ausgeführt wurde. Beide entscheiden deshalb nach dem, was sie sehen können, und das ist heute meistens die Website.",
+      "Die Besonderheit bei Schweißfachbetrieben: Es sind zwei völlig verschiedene Kundengruppen, die auch völlig verschieden suchen. Wer beide bedienen will, muss beide sichtbar ansprechen.",
+    ],
+    sections: [
+      {
+        heading: "Zwei Zielgruppen, zwei völlig verschiedene Suchen",
+        paragraphs: [
+          "Ein Industriekunde sucht nach Schweißarbeiten, Lohnfertigung, Reparaturschweißen oder mobilem Schweißservice. Er hat oft Zeitdruck, weil eine Maschine steht, und achtet auf Verfahren, Materialien und Kapazität. Ein Privatkunde sucht nach Geländer, Tor, Vordach, Treppe oder Zaun und achtet auf Optik, Preisrahmen und Zuverlässigkeit.",
+          "Beide über einen Kamm zu scheren, kostet Aufträge. Eine Website, die nur allgemein von Metallbau spricht, wird für keine dieser Suchen wirklich gefunden. Besser ist, beide Bereiche klar getrennt darzustellen, mit den Begriffen, die die jeweilige Zielgruppe selbst benutzt.",
+        ],
+        bullets: [
+          "Industrie: Reparaturschweißen, Lohnfertigung, mobiler Schweißservice, Anlagenbau",
+          "Privat: Geländer, Tore, Zäune, Treppen, Vordächer, Sonderanfertigungen",
+          "Beide Bereiche mit eigenen Abschnitten statt in einem Sammeltext",
+        ],
+      },
+      {
+        heading: "Verfahren und Qualifikationen schaffen Vertrauen",
+        paragraphs: [
+          "Was in vielen Branchen nach Fachchinesisch klingt, ist beim Schweißen ein echtes Verkaufsargument. Wenn du angibst, welche Verfahren du beherrschst, also WIG, MIG oder MAG, und welche Werkstoffe du verarbeitest, also Stahl, Edelstahl oder Aluminium, dann erkennt ein Industriekunde sofort, ob du für ihn infrage kommst.",
+          "Dasselbe gilt für Prüfungen und Zertifikate. Wer eine gültige Schweißerprüfung oder eine Zertifizierung nach den einschlägigen Normen hat, sollte das nennen. Für gewerbliche Auftraggeber ist das oft die Voraussetzung, um überhaupt anfragen zu dürfen, und viele Betriebe verschenken diesen Vorteil, weil er nirgends steht.",
+        ],
+      },
+      {
+        heading: "Projektfotos sind dein stärkstes Argument",
+        paragraphs: [
+          "Nichts überzeugt bei Metallarbeiten so schnell wie ein gutes Foto. Ein sauber gefertigtes Geländer, eine gelungene Reparatur, eine Sonderanfertigung, die es so nicht von der Stange gibt, all das sagt mehr über deine Arbeit aus als jeder Beschreibungstext.",
+          "Wichtig ist, dass es echte Fotos aus der eigenen Werkstatt und von eigenen Projekten sind. Stockbilder erkennt jeder Fachkunde sofort, und sie kosten Glaubwürdigkeit. Ein Bild vorher und nachher wirkt bei Reparaturen besonders stark, weil es die Leistung sichtbar macht, die sonst unsichtbar bleibt.",
+        ],
+      },
+      {
+        heading: "Mobile Einsätze und Einzugsgebiet klar benennen",
+        paragraphs: [
+          "Viele Schweißbetriebe arbeiten nicht nur in der eigenen Werkstatt, sondern fahren zum Kunden, etwa für Reparaturen an Maschinen, Geländern oder Toren vor Ort. Das ist ein starker Vorteil gegenüber reinen Werkstattbetrieben, wird aber oft nicht erwähnt.",
+          "Schreib deshalb konkret, dass du mobile Einsätze anbietest, und nenne dein Einzugsgebiet mit den Orten, in die du tatsächlich fährst. Das hilft doppelt: Google ordnet deine Seite den passenden Regionen zu, und Anfragen von zu weit weg bleiben dir erspart.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Soll ich als Schweißer Industrie- und Privatkunden auf einer Website ansprechen?",
+        a: "Ja, aber getrennt. Beide Gruppen suchen mit ganz unterschiedlichen Begriffen, der eine nach Reparaturschweißen oder Lohnfertigung, der andere nach Geländer oder Tor. Eigene Abschnitte für beide Bereiche werden von Google besser eingeordnet und sprechen jede Gruppe direkt an.",
+      },
+      {
+        q: "Sind Angaben zu Schweißverfahren und Zertifikaten wirklich wichtig?",
+        a: "Für gewerbliche Auftraggeber sehr. Angaben zu WIG, MIG oder MAG, zu verarbeiteten Werkstoffen wie Edelstahl oder Aluminium und zu vorhandenen Schweißerprüfungen entscheiden oft darüber, ob ein Betrieb überhaupt angefragt wird. Viele lassen diesen Vorteil ungenutzt liegen.",
+      },
+      {
+        q: "Wie wichtig sind Fotos meiner Arbeiten?",
+        a: "Sehr wichtig. Die Qualität einer Schweißnaht kann ein Kunde vorab nicht prüfen, also entscheidet er nach dem, was er sieht. Echte Fotos eigener Projekte, gern auch vorher und nachher bei Reparaturen, überzeugen deutlich stärker als jede Beschreibung. Stockbilder wirken dagegen unglaubwürdig.",
+      },
+    ],
+    related: [
+      { label: "Website für Schweißer", href: "/webseite-fuer-schweisser" },
+      { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
+      { label: "Website für Elektriker", href: "/elektriker" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+    ],
+  },
+
   // ─────────────────────────────────────────────────────────────────────────
   // GRUNDLAGEN & VERGLEICHE
   // ─────────────────────────────────────────────────────────────────────────
@@ -751,6 +894,78 @@ export const ARTICLES: Article[] = [
       { label: "Lokale SEO: bei Google nach oben", href: "/ratgeber/lokale-seo-google-maps" },
       { label: "KI-Suche & Google 2026", href: "/ratgeber/ki-suche-google-2026" },
       { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+    ],
+  },
+
+  {
+    slug: "corporate-design-werbemittel",
+    category: "Grundlagen",
+    title: "Logo, Visitenkarte, Firmenkleidung: der Werbe-Baukasten für kleine Betriebe",
+    metaTitle: "Corporate Design & Werbemittel für kleine Betriebe | Ratgeber",
+    description:
+      "Warum Logo, Visitenkarten, Fahrzeugbeschriftung und Firmenkleidung zusammengehören: wie kleine Betriebe mit einem einheitlichen Auftritt größer und verlässlicher wirken.",
+    datePublished: "2026-08-11",
+    dateModified: "2026-08-11",
+    readingTime: "6 Min.",
+    intro: [
+      "Die meisten kleinen Betriebe sammeln ihren Auftritt über die Jahre zusammen. Das Logo hat mal ein Bekannter gemacht, die Visitenkarten kamen von einer Online-Druckerei, die Beschriftung am Transporter hat der Werbetechniker vor Ort entworfen, und die Arbeitsshirts sind schlicht die, die gerade im Angebot waren.",
+      "Jedes Teil für sich ist in Ordnung. Zusammen ergeben sie aber kein Bild, sondern ein Sammelsurium. Und genau das merkt ein Kunde, auch wenn er es nicht benennen kann. Ein einheitlicher Auftritt ist kein Luxus für große Firmen, er ist der günstigste Weg, größer und verlässlicher zu wirken, als man ist.",
+    ],
+    sections: [
+      {
+        heading: "Warum Einheitlichkeit wichtiger ist als Schönheit",
+        paragraphs: [
+          "Ein Kunde begegnet deinem Betrieb selten nur einmal. Er sieht den beschrifteten Transporter in der Straße, bekommt später eine Visitenkarte in die Hand, findet die Website bei Google und trifft schließlich einen Mitarbeiter im Firmenshirt. Wenn all diese Begegnungen gleich aussehen, entsteht Wiedererkennung, und Wiedererkennung erzeugt Vertrauen.",
+          "Wenn dagegen jedes Element anders aussieht, andere Farben, ein anderes Logo, eine andere Schrift, dann verpuffen diese Kontakte. Der Kunde verbindet sie nicht miteinander. Deshalb ist ein durchgehend gleicher Auftritt fast immer wirksamer als ein einzelnes besonders schönes Design.",
+        ],
+        bullets: [
+          "Immer dieselben Farben, dieselbe Schrift, dasselbe Logo",
+          "Logo in verschiedenen Größen und Varianten nutzbar halten",
+          "Auch Rechnungen, Angebote und E-Mail-Signaturen einbeziehen",
+          "Lieber einheitlich und schlicht als bunt und uneinheitlich",
+        ],
+      },
+      {
+        heading: "Das Logo ist die Grundlage, nicht das Ziel",
+        paragraphs: [
+          "Viele Betriebe investieren viel Gedanken in das Logo und vergessen dann, dass es praktisch funktionieren muss. Ein Logo muss auch klein auf einer Visitenkarte lesbar sein, auf einem dunklen Shirt genauso wirken wie auf weißem Papier, und in der Stickerei einer Arbeitsjacke darf es nicht zum Farbbrei werden.",
+          "Deshalb gehört zu einem brauchbaren Logo immer ein Satz an Varianten: farbig, einfarbig, hell auf dunkel und umgekehrt, dazu die Dateien in den richtigen Formaten. Wer nur eine einzige Bilddatei hat, stößt spätestens beim ersten Werbemittel an Grenzen und lässt dann notgedrungen etwas Abweichendes anfertigen.",
+        ],
+      },
+      {
+        heading: "Fahrzeug und Kleidung sind Werbung, die nichts extra kostet",
+        paragraphs: [
+          "Ein beschrifteter Transporter, der ohnehin jeden Tag durch die Gegend fährt, ist eine der günstigsten Werbeflächen überhaupt. Er wird gesehen, ohne dass pro Kontakt bezahlt werden muss, und er wirkt besonders im eigenen Einzugsgebiet, also genau dort, wo die Kunden herkommen.",
+          "Dasselbe gilt für Firmenkleidung. Ein Team in einheitlichen Shirts oder Jacken mit Logo wirkt auf einer Baustelle oder beim Kunden zu Hause sofort professioneller als eine Gruppe in privater Kleidung. Wichtig ist bei beidem, dass die entscheidenden Angaben lesbar bleiben: Name, Leistung und eine Kontaktmöglichkeit reichen. Zu viel Text auf einem fahrenden Auto liest niemand.",
+        ],
+      },
+      {
+        heading: "Alles aus einer Hand spart Zeit und Ärger",
+        paragraphs: [
+          "Wer Logo, Druck, Werbetechnik und Textildruck bei verschiedenen Anbietern einkauft, wird zwangsläufig zum Projektleiter: Dateien hin und her schicken, Farben abgleichen, erklären, warum das Shirt anders aussieht als die Visitenkarte. Das kostet Zeit, die man eigentlich im Betrieb braucht.",
+          "Kommt alles aus einer Hand, liegen die Vorlagen an einer Stelle und passen automatisch zusammen. Ein neues Werbemittel ist dann kein Projekt mehr, sondern eine kurze Bestellung. Genau deshalb ist es sinnvoll, den eigenen Auftritt einmal sauber aufzusetzen, statt ihn immer wieder Stück für Stück zusammenzukaufen.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Lohnt sich ein professionelles Logo für einen kleinen Betrieb?",
+        a: "Ja, weil das Logo die Grundlage für alles andere ist: Visitenkarten, Fahrzeugbeschriftung, Arbeitskleidung und Website. Ein Logo, das in allen Größen und auf hellem wie dunklem Untergrund funktioniert, spart später bei jedem Werbemittel Zeit und verhindert, dass der Auftritt auseinanderläuft.",
+      },
+      {
+        q: "Was bringt Firmenkleidung mit Logo wirklich?",
+        a: "Zwei Dinge: Ein Team in einheitlicher Kleidung wirkt beim Kunden sofort professioneller und vertrauenswürdiger, und jedes Shirt ist gleichzeitig eine Werbefläche, die nichts extra kostet. Gerade bei Handwerk und Dienstleistungen vor Ort ist das ein spürbarer Unterschied.",
+      },
+      {
+        q: "Warum sollte alles vom selben Anbieter kommen?",
+        a: "Weil sonst du derjenige bist, der Dateien, Farben und Formate zwischen mehreren Dienstleistern koordiniert. Liegen Logo, Druck, Werbetechnik und Textildruck an einer Stelle, passen die Ergebnisse automatisch zusammen und ein neues Werbemittel ist nur noch eine kurze Bestellung.",
+      },
+    ],
+    related: [
+      { label: "Grafikdesign & Werbemittel", href: "/grafikdesign" },
+      { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
+      { label: "Werbeagentur im Rhein-Main-Gebiet finden", href: "/ratgeber/werbeagentur-rhein-main-finden" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
   },

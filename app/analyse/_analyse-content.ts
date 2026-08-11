@@ -134,7 +134,73 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     successNote: DEFAULT_SUCCESS,
   },
 
+  "auftraege-hausmeisterservice": {
+    slug: "auftraege-hausmeisterservice",
+    audience: "Hausmeisterservices",
+    metaTitle: "Kostenlose Website-Analyse für Hausmeisterservices | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse für den Hausmeisterservice: Wie du online an Daueraufträge von Hausverwaltungen, WEG und Gewerbeobjekten kommst. Unverbindlich.",
+    eyebrow: "Für Hausmeisterservices",
+    h1: "Kostenlose Website-Analyse für deinen Hausmeisterservice",
+    intro:
+      "Wir prüfen, wie dein Auftritt auf Hausverwaltungen und Objektmanager wirkt und ob deine Leistungen so auffindbar sind, dass die passenden Daueraufträge bei dir landen.",
+    benefits: [
+      "Auftritt, der Hausverwaltungen und WEG überzeugt",
+      "Jede Leistung einzeln auffindbar statt im Sammeltext",
+      "Zuverlässigkeit und Vertretung sichtbar machen",
+      "Saisonale Suchen wie Winterdienst rechtzeitig abdecken",
+    ],
+    formHeadline: "Kostenlose Analyse für deinen Betrieb",
+    formNote: "Wir melden uns per WhatsApp oder Anruf – wie es dir lieber ist.",
+    leadSource: "Analyse - Hausmeisterservice",
+    successNote: DEFAULT_SUCCESS,
+  },
+
+  "auftraege-schweisser-metallbau": {
+    slug: "auftraege-schweisser-metallbau",
+    audience: "Schweißfachbetriebe & Metallbauer",
+    metaTitle: "Kostenlose Website-Analyse für Schweißbetriebe | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse für Schweißfachbetriebe und Metallbauer: Wie du online Industrie- und Privatkunden gewinnst und deine Arbeit überzeugend zeigst. Unverbindlich.",
+    eyebrow: "Für Schweißfachbetriebe & Metallbauer",
+    h1: "Kostenlose Website-Analyse für deinen Schweißbetrieb",
+    intro:
+      "Wir prüfen, ob dein Auftritt sowohl Industriekunden als auch Privatkunden abholt und ob Verfahren, Qualifikationen und Projektfotos so sichtbar sind, dass daraus Anfragen werden.",
+    benefits: [
+      "Industrie- und Privatkunden getrennt richtig ansprechen",
+      "Verfahren, Werkstoffe und Zertifikate sichtbar machen",
+      "Projektfotos überzeugend in Szene setzen",
+      "Mobile Einsätze und Einzugsgebiet klar benennen",
+    ],
+    formHeadline: "Kostenlose Analyse für deinen Betrieb",
+    formNote: "Wir melden uns per WhatsApp oder Anruf – wie es dir lieber ist.",
+    leadSource: "Analyse - Schweisser",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   // ─── Grundlagen & Vergleiche ────────────────────────────────────────────────
+  "corporate-design-werbemittel": {
+    slug: "corporate-design-werbemittel",
+    audience: "deinen Marken- und Werbeauftritt",
+    metaTitle: "Kostenloser Check: Corporate Design & Werbemittel | Mehr Auftrag",
+    metaDescription:
+      "Kostenloser Check deines Auftritts: Passen Logo, Visitenkarten, Fahrzeugbeschriftung und Firmenkleidung zusammen? Wir zeigen dir, wo dein Auftritt auseinanderläuft.",
+    eyebrow: "Corporate Design & Werbemittel",
+    h1: "Kostenloser Check für deinen Marken- und Werbeauftritt",
+    intro:
+      "Wir schauen uns an, wie einheitlich dein Auftritt heute wirkt, vom Logo über Visitenkarten und Fahrzeugbeschriftung bis zur Firmenkleidung, und zeigen dir, wo er auseinanderläuft und was sich mit wenig Aufwand zusammenführen lässt.",
+    benefits: [
+      "Ehrlicher Blick auf Logo, Farben und Schrift",
+      "Werbemittel und Fahrzeug auf Einheitlichkeit geprüft",
+      "Firmenkleidung als Werbefläche richtig nutzen",
+      "Alles aus einer Hand statt Koordination über viele Anbieter",
+    ],
+    formHeadline: "Kostenlosen Auftritts-Check anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf – wie es dir lieber ist.",
+    leadSource: "Analyse - Corporate Design",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   "ki-suche-google-2026": {
     slug: "ki-suche-google-2026",
     audience: "mehr Sichtbarkeit bei Google & KI",

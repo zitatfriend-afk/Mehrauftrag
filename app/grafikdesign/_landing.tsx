@@ -275,6 +275,7 @@ const VERWANDT: { label: string; href: string; external?: boolean }[] = [
   { label: "Google Ads", href: "/google-ads" },
   { label: "Social Media", href: "/#leistungen" },
   { label: "Branding", href: "/#leistungen" },
+  { label: "Ratgeber: Werbe-Baukasten", href: "/ratgeber/corporate-design-werbemittel" },
   { label: "Referenzen", href: "/#referenzen" },
   { label: "Kontakt", href: "/#kontakt" },
 ];

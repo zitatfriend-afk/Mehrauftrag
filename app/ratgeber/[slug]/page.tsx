@@ -2,9 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticle, getAllSlugs, CATEGORY_LABEL } from "../_articles";
+import { getAnalyse } from "../../analyse/_analyse-content";
 import { RatgeberHeader, RatgeberFooter } from "../_shell";
 
 const BASE = "https://www.mehrauftrag.de";
+
+// Der CTA-Button zeigt normalerweise auf die passende Analyse-Seite /analyse/<slug>.
+// Die Route /analyse/[slug] baut aber nur bekannte Slugs (dynamicParams = false).
+// Fehlt zu einem neuen Ratgeber-Artikel der Eintrag in _analyse-content.ts, liefe
+// der Button also in einen 404. Deshalb hier absichern: gibt es keinen passenden
+// Eintrag, wird auf die allgemeine Analyse-Seite zurückgefallen.
+function analyseHrefFor(slug: string): string {
+  return getAnalyse(slug) ? `/analyse/${slug}` : "/analyse/allgemein";
+}
 
 // Nur bekannte Slugs erzeugen, alles andere ergibt 404.
 export const dynamicParams = false;
@@ -195,7 +205,7 @@ export default async function ArticlePage({
                 größtes Potenzial liegt, ganz unverbindlich.
               </p>
               <Link
-                href={`/analyse/${article.slug}`}
+                href={analyseHrefFor(article.slug)}
                 className="shimmer-btn mt-6 inline-flex rounded-full bg-[#3b82f6] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
               >
                 Kostenlose Analyse anfordern
