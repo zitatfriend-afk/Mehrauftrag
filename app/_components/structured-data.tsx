@@ -94,60 +94,6 @@ export default function StructuredData() {
         publisher: { "@id": "https://www.mehrauftrag.de/#organization" },
       },
       {
-        "@type": "FAQPage",
-        "@id": "https://www.mehrauftrag.de/#faq",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "Was kostet eine Website bei Mehr Auftrag?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Mehr Auftrag ist beim Preis flexibel: schluesselfertig zum einmaligen Festpreis oder als laufende Betreuung mit einem guenstigen Monats-Abo, beides transparent und ohne versteckte Kosten. Jeder Interessent bekommt zuerst einen kostenlosen Entwurf und ein unverbindliches Angebot. Auch das Monats-Abo ist monatlich kuendbar, es gibt keine lange Vertragsbindung.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Wie lange dauert es, bis meine Website online ist?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "In der Regel ist die neue Website innerhalb von rund ein bis zwei Wochen online – zum festen Preis und startklar fuer Google.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Fuer welche Branchen erstellt Mehr Auftrag Websites?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Mehr Auftrag erstellt Websites fuer kleine und mittlere Betriebe aus Gastronomie, Handwerk und Dienstleistung – zum Beispiel Restaurant, Pizzeria, Cafe, Bar, Foodtruck, Gebaeudereinigung, Hausmeisterservice, Schweisser und Elektriker.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Welche Leistungen bietet Mehr Auftrag?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Webdesign und Website-Erstellung, lokale Suchmaschinenoptimierung (SEO), Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel und Printdesign wie Visitenkarten, Flyer und Textildruck bzw. Kleidung mit Logo – alles aus einer Hand.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Wo ist Mehr Auftrag ansaessig?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Mehr Auftrag sitzt in Hainburg im Rhein-Main-Gebiet bei Frankfurt am Main und betreut Kunden in der gesamten DACH-Region, also Deutschland, Oesterreich und der Schweiz.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Gibt es eine lange Vertragsbindung?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Nein. Die Zusammenarbeit ist monatlich kuendbar, ohne lange Vertragsbindung.",
-            },
-          },
-        ],
-      },
-      {
         "@type": "Service",
         "@id": "https://www.mehrauftrag.de/#service-webdesign",
         name: "Webdesign & Website-Erstellung",
@@ -206,6 +152,80 @@ export default function StructuredData() {
         areaServed: DACH_AREA,
         description:
           "Arbeitskleidung und Kleidung mit Firmenlogo sowie Merchandise-Artikel.",
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+// Der allgemeine FAQ-Block gehoert NUR auf die Startseite:
+// Google erlaubt pro Seite genau eine FAQPage. Frueher wurde dieser Knoten ueber
+// das RootLayout auf ALLEN Seiten ausgespielt und kollidierte dort mit den
+// seitenspezifischen FAQs (Ratgeber-Artikel, /grafikdesign). Ausserdem waren die
+// Fragen auf Unterseiten gar nicht sichtbar, was Googles Vorgabe widerspricht,
+// dass ausgezeichnete FAQs auch auf der Seite stehen muessen.
+// Deshalb wird er jetzt separat aus app/page.tsx heraus gerendert.
+export function HomeFaqSchema() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://www.mehrauftrag.de/#faq",
+    isPartOf: { "@id": "https://www.mehrauftrag.de/#website" },
+    about: { "@id": "https://www.mehrauftrag.de/#organization" },
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Was kostet eine Website bei Mehr Auftrag?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Mehr Auftrag ist beim Preis flexibel: schluesselfertig zum einmaligen Festpreis oder als laufende Betreuung mit einem guenstigen Monats-Abo, beides transparent und ohne versteckte Kosten. Jeder Interessent bekommt zuerst einen kostenlosen Entwurf und ein unverbindliches Angebot. Auch das Monats-Abo ist monatlich kuendbar, es gibt keine lange Vertragsbindung.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Wie lange dauert es, bis meine Website online ist?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "In der Regel ist die neue Website innerhalb von rund ein bis zwei Wochen online – zum festen Preis und startklar fuer Google.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Fuer welche Branchen erstellt Mehr Auftrag Websites?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Mehr Auftrag erstellt Websites fuer kleine und mittlere Betriebe aus Gastronomie, Handwerk und Dienstleistung – zum Beispiel Restaurant, Pizzeria, Cafe, Bar, Foodtruck, Gebaeudereinigung, Hausmeisterservice, Schweisser und Elektriker.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Welche Leistungen bietet Mehr Auftrag?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Webdesign und Website-Erstellung, lokale Suchmaschinenoptimierung (SEO), Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel und Printdesign wie Visitenkarten, Flyer und Textildruck bzw. Kleidung mit Logo – alles aus einer Hand.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Wo ist Mehr Auftrag ansaessig?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Mehr Auftrag sitzt in Hainburg im Rhein-Main-Gebiet bei Frankfurt am Main und betreut Kunden in der gesamten DACH-Region, also Deutschland, Oesterreich und der Schweiz.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Gibt es eine lange Vertragsbindung?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Nein. Die Zusammenarbeit ist monatlich kuendbar, ohne lange Vertragsbindung.",
+        },
       },
     ],
   };

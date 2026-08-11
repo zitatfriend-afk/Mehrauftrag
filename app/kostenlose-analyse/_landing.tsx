@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import MaMark from "../_components/ma-mark";
+import { FAQS } from "./_faqs";
 
 /**
  * Landingpage /kostenlose-analyse für Mehr Auftrag.
@@ -275,12 +276,6 @@ const REFERENCES = [
   },
 ];
 
-const FAQS: { q: string; a: string }[] = [
-  { q: "Ist die Analyse wirklich kostenlos?", a: "Ja, komplett kostenlos und unverbindlich. Kein Kleingedrucktes, keine versteckten Kosten." },
-  { q: "Was bekomme ich konkret?", a: "Eine ehrliche Einschätzung Ihres Online-Auftritts: Sichtbarkeit bei Google, Technik, Mobil-Tauglichkeit – plus konkrete Empfehlungen, was Ihnen mehr Anfragen bringt." },
-  { q: "Wie lange dauert das?", a: "Die Anfrage dauert 20 Sekunden. Das Ergebnis-Gespräch dauert rund 30 Minuten." },
-  { q: "Bin ich danach zu etwas verpflichtet?", a: "Nein. Sie erhalten die Analyse, entscheiden danach völlig frei. Kein Verkaufsdruck." },
-];
 
 // ─── Formular ─────────────────────────────────────────────────────────────────
 type SubmitState = "idle" | "loading" | "success" | "error";

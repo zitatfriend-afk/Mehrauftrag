@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import MaMark from "./_components/ma-mark";
+import { HomeFaqSchema } from "./_components/structured-data";
 import {
   motion,
   useScroll,
@@ -1149,6 +1150,11 @@ export default function Home() {
 
   return (
     <>
+      {/* Allgemeines FAQ-Schema: bewusst NUR hier auf der Startseite, weil Google
+          pro Seite genau eine FAQPage erlaubt und die ausgezeichneten Fragen auch
+          sichtbar auf der Seite stehen muessen. Unterseiten bringen ihre eigenen mit. */}
+      <HomeFaqSchema />
+
       {/* Fixed ambient background — zero React re-renders, pure MotionValue */}
       <AmbientBackground springX={smoothX} springY={smoothY} isMobile={reduceEffects} />
 

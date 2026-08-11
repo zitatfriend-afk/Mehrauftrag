@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import MaMark from "../_components/ma-mark";
+import { FAQS } from "./_faqs";
 
 /**
  * Landingpage /elektriker für Mehr Auftrag.
@@ -204,24 +205,6 @@ const REFERENCES = [
   },
 ];
 
-const FAQS: { q: string; a: string }[] = [
-  {
-    q: "Was, wenn die Website keine Anfragen bringt?",
-    a: "Dann schauen wir uns gemeinsam an, was optimiert werden kann – kostenlos. Wir lassen Sie damit nicht allein.",
-  },
-  {
-    q: "Wie lange dauert es wirklich?",
-    a: "7 Tage nach Eingang Ihrer Infos und Fotos ist Ihre Seite online. Kein Hin-und-Her, keine Verzögerungen.",
-  },
-  {
-    q: "Was muss ich selbst tun?",
-    a: "Ein 30-minütiges Gespräch mit uns und ein paar Fotos Ihrer Arbeit. Den kompletten Rest erledigen wir.",
-  },
-  {
-    q: "Gibt es eine Mindestlaufzeit?",
-    a: "Nein. Monatlich kündbar. Kein Kleingedrucktes, keine langfristige Bindung.",
-  },
-];
 
 // ─── Formular ─────────────────────────────────────────────────────────────────
 type SubmitState = "idle" | "loading" | "success" | "error";
