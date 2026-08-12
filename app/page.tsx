@@ -2038,6 +2038,37 @@ export default function Home() {
                 Website für Schweißer
               </a>
             </div>
+
+            {/* Stadt-Landingpages – lokale SEO-Verlinkung */}
+            <div className="mt-4 pt-4 flex flex-wrap justify-center gap-x-5 gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+              <a href="/webdesign-hanau" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Webdesign Hanau
+              </a>
+              <a href="/webdesign-offenbach" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Webdesign Offenbach
+              </a>
+              <a href="/webdesign-frankfurt" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Webdesign Frankfurt
+              </a>
+              <a href="/webdesign-aschaffenburg" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Webdesign Aschaffenburg
+              </a>
+              <a href="/webdesign-rodgau" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Webdesign Rodgau
+              </a>
+              <a href="/webdesign-dietzenbach" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Webdesign Dietzenbach
+              </a>
+              <a href="/webdesign-seligenstadt" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Webdesign Seligenstadt
+              </a>
+              <a href="/webdesign-obertshausen" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Webdesign Obertshausen
+              </a>
+              <a href="/webdesign-muehlheim" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+                Webdesign Mühlheim
+              </a>
+            </div>
           </div>
         </footer>
       </main>

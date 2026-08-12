@@ -43,6 +43,10 @@ const nextConfig: NextConfig = {
         source: "/webseite-fuer-schweisser",
         destination: "/webseite-fuer-schweisser.html",
       },
+      {
+        source: "/webdesign-:slug",
+        destination: "/webdesign-:slug.html",
+      },
     ];
   },
 };
