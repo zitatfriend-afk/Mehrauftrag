@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/webseite-fuer-schweisser",
     "/karriere",
     "/ratgeber",
+    "/webdesign-standorte",
   ];
 
   // Stadt-Landingpages: alle webdesign-*.html aus /public automatisch aufnehmen,
