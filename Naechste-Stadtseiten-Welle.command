@@ -1,10 +1,11 @@
 #!/bin/bash
 # Schaltet die naechste Welle Stadt-Landingpages live.
-# Nimmt die naechsten Seiten aus _stadtseiten-warteschlange/, verschiebt sie nach public/,
-# committet und pusht. Vercel deployt automatisch.
 #
-# Wieviele pro Woche? 4 ist bewusst gewaehlt: genug, damit die Domain regelmaessig
-# frischen Inhalt bekommt, wenig genug, dass es fuer Google nicht nach Massenproduktion aussieht.
+# WICHTIG: Vor dem Veroeffentlichen laeuft eine Qualitaetspruefung. Faellt eine
+# Seite durch, wird NICHTS veroeffentlicht. Grund: Bei vier neuen Seiten pro
+# Woche sind das rund 200 im Jahr. Genau dafuer hat Google die Regeln zu
+# skalierten Inhalten. Wenn die Seiten sich zu sehr aehneln, trifft eine
+# Abwertung nicht nur die Stadtseiten, sondern die ganze Domain.
 
 cd "/Users/pablo/Desktop/Webseite Mehrauftrag/mehr-auftrag" || exit 1
 
@@ -31,7 +32,28 @@ if [ "$OFFEN" -eq 0 ]; then
 fi
 echo ""
 
-echo "=== 3) Naechste $ANZAHL Seiten nach public/ verschieben ==="
+echo "=== 3) QUALITAETSPRUEFUNG ==="
+echo "Prueft Eigenstaendigkeit, Textaehnlichkeit und Substanz jeder Seite."
+echo ""
+python3 pruefe-stadtseiten.py
+PRUEF_EXIT=$?
+if [ $PRUEF_EXIT -ne 0 ]; then
+  echo ""
+  echo "########################################################################"
+  echo "# ABBRUCH. Es wurde NICHTS veroeffentlicht."
+  echo "#"
+  echo "# Mindestens eine Seite ist nicht eigenstaendig genug. Wenn solche"
+  echo "# Seiten live gehen, riskiert das die Bewertung der GESAMTEN Domain,"
+  echo "# nicht nur der betroffenen Seite."
+  echo "#"
+  echo "# Schick Claude die Ausgabe von oben, dann wird nachgebessert."
+  echo "# Lieber eine Woche keine neue Seite als eine schwache."
+  echo "########################################################################"
+  exit 1
+fi
+echo ""
+
+echo "=== 4) Naechste $ANZAHL Seiten nach public/ verschieben ==="
 GESCHALTET=""
 i=0
 for f in $(ls "$WARTE"/webdesign-*.html 2>/dev/null | sort); do
@@ -46,14 +68,14 @@ for f in $(ls "$WARTE"/webdesign-*.html 2>/dev/null | sort); do
 done
 echo ""
 
-echo "=== 4) Committen ==="
-git add "$WARTE" app/sitemap.ts next.config.ts 2>/dev/null
+echo "=== 5) Committen ==="
+git add "$WARTE" app/sitemap.ts next.config.ts app/webdesign-standorte 2>/dev/null
 git -c user.name="Patrick Sauna" -c user.email="zitatfriend@gmail.com" \
   commit -m "feat(seo): naechste Welle Stadt-Landingpages live:$GESCHALTET" \
   || echo "(nichts Neues zu committen)"
 echo ""; git log --oneline -1; echo ""
 
-echo "=== 5) Push nach GitHub (Vercel deployt automatisch) ==="
+echo "=== 6) Push nach GitHub (Vercel deployt automatisch) ==="
 git push origin main
 PUSH_EXIT=$?
 echo ""
@@ -64,8 +86,8 @@ if [ $PUSH_EXIT -eq 0 ]; then
   done
   echo ""
   echo "WICHTIG, bitte jetzt machen:"
-  echo "In der Google Search Console jede dieser URLs einzeln aufrufen"
-  echo "(URL-Pruefung eingeben, dann Indexierung beantragen)."
+  echo "In der Google Search Console jede dieser URLs einzeln zur Indexierung"
+  echo "anmelden (URL-Pruefung eingeben, dann Indexierung beantragen)."
   echo ""
   REST=$(ls "$WARTE"/webdesign-*.html 2>/dev/null | wc -l | tr -d ' ')
   echo "Noch in der Warteschlange: $REST Seiten"
