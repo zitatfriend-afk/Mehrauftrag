@@ -25,7 +25,7 @@ cd "/Users/pablo/Desktop/Kunden bei websiten/Webseite Mehrauftrag/mehr-auftrag" 
 # Vor der naechsten Welle hier die neuen Staedte eintragen.
 # Alternativ im Terminal:  ./Naechste-Stadtseiten-Welle.command koeln leipzig
 # --------------------------------------------------------------------------
-WELLE=(koeln duesseldorf dortmund leipzig)
+WELLE=(moenchengladbach duisburg wuppertal)
 
 if [ "$#" -gt 0 ]; then
   WELLE=("$@")
@@ -142,6 +142,11 @@ echo "=== 6) Committen ==="
 # 2>/dev/null. Fehlte davon auch nur ein Pfad, brach git add komplett ab
 # und stagte gar nichts, ohne sichtbare Fehlermeldung.
 git add -A "$WARTE"
+# Bereits getrackte, aber geaenderte Seiten in public/ mitnehmen. Beim
+# Aufnehmen neuer Staedte muessen manchmal Bestandsseiten nachgebessert
+# werden, etwa wenn eine Kennzahl ihre Exklusivitaet verliert. -u nimmt nur
+# bekannte Dateien, schleppt also nichts Ungewolltes ein.
+git add -u public/
 for pfad in app/sitemap.ts next.config.ts app/webdesign-standorte \
             pruefe-stadtseiten.py pruefe-interne-links.py \
             Naechste-Stadtseiten-Welle.command; do
