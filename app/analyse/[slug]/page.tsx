@@ -26,6 +26,9 @@ export async function generateMetadata({
     title: c.metaTitle,
     description: c.metaDescription,
     alternates: { canonical: `/analyse/${c.slug}` },
+    // Formularseiten mit noindex-Flag bleiben erreichbar und vererben Linkkraft
+    // weiter (follow), tauchen aber nicht mehr im Index auf.
+    ...(c.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: c.metaTitle,
       description: c.metaDescription,

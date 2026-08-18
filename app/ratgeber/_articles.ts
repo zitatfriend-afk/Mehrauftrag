@@ -4,7 +4,15 @@
 // Jeder Artikel liefert seine eigenen Metadaten + JSON-LD (Article + FAQPage).
 
 export type FAQ = { q: string; a: string };
-export type Section = { heading: string; paragraphs: string[]; bullets?: string[] };
+export type Section = {
+  heading: string;
+  paragraphs: string[];
+  bullets?: string[];
+  // Optionaler Kontextlink am Ende des Abschnitts. Absaetze werden als
+  // reiner Text gerendert, deshalb braucht ein Link im Fliesstext ein
+  // eigenes Feld statt HTML im String.
+  link?: RelatedLink;
+};
 export type RelatedLink = { label: string; href: string };
 
 export type Category = "Branchen" | "Grundlagen" | "Regional";
@@ -1046,16 +1054,19 @@ export const ARTICLES: Article[] = [
   {
     slug: "webdesign-frankfurt",
     category: "Regional",
-    title: "Webdesign in Frankfurt und Umgebung: Leitfaden für lokale Betriebe",
-    metaTitle: "Webdesign Frankfurt & Umgebung: Leitfaden für Betriebe | Ratgeber",
+    // Bewusst NICHT auf das Kopf-Keyword "Webdesign Frankfurt" optimiert.
+    // Das bedient die Landingpage /webdesign-frankfurt (Position 3,3).
+    // Dieser Artikel zielt auf informierende Suchen: worauf achten, woran erkennen.
+    title: "Website für Betriebe in Frankfurt und Rhein-Main: worauf du achten solltest",
+    metaTitle: "Website Frankfurt & Rhein-Main: worauf Betriebe achten | Ratgeber",
     description:
-      "Webdesign für Betriebe in Frankfurt und im Rhein-Main-Gebiet: was eine gute lokale Website ausmacht und wie du damit mehr Kunden gewinnst.",
+      "Worauf Betriebe in Frankfurt und im Rhein-Main-Gebiet bei ihrer Website achten sollten: lokale Auffindbarkeit, Ladezeit, Bilder und Google-Profil, verständlich erklärt.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
-    readingTime: "6 Min.",
+    dateModified: "2026-08-18",
+    readingTime: "7 Min.",
     intro: [
       "Frankfurt und das umliegende Rhein-Main-Gebiet sind wirtschaftlich stark und entsprechend hart umkämpft. Für lokale Betriebe, ob Handwerk, Gastronomie oder Dienstleistung, ist eine gute Website deshalb kein Luxus, sondern die Basis, um in diesem Umfeld sichtbar zu bleiben und neue Kunden zu gewinnen.",
-      "Was gutes Webdesign für einen lokalen Betrieb in dieser Region ausmacht, zeigt dieser Leitfaden.",
+      "Dieser Leitfaden erklärt, woran du erkennst, ob deine Website diese Aufgabe erfüllt, und an welchen vier Stellen sich in der Praxis entscheidet, ob sie Anfragen bringt oder nur existiert.",
     ],
     sections: [
       {
@@ -1064,6 +1075,10 @@ export const ARTICLES: Article[] = [
           "Für einen lokalen Betrieb ist die wichtigste Aufgabe der Website, bei Suchen mit regionalem Bezug aufzutauchen, etwa Friseur Frankfurt Bornheim oder Elektriker Offenbach. Dafür muss die Seite klar benennen, was du anbietest und in welchen Orten du tätig bist, und technisch so gebaut sein, dass Google sie versteht und der lokalen Suche zuordnet.",
           "Ein gepflegtes Google-Unternehmensprofil, das eng mit der Website verzahnt ist, verstärkt diesen Effekt zusätzlich. Beides zusammen entscheidet darüber, ob du in der Region vor deinen Mitbewerbern erscheinst.",
         ],
+        link: {
+          label: "Konkret für Frankfurt: so bauen wir Websites für Betriebe vor Ort",
+          href: "/webdesign-frankfurt",
+        },
       },
       {
         heading: "Schnell und für das Handy gemacht",
@@ -1084,14 +1099,25 @@ export const ARTICLES: Article[] = [
         ],
       },
     ],
+    // Bewusst ohne Preisfrage. Die stand fast wortgleich auch im FAQ-Schema der
+    // Landingpage /webdesign-frankfurt und war die einzige echte Dublette
+    // zwischen den beiden Seiten.
     faqs: [
       {
-        q: "Was kostet eine professionelle Website in Frankfurt?",
-        a: "Das hängt stark vom Umfang ab, von der einfachen Präsenz bis zur umfangreichen Seite mit vielen Funktionen. Seriös lässt sich der Preis erst nach einem kurzen Gespräch über deine Ziele nennen. Wichtiger als der reine Preis ist, was die Website an Anfragen zurückbringt.",
+        q: "Woran erkenne ich, ob meine Website lokal überhaupt gefunden wird?",
+        a: "Ein einfacher Test: Suche bei Google nach deiner Leistung plus Ort, etwa Elektriker Offenbach, und schau nach, ob du auftauchst. Genauer wird es mit der kostenlosen Google Search Console. Dort siehst du, zu welchen Suchbegriffen deine Seite angezeigt wird und auf welcher Position. Steht dort kaum etwas mit regionalem Bezug, fehlt deiner Seite die lokale Einordnung.",
       },
       {
-        q: "Wie werde ich mit meiner Website in Frankfurt und Umgebung besser gefunden?",
-        a: "Durch eine Seite, die deine Leistungen und Einsatzorte klar benennt, technisch schnell und für das Handy gemacht ist, kombiniert mit einem gepflegten Google-Unternehmensprofil und einheitlichen Kontaktdaten über alle Plattformen hinweg. Gute Bewertungen verstärken die lokale Sichtbarkeit zusätzlich.",
+        q: "Was ist wichtiger, die Website oder das Google-Unternehmensprofil?",
+        a: "Beides zusammen. Das Profil ist bei lokalen Suchen meist der erste Kontaktpunkt und entscheidet, ob jemand anruft oder weiterscrollt. Die Website beantwortet danach die Fragen, die das Profil offen lässt, und macht aus Interesse eine Anfrage. Wer nur eines von beiden pflegt, verschenkt die Hälfte der Wirkung.",
+      },
+      {
+        q: "Wie schnell muss eine Website auf dem Handy laden?",
+        a: "Als Faustregel sollte der sichtbare Bereich in unter zwei Sekunden stehen. Google misst das über die Core Web Vitals, die du ebenfalls in der Search Console einsehen kannst. Bei Suchen unterwegs ist die Geduld besonders knapp, dort kostet jede zusätzliche Sekunde spürbar Besucher.",
+      },
+      {
+        q: "Reichen Stockfotos oder braucht es eigene Bilder?",
+        a: "Eigene Bilder gewinnen fast immer. Sie zeigen dein Team, deine Fahrzeuge und echte Arbeiten und machen den Betrieb greifbar. Stockfotos wirken austauschbar, weil dieselben Motive auf vielen anderen Seiten stehen. Wenn Zeit oder Budget knapp sind, sind ein paar gute Handyfotos immer noch besser als eine Bildagentur.",
       },
       {
         q: "Muss die Agentur in Frankfurt sitzen, um eine lokale Website zu bauen?",
@@ -1099,6 +1125,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "Webdesign Frankfurt: Angebot für Betriebe", href: "/webdesign-frankfurt" },
       { label: "Werbeagentur im Rhein-Main-Gebiet finden", href: "/ratgeber/werbeagentur-rhein-main-finden" },
       { label: "Webdesign für die DACH-Region", href: "/ratgeber/webdesign-dach-region" },
       { label: "Grafik- & Corporate Design", href: "/grafikdesign" },

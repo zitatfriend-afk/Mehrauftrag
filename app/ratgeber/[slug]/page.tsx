@@ -169,6 +169,16 @@ export default async function ArticlePage({
                       ))}
                     </ul>
                   )}
+                  {s.link && (
+                    <p className="mt-4 text-base leading-relaxed">
+                      <Link
+                        href={s.link.href}
+                        className="font-semibold text-[#3b82f6] underline underline-offset-4 hover:text-[#6aa8ff]"
+                      >
+                        {s.link.label}
+                      </Link>
+                    </p>
+                  )}
                 </section>
               ))}
             </div>

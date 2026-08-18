@@ -16,6 +16,10 @@ export type AnalyseContent = {
   formNote: string; // kleiner Hinweis unter dem Button-Bereich
   leadSource: string; // Quelle fürs CRM, z.B. "Analyse - Restaurant"
   successNote: string; // individueller Erfolgstext
+  // Reine Formular-/Leadseiten gehoeren nicht in den Google-Index. Ist das
+  // gesetzt, liefert /analyse/[slug] robots noindex,follow und die Seite
+  // wird aus der Sitemap ausgenommen. Interne Links wirken weiter (follow).
+  noindex?: boolean;
 };
 
 const DEFAULT_SUCCESS =
@@ -376,6 +380,7 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     formNote: "Wir melden uns per WhatsApp oder Anruf – wie es dir lieber ist.",
     leadSource: "Analyse - Frankfurt",
     successNote: DEFAULT_SUCCESS,
+    noindex: true,
   },
 
   "webdesign-dach-region": {
