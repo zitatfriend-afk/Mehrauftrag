@@ -136,6 +136,25 @@ for stadt in "${WELLE[@]}"; do
 done
 echo ""
 
+echo "=== 5b) Nachbarstaedte neu berechnen ==="
+# Die Bloecke "Webdesign in der Naehe" werden aus scripts/staedte-geo.json
+# neu gebaut, auf ALLEN Stadtseiten. Ohne diesen Schritt bekommen die neuen
+# Staedte keinen einzigen eingehenden Link von den Bestandsseiten und landen
+# in der Search Console unter "Gefunden - zurzeit nicht indexiert".
+node scripts/nachbarstaedte.mjs
+NACHBAR_EXIT=$?
+if [ $NACHBAR_EXIT -ne 0 ]; then
+  echo ""
+  echo "########################################################################"
+  echo "# ABBRUCH. Die Nachbarstaedte konnten nicht berechnet werden."
+  echo "# Meist fehlen die Koordinaten einer neuen Stadt in"
+  echo "# scripts/staedte-geo.json. Schick Claude die Ausgabe von oben."
+  echo "########################################################################"
+  exit 1
+fi
+git add -u public/
+echo ""
+
 echo "=== 6) Committen ==="
 # -A, damit auch die geloeschten Dateien aus der Warteschlange im Commit
 # landen. Und jeder Pfad einzeln: frueher stand alles in EINEM git add mit
@@ -147,7 +166,8 @@ git add -A "$WARTE"
 # werden, etwa wenn eine Kennzahl ihre Exklusivitaet verliert. -u nimmt nur
 # bekannte Dateien, schleppt also nichts Ungewolltes ein.
 git add -u public/
-for pfad in app/sitemap.ts next.config.ts app/webdesign-standorte \
+for pfad in app/sitemap.ts app/routen.json next.config.ts app/webdesign-standorte \
+            scripts/nachbarstaedte.mjs scripts/lastmod.mjs scripts/staedte-geo.json \
             pruefe-stadtseiten.py pruefe-interne-links.py \
             Naechste-Stadtseiten-Welle.command; do
   [ -e "$pfad" ] && git add "$pfad"
@@ -155,7 +175,25 @@ done
 git -c user.name="Patrick Sauna" -c user.email="zitatfriend@gmail.com" \
   commit -m "feat(seo): naechste Welle Stadt-Landingpages live:$GESCHALTET" \
   || echo "(nichts Neues zu committen)"
-echo ""; git log --oneline -1; echo ""
+echo ""
+
+echo "=== 6b) lastmod aus der git-Historie schreiben ==="
+# Muss NACH dem Commit laufen: das Datum kommt aus dem Commit, den wir gerade
+# gemacht haben. Vercel checkt flach aus und hat keine Historie, deshalb wird
+# app/lastmod.json mit eingecheckt und beim Build nur gelesen.
+node scripts/lastmod.mjs
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "ACHTUNG: lastmod konnte nicht geschrieben werden."
+  echo "Die Seiten gehen trotzdem live, in der Sitemap fehlt dann nur das"
+  echo "Aenderungsdatum. Bitte Claude Bescheid geben."
+else
+  git add app/lastmod.json
+  git -c user.name="Patrick Sauna" -c user.email="zitatfriend@gmail.com" \
+    commit -m "chore(seo): lastmod aus der git-Historie aktualisiert" \
+    || echo "(lastmod war schon aktuell)"
+fi
+echo ""; git log --oneline -2; echo ""
 
 echo "=== 7) Push nach GitHub (Vercel deployt automatisch) ==="
 git push origin main

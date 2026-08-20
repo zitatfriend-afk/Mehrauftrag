@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lastmod": "node scripts/lastmod.mjs",
+    "nachbarstaedte": "node scripts/nachbarstaedte.mjs",
+    "seo:check": "node scripts/nachbarstaedte.mjs --check && node scripts/lastmod.mjs --check"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",

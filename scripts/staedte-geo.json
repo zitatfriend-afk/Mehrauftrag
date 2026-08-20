@@ -1,0 +1,23 @@
+{
+  "_hinweis": "Koordinaten der Stadt-Landingpages. Der Slug ist der Dateiname ohne .html. Neue Stadt = hier Breiten- und Laengengrad eintragen, sonst kann scripts/nachbarstaedte.mjs die Nachbarn nicht berechnen und laesst die Seite unveraendert.",
+  "webdesign-aschaffenburg": { "lat": 49.9769, "lon": 9.1582 },
+  "webdesign-berlin": { "lat": 52.5200, "lon": 13.4050 },
+  "webdesign-dietzenbach": { "lat": 50.0093, "lon": 8.7770 },
+  "webdesign-dortmund": { "lat": 51.5136, "lon": 7.4653 },
+  "webdesign-duesseldorf": { "lat": 51.2277, "lon": 6.7735 },
+  "webdesign-duisburg": { "lat": 51.4344, "lon": 6.7623 },
+  "webdesign-frankfurt": { "lat": 50.1109, "lon": 8.6821 },
+  "webdesign-hamburg": { "lat": 53.5511, "lon": 9.9937 },
+  "webdesign-hanau": { "lat": 50.1328, "lon": 8.9186 },
+  "webdesign-koeln": { "lat": 50.9375, "lon": 6.9603 },
+  "webdesign-leipzig": { "lat": 51.3397, "lon": 12.3731 },
+  "webdesign-moenchengladbach": { "lat": 51.1805, "lon": 6.4428 },
+  "webdesign-muehlheim": { "lat": 50.1167, "lon": 8.8333 },
+  "webdesign-muenchen": { "lat": 48.1351, "lon": 11.5820 },
+  "webdesign-obertshausen": { "lat": 50.0722, "lon": 8.8492 },
+  "webdesign-offenbach": { "lat": 50.0955, "lon": 8.7761 },
+  "webdesign-rodgau": { "lat": 50.0206, "lon": 8.8856 },
+  "webdesign-seligenstadt": { "lat": 50.0436, "lon": 8.9744 },
+  "webdesign-stuttgart": { "lat": 48.7758, "lon": 9.1829 },
+  "webdesign-wuppertal": { "lat": 51.2562, "lon": 7.1508 }
+}

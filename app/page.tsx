@@ -1998,21 +1998,21 @@ export default function Home() {
                 <div className="flex items-center gap-5">
                   <a
                     href="/impressum"
-                    className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors"
+                    className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors"
                   >
                     Impressum
                   </a>
                   <span className="text-[10px] text-white/10">·</span>
                   <a
                     href="/datenschutz"
-                    className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors"
+                    className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors"
                   >
                     Datenschutz
                   </a>
                   <span className="text-[10px] text-white/10">·</span>
                   <a
                     href="/agb"
-                    className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors"
+                    className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors"
                   >
                     AGB
                   </a>
@@ -2022,30 +2022,26 @@ export default function Home() {
 
             {/* Leistungs- und Branchenseiten – interne SEO-Verlinkung */}
             <div className="mt-6 pt-5 flex flex-wrap justify-center gap-x-5 gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
-              <a href="/webseite-fuer-kosmetikstudio" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+              <a href="/webseite-fuer-kosmetikstudio" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website für Kosmetikstudio
               </a>
-              <a href="/webseite-fuer-gastronomie" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+              <a href="/webseite-fuer-gastronomie" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website für Gastronomie
               </a>
-              <a href="/webseite-fuer-hausmeisterservice" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+              <a href="/webseite-fuer-hausmeisterservice" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website für Hausmeisterservice
               </a>
-              <a href="/webseite-fuer-gebaeudereinigung" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+              <a href="/webseite-fuer-gebaeudereinigung" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website für Gebäudereinigung
               </a>
-              <a href="/webseite-fuer-schweisser" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
+              <a href="/webseite-fuer-schweisser" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website für Schweißer
               </a>
             </div>
 
-            {/* Stadt-Landingpages: nur ein Link auf die Uebersichtsseite, damit der
-                Footer nicht mit dutzenden Staedten zuwaechst */}
-            <div className="mt-4 pt-4 flex flex-wrap justify-center gap-x-5 gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
-              <a href="/webdesign-standorte" className="text-[11px] tracking-wide text-white/18 hover:text-white/50 transition-colors">
-                Webdesign in deiner Stadt
-              </a>
-            </div>
+            {/* Der Link auf den Standort-Hub steht jetzt in
+                _components/standorte-leiste.tsx und damit auf JEDER Seite,
+                nicht mehr nur hier auf der Startseite. */}
           </div>
         </footer>
       </main>

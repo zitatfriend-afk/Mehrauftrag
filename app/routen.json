@@ -1,0 +1,23 @@
+{
+  "hinweis": "Feste Routen der Sitemap. 'quelle' zeigt auf die Dateien, aus denen die Seite gebaut wird. Daraus zieht scripts/lastmod.mjs das echte Aenderungsdatum (git). Neue feste Seite = hier eintragen, dann steht sie in der Sitemap UND bekommt ein lastmod. Die Stadt-, Ratgeber- und Analyse-Seiten stehen NICHT hier, die werden dynamisch eingelesen.",
+  "routen": [
+    { "pfad": "", "quelle": ["app/page.tsx", "app/layout.tsx"] },
+    { "pfad": "/grafikdesign", "quelle": ["app/grafikdesign/page.tsx"] },
+    { "pfad": "/google-ads", "quelle": ["app/google-ads/page.tsx"] },
+    { "pfad": "/elektriker", "quelle": ["app/elektriker/page.tsx"] },
+    { "pfad": "/kostenlose-analyse", "quelle": ["app/kostenlose-analyse/page.tsx"] },
+    { "pfad": "/webseite-fuer-kosmetikstudio", "quelle": ["public/webseite-fuer-kosmetikstudio.html"] },
+    { "pfad": "/webseite-fuer-gastronomie", "quelle": ["public/webseite-fuer-gastronomie.html"] },
+    { "pfad": "/webseite-fuer-restaurant", "quelle": ["public/webseite-fuer-restaurant.html"] },
+    { "pfad": "/webseite-fuer-pizzeria", "quelle": ["public/webseite-fuer-pizzeria.html"] },
+    { "pfad": "/webseite-fuer-cafe", "quelle": ["public/webseite-fuer-cafe.html"] },
+    { "pfad": "/webseite-fuer-bar", "quelle": ["public/webseite-fuer-bar.html"] },
+    { "pfad": "/webseite-fuer-foodtruck", "quelle": ["public/webseite-fuer-foodtruck.html"] },
+    { "pfad": "/webseite-fuer-hausmeisterservice", "quelle": ["public/webseite-fuer-hausmeisterservice.html"] },
+    { "pfad": "/webseite-fuer-gebaeudereinigung", "quelle": ["public/webseite-fuer-gebaeudereinigung.html"] },
+    { "pfad": "/webseite-fuer-schweisser", "quelle": ["public/webseite-fuer-schweisser.html"] },
+    { "pfad": "/karriere", "quelle": ["app/karriere/page.tsx", "app/_components/karriere-shell.tsx"] },
+    { "pfad": "/ratgeber", "quelle": ["app/ratgeber/page.tsx"] },
+    { "pfad": "/webdesign-standorte", "quelle": ["app/webdesign-standorte/page.tsx"] }
+  ]
+}

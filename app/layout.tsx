@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import CookieConsent from "./_components/cookie-consent";
 import StructuredData from "./_components/structured-data";
+import StandorteLeiste from "./_components/standorte-leiste";
 
 // Google Analytics 4 – Measurement-ID
 const GA_MEASUREMENT_ID = "G-7ZLRDEFHNB";
@@ -89,6 +90,9 @@ export default function RootLayout({
         </Script>
 
         {children}
+        {/* Ein einziger Link auf den Standort-Hub, dafuer auf jeder Seite.
+            Siehe Kommentar in _components/standorte-leiste.tsx. */}
+        <StandorteLeiste />
         <CookieConsent />
       </body>
     </html>

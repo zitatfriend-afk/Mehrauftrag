@@ -3,32 +3,23 @@ import { readdirSync } from "node:fs";
 import { join } from "node:path";
 import { getAllSlugs } from "./ratgeber/_articles";
 import { getAllAnalyseSlugs, getAnalyse } from "./analyse/_analyse-content";
+import ROUTEN from "./routen.json";
+import LASTMOD from "./lastmod.json";
 
 const BASE = "https://www.mehrauftrag.de";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+// Echte Aenderungsdaten pro URL. Erzeugt von scripts/lastmod.mjs aus der
+// git-Historie und mit eingecheckt.
+//
+// Frueher stand hier `lastModified: new Date()` fuer JEDE URL. Damit trugen
+// alle 66 Eintraege denselben Zeitstempel, naemlich den des Vercel-Builds.
+// Google erkennt so etwas als Build-Artefakt und ignoriert lastmod dann fuer
+// die ganze Domain. Eine URL ohne Eintrag bekommt hier bewusst KEIN
+// lastModified - lieber keine Angabe als eine erfundene.
+const DATEN: Record<string, string> = LASTMOD;
 
-  const routes = [
-    "",
-    "/grafikdesign",
-    "/google-ads",
-    "/elektriker",
-    "/kostenlose-analyse",
-    "/webseite-fuer-kosmetikstudio",
-    "/webseite-fuer-gastronomie",
-    "/webseite-fuer-restaurant",
-    "/webseite-fuer-pizzeria",
-    "/webseite-fuer-cafe",
-    "/webseite-fuer-bar",
-    "/webseite-fuer-foodtruck",
-    "/webseite-fuer-hausmeisterservice",
-    "/webseite-fuer-gebaeudereinigung",
-    "/webseite-fuer-schweisser",
-    "/karriere",
-    "/ratgeber",
-    "/webdesign-standorte",
-  ];
+export default function sitemap(): MetadataRoute.Sitemap {
+  const routes = ROUTEN.routen.map((r) => r.pfad);
 
   // Stadt-Landingpages: alle webdesign-*.html aus /public automatisch aufnehmen,
   // damit neue Wellen ohne Codeaenderung in der Sitemap landen.
@@ -44,10 +35,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((slug) => !getAnalyse(slug)?.noindex)
     .map((slug) => `/analyse/${slug}`);
 
-  return [...routes, ...stadtRoutes, ...ratgeberRoutes, ...analyseRoutes].map((path) => ({
-    url: `${BASE}${path}`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: path === "" ? 1 : 0.8,
-  }));
+  return [...routes, ...stadtRoutes, ...ratgeberRoutes, ...analyseRoutes].map((path) => {
+    const stand = DATEN[path];
+    return {
+      url: `${BASE}${path}`,
+      // changeFrequency ist bewusst weg: Google wertet den Wert seit Jahren
+      // nicht aus, und "weekly" auf allen Seiten war ohnehin nur eine
+      // Behauptung.
+      ...(stand ? { lastModified: new Date(stand) } : {}),
+      priority: path === "" ? 1 : 0.8,
+    };
+  });
 }
