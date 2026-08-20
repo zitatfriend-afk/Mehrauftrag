@@ -10,7 +10,7 @@ import {
 export const metadata: Metadata = {
   title: "Impressum – Mehr Auftrag",
   description: "Impressum der Mehr Auftrag Digitalagentur gemäß § 5 DDG.",
-  robots: "noindex, nofollow",
+  robots: "noindex, follow",
   alternates: { canonical: "https://www.mehrauftrag.de/impressum" },
 };
 

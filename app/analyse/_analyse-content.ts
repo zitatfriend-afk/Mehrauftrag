@@ -380,7 +380,6 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     formNote: "Wir melden uns per WhatsApp oder Anruf – wie es dir lieber ist.",
     leadSource: "Analyse - Frankfurt",
     successNote: DEFAULT_SUCCESS,
-    noindex: true,
   },
 
   "webdesign-dach-region": {
@@ -413,4 +412,30 @@ export function getAnalyse(slug: string): AnalyseContent | undefined {
 
 export function getAllAnalyseSlugs(): string[] {
   return Object.keys(ANALYSE);
+}
+
+// ---------------------------------------------------------------------------
+// Entscheidung vom 20.08.2026: Die Analyse-Seiten sind reine Formular- und
+// Leadseiten und gehoeren NICHT in den Google-Index.
+//
+// Warum: 12 der 17 Seiten hingen in der Search Console monatelang unter
+// "Gefunden, zurzeit nicht indexiert", Google hat sie also gesehen und
+// bewusst nicht aufgenommen. Die restlichen brachten zusammen 1 Klick und
+// 3 Impressionen in drei Monaten. Als Gruppe sind sie fast identisch
+// aufgebaut, und genau so ein Muster wertet Google als skalierte Inhalte,
+// mit Folgen fuer die GESAMTE Domain, nicht nur fuer diese Seiten.
+//
+// noindex, follow heisst: Die Seiten bleiben erreichbar, funktionieren als
+// Ziel der CTAs weiter und geben Linkkraft weiter. Sie stehen nur nicht mehr
+// in der Sitemap und nicht mehr im Index. Die Inhalte zum Thema stehen in den
+// Ratgeber-Artikeln, die indexiert bleiben und ranken sollen.
+//
+// Soll eine einzelne Seite doch in den Index, ihren Slug in INDEXIERBAR
+// eintragen. Dann braucht sie aber eigenen Inhalt, der ueber das Formular
+// hinausgeht, sonst wiederholt sich das Spiel.
+// ---------------------------------------------------------------------------
+const INDEXIERBAR = new Set<string>([]);
+
+for (const [slug, inhalt] of Object.entries(ANALYSE)) {
+  if (!INDEXIERBAR.has(slug)) inhalt.noindex = true;
 }

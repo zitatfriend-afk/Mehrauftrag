@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: "Datenschutzerklärung – Mehr Auftrag",
   description: "Datenschutzerklärung der Mehr Auftrag Digitalagentur gemäß DSGVO.",
-  robots: "noindex, nofollow",
+  robots: "noindex, follow",
   alternates: { canonical: "https://www.mehrauftrag.de/datenschutz" },
 };
 

@@ -192,7 +192,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Gebäudereiniger online planbar neue Auftraggeber gewinnen: lokale Sichtbarkeit, überzeugende Website, Bewertungen und der Weg zu Gewerbekunden mit Rahmenverträgen.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-11",
     readingTime: "6 Min.",
     intro: [
       "Die Gebäudereinigung ist ein hart umkämpfter Markt, und viele Aufträge, besonders die lukrativen mit Gewerbekunden und Rahmenverträgen, werden heute online angebahnt. Hausverwaltungen, Büros und Praxen suchen ihren Dienstleister zunehmend über Google, statt in die Zeitung zu schauen.",
@@ -256,7 +256,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Kosmetikstudios, Nagelstudios und Kosmetikerinnen online mehr Kundinnen gewinnen: Google-Profil, eigene Website mit Terminbuchung, Instagram und Bewertungen richtig kombinieren.",
     datePublished: "2026-08-10",
-    dateModified: "2026-08-10",
+    dateModified: "2026-08-11",
     readingTime: "6 Min.",
     intro: [
       "Die meisten Kundinnen suchen ihr nächstes Kosmetikstudio heute genauso wie ein Restaurant oder einen Handwerksbetrieb: Sie googeln Kosmetikerin in der Nähe oder Kosmetikstudio plus Ort und entscheiden innerhalb weniger Sekunden, wen sie kontaktieren. Wer hier nicht auftaucht oder unprofessionell wirkt, verliert die Kundin an das Studio nebenan.",
@@ -836,7 +836,7 @@ export const ARTICLES: Article[] = [
     description:
       "Warum Google-Bewertungen über neue Kunden und deine Platzierung entscheiden – und wie du als kleiner Betrieb systematisch mehr echte Bewertungen bekommst.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-11",
     readingTime: "6 Min.",
     intro: [
       "Kaum jemand ruft heute einen Betrieb an, beauftragt einen Handwerker oder geht essen, ohne vorher kurz auf die Sterne zu schauen. Google-Bewertungen sind zur wichtigsten Form der Mundpropaganda geworden, und sie wirken doppelt: Sie überzeugen unentschlossene Interessenten und sie verbessern gleichzeitig deine Position bei Google.",
