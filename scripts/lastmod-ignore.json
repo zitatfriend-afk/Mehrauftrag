@@ -1,0 +1,10 @@
+{
+  "e3bdfe0": {
+    "grund": "20.08.2026, sitewide auf allen Stadtseiten: Ueberschrift 'Auch in diesen Staedten unterwegs' zu 'Webdesign in der Naehe' und Einbau der nachbarstaedte-Marker. Reine Vorlagenaenderung, kein neuer Seiteninhalt. Ohne diesen Eintrag trueg jede der 16 Stadtseiten denselben Zeitstempel - genau das Muster, wegen dem Google lastmod ignoriert. Gilt NUR fuer die Stadtseiten; an app/layout.tsx und app/page.tsx hat derselbe Commit echte Aenderungen gemacht (Standort-Leiste sitewide), die zaehlen weiter.",
+    "pfade": ["public/webdesign-"]
+  },
+  "a245efe": {
+    "grund": "18.08.2026: tote interne Links in den Nachbarstadt-Bloecken repariert, auf neun Stadtseiten gleichzeitig. Linkpflege innerhalb des spaeter generierten Blocks, kein inhaltlicher Eingriff in den Seitentext.",
+    "pfade": ["public/webdesign-"]
+  }
+}
