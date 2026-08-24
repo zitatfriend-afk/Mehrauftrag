@@ -75,15 +75,14 @@ export default function StructuredData() {
           "https://www.facebook.com/mehrauftrag",
           "https://g.page/r/CccaeF7o_XxJEBM",
         ],
-        // Spiegelt das Google-Unternehmensprofil (5,0 / 14 Bewertungen, Stand 10.08.2026).
-        // Bei neuen Bewertungen reviewCount hier mitpflegen, damit es synchron bleibt.
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "5.0",
-          reviewCount: "14",
-          bestRating: "5",
-          worstRating: "1",
-        },
+        // Kein aggregateRating hier: Google zeigt seit 2019 keine Sterne mehr an,
+        // die ein Unternehmen ueber sich selbst im eigenen Schema auszeichnet
+        // (self-serving review snippets). Das fruehere aggregateRating hier war
+        // vermutlich die Ursache fuer die "9 gueltigen Rezensions-Snippets", die
+        // die Search Console gemeldet hat - entfernt am 24.08.2026. Echte
+        // Bewertungen stehen stattdessen sichtbar im Content, siehe
+        // GoogleReviews-Komponente. Sie sind ueber sameAs -> g.page-Link bei
+        // Google nachpruefbar.
       },
       {
         "@type": "WebSite",

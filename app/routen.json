@@ -16,6 +16,9 @@
     { "pfad": "/webseite-fuer-hausmeisterservice", "quelle": ["public/webseite-fuer-hausmeisterservice.html"] },
     { "pfad": "/webseite-fuer-gebaeudereinigung", "quelle": ["public/webseite-fuer-gebaeudereinigung.html"] },
     { "pfad": "/webseite-fuer-schweisser", "quelle": ["public/webseite-fuer-schweisser.html"] },
+    { "pfad": "/website-bringt-keine-anfragen", "quelle": ["public/website-bringt-keine-anfragen.html"] },
+    { "pfad": "/website-relaunch", "quelle": ["public/website-relaunch.html"] },
+    { "pfad": "/webseite-fuer-physiotherapie", "quelle": ["public/webseite-fuer-physiotherapie.html"] },
     { "pfad": "/karriere", "quelle": ["app/karriere/page.tsx", "app/_components/karriere-shell.tsx"] },
     { "pfad": "/ratgeber", "quelle": ["app/ratgeber/page.tsx"] },
     { "pfad": "/webdesign-standorte", "quelle": ["app/webdesign-standorte/page.tsx"] }

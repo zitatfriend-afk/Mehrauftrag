@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import MaMark from "./_components/ma-mark";
 import { HomeFaqSchema } from "./_components/structured-data";
+import GoogleReviews from "./_components/google-reviews";
 import {
   motion,
   useScroll,
@@ -1862,6 +1863,32 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ══════════════════════ Bewertungen (bewusst ohne Review-Schema, siehe structured-data.tsx) */}
+        <section id="bewertungen" className="py-24 sm:py-32 relative" style={sectionDark}>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(59,130,246,0.06), transparent 65%)" }}
+          />
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 relative">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              className="text-center mb-14 max-w-2xl mx-auto"
+            >
+              <SectionLabel center>Bewertungen</SectionLabel>
+              <h2 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight mb-4 text-white">
+                Das sagen Kunden über die Zusammenarbeit
+              </h2>
+              <p className="text-lg text-slate-400">
+                Echte Google-Bewertungen, unverändert übernommen. Jede lässt sich direkt bei Google nachlesen.
+              </p>
+            </motion.div>
+            <GoogleReviews variant="dark" />
+          </div>
+        </section>
+
         {/* ══════════════════════ FAQ */}
         <section id="faq" className="py-24 sm:py-32 relative" style={sectionDark}>
           <div
@@ -2036,6 +2063,15 @@ export default function Home() {
               </a>
               <a href="/webseite-fuer-schweisser" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website für Schweißer
+              </a>
+              <a href="/webseite-fuer-physiotherapie" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
+                Website für Physiotherapiepraxis
+              </a>
+              <a href="/website-relaunch" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
+                Website relaunchen lassen
+              </a>
+              <a href="/website-bringt-keine-anfragen" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
+                Website bringt keine Anfragen
               </a>
             </div>
 

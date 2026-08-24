@@ -44,6 +44,18 @@ const nextConfig: NextConfig = {
         destination: "/webseite-fuer-schweisser.html",
       },
       {
+        source: "/website-bringt-keine-anfragen",
+        destination: "/website-bringt-keine-anfragen.html",
+      },
+      {
+        source: "/website-relaunch",
+        destination: "/website-relaunch.html",
+      },
+      {
+        source: "/webseite-fuer-physiotherapie",
+        destination: "/webseite-fuer-physiotherapie.html",
+      },
+      {
         source: "/webdesign-:slug",
         destination: "/webdesign-:slug.html",
       },
