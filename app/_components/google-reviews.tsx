@@ -30,6 +30,12 @@ export interface GoogleReview {
 // weiterem Interagieren nach). Die uebrigen 4 bei Gelegenheit ergaenzen.
 export const REVIEWS: GoogleReview[] = [
   {
+    name: "Rosa Kifel",
+    relativeTime: "vor 2 Wochen",
+    text: "Top Webdesign aus Hainburg. Patrick hat genau verstanden, was wir brauchen, und unsere neue Website pünktlich umgesetzt. Absolut toller Service! Sehr freundlich, kompetent und zuverlässig. Man merkt sofort, dass hier jemand weiß, was er tut und großen Wert auf Qualität und Kundenzufriedenheit legt. Immer zuvorkommend, hilfsbereit und professionell. Ich habe mich bestens aufgehoben gefühlt und kann den Service zu 100% weiterempfehlen. Sehr dankbar für die große Unterstützung Jederzeit gerne wieder! 😊",
+    source: "google",
+  },
+  {
     name: "Mohamed Saleh",
     relativeTime: "vor 2 Monaten",
     text: "Sehr nett, ehrlich und zuverlässig. Die Arbeit wurde sauber und professionell ausgeführt. Ich bin sehr zufrieden und kann den Service uneingeschränkt weiterempfehlen.",
@@ -72,21 +78,9 @@ export const REVIEWS: GoogleReview[] = [
     source: "google",
   },
   {
-    name: "MG",
-    relativeTime: "vor 2 Monaten",
-    text: "Alles reibungslos verlaufen, sehr zufrieden. Top Beratung, top Ergebnis 👍",
-    source: "google",
-  },
-  {
     name: "Modjieb Na",
     relativeTime: "vor 2 Monaten",
     text: "Danke nochmal, sehr empfehlenswert!",
-    source: "google",
-  },
-  {
-    name: "F.",
-    relativeTime: "vor 2 Monaten",
-    text: "sehr zu empfehlen!!",
     source: "google",
   },
 ];
