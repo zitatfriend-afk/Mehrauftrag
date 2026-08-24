@@ -25,9 +25,11 @@ export interface GoogleReview {
   source: "google";
 }
 
-// Stand 24.08.2026: 10 von 14 oeffentlichen Google-Bewertungen konnten aus
-// dem Rezensionen-Tab gelesen werden (Google laedt den Rest erst bei
-// weiterem Interagieren nach). Die uebrigen 4 bei Gelegenheit ergaenzen.
+// Stand 24.08.2026: 9 der 14 oeffentlichen Google-Bewertungen stehen hier.
+// Die neueste (Rosa Kifel, vor 2 Wochen) steht bewusst an erster Position.
+// Zwei sehr kurze, generische Rezensionen (F., MG) wurden auf Wunsch von
+// Patrick entfernt. Die restlichen laedt Google im Rezensionen-Tab erst bei
+// weiterem Interagieren nach, sie koennen bei Gelegenheit ergaenzt werden.
 export const REVIEWS: GoogleReview[] = [
   {
     name: "Rosa Kifel",
