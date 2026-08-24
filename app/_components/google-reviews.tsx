@@ -25,10 +25,18 @@ export interface GoogleReview {
   source: "google";
 }
 
-// Stand 24.08.2026: 10 von 14 oeffentlichen Google-Bewertungen konnten aus
-// dem Rezensionen-Tab gelesen werden (Google laedt den Rest erst bei
-// weiterem Interagieren nach). Die uebrigen 4 bei Gelegenheit ergaenzen.
+// Stand 24.08.2026: 9 der 14 oeffentlichen Google-Bewertungen stehen hier.
+// Die neueste (Rosa Kifel, vor 2 Wochen) steht bewusst an erster Position.
+// Zwei sehr kurze, generische Rezensionen (F., MG) wurden auf Wunsch von
+// Patrick entfernt. Die restlichen laedt Google im Rezensionen-Tab erst bei
+// weiterem Interagieren nach, sie koennen bei Gelegenheit ergaenzt werden.
 export const REVIEWS: GoogleReview[] = [
+  {
+    name: "Rosa Kifel",
+    relativeTime: "vor 2 Wochen",
+    text: "Top Webdesign aus Hainburg. Patrick hat genau verstanden, was wir brauchen, und unsere neue Website pünktlich umgesetzt. Absolut toller Service! Sehr freundlich, kompetent und zuverlässig. Man merkt sofort, dass hier jemand weiß, was er tut und großen Wert auf Qualität und Kundenzufriedenheit legt. Immer zuvorkommend, hilfsbereit und professionell. Ich habe mich bestens aufgehoben gefühlt und kann den Service zu 100% weiterempfehlen. Sehr dankbar für die große Unterstützung Jederzeit gerne wieder! 😊",
+    source: "google",
+  },
   {
     name: "Mohamed Saleh",
     relativeTime: "vor 2 Monaten",
@@ -72,21 +80,9 @@ export const REVIEWS: GoogleReview[] = [
     source: "google",
   },
   {
-    name: "MG",
-    relativeTime: "vor 2 Monaten",
-    text: "Alles reibungslos verlaufen, sehr zufrieden. Top Beratung, top Ergebnis 👍",
-    source: "google",
-  },
-  {
     name: "Modjieb Na",
     relativeTime: "vor 2 Monaten",
     text: "Danke nochmal, sehr empfehlenswert!",
-    source: "google",
-  },
-  {
-    name: "F.",
-    relativeTime: "vor 2 Monaten",
-    text: "sehr zu empfehlen!!",
     source: "google",
   },
 ];

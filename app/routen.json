@@ -1,7 +1,7 @@
 {
   "hinweis": "Feste Routen der Sitemap. 'quelle' zeigt auf die Dateien, aus denen die Seite gebaut wird. Daraus zieht scripts/lastmod.mjs das echte Aenderungsdatum (git). Neue feste Seite = hier eintragen, dann steht sie in der Sitemap UND bekommt ein lastmod. Die Stadt-, Ratgeber- und Analyse-Seiten stehen NICHT hier, die werden dynamisch eingelesen.",
   "routen": [
-    { "pfad": "", "quelle": ["app/page.tsx", "app/layout.tsx"] },
+    { "pfad": "", "quelle": ["app/page.tsx", "app/layout.tsx", "app/_components/google-reviews.tsx"] },
     { "pfad": "/grafikdesign", "quelle": ["app/grafikdesign/page.tsx"] },
     { "pfad": "/google-ads", "quelle": ["app/google-ads/page.tsx"] },
     { "pfad": "/elektriker", "quelle": ["app/elektriker/page.tsx"] },
