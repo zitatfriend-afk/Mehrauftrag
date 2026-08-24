@@ -16,5 +16,11 @@
     "pfade": [
       "app/ratgeber/_articles.ts"
     ]
+  },
+  "b82ce37": {
+    "grund": "24.08.2026: An den 14 Stadtseiten wurden in diesem Commit ausschliesslich <title>, meta description und die davon abgeleiteten Felder (og:description, description im JSON-LD) gekuerzt bzw. geschaerft, 2 bis 8 Zeilen je Datei. Der Seitentext ist unveraendert, ein Besucher sieht keinen neuen Inhalt. Ohne diesen Eintrag truegen 14 der 16 Stadtseiten denselben Zeitstempel, genau das Muster, wegen dem Google lastmod ignoriert. Gilt NUR fuer die Stadtseiten: die drei neuen Seiten (website-relaunch, website-bringt-keine-anfragen, webseite-fuer-physiotherapie) sowie app/page.tsx und app/_components/structured-data.tsx haben im selben Commit echte Inhaltsaenderungen, die zaehlen weiter.",
+    "pfade": [
+      "public/webdesign-"
+    ]
   }
 }
