@@ -3,13 +3,17 @@
 Diese Datei ist das Gedächtnis des Projekts. Bricht eine Sitzung ab, wird zuerst diese Datei gelesen und dort weitergemacht.
 
 Letzte Aktualisierung: 25.08.2026 (Nachtrag Mobilpruefung)
-Stand: **alle acht Phasen abgeschlossen, dazu eine vollstaendige Mobilpruefung mit echtem Build, elf Commits, nichts gepusht**
+Stand: **live seit 26.08.2026. Push 73de10a..826520b durch, Vercel-Deploy durch, Sitemap neu eingereicht, neun Indexierungsantraege gestellt.**
 Repo: `/Users/pablo/Desktop/Kunden bei websiten/Webseite Mehrauftrag/mehr-auftrag`
 Ausgangsstand: `73de10a` · Endstand: `8cae012`
 
 ---
 
 ## ZUERST LESEN: was als Nächstes passieren muss
+
+**ERLEDIGT am 26.08.2026:** Deploy gelaufen, Push `73de10a..826520b`, Vercel durch. Live geprüft: `/suchmaschinenoptimierung`, `/referenzen` mit fünf Fallstudien und `/ueber-uns` erreichbar, die H1 der Startseite trägt Text, `/webdesign-hanau` enthält kein „Hainburg", keine „Josefstraße" und keine Postleitzahl mehr, die Sitemap führt alle 61 URLs. In der Search Console: Sitemap neu eingereicht (61 erkannte Seiten, vorher 50), neun Indexierungsanträge gestellt und bestätigt.
+
+**Was jetzt noch offen ist, steht unten in der Tabelle.** Der Rest dieses Abschnitts ist die ursprüngliche Anleitung und nur noch Archiv.
 
 **1. Live schalten.** Im Repo-Root liegt `SEO-Grossumbau-LIVE-SCHALTEN.command`. Doppelklick genügt. Das Skript prüft die Stadtseiten, prüft die Nachbarblöcke, macht `npm install` und `npm run build`, bricht bei jedem Fehler hart ab, berechnet danach lastmod neu und fragt vor dem Push noch einmal nach. Der Build läuft bewusst nur auf dem Mac, in der Cloud-Sitzung ist er nicht möglich.
 
