@@ -200,6 +200,94 @@ export default function StandortePage() {
             </a>
           </div>
 
+          {/* Eigener Fliesstext. Vorher bestand diese Seite fast nur aus der
+              automatisch erzeugten Staedteliste und war damit ein reines
+              Linkverzeichnis. */}
+          <div className="mt-14 max-w-3xl space-y-5 text-[16px] leading-relaxed text-white/60">
+            <h2 className="text-2xl font-bold tracking-tight text-white">
+              Warum es für jede Stadt eine eigene Seite gibt
+            </h2>
+            <p>
+              Eine Seite, auf der zwanzig Ortsnamen untereinander stehen, hilft niemandem. Weder
+              dem Betrieb, der wissen will, ob wir seinen Markt verstehen, noch der Suchmaschine,
+              die entscheiden muss, welches Ergebnis zu einer Suche passt. Deshalb hat jede Stadt
+              hier eine eigene Seite bekommen, und auf jeder stehen andere Dinge.
+            </p>
+            <p>
+              Konkret heißt das: amtliche Zahlen zur Wirtschaftsstruktur der Stadt, die Stadtteile
+              und Ortsteile, die dort tatsächlich als getrennte Suchräume funktionieren, und die
+              Gewerke, die vor Ort stark vertreten sind. In Duisburg sind drei von vier Betrieben
+              Einzelunternehmen, in Obertshausen prägen Industriezulieferer das Bild, in Seligenstadt
+              lebt die Altstadtgastronomie von Ausflugsverkehr. Das sind keine Textbausteine, das
+              sind die Unterschiede, die darüber entscheiden, welche Wörter auf eine Website gehören.
+            </p>
+
+            <h2 className="pt-4 text-2xl font-bold tracking-tight text-white">
+              Wie wir arbeiten, seit wir ortsunabhängig sind
+            </h2>
+            <p>
+              Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Kein
+              Termin im Betrieb, keine Anfahrt, keine halben Arbeitstage, die für ein Gespräch
+              draufgehen. Für einen Inhaber, der tagsüber auf der Baustelle oder im Objekt steht,
+              ist das der praktischere Weg, und für die Sichtbarkeit macht es ohnehin keinen
+              Unterschied. Ob ein Betrieb bei der Suche nach seinem Gewerk plus seinem Ort auftaucht,
+              hängt an Inhalt, Technik und Google-Profil, nicht an der Entfernung zur Agentur.
+            </p>
+            <p>
+              Was stattdessen zählt, ist Marktkenntnis. Wie stark ist das Gewerk in dieser Stadt
+              besetzt, welche Betriebsgrößen sind üblich, gibt es einen Stadtteil, der als eigener
+              Ort gesucht wird. Genau das recherchieren wir, bevor eine Zeile geschrieben wird, und
+              genau das steht dann auf der jeweiligen Stadtseite.
+            </p>
+
+            <h2 className="pt-4 text-2xl font-bold tracking-tight text-white">
+              Für wen wir bauen
+            </h2>
+            <p>
+              Der typische Kunde hat zwischen einem und dreißig Mitarbeitern, macht seine Arbeit gut
+              und wird online trotzdem übersehen. Handwerk und Bau, Gastronomie, Gebäudereinigung,
+              Hausmeisterservice, Metallbau und Schweißtechnik, Kosmetik und Praxen. Für die meisten
+              dieser Branchen gibt es eine eigene Leistungsseite mit allem, was dort tatsächlich
+              gebraucht wird, von der{" "}
+              <a href="/webseite-fuer-gebaeudereinigung" className="underline underline-offset-4 hover:text-white/90">
+                Website für Gebäudereinigung
+              </a>{" "}
+              über die{" "}
+              <a href="/webseite-fuer-schweisser" className="underline underline-offset-4 hover:text-white/90">
+                Website für Schweißbetriebe
+              </a>{" "}
+              bis zur{" "}
+              <a href="/webseite-fuer-gastronomie" className="underline underline-offset-4 hover:text-white/90">
+                Website für gastronomische Betriebe
+              </a>
+              .
+            </p>
+            <p>
+              Wie das in der Praxis aussieht, steht in den{" "}
+              <a href="/referenzen" className="underline underline-offset-4 hover:text-white/90">
+                fünf Fallstudien
+              </a>
+              : Ausgangslage, Vorgehen und Ergebnis, jeweils an einem echten Projekt. Eines davon
+              ist über mehrere hundert Kilometer Entfernung entstanden, ohne einen einzigen Termin
+              im Betrieb.
+            </p>
+
+            <h2 className="pt-4 text-2xl font-bold tracking-tight text-white">
+              Deine Stadt steht nicht dabei?
+            </h2>
+            <p>
+              Dann heißt das nur, dass es dafür noch keine eigene Seite gibt, nicht dass wir dort
+              nicht arbeiten. Wir betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz.
+              Ruf an oder schreib per WhatsApp, dann schauen wir uns deinen Markt an. Wenn du
+              zusätzlich wissen willst, wofür dein Betrieb heute gefunden wird und wofür nicht,
+              führt der schnellste Weg über die{" "}
+              <a href="/suchmaschinenoptimierung" className="underline underline-offset-4 hover:text-white/90">
+                Suchmaschinenoptimierung
+              </a>
+              . Dort steht auch, was ein Sichtbarkeits-Check umfasst.
+            </p>
+          </div>
+
           {gruppen.map((g) => (
             <section key={g.titel} className="mt-14">
               <h2 className="text-2xl font-bold tracking-tight text-white">

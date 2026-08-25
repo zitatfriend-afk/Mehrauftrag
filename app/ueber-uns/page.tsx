@@ -241,6 +241,12 @@ export default function UeberUnsPage() {
                 >
                   Ratgeber lesen
                 </Link>
+                <Link
+                  href="/karriere"
+                  className="rounded-full border border-white/12 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-white/25"
+                >
+                  Offene Stellen im Team
+                </Link>
               </div>
             </section>
 

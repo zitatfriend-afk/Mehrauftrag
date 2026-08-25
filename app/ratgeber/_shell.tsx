@@ -22,6 +22,18 @@ export function RatgeberHeader() {
             Ratgeber
           </Link>
           <Link
+            href="/referenzen"
+            className="hidden text-sm font-medium text-slate-300 transition hover:text-white sm:inline"
+          >
+            Referenzen
+          </Link>
+          <Link
+            href="/suchmaschinenoptimierung"
+            className="hidden text-sm font-medium text-slate-300 transition hover:text-white sm:inline"
+          >
+            SEO
+          </Link>
+          <Link
             href="/analyse/allgemein"
             className="shimmer-btn rounded-full bg-[#3b82f6] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
           >

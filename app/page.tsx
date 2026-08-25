@@ -1853,7 +1853,11 @@ export default function Home() {
                 <p className="leading-relaxed mb-8 text-slate-400">
                   Deshalb haben wir Mehr Auftrag gegründet eine Digitalagentur,
                   die wirklich liefert. Keine leeren Versprechen. Keine generischen
-                  Pakete. Nur maßgeschneiderte Strategien, die messbar mehr Aufträge bringen.
+                  Pakete. Nur maßgeschneiderte Strategien, die messbar mehr Aufträge bringen.{" "}
+                  <a href="/ueber-uns" className="text-[#3b82f6] underline underline-offset-4 hover:text-[#6aa8ff]">
+                    Wie wir arbeiten und was wir bewusst nicht anbieten
+                  </a>
+                  .
                 </p>
                 <div className="space-y-2.5 mb-8">
                   {["Echte Projekte aus Handwerk & Dienstleistung", "Persönlicher Ansprechpartner", "100% Ergebnisorientiert", "90 Tage Betreuung inklusive Optimierung"].map((item) => (

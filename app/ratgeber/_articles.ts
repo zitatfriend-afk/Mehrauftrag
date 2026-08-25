@@ -110,6 +110,8 @@ export const ARTICLES: Article[] = [
       { label: "Website für Restaurants", href: "/webseite-fuer-restaurant" },
       { label: "Website für Pizzerien", href: "/webseite-fuer-pizzeria" },
       { label: "Website für Cafés", href: "/webseite-fuer-cafe" },
+      { label: "Website für Bars und Lounges", href: "/webseite-fuer-bar" },
+      { label: "Website für Foodtrucks und Catering", href: "/webseite-fuer-foodtruck" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
   },
@@ -161,6 +163,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Der beste Auftritt nützt nichts, wenn Anfragen im Postfach untergehen. Eine saubere Anfrage-Strecke sorgt dafür, dass jede Anfrage sofort ankommt, idealerweise gleichzeitig per E-Mail und in einer einfachen Übersicht, damit nichts vergessen wird. Wer schnell zurückruft, gewinnt den Auftrag oft schon allein durch das Tempo.",
         ],
+        link: { label: "Wie eine Website für einen Elektrobetrieb konkret aussieht", href: "/elektriker" },
       },
     ],
     faqs: [
@@ -526,6 +529,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "KI-Suche ist noch jung, und die meisten kleinen Betriebe haben sich darauf nicht eingestellt. Genau darin liegt die Chance: Wer heute die Grundlagen sauber legt, sichert sich einen Vorsprung, den Nachzügler später nur schwer aufholen. Sichtbarkeit baut sich über Zeit auf, deshalb zahlt sich jeder frühe Schritt später doppelt aus.",
         ],
+        link: { label: "Suchmaschinenoptimierung, die auch KI-Systeme versteht", href: "/suchmaschinenoptimierung" },
       },
     ],
     faqs: [
@@ -597,6 +601,7 @@ export const ARTICLES: Article[] = [
           "In der Praxis ist es selten ein Entweder-oder. Ein bewährter Weg ist, mit Google Ads schnell die ersten Anfragen zu holen und parallel die Grundlage für gute unbezahlte Platzierungen zu legen. Sobald SEO greift, kann das Werbebudget sinken, weil ein Teil der Anfragen dann kostenlos über die Suche kommt.",
           "Wichtig ist, beides auf ein solides Fundament zu stellen: eine schnelle, überzeugende Website. Ohne die verpufft sowohl das Werbebudget als auch die SEO-Arbeit, weil die Besucher zwar kommen, aber nicht zu Kunden werden.",
         ],
+        link: { label: "Unsere Google-Ads-Betreuung im Überblick", href: "/google-ads" },
       },
     ],
     faqs: [
@@ -667,6 +672,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Ein Baukasten kann reichen, wenn du technisch fit bist, Zeit mitbringst und nur eine einfache Visitenkarte im Netz brauchst. Sobald die Website aktiv Kunden bringen soll, du deine Zeit lieber in dein Geschäft steckst oder Wert auf einen professionellen Eindruck legst, ist die Agentur meist die wirtschaftlichere Wahl, weil sie sich über die zusätzlichen Anfragen bezahlt macht.",
         ],
+        link: { label: "Was ein Relaunch der bestehenden Seite kostet und wie er abläuft", href: "/website-relaunch" },
       },
     ],
     faqs: [
@@ -734,6 +740,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Eine gute Website beantwortet die immer gleichen Fragen von selbst: Was bietet ihr an, was kostet es ungefähr, wie erreiche ich euch, wann habt ihr geöffnet. Das reduziert Rückfragen und sorgt dafür, dass die Anfragen, die kommen, besser vorqualifiziert sind.",
         ],
+        link: { label: "Wenn die Website da ist und trotzdem keine Anfragen kommen", href: "/website-bringt-keine-anfragen" },
       },
     ],
     faqs: [
@@ -811,6 +818,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Lokale Sichtbarkeit baut sich über Wochen und Monate auf und bleibt dann stabil, ohne dass jeder Besucher Geld kostet. Genau das macht sie so wertvoll: Wer sein Profil, seine Bewertungen und seine Website konsequent pflegt, steht in der eigenen Region irgendwann dauerhaft vorn und wird von Nachzüglern nur schwer eingeholt.",
         ],
+        link: { label: "So läuft lokale Suchmaschinenoptimierung bei uns ab", href: "/suchmaschinenoptimierung" },
       },
     ],
     faqs: [
@@ -890,6 +898,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Gekaufte oder gefälschte Bewertungen sind nicht nur gegen die Regeln von Google und können zur Löschung des Profils führen, sie fliegen auch schnell auf und beschädigen das Vertrauen dauerhaft. Der einzige tragfähige Weg sind echte Bewertungen von echten Kunden. Der wirkt dafür langfristig und lässt sich durch nichts ersetzen.",
         ],
+        link: { label: "Warum Bewertungen im Termingeschäft besonders zählen", href: "/webseite-fuer-kosmetikstudio" },
       },
     ],
     faqs: [
@@ -963,6 +972,7 @@ export const ARTICLES: Article[] = [
           "Wer Logo, Druck, Werbetechnik und Textildruck bei verschiedenen Anbietern einkauft, wird zwangsläufig zum Projektleiter: Dateien hin und her schicken, Farben abgleichen, erklären, warum das Shirt anders aussieht als die Visitenkarte. Das kostet Zeit, die man eigentlich im Betrieb braucht.",
           "Kommt alles aus einer Hand, liegen die Vorlagen an einer Stelle und passen automatisch zusammen. Ein neues Werbemittel ist dann kein Projekt mehr, sondern eine kurze Bestellung. Genau deshalb ist es sinnvoll, den eigenen Auftritt einmal sauber aufzusetzen, statt ihn immer wieder Stück für Stück zusammenzukaufen.",
         ],
+        link: { label: "Grafikdesign, Print und Textildruck aus einer Hand", href: "/grafikdesign" },
       },
     ],
     faqs: [
@@ -1037,6 +1047,7 @@ export const ARTICLES: Article[] = [
           "Achte auf klare Preise ohne versteckte Kosten und auf faire Vertragsbedingungen. Lange Knebelverträge sind für einen kleinen Betrieb ein unnötiges Risiko. Eine Agentur, die von ihrer Arbeit überzeugt ist, braucht keine jahrelange Bindung, um Kunden zu halten.",
           "Ein einfacher, oft übersehener Test: Wie sieht die Agentur selbst online aus? Wer die eigene Website und den eigenen Google-Auftritt vernachlässigt, wird sich um deinen kaum besser kümmern.",
         ],
+        link: { label: "Fünf Projekte mit Ausgangslage, Vorgehen und Ergebnis", href: "/referenzen" },
       },
     ],
     faqs: [
@@ -1152,7 +1163,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Betriebe mit einer Website Kunden in ganz Deutschland, Österreich und der Schweiz gewinnen: länderübergreifend gefunden werden, aus einer Hand betreut.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Die DACH-Region, also Deutschland, Österreich und die Schweiz, ist ein zusammenhängender, deutschsprachiger Markt mit über 100 Millionen Menschen. Für viele Betriebe und Dienstleister endet die Kundschaft aber unnötig an der Landesgrenze, einfach weil der Online-Auftritt nur auf einen Ort ausgerichtet ist.",
@@ -1191,6 +1202,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Wer in einem anderen Land anfragt, achtet besonders auf Seriosität. Ein professioneller Auftritt mit klarem Impressum, echten Referenzen aus verschiedenen Ländern und sichtbaren Bewertungen nimmt die Unsicherheit und macht aus Interessenten in Österreich oder der Schweiz genauso selbstverständlich Kunden wie im eigenen Ort.",
         ],
+        link: { label: "Alle Städte, für die es eine eigene Seite gibt", href: "/webdesign-standorte" },
       },
     ],
     faqs: [
