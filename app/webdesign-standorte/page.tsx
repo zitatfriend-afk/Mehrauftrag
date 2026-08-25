@@ -48,7 +48,7 @@ const REGIONEN: { titel: string; hinweis: string; staedte: string[] }[] = [
   {
     titel: "Rhein-Main und Untermain",
     hinweis:
-      "Unser Kerngebiet rund um Hainburg. Hier kommen wir für das Erstgespräch persönlich vorbei.",
+      "Der Markt, den wir am längsten kennen. Kleinteiliges Handwerk, viel Gastronomie, dazu Logistik und Industriezulieferer entlang des Mains.",
     staedte: [
       "Hanau",
       "Offenbach",
@@ -258,7 +258,7 @@ export default function StandortePage() {
           </section>
 
           <p className="mt-12 text-[13px] text-white/30">
-            Mehr Auftrag · Josefstraße 28 · 63512 Hainburg ·{" "}
+            Mehr Auftrag · info@mehrauftrag.de · +49 152 02069625 ·{" "}
             <a href="/impressum" className="underline underline-offset-4 hover:text-white/60">
               Impressum
             </a>{" "}

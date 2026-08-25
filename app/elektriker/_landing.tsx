@@ -178,7 +178,7 @@ const TESTIMONIALS = [
     name: "Unser Versprechen an Sie",
   },
   {
-    text: "Persönlicher Ansprechpartner aus der Region – Sie reden mit einem Menschen, nicht mit einer Hotline. Rückruf innerhalb von 24 Stunden, ohne Verkaufsdruck.",
+    text: "Ein fester Ansprechpartner statt Hotline. Sie reden mit einem Menschen, Rückruf innerhalb von 24 Stunden, ohne Verkaufsdruck.",
     name: "Mehr Auftrag · Patrick Sauna",
   },
 ];

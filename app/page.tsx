@@ -78,7 +78,7 @@ function Portrait() {
     <div className="relative w-full h-full overflow-hidden">
       <Image
         src="/neuesprofilbild.webp"
-        alt="Patrick Sauna – Geschäftsführer Mehr Auftrag"
+        alt="Patrick Sauna, Geschäftsführer von Mehr Auftrag"
         fill
         sizes="(max-width: 768px) 100vw, 340px"
         priority
@@ -361,9 +361,11 @@ function ReferenceCards() {
 // ─── FAQ ──────────────────────────────────────────────────────────────────────
 const FAQS = [
   { q: "Für welche Branchen arbeitet ihr?", a: "Wir arbeiten mit Handwerksbetrieben, Physiotherapeuten, Industrieunternehmen, Gastronomie, Dienstleistern und vielen weiteren Branchen. Unser System ist branchenunabhängig und auf messbares Wachstum ausgerichtet." },
-  { q: "Wie schnell sehe ich erste Ergebnisse?", a: "Die meisten Kunden sehen erste messbare Ergebnisse innerhalb der ersten 30–60 Tage. Eine neue Website geht in unter 14 Tagen live." },
+  { q: "Wie schnell sehe ich erste Ergebnisse?", a: "Die meisten Kunden sehen erste messbare Ergebnisse in den ersten 30 bis 60 Tagen. Eine neue Website geht in unter 14 Tagen live." },
   { q: "Was kostet eine Zusammenarbeit?", a: "Das kommt ganz auf dein Unternehmen, deine Ziele und den aktuellen Stand an. Jeder Betrieb braucht eine individuelle Lösung. Deshalb schauen wir uns im kostenlosen Erstgespräch alles gemeinsam an und erstellen anschließend ein passendes Konzept für dich." },
   { q: "Was passiert im kostenlosen Erstgespräch?", a: "Wir analysieren deinen Online-Auftritt, identifizieren Wachstumspotenziale und zeigen dir konkret, welche Maßnahmen den größten Impact hätten. Dauer: ca. 30 Minuten." },
+  { q: "Muss die Agentur in meiner Stadt sitzen?", a: "Nein. Wir arbeiten ortsunabhängig und betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Für jemanden, der den ganzen Tag auf der Baustelle steht, ist das ein Vorteil: kein Termin, der den Arbeitstag zerreißt. Was zählt, ist nicht die Entfernung, sondern ob wir deinen Markt kennen." },
+  { q: "Welche Leistungen bietet ihr?", a: "Webdesign und Website-Erstellung, Suchmaschinenoptimierung, Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel, Printdesign und Textildruck. Alles aus einer Hand, damit dein Auftritt zusammenpasst." },
   { q: "Gibt es eine Mindestvertragslaufzeit?", a: (
     <>
       <p>Nein. Unsere Websites werden in erster Linie schlüsselfertig an den Kunden übergeben. Das bedeutet: Du besitzt deine Website vollständig und entscheidest selbst, wie du sie betreiben möchtest.</p>

@@ -53,7 +53,7 @@ export const ARTICLES: Article[] = [
     dateModified: "2026-08-25",
     readingTime: "7 Min.",
     intro: [
-      "Die meisten Gäste entscheiden heute am Handy, wo sie essen gehen. Sie tippen etwas wie Pizzeria in der Nähe oder Restaurant Hainburg in Google ein und schauen sich in wenigen Sekunden an, was ihnen angezeigt wird: die Karte, die Bewertungen, die Fotos, die Öffnungszeiten. Wer hier nicht sauber auftaucht, verliert Gäste an das Lokal von nebenan, oft ohne es überhaupt zu merken.",
+      "Die meisten Gäste entscheiden heute am Handy, wo sie essen gehen. Sie tippen etwas wie Pizzeria in der Nähe oder Restaurant Offenbach in Google ein und schauen sich in wenigen Sekunden an, was ihnen angezeigt wird: die Karte, die Bewertungen, die Fotos, die Öffnungszeiten. Wer hier nicht sauber auftaucht, verliert Gäste an das Lokal von nebenan, oft ohne es überhaupt zu merken.",
       "Die gute Nachricht: Für ein Restaurant ist gutes Online-Marketing kein Hexenwerk. Es kommt auf wenige Bausteine an, die zusammenspielen. Dieser Leitfaden zeigt sie der Reihe nach.",
     ],
     sections: [
@@ -132,7 +132,7 @@ export const ARTICLES: Article[] = [
       {
         heading: "In der Nähe gefunden werden: lokale Sichtbarkeit",
         paragraphs: [
-          "Wenn jemand Elektriker Hainburg oder Gebäudereinigung Frankfurt sucht, entscheidet die lokale Suche bei Google darüber, wer den Auftrag bekommt. Zwei Dinge zahlen darauf ein: ein vollständiges Google-Unternehmensprofil und eine Website, die eindeutig sagt, was du machst und wo du tätig bist.",
+          "Wenn jemand Elektriker Rodgau oder Gebäudereinigung Frankfurt sucht, entscheidet die lokale Suche bei Google darüber, wer den Auftrag bekommt. Zwei Dinge zahlen darauf ein: ein vollständiges Google-Unternehmensprofil und eine Website, die eindeutig sagt, was du machst und wo du tätig bist.",
           "Trage überall dieselben Kontaktdaten ein, exakt gleich geschrieben: Name, Adresse und Telefonnummer. Diese Konsistenz über Website, Google und Branchenverzeichnisse hinweg ist einer der wichtigsten Faktoren für gute lokale Platzierungen.",
         ],
       },
@@ -268,7 +268,7 @@ export const ARTICLES: Article[] = [
       {
         heading: "Instagram reicht allein nicht aus",
         paragraphs: [
-          "Instagram ist gut geeignet, um Ergebnisse zu zeigen und eine Community aufzubauen, aber es ist keine Visitenkarte für die Google-Suche. Wer Kosmetikstudio Hainburg oder Wimpernverlängerung in der Nähe sucht, bekommt in erster Linie Websites angezeigt, keine Instagram-Profile. Ohne eigene Website bist du für diese Suchenden praktisch unsichtbar.",
+          "Instagram ist gut geeignet, um Ergebnisse zu zeigen und eine Community aufzubauen, aber es ist keine Visitenkarte für die Google-Suche. Wer Kosmetikstudio Aschaffenburg oder Wimpernverlängerung in der Nähe sucht, bekommt in erster Linie Websites angezeigt, keine Instagram-Profile. Ohne eigene Website bist du für diese Suchenden praktisch unsichtbar.",
           "Eine Website und ein Instagram-Profil ergänzen sich am besten: Instagram für Reichweite und Inspiration, die Website als fester Anlaufpunkt, über den neue Kundinnen dich finden und direkt einen Termin buchen können.",
         ],
       },
@@ -816,7 +816,7 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Was ist lokale SEO einfach erklärt?",
-        a: "Lokale SEO umfasst alle Maßnahmen, mit denen ein Betrieb bei Suchen mit örtlichem Bezug besser gefunden wird, etwa Elektriker in der Nähe oder Friseur Hainburg. Ziel ist es, im lokalen Dreier-Paket mit der Karte und in den Ergebnissen der Umgebung ganz oben zu erscheinen.",
+        a: "Lokale SEO umfasst alle Maßnahmen, mit denen ein Betrieb bei Suchen mit örtlichem Bezug besser gefunden wird, etwa Elektriker in der Nähe oder Friseur Seligenstadt. Ziel ist es, im lokalen Dreier-Paket mit der Karte und in den Ergebnissen der Umgebung ganz oben zu erscheinen.",
       },
       {
         q: "Wie komme ich in das lokale Dreier-Paket bei Google?",
@@ -842,7 +842,7 @@ export const ARTICLES: Article[] = [
     title: "Google-Bewertungen: warum sie über neue Kunden entscheiden und wie du mehr bekommst",
     metaTitle: "Google-Bewertungen: mehr Kunden gewinnen | Ratgeber",
     description:
-      "Warum Google-Bewertungen über neue Kunden und deine Platzierung entscheiden – und wie du als kleiner Betrieb systematisch mehr echte Bewertungen bekommst.",
+      "Warum Google-Bewertungen über neue Kunden und deine Platzierung entscheiden, und wie du als kleiner Betrieb systematisch mehr echte Bewertungen bekommst.",
     datePublished: "2026-08-02",
     dateModified: "2026-08-11",
     readingTime: "6 Min.",
@@ -1086,7 +1086,7 @@ export const ARTICLES: Article[] = [
           "Ein gepflegtes Google-Unternehmensprofil, das eng mit der Website verzahnt ist, verstärkt diesen Effekt zusätzlich. Beides zusammen entscheidet darüber, ob du in der Region vor deinen Mitbewerbern erscheinst.",
         ],
         link: {
-          label: "Konkret für Frankfurt: so bauen wir Websites für Betriebe vor Ort",
+          label: "Konkret für Frankfurt: so bauen wir Websites für ortsansässige Betriebe",
           href: "/webdesign-frankfurt",
         },
       },
@@ -1132,7 +1132,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Muss die Agentur in Frankfurt sitzen, um eine lokale Website zu bauen?",
-        a: "Nein. Entscheidend ist, dass die Agentur lokale Suche versteht und deine Region und Zielgruppe kennt. Mehr Auftrag sitzt in Hainburg im Rhein-Main-Gebiet und betreut Betriebe in Frankfurt und der ganzen Umgebung, vieles davon bequem aus der Ferne.",
+        a: "Nein. Entscheidend ist, dass die Agentur lokale Suche versteht und deinen Markt kennt: welche Betriebsgrößen dort üblich sind, wie stark dein Gewerk besetzt ist und wonach deine Kunden tatsächlich suchen. Mehr Auftrag arbeitet ortsunabhängig und betreut Betriebe im Rhein-Main-Gebiet ebenso wie in Nordrhein-Westfalen, Sachsen und der übrigen DACH-Region. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall.",
       },
     ],
     related: [
@@ -1155,8 +1155,8 @@ export const ARTICLES: Article[] = [
     dateModified: "2026-08-02",
     readingTime: "6 Min.",
     intro: [
-      "Die DACH-Region – Deutschland, Österreich und die Schweiz – ist ein zusammenhängender, deutschsprachiger Markt mit über 100 Millionen Menschen. Für viele Betriebe und Dienstleister endet die Kundschaft aber unnötig an der Landesgrenze, einfach weil der Online-Auftritt nur auf einen Ort ausgerichtet ist.",
-      "Dabei lässt sich die ganze Region mit einer durchdachten Website und der richtigen Sichtbarkeit bequem erreichen – ohne Niederlassung in jedem Land. Dieser Leitfaden zeigt, worauf es dabei ankommt.",
+      "Die DACH-Region, also Deutschland, Österreich und die Schweiz, ist ein zusammenhängender, deutschsprachiger Markt mit über 100 Millionen Menschen. Für viele Betriebe und Dienstleister endet die Kundschaft aber unnötig an der Landesgrenze, einfach weil der Online-Auftritt nur auf einen Ort ausgerichtet ist.",
+      "Dabei lässt sich die ganze Region mit einer durchdachten Website und der richtigen Sichtbarkeit bequem erreichen, ohne Niederlassung in jedem Land. Dieser Leitfaden zeigt, worauf es dabei ankommt.",
     ],
     sections: [
       {
@@ -1176,7 +1176,7 @@ export const ARTICLES: Article[] = [
       {
         heading: "Aus der Ferne betreut, ohne Reibung",
         paragraphs: [
-          "Für die Zusammenarbeit über Ländergrenzen hinweg braucht es heute kein Büro vor Ort. Website, Marketing, Grafik und laufende Betreuung lassen sich komplett aus der Ferne abwickeln – per Telefon, Video und WhatsApp. Für den Kunden fühlt es sich an, als säße die Agentur nebenan, egal ob er in Hamburg, Wien oder Zürich sitzt.",
+          "Für die Zusammenarbeit über Ländergrenzen hinweg braucht es heute kein Büro vor Ort. Website, Marketing, Grafik und laufende Betreuung lassen sich komplett aus der Ferne abwickeln, per Telefon, Video und WhatsApp. Für den Kunden fühlt es sich an, als säße die Agentur nebenan, egal ob er in Hamburg, Wien oder Zürich sitzt.",
           "Ein einziger Ansprechpartner für die ganze DACH-Region spart dabei viel Abstimmung: Alles kommt aus einer Hand, in einer Sprache, mit einem klaren Plan.",
         ],
         bullets: [

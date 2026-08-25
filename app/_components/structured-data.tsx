@@ -1,5 +1,6 @@
 // Zentrales JSON-LD für mehrauftrag.de.
-// Organization + LocalBusiness (ProfessionalService) + WebSite, per @id verknüpft.
+// Organization + WebSite + Service-Knoten, per @id verknüpft. Bewusst KEIN
+// LocalBusiness und keine Postanschrift: die Leistung ist ortsunabhaengig.
 // Wird einmal im RootLayout gerendert und gilt damit für alle Seiten.
 // NAP exakt abgestimmt auf das Google-Unternehmensprofil.
 
@@ -16,7 +17,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["Organization", "ProfessionalService"],
+        "@type": "Organization",
         "@id": "https://www.mehrauftrag.de/#organization",
         name: "Mehr Auftrag",
         alternateName: "MehrAuftrag",
@@ -37,30 +38,11 @@ export default function StructuredData() {
         telephone: "+49 152 02069625",
         founder: { "@type": "Person", name: "Patrick Sauna" },
         foundingDate: "2025-05",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Josefstraße 28",
-          postalCode: "63512",
-          addressLocality: "Hainburg",
-          addressRegion: "Hessen",
-          addressCountry: "DE",
-        },
+        // Bewusst KEINE postalische Adresse und kein LocalBusiness-Typ.
+        // Die Leistung ist ortsunabhaengig, und die neue Anschrift steht noch
+        // nicht fest. Eine veraltete Adresse im Schema ist schaedlicher als
+        // gar keine. Die Erreichbarkeit steht unten im contactPoint.
         areaServed: DACH_AREA,
-        priceRange: "€€",
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-            ],
-            opens: "09:00",
-            closes: "18:00",
-          },
-        ],
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+49 152 02069625",
@@ -107,6 +89,7 @@ export default function StructuredData() {
         "@id": "https://www.mehrauftrag.de/#service-seo",
         name: "Lokale Suchmaschinenoptimierung (SEO)",
         serviceType: "Suchmaschinenoptimierung",
+        url: "https://www.mehrauftrag.de/suchmaschinenoptimierung",
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
         areaServed: DACH_AREA,
         description:
@@ -212,10 +195,10 @@ export function HomeFaqSchema() {
       },
       {
         "@type": "Question",
-        name: "Wo ist Mehr Auftrag ansaessig?",
+        name: "Muss die Agentur in meiner Stadt sitzen?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Mehr Auftrag sitzt in Hainburg im Rhein-Main-Gebiet bei Frankfurt am Main und betreut Kunden in der gesamten DACH-Region, also Deutschland, Oesterreich und der Schweiz.",
+          text: "Mehr Auftrag arbeitet ortsunabhaengig und betreut Betriebe in der gesamten DACH-Region, also in Deutschland, Oesterreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Ein Termin im Betrieb ist dafuer nicht noetig, was gerade fuer Betriebe ein Vorteil ist, die tagsueber auf der Baustelle stehen.",
         },
       },
       {

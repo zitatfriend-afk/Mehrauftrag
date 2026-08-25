@@ -347,7 +347,7 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     eyebrow: "Für das Rhein-Main-Gebiet",
     h1: "Kostenlose Website-Analyse für Betriebe im Rhein-Main-Gebiet",
     intro:
-      "Wir sitzen selbst im Rhein-Main-Gebiet und kennen den lokalen Wettbewerb. Wir schauen uns deinen Auftritt an und zeigen dir, wo du gegenüber deinen Mitbewerbern in der Region stehst.",
+      "Wir kennen den Wettbewerb im Rhein-Main-Gebiet: die Betriebsstruktur, die Gewerke und die Suchbegriffe, mit denen dort tatsächlich nach Handwerk und Dienstleistung gesucht wird. Wir schauen uns deinen Auftritt an und zeigen dir, wo du gegenüber deinen Mitbewerbern in der Region stehst.",
     benefits: [
       "Einordnung im regionalen Wettbewerb",
       "Lokale Sichtbarkeit rund um Frankfurt",
