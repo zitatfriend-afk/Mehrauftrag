@@ -5,7 +5,7 @@ import { join } from "node:path";
 export const metadata: Metadata = {
   title: "Webdesign in deiner Stadt | Alle Standorte | Mehr Auftrag",
   description:
-    "Übersicht aller Städte, in denen wir Websites für Handwerk, Gastronomie und lokale Dienstleister bauen. Von Hanau und Offenbach bis Frankfurt, Köln und Berlin.",
+    "Alle Städte, in denen wir Websites für lokale Betriebe bauen, von Hanau und Offenbach bis Frankfurt, Köln und Leipzig. Ein Standort je Seite.",
   alternates: { canonical: "https://www.mehrauftrag.de/webdesign-standorte" },
   openGraph: {
     title: "Webdesign in deiner Stadt",

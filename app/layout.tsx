@@ -17,13 +17,13 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mehrauftrag.de"),
   alternates: { canonical: "/" },
-  title: "Mehr Auftrag – Die Digitalagentur die liefert",
+  title: "Webdesign & SEO Agentur für kleine Betriebe | Mehr Auftrag",
   description:
-    "Mehr Aufträge, mehr Umsatz, mehr Wachstum. Mehr Auftrag ist die Digitalagentur für Handwerk, Gastronomie, Physiotherapie und alle Branchen die online wachsen wollen.",
+    "Websites und lokale Suchmaschinenoptimierung für Handwerk, Gastronomie und Dienstleister. Entwurf vorab kostenlos, danach fester Preis. Jetzt anfragen.",
   openGraph: {
-    title: "Mehr Auftrag – Die Digitalagentur die liefert",
+    title: "Webdesign & SEO Agentur für kleine Betriebe",
     description:
-      "Mehr Aufträge, mehr Umsatz, mehr Wachstum. Maßgeschneiderte Websites und Marketing für Handwerk, Gastronomie, Physiotherapie und alle Branchen.",
+      "Websites und lokale Suchmaschinenoptimierung für Handwerk, Gastronomie und Dienstleister. Vorab ein kostenloser Entwurf, danach ein fester Preis.",
     url: "https://www.mehrauftrag.de",
     siteName: "Mehr Auftrag",
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mehr Auftrag – Die Digitalagentur die liefert",
+        alt: "Mehr Auftrag, Webdesign und SEO für kleine Betriebe",
       },
     ],
     locale: "de_DE",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mehr Auftrag – Die Digitalagentur die liefert",
+    title: "Webdesign & SEO Agentur für kleine Betriebe",
     description:
-      "Mehr Aufträge, mehr Umsatz, mehr Wachstum. Maßgeschneiderte Websites und Marketing für alle Branchen.",
+      "Websites und lokale Suchmaschinenoptimierung für kleine Betriebe. Entwurf vorab kostenlos.",
     images: ["/og-image.jpg"],
   },
   verification: {
