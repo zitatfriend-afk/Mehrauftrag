@@ -2,10 +2,10 @@
 
 Diese Datei ist das Gedächtnis des Projekts. Bricht eine Sitzung ab, wird zuerst diese Datei gelesen und dort weitergemacht.
 
-Letzte Aktualisierung: 25.08.2026
-Stand: **alle acht Phasen abgeschlossen, neun Commits, nichts gepusht**
+Letzte Aktualisierung: 25.08.2026 (Nachtrag Mobilpruefung)
+Stand: **alle acht Phasen abgeschlossen, dazu eine vollstaendige Mobilpruefung mit echtem Build, elf Commits, nichts gepusht**
 Repo: `/Users/pablo/Desktop/Kunden bei websiten/Webseite Mehrauftrag/mehr-auftrag`
-Ausgangsstand: `73de10a` · Endstand: `668b273`
+Ausgangsstand: `73de10a` · Endstand: `8cae012`
 
 ---
 
@@ -174,6 +174,42 @@ Die meisten stammten aus Bestandsseiten, die in diesem Projekt sonst nicht angef
 
 ---
 
+## Nachtrag: Mobilprüfung mit einem echten Build
+
+In der Abschlussprüfung stand, die app-Seiten ließen sich ohne Build nicht messen. Das stimmte so nicht. Der Build läuft in der Cloud-Sitzung sehr wohl, wenn man die Google-Schrift für den Testlauf durch einen Platzhalter ersetzt. Nur die Schrift ist dort nicht erreichbar, alles andere baut sauber. Damit war die Messung möglich, und sie hat etwas gefunden.
+
+**Gemessen:** alle 61 URLs der Sitemap bei 320, 360 und 390 Pixel im Mobilmodus von Chromium, also 183 Messungen. Der Mobilmodus ist wichtig. Ohne ihn verhält sich die Seitenbreite anders als auf einem Telefon, und genau deshalb war in Phase 8 nichts aufgefallen.
+
+**Befund vorher:** auf 24 Messungen ragten Inhalte über den rechten Bildschirmrand. Waagerecht schieben ließ sich keine Seite, weil `body` den Überlauf versteckt. Das ist aber kein Trost: was über den Rand ragt, wird abgeschnitten und ist auf dem Telefon schlicht nicht lesbar.
+
+**Der schwerste Fund.** Auf allen 16 Ratgeberseiten und allen fünf Fallstudien stand die Überschrift bis zu 135 Pixel über dem Rand. Auf einem Telefon mit 390 Pixeln las sich der Titel „Ausschreibungen für Hausmeisterdienstleist" und hörte mitten im Wort auf. Ursache sind lange deutsche Komposita, die breiter sind als ein Telefondisplay. Ohne Trennregel bricht der Browser sie nicht um.
+
+**Behoben, fünf Ursachen:**
+
+| Was | Wo | Was jetzt anders ist |
+|---|---|---|
+| Überschriften brechen nicht um | `app/globals.css` | `hyphens: auto` mit `overflow-wrap` als Rückfallebene, greift auf allen app-Seiten |
+| Kartenspalte wächst auf Wortbreite | `app/ratgeber/page.tsx` | Rasterzellen dürfen schrumpfen |
+| Schriftzug und Knopf ohne Abstand | `app/ratgeber/_shell.tsx` | Abstand ergänzt, unter 420 Pixel kurze Knopfbeschriftung |
+| Anfrage-Knopf abgeschnitten | vier Landingpages | Schriftzug, Knopf und Telefonknopf skalieren in zwei Stufen, der Name bleibt über `sr-only` erhalten |
+| Lichtschein, Kennzahlen, Schrittkarten, Referenzrahmen | zehn Seiten unter `public/` | eigener Mobilblock, greift nur unter 430 Pixel |
+
+Dazu zwei Stellen aus dem Großumbau selbst: der neue SEO-Teaser-Knopf auf der Startseite und der Betriebsname auf den Referenzkarten durften nicht umbrechen.
+
+**Befund nachher:** 183 Messungen, keine einzige Seite breiter als der Bildschirm, kein Element im Textfluss über dem Rand. Übrig bleiben nur die dekorativen Lichtkreise, die absichtlich über den Rand hinausragen und keinen Einfluss auf die Seitenbreite haben.
+
+**Zusätzlich geprüft, im gebauten HTML aller 61 URLs:**
+
+• 61 Seiten mit genau einer aussagekräftigen H1, die Startseite eingeschlossen
+• 151 JSON-LD-Blöcke, alle gültiges JSON
+• kein `LocalBusiness`, kein `ProfessionalService`, keine `PostalAddress`, kein `streetAddress`, keine Postleitzahl in irgendeinem Block
+• kein Title über 60 Zeichen, keine Description über 155 Zeichen
+• Canonical auf jeder Seite
+• keine Gedankenstriche im sichtbaren Text
+• `npm run build` erzeugt alle 58 Seiten, darunter `/referenzen`, die fünf Fallstudien und `/ueber-uns`
+
+---
+
 ## Offene Punkte für Patrick
 
 | # | Punkt | Warum es dich braucht |
@@ -184,8 +220,9 @@ Die meisten stammten aus Bestandsseiten, die in diesem Projekt sonst nicht angef
 | 4 | **Zusammenführung der zwei Ratgeberartikel** | 301 war freigabepflichtig. Beide sind jetzt abgegrenzt statt zusammengeführt. Wenn du die Zusammenführung willst, sag es. |
 | 5 | **Google-Unternehmensprofil** | Bleibt bestehen und zieht später um. Der `sameAs`-Eintrag steht weiter im Schema. Sobald die neue Anschrift feststeht, gehört sie zurück ins `Organization`-Schema. |
 | 6 | **Impressum, Datenschutz, AGB** | Unberührt, wie vorgegeben. Die neue Anschrift kommt über den Anwalt. |
-| 7 | **Mobile Kontrolle der app-Seiten** | Nach dem Deploy einmal am Handy `/referenzen`, `/ueber-uns` und eine Fallstudie ansehen. Die konnte ich ohne Build nicht messen. |
-| 8 | **Redaktionsplan starten** | `REDAKTIONSPLAN.md`, Monat 1 ist mit der SEO-Seite bereits erledigt. Weiter mit den beiden SEO-Ratgebern. |
+| 7 | ~~Mobile Kontrolle der app-Seiten~~ | **Erledigt.** Mit echtem Build gemessen, 183 Messungen, 24 Befunde behoben. Siehe Nachtrag. |
+| 8 | **Google-Bewertung nennt Hainburg** | Eine echte Kundenbewertung beginnt mit "Top Webdesign aus Hainburg". Sie steht auf der Startseite und auf `/webseite-fuer-physiotherapie`. Das ist der Originalwortlaut eines Kunden, den aendere ich nicht. Wenn der Ortsbezug weg soll, muss die Bewertung durch eine andere echte ersetzt werden. Deine Entscheidung. |
+| 9 | **Redaktionsplan starten** | `REDAKTIONSPLAN.md`, Monat 1 ist mit der SEO-Seite bereits erledigt. Weiter mit den beiden SEO-Ratgebern. |
 
 ---
 
@@ -207,5 +244,5 @@ Die meisten stammten aus Bestandsseiten, die in diesem Projekt sonst nicht angef
 • `git log` immer mit `-n <zahl>`, sonst SIGBUS ohne Meldung.
 • `npx tsc --noEmit` schreibt das eingecheckte `tsconfig.tsbuildinfo` neu. Danach `git show HEAD:tsconfig.tsbuildinfo > tsconfig.tsbuildinfo`.
 • `npx tsc --noEmit` meldet drei Fehler zu `.next/types/... 2.ts`. Das sind Dubletten aus einem Finder-Kopiervorgang in einem nicht eingecheckten Ordner, harmlos.
-• `npm install` und `npm run build` gehen im gemounteten Repo nicht.
+• `npm install` und `npm run build` gehen im gemounteten Repo nicht. Sie gehen aber in einer Kopie ausserhalb von `mnt/`, und auch im Cloud-Container. Einzige Huerde: `next/font/google` erreicht `fonts.googleapis.com` nicht. Fuer einen reinen Testbau den Import in der Kopie durch einen Platzhalter ersetzen, niemals im Repo.
 • In `_to_delete/` liegen weggeräumte git-Sperrdateien. Der Ordner kann gelöscht werden.
