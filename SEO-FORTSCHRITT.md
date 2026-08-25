@@ -2,10 +2,43 @@
 
 Diese Datei ist das Gedächtnis des Projekts. Bricht eine Sitzung ab, wird zuerst diese Datei gelesen und dort weitergemacht.
 
-Letzte Aktualisierung: 25.08.2026 (Nachtrag Mobilpruefung)
-Stand: **live seit 26.08.2026. Push 73de10a..826520b durch, Vercel-Deploy durch, Sitemap neu eingereicht, neun Indexierungsantraege gestellt.**
+Letzte Aktualisierung: 25.08.2026 (Redaktionsplan Monat 1 geschrieben)
+Stand: **live seit 26.08.2026. Push 73de10a..826520b durch, Vercel-Deploy durch, Sitemap neu eingereicht, neun Indexierungsantraege gestellt. Danach neu und noch NICHT gepusht: die beiden SEO-Ratgeber aus Monat 1 des Redaktionsplans, Commit `59dfcbd`.**
 Repo: `/Users/pablo/Desktop/Kunden bei websiten/Webseite Mehrauftrag/mehr-auftrag`
-Ausgangsstand: `73de10a` · Endstand: `8cae012`
+Ausgangsstand des Großumbaus: `73de10a` · gepusht bis `826520b`
+Aktueller lokaler Stand: `59dfcbd`. Ungepusht sind `b486cb1` (next-env.d.ts) und `59dfcbd` (die beiden SEO-Ratgeber), dazu dieser Doku-Commit.
+
+---
+
+## Redaktionsplan Monat 1 ist geschrieben (25.08.2026)
+
+Die Nummern 2 und 3 aus `REDAKTIONSPLAN.md` stehen. Nummer 1, die Leistungsseite, war mit dem Großumbau schon erledigt. Damit ist Monat 1 vollständig.
+
+| Artikel | Slug | Zielkeywords aus der Search Console |
+|---|---|---|
+| Woran du eine gute SEO-Agentur erkennst, und woran eine schlechte | `/ratgeber/seo-agentur-erkennen` | beste seo agentur (10 / 28,9), seo agentur (26 / 12,8), seo firmen (2 / 1,0) |
+| Was SEO kostet und ab wann es sich rechnet | `/ratgeber/was-seo-kostet` | seo beratung (38 / 7,8), seo unternehmen (10 / 18,5), seo optimierung hanau (13 / 7,5) |
+
+**Woher der Inhalt kommt.** Der erste Artikel steht auf Googles eigener Anleitung zur Auswahl eines SEO-Dienstleisters: dass niemand Platz eins garantieren kann, die Warnzeichen (Kaltakquise per E-Mail, Geheimniskrämerei, behauptete Sonderbeziehung zu Google, Rankinggarantien, Linkpakete) und die Fragen fürs erste Gespräch. Der Abschnitt zu gekauften Links stützt sich auf Googles Spam-Richtlinien, samt der dort genannten Folge, dass betroffene Seiten schlechter oder gar nicht mehr erscheinen.
+
+**Der Kostenartikel nennt bewusst keine Zahl.** Kein Preis, kein Stundensatz, keine Monatspauschale, kein Zeitraum. Stattdessen: wovon der Preis abhängt, warum einmalige Arbeit und laufende Betreuung getrennt gehören, woran ein unseriöses Angebot erkennbar ist, und die Rechenlogik, mit der ein Betrieb selbst gegenrechnet. Genannt wird nur das eigene Modell, Entwurf vorab kostenlos, danach fester Preis mit benanntem Umfang. Im gesamten Fließtext beider Artikel steht keine einzige Ziffer.
+
+**Der Ortsbezug ohne Ortsbindung.** Das Keyword `seo optimierung hanau` wird über einen Abschnitt bedient, der erklärt, warum der Wettbewerb im Markt den Preis bewegt und nicht die Entfernung zum Dienstleister. Kein Nähe-Versprechen, kein Büro, keine Anschrift.
+
+**Eingehende Links, der Fehler der 16 Bestandsartikel ist damit nicht wiederholt.** Jeder der beiden neuen Artikel bekommt vier eingehende Links aus dem Bestand, nicht nur den Hub:
+
+• `public/suchmaschinenoptimierung.html`, Abschnitt „Marktkenntnis schlägt Fahrtzeit", sichtbarer Fließtextlink auf `seo-agentur-erkennen`
+• `public/suchmaschinenoptimierung.html`, FAQ zu den Kosten, Link auf `was-seo-kostet`, im JSON-LD ohne Link nachgezogen, wie bei den beiden vorhandenen Ratgeberlinks dort
+• `/ratgeber/seo-oder-google-ads`, zwei neue Kontextlinks im Fließtext plus zwei `related`-Einträge
+• die beiden neuen Artikel verlinken sich gegenseitig
+
+**Analyse-Seiten.** Beide Artikel haben einen eigenen Eintrag in `app/analyse/_analyse-content.ts`, damit der CTA-Knopf nicht auf `/analyse/allgemein` zurückfällt. Wie alle Analyse-Seiten stehen sie auf `noindex, follow` und nicht in der Sitemap.
+
+**Geprüft:** `npx tsc --noEmit` ohne Fehler, 18 eindeutige Slugs, alle 33 internen Linkziele existieren, kein metaTitle über 60 und keine Description über 155 Zeichen, null Gedankenstriche im sichtbaren Text, `pruefe-stadtseiten.py` 20 Seiten OK bei 20,0 % Höchstähnlichkeit, `nachbarstaedte --check` alle Blöcke aktuell. Die Sitemap zieht beide Artikel automatisch über `getAllSlugs()`.
+
+**Eine Kleinigkeit zur Kenntnis:** die neuen Artikel tragen `readingTime: "6 Min."` bei rund 1.100 und 1.240 Wörtern. Die 16 Bestandsartikel tragen bei 555 bis 672 Wörtern ebenfalls „6 Min." bis „7 Min.". Die Bestandswerte sind also rechnerisch zu hoch. Sie wurden nicht angefasst.
+
+**Was jetzt zu tun ist:** Deploy über das `.command`-Skript, danach die beiden neuen URLs in der Search Console zur Indexierung anmelden. Danach beginnt Monat 2 des Redaktionsplans mit den Nummern 4 bis 6.
 
 ---
 
@@ -226,7 +259,7 @@ Dazu zwei Stellen aus dem Großumbau selbst: der neue SEO-Teaser-Knopf auf der S
 | 6 | **Impressum, Datenschutz, AGB** | Unberührt, wie vorgegeben. Die neue Anschrift kommt über den Anwalt. |
 | 7 | ~~Mobile Kontrolle der app-Seiten~~ | **Erledigt.** Mit echtem Build gemessen, 183 Messungen, 24 Befunde behoben. Siehe Nachtrag. |
 | 8 | **Google-Bewertung nennt Hainburg** | Eine echte Kundenbewertung beginnt mit "Top Webdesign aus Hainburg". Sie steht auf der Startseite und auf `/webseite-fuer-physiotherapie`. Das ist der Originalwortlaut eines Kunden, den aendere ich nicht. Wenn der Ortsbezug weg soll, muss die Bewertung durch eine andere echte ersetzt werden. Deine Entscheidung. |
-| 9 | **Redaktionsplan starten** | `REDAKTIONSPLAN.md`, Monat 1 ist mit der SEO-Seite bereits erledigt. Weiter mit den beiden SEO-Ratgebern. |
+| 9 | ~~Redaktionsplan starten~~ | **Monat 1 ist vollständig.** Leistungsseite aus dem Großumbau, dazu die beiden SEO-Ratgeber vom 25.08.2026. Offen ist nur noch der Deploy und die Anmeldung der zwei neuen URLs in der Search Console. Danach Monat 2, Nummern 4 bis 6. |
 
 ---
 
