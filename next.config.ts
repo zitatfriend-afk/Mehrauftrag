@@ -1,6 +1,18 @@
 import type { NextConfig } from "next";
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+
+// Eindeutige Projektwurzel.
+// Next sucht sonst von hier aus nach oben nach package-lock.json und nimmt den
+// ersten Treffer als Wurzel. Auf Patricks Mac liegt eine fremde Sperrdatei im
+// Benutzerordner, dadurch waehlte der Build den falschen Ordner und warnte bei
+// jedem Lauf. Fest verdrahtet ist das Verhalten auf jedem Rechner gleich.
+const projektWurzel = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: projektWurzel,
+  },
   async rewrites() {
     return [
       {
