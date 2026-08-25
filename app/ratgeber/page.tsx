@@ -109,7 +109,7 @@ export default function RatgeberPage() {
                       <Link
                         key={a.slug}
                         href={`/ratgeber/${a.slug}`}
-                        className="group flex flex-col rounded-2xl border border-white/8 bg-white/[0.02] p-6 transition hover:border-[#3b82f6]/40 hover:bg-white/[0.04]"
+                        className="group flex min-w-0 flex-col rounded-2xl border border-white/8 bg-white/[0.02] p-6 transition hover:border-[#3b82f6]/40 hover:bg-white/[0.04]"
                       >
                         <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#3b82f6]">
                           {CATEGORY_LABEL[a.category]}

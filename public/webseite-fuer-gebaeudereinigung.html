@@ -348,6 +348,33 @@
   img,svg,video,iframe{max-width:100%}
   .siteframe,.ref-frame{max-width:100%}
   html,body{overflow-x:clip}
+
+  /* ----------------------------------------------------------------------
+     MOBILE-UMBRUCH-FIX-2
+     Gemessen mit Chromium im Mobilmodus bei 320, 360 und 390 Pixel.
+     Vier Ursachen, die Inhalte ueber den rechten Bildschirmrand geschoben
+     haben und dort abgeschnitten wurden:
+       1. der Lichtschein hinter der Telefongrafik war fest 360 Pixel breit
+       2. Zahl und Text einer Kennzahl standen zwingend nebeneinander
+       3. die Textspalte eines Schrittes durfte nicht schmaler werden
+       4. die Rastserspalte der Referenz wuchs auf die Breite des laengsten
+          Wortes, statt sich am Bildschirm zu orientieren
+     Alle Regeln greifen nur auf schmalen Bildschirmen. Am Desktop aendert
+     sich nichts.
+     ---------------------------------------------------------------------- */
+  .phone-stage:before{max-width:100%}
+  @media(max-width:430px){
+    .stat{flex-wrap:wrap}
+    .stat .n,.stat .t{min-width:0}
+    .step{gap:12px;padding-left:16px;padding-right:16px}
+    .step>*{min-width:0}
+    .ref{padding-left:16px;padding-right:16px}
+    .ref>*{min-width:0}
+    .shot{padding:16px;gap:8px}
+    .shot *{min-width:0;overflow-wrap:anywhere}
+    .sf-brand{font-size:.95rem;letter-spacing:1px}
+    .siteframe .bar .u{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  }
 </style>
 <script type="application/ld+json">
 {

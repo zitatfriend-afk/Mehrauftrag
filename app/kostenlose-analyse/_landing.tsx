@@ -77,7 +77,10 @@ function MALogo() {
   return (
     <span className="inline-flex items-center gap-2.5 select-none">
       <MaMark size={40} priority />
-      <span className="text-[18px] font-black leading-none tracking-[-0.04em]">
+      {/* Unter 360 Pixel weicht der Schriftzug, damit der Anfrage-Knopf
+          rechts vollstaendig sichtbar bleibt. Fuer Vorlesewerkzeuge und
+          Suchmaschinen bleibt der Name ueber sr-only erhalten. */}
+      <span className="sr-only font-black leading-none tracking-[-0.04em] min-[360px]:not-sr-only min-[360px]:text-[14px] min-[420px]:text-[18px]">
         <span className="text-white">Mehr</span>
         <span className="gradient-text-blue">Auftrag</span>
       </span>
@@ -469,14 +472,17 @@ export default function AnalyseLanding() {
           <div className="mx-auto flex h-[64px] max-w-6xl items-center justify-between px-5 sm:px-8">
             <Link href="/" aria-label="Mehr Auftrag Startseite" className="flex items-center"><MALogo /></Link>
             <div className="flex items-center gap-2">
-              <a href="tel:+4915202069625" onClick={() => trackContact("phone")} className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-[13px] font-semibold text-slate-100" style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.04)" }}>
+              <a href="tel:+4915202069625" onClick={() => trackContact("phone")} className="inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-2 text-[12px] font-semibold text-slate-100 min-[420px]:px-3 min-[420px]:text-[13px]" style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.04)" }}>
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <span className="hidden sm:inline">Anrufen</span>
               </a>
-              <a href="#anfrage" className="shimmer-btn inline-flex items-center gap-2 rounded-lg px-4 py-2 text-[13px] font-semibold text-white" style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 2px 12px rgba(59,130,246,0.4)" }}>
-                Kostenlos anfragen
+              <a href="#anfrage" className="shimmer-btn inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-lg px-3 py-2 text-[12px] font-semibold text-white min-[420px]:px-4 min-[420px]:text-[13px]" style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 2px 12px rgba(59,130,246,0.4)" }}>
+                {/* Unter 420 Pixel die kurze Beschriftung, sonst passt der
+                    Knopf nicht neben den Schriftzug und wird beschnitten. */}
+                <span className="min-[420px]:hidden">Anfragen</span>
+                <span className="hidden min-[420px]:inline">Kostenlos anfragen</span>
               </a>
             </div>
           </div>

@@ -6,8 +6,8 @@ import MaMark from "../_components/ma-mark";
 export function RatgeberHeader() {
   return (
     <header className="relative z-10 border-b border-white/5 px-5 py-5 sm:px-8">
-      <div className="mx-auto flex max-w-6xl items-center justify-between">
-        <Link href="/" className="inline-flex items-center gap-2.5 select-none">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3">
+        <Link href="/" className="inline-flex min-w-0 items-center gap-2.5 select-none">
           <MaMark size={38} priority />
           <span className="text-[18px] font-black leading-none tracking-[-0.04em]">
             <span className="text-white">Mehr</span>
@@ -35,9 +35,12 @@ export function RatgeberHeader() {
           </Link>
           <Link
             href="/analyse/allgemein"
-            className="shimmer-btn rounded-full bg-[#3b82f6] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
+            className="shimmer-btn shrink-0 whitespace-nowrap rounded-full bg-[#3b82f6] px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-[#2f74e0] min-[420px]:px-5 min-[420px]:text-sm"
           >
-            Kostenlose Analyse
+            {/* Unter 420 Pixel passt die lange Beschriftung nicht neben den
+                Schriftzug, sie wurde bisher am rechten Rand abgeschnitten. */}
+            <span className="min-[420px]:hidden">Analyse</span>
+            <span className="hidden min-[420px]:inline">Kostenlose Analyse</span>
           </Link>
         </div>
       </div>

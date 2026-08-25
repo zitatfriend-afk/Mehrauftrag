@@ -286,9 +286,9 @@ function CaseStudyCard({ r, index }: { r: Reference; index: number }) {
             >
               {r.emoji}
             </div>
-            <div>
-              <div className="text-lg font-bold leading-tight text-white">{r.name}</div>
-              <div className="mt-0.5 text-xs font-medium tracking-wide text-[#60a5fa]">{r.branche}</div>
+            <div className="min-w-0">
+              <div className="text-lg font-bold leading-tight text-white break-words">{r.name}</div>
+              <div className="mt-0.5 text-xs font-medium tracking-wide text-[#60a5fa] break-words">{r.branche}</div>
             </div>
           </div>
           <p className="mb-6 text-sm leading-relaxed text-slate-300">{r.intro}</p>
@@ -1693,11 +1693,11 @@ export default function Home() {
                     whileHover={{ y: -2, boxShadow: "0 8px 32px rgba(59,130,246,0.5)" }}
                     whileTap={{ scale: 0.97 }}
                     transition={SPRING_FAST}
-                    className="shimmer-btn inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-semibold text-white text-sm"
+                    className="shimmer-btn inline-flex max-w-full items-center justify-center gap-2.5 px-5 py-3 sm:px-6 rounded-xl font-semibold text-white text-sm"
                     style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 16px rgba(59,130,246,0.32)" }}
                   >
                     <span>Grafikdesign entdecken</span>
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </motion.a>
@@ -1764,11 +1764,11 @@ export default function Home() {
                     whileHover={{ y: -2, boxShadow: "0 8px 32px rgba(16,185,129,0.5)" }}
                     whileTap={{ scale: 0.97 }}
                     transition={SPRING_FAST}
-                    className="shimmer-btn inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-semibold text-white text-sm"
+                    className="shimmer-btn inline-flex max-w-full items-center justify-center gap-2.5 px-5 py-3 sm:px-6 rounded-xl font-semibold text-white text-sm"
                     style={{ background: "linear-gradient(135deg, #10b981 0%, #059669 100%)", boxShadow: "0 4px 16px rgba(16,185,129,0.32)" }}
                   >
-                    <span>Suchmaschinenoptimierung ansehen</span>
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <span className="min-w-0">Suchmaschinenoptimierung ansehen</span>
+                    <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </motion.a>

@@ -40,7 +40,10 @@ function MALogo() {
   return (
     <span className="inline-flex items-center gap-2.5 select-none">
       <MaMark size={40} priority />
-      <span className="text-[18px] font-black leading-none tracking-[-0.04em]">
+      {/* Unter 360 Pixel weicht der Schriftzug, damit der Anfrage-Knopf
+          rechts vollstaendig sichtbar bleibt. Fuer Vorlesewerkzeuge und
+          Suchmaschinen bleibt der Name ueber sr-only erhalten. */}
+      <span className="sr-only font-black leading-none tracking-[-0.04em] min-[360px]:not-sr-only min-[360px]:text-[14px] min-[420px]:text-[18px]">
         <span className="text-white">Mehr</span>
         <span className="gradient-text-blue">Auftrag</span>
       </span>
@@ -415,7 +418,7 @@ export default function GrafikdesignLanding() {
             <div className="flex items-center gap-2">
               <a
                 href={TEL_URL}
-                className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-[13px] font-semibold text-slate-100"
+                className="inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2.5 py-2 text-[12px] font-semibold text-slate-100 min-[420px]:px-3 min-[420px]:text-[13px]"
                 style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.04)" }}
               >
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -425,7 +428,7 @@ export default function GrafikdesignLanding() {
               </a>
               <a
                 href="#erstgespraech"
-                className="shimmer-btn inline-flex items-center gap-2 rounded-lg px-4 py-2 text-[13px] font-semibold text-white"
+                className="shimmer-btn inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-lg px-3 py-2 text-[12px] font-semibold text-white min-[420px]:px-4 min-[420px]:text-[13px]"
                 style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 2px 12px rgba(59,130,246,0.4)" }}
               >
                 Erstgespräch

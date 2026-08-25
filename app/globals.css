@@ -233,3 +233,14 @@ body {
   .shimmer-btn::after { display: none; }
   .particle           { animation: none; }
 }
+
+/* ─── MOBILE-UMBRUCH-FIX ───────────────────────────────────────────────
+   Deutsche Komposita wie "Hausmeisterdienstleistungen" sind laenger als
+   ein Telefondisplay breit ist. Ohne Trennung ragt die Ueberschrift aus
+   dem Viewport und wird abgeschnitten, weil body overflow-x versteckt.
+   hyphens: auto trennt sauber (lang="de" steht am html-Element),
+   overflow-wrap ist die Rueckfallebene fuer Browser ohne Trennmuster. */
+h1, h2, h3, h4, h5 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
