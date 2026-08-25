@@ -139,7 +139,7 @@ export default async function AnalysePage({
                   {c.formHeadline}
                 </h2>
                 <p className="mt-2 mb-5 text-sm leading-relaxed text-slate-400">
-                  Trag dich kurz ein – wir schauen uns deinen Auftritt an und melden uns
+                  Trag dich kurz ein, wir schauen uns deinen Auftritt an und melden uns
                   unverbindlich. Kein Verkaufsdruck.
                 </p>
                 <AnalyseForm leadSource={c.leadSource} successNote={c.successNote} />

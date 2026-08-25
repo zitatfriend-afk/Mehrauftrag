@@ -13,7 +13,7 @@ import MaMark from "../_components/ma-mark";
  *
  * Branding 1:1 zur Startseite und zu /elektriker (dunkles Blau, Glas-Cards,
  * Shimmer-CTA, Geist). Weicher Call-to-Action: unverbindliches Erstgespräch,
- * WhatsApp oder Anruf – kein Lead-Formular.
+ * WhatsApp oder Anruf, kein Lead-Formular.
  */
 
 // ─── Konfiguration (öffentliche Werte) ───────────────────────────────────────
@@ -331,7 +331,7 @@ export default function GoogleAdsLanding() {
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 55% at 60% 26%, rgba(59,130,246,0.13) 0%, transparent 100%)" }} />
           </div>
-          {/* initial={false}: Hero rendert sofort sichtbar – auch bei bezahltem Traffic. */}
+          {/* initial={false}: Hero rendert sofort sichtbar, auch bei bezahltem Traffic. */}
           <motion.div
             initial={false}
             animate="show"

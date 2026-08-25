@@ -6,7 +6,7 @@ import CookieConsent from "./_components/cookie-consent";
 import StructuredData from "./_components/structured-data";
 import StandorteLeiste from "./_components/standorte-leiste";
 
-// Google Analytics 4 – Measurement-ID
+// Google Analytics 4, Measurement-ID
 const GA_MEASUREMENT_ID = "G-7ZLRDEFHNB";
 
 const geistSans = Geist({
@@ -63,7 +63,7 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-[#04081c]">
         <StructuredData />
-        {/* Google Consent Mode v2 – Standard: alles "denied" (keine Cookies/kein
+        {/* Google Consent Mode v2, Standard: alles "denied" (keine Cookies/kein
             Tracking ohne Einwilligung). Das Cookie-Banner schaltet bei Zustimmung
             per gtag('consent','update', …) auf "granted". */}
         <Script id="ga-consent-default" strategy="beforeInteractive">

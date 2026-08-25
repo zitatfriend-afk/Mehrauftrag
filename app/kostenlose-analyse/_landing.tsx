@@ -211,7 +211,7 @@ const INCLUDES: { icon: React.ReactNode; title: string; desc: string }[] = [
   },
   {
     title: "Technik & Ladezeit",
-    desc: "Wie schnell und sicher lädt Ihre Seite? Langsame Seiten kosten Anfragen – das schauen wir uns an.",
+    desc: "Wie schnell und sicher lädt Ihre Seite? Langsame Seiten kosten Anfragen, das schauen wir uns an.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -229,7 +229,7 @@ const INCLUDES: { icon: React.ReactNode; title: string; desc: string }[] = [
   },
   {
     title: "Konkrete Empfehlungen",
-    desc: "Sie bekommen klare, umsetzbare Schritte – kein Fachchinesisch, sondern was Ihnen mehr Anfragen bringt.",
+    desc: "Sie bekommen klare, umsetzbare Schritte, kein Fachchinesisch, sondern was Ihnen mehr Anfragen bringt.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -239,7 +239,7 @@ const INCLUDES: { icon: React.ReactNode; title: string; desc: string }[] = [
 ];
 
 const STEPS = [
-  { n: "01", title: "Anfrage senden", desc: "Vorname und Telefonnummer eingeben – das war's. Dauert 20 Sekunden." },
+  { n: "01", title: "Anfrage senden", desc: "Vorname und Telefonnummer eingeben, das war's. Dauert 20 Sekunden." },
   { n: "02", title: "Wir analysieren", desc: "Wir prüfen Ihren Online-Auftritt und identifizieren die größten Potenziale." },
   { n: "03", title: "30-Min-Gespräch", desc: "Wir zeigen Ihnen die Ergebnisse und was konkret zu tun ist. Unverbindlich." },
 ];
@@ -259,7 +259,7 @@ const REFERENCES = [
   {
     name: "SOROKIN Mobiler Schweißservice",
     branche: "Metallbau & Schweißservice · Sauerland",
-    text: "Conversion-orientierter Auftritt für einen mobilen Schweißservice – klare Leistungen, Galerie, direkte Anfrage per Anruf & WhatsApp.",
+    text: "Conversion-orientierter Auftritt für einen mobilen Schweißservice, klare Leistungen, Galerie, direkte Anfrage per Anruf & WhatsApp.",
     href: "https://www.sorokinschweisser.de/",
     domain: "sorokinschweisser.de",
     image: "/referenzen/sorokin.jpg",
@@ -268,7 +268,7 @@ const REFERENCES = [
   {
     name: "Blitzgebäudereinigung",
     branche: "Gebäudereinigung · Hamburg",
-    text: "Professionelle Website für ein Hamburger Reinigungsunternehmen – Leistungen klar strukturiert, unkomplizierte Angebotsanfrage.",
+    text: "Professionelle Website für ein Hamburger Reinigungsunternehmen, Leistungen klar strukturiert, unkomplizierte Angebotsanfrage.",
     href: "https://www.blitzgebaeudereinigung.com/",
     domain: "blitzgebaeudereinigung.com",
     image: "/referenzen/blitz.png",
@@ -331,7 +331,7 @@ function LeadForm() {
           </svg>
         </div>
         <h3 className="text-lg font-bold text-white">Danke! Wir melden uns bald bei Ihnen.</h3>
-        <p className="mt-2 text-sm text-slate-400">Wir rufen Sie innerhalb von 24 Stunden zurück – mit Ihrer kostenlosen Analyse, ganz ohne Verkaufsdruck.</p>
+        <p className="mt-2 text-sm text-slate-400">Wir rufen Sie innerhalb von 24 Stunden zurück, mit Ihrer kostenlosen Analyse, ganz ohne Verkaufsdruck.</p>
       </motion.div>
     );
   }
@@ -502,7 +502,7 @@ export default function AnalyseLanding() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="order-4 mt-5 max-w-lg text-base font-light leading-relaxed sm:mt-6 sm:text-xl lg:order-3 lg:mt-6" style={{ color: "rgba(148,163,184,0.85)" }}>
-                Potenzial-Check für Ihr Online-Geschäft: Wir zeigen Ihnen, wo Ihnen Anfragen entgehen – und wie Sie mehr Kunden aus dem Internet gewinnen.
+                Potenzial-Check für Ihr Online-Geschäft: Wir zeigen Ihnen, wo Ihnen Anfragen entgehen, und wie Sie mehr Kunden aus dem Internet gewinnen.
               </motion.p>
 
               <motion.div variants={fadeUp} className="order-5 mt-4 flex flex-col gap-2.5 sm:mt-7 lg:order-4">
@@ -576,7 +576,7 @@ export default function AnalyseLanding() {
             <div className="mb-10 text-center">
               <motion.div variants={fadeUp}><SectionLabel center>Echte Projekte</SectionLabel></motion.div>
               <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">Websites, die wir für echte Betriebe gebaut haben</motion.h2>
-              <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400">Keine Musterbeispiele – echte Kunden aus Handwerk &amp; Dienstleistung. Schauen Sie selbst rein.</motion.p>
+              <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400">Keine Musterbeispiele, echte Kunden aus Handwerk &amp; Dienstleistung. Schauen Sie selbst rein.</motion.p>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {REFERENCES.map((r) => (

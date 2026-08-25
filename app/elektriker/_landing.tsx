@@ -15,7 +15,7 @@ import { FAQS } from "./_faqs";
  *
  * Formular → Supabase Edge Function "submit-website-lead" → leads-Tabelle.
  * Nach Erfolg: Meta-Pixel-Lead-Event (feuert nur, wenn Cookie-Consent erteilt wurde
- * und das Pixel dadurch geladen ist – siehe app/_components/cookie-consent.tsx).
+ * und das Pixel dadurch geladen ist, siehe app/_components/cookie-consent.tsx).
  */
 
 // ─── Konfiguration (öffentliche Werte) ───────────────────────────────────────
@@ -108,7 +108,7 @@ function CheckIcon({ color = "#3b82f6" }: { color?: string }) {
 const BUILD_FEATURES: { icon: React.ReactNode; title: string; desc: string }[] = [
   {
     title: "Leistungsübersicht",
-    desc: "Alle Ihre Elektro-Leistungen klar strukturiert – von der Installation über E-Check bis zur PV- und Wallbox-Montage. Kunden sehen sofort, was Sie können.",
+    desc: "Alle Ihre Elektro-Leistungen klar strukturiert, von der Installation über E-Check bis zur PV- und Wallbox-Montage. Kunden sehen sofort, was Sie können.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
@@ -117,7 +117,7 @@ const BUILD_FEATURES: { icon: React.ReactNode; title: string; desc: string }[] =
   },
   {
     title: "Click-to-Call",
-    desc: "Ein prominenter Anruf-Button auf jedem Bildschirm. Interessenten erreichen Sie mit einem Fingertipp – ohne Nummer abtippen, ohne Umwege.",
+    desc: "Ein prominenter Anruf-Button auf jedem Bildschirm. Interessenten erreichen Sie mit einem Fingertipp, ohne Nummer abtippen, ohne Umwege.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -145,7 +145,7 @@ const BUILD_FEATURES: { icon: React.ReactNode; title: string; desc: string }[] =
   },
   {
     title: "Mobile-first",
-    desc: "Über 70 % suchen vom Smartphone. Ihre Seite lädt schnell und sieht auf jedem Handy perfekt aus – dort, wo Ihre Kunden suchen.",
+    desc: "Über 70 % suchen vom Smartphone. Ihre Seite lädt schnell und sieht auf jedem Handy perfekt aus, dort, wo Ihre Kunden suchen.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z" />
@@ -174,7 +174,7 @@ const PRICE_INCLUDES = [
 
 const TESTIMONIALS = [
   {
-    text: "Fester Preis, kein Kleingedrucktes. Sie wissen vorab genau, was Sie bekommen – und was es kostet. Monatlich kündbar, keine lange Bindung.",
+    text: "Fester Preis, kein Kleingedrucktes. Sie wissen vorab genau, was Sie bekommen, und was es kostet. Monatlich kündbar, keine lange Bindung.",
     name: "Unser Versprechen an Sie",
   },
   {
@@ -188,7 +188,7 @@ const REFERENCES = [
   {
     name: "SOROKIN Mobiler Schweißservice",
     branche: "Metallbau & Schweißservice · Sauerland",
-    text: "Conversion-orientierter Auftritt für einen mobilen Schweißservice – klare Leistungen, Galerie, direkte Anfrage per Anruf & WhatsApp.",
+    text: "Conversion-orientierter Auftritt für einen mobilen Schweißservice, klare Leistungen, Galerie, direkte Anfrage per Anruf & WhatsApp.",
     href: "https://www.sorokinschweisser.de/",
     domain: "sorokinschweisser.de",
     image: "/referenzen/sorokin.jpg",
@@ -197,7 +197,7 @@ const REFERENCES = [
   {
     name: "Blitzgebäudereinigung",
     branche: "Gebäudereinigung · Hamburg",
-    text: "Professionelle Website für ein Hamburger Reinigungsunternehmen – Leistungen klar strukturiert, unkomplizierte Angebotsanfrage.",
+    text: "Professionelle Website für ein Hamburger Reinigungsunternehmen, Leistungen klar strukturiert, unkomplizierte Angebotsanfrage.",
     href: "https://www.blitzgebaeudereinigung.com/",
     domain: "blitzgebaeudereinigung.com",
     image: "/referenzen/blitz.png",
@@ -231,7 +231,7 @@ function LeadForm() {
       });
       if (!res.ok) throw new Error("Request failed");
 
-      // Meta-Pixel Conversion-Event – feuert nur, wenn das Pixel geladen ist
+      // Meta-Pixel Conversion-Event, feuert nur, wenn das Pixel geladen ist
       // (d. h. Marketing-Cookies wurden zugestimmt). Bestehende Implementierung
       // wird nicht verändert.
       if (typeof window !== "undefined" && typeof window.fbq === "function") {
@@ -266,7 +266,7 @@ function LeadForm() {
         </div>
         <h3 className="text-lg font-bold text-white">Danke! Wir melden uns bald bei Ihnen.</h3>
         <p className="mt-2 text-sm text-slate-400">
-          Wir rufen Sie innerhalb von 24 Stunden zurück – ganz ohne Verkaufsdruck.
+          Wir rufen Sie innerhalb von 24 Stunden zurück, ganz ohne Verkaufsdruck.
         </p>
       </motion.div>
     );
@@ -331,7 +331,7 @@ function LeadForm() {
         )}
       </button>
       <p className="text-center text-xs leading-relaxed text-slate-500">
-        Wir melden uns per WhatsApp oder Anruf — wie es Ihnen lieber ist. Kein Verkaufsdruck.
+        Wir melden uns per WhatsApp oder Anruf, wie es Ihnen lieber ist. Kein Verkaufsdruck.
       </p>
     </form>
   );
@@ -495,7 +495,7 @@ export default function ElektrikerLanding() {
               className="mx-auto mt-5 max-w-xl text-base font-light leading-relaxed sm:mt-7 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              Eine Website, die bei Google gefunden wird — in 7 Tagen online, zum festen Preis. Für Elektriker in Frankfurt &amp; Rhein-Main.
+              Eine Website, die bei Google gefunden wird, in 7 Tagen online, zum festen Preis. Für Elektriker in Frankfurt &amp; Rhein-Main.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-7">
@@ -538,11 +538,11 @@ export default function ElektrikerLanding() {
               variants={fadeUp}
               className="text-2xl font-bold leading-snug text-white sm:text-3xl"
             >
-              Ihre Kunden suchen „Elektriker Frankfurt" auf Google — finden sie Sie?
+              Ihre Kunden suchen „Elektriker Frankfurt" auf Google. Finden sie Sie?
             </motion.h2>
             <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
-              Wer heute einen Elektriker braucht, googelt zuerst. Tauchen Sie dort nicht auf – oder mit einer
-              veralteten Seite – ruft der Kunde beim Nächsten an. Jeden Tag gehen so Aufträge an Betriebe,
+              Wer heute einen Elektriker braucht, googelt zuerst. Tauchen Sie dort nicht auf, oder mit einer
+              veralteten Seite, ruft der Kunde beim Nächsten an. Jeden Tag gehen so Aufträge an Betriebe,
               die online einfach besser zu finden sind. Nicht, weil sie besser arbeiten, sondern weil man sie
               überhaupt findet.
             </motion.p>
@@ -615,7 +615,7 @@ export default function ElektrikerLanding() {
                 Websites, die wir für echte Betriebe gebaut haben
               </motion.h2>
               <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400">
-                Keine Musterbeispiele – echte Kunden aus Handwerk &amp; Dienstleistung. Schauen Sie selbst rein.
+                Keine Musterbeispiele, echte Kunden aus Handwerk &amp; Dienstleistung. Schauen Sie selbst rein.
               </motion.p>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

@@ -8,7 +8,7 @@ const BASE = "https://www.mehrauftrag.de";
 export const metadata: Metadata = {
   title: "Über uns: wer hinter Mehr Auftrag steht | Mehr Auftrag",
   description:
-    "Patrick Sauna über die Arbeitsweise von Mehr Auftrag: kostenloser Entwurf vorab, fester Preis, ortsunabhängige Zusammenarbeit und was wir bewusst nicht anbieten.",
+    "Patrick Sauna über die Arbeitsweise von Mehr Auftrag: Entwurf vorab, fester Preis, ortsunabhängig, und was wir bewusst nicht anbieten.",
   alternates: { canonical: "/ueber-uns" },
   openGraph: {
     title: "Über uns: wer hinter Mehr Auftrag steht",

@@ -1,5 +1,5 @@
 // Ratgeber-Inhalte für mehrauftrag.de.
-// Reines Datenmodul (kein "use client") – wird von der Hub-Seite (/ratgeber)
+// Reines Datenmodul (kein "use client"), wird von der Hub-Seite (/ratgeber)
 // und der dynamischen Artikel-Route (/ratgeber/[slug]) serverseitig gelesen.
 // Jeder Artikel liefert seine eigenen Metadaten + JSON-LD (Article + FAQPage).
 

@@ -10,7 +10,7 @@ export type Faq = { q: string; a: string };
 export const FAQS: Faq[] = [
   {
     q: "Was, wenn die Website keine Anfragen bringt?",
-    a: "Dann schauen wir uns gemeinsam an, was optimiert werden kann – kostenlos. Wir lassen Sie damit nicht allein.",
+    a: "Dann schauen wir uns gemeinsam an, was optimiert werden kann, kostenlos. Wir lassen Sie damit nicht allein.",
   },
   {
     q: "Wie lange dauert es wirklich?",

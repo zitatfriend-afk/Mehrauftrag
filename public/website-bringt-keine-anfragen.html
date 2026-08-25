@@ -184,6 +184,40 @@
   .wa-float svg{width:30px;height:30px}
   .remote-box{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
   .remote-box .pill{display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:12px 20px;font-size:.92rem;font-weight:600}
+
+  /* ----------------------------------------------------------------------
+     Mobile Korrekturen. Kopfzeile, Schaltflaechen, lange Woerter und
+     eingebettete Rahmen machten die Seite unter rund 400 Pixel breiter als
+     den Bildschirm, sie liess sich also waagerecht schieben. Gemessen mit
+     Chromium bei 320, 360 und 390 Pixel. Die Kopfzeilenregeln sind von den
+     Stadtseiten uebernommen, die das schon richtig machen. Greift nur auf
+     schmalen Bildschirmen, am Desktop aendert sich nichts.
+     ---------------------------------------------------------------------- */
+  @media(max-width:860px){
+    .nav{height:58px;gap:10px}
+    .logo{font-size:1rem;gap:8px;min-width:0}
+    .logo-mark{width:32px;height:32px}
+    .nav-call{width:40px;height:40px;flex:none;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--surface-2,rgba(255,255,255,.06));border:1px solid var(--border);font-size:1.05rem;line-height:1}
+    .nav-call span{display:none}
+    .nav-cta{gap:8px;min-width:0}
+    .nav-cta .btn{padding:10px 15px;font-size:.88rem;border-radius:11px}
+  }
+  @media(max-width:430px){
+    .logo{font-size:.92rem;gap:7px}
+    .logo-mark{width:28px;height:28px}
+    .nav-call{width:36px;height:36px;font-size:.95rem}
+    .nav-cta .btn{padding:9px 12px;font-size:.8rem}
+    .wrap{padding:0 16px}
+    .btn{padding:13px 16px;font-size:.92rem;white-space:normal;text-align:center}
+    .hero-cta{gap:10px}
+    .hero-cta .btn,.cta-final .btn{width:100%;justify-content:center}
+  }
+  /* Rasterzellen duerfen schrumpfen, sonst sprengt ein langes Wort die Spalte */
+  .hero-grid>*,.cta-final>*,.grid>*,.compare>*,.steps>*{min-width:0}
+  h1,h2,h3,h4,p,li,summary,td,th{overflow-wrap:break-word}
+  img,svg,video,iframe{max-width:100%}
+  .siteframe,.ref-frame{max-width:100%}
+  html,body{overflow-x:clip}
 </style>
 </head>
 <body>

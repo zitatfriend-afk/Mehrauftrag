@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import KarriereShell from "@/app/_components/karriere-shell";
 
 export const metadata: Metadata = {
-  title: "Karriere – Mehr Auftrag",
+  title: "Karriere bei Mehr Auftrag: offene Stellen",
   description:
     "Werde Teil des Teams von Mehr Auftrag. Wir suchen Webdesigner, Kundenbetreuer und Vertriebsberater für unser wachsendes Digitalagentur-Team.",
   alternates: { canonical: "https://www.mehrauftrag.de/karriere" },

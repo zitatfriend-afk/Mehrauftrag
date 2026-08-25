@@ -3,9 +3,9 @@ import { FAQS } from "./_faqs";
 import ElektrikerLanding from "./_landing";
 
 export const metadata: Metadata = {
-  title: "Websites für Elektriker in Frankfurt & Rhein-Main | Mehr Auftrag",
+  title: "Website für Elektriker erstellen lassen | Mehr Auftrag",
   description:
-    "In 7 Tagen online. Mehr Anfragen. Fester Preis. Professionelle Websites speziell für Elektrikerbetriebe in Frankfurt und Rhein-Main – mit Click-to-Call, Google Maps und Bewertungen.",
+    "Website für Elektrobetriebe mit Click-to-Call, Leistungsseiten und Bewertungen. Entwurf vorab kostenlos, danach ein fester Preis. Jetzt anfragen.",
   alternates: { canonical: "https://www.mehrauftrag.de/elektriker" },
   openGraph: {
     title: "Websites für Elektriker in Frankfurt & Rhein-Main",

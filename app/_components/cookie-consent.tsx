@@ -43,7 +43,7 @@ function loadMetaPixel() {
   pixelLoaded = true;
 
   /* eslint-disable */
-  // @ts-ignore – offizielles Meta-Pixel-Snippet
+  // @ts-ignore, offizielles Meta-Pixel-Snippet
   !(function (f: any, b: any, e: any, v: any, n?: any, t?: any, s?: any) {
     if (f.fbq) return;
     n = f.fbq = function () {
@@ -89,7 +89,7 @@ function loadClarity() {
   clarityLoaded = true;
 
   /* eslint-disable */
-  // @ts-ignore – offizielles Microsoft-Clarity-Snippet
+  // @ts-ignore, offizielles Microsoft-Clarity-Snippet
   !(function (c: any, l: any, a: any, r: any, i: any, t?: any, y?: any) {
     c[a] =
       c[a] ||
@@ -179,7 +179,7 @@ export default function CookieConsent() {
     try {
       localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
     } catch {
-      /* localStorage nicht verfügbar – Einwilligung gilt nur für diese Sitzung */
+      /* localStorage nicht verfügbar, Einwilligung gilt nur für diese Sitzung */
     }
     setMarketing(acceptMarketing);
     if (acceptMarketing) {
@@ -238,8 +238,8 @@ export default function CookieConsent() {
                 Wir respektieren Ihre Privatsphäre
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-slate-300">
-                Wir verwenden Cookies, um unsere Website bereitzustellen und – mit Ihrer
-                Einwilligung – die Reichweite unserer Werbung zu messen und die Nutzung unserer
+                Wir verwenden Cookies, um unsere Website bereitzustellen und, mit Ihrer
+                Einwilligung, die Reichweite unserer Werbung zu messen und die Nutzung unserer
                 Website zu analysieren (Meta-Pixel, Google Analytics, Microsoft Clarity). Notwendige Cookies sind
                 für den Betrieb erforderlich. Marketing- und Analyse-Cookies werden nur gesetzt,
                 wenn Sie zustimmen. Sie können Ihre Einwilligung jederzeit mit Wirkung für die
@@ -279,7 +279,7 @@ export default function CookieConsent() {
                           </p>
                           <p className="mt-1 text-xs text-slate-400">
                             Hilft uns, die Wirkung unserer Werbung auf Facebook, Instagram & Google
-                            zu messen und – anonymisiert – zu verstehen, wie unsere Website genutzt
+                            zu messen und, anonymisiert, zu verstehen, wie unsere Website genutzt
                             wird, um sie zu verbessern.
                           </p>
                         </div>

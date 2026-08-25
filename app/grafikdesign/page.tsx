@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import GrafikdesignLanding from "./_landing";
 
 export const metadata: Metadata = {
-  title: "Grafikdesign & Textildruck Frankfurt | Logo, Flyer & Firmenkleidung | Mehr Auftrag",
+  title: "Grafikdesign, Textildruck und Werbetechnik | Mehr Auftrag",
   description:
-    "Grafikdesign, Textildruck und Werbetechnik aus Frankfurt und Rhein-Main mit eigenem Grafikteam. Visitenkarten, Flyer, Logo Design, Autoaufkleber, Fahrzeugbeschriftung sowie Firmenkleidung und Firmenshirts mit Logo, individuell gestaltet und auf Wunsch mit Druck.",
+    "Logo, Visitenkarten, Flyer, Fahrzeugbeschriftung und Firmenkleidung aus eigenem Grafikteam. Individuell gestaltet, auf Wunsch bis zum fertigen Druck.",
   alternates: { canonical: "https://www.mehrauftrag.de/grafikdesign" },
   openGraph: {
     title: "Grafikdesign & Textildruck Frankfurt | Logo, Flyer & Firmenkleidung",

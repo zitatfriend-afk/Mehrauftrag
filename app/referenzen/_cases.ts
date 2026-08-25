@@ -161,7 +161,7 @@ export const CASES: Case[] = [
     imageAlt: "Website des mobilen Schweißservice Sorokin aus dem Sauerland, Metallbau und Schweißarbeiten, erstellt von Mehr Auftrag",
     metaTitle: "Fallstudie SOROKIN Schweißservice, Sauerland | Mehr Auftrag",
     description:
-      "Ein mobiler Schweißservice, der fast nur über Empfehlung lief und online nicht auffindbar war. Komplett aus der Ferne gebaut, über 300 Kilometer Entfernung.",
+      "Ein mobiler Schweißservice, der fast nur über Empfehlung lief und online nicht auffindbar war. Komplett aus der Ferne gebaut, ohne einen Termin.",
     h1: "SOROKIN Schweißservice: von unsichtbar zu auffindbar",
     lead:
       "Ein mobiler Schweißservice aus Menden im Sauerland. Die Arbeit war erstklassig, ein Auftritt, der das zeigt, fehlte komplett.",
@@ -218,7 +218,7 @@ export const CASES: Case[] = [
     imageAlt: "Website der Blitzgebäudereinigung aus Hamburg, Reinigungsunternehmen, erstellt von Mehr Auftrag",
     metaTitle: "Fallstudie Blitzgebäudereinigung Hamburg | Mehr Auftrag",
     description:
-      "Ein Hamburger Reinigungsunternehmen wollte online so professionell wirken wie im täglichen Geschäft. Wie die Leistungen sortiert und die Anfrage vereinfacht wurde.",
+      "Ein Hamburger Reinigungsunternehmen wollte online so professionell wirken wie im Objekt. Wie die Leistungen sortiert und die Anfrage vereinfacht wurde.",
     h1: "Blitzgebäudereinigung: online so professionell wie im Objekt",
     lead:
       "Ein Reinigungsunternehmen aus Hamburg. Die Leistung stimmte, es fehlte die Seite, die das auch zeigt.",
@@ -266,9 +266,9 @@ export const CASES: Case[] = [
     href: "https://reinigungblitz.com/",
     image: "/referenzen/reinigungblitz.jpg",
     imageAlt: "Website von Blitz Industrie und Gebäudereinigung aus der Region Bebra, Gebäudereinigung und Hausmeisterservice, erstellt von Mehr Auftrag",
-    metaTitle: "Fallstudie Blitz Industrie und Gebäudereinigung | Mehr Auftrag",
+    metaTitle: "Fallstudie Blitz Industrie und Reinigung | Mehr Auftrag",
     description:
-      "Zwei starke Leistungsbereiche unter einem Namen, ohne dass Kunden durcheinanderkommen. Wie Reinigung und Hausmeisterservice getrennt und trotzdem verbunden wurden.",
+      "Zwei Leistungsbereiche unter einem Namen, ohne dass Kunden durcheinanderkommen. Wie Reinigung und Hausmeisterservice getrennt wurden.",
     h1: "Blitz Industrie und Gebäudereinigung: zwei Bereiche, eine Seite, keine Verwirrung",
     lead:
       "Ein Betrieb in der Region Bebra, der Gebäudereinigung und Hausmeisterservice unter einem Dach anbietet. Beides sollte klar erkennbar sein.",

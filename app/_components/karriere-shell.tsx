@@ -80,7 +80,7 @@ const JOBS = [
     title: "Webdesigner",
     suffix: "(m/w/d)",
     type: "Freelance / Festanstellung",
-    desc: "Du gestaltest moderne, conversion-optimierte Websites für Unternehmen aus verschiedensten Branchen – von Handwerksbetrieben über Therapeuten bis hin zu Gastronomen und Dienstleistern.",
+    desc: "Du gestaltest moderne, conversion-optimierte Websites für Unternehmen aus verschiedensten Branchen, von Handwerksbetrieben über Therapeuten bis hin zu Gastronomen und Dienstleistern.",
     tasks: [
       "Gestaltung und Umsetzung von Websites in Next.js oder WordPress",
       "Enge Zusammenarbeit mit dem Team für optimale Kundenergebnisse",
@@ -162,7 +162,7 @@ const BENEFITS = [
   },
   {
     title: "Kleines Team",
-    desc: "Kein Konzern, kein Silodenken. Bei uns kennt jeder jeden – deine Ideen werden gehört und umgesetzt.",
+    desc: "Kein Konzern, kein Silodenken. Bei uns kennt jeder jeden, deine Ideen werden gehört und umgesetzt.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -171,7 +171,7 @@ const BENEFITS = [
   },
   {
     title: "Wachstumsperspektiven",
-    desc: "Wir wachsen schnell – und mit uns wachsen auch deine Möglichkeiten, Verantwortung und dein Gehalt.",
+    desc: "Wir wachsen schnell, und mit uns wachsen auch deine Möglichkeiten, Verantwortung und dein Gehalt.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
@@ -239,12 +239,12 @@ export default function KarriereShell() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Use location.href for mailto — more reliable than window.open() and
+    // Use location.href for mailto, more reliable than window.open() and
     // not blocked by popup blockers. Wrapped in try/catch so any browser
     // quirk (URL too long, CSP, etc.) never crashes the React tree.
     try {
       const subject = encodeURIComponent(
-        `Bewerbung: ${form.position || "Offene Stelle"} – ${form.name}`
+        `Bewerbung: ${form.position || "Offene Stelle"} | ${form.name}`
       );
       const body = encodeURIComponent(
         `Neue Bewerbung über mehrauftrag.de/karriere\n` +
@@ -261,7 +261,7 @@ export default function KarriereShell() {
       window.location.href = `mailto:info@mehrauftrag.de?subject=${subject}&body=${body}`;
     } catch {
       // If the email client can't be opened, the success state shows
-      // a manual fallback link (info@mehrauftrag.de) — no crash.
+      // a manual fallback link (info@mehrauftrag.de), no crash.
     }
     setSubmitted(true);
   };
@@ -403,7 +403,7 @@ export default function KarriereShell() {
                 Wir bauen das digitale Fundament für echte Unternehmen.
               </h2>
               <p className="text-base leading-relaxed mb-4" style={{ color: "rgba(148,163,184,0.75)" }}>
-                Mehr Auftrag ist eine Digitalagentur, die Betriebe aus allen Branchen dabei unterstützt, professionell online aufzutreten und kontinuierlich neue Kunden zu gewinnen. Ob Handwerker, Physiotherapeut, Gastronom oder Dienstleister – wir liefern individuelle Lösungen, die messbar wirken.
+                Mehr Auftrag ist eine Digitalagentur, die Betriebe aus allen Branchen dabei unterstützt, professionell online aufzutreten und kontinuierlich neue Kunden zu gewinnen. Ob Handwerker, Physiotherapeut, Gastronom oder Dienstleister, wir liefern individuelle Lösungen, die messbar wirken.
               </p>
               <p className="text-base leading-relaxed" style={{ color: "rgba(148,163,184,0.75)" }}>
                 Unser Team ist klein, aber wächst. Wir suchen Menschen, die mitdenken, anpacken und stolz auf das sind, was sie bauen.

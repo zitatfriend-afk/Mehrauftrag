@@ -6,12 +6,12 @@ import { RatgeberHeader, RatgeberFooter } from "./_shell";
 const BASE = "https://www.mehrauftrag.de";
 
 export const metadata: Metadata = {
-  title: "Ratgeber – Online-Marketing, Webdesign & mehr Anfragen | Mehr Auftrag",
+  title: "Ratgeber für Webdesign, SEO und mehr Anfragen | Mehr Auftrag",
   description:
-    "Der Mehr-Auftrag-Ratgeber: praxisnahe Tipps zu Webdesign, Google, SEO und Online-Marketing für Handwerk, Gastronomie und Dienstleister im Rhein-Main-Gebiet. Verständlich und ohne Fachchinesisch.",
+    "Praxisnahe Tipps zu Webdesign, Google, SEO und Online-Marketing für Handwerk, Gastronomie und Dienstleister. Verständlich und ohne Fachchinesisch.",
   alternates: { canonical: "/ratgeber" },
   openGraph: {
-    title: "Ratgeber – Online-Marketing, Webdesign & mehr Anfragen",
+    title: "Ratgeber für Webdesign, SEO und mehr Anfragen",
     description:
       "Praxisnahe Tipps zu Webdesign, Google, SEO und Online-Marketing für kleine und mittlere Betriebe im Rhein-Main-Gebiet.",
     url: `${BASE}/ratgeber`,

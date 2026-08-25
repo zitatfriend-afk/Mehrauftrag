@@ -609,7 +609,7 @@ const SERVICES: Svc[] = [
 ];
 
 // ─── Premium ambient star field ──────────────────────────────────────────────
-// Safe zone (content area): x 15–85%, y 27–82% — NO particles placed there.
+// Safe zone (content area): x 15–85%, y 27–82%, NO particles placed there.
 // Positions confined to edges, top strip, bottom strip.
 // t: tier (0=dust/dim, 1=star/mid, 2=bright/glow)
 // d: drift variant index 0–4 → pdrift-a … pdrift-e
@@ -665,7 +665,7 @@ const STARS_V2: { x: number; y: number; s: number; t: 0|1|2; d: 0|1|2|3|4; dur: 
 
 const DRIFT_NAMES = ["pdrift-a", "pdrift-b", "pdrift-c", "pdrift-d", "pdrift-e"] as const;
 
-// ─── Hero star field — safe zones, lifecycle fade, 3-tier mouse parallax ─────
+// ─── Hero star field, safe zones, lifecycle fade, 3-tier mouse parallax ─────
 function HeroStarField({
   springX, springY, isMobile,
 }: {
@@ -677,7 +677,7 @@ function HeroStarField({
   const [mounted, setMounted] = useState(false);
   useEffect(() => { setMounted(true); }, []);
 
-  // Three depth tiers — each moves a different amount with the mouse
+  // Three depth tiers, each moves a different amount with the mouse
   const t0x = useTransform(springX, v => (v / 1440 - 0.5) * -6);
   const t0y = useTransform(springY, v => (v / 900  - 0.5) * -4);
   const t1x = useTransform(springX, v => (v / 1440 - 0.5) * -17);
@@ -693,7 +693,7 @@ function HeroStarField({
 
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      {/* Tier 0 — dust: tiniest, barely visible, depth-blurred wrapper */}
+      {/* Tier 0, dust: tiniest, barely visible, depth-blurred wrapper */}
       <motion.div className="absolute inset-0" style={{ x: t0x, y: t0y, filter: "blur(0.45px)" }}>
         {tier0.map((star, i) => (
           <div key={i} style={{
@@ -705,7 +705,7 @@ function HeroStarField({
         ))}
       </motion.div>
 
-      {/* Tier 1 — stars: sharp, some blue-tinted, occasional faint glow */}
+      {/* Tier 1, stars: sharp, some blue-tinted, occasional faint glow */}
       <motion.div className="absolute inset-0" style={{ x: t1x, y: t1y }}>
         {tier1.map((star, i) => (
           <div key={i} style={{
@@ -719,7 +719,7 @@ function HeroStarField({
         ))}
       </motion.div>
 
-      {/* Tier 2 — bright stars: largest, prominent glow, strongest parallax */}
+      {/* Tier 2, bright stars: largest, prominent glow, strongest parallax */}
       <motion.div className="absolute inset-0" style={{ x: t2x, y: t2y }}>
         {tier2.map((star, i) => {
           const blue = i % 3 !== 2;
@@ -920,7 +920,7 @@ function CursorTrail({ isMobile, reduced }: { isMobile: boolean; reduced: boolea
   );
 }
 
-// ─── Background ambient layer — pure MotionValue, zero React re-renders ───────
+// ─── Background ambient layer, pure MotionValue, zero React re-renders ───────
 function AmbientBackground({
   springX, springY, isMobile,
 }: {
@@ -943,7 +943,7 @@ function AmbientBackground({
   const auroraCX = useTransform(springX, v => (v / 1440 - 0.5) * 22);
   const auroraCY = useTransform(springY, v => (v / 900  - 0.5) * -18);
 
-  // Mobile: pure CSS static gradients — no JS-driven parallax, no blur filters
+  // Mobile: pure CSS static gradients, no JS-driven parallax, no blur filters
   if (isMobile) {
     return (
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -965,7 +965,7 @@ function AmbientBackground({
         style={{ background: "linear-gradient(160deg, #020818 0%, #030d20 45%, #020b17 100%)" }}
       />
 
-      {/* ── Aurora A — large primary (top right), CSS float + mouse parallax ── */}
+      {/* ── Aurora A, large primary (top right), CSS float + mouse parallax ── */}
       <motion.div
         className="absolute pointer-events-none"
         style={{ x: auroraAX, y: auroraAY, top: "-280px", right: "-220px", willChange: "transform" }}
@@ -981,7 +981,7 @@ function AmbientBackground({
         />
       </motion.div>
 
-      {/* ── Aurora B — secondary (bottom left), indigo tones ── */}
+      {/* ── Aurora B, secondary (bottom left), indigo tones ── */}
       <motion.div
         className="absolute pointer-events-none"
         style={{ x: auroraBX, y: auroraBY, bottom: "0px", left: "-240px", willChange: "transform" }}
@@ -997,7 +997,7 @@ function AmbientBackground({
         />
       </motion.div>
 
-      {/* ── Aurora C — accent (mid right), electric blue ── */}
+      {/* ── Aurora C, accent (mid right), electric blue ── */}
       <motion.div
         className="absolute pointer-events-none"
         style={{ x: auroraCX, y: auroraCY, top: "35%", right: "8%", willChange: "transform" }}
@@ -1013,7 +1013,7 @@ function AmbientBackground({
         />
       </motion.div>
 
-      {/* ── Aurora shimmer bands — wide, soft, cinematic ── */}
+      {/* ── Aurora shimmer bands, wide, soft, cinematic ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="aurora-shimmer absolute"
@@ -1089,7 +1089,7 @@ function AmbientBackground({
 export default function Home() {
   const shouldReduceMotion = useReducedMotion();
 
-  // Mobile detection (pointer: coarse = touch device — no mouse parallax needed)
+  // Mobile detection (pointer: coarse = touch device, no mouse parallax needed)
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     setIsMobile(
@@ -1122,7 +1122,7 @@ export default function Home() {
   const [deleting, setDeleting] = useState(false);
   const HEADLINES = ["MEHR AUFTRÄGE.", "MEHR UMSATZ.", "MEHR WACHSTUM."];
 
-  // Mouse motion values — never converted to state, pure MotionValue pipeline
+  // Mouse motion values, never converted to state, pure MotionValue pipeline
   const mouseX = useMotionValue(760);
   const mouseY = useMotionValue(400);
   // Soft spring lag for aurora + parallax (responsive but not jittery)
@@ -1183,10 +1183,10 @@ export default function Home() {
           sichtbar auf der Seite stehen muessen. Unterseiten bringen ihre eigenen mit. */}
       <HomeFaqSchema faqs={FAQS.map(({ q, schemaText }) => ({ q, schemaText }))} />
 
-      {/* Fixed ambient background — zero React re-renders, pure MotionValue */}
+      {/* Fixed ambient background, zero React re-renders, pure MotionValue */}
       <AmbientBackground springX={smoothX} springY={smoothY} isMobile={reduceEffects} />
 
-      {/* Premium Cursor Energy-Trail — Desktop only, brand blue */}
+      {/* Premium Cursor Energy-Trail, Desktop only, brand blue */}
       <CursorTrail isMobile={isMobile} reduced={!!shouldReduceMotion} />
 
       <main style={{ color: "#e2e8f0", position: "relative", zIndex: 1 }} className="overflow-x-hidden">
@@ -1291,10 +1291,10 @@ export default function Home() {
             <div style={{ background: "radial-gradient(ellipse 50% 45% at 20% 72%, rgba(99,102,241,0.07) 0%, transparent 100%)" }} className="absolute inset-0" />
           </div>
 
-          {/* Premium hero star field — 3 depth layers, mouse parallax */}
+          {/* Premium hero star field, 3 depth layers, mouse parallax */}
           <HeroStarField springX={smoothX} springY={smoothY} isMobile={reduceEffects} />
 
-          {/* Soft readability scrim — lifts headline/CTA contrast over the star field */}
+          {/* Soft readability scrim, lifts headline/CTA contrast over the star field */}
           <div
             className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
             style={{
@@ -1335,7 +1335,7 @@ export default function Home() {
               Dein Betrieb verdient
             </motion.p>
 
-            {/* Typewriter headline — height locked to prevent CLS */}
+            {/* Typewriter headline, height locked to prevent CLS */}
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -2160,7 +2160,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Leistungs- und Branchenseiten – interne SEO-Verlinkung */}
+            {/* Leistungs- und Branchenseiten, interne SEO-Verlinkung */}
             <div className="mt-6 pt-5 flex flex-wrap justify-center gap-x-5 gap-y-2" style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
               <a href="/webseite-fuer-kosmetikstudio" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website für Kosmetikstudio
