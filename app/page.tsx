@@ -95,6 +95,7 @@ function Portrait() {
 
 // ─── Referenzen ───────────────────────────────────────────────────────────────
 interface Reference {
+  caseSlug: string; // Fallstudie unter /referenzen/<slug>
   n: string;
   name: string;
   branche: string;
@@ -114,6 +115,7 @@ const REFERENCES: Reference[] = [
   {
     n: "01",
     name: "SZ Innenausbau",
+    caseSlug: "sz-innenausbau",
     branche: "Renovierung & Sanierung · Frankfurt am Main",
     emoji: "🛠️",
     href: "https://sz-innenausbau.de/",
@@ -129,6 +131,7 @@ const REFERENCES: Reference[] = [
   {
     n: "02",
     name: "Pizzeria Da Salvatore",
+    caseSlug: "pizzeria-da-salvatore",
     branche: "Gastronomie · Rotenburg (Wümme)",
     emoji: "🍕",
     href: "https://da-salvatore-rotenburg.de/",
@@ -144,6 +147,7 @@ const REFERENCES: Reference[] = [
   {
     n: "03",
     name: "SOROKIN Mobiler Schweißservice",
+    caseSlug: "sorokin-schweissservice",
     branche: "Metallbau & Schweißservice · Sauerland",
     emoji: "🔧",
     href: "https://www.sorokinschweisser.de/",
@@ -159,6 +163,7 @@ const REFERENCES: Reference[] = [
   {
     n: "04",
     name: "Blitzgebäudereinigung",
+    caseSlug: "blitzgebaeudereinigung",
     branche: "Gebäudereinigung · Hamburg",
     emoji: "🧽",
     href: "https://www.blitzgebaeudereinigung.com/",
@@ -174,6 +179,7 @@ const REFERENCES: Reference[] = [
   {
     n: "05",
     name: "Blitz Industrie & Gebäudereinigung",
+    caseSlug: "blitz-industrie-gebaeudereinigung",
     branche: "Gebäudereinigung & Hausmeisterservice · Region Bebra",
     emoji: "🧹",
     href: "https://reinigungblitz.com/",
@@ -320,6 +326,18 @@ function CaseStudyCard({ r, index }: { r: Reference; index: number }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H8M17 7v9" />
             </svg>
           </motion.a>
+          {/* Interner Link auf die ausfuehrliche Fallstudie. Beschreibender
+              Ankertext statt "mehr erfahren", damit die Zielseite ein Signal
+              bekommt, worum es dort geht. */}
+          <a
+            href={`/referenzen/${r.caseSlug}`}
+            className="mt-3 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-[#3b82f6] transition-colors hover:text-[#6aa8ff]"
+          >
+            <span>Fallstudie {r.name} lesen</span>
+            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </motion.div>
@@ -359,20 +377,27 @@ function ReferenceCards() {
 }
 
 // ─── FAQ ──────────────────────────────────────────────────────────────────────
-const FAQS = [
-  { q: "Für welche Branchen arbeitet ihr?", a: "Wir arbeiten mit Handwerksbetrieben, Physiotherapeuten, Industrieunternehmen, Gastronomie, Dienstleistern und vielen weiteren Branchen. Unser System ist branchenunabhängig und auf messbares Wachstum ausgerichtet." },
-  { q: "Wie schnell sehe ich erste Ergebnisse?", a: "Die meisten Kunden sehen erste messbare Ergebnisse in den ersten 30 bis 60 Tagen. Eine neue Website geht in unter 14 Tagen live." },
-  { q: "Was kostet eine Zusammenarbeit?", a: "Das kommt ganz auf dein Unternehmen, deine Ziele und den aktuellen Stand an. Jeder Betrieb braucht eine individuelle Lösung. Deshalb schauen wir uns im kostenlosen Erstgespräch alles gemeinsam an und erstellen anschließend ein passendes Konzept für dich." },
-  { q: "Was passiert im kostenlosen Erstgespräch?", a: "Wir analysieren deinen Online-Auftritt, identifizieren Wachstumspotenziale und zeigen dir konkret, welche Maßnahmen den größten Impact hätten. Dauer: ca. 30 Minuten." },
-  { q: "Muss die Agentur in meiner Stadt sitzen?", a: "Nein. Wir arbeiten ortsunabhängig und betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Für jemanden, der den ganzen Tag auf der Baustelle steht, ist das ein Vorteil: kein Termin, der den Arbeitstag zerreißt. Was zählt, ist nicht die Entfernung, sondern ob wir deinen Markt kennen." },
-  { q: "Welche Leistungen bietet ihr?", a: "Webdesign und Website-Erstellung, Suchmaschinenoptimierung, Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel, Printdesign und Textildruck. Alles aus einer Hand, damit dein Auftritt zusammenpasst." },
+const FAQS: { q: string; a: React.ReactNode; schemaText: string }[] = [
+  { q: "Für welche Branchen arbeitet ihr?", a: "Wir arbeiten mit Handwerksbetrieben, Physiotherapeuten, Industrieunternehmen, Gastronomie, Dienstleistern und vielen weiteren Branchen. Unser System ist branchenunabhängig und auf messbares Wachstum ausgerichtet.",
+    schemaText: "Wir arbeiten mit Handwerksbetrieben, Physiotherapeuten, Industrieunternehmen, Gastronomie, Dienstleistern und vielen weiteren Branchen. Unser System ist branchenunabhängig und auf messbares Wachstum ausgerichtet." },
+  { q: "Wie schnell sehe ich erste Ergebnisse?", a: "Die meisten Kunden sehen erste messbare Ergebnisse in den ersten 30 bis 60 Tagen. Eine neue Website geht in unter 14 Tagen live.",
+    schemaText: "Die meisten Kunden sehen erste messbare Ergebnisse in den ersten 30 bis 60 Tagen. Eine neue Website geht in unter 14 Tagen live." },
+  { q: "Was kostet eine Zusammenarbeit?", a: "Das kommt ganz auf dein Unternehmen, deine Ziele und den aktuellen Stand an. Jeder Betrieb braucht eine individuelle Lösung. Deshalb schauen wir uns im kostenlosen Erstgespräch alles gemeinsam an und erstellen anschließend ein passendes Konzept für dich.",
+    schemaText: "Das kommt auf dein Unternehmen, deine Ziele und den aktuellen Stand an. Im kostenlosen Erstgespräch schauen wir uns alles gemeinsam an und erstellen anschließend ein passendes Konzept. Es gibt beides: einen einmaligen Festpreis und eine laufende Betreuung im Monats-Abo, beides transparent und ohne versteckte Kosten." },
+  { q: "Was passiert im kostenlosen Erstgespräch?", a: "Wir analysieren deinen Online-Auftritt, identifizieren Wachstumspotenziale und zeigen dir konkret, welche Maßnahmen den größten Impact hätten. Dauer: ca. 30 Minuten.",
+    schemaText: "Wir analysieren deinen Online-Auftritt, identifizieren Wachstumspotenziale und zeigen dir konkret, welche Maßnahmen den größten Effekt hätten. Das dauert rund 30 Minuten und läuft per Telefon oder Videocall." },
+  { q: "Muss die Agentur in meiner Stadt sitzen?", a: "Nein. Wir arbeiten ortsunabhängig und betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Für jemanden, der den ganzen Tag auf der Baustelle steht, ist das ein Vorteil: kein Termin, der den Arbeitstag zerreißt. Was zählt, ist nicht die Entfernung, sondern ob wir deinen Markt kennen.",
+    schemaText: "Nein. Wir arbeiten ortsunabhängig und betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Für jemanden, der den ganzen Tag auf der Baustelle steht, ist das ein Vorteil, weil kein Termin den Arbeitstag zerreißt. Was zählt, ist nicht die Entfernung, sondern ob wir deinen Markt kennen." },
+  { q: "Welche Leistungen bietet ihr?", a: "Webdesign und Website-Erstellung, Suchmaschinenoptimierung, Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel, Printdesign und Textildruck. Alles aus einer Hand, damit dein Auftritt zusammenpasst.",
+    schemaText: "Webdesign und Website-Erstellung, Suchmaschinenoptimierung, Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel, Printdesign und Textildruck. Alles aus einer Hand, damit der Auftritt zusammenpasst." },
   { q: "Gibt es eine Mindestvertragslaufzeit?", a: (
     <>
       <p>Nein. Unsere Websites werden in erster Linie schlüsselfertig an den Kunden übergeben. Das bedeutet: Du besitzt deine Website vollständig und entscheidest selbst, wie du sie betreiben möchtest.</p>
       <p className="mt-3">Auf Wunsch übernehmen wir auch Hosting, Wartung und technische Betreuung. Da der Aufwand je nach Projekt unterschiedlich ist, besprechen wir das individuell und transparent.</p>
       <p className="mt-3 text-slate-500 text-xs tracking-wide">Keine versteckten Verpflichtungen. Keine langfristige Bindung.</p>
     </>
-  ) },
+  ),
+    schemaText: "Nein. Die Websites werden schlüsselfertig übergeben, du besitzt deine Website vollständig. Auf Wunsch übernehmen wir Hosting, Wartung und technische Betreuung, monatlich kündbar und ohne lange Vertragsbindung." },
 ];
 
 function FAQ() {
@@ -1156,7 +1181,7 @@ export default function Home() {
       {/* Allgemeines FAQ-Schema: bewusst NUR hier auf der Startseite, weil Google
           pro Seite genau eine FAQPage erlaubt und die ausgezeichneten Fragen auch
           sichtbar auf der Seite stehen muessen. Unterseiten bringen ihre eigenen mit. */}
-      <HomeFaqSchema />
+      <HomeFaqSchema faqs={FAQS.map(({ q, schemaText }) => ({ q, schemaText }))} />
 
       {/* Fixed ambient background — zero React re-renders, pure MotionValue */}
       <AmbientBackground springX={smoothX} springY={smoothY} isMobile={reduceEffects} />

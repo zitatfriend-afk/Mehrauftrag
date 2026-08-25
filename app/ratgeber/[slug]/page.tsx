@@ -66,7 +66,9 @@ function ArticleSchema({ slug }: { slug: string }) {
         dateModified: article.dateModified,
         inLanguage: "de-DE",
         mainEntityOfPage: url,
-        author: { "@id": `${BASE}/#organization` },
+        // Autor als Person, nicht als Organisation. Google wertet einen echten,
+        // benannten Autor mit eigener Seite als Erfahrungssignal (E-E-A-T).
+        author: { "@id": `${BASE}/ueber-uns#patrick-sauna` },
         publisher: { "@id": `${BASE}/#organization` },
         image: `${BASE}/icon.png`,
       },
@@ -132,6 +134,28 @@ export default async function ArticlePage({
             <h1 className="text-3xl font-black leading-tight tracking-[-0.03em] text-white sm:text-4xl">
               {article.title}
             </h1>
+
+            {/* Sichtbare Autorenangabe und Daten. Bis August 2026 standen
+                datePublished und dateModified nur im Schema, auf der Seite
+                selbst war weder Autor noch Datum zu sehen. */}
+            <p className="mt-4 text-sm text-slate-500">
+              Von{" "}
+              <Link href="/ueber-uns" className="text-[#3b82f6] underline underline-offset-4 hover:text-[#6aa8ff]">
+                Patrick Sauna
+              </Link>
+              {" · veröffentlicht am "}
+              <time dateTime={article.datePublished}>
+                {new Date(article.datePublished).toLocaleDateString("de-DE", { day: "2-digit", month: "long", year: "numeric" })}
+              </time>
+              {article.dateModified !== article.datePublished && (
+                <>
+                  {" · aktualisiert am "}
+                  <time dateTime={article.dateModified}>
+                    {new Date(article.dateModified).toLocaleDateString("de-DE", { day: "2-digit", month: "long", year: "numeric" })}
+                  </time>
+                </>
+              )}
+            </p>
 
             {/* Intro */}
             <div className="mt-6 space-y-4">

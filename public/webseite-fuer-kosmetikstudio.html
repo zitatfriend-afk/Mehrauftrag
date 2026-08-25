@@ -55,8 +55,18 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"name":"Startseite","item":"https://www.mehrauftrag.de"},
-    {"@type":"ListItem","position":2,"name":"Website für Kosmetikstudio","item":"https://www.mehrauftrag.de/webseite-fuer-kosmetikstudio"}
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://www.mehrauftrag.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Website für Kosmetikstudio",
+      "item": "https://www.mehrauftrag.de/webseite-fuer-kosmetikstudio"
+    }
   ]
 }
 </script>
@@ -408,6 +418,12 @@
 </header>
 
 <main id="top">
+
+<nav class="wrap" aria-label="Brotkrumen" style="padding-top:16px;padding-bottom:2px;font-size:.82rem;color:var(--muted)">
+  <a href="/" style="color:inherit;text-decoration:none">Startseite</a>
+  <span style="opacity:.5"> / </span>
+  <span style="color:var(--text)">Website für Kosmetikstudio</span>
+</nav>
 
 <!-- =================== HERO =================== -->
 <section class="hero">

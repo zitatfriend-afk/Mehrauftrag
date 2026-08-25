@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { readdirSync } from "node:fs";
 import { join } from "node:path";
 import { getAllSlugs } from "./ratgeber/_articles";
+import { getAllCaseSlugs } from "./referenzen/_cases";
 import { getAllAnalyseSlugs, getAnalyse } from "./analyse/_analyse-content";
 import ROUTEN from "./routen.json";
 import LASTMOD from "./lastmod.json";
@@ -29,13 +30,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .sort();
 
   const ratgeberRoutes = getAllSlugs().map((slug) => `/ratgeber/${slug}`);
+  // Fallstudien unter /referenzen/<kunde>. Die Uebersicht /referenzen steht in routen.json.
+  const referenzRoutes = getAllCaseSlugs().map((slug) => `/referenzen/${slug}`);
   // Auf noindex gesetzte Analyse-Seiten gehoeren nicht in die Sitemap:
   // eine Sitemap-URL mit noindex ist ein Widerspruch und kostet Crawl-Budget.
   const analyseRoutes = getAllAnalyseSlugs()
     .filter((slug) => !getAnalyse(slug)?.noindex)
     .map((slug) => `/analyse/${slug}`);
 
-  return [...routes, ...stadtRoutes, ...ratgeberRoutes, ...analyseRoutes].map((path) => {
+  return [...routes, ...stadtRoutes, ...ratgeberRoutes, ...referenzRoutes, ...analyseRoutes].map((path) => {
     const stand = DATEN[path];
     return {
       url: `${BASE}${path}`,

@@ -22,6 +22,8 @@
     { "pfad": "/webseite-fuer-physiotherapie", "quelle": ["public/webseite-fuer-physiotherapie.html"] },
     { "pfad": "/karriere", "quelle": ["app/karriere/page.tsx", "app/_components/karriere-shell.tsx"] },
     { "pfad": "/ratgeber", "quelle": ["app/ratgeber/page.tsx"] },
+    { "pfad": "/referenzen", "quelle": ["app/referenzen/page.tsx", "app/referenzen/_cases.ts"] },
+    { "pfad": "/ueber-uns", "quelle": ["app/ueber-uns/page.tsx"] },
     { "pfad": "/webdesign-standorte", "quelle": ["app/webdesign-standorte/page.tsx"] }
   ]
 }

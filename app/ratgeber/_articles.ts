@@ -479,7 +479,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie kleine Betriebe 2026 über Google UND KI wie ChatGPT und Perplexity gefunden werden: Was sich in der Suche ändert und was du konkret tun musst.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-25",
     readingTime: "7 Min.",
     intro: [
       "Die Art, wie Menschen online nach Anbietern suchen, verändert sich gerade so stark wie seit Jahren nicht. Neben der klassischen Google-Liste geben immer mehr Menschen ihre Frage direkt in ChatGPT, Perplexity oder die KI-Übersicht von Google ein und bekommen eine fertige Antwort, oft mit einer konkreten Empfehlung.",
@@ -558,7 +558,7 @@ export const ARTICLES: Article[] = [
     description:
       "SEO oder Google Ads für kleine Unternehmen? Der ehrliche Vergleich: Kosten, Geschwindigkeit, Nachhaltigkeit und wann sich welcher Weg lohnt.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Wer online mehr Kunden gewinnen will, stößt schnell auf zwei Wege: bei Google ganz oben in den bezahlten Anzeigen erscheinen (Google Ads) oder durch Suchmaschinenoptimierung (SEO) in den normalen, unbezahlten Ergebnissen nach oben kommen. Beide führen zum Ziel, funktionieren aber völlig unterschiedlich.",
@@ -844,7 +844,7 @@ export const ARTICLES: Article[] = [
     description:
       "Warum Google-Bewertungen über neue Kunden und deine Platzierung entscheiden, und wie du als kleiner Betrieb systematisch mehr echte Bewertungen bekommst.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-11",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Kaum jemand ruft heute einen Betrieb an, beauftragt einen Handwerker oder geht essen, ohne vorher kurz auf die Sterne zu schauen. Google-Bewertungen sind zur wichtigsten Form der Mundpropaganda geworden, und sie wirken doppelt: Sie überzeugen unentschlossene Interessenten und sie verbessern gleichzeitig deine Position bei Google.",

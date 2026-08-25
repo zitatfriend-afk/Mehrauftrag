@@ -33,7 +33,7 @@ export default function StructuredData() {
         },
         image: { "@id": "https://www.mehrauftrag.de/#logo" },
         description:
-          "Mehr Auftrag ist die Digitalagentur für Handwerk, Gastronomie, Physiotherapie und alle Branchen, die online wachsen wollen. Professionelle, SEO-optimierte Websites und Marketing für KMU – in der gesamten DACH-Region (Deutschland, Österreich, Schweiz).",
+          "Mehr Auftrag ist die Digitalagentur für Handwerk, Gastronomie, Physiotherapie und alle Branchen, die online wachsen wollen. Professionelle, SEO-optimierte Websites und Marketing für KMU in der gesamten DACH-Region (Deutschland, Österreich, Schweiz).",
         email: "info@mehrauftrag.de",
         telephone: "+49 152 02069625",
         founder: { "@type": "Person", name: "Patrick Sauna" },
@@ -82,7 +82,7 @@ export default function StructuredData() {
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
         areaServed: DACH_AREA,
         description:
-          "Individuelle, SEO-optimierte Websites fuer Unternehmen – zum festen Preis, in rund ein bis zwei Wochen online.",
+          "Individuelle, SEO-optimierte Websites fuer Unternehmen, zum festen Preis, in rund ein bis zwei Wochen online.",
       },
       {
         "@type": "Service",
@@ -153,63 +153,26 @@ export default function StructuredData() {
 // Fragen auf Unterseiten gar nicht sichtbar, was Googles Vorgabe widerspricht,
 // dass ausgezeichnete FAQs auch auf der Seite stehen muessen.
 // Deshalb wird er jetzt separat aus app/page.tsx heraus gerendert.
-export function HomeFaqSchema() {
+export type HomeFaq = { q: string; schemaText: string };
+
+// Der FAQ-Block wird aus GENAU den Fragen gebaut, die auf der Startseite auch
+// sichtbar sind. Vorher standen hier sechs fest verdrahtete Fragen, von denen
+// zwei auf der Seite gar nicht vorkamen und die anderen anders formuliert
+// waren. Google verlangt, dass ausgezeichnete FAQ-Inhalte auf der Seite
+// stehen. Jetzt kann das nicht mehr auseinanderlaufen.
+export function HomeFaqSchema({ faqs }: { faqs: HomeFaq[] }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": "https://www.mehrauftrag.de/#faq",
+    inLanguage: "de-DE",
     isPartOf: { "@id": "https://www.mehrauftrag.de/#website" },
     about: { "@id": "https://www.mehrauftrag.de/#organization" },
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Was kostet eine Website bei Mehr Auftrag?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Mehr Auftrag ist beim Preis flexibel: schluesselfertig zum einmaligen Festpreis oder als laufende Betreuung mit einem guenstigen Monats-Abo, beides transparent und ohne versteckte Kosten. Jeder Interessent bekommt zuerst einen kostenlosen Entwurf und ein unverbindliches Angebot. Auch das Monats-Abo ist monatlich kuendbar, es gibt keine lange Vertragsbindung.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Wie lange dauert es, bis meine Website online ist?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "In der Regel ist die neue Website innerhalb von rund ein bis zwei Wochen online – zum festen Preis und startklar fuer Google.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Fuer welche Branchen erstellt Mehr Auftrag Websites?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Mehr Auftrag erstellt Websites fuer kleine und mittlere Betriebe aus Gastronomie, Handwerk und Dienstleistung – zum Beispiel Restaurant, Pizzeria, Cafe, Bar, Foodtruck, Gebaeudereinigung, Hausmeisterservice, Schweisser und Elektriker.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Welche Leistungen bietet Mehr Auftrag?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Webdesign und Website-Erstellung, lokale Suchmaschinenoptimierung (SEO), Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel und Printdesign wie Visitenkarten, Flyer und Textildruck bzw. Kleidung mit Logo – alles aus einer Hand.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Muss die Agentur in meiner Stadt sitzen?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Mehr Auftrag arbeitet ortsunabhaengig und betreut Betriebe in der gesamten DACH-Region, also in Deutschland, Oesterreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Ein Termin im Betrieb ist dafuer nicht noetig, was gerade fuer Betriebe ein Vorteil ist, die tagsueber auf der Baustelle stehen.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Gibt es eine lange Vertragsbindung?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Nein. Die Zusammenarbeit ist monatlich kuendbar, ohne lange Vertragsbindung.",
-        },
-      },
-    ],
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.schemaText },
+    })),
   };
 
   return (
