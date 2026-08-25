@@ -4,6 +4,7 @@
     { "pfad": "", "quelle": ["app/page.tsx", "app/layout.tsx", "app/_components/google-reviews.tsx"] },
     { "pfad": "/grafikdesign", "quelle": ["app/grafikdesign/page.tsx"] },
     { "pfad": "/google-ads", "quelle": ["app/google-ads/page.tsx"] },
+    { "pfad": "/suchmaschinenoptimierung", "quelle": ["public/suchmaschinenoptimierung.html"] },
     { "pfad": "/elektriker", "quelle": ["app/elektriker/page.tsx"] },
     { "pfad": "/kostenlose-analyse", "quelle": ["app/kostenlose-analyse/page.tsx"] },
     { "pfad": "/webseite-fuer-kosmetikstudio", "quelle": ["public/webseite-fuer-kosmetikstudio.html"] },

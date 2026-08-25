@@ -245,7 +245,7 @@ export const ARTICLES: Article[] = [
     related: [
       { label: "Website für Gebäudereinigung", href: "/webseite-fuer-gebaeudereinigung" },
       { label: "Website für Hausmeisterservice", href: "/webseite-fuer-hausmeisterservice" },
-      { label: "Lokale Suchmaschinenoptimierung", href: "/kostenlose-analyse" },
+      { label: "Lokale Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
   },
@@ -543,6 +543,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "Suchmaschinenoptimierung, die auch KI-Systeme versteht", href: "/suchmaschinenoptimierung" },
       { label: "SEO oder Google Ads?", href: "/ratgeber/seo-oder-google-ads" },
       { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
@@ -613,6 +614,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "Unser Angebot zur Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
       { label: "Google Ads Betreuung", href: "/google-ads" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
       { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
@@ -826,6 +828,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "Suchmaschinenoptimierung für kleine Betriebe", href: "/suchmaschinenoptimierung" },
       { label: "Google-Bewertungen: mehr Kunden gewinnen", href: "/ratgeber/google-bewertungen-mehr-kunden" },
       { label: "KI-Suche & Google 2026", href: "/ratgeber/ki-suche-google-2026" },
       { label: "SEO oder Google Ads?", href: "/ratgeber/seo-oder-google-ads" },
@@ -904,6 +907,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "Lokale Suchmaschinenoptimierung im Überblick", href: "/suchmaschinenoptimierung" },
       { label: "Lokale SEO: bei Google nach oben", href: "/ratgeber/lokale-seo-google-maps" },
       { label: "KI-Suche & Google 2026", href: "/ratgeber/ki-suche-google-2026" },
       { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
@@ -1050,6 +1054,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "So arbeiten wir bei der Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
       { label: "Webdesign in Frankfurt & Umgebung", href: "/ratgeber/webdesign-frankfurt" },
       { label: "Google Ads Betreuung", href: "/google-ads" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },

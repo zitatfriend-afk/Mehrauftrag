@@ -56,6 +56,10 @@ const nextConfig: NextConfig = {
         destination: "/webseite-fuer-physiotherapie.html",
       },
       {
+        source: "/suchmaschinenoptimierung",
+        destination: "/suchmaschinenoptimierung.html",
+      },
+      {
         source: "/webdesign-:slug",
         destination: "/webdesign-:slug.html",
       },

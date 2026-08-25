@@ -1323,8 +1323,19 @@ export default function Home() {
                   textShadow: "0 2px 36px rgba(59,130,246,0.22), 0 1px 2px rgba(0,0,0,0.35)",
                 }}
               >
+                {/* Serverseitig gerenderter Text der Ueberschrift. Vorher stand hier
+                    beim ersten Render nur ein Leerzeichen, weil der Typewriter aus
+                    useState("") startet. Die Startseite hatte damit im ausgelieferten
+                    HTML gar keine H1 mit Suchbegriff, obwohl sie zwei Drittel aller
+                    Impressionen der Domain traegt. Der Typewriter darunter ist reine
+                    Animation und deshalb aria-hidden: Vorlesesoftware bekommt jetzt
+                    den vollen Satz statt Buchstabe fuer Buchstabe. */}
+                <span className="sr-only">
+                  Webdesign und SEO für kleine Betriebe: mehr Aufträge, mehr Umsatz, mehr Wachstum
+                </span>
                 {/* Lock height to max headline to eliminate CLS */}
                 <span
+                  aria-hidden="true"
                   className="typewriter-wrap relative inline-block"
                   style={{
                     minHeight: "1.0em",
@@ -1659,6 +1670,77 @@ export default function Home() {
                     style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 16px rgba(59,130,246,0.32)" }}
                   >
                     <span>Grafikdesign entdecken</span>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </motion.a>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ══════════════════════ SEO TEASER
+            Interner Einstieg auf die Geldseite /suchmaschinenoptimierung. Der Cluster
+            rund um SEO traegt laut Search Console den groessten Teil der Impressionen
+            der Domain, hatte bis August 2026 aber keine eigene Seite. */}
+        <section className="py-16 sm:py-20 relative" style={sectionDark}>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse 55% 45% at 70% 50%, rgba(16,185,129,0.06), transparent 65%)" }}
+          />
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 relative">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.3 }}
+              className="overflow-hidden rounded-3xl"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                backdropFilter: "blur(16px)",
+                border: "1px solid rgba(16,185,129,0.2)",
+                boxShadow: "0 8px 50px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset",
+              }}
+            >
+              <div className="flex flex-col lg:flex-row lg:items-center gap-8 p-8 sm:p-10 lg:p-12">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div
+                      className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                      style={{ background: "rgba(16,185,129,0.12)", color: "#34d399", border: "1px solid rgba(16,185,129,0.2)" }}
+                    >
+                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.2-5.2m2.2-5.3a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl font-black tracking-tight leading-tight mb-4 text-white">
+                    Suchmaschinenoptimierung
+                  </h2>
+                  <p className="text-base leading-relaxed text-slate-300 mb-4 max-w-2xl">
+                    Gefunden werden, ohne für jeden Klick zu bezahlen. Wir bringen deine Website technisch in Ordnung, geben jeder Leistung eine eigene Seite und richten dein Google-Unternehmensprofil so ein, dass es zu diesen Inhalten passt. Danach sehen wir jeden Monat in der Search Console nach, was sich bewegt.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-7">
+                    {["Lokale SEO", "Google-Unternehmensprofil", "Technische Basis", "Eine Seite je Leistung", "Bewertungen", "Sichtbarkeit in KI-Antworten"].map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-lg px-3 py-1.5 text-[12px] font-medium text-slate-300"
+                        style={{ background: "rgba(16,185,129,0.08)", border: "1px solid rgba(16,185,129,0.16)" }}
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <motion.a
+                    href="/suchmaschinenoptimierung"
+                    whileHover={{ y: -2, boxShadow: "0 8px 32px rgba(16,185,129,0.5)" }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={SPRING_FAST}
+                    className="shimmer-btn inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-semibold text-white text-sm"
+                    style={{ background: "linear-gradient(135deg, #10b981 0%, #059669 100%)", boxShadow: "0 4px 16px rgba(16,185,129,0.32)" }}
+                  >
+                    <span>Suchmaschinenoptimierung ansehen</span>
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
