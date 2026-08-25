@@ -3,10 +3,10 @@
 Diese Datei ist das Gedächtnis des Projekts. Bricht eine Sitzung ab, wird zuerst diese Datei gelesen und dort weitergemacht.
 
 Letzte Aktualisierung: 25.08.2026 (Redaktionsplan Monat 1 geschrieben)
-Stand: **live seit 26.08.2026. Push 73de10a..826520b durch, Vercel-Deploy durch, Sitemap neu eingereicht, neun Indexierungsantraege gestellt. Danach neu und noch NICHT gepusht: die beiden SEO-Ratgeber aus Monat 1 des Redaktionsplans, Commit `59dfcbd`.**
+Stand: **live seit 26.08.2026. Push 73de10a..826520b durch, Vercel-Deploy durch, Sitemap neu eingereicht, neun Indexierungsantraege gestellt. Monat 1 des Redaktionsplans ist ebenfalls live, Push bis `7018f24` am 25.08.2026, Vercel-Deploy durch, beide neuen Ratgeber im Netz und in der Sitemap.**
 Repo: `/Users/pablo/Desktop/Kunden bei websiten/Webseite Mehrauftrag/mehr-auftrag`
 Ausgangsstand des Großumbaus: `73de10a` · gepusht bis `826520b`
-Aktueller lokaler Stand: `59dfcbd`. Ungepusht sind `b486cb1` (next-env.d.ts) und `59dfcbd` (die beiden SEO-Ratgeber), dazu dieser Doku-Commit.
+Aktueller Stand lokal und auf GitHub: `7018f24`.
 
 ---
 
@@ -38,7 +38,9 @@ Die Nummern 2 und 3 aus `REDAKTIONSPLAN.md` stehen. Nummer 1, die Leistungsseite
 
 **Eine Kleinigkeit zur Kenntnis:** die neuen Artikel tragen `readingTime: "6 Min."` bei rund 1.100 und 1.240 Wörtern. Die 16 Bestandsartikel tragen bei 555 bis 672 Wörtern ebenfalls „6 Min." bis „7 Min.". Die Bestandswerte sind also rechnerisch zu hoch. Sie wurden nicht angefasst.
 
-**Was jetzt zu tun ist:** Deploy über das `.command`-Skript, danach die beiden neuen URLs in der Search Console zur Indexierung anmelden. Danach beginnt Monat 2 des Redaktionsplans mit den Nummern 4 bis 6.
+**Deploy erledigt am 25.08.2026.** `SEO-Grossumbau-LIVE-SCHALTEN.command` lief durch, Push `23e612c..7018f24`, vier Commits: next-env.d.ts, die beiden Ratgeber, dieser Bericht und der lastmod-Lauf. Live gegengeprüft: beide Artikel erreichbar mit korrekter H1, `/ratgeber/was-seo-kostet` enthält keinen Eurobetrag und keinen Stundensatz, `public/suchmaschinenoptimierung.html` verlinkt beide, die Sitemap führt 18 Ratgeber-URLs, die beiden neuen mit lastmod `2026-08-25T23:12:24Z`.
+
+**Was noch offen ist:** die zwei neuen URLs in der Search Console zur Indexierung anmelden. Danach beginnt Monat 2 des Redaktionsplans mit den Nummern 4 bis 6.
 
 ---
 
@@ -259,7 +261,7 @@ Dazu zwei Stellen aus dem Großumbau selbst: der neue SEO-Teaser-Knopf auf der S
 | 6 | **Impressum, Datenschutz, AGB** | Unberührt, wie vorgegeben. Die neue Anschrift kommt über den Anwalt. |
 | 7 | ~~Mobile Kontrolle der app-Seiten~~ | **Erledigt.** Mit echtem Build gemessen, 183 Messungen, 24 Befunde behoben. Siehe Nachtrag. |
 | 8 | **Google-Bewertung nennt Hainburg** | Eine echte Kundenbewertung beginnt mit "Top Webdesign aus Hainburg". Sie steht auf der Startseite und auf `/webseite-fuer-physiotherapie`. Das ist der Originalwortlaut eines Kunden, den aendere ich nicht. Wenn der Ortsbezug weg soll, muss die Bewertung durch eine andere echte ersetzt werden. Deine Entscheidung. |
-| 9 | ~~Redaktionsplan starten~~ | **Monat 1 ist vollständig.** Leistungsseite aus dem Großumbau, dazu die beiden SEO-Ratgeber vom 25.08.2026. Offen ist nur noch der Deploy und die Anmeldung der zwei neuen URLs in der Search Console. Danach Monat 2, Nummern 4 bis 6. |
+| 9 | ~~Redaktionsplan starten~~ | **Monat 1 ist vollständig.** Leistungsseite aus dem Großumbau, dazu die beiden SEO-Ratgeber vom 25.08.2026. Deploy erledigt, offen ist nur noch die Anmeldung der zwei neuen URLs in der Search Console. Danach Monat 2, Nummern 4 bis 6. |
 
 ---
 
