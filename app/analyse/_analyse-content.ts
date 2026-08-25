@@ -249,6 +249,50 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     successNote: DEFAULT_SUCCESS,
   },
 
+  "seo-agentur-erkennen": {
+    slug: "seo-agentur-erkennen",
+    audience: "eine ehrliche Einschätzung deiner Sichtbarkeit",
+    metaTitle: "Zweite Meinung zu deiner SEO-Betreuung | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose zweite Meinung zu deiner Sichtbarkeit bei Google: Wir sagen dir verständlich, was an deinem Auftritt wirkt und was fehlt. Unverbindlich.",
+    eyebrow: "Unabhängige Einschätzung",
+    h1: "Kostenlose zweite Meinung zu deiner Sichtbarkeit",
+    intro:
+      "Du bist dir nicht sicher, ob an deiner Sichtbarkeit wirklich gearbeitet wird? Wir schauen uns deinen Auftritt an und sagen dir in normalen Worten, was wirkt, was fehlt und was wir an deiner Stelle zuerst angehen würden.",
+    benefits: [
+      "Ehrliche Einschätzung, auch wenn alles passt",
+      "Verständlich erklärt statt Fachchinesisch",
+      "Konkrete nächste Schritte statt Diagramme",
+      "Unverbindlich und ohne Verkaufsdruck",
+    ],
+    formHeadline: "Kostenlose Einschätzung anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf, wie es dir lieber ist.",
+    leadSource: "Analyse - SEO-Agentur-Check",
+    successNote: DEFAULT_SUCCESS,
+  },
+
+  "was-seo-kostet": {
+    slug: "was-seo-kostet",
+    audience: "einen festen Preis statt einer Pauschale",
+    metaTitle: "SEO-Angebot mit festem Preis anfordern | Mehr Auftrag",
+    metaDescription:
+      "Was Suchmaschinenoptimierung in deinem Fall kostet, sagen wir nach einem Blick auf Website, Markt und Wettbewerb. Fester Preis, klar benannter Umfang.",
+    eyebrow: "Fester Preis statt Pauschale",
+    h1: "Was Suchmaschinenoptimierung bei dir kosten würde",
+    intro:
+      "Statt einer Pauschale, die auf niemanden richtig passt: Wir sehen uns deine Website, deinen Markt und deinen Wettbewerb an und sagen dir, was in deinem Fall nötig ist und was es kostet. Der Blick darauf kostet dich nichts.",
+    benefits: [
+      "Preis erst nach einem Blick auf deinen Wettbewerb",
+      "Klar benannter Umfang statt offener Rechnung",
+      "Einmalige Arbeit und laufende Betreuung getrennt ausgewiesen",
+      "Unverbindlich und ohne Verkaufsdruck",
+    ],
+    formHeadline: "Einschätzung und Preis anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf, wie es dir lieber ist.",
+    leadSource: "Analyse - SEO-Kosten",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   "website-selbst-oder-agentur": {
     slug: "website-selbst-oder-agentur",
     audience: "deinen Betrieb",

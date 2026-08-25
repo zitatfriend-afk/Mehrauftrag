@@ -581,7 +581,9 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Suchmaschinenoptimierung bringt dich in die unbezahlten Ergebnisse. Das dauert seine Zeit, wirkt dafür aber dauerhaft und ohne Klickkosten. Eine Seite, die für einen wichtigen Suchbegriff gut platziert ist, bringt über Monate und Jahre immer wieder Anfragen, ohne dass jeder Besucher extra kostet.",
           "Gerade für lokale Betriebe ist SEO stark, weil die Konkurrenz vor Ort meist überschaubar ist. Wer sein Google-Profil und seine Website konsequent pflegt, kann in der eigenen Region dauerhaft ganz vorn stehen.",
+          "Weil SEO eine Weile braucht, bevor sie trägt, wiegt die Wahl des Dienstleisters hier schwerer als bei Anzeigen. Bei Google Ads siehst du nach wenigen Tagen, ob etwas passiert. Bei SEO merkst du eine schlechte Zusammenarbeit oft erst nach Monaten.",
         ],
+        link: { label: "Woran du eine gute SEO-Agentur erkennst", href: "/ratgeber/seo-agentur-erkennen" },
       },
       {
         heading: "Der direkte Vergleich",
@@ -594,6 +596,7 @@ export const ARTICLES: Article[] = [
           "Nachhaltigkeit: Ads-Sichtbarkeit endet mit dem Budget, SEO wirkt weiter",
           "Vertrauen: Viele Nutzer klicken lieber auf unbezahlte Ergebnisse",
         ],
+        link: { label: "Was SEO kostet und ab wann es sich rechnet", href: "/ratgeber/was-seo-kostet" },
       },
       {
         heading: "Die beste Antwort ist meist die Kombination",
@@ -621,8 +624,254 @@ export const ARTICLES: Article[] = [
     related: [
       { label: "Unser Angebot zur Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
       { label: "Google Ads Betreuung", href: "/google-ads" },
+      { label: "Woran du eine gute SEO-Agentur erkennst", href: "/ratgeber/seo-agentur-erkennen" },
+      { label: "Was SEO kostet und ab wann es sich rechnet", href: "/ratgeber/was-seo-kostet" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
       { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
+    ],
+  },
+
+  {
+    slug: "seo-agentur-erkennen",
+    category: "Grundlagen",
+    title: "Woran du eine gute SEO-Agentur erkennst, und woran eine schlechte",
+    metaTitle: "Gute SEO-Agentur erkennen: die Warnzeichen | Ratgeber",
+    description:
+      "Woran du eine gute SEO-Agentur erkennst und woran eine unseriöse: die Versprechen, bei denen du hellhörig wirst, und die Fragen fürs erste Gespräch.",
+    datePublished: "2026-08-25",
+    dateModified: "2026-08-25",
+    readingTime: "6 Min.",
+    intro: [
+      "Wer nach einer SEO-Agentur sucht, bekommt Hunderte Treffer und fast überall dieselben Sätze: mehr Sichtbarkeit, mehr Anfragen, ganz nach oben bei Google. Für einen Handwerksbetrieb, ein Restaurant oder eine Reinigungsfirma ist von außen kaum zu erkennen, wer davon tatsächlich arbeitet und wer nur gut verkauft.",
+      "Es gibt aber Merkmale, die sich prüfen lassen, ohne dass du selbst Fachmann sein musst. Einen Teil davon nennt Google in seiner eigenen Anleitung für Website-Betreiber, die einen SEO-Dienstleister suchen. Dieser Ratgeber fasst zusammen, worauf du achtest, bevor du unterschreibst.",
+    ],
+    sections: [
+      {
+        heading: "Das eine Versprechen, das niemand halten kann",
+        paragraphs: [
+          "Wenn ein Anbieter dir Platz eins bei Google garantiert, ist das Gespräch im Grunde beendet. Google schreibt in seiner Anleitung zur Auswahl eines SEO-Dienstleisters wörtlich, dass niemand eine Platzierung auf Platz eins garantieren kann. Die Reihenfolge der Ergebnisse entsteht aus einem Verfahren, auf das kein Dienstleister direkten Zugriff hat, und sie verändert sich laufend.",
+          "Wer sein Handwerk beherrscht, sagt dir deshalb, was er tut und woran ihr den Fortschritt gemeinsam messt. Er sagt dir nicht, welchen Platz du in welcher Woche belegen wirst.",
+        ],
+      },
+      {
+        heading: "Die Warnzeichen, vor denen Google selbst warnt",
+        paragraphs: [
+          "Google nennt Website-Betreibern eine Reihe von Mustern, bei denen sie vorsichtig sein sollen. Wer eines davon erlebt, sollte genauer hinschauen.",
+        ],
+        bullets: [
+          "Der Kontakt kommt unaufgefordert per E-Mail, oft mit einer angeblichen Fehleranalyse deiner Seite",
+          "Der Anbieter erklärt nicht klar, was er konkret tun wird, oder behandelt seine Vorgehensweise als Geheimnis",
+          "Er behauptet eine besondere Beziehung zu Google oder eine bevorzugte Anmeldung deiner Seite",
+          "Er garantiert bestimmte Platzierungen",
+          "Er verkauft Linkpakete oder die Anmeldung bei tausenden Suchmaschinen",
+        ],
+      },
+      {
+        heading: "Warum gekaufte Links das teuerste Angebot sind",
+        paragraphs: [
+          "Der letzte Punkt verdient eine eigene Erklärung, weil er so oft verkauft wird. Links von anderen Websites sind ein echter Faktor, aber Google zählt das Kaufen und Verkaufen von Links zu Rankingzwecken ausdrücklich zu den Spam-Praktiken. Dazu gehört auch, Waren oder Leistungen gegen Links zu tauschen.",
+          "Die Folge steht ebenso klar in den Richtlinien: Seiten, die dagegen verstoßen, können schlechter platziert werden oder gar nicht mehr in den Ergebnissen erscheinen. Das Risiko trägt dabei nicht die Agentur, sondern deine Domain. Wenn die Zusammenarbeit endet, bleiben die gekauften Links und das Problem bei dir.",
+        ],
+      },
+      {
+        heading: "Woran du erkennst, dass jemand wirklich arbeitet",
+        paragraphs: [
+          "Die Gegenprobe ist einfacher, als sie klingt. Ein guter Anbieter kann drei Dinge: fertige Arbeiten zeigen, in normalen Worten erklären was er vorhat, und offenlegen, was er an deiner Website verändert.",
+        ],
+        bullets: [
+          "Er zeigt Beispiele abgeschlossener Projekte, nicht nur eine Wand voller Kundenlogos",
+          "Er arbeitet nach den offiziellen Vorgaben von Google, nicht gegen sie",
+          "Er kann sagen, was er in deiner Branche bereits gemacht hat",
+          "Er teilt dir jede Änderung mit, die er an deiner Seite vornimmt",
+          "Er sagt dir, welche Art von Ergebnis er erwartet und woran ihr es messen werdet",
+        ],
+      },
+      {
+        heading: "Die Zugänge gehören dir, nicht der Agentur",
+        paragraphs: [
+          "Ein Punkt, der in Verkaufsgesprächen selten vorkommt und später wehtut: Wem gehören am Ende Domain, Website, Google-Unternehmensprofil und der Zugang zur Search Console?",
+          "Eine faire Zusammenarbeit klärt das vorher und schriftlich. Du solltest jederzeit selbst in deine Search Console schauen können, und die Domain sollte auf deinen Betrieb laufen, nicht auf den Dienstleister. Wer hier ausweicht, baut eine Abhängigkeit auf, die mit der Qualität der Arbeit nichts zu tun hat.",
+        ],
+        bullets: [
+          "Die Domain ist auf deinen Betrieb registriert",
+          "Du hast eigenen Zugang zur Search Console und zum Google-Unternehmensprofil",
+          "Texte und Bilder bleiben nach Vertragsende nutzbar",
+          "Es steht schriftlich, was bei einem Wechsel übergeben wird",
+        ],
+      },
+      {
+        heading: "Berichte, die man tatsächlich lesen kann",
+        paragraphs: [
+          "Viele Berichte aus laufenden SEO-Betreuungen bestehen aus Diagrammen, die gut aussehen und wenig sagen. Der hauseigene Sichtbarkeitsindex eines Werkzeugherstellers, die Zahl bearbeiteter Suchbegriffe, die Menge gesetzter Links: das misst Aufwand, nicht Wirkung.",
+          "Was für deinen Betrieb zählt, steht in der Google Search Console, und dieser Zugang kostet nichts. Dort siehst du, für welche Suchanfragen du erscheinst, auf welcher Position, wie oft geklickt wird. Ein Bericht, der genau diese Zahlen erklärt und daraus die nächsten Schritte ableitet, ist mehr wert als zehn Seiten Grafik.",
+        ],
+      },
+      {
+        heading: "Muss die Agentur bei dir um die Ecke sitzen?",
+        paragraphs: [
+          "Für deine Sichtbarkeit in der lokalen Suche zählt, was auf deiner Website und in deinem Google-Unternehmensprofil steht. Wo dein Dienstleister sitzt, spielt dafür keine Rolle. Entscheidend ist etwas anderes: ob er den Markt kennt, in dem du verkaufst. Wie dicht dein Gewerk in deiner Region besetzt ist, welche Betriebsgrößen dort üblich sind und wonach deine Kunden tatsächlich suchen, das entscheidet darüber, welche Inhalte gebraucht werden.",
+          "Die Zusammenarbeit selbst läuft ohnehin meist aus der Ferne, per Telefon, Videocall und WhatsApp. Wichtiger als die Entfernung ist, dass du einen festen Ansprechpartner hast und eine Antwort bekommst, wenn du fragst. Wie das in der Praxis aussieht, steht auf unserer Seite zur Suchmaschinenoptimierung.",
+        ],
+        link: { label: "So gehen wir Suchmaschinenoptimierung für kleine Betriebe an", href: "/suchmaschinenoptimierung" },
+      },
+      {
+        heading: "Fünf Fragen, die im ersten Gespräch Klarheit bringen",
+        paragraphs: [
+          "Du brauchst kein Fachwissen, um einen Anbieter einzuschätzen. Es reicht, ein paar Fragen zu stellen und darauf zu achten, ob eine verständliche Antwort kommt oder ob ausgewichen wird. Google empfiehlt Website-Betreibern genau diese Richtung.",
+        ],
+        bullets: [
+          "Kannst du mir Beispiele deiner bisherigen Arbeit zeigen?",
+          "Wie lange machst du das schon?",
+          "Was hast du in meiner Branche bereits umgesetzt?",
+          "Welche Änderungen nimmst du an meiner Seite vor, und erfahre ich von jeder einzelnen?",
+          "Welches Ergebnis erwartest du, und woran werden wir es messen?",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Kann eine SEO-Agentur Platz eins bei Google garantieren?",
+        a: "Nein. Google schreibt in seiner eigenen Anleitung ausdrücklich, dass niemand eine Platzierung auf Platz eins garantieren kann. Wer es trotzdem verspricht, verkauft entweder etwas, das er nicht liefern kann, oder arbeitet mit Methoden, die deiner Domain schaden.",
+      },
+      {
+        q: "Woran erkenne ich ein unseriöses SEO-Angebot?",
+        a: "Typisch sind unaufgeforderte E-Mails mit einer angeblichen Fehleranalyse, Garantien auf bestimmte Platzierungen, eine behauptete Sonderbeziehung zu Google und der Verkauf von Linkpaketen. Google warnt Website-Betreiber vor genau diesen Mustern.",
+      },
+      {
+        q: "Muss eine SEO-Agentur in meiner Stadt sitzen?",
+        a: "Nein. Für die lokale Suche zählt, was auf deiner Website und in deinem Google-Unternehmensprofil steht, nicht der Sitz des Dienstleisters. Wichtig ist, dass er den Markt kennt, in dem du verkaufst, und dass du ihn erreichst, wenn du eine Frage hast.",
+      },
+      {
+        q: "Was sollte ich vor der Zusammenarbeit schriftlich klären?",
+        a: "Wem Domain, Website und Zugänge gehören, welche Leistungen enthalten sind, wie berichtet wird und was bei einem Wechsel übergeben wird. Eigene Zugänge zur Search Console und zum Google-Unternehmensprofil solltest du in jedem Fall behalten.",
+      },
+    ],
+    related: [
+      { label: "Unser Angebot zur Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
+      { label: "Was SEO kostet und ab wann es sich rechnet", href: "/ratgeber/was-seo-kostet" },
+      { label: "SEO oder Google Ads im Vergleich", href: "/ratgeber/seo-oder-google-ads" },
+      { label: "Lokale SEO und Google Maps erklärt", href: "/ratgeber/lokale-seo-google-maps" },
+      { label: "Wer hinter Mehr Auftrag steckt", href: "/ueber-uns" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+    ],
+  },
+
+  {
+    slug: "was-seo-kostet",
+    category: "Grundlagen",
+    title: "Was SEO kostet und ab wann es sich rechnet",
+    metaTitle: "Was kostet SEO? Preis, Nutzen, Warnzeichen | Ratgeber",
+    description:
+      "Was SEO-Beratung kostet, wovon der Preis abhängt und wie du selbst ausrechnest, ab wann sich Suchmaschinenoptimierung für deinen Betrieb trägt.",
+    datePublished: "2026-08-25",
+    dateModified: "2026-08-25",
+    readingTime: "6 Min.",
+    intro: [
+      "Was kostet SEO? Die ehrliche Antwort ist unbequem: Es gibt keinen Listenpreis. Wer dir eine Zahl nennt, ohne deine Website und deinen Wettbewerb angesehen zu haben, rät.",
+      "Das heißt aber nicht, dass du im Dunkeln stehst. Du kannst genau verstehen, wovon der Preis abhängt, du kannst ein unseriöses Angebot erkennen, und du kannst selbst ausrechnen, ab wann sich die Sache für deinen Betrieb trägt. Darum geht es hier.",
+    ],
+    sections: [
+      {
+        heading: "Warum es keinen Listenpreis gibt",
+        paragraphs: [
+          "Suchmaschinenoptimierung ist keine Ware mit festem Umfang, sondern Arbeit an einem konkreten Zustand. Bei dem einen Betrieb steht eine technisch saubere Website, das Google-Unternehmensprofil ist gepflegt und es fehlen nur Inhalte zu einzelnen Leistungen. Bei dem anderen lädt die Seite langsam, bricht auf dem Handy und die Firmendaten stehen in jedem Verzeichnis anders.",
+          "Zwei Betriebe im selben Gewerk können deshalb völlig unterschiedliche Rechnungen bekommen, ohne dass einer von beiden übervorteilt wird. Der Preis bildet ab, wie viel Arbeit zwischen dem heutigen Zustand und dem Ziel liegt.",
+        ],
+      },
+      {
+        heading: "Wovon der Preis tatsächlich abhängt",
+        paragraphs: [
+          "Wenn du Angebote vergleichst, hilft es zu wissen, welche Stellschrauben den Aufwand bewegen. Es sind im Kern sechs.",
+        ],
+        bullets: [
+          "Der Zustand deiner Website: eine schnelle, saubere Seite braucht weniger Vorarbeit als eine, die erst repariert werden muss",
+          "Wie viele Leistungen sichtbar werden sollen: eine einzelne Leistung ist weniger Arbeit als ein ganzer Leistungskatalog",
+          "Wie viele Orte du erreichen willst",
+          "Wie dicht dein Gewerk in deinem Markt besetzt ist",
+          "Ob Texte und Bilder vorhanden sind oder erst entstehen müssen",
+          "Ob einmal aufgeräumt werden soll oder ob es eine laufende Betreuung wird",
+        ],
+      },
+      {
+        heading: "Einmalige Arbeit und laufende Betreuung sind zwei Paar Schuhe",
+        paragraphs: [
+          "Die Grundoptimierung ist ein Projekt mit Anfang und Ende: Technik in Ordnung bringen, Struktur klären, je Leistung eine eigene Seite, Google-Unternehmensprofil sauber aufsetzen, Firmendaten überall angleichen. Das ist irgendwann fertig.",
+          "Die laufende Betreuung ist etwas anderes. Sie ist Pflege, weil deine Wettbewerber weiterarbeiten und Google seine Bewertung laufend ändert. Wer beides in einen Topf wirft, vergleicht Angebote, die nicht vergleichbar sind. Frag deshalb bei jedem Angebot: Was ist einmalig, was kommt monatlich wieder, was genau ist enthalten, und was passiert, wenn ich die Betreuung beende?",
+        ],
+      },
+      {
+        heading: "Woran du ein unseriöses Angebot erkennst",
+        paragraphs: [
+          "Beim Preis zeigt sich Unseriosität meist früher als bei der Arbeit selbst. Diese Muster sollten dich stutzig machen.",
+        ],
+        bullets: [
+          "Eine Pauschale wird genannt, bevor jemand deine Seite und deinen Wettbewerb angesehen hat",
+          "Das Angebot nennt nur einen Monatsbetrag, aber keinen Umfang",
+          "Eine lange Mindestlaufzeit, aus der du nicht herauskommst",
+          "Bestimmte Platzierungen werden garantiert, was laut Google niemand kann",
+          "Links werden als Paket verkauft, obwohl Google den Kauf von Links zu den Spam-Praktiken zählt",
+          "Der Bericht misst Aufwand statt Wirkung: Zahl der bearbeiteten Suchbegriffe, Menge gesetzter Links, hauseigene Sichtbarkeitsindizes",
+        ],
+      },
+      {
+        heading: "Der Platz selbst ist nicht käuflich",
+        paragraphs: [
+          "Ein Missverständnis hält sich hartnäckig: dass man sich bei Google in die unbezahlten Ergebnisse einkaufen könne. Google schreibt selbst, dass das Erscheinen in den organischen Suchergebnissen nichts kostet. Was du bezahlst, ist also die Arbeit an deiner Website und an deinem Profil, nicht der Platz in der Liste.",
+          "Das ist der wichtigste Unterschied zu Anzeigen. Bei Google Ads kaufst du Klicks, und die Sichtbarkeit endet in dem Moment, in dem das Budget aus ist. Bei der Suchmaschinenoptimierung bleibt die Arbeit an deiner Seite, auch wenn du die Betreuung pausierst. Deine Positionen brechen dann nicht sofort weg, verlieren aber mit der Zeit an Boden, weil andere weitermachen.",
+        ],
+      },
+      {
+        heading: "Ab wann es sich rechnet: die Rechnung, die nur du machen kannst",
+        paragraphs: [
+          "Keine Agentur kann dir sagen, ab wann sich SEO für dich lohnt, weil dafür drei Größen nötig sind, die du besser kennst als jeder Dienstleister: was ein durchschnittlicher Auftrag bei dir einbringt, wie viele Anfragen du brauchst, bis daraus ein Auftrag wird, und wie lange ein gewonnener Kunde bei dir bleibt.",
+          "Aus diesen drei Zahlen ergibt sich, was dir eine zusätzliche Anfrage im Monat wert ist. Genau dagegen rechnest du die Kosten, nicht gegen ein Bauchgefühl. Für einen Metallbauer mit hohen Auftragswerten kann sich der Aufwand schon bei wenigen zusätzlichen Anfragen tragen. Ein Betrieb mit vielen kleinen Aufträgen braucht entsprechend mehr, dafür kommen die Anfragen dort meist häufiger.",
+          "Ein Punkt, der in dieser Rechnung gern vergessen wird: Anfragen über die eigene Website kosten keine Vermittlungsgebühr. Wer heute den Großteil seiner Aufträge über Portale bekommt, sollte deren Provision mit in die Gegenrechnung nehmen.",
+        ],
+        link: { label: "So gehen wir Suchmaschinenoptimierung für kleine Betriebe an", href: "/suchmaschinenoptimierung" },
+      },
+      {
+        heading: "Warum der Ort im Preis auftaucht, der Sitz der Agentur aber nicht",
+        paragraphs: [
+          "Wer nach Suchmaschinenoptimierung für Hanau, Offenbach oder eine andere Stadt sucht, meint fast nie den Sitz des Dienstleisters, sondern die eigene Sichtbarkeit vor Ort. Und die kostet je nach Ort unterschiedlich viel Arbeit.",
+          "In einem Ort, in dem nur eine Handvoll Betriebe deines Gewerks um dieselbe Suche konkurrieren, reicht oft eine saubere Grundlage. In einer Großstadt, in der viele Anbieter um dieselbe Suche konkurrieren, ist deutlich mehr nötig, bis du oben ankommst. Was den Preis bewegt, ist also der Wettbewerb in deinem Markt, nicht die Entfernung zwischen dir und dem, der die Arbeit macht.",
+        ],
+      },
+      {
+        heading: "Was passiert, bevor du etwas bezahlst",
+        paragraphs: [
+          "Bei uns steht am Anfang ein Blick auf deine aktuelle Sichtbarkeit und ein Entwurf. Beides kostet dich nichts und verpflichtet dich zu nichts. Erst danach steht ein fester Preis im Raum, mit klar benanntem Umfang, damit du weißt, wofür du bezahlst.",
+          "Eine Pauschale ohne Blick auf deinen Wettbewerb nennen wir bewusst nicht. Nicht aus Geheimniskrämerei, sondern weil eine solche Zahl entweder deutlich zu hoch wäre, um jeden Fall abzudecken, oder zu niedrig, um die Arbeit wirklich zu machen.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Was kostet Suchmaschinenoptimierung für einen kleinen Betrieb?",
+        a: "Es gibt keinen Listenpreis, weil der Aufwand vom Zustand deiner Website, von der Zahl der Leistungen und Orte und vom Wettbewerb in deinem Markt abhängt. Seriös wird ein Preis erst genannt, wenn jemand beides angesehen hat. Bei uns gibt es vorab einen Blick auf deine Sichtbarkeit und einen Entwurf ohne Kosten, danach einen festen Preis mit benanntem Umfang.",
+      },
+      {
+        q: "Ist SEO teurer als Google Ads?",
+        a: "Die Kostenstruktur ist eine andere. Bei Anzeigen zahlst du für jeden Klick, und die Sichtbarkeit endet mit dem Budget. Bei SEO bezahlst du Arbeit, die an deiner Website bleibt. Google weist selbst darauf hin, dass das Erscheinen in den unbezahlten Ergebnissen nichts kostet, bezahlt wird also die Arbeit, nicht der Platz.",
+      },
+      {
+        q: "Ab wann rechnet sich SEO?",
+        a: "Sobald der Wert der zusätzlich gewonnenen Aufträge über den Kosten liegt. Diese Rechnung kannst nur du aufmachen, weil du weißt, was ein Auftrag bei dir einbringt und wie viele Anfragen du dafür brauchst. Bei hohen Auftragswerten genügen wenige zusätzliche Anfragen, bei kleinen Beträgen braucht es entsprechend mehr.",
+      },
+      {
+        q: "Was bringt eine SEO-Beratung, bevor ich Geld ausgebe?",
+        a: "Sie klärt, woran es bei dir tatsächlich liegt. Ob Technik, Inhalte oder das Google-Unternehmensprofil der Engpass sind, sieht man erst nach einem Blick auf die Zahlen. Ohne diese Klärung wird oft das optimiert, was ohnehin schon funktioniert, und das ist der teuerste Weg.",
+      },
+      {
+        q: "Kann ich einen Teil selbst machen und dadurch sparen?",
+        a: "Ja. Das Google-Unternehmensprofil pflegen, Fotos aktuell halten, Bewertungen sammeln und auf sie antworten kostet vor allem deine Zeit. Auch der Zugang zur Google Search Console ist kostenlos, dort siehst du selbst, für welche Suchanfragen du erscheinst. Aufwendiger wird es bei Technik, Struktur und eigenen Seiten je Leistung.",
+      },
+    ],
+    related: [
+      { label: "Unser Angebot zur Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
+      { label: "Woran du eine gute SEO-Agentur erkennst", href: "/ratgeber/seo-agentur-erkennen" },
+      { label: "SEO oder Google Ads im Vergleich", href: "/ratgeber/seo-oder-google-ads" },
+      { label: "Website bringt keine Anfragen: die Ursachen", href: "/website-bringt-keine-anfragen" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
   },
 
