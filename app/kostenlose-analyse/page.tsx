@@ -3,14 +3,14 @@ import { FAQS } from "./_faqs";
 import AnalyseLanding from "./_landing";
 
 export const metadata: Metadata = {
-  title: "Kostenlose Website-Analyse für Elektriker | Mehr Auftrag",
+  title: "Kostenlose Website-Analyse für deinen Betrieb | Mehr Auftrag",
   description:
-    "Kostenloser Potenzial-Check für Ihren Elektrobetrieb: Wir prüfen Ihre Sichtbarkeit bei Google, Performance und Mobile-Tauglichkeit – unverbindlich und in 30 Minuten.",
+    "Kostenloser Check für deinen Betrieb: Wir prüfen Sichtbarkeit bei Google, Ladezeit und Mobilansicht. Unverbindlich, in 30 Minuten, ohne Vertrag.",
   alternates: { canonical: "https://www.mehrauftrag.de/kostenlose-analyse" },
   openGraph: {
-    title: "Kostenlose Website-Analyse für Elektriker",
+    title: "Kostenlose Website-Analyse für deinen Betrieb",
     description:
-      "Potenzial-Check für Ihren Elektrobetrieb – kostenlos & unverbindlich, in 30 Minuten.",
+      "Potenzial-Check für deinen Betrieb, kostenlos und unverbindlich, in 30 Minuten.",
     url: "https://www.mehrauftrag.de/kostenlose-analyse",
     siteName: "Mehr Auftrag",
     locale: "de_DE",

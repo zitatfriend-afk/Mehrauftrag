@@ -45,12 +45,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "online-marketing-restaurant",
     category: "Branchen",
-    title: "Online-Marketing für Restaurants: so kommen mehr Gäste über Website und Google",
-    metaTitle: "Online-Marketing für Restaurants: mehr Gäste | Ratgeber",
+    title: "Das Google-Unternehmensprofil für Restaurants richtig pflegen",
+    metaTitle: "Google-Profil für Restaurants richtig pflegen | Ratgeber",
     description:
-      "Wie Restaurants, Pizzerien und Cafés online mehr Gäste gewinnen: Website, Google-Profil, Bewertungen und Reservierungen richtig aufsetzen.",
+      "Was Gäste im Google-Profil sehen, bevor sie sich entscheiden: Öffnungszeiten, Fotos, Speisekarte und Bewertungen. Für Restaurants, Pizzerien und Cafés.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-25",
     readingTime: "7 Min.",
     intro: [
       "Die meisten Gäste entscheiden heute am Handy, wo sie essen gehen. Sie tippen etwas wie Pizzeria in der Nähe oder Restaurant Hainburg in Google ein und schauen sich in wenigen Sekunden an, was ihnen angezeigt wird: die Karte, die Bewertungen, die Fotos, die Öffnungszeiten. Wer hier nicht sauber auftaucht, verliert Gäste an das Lokal von nebenan, oft ohne es überhaupt zu merken.",
@@ -89,6 +89,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Wenn die Grundlagen stehen, kann bezahlte Werbung den Umschwung beschleunigen, etwa Google Ads für Suchbegriffe mit klarer Absicht oder Anzeigen auf Instagram und Facebook für ein neues Menü oder einen Brunch. Sinnvoll ist das aber erst, wenn Profil und Website überzeugen, denn Werbung verstärkt nur, was schon da ist. Auf ein schwaches Fundament Geld zu werfen, bringt selten etwas.",
         ],
+        link: { label: "Website für Restaurants mit Online-Reservierung", href: "/webseite-fuer-restaurant" },
       },
     ],
     faqs: [
@@ -117,11 +118,11 @@ export const ARTICLES: Article[] = [
     slug: "kunden-gewinnen-handwerk",
     category: "Branchen",
     title: "Kunden gewinnen als Handwerksbetrieb: der Praxis-Leitfaden",
-    metaTitle: "Kunden gewinnen als Handwerker: der Praxis-Leitfaden | Ratgeber",
+    metaTitle: "Kunden gewinnen als Handwerker: Leitfaden | Ratgeber",
     description:
       "Wie Handwerksbetriebe online neue Kunden gewinnen: Website, lokale Google-Sichtbarkeit, Bewertungen und die richtige Anfrage-Strecke.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-25",
     readingTime: "7 Min.",
     intro: [
       "Viele Handwerksbetriebe leben seit Jahren von Empfehlungen und haben nie Werbung gebraucht. Trotzdem verändert sich der Markt: Auch wer eine Empfehlung bekommt, googelt heute erst einmal den Namen, bevor er anruft. Findet er dann nichts oder nur einen veralteten Auftritt, entsteht Zweifel, und der Anruf bleibt aus.",
@@ -187,12 +188,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "auftraege-gebaeudereinigung",
     category: "Branchen",
-    title: "Mehr Aufträge für die Gebäudereinigung: online neue Kunden finden",
-    metaTitle: "Mehr Aufträge für die Gebäudereinigung online | Ratgeber",
+    title: "Rahmenverträge in der Gebäudereinigung: wie Auftraggeber entscheiden",
+    metaTitle: "Rahmenverträge Gebäudereinigung: so wird vergeben | Ratgeber",
     description:
-      "Wie Gebäudereiniger online planbar neue Auftraggeber gewinnen: lokale Sichtbarkeit, überzeugende Website, Bewertungen und der Weg zu Gewerbekunden mit Rahmenverträgen.",
+      "Wie Hausverwaltungen, Objektbetreuer und Gewerbekunden Reinigungsaufträge vergeben: welche Nachweise sie prüfen, wie Angebote verglichen werden.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-11",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Die Gebäudereinigung ist ein hart umkämpfter Markt, und viele Aufträge, besonders die lukrativen mit Gewerbekunden und Rahmenverträgen, werden heute online angebahnt. Hausverwaltungen, Büros und Praxen suchen ihren Dienstleister zunehmend über Google, statt in die Zeitung zu schauen.",
@@ -224,6 +225,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Gerade bei Gewerbeanfragen zählt Reaktionsgeschwindigkeit. Wer innerhalb weniger Stunden ein sauberes Angebot liefert, während die Konkurrenz Tage braucht, gewinnt den Auftrag oft allein dadurch. Eine zuverlässige Anfrage-Strecke, bei der jede Anfrage sofort ankommt, ist deshalb bares Geld wert.",
         ],
+        link: { label: "So sieht eine Website für Gebäudereinigung aus, die Anfragen bringt", href: "/webseite-fuer-gebaeudereinigung" },
       },
     ],
     faqs: [
@@ -251,12 +253,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "kundinnen-gewinnen-kosmetikstudio",
     category: "Branchen",
-    title: "Kundinnen gewinnen als Kosmetikstudio: der Praxis-Leitfaden",
-    metaTitle: "Kundinnen gewinnen als Kosmetikstudio | Ratgeber",
+    title: "Terminbuchung, Instagram und Bewertungen im Kosmetikstudio",
+    metaTitle: "Terminbuchung und Instagram im Kosmetikstudio | Ratgeber",
     description:
-      "Wie Kosmetikstudios, Nagelstudios und Kosmetikerinnen online mehr Kundinnen gewinnen: Google-Profil, eigene Website mit Terminbuchung, Instagram und Bewertungen richtig kombinieren.",
+      "Wie Online-Terminbuchung, Instagram und Bewertungen im Termingeschäft zusammenspielen und welche Reihenfolge im Studioalltag wirklich funktioniert.",
     datePublished: "2026-08-10",
-    dateModified: "2026-08-11",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Die meisten Kundinnen suchen ihr nächstes Kosmetikstudio heute genauso wie ein Restaurant oder einen Handwerksbetrieb: Sie googeln Kosmetikerin in der Nähe oder Kosmetikstudio plus Ort und entscheiden innerhalb weniger Sekunden, wen sie kontaktieren. Wer hier nicht auftaucht oder unprofessionell wirkt, verliert die Kundin an das Studio nebenan.",
@@ -296,6 +298,7 @@ export const ARTICLES: Article[] = [
           "Ein vollständiges Google-Unternehmensprofil mit korrekten Öffnungszeiten, Adresse und Fotos ist die Basis. Deine Website sollte zusätzlich klar benennen, welche Behandlungen du anbietest und in welcher Stadt oder welchem Stadtteil, damit du bei lokalen Suchen wie Kosmetikstudio Frankfurt oder Permanent Make-up in der Nähe erscheinst.",
           "Das gilt für alle Beauty-Bereiche gleichermaßen, ob Kosmetik, Nagelstudio, Wimpernverlängerung, Permanent Make-up, Fußpflege oder Waxing. Je klarer eine Seite die eigenen Leistungen und den Standort benennt, desto passender sind die Anfragen, die ankommen.",
         ],
+        link: { label: "Website für Kosmetikstudios mit Online-Terminbuchung", href: "/webseite-fuer-kosmetikstudio" },
       },
     ],
     faqs: [
@@ -323,12 +326,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "auftraege-hausmeisterservice",
     category: "Branchen",
-    title: "Aufträge für den Hausmeisterservice: Hausverwaltungen und Objekte gewinnen",
-    metaTitle: "Aufträge für den Hausmeisterservice gewinnen | Ratgeber",
+    title: "Ausschreibungen für Hausmeisterdienstleistungen: wo sie stehen und wie du dich bewirbst",
+    metaTitle: "Ausschreibungen für Hausmeisterdienste finden | Ratgeber",
     description:
-      "Wie Hausmeisterservices an Daueraufträge von Hausverwaltungen, WEG und Gewerbeobjekten kommen: das Leistungsspektrum richtig zeigen, Zuverlässigkeit belegen und saisonale Chancen nutzen.",
+      "Wo Ausschreibungen für Hausmeisterdienstleistungen veröffentlicht werden, welche Unterlagen Verwalter erwarten und woran Bewerbungen scheitern.",
     datePublished: "2026-08-11",
-    dateModified: "2026-08-11",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Ein Hausmeisterservice lebt selten von einmaligen Aufträgen. Das Geschäft, das wirklich trägt, sind laufende Objektbetreuungen: eine Wohnanlage, ein Bürogebäude, mehrere Objekte einer Hausverwaltung, betreut über Jahre. Genau diese Verträge werden heute zunehmend online angebahnt.",
@@ -368,6 +371,7 @@ export const ARTICLES: Article[] = [
           "Anders als in vielen Branchen ist die Nachfrage beim Hausmeisterservice stark saisonal. Nach Winterdienst wird ab dem Spätsommer gesucht, wenn Verwaltungen die kommende Saison planen, nicht erst beim ersten Schnee. Grünpflege und Heckenschnitt werden im Frühjahr angefragt.",
           "Wer diese Leistungen ganzjährig gut auffindbar auf der Website hat, ist da, wenn die Suche losgeht. Denn bis Google eine Seite kennt und einordnet, vergehen Wochen. Erst im Oktober an den Winterdienst zu denken, ist zu spät.",
         ],
+        link: { label: "Website für Hausmeisterservice: was Hausverwaltungen darauf suchen", href: "/webseite-fuer-hausmeisterservice" },
       },
     ],
     faqs: [
@@ -395,12 +399,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "auftraege-schweisser-metallbau",
     category: "Branchen",
-    title: "Aufträge gewinnen als Schweißfachbetrieb: online sichtbar für Industrie und Privatkunden",
-    metaTitle: "Aufträge gewinnen als Schweißer & Metallbauer | Ratgeber",
+    title: "Auftragsvergabe im Metallbau: wie Industrie und Handel ihre Aufträge platzieren",
+    metaTitle: "Auftragsvergabe im Metallbau verstehen | Ratgeber",
     description:
-      "Wie Schweißfachbetriebe und Metallbauer online Aufträge gewinnen: zwei Zielgruppen richtig ansprechen, Verfahren und Qualifikationen zeigen, mit Projektfotos überzeugen.",
+      "Wie Einkäufer im Metallbau Aufträge vergeben: Anfrage, Angebotsvergleich, Qualifikationen und Nachweise. Für Lohnfertiger, Stahlbau und Metallverarbeitung.",
     datePublished: "2026-08-11",
-    dateModified: "2026-08-11",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Schweißen ist eine Leistung, die kaum jemand beurteilen kann, bevor sie fertig ist. Weder der Industriekunde, der eine Reparatur an einer Anlage braucht, noch der Hausbesitzer, der ein Geländer will, kann von außen erkennen, ob eine Naht sauber ausgeführt wurde. Beide entscheiden deshalb nach dem, was sie sehen können, und das ist heute meistens die Website.",
@@ -439,6 +443,7 @@ export const ARTICLES: Article[] = [
           "Viele Schweißbetriebe arbeiten nicht nur in der eigenen Werkstatt, sondern fahren zum Kunden, etwa für Reparaturen an Maschinen, Geländern oder Toren vor Ort. Das ist ein starker Vorteil gegenüber reinen Werkstattbetrieben, wird aber oft nicht erwähnt.",
           "Schreib deshalb konkret, dass du mobile Einsätze anbietest, und nenne dein Einzugsgebiet mit den Orten, in die du tatsächlich fährst. Das hilft doppelt: Google ordnet deine Seite den passenden Regionen zu, und Anfragen von zu weit weg bleiben dir erspart.",
         ],
+        link: { label: "Website für Schweißbetriebe und Metallbauer, die Aufträge bringt", href: "/webseite-fuer-schweisser" },
       },
     ],
     faqs: [
@@ -617,12 +622,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "website-selbst-oder-agentur",
     category: "Grundlagen",
-    title: "Website selbst bauen oder Agentur beauftragen? Eine ehrliche Entscheidungshilfe",
-    metaTitle: "Website selbst bauen oder Agentur? Entscheidungshilfe | Ratgeber",
+    title: "Baukasten, WordPress oder Agentur: was kleine Betriebe unterscheidet",
+    metaTitle: "Baukasten, WordPress oder Agentur? Vergleich | Ratgeber",
     description:
-      "Baukasten selbst nutzen oder Agentur beauftragen? Der ehrliche Vergleich für kleine Betriebe: Kosten, Zeit, Ergebnis und wann sich was lohnt.",
+      "Baukasten selbst bauen, WordPress nehmen oder eine Agentur beauftragen? Kosten, Zeitaufwand und Ergebnis im ehrlichen Vergleich für kleine Betriebe.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Eine Website muss her, und sofort stellt sich die Frage: selbst machen mit einem Baukasten oder eine Agentur beauftragen? Beide Wege haben ihre Berechtigung, und die richtige Antwort hängt weniger vom Budget ab als davon, was die Website leisten soll und wie viel Zeit du hast.",
@@ -686,12 +691,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "professionelle-website-vorteile",
     category: "Grundlagen",
-    title: "Was bringt eine professionelle Website wirklich?",
-    metaTitle: "Was bringt eine professionelle Website wirklich? | Ratgeber",
+    title: "Professioneller Internetauftritt: was er kleinen Betrieben wirklich bringt",
+    metaTitle: "Professioneller Internetauftritt: was bringt er? | Ratgeber",
     description:
-      "Lohnt sich eine professionelle Website für kleine Betriebe? Was sie bringt: mehr Anfragen, Vertrauen, Sichtbarkeit bei Google und KI.",
+      "Was eine professionelle Webpräsenz kleinen Betrieben bringt: Anfragen, Vertrauen und Sichtbarkeit bei Google und in KI-Antworten. Ehrlich eingeordnet.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-25",
     readingTime: "5 Min.",
     intro: [
       "Braucht mein Betrieb wirklich eine gute Website, oder reicht ein Eintrag bei Google und ein bisschen Social Media? Diese Frage stellen sich viele Selbstständige, und die ehrliche Antwort lautet: Eine professionelle Website ist selten Selbstzweck, aber sie ist der Punkt, an dem aus Interesse ein Auftrag wird.",
@@ -756,9 +761,9 @@ export const ARTICLES: Article[] = [
     title: "Lokale SEO: so kommt dein Betrieb bei Google und auf der Karte nach oben",
     metaTitle: "Lokale SEO: bei Google & auf der Karte nach oben | Ratgeber",
     description:
-      "Lokale SEO für kleine Betriebe: Wie du in der Nähe-Suche und auf Google Maps ganz oben erscheinst – Google-Profil, NAP-Daten, Bewertungen und lokale Inhalte erklärt.",
+      "Lokale SEO für kleine Betriebe: wie du in der Nähe-Suche und auf Google Maps nach oben kommst. Google-Profil, NAP-Daten, Bewertungen, lokale Inhalte.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-25",
     readingTime: "7 Min.",
     intro: [
       "Wenn jemand in deiner Nähe nach einem Betrieb wie deinem sucht, entscheiden wenige Zeilen bei Google darüber, wer den Auftrag bekommt: die drei Einträge, die zusammen mit der Karte ganz oben erscheinen. Dieses sogenannte lokale Dreier-Paket bekommt mit Abstand die meisten Klicks und Anrufe. Wer dort steht, gewinnt, wer darunter landet, wird oft gar nicht mehr gesehen.",
@@ -910,11 +915,11 @@ export const ARTICLES: Article[] = [
     slug: "corporate-design-werbemittel",
     category: "Grundlagen",
     title: "Logo, Visitenkarte, Firmenkleidung: der Werbe-Baukasten für kleine Betriebe",
-    metaTitle: "Corporate Design & Werbemittel für kleine Betriebe | Ratgeber",
+    metaTitle: "Corporate Design und Werbemittel für Betriebe | Ratgeber",
     description:
-      "Warum Logo, Visitenkarten, Fahrzeugbeschriftung und Firmenkleidung zusammengehören: wie kleine Betriebe mit einem einheitlichen Auftritt größer und verlässlicher wirken.",
+      "Warum Logo, Visitenkarten, Fahrzeugbeschriftung und Firmenkleidung zusammengehören und wie ein einheitlicher Auftritt größer wirken lässt.",
     datePublished: "2026-08-11",
-    dateModified: "2026-08-11",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Die meisten kleinen Betriebe sammeln ihren Auftritt über die Jahre zusammen. Das Logo hat mal ein Bekannter gemacht, die Visitenkarten kamen von einer Online-Druckerei, die Beschriftung am Transporter hat der Werbetechniker vor Ort entworfen, und die Arbeitsshirts sind schlicht die, die gerade im Angebot waren.",
@@ -984,12 +989,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "werbeagentur-rhein-main-finden",
     category: "Regional",
-    title: "Werbeagentur im Rhein-Main-Gebiet finden: worauf du achten solltest",
-    metaTitle: "Werbeagentur im Rhein-Main-Gebiet finden: Checkliste | Ratgeber",
+    title: "Agentur auswählen: die Checkliste für kleine Betriebe",
+    metaTitle: "Agentur auswählen: Checkliste für kleine Betriebe | Ratgeber",
     description:
-      "Die richtige Werbeagentur im Rhein-Main-Gebiet finden: worauf kleine Betriebe achten sollten und woran du eine gute von einer schlechten erkennst.",
+      "Woran du eine gute Werbe-, Web- oder SEO-Agentur erkennst: welche Fragen du stellst, welche Antworten warnen und was im Angebot stehen muss.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-02",
+    dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Das Rhein-Main-Gebiet rund um Frankfurt, Offenbach und Hanau hat viele Agenturen, von der großen Full-Service-Agentur bis zum Ein-Mann-Freelancer. Für einen kleinen oder mittleren Betrieb ist die Auswahl deshalb gar nicht so einfach. Groß ist nicht automatisch gut, und günstig nicht automatisch schlecht.",
@@ -1057,12 +1062,12 @@ export const ARTICLES: Article[] = [
     // Bewusst NICHT auf das Kopf-Keyword "Webdesign Frankfurt" optimiert.
     // Das bedient die Landingpage /webdesign-frankfurt (Position 3,3).
     // Dieser Artikel zielt auf informierende Suchen: worauf achten, woran erkennen.
-    title: "Website für Betriebe in Frankfurt und Rhein-Main: worauf du achten solltest",
-    metaTitle: "Website Frankfurt & Rhein-Main: worauf Betriebe achten | Ratgeber",
+    title: "Worauf Betriebe in einem dichten Markt bei ihrer Website achten sollten",
+    metaTitle: "Website im dichten Wettbewerb: worauf achten? | Ratgeber",
     description:
-      "Worauf Betriebe in Frankfurt und im Rhein-Main-Gebiet bei ihrer Website achten sollten: lokale Auffindbarkeit, Ladezeit, Bilder und Google-Profil, verständlich erklärt.",
+      "Ladezeit, lokale Auffindbarkeit, Bilder und Google-Profil: worauf Betriebe achten müssen, wenn im selben Ort zwanzig Wettbewerber dasselbe anbieten.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-18",
+    dateModified: "2026-08-25",
     readingTime: "7 Min.",
     intro: [
       "Frankfurt und das umliegende Rhein-Main-Gebiet sind wirtschaftlich stark und entsprechend hart umkämpft. Für lokale Betriebe, ob Handwerk, Gastronomie oder Dienstleistung, ist eine gute Website deshalb kein Luxus, sondern die Basis, um in diesem Umfeld sichtbar zu bleiben und neue Kunden zu gewinnen.",
@@ -1097,6 +1102,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Modernes Webdesign denkt von Anfang an mit, wie eine Seite gefunden wird, nicht nur bei Google, sondern auch in KI-Systemen wie ChatGPT oder Perplexity, die immer häufiger konkrete Anbieter empfehlen. Strukturierte Daten, klare Inhalte und eine saubere technische Basis sorgen dafür, dass dein Betrieb korrekt verstanden und weiterempfohlen wird. Wer das früh berücksichtigt, hat einen Vorsprung vor Mitbewerbern, deren Seiten nur schön aussehen.",
         ],
+        link: { label: "Webdesign Frankfurt: das Angebot für Betriebe in der Stadt", href: "/webdesign-frankfurt" },
       },
     ],
     // Bewusst ohne Preisfrage. Die stand fast wortgleich auch im FAQ-Schema der

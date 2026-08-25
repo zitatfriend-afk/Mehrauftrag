@@ -10,7 +10,7 @@ import { FAQS } from "./_faqs";
 /**
  * Landingpage /kostenlose-analyse für Mehr Auftrag.
  *
- * Zielgruppe: Elektriker-Betriebsinhaber (35–55), Region Frankfurt & Rhein-Main.
+ * Zielgruppe: Inhaberinnen und Inhaber kleiner Betriebe, deutschlandweit.
  * Angebot: KOSTENLOSE Website-/Potenzial-Analyse. KEINE Preise auf dieser Seite.
  * Branding konsistent zur Startseite (dunkles Blau, Glas-Cards, Shimmer-CTA, Geist).
  *
@@ -202,7 +202,7 @@ function AnalysisVisual() {
 const INCLUDES: { icon: React.ReactNode; title: string; desc: string }[] = [
   {
     title: "Gefunden bei Google?",
-    desc: "Wir prüfen, ob Sie bei „Elektriker + Ihre Stadt“ auftauchen – und wo Ihre Kunden stattdessen landen.",
+    desc: "Wir prüfen, ob Sie bei „Ihr Gewerk + Ihre Stadt“ auftauchen, und wo Ihre Kunden stattdessen landen.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <circle cx="11" cy="11" r="7" /><path strokeLinecap="round" d="M21 21l-4.3-4.3" />
@@ -397,7 +397,7 @@ function LeadForm() {
       </div>
 
       <a
-        href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Elektrobetrieb."
+        href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Betrieb."
         target="_blank" rel="noopener"
         onClick={() => trackContact("whatsapp")}
         className="inline-flex w-full items-center justify-center gap-2.5 rounded-xl px-7 py-3.5 text-base font-semibold text-white transition hover:brightness-110"
@@ -493,12 +493,12 @@ export default function AnalyseLanding() {
               <motion.div variants={fadeUp} className="order-1">
                 <div className="badge-glow mb-5 inline-flex items-center gap-2 rounded-full px-4 py-1.5 sm:mb-7" style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.26)" }}>
                   <span className="h-1.5 w-1.5 rounded-full bg-[#60a5fa] animate-pulse" />
-                  <span className="text-[11px] font-semibold tracking-[0.06em]" style={{ color: "#93c5fd" }}>Kostenloser Potenzial-Check für Elektriker</span>
+                  <span className="text-[11px] font-semibold tracking-[0.06em]" style={{ color: "#93c5fd" }}>Kostenloser Potenzial-Check für kleine Betriebe</span>
                 </div>
               </motion.div>
 
               <motion.h1 variants={fadeUp} className="order-2 font-black tracking-tighter text-white" style={{ fontSize: "clamp(26px, 5.6vw, 58px)", lineHeight: 1.07, letterSpacing: "-0.03em" }}>
-                Kostenlose <span className="gradient-text-blue">Website-Analyse</span> für Ihren Elektrobetrieb
+                Kostenlose <span className="gradient-text-blue">Website-Analyse</span> für Ihren Betrieb
               </motion.h1>
 
               <motion.p variants={fadeUp} className="order-4 mt-5 max-w-lg text-base font-light leading-relaxed sm:mt-6 sm:text-xl lg:order-3 lg:mt-6" style={{ color: "rgba(148,163,184,0.85)" }}>
@@ -518,7 +518,7 @@ export default function AnalyseLanding() {
                 </div>
                 <p className="mt-4 text-center text-sm text-slate-400">
                   Lieber direkt schreiben?{" "}
-                  <a href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Elektrobetrieb." target="_blank" rel="noopener" onClick={() => trackContact("whatsapp")} className="font-semibold text-[#25D366] hover:text-white">WhatsApp</a>
+                  <a href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Betrieb." target="_blank" rel="noopener" onClick={() => trackContact("whatsapp")} className="font-semibold text-[#25D366] hover:text-white">WhatsApp</a>
                   {" "}oder{" "}
                   <a href="tel:+4915202069625" onClick={() => trackContact("phone")} className="font-semibold text-[#60a5fa] hover:text-white">anrufen</a>
                 </p>
@@ -537,7 +537,7 @@ export default function AnalyseLanding() {
             <div className="mb-12 text-center">
               <motion.div variants={fadeUp}><SectionLabel center>Das prüfen wir</SectionLabel></motion.div>
               <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">Ihre kostenlose Analyse umfasst</motion.h2>
-              <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400">Ehrlich, verständlich und speziell auf Elektrikerbetriebe zugeschnitten.</motion.p>
+              <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400">Ehrlich, verständlich und auf kleine Betriebe zugeschnitten.</motion.p>
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {INCLUDES.map((f) => (
@@ -653,7 +653,7 @@ export default function AnalyseLanding() {
 
         {/* WhatsApp Floating-Button */}
         <a
-          href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Elektrobetrieb."
+          href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20h%C3%A4tte%20gern%20die%20kostenlose%20Website-Analyse%20f%C3%BCr%20meinen%20Betrieb."
           target="_blank"
           rel="noopener"
           onClick={() => trackContact("whatsapp")}
