@@ -34,7 +34,9 @@ Patrick hat gemeldet, dass die Seiten am Telefon nicht professionell wirken, bes
 • Der SEO-Knopf auf der Startseite wurde bei 320 Pixel abgeschnitten, weil `shimmer-btn` ein `overflow:hidden` für den Glanzstreifen trägt. Behoben in `app/globals.css`, der Footer in `app/page.tsx` blieb unberührt.
 • Vier lange Zusammensetzungen brachen ohne Trennstrich mitten im Wort um. Sie tragen jetzt weiche Trennzeichen an den Wortfugen, ausschließlich innerhalb von h1, h2 und h3. Geprüft: keins davon steht in einem Title, einer Description oder einem Schema-Block.
 
-**Commits:** `4db353f` (Kopfzeile, Knöpfe, Brotkrumen, Telefonsymbol) und `f1782c3` (Trennzeichen). Noch nicht gepusht.
+**Commits:** `4db353f` (Kopfzeile, Knöpfe, Brotkrumen, Telefonsymbol) und `f1782c3` (Trennzeichen).
+
+**Live seit 26.08.2026**, Push bis `d009e84`. An der ausgelieferten Seite gegengeprüft: der Kurzknopf trägt auf `/suchmaschinenoptimierung` „Anfragen" und auf `/webdesign-hanau` „Entwurf", der Telefonknopf ist ein SVG, die H1 enthält die weichen Trennzeichen, die Stadtseite führt genau eine Brotkrumenzeile und weiterhin genau einen BreadcrumbList-Block mit drei Einträgen, und der SEO-Knopf der Startseite darf umbrechen.
 
 **Wichtig für die nächste Runde:** Der Chromium im Cloud-Container bringt keine deutschen Trennmuster mit, `hyphens:auto` trennt dort nicht. Auf echten Telefonen schon. Deshalb sind die weichen Trennzeichen die verlässlichere Lösung, und deshalb ist die Messung hier strenger als die Wirklichkeit.
 
