@@ -407,6 +407,23 @@
     display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(31,175,84,.7);z-index:60}
   .wa-float svg{width:28px;height:28px;fill:#fff}
   .inline-link{color:var(--gold-2);text-decoration:underline;font-weight:600}
+
+  /* MOBIL-KOPFZEILE-2026-08-26 */
+  /* Kopfzeile auf Telefonen: Schriftzug und Knopf bleiben einzeilig, der Knopf
+     traegt eine kurze Beschriftung. Knoepfe im Inhalt duerfen dagegen umbrechen,
+     sonst schneidet das overflow:hidden von .btn-primary den Text ab. */
+  .btn-short{display:none}
+  .nav-call svg{width:17px;height:17px;flex:none;display:block}
+  @media(max-width:560px){
+    .logo{white-space:nowrap}
+    .logo span,.logo-text{white-space:nowrap}
+    .nav-cta .btn{white-space:nowrap}
+    .btn-long{display:none}
+    .btn-short{display:inline}
+    .btn{white-space:normal;text-align:center}
+    .nav-call{border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--border)}
+  }
+  h1,h2,h3,h4,h5{overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
 </style>
 <style>
 :root{--terra:#c34320;--terra-2:#dd6338;--terra-soft:rgba(195,67,32,.13)}
@@ -516,7 +533,7 @@
     </nav>
     <div class="nav-cta">
       <a href="tel:+4915202069625" class="btn btn-secondary">📞 Anrufen</a>
-      <a href="#anfrage" class="btn btn-primary">Kostenlos anfragen</a>
+      <a href="#anfrage" class="btn btn-primary"><span class="btn-long">Kostenlos anfragen</span><span class="btn-short">Anfragen</span></a>
     </div>
   </div>
 </header>

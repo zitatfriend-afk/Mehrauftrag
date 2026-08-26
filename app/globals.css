@@ -244,3 +244,15 @@ h1, h2, h3, h4, h5 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
+
+/* ─── KNOPFTEXTE AUF SCHMALEN TELEFONEN ────────────────────────────────
+   Knoepfe mit shimmer-btn tragen overflow:hidden, damit der Glanzstreifen
+   innerhalb der Flaeche bleibt. Passt die Beschriftung nicht in die Breite,
+   schneidet genau dieses hidden den Text ab, statt ihn umzubrechen. Auf der
+   Startseite endete der SEO-Knopf bei 320 und 360 Pixel mitten im Wort.
+   Auf schmalen Geraeten darf die Beschriftung deshalb zweizeilig werden.
+   Passt sie ohnehin in eine Zeile, aendert die Regel nichts. */
+@media (max-width: 480px) {
+  .shimmer-btn { white-space: normal; text-align: center; }
+  .shimmer-btn > span { white-space: normal; overflow-wrap: break-word; }
+}
