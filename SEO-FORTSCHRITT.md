@@ -2,11 +2,41 @@
 
 Diese Datei ist das Gedächtnis des Projekts. Bricht eine Sitzung ab, wird zuerst diese Datei gelesen und dort weitergemacht.
 
-Letzte Aktualisierung: 25.08.2026 (Redaktionsplan Monat 1 geschrieben)
+Letzte Aktualisierung: 26.08.2026 (Mobilrunde 3: Kopfzeile und Wortbrueche)
 Stand: **live seit 26.08.2026. Push 73de10a..826520b durch, Vercel-Deploy durch, Sitemap neu eingereicht, neun Indexierungsantraege gestellt. Monat 1 des Redaktionsplans ist ebenfalls live, Push bis `7018f24` am 25.08.2026, Vercel-Deploy durch, beide neuen Ratgeber im Netz und in der Sitemap.**
 Repo: `/Users/pablo/Desktop/Kunden bei websiten/Webseite Mehrauftrag/mehr-auftrag`
 Ausgangsstand des Großumbaus: `73de10a` · gepusht bis `826520b`
 Aktueller Stand lokal und auf GitHub: `7018f24`.
+
+---
+
+## Mobilrunde 3: Kopfzeile und Wortbrueche (26.08.2026)
+
+Patrick hat gemeldet, dass die Seiten am Telefon nicht professionell wirken, besonders `/suchmaschinenoptimierung`. Am Desktop war alles in Ordnung. Die beiden vorherigen Runden hatten nur Überbreiten gemessen, also ob sich eine Seite waagerecht schieben lässt. Das Aussehen selbst war nie geprüft worden, und genau dort lagen die Fehler.
+
+**Gemessen:** alle 63 Sitemap-URLs bei 320, 360, 390 und 430 Pixel im Mobilmodus gegen einen echten Build. 252 Messungen vorher, 252 nachher.
+
+| Befund | vorher | nachher |
+|---|---|---|
+| Kopfzeile mit umgebrochenem Schriftzug „Mehr Auftrag" | 6 Seiten | 0 |
+| Kopfzeile mit umgebrochener Knopfbeschriftung | 6 Seiten | 0 |
+| Seiten mit zwei Brotkrumenzeilen untereinander | 16 Seiten | 0 |
+| abgeschnittene Knopfbeschriftung | 1 | 0 |
+| Wörter, die mitten im Wort brechen | 4 | 0 |
+| Seiten breiter als der Bildschirm | 0 | 0 |
+
+**Was geändert wurde:**
+
+• Der Knopf in der Kopfzeile trägt auf Telefonen eine kurze Beschriftung, über das Paar `btn-long` und `btn-short`, das die 16 Stadtseiten schon hatten. Aus „Sichtbarkeit prüfen lassen" wird „Anfragen", aus „Kostenloser Entwurf" wird „Entwurf".
+• Der Schriftzug „Mehr Auftrag" bricht nicht mehr um, Knöpfe im Inhalt dürfen dafür umbrechen statt abgeschnitten zu werden.
+• Auf den 16 Stadtseiten standen die Brotkrumen doppelt. Entfernt wurde die Fassung mit Inline-Stilen. Die `nav.crumb` bleibt, weil `pruefe-stadtseiten.py` sie als Pflichtbaustein prüft. Das BreadcrumbList-Schema war nie doppelt.
+• Der Telefonknopf war auf 22 Seiten ein graues Emoji in einem Kreis, während die app-Seiten längst ein sauberes Symbol in abgerundetem Quadrat verwenden. Angeglichen.
+• Der SEO-Knopf auf der Startseite wurde bei 320 Pixel abgeschnitten, weil `shimmer-btn` ein `overflow:hidden` für den Glanzstreifen trägt. Behoben in `app/globals.css`, der Footer in `app/page.tsx` blieb unberührt.
+• Vier lange Zusammensetzungen brachen ohne Trennstrich mitten im Wort um. Sie tragen jetzt weiche Trennzeichen an den Wortfugen, ausschließlich innerhalb von h1, h2 und h3. Geprüft: keins davon steht in einem Title, einer Description oder einem Schema-Block.
+
+**Commits:** `4db353f` (Kopfzeile, Knöpfe, Brotkrumen, Telefonsymbol) und `f1782c3` (Trennzeichen). Noch nicht gepusht.
+
+**Wichtig für die nächste Runde:** Der Chromium im Cloud-Container bringt keine deutschen Trennmuster mit, `hyphens:auto` trennt dort nicht. Auf echten Telefonen schon. Deshalb sind die weichen Trennzeichen die verlässlichere Lösung, und deshalb ist die Messung hier strenger als die Wirklichkeit.
 
 ---
 
