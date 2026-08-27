@@ -601,6 +601,18 @@ export default function ElektrikerLanding() {
                 </motion.div>
               ))}
             </div>
+            <motion.p variants={fadeUp} className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-slate-400">
+              Eine Website allein bringt noch keine Anrufe. Gefunden wird sie erst, wenn Inhalt, Technik und
+              Google-Profil zusammenspielen. Was dazugehört, wenn ein Elektrobetrieb bei der Suche nach seinem Gewerk
+              auftauchen soll, steht auf unserer Seite zur{" "}
+              <Link
+                href="/suchmaschinenoptimierung"
+                className="font-semibold text-[#60a5fa] underline decoration-[#60a5fa]/40 underline-offset-4 hover:text-white"
+              >
+                lokalen Suchmaschinenoptimierung
+              </Link>
+              .
+            </motion.p>
           </div>
         </motion.section>
 

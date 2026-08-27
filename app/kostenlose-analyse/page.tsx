@@ -45,10 +45,33 @@ function FaqSchema() {
   );
 }
 
+// BreadcrumbList: bis 27.08.2026 hatte diese Seite als eine von vier keine
+// Brotkrumen-Auszeichnung. Google zeigt dann den nackten Pfad statt der
+// Seitenhierarchie an.
+function AnalyseBreadcrumb() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.mehrauftrag.de/kostenlose-analyse#breadcrumb",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Startseite", item: "https://www.mehrauftrag.de" },
+      { "@type": "ListItem", position: 2, name: "Kostenlose Analyse", item: "https://www.mehrauftrag.de/kostenlose-analyse" },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export default function KostenloseAnalysePage() {
   return (
     <>
       <FaqSchema />
+      <AnalyseBreadcrumb />
       <AnalyseLanding />
     </>
   );

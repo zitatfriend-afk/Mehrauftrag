@@ -315,6 +315,16 @@ for (const b of slugBereiche(ratgeberDatei)) {
   }
 }
 
+// Fallstudien. Gleiches Muster wie bei den Ratgebern: jede Fallstudie hat ihren
+// eigenen Zeilenbereich in _cases.ts, also bekommt sie auch ihr eigenes Datum.
+// Ergaenzt am 27.08.2026, vorher standen die fuenf /referenzen/<slug>-URLs ohne
+// lastmod in der Sitemap.
+const casesDatei = "app/referenzen/_cases.ts";
+for (const b of slugBereiche(casesDatei)) {
+  const d = datumZeilen(casesDatei, b.von, b.bis);
+  if (d) lastmod[`/referenzen/${b.slug}`] = d;
+}
+
 // Analyse-Seiten
 const analyseDatei = "app/analyse/_analyse-content.ts";
 for (const b of slugBereiche(analyseDatei)) {

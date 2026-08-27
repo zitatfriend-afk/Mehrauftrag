@@ -8,6 +8,33 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.mehrauftrag.de/karriere" },
 };
 
+// BreadcrumbList: bis 27.08.2026 war diese Seite die einzige Ausnahme ohne
+// Brotkrumen-Auszeichnung. Google zeigt daraufhin den nackten Pfad statt der
+// Seitenhierarchie an.
+function KarriereBreadcrumb() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.mehrauftrag.de/karriere#breadcrumb",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Startseite", item: "https://www.mehrauftrag.de" },
+      { "@type": "ListItem", position: 2, name: "Karriere", item: "https://www.mehrauftrag.de/karriere" },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export default function KarrierePage() {
-  return <KarriereShell />;
+  return (
+    <>
+      <KarriereBreadcrumb />
+      <KarriereShell />
+    </>
+  );
 }

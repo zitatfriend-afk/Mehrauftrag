@@ -45,10 +45,33 @@ function FaqSchema() {
   );
 }
 
+// BreadcrumbList: bis 27.08.2026 hatte diese Seite als eine von vier keine
+// Brotkrumen-Auszeichnung. Google zeigt dann den nackten Pfad statt der
+// Seitenhierarchie an.
+function ElektrikerBreadcrumb() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.mehrauftrag.de/elektriker#breadcrumb",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Startseite", item: "https://www.mehrauftrag.de" },
+      { "@type": "ListItem", position: 2, name: "Website für Elektriker", item: "https://www.mehrauftrag.de/elektriker" },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export default function ElektrikerPage() {
   return (
     <>
       <FaqSchema />
+      <ElektrikerBreadcrumb />
       <ElektrikerLanding />
     </>
   );

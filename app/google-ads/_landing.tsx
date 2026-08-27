@@ -428,6 +428,18 @@ export default function GoogleAdsLanding() {
                 </motion.div>
               ))}
             </div>
+            <motion.p variants={fadeUp} className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-slate-400">
+              Anzeigen wirken ab dem ersten Tag, hören aber genauso schnell wieder auf zu wirken, sobald das Budget
+              endet. Wer beides verbindet, zahlt auf Dauer weniger je Anfrage. Wie der langsamere, dafür bleibende Weg
+              aussieht, steht bei der{" "}
+              <Link
+                href="/suchmaschinenoptimierung"
+                className="font-semibold text-[#60a5fa] underline decoration-[#60a5fa]/40 underline-offset-4 hover:text-white"
+              >
+                Suchmaschinenoptimierung für kleine Betriebe
+              </Link>
+              .
+            </motion.p>
           </div>
         </motion.section>
 

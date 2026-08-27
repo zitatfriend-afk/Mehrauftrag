@@ -17,6 +17,33 @@ export const metadata: Metadata = {
   },
 };
 
+// BreadcrumbList: bis 27.08.2026 war diese Seite die einzige Ausnahme ohne
+// Brotkrumen-Auszeichnung. Google zeigt daraufhin den nackten Pfad statt der
+// Seitenhierarchie an.
+function GoogleAdsBreadcrumb() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.mehrauftrag.de/google-ads#breadcrumb",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Startseite", item: "https://www.mehrauftrag.de" },
+      { "@type": "ListItem", position: 2, name: "Google Ads", item: "https://www.mehrauftrag.de/google-ads" },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export default function GoogleAdsPage() {
-  return <GoogleAdsLanding />;
+  return (
+    <>
+      <GoogleAdsBreadcrumb />
+      <GoogleAdsLanding />
+    </>
+  );
 }
