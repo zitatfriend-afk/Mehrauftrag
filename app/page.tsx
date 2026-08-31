@@ -5,6 +5,7 @@ import Image from "next/image";
 import MaMark from "./_components/ma-mark";
 import { HomeFaqSchema } from "./_components/structured-data";
 import GoogleReviews from "./_components/google-reviews";
+import StartseiteFormular from "./_components/startseite-formular";
 import {
   motion,
   useScroll,
@@ -1400,7 +1401,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-3 justify-center"
             >
               <motion.a
-                href="https://calendly.com/mehrauftrag-info/30min?month=2026-05"
+                href="https://calendly.com/mehrauftrag-info/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -2, boxShadow: "0 12px 40px rgba(59,130,246,0.65), 0 0 0 1px rgba(59,130,246,0.45)" }}
@@ -2063,25 +2064,35 @@ export default function Home() {
                 <br />
                 <span className="gradient-text-blue">beginnt heute.</span>
               </h2>
-              <p className="text-lg max-w-lg mx-auto mb-10 leading-relaxed text-slate-400">
+              <p className="text-lg max-w-lg mx-auto mb-9 leading-relaxed text-slate-400">
                 Kostenloses Erstgespräch. Wir analysieren deinen Betrieb und
                 zeigen dir in 30 Minuten, wie du planbar mehr Aufträge gewinnst.
               </p>
+              <div className="mb-8">
+                <StartseiteFormular />
+              </div>
+
+              <div className="mx-auto mb-7 flex max-w-md items-center gap-3">
+                <span className="h-px flex-1" style={{ background: "rgba(255,255,255,0.1)" }} />
+                <span className="text-xs text-slate-500">oder direkt</span>
+                <span className="h-px flex-1" style={{ background: "rgba(255,255,255,0.1)" }} />
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
                 <motion.a
-                  href="https://calendly.com/mehrauftrag-info/30min?month=2026-05"
+                  href="https://calendly.com/mehrauftrag-info/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ y: -2, boxShadow: "0 14px 48px rgba(59,130,246,0.68), 0 0 0 1px rgba(59,130,246,0.45)" }}
+                  whileHover={{ background: "rgba(59,130,246,0.1)", borderColor: "rgba(59,130,246,0.38)", boxShadow: "0 4px 24px rgba(59,130,246,0.14)" }}
                   whileTap={{ scale: 0.97 }}
-                  transition={SPRING_FAST}
-                  className="shimmer-btn inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-semibold text-base text-white"
-                  style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 24px rgba(59,130,246,0.5), 0 0 0 1px rgba(59,130,246,0.3)" }}
+                  transition={{ duration: 0.18 }}
+                  className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-semibold text-base"
+                  style={{ color: "#60a5fa", border: "1px solid rgba(59,130,246,0.22)", background: "rgba(59,130,246,0.05)" }}
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <span className="relative z-10">Kostenloses Erstgespräch</span>
+                  Termin buchen
                 </motion.a>
                 <motion.a
                   href="https://wa.me/4915202069625"
