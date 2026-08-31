@@ -22,7 +22,7 @@ import { FAQS } from "./_faqs";
 // ─── Konfiguration (öffentliche Werte) ───────────────────────────────────────
 const SUBMIT_URL =
   "https://ezrxxxilssmzcavdvvbe.supabase.co/functions/v1/submit-website-lead";
-const PAGE_LABEL = "Analyse Elektriker LP";
+const PAGE_LABEL = "Kostenlose Analyse";
 const LEAD_SOURCE = `Website - ${PAGE_LABEL}`;
 const PIXEL_CONTENT = "Analyse Elektriker LP";
 

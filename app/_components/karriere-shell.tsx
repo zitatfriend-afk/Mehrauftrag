@@ -301,7 +301,7 @@ export default function KarriereShell() {
             ))}
           </nav>
           <Link
-            href="https://calendly.com/mehrauftrag-info/30min?month=2026-05"
+            href="https://calendly.com/mehrauftrag-info/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold text-white"
