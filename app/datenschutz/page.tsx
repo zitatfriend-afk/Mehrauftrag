@@ -728,8 +728,83 @@ export default function DatenschutzPage() {
         </LegalSubsection>
       </LegalSection>
 
-      {/* 6. Stand */}
-      <LegalSection title="6. Stand und Aktualität dieser Datenschutzerklärung">
+      {/* 6. Angebote, Rechnungen und Kuendigungen */}
+      <LegalSection title="6. Angebote, Rechnungen und Kündigungen">
+        <LegalSubsection title="Unser eigenes Angebots- und Rechnungssystem">
+          <LegalP>
+            Angebote, Auftragsbestätigungen, Rechnungen, Verträge und Kündigungen wickeln wir über
+            ein System ab, das wir selbst entwickelt haben und selbst betreiben. Es ist unter
+            app.mehrauftrag.de erreichbar und liegt bei der Hostinger International Ltd., 61 Lordou
+            Vironos Street, 6023 Larnaca, Zypern. Mit Hostinger besteht ein Vertrag zur
+            Auftragsverarbeitung nach Art. 28 DSGVO.
+          </LegalP>
+          <LegalP>
+            Verarbeitet werden dabei Ihr Name beziehungsweise die Firma, Ihre Anschrift, Ihre
+            Kontaktdaten, die Angaben zum jeweiligen Auftrag sowie die Rechnungs- und Zahlungsdaten.
+            Ein Angebot erhalten Sie als persönlichen Link, über den Sie es online annehmen können.
+            Rechnungen bekommen Sie als PDF per E-Mail; das PDF ist zusätzlich mit einem Passwort
+            geschützt, das nur Sie kennen.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO für die Vertragsanbahnung und die
+            Vertragsdurchführung sowie Art. 6 Abs. 1 lit. c DSGVO für die steuer- und
+            handelsrechtlichen Aufbewahrungspflichten. Rechnungen und die dazugehörigen Unterlagen
+            bewahren wir für die gesetzliche Frist von zehn Jahren auf. Der Versand dieser E-Mails
+            läuft über Brevo (Sendinblue GmbH, Köpenicker Straße 126, 10179 Berlin, Deutschland).
+          </LegalP>
+        </LegalSubsection>
+
+        <LegalSubsection title="SEPA-Lastschrift über Mollie">
+          <LegalP>
+            Für den Einzug per SEPA-Lastschrift nutzen wir Mollie. Anbieter ist die Mollie B.V.,
+            Keizersgracht 126, 1015 CW Amsterdam, Niederlande. Mollie ist bei der niederländischen
+            Zentralbank als E-Geld-Institut lizenziert.
+          </LegalP>
+          <LegalP>
+            Wenn Sie ein SEPA-Lastschriftmandat erteilen, geben Sie Ihre Bankverbindung direkt bei
+            Mollie ein. Wir selbst sehen und speichern nur die letzten Stellen Ihrer Kontonummer,
+            die Mandatsreferenz und den Status der Zahlung, nicht die vollständige IBAN. Verarbeitet
+            werden außerdem Ihr Name, der Rechnungsbetrag und das Datum des Einzugs. Vor einem
+            wiederkehrenden Einzug erhalten Sie von uns eine Vorabankündigung per E-Mail.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, da die Verarbeitung zur Abwicklung der
+            von Ihnen beauftragten Zahlung erforderlich ist, sowie Art. 6 Abs. 1 lit. c DSGVO,
+            soweit Mollie als lizenziertes Zahlungsinstitut eigenen gesetzlichen Pflichten
+            unterliegt. Insoweit verarbeitet Mollie Ihre Zahlungsdaten eigenverantwortlich. Weitere
+            Informationen finden Sie unter{" "}
+            <LegalLink href="https://www.mollie.com/de/privacy">
+              https://www.mollie.com/de/privacy
+            </LegalLink>
+          </LegalP>
+        </LegalSubsection>
+
+        <LegalSubsection title="Kündigung">
+          <LegalP>
+            Ihren Vertrag können Sie jederzeit über unser Kündigungsformular unter
+            app.mehrauftrag.de/kuendigen/mehr_auftrag beenden, ohne Konto und ohne Anmeldung.
+            Verarbeitet werden dabei Ihr Name, Ihre Kontaktdaten, das Datum Ihrer Erklärung und ein
+            von Ihnen freiwillig angegebener Grund. Ihre Kündigung bestätigen wir Ihnen per E-Mail;
+            eine Kopie geht an unser Postfach.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO in Verbindung mit § 312k BGB. Die
+            Kündigungsdaten bewahren wir für die Dauer der gesetzlichen Aufbewahrungsfristen auf.
+          </LegalP>
+        </LegalSubsection>
+
+        <LegalSubsection title="Keine automatisierte Entscheidungsfindung">
+          <LegalP>
+            Eine automatisierte Entscheidungsfindung im Einzelfall einschließlich Profiling nach
+            Art. 22 DSGVO findet nicht statt. Unsere Systeme erzeugen lediglich Rechnungen und
+            Erinnerungen nach den vertraglich vereinbarten Regeln. Eine rechtliche Wirkung oder eine
+            ähnlich erhebliche Beeinträchtigung ist damit nicht verbunden.
+          </LegalP>
+        </LegalSubsection>
+      </LegalSection>
+
+      {/* 7. Stand */}
+      <LegalSection title="7. Stand und Aktualität dieser Datenschutzerklärung">
         <LegalP>
           Stand dieser Datenschutzerklärung: September 2026. Wir behalten uns vor, diese
           Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen
