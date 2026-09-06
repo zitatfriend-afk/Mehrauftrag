@@ -199,7 +199,7 @@ export default function CookieConsent() {
 
   return (
     <>
-      {/* Reopen-Button (Widerruf / Einstellungen ändern) */}
+      {/* Reopen-Knopf (Widerruf / Einstellungen aendern) */}
       {!open && (
         <button
           type="button"
@@ -214,43 +214,66 @@ export default function CookieConsent() {
         </button>
       )}
 
+      {/*
+        Schmale Leiste am unteren Rand statt Modal mit Abdunklung.
+        Grund: Der frühere Dialog hat auf dem Handy den kompletten ersten
+        Bildschirm verdeckt, inklusive Überschrift und Formular. Jeder Besucher
+        musste erst wegklicken, bevor er überhaupt sah, worum es geht.
+        "Nur notwendige" und "Alle akzeptieren" stehen bewusst gleich gross
+        nebeneinander, damit Ablehnen genauso leicht ist wie Zustimmen.
+      */}
       <AnimatePresence>
         {open && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[70] bg-black/50 backdrop-blur-sm"
-            />
-            <motion.div
-              role="dialog"
-              aria-modal="true"
-              aria-label="Cookie-Einstellungen"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 40 }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="fixed inset-x-0 bottom-0 z-[80] mx-auto w-full max-w-2xl rounded-t-2xl border border-white/10 bg-[#070d20] p-6 shadow-2xl sm:bottom-4 sm:rounded-2xl"
-            >
-              <h2 className="text-lg font-semibold text-white">
-                Wir respektieren Ihre Privatsphäre
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">
-                Wir verwenden Cookies, um unsere Website bereitzustellen und, mit Ihrer
-                Einwilligung, die Reichweite unserer Werbung zu messen und die Nutzung unserer
-                Website zu analysieren (Meta-Pixel, Google Analytics, Microsoft Clarity). Notwendige Cookies sind
-                für den Betrieb erforderlich. Marketing- und Analyse-Cookies werden nur gesetzt,
-                wenn Sie zustimmen. Sie können Ihre Einwilligung jederzeit mit Wirkung für die
-                Zukunft widerrufen. Mehr dazu in unserer{" "}
-                <Link href="/datenschutz" className="text-blue-400 underline hover:text-blue-300">
-                  Datenschutzerklärung
-                </Link>
-                .
-              </p>
+          <motion.div
+            role="region"
+            aria-label="Cookie-Hinweis"
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 28 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-x-0 bottom-0 z-[80] border-t border-white/10 bg-[#070d20]/95 shadow-[0_-8px_30px_rgba(0,0,0,0.45)] backdrop-blur"
+          >
+            <div className="mx-auto w-full max-w-5xl px-4 py-3 sm:px-6 sm:py-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+                <p className="text-[13px] leading-snug text-slate-300 sm:flex-1 sm:text-sm">
+                  Wir nutzen Cookies, um die Website bereitzustellen und, mit Ihrer Einwilligung,
+                  die Wirkung unserer Werbung zu messen (Meta-Pixel, Google Analytics, Microsoft
+                  Clarity).{" "}
+                  <Link
+                    href="/datenschutz"
+                    className="text-blue-400 underline underline-offset-2 hover:text-blue-300"
+                  >
+                    Datenschutz
+                  </Link>
+                  {" · "}
+                  <button
+                    type="button"
+                    onClick={() => setShowSettings((v) => !v)}
+                    className="text-slate-300 underline underline-offset-2 transition hover:text-white"
+                  >
+                    Einstellungen
+                  </button>
+                </p>
 
-              {/* Granulare Einstellungen */}
+                <div className="flex items-center gap-2 sm:shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => save(false)}
+                    className="flex-1 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-medium text-slate-200 transition hover:border-white/30 hover:text-white sm:flex-none sm:px-5"
+                  >
+                    Nur notwendige
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => save(true)}
+                    className="flex-1 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-500 sm:flex-none sm:px-5"
+                  >
+                    Alle akzeptieren
+                  </button>
+                </div>
+              </div>
+
+              {/* Granulare Einstellungen, nur auf Wunsch */}
               <AnimatePresence initial={false}>
                 {showSettings && (
                   <motion.div
@@ -259,7 +282,7 @@ export default function CookieConsent() {
                     exit={{ height: 0, opacity: 0 }}
                     className="overflow-hidden"
                   >
-                    <div className="mt-4 space-y-3">
+                    <div className="mt-4 space-y-3 border-t border-white/10 pt-4">
                       <div className="flex items-start justify-between gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-4">
                         <div>
                           <p className="text-sm font-medium text-white">Notwendig</p>
@@ -278,9 +301,12 @@ export default function CookieConsent() {
                             Marketing & Analyse (Meta-Pixel, Google Analytics, Microsoft Clarity)
                           </p>
                           <p className="mt-1 text-xs text-slate-400">
-                            Hilft uns, die Wirkung unserer Werbung auf Facebook, Instagram & Google
-                            zu messen und, anonymisiert, zu verstehen, wie unsere Website genutzt
-                            wird, um sie zu verbessern.
+                            Hilft uns, die Wirkung unserer Werbung auf Facebook, Instagram und
+                            Google zu messen und, anonymisiert, zu verstehen, wie unsere Website
+                            genutzt wird, um sie zu verbessern. Bei Anfragen über das Formular wird
+                            Ihre Telefonnummer zusätzlich verschlüsselt an Google übermittelt,
+                            damit wir sehen, welche Anzeige die Anfrage gebracht hat. Sie können
+                            Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.
                           </p>
                         </div>
                         <input
@@ -290,47 +316,20 @@ export default function CookieConsent() {
                           className="mt-1 h-5 w-5 shrink-0 accent-blue-500"
                         />
                       </label>
+
+                      <button
+                        type="button"
+                        onClick={() => save(marketing)}
+                        className="w-full rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-500 sm:w-auto"
+                      >
+                        Auswahl speichern
+                      </button>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
-
-              {/* Buttons */}
-              <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-                {showSettings ? (
-                  <button
-                    type="button"
-                    onClick={() => save(marketing)}
-                    className="order-1 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-500 sm:order-none"
-                  >
-                    Auswahl speichern
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => setShowSettings(true)}
-                    className="order-3 rounded-xl border border-white/15 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-white/30 hover:text-white sm:order-none"
-                  >
-                    Einstellungen
-                  </button>
-                )}
-                <button
-                  type="button"
-                  onClick={() => save(false)}
-                  className="order-2 rounded-xl border border-white/15 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-white/30 hover:text-white sm:order-none"
-                >
-                  Nur notwendige
-                </button>
-                <button
-                  type="button"
-                  onClick={() => save(true)}
-                  className="order-0 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-500 sm:order-none sm:ml-auto"
-                >
-                  Alle akzeptieren
-                </button>
-              </div>
-            </motion.div>
-          </>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

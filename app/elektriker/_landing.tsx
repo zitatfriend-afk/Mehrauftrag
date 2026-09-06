@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { sendeFormularConversion, sendeTelefonklickConversion } from "../_lib/ads-conversion";
 import MaMark from "../_components/ma-mark";
 import { FAQS } from "./_faqs";
 
@@ -48,21 +49,11 @@ declare global {
   }
 }
 
-// Google Ads Conversion-Labels, angelegt am 06.09.2026 im Konto 735-056-7333.
-// Beide Landingpages melden auf dieselben zwei Aktionen. Das ist gewollt:
-// Google Ads zaehlt eine Conversion ohnehin nur, wenn sie einem Anzeigenklick
-// zuzuordnen ist. Welche Seite den Lead gebracht hat, steht sauber in der
-// Supabase-Tabelle "leads", dort traegt jede Zeile ihre Quelle.
-const GA_ADS_CONVERSION_FORM  = "AW-18287779811/hS5HCOznt-8cEOO_pZBE"; // Formular gesendet
-const GA_ADS_CONVERSION_PHONE = "AW-18287779811/vAYnCO_nt-8cEOO_pZBE"; // Telefonklick
-
-// Google Ads Conversion "Telefonklick". Bewusst an JEDEM tel:-Link verwendet,
-// damit alle Anrufwege gezaehlt werden und nicht nur der Button im Header.
-function trackPhoneClick() {
-  if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag("event", "conversion", { send_to: GA_ADS_CONVERSION_PHONE });
-  }
-}
+// Google Ads Conversions liegen zentral in app/_lib/ads-conversion.ts.
+// Dort steckt auch die Logik fuer die erweiterten Conversions: Liegt eine
+// Marketing-Einwilligung vor, wird die Telefonnummer als user_data mitgesendet,
+// damit Google den Lead auch ohne Cookie dem Anzeigenklick zuordnen kann.
+const trackPhoneClick = sendeTelefonklickConversion;
 
 // ─── Shared Motion ────────────────────────────────────────────────────────────
 const EASE_OUT = [0.16, 1, 0.3, 1] as [number, number, number, number];
@@ -258,11 +249,10 @@ function LeadForm() {
         window.fbq("track", "Lead", { content_name: "Elektriker LP" });
       }
 
-      // Google Ads Conversion-Event – Formular gesendet
-      // Feuert nur wenn gtag geladen ist (Consent Mode: ad_storage granted)
-      if (typeof window !== "undefined" && typeof window.gtag === "function") {
-        window.gtag("event", "conversion", { send_to: GA_ADS_CONVERSION_FORM });
-      }
+      // Google Ads Conversion "Formular gesendet". Feuert nur, wenn gtag
+      // geladen ist. Bei vorliegender Einwilligung geht die Telefonnummer als
+      // erweiterte Conversion mit, sonst nur das reine Ereignis.
+      sendeFormularConversion(phone.trim());
 
       setState("success");
     } catch {

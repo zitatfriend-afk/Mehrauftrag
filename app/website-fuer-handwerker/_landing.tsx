@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { sendeFormularConversion, sendeTelefonklickConversion } from "../_lib/ads-conversion";
 import MaMark from "../_components/ma-mark";
 import GoogleReviews from "../_components/google-reviews";
 import { FAQS } from "./_faqs";
@@ -53,21 +54,11 @@ declare global {
   }
 }
 
-// Google Ads Conversion-Labels, angelegt am 06.09.2026 im Konto 735-056-7333.
-// Beide Landingpages melden auf dieselben zwei Aktionen. Das ist gewollt:
-// Google Ads zaehlt eine Conversion ohnehin nur, wenn sie einem Anzeigenklick
-// zuzuordnen ist. Welche Seite den Lead gebracht hat, steht sauber in der
-// Supabase-Tabelle "leads", dort traegt jede Zeile ihre Quelle.
-const GA_ADS_CONVERSION_FORM  = "AW-18287779811/hS5HCOznt-8cEOO_pZBE"; // Formular gesendet
-const GA_ADS_CONVERSION_PHONE = "AW-18287779811/vAYnCO_nt-8cEOO_pZBE"; // Telefonklick
-
-// Google Ads Conversion "Telefonklick". Bewusst an JEDEM tel:-Link verwendet,
-// damit alle Anrufwege gezaehlt werden und nicht nur der Button im Header.
-function trackPhoneClick() {
-  if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag("event", "conversion", { send_to: GA_ADS_CONVERSION_PHONE });
-  }
-}
+// Google Ads Conversions liegen zentral in app/_lib/ads-conversion.ts.
+// Dort steckt auch die Logik fuer die erweiterten Conversions: Liegt eine
+// Marketing-Einwilligung vor, wird die Telefonnummer als user_data mitgesendet,
+// damit Google den Lead auch ohne Cookie dem Anzeigenklick zuordnen kann.
+const trackPhoneClick = sendeTelefonklickConversion;
 
 // ─── Shared Motion ────────────────────────────────────────────────────────────
 const EASE_OUT = [0.16, 1, 0.3, 1] as [number, number, number, number];
@@ -314,11 +305,10 @@ function LeadForm() {
         window.fbq("track", "Lead", { content_name: PAGE_LABEL });
       }
 
-      // Google Ads Conversion-Event – Formular gesendet
-      // Feuert nur wenn gtag geladen ist (Consent Mode: ad_storage granted)
-      if (typeof window !== "undefined" && typeof window.gtag === "function") {
-        window.gtag("event", "conversion", { send_to: GA_ADS_CONVERSION_FORM });
-      }
+      // Google Ads Conversion "Formular gesendet". Feuert nur, wenn gtag
+      // geladen ist. Bei vorliegender Einwilligung geht die Telefonnummer als
+      // erweiterte Conversion mit, sonst nur das reine Ereignis.
+      sendeFormularConversion(phone.trim());
 
       setState("success");
     } catch {
@@ -547,6 +537,63 @@ function AmbientBackground() {
       <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 110% 95% at 50% 50%, transparent 48%, rgba(2,8,24,0.65) 100%)" }} />
       <div className="noise-overlay" />
     </div>
+  );
+}
+
+// ─── Dauerhafter Anfrage-Knopf auf dem Handy ─────────────────────────────────
+// Auf dem Handy ist der Knopf aus dem Kopfbereich nach dem ersten Scrollen weg.
+// Bis zum Formular ganz unten gibt es dann keinen sichtbaren Weg zur Anfrage.
+// Diese Leiste erscheint nach dem Heldenbereich und verschwindet wieder, sobald
+// das Formular selbst im Bild ist, damit sie den Absenden-Knopf nicht verdeckt.
+// Nur unter sm sichtbar, am Rechner gibt es das Problem nicht.
+function AnfrageLeiste() {
+  const [gescrollt, setGescrollt] = useState(false);
+  const [formularImBild, setFormularImBild] = useState(false);
+
+  useEffect(() => {
+    function beiScroll() {
+      setGescrollt(window.scrollY > 700);
+    }
+    beiScroll();
+    window.addEventListener("scroll", beiScroll, { passive: true });
+
+    let beobachter: IntersectionObserver | null = null;
+    const ziel = document.getElementById("anfrage");
+    if (ziel && typeof IntersectionObserver !== "undefined") {
+      beobachter = new IntersectionObserver(
+        (eintraege) => setFormularImBild(eintraege.some((e) => e.isIntersecting)),
+        { rootMargin: "0px 0px -25% 0px" },
+      );
+      beobachter.observe(ziel);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", beiScroll);
+      if (beobachter) beobachter.disconnect();
+    };
+  }, []);
+
+  const zeigen = gescrollt && !formularImBild;
+
+  return (
+    <AnimatePresence>
+      {zeigen && (
+        <motion.div
+          initial={{ y: 80 }}
+          animate={{ y: 0 }}
+          exit={{ y: 80 }}
+          transition={{ duration: 0.25, ease: EASE_OUT }}
+          className="fixed inset-x-0 bottom-0 z-[55] border-t border-white/10 bg-[#050b1c]/95 py-3 pl-4 pr-[76px] backdrop-blur sm:hidden"
+        >
+          <a
+            href="#anfrage"
+            className="flex w-full items-center justify-center rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition active:scale-[0.99]"
+          >
+            Kostenlosen Entwurf sichern
+          </a>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
 
@@ -1030,6 +1077,8 @@ export default function HandwerkerLanding() {
             </motion.div>
           </div>
         </motion.section>
+
+        <AnfrageLeiste />
 
         {/* ─── WhatsApp Floating-Button ─── */}
         <a
