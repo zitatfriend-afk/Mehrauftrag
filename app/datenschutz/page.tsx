@@ -394,6 +394,85 @@ export default function DatenschutzPage() {
             </LegalLink>
           </LegalP>
         </LegalSubsection>
+
+        <LegalSubsection title="Terminbuchung über unsere eigene Terminseite">
+          <LegalP>
+            Neben Calendly stellen wir für Erstgespräche eine eigene Terminseite bereit, die wir
+            selbst betreiben. Wenn Sie dort einen Termin buchen, bleiben Ihre Daten in unserer Hand
+            und werden nicht an Calendly übermittelt. Wir verarbeiten dann die von Ihnen
+            eingegebenen Angaben: Vor- und Nachname,
+            E-Mail-Adresse, Telefonnummer, auf Wunsch Ihren Firmennamen, die gewählte Gesprächsform
+            (Telefon oder Videogespräch) und den gewählten Zeitpunkt. Zusätzlich speichern wir den
+            Status des Termins, damit eine Absage oder Verschiebung möglich ist. Diese Daten
+            benötigen wir, um den Termin verbindlich zu vereinbaren, Sie an ihn zu erinnern und das
+            Gespräch führen zu können.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage ist die Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage hin
+            (Art. 6 Abs. 1 lit. b DSGVO) sowie unser berechtigtes Interesse an einer zuverlässigen
+            Terminorganisation (Art. 6 Abs. 1 lit. f DSGVO). Die Angabe der Daten ist freiwillig,
+            ohne sie können wir jedoch keinen Termin vereinbaren. Sie können einen gebuchten Termin
+            jederzeit über den Link in Ihrer Bestätigungsmail selbst absagen. Wir löschen die
+            Termindaten, sobald sie für die Durchführung und Nachbereitung des Gesprächs nicht mehr
+            erforderlich sind, spätestens nach Ablauf gesetzlicher Aufbewahrungsfristen.
+          </LegalP>
+          <LegalP>
+            An der Terminbuchung sind folgende Dienstleister als Auftragsverarbeiter beteiligt. Mit
+            allen genannten Anbietern haben wir einen Vertrag zur Auftragsverarbeitung nach Art. 28
+            DSGVO geschlossen:
+          </LegalP>
+          <LegalList
+            items={[
+              <>
+                <strong className="text-white/80">Hosting der Terminseite:</strong> Netlify, Inc.,
+                512 2nd Street, Suite 200, San Francisco, CA 94107, USA. Netlify verarbeitet beim
+                Aufruf der Seite technische Zugriffsdaten wie IP-Adresse, Zeitpunkt und aufgerufene
+                Seite. Netlify ist unter dem EU-U.S. Data Privacy Framework zertifiziert; ergänzend
+                gelten die Standardvertragsklauseln der EU-Kommission.{" "}
+                <LegalLink href="https://www.netlify.com/privacy/">
+                  https://www.netlify.com/privacy/
+                </LegalLink>
+              </>,
+              <>
+                <strong className="text-white/80">Speicherung der Termindaten:</strong> Supabase,
+                Inc. (Anschrift siehe oben). Die Datenbank dieses Projekts wird in der Region
+                Frankfurt am Main innerhalb der Europäischen Union betrieben.{" "}
+                <LegalLink href="https://supabase.com/privacy">
+                  https://supabase.com/privacy
+                </LegalLink>
+              </>,
+              <>
+                <strong className="text-white/80">Versand von Bestätigung und Erinnerung:</strong>{" "}
+                Brevo (Sendinblue GmbH, Köpenicker Straße 126, 10179 Berlin, für die Sendinblue
+                SAS, 106 boulevard Haussmann, 75008 Paris, Frankreich). Über Brevo versenden wir die
+                Terminbestätigung und die Erinnerung per E-Mail und, sofern Sie eine Mobilnummer
+                angegeben haben, per SMS. Dafür werden Ihr Name, Ihre E-Mail-Adresse, Ihre
+                Telefonnummer und die Termindaten übermittelt. Die Verarbeitung erfolgt auf Servern
+                innerhalb der Europäischen Union.{" "}
+                <LegalLink href="https://www.brevo.com/de/legal/privacypolicy/">
+                  https://www.brevo.com/de/legal/privacypolicy/
+                </LegalLink>
+              </>,
+              <>
+                <strong className="text-white/80">Kalendereintrag und Videogespräch:</strong> Google
+                Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Der Termin wird in
+                unseren Google Kalender eingetragen; bei einem Videogespräch entsteht dabei ein
+                Google-Meet-Raum. Übermittelt werden Ihr Name, Ihre E-Mail-Adresse und die
+                Termindaten. Dabei kann es zu einer Übermittlung in die USA kommen; Google LLC ist
+                unter dem EU-U.S. Data Privacy Framework zertifiziert, ergänzend gelten die
+                Standardvertragsklauseln der EU-Kommission.{" "}
+                <LegalLink href="https://policies.google.com/privacy">
+                  https://policies.google.com/privacy
+                </LegalLink>
+              </>,
+            ]}
+          />
+          <LegalP>
+            Unsere Terminseite setzt keine Cookies zu Analyse- oder Werbezwecken, bindet keine
+            Schriftarten oder Skripte von fremden Servern ein und überträgt keine Daten an
+            Analyse- oder Werbedienste.
+          </LegalP>
+        </LegalSubsection>
       </LegalSection>
 
       {/* 4. Soziale Medien */}
