@@ -372,7 +372,7 @@ function LeadForm() {
       <button
         type="submit"
         disabled={state === "loading"}
-        className="shimmer-btn group inline-flex w-full items-center justify-center gap-2.5 rounded-xl px-7 py-4 text-base font-semibold text-white transition disabled:opacity-70"
+        className="shimmer-btn group inline-flex w-full items-center justify-center gap-2.5 whitespace-nowrap rounded-xl px-4 py-4 text-base font-semibold text-white transition disabled:opacity-70 sm:px-7"
         style={{
           background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
           boxShadow: "0 4px 20px rgba(59,130,246,0.45), 0 0 0 1px rgba(59,130,246,0.3)",
@@ -380,7 +380,7 @@ function LeadForm() {
       >
         <span className="relative z-10">{state === "loading" ? "Wird gesendet …" : "Kostenlosen Entwurf sichern"}</span>
         {state !== "loading" && (
-          <svg className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="relative z-10 hidden h-4 w-4 transition-transform group-hover:translate-x-0.5 sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         )}
@@ -832,14 +832,14 @@ export default function HandwerkerLanding() {
               <div className="mt-7 flex justify-center">
                 <a
                   href="#anfrage"
-                  className="shimmer-btn group inline-flex items-center justify-center gap-2.5 rounded-xl px-8 py-4 text-base font-semibold text-white"
+                  className="shimmer-btn group inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-xl px-4 py-4 text-base font-semibold text-white sm:px-8"
                   style={{
                     background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
                     boxShadow: "0 4px 20px rgba(59,130,246,0.45), 0 0 0 1px rgba(59,130,246,0.3)",
                   }}
                 >
                   <span className="relative z-10">Kostenlosen Entwurf sichern</span>
-                  <svg className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="relative z-10 hidden h-4 w-4 transition-transform group-hover:translate-x-0.5 sm:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
