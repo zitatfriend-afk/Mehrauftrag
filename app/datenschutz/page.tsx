@@ -610,15 +610,51 @@ export default function DatenschutzPage() {
               wie im Punkt „Widerspruch gegen Datenerfassung" dargestellt generell untersagen.
             </LegalP>
           </LegalSubsection>
+          <LegalSubsection title="Google Ads Conversion-Tracking und erweiterte Conversions">
+            <LegalP>
+              Wir nutzen Google Ads, das Online-Werbeprogramm der Google Ireland Limited, Gordon
+              House, Barrow Street, Dublin 4, Irland. Dabei kommt Conversion-Tracking zum Einsatz.
+              Klicken Sie auf eine von uns geschaltete Anzeige, wird ein Cookie gesetzt, mit dem wir
+              erkennen, ob ein Anzeigenklick zu einer Anfrage geführt hat. Wir erhalten dabei keine
+              Informationen, mit denen sich einzelne Nutzer persönlich identifizieren lassen. Uns
+              werden lediglich Gesamtzahlen mitgeteilt, etwa wie viele Anfragen auf eine Anzeige
+              zurückgehen.
+            </LegalP>
+            <LegalP>
+              Zusätzlich setzen wir die Funktion „erweiterte Conversions" ein. Senden Sie uns über
+              das Anfrageformular Ihre Telefonnummer, wird diese ausschließlich zu diesem Zweck
+              zusätzlich an Google übermittelt. Die Übertragung erfolgt verschlüsselt und in
+              gehashter Form, also als nicht rückrechenbare Zeichenfolge. Google gleicht diesen Wert
+              mit bei Google angemeldeten Konten ab, um eine Anfrage einem Anzeigenklick zuordnen
+              zu können, auch wenn kein Cookie gesetzt werden konnte. Ein Zugriff auf Ihre
+              Telefonnummer im Klartext findet durch diesen Vorgang nicht statt.
+            </LegalP>
+            <LegalP>
+              Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1
+              TDDDG. Das Conversion-Tracking und die erweiterten Conversions werden nur aktiv, wenn
+              Sie im Cookie-Hinweis „Alle akzeptieren" oder in den Einstellungen die Kategorie
+              Marketing und Analyse ausgewählt haben. Ihre Einwilligung können Sie jederzeit mit
+              Wirkung für die Zukunft widerrufen, indem Sie unten links auf der Seite
+              „Cookie-Einstellungen" öffnen und Ihre Auswahl ändern. Wählen Sie „Nur notwendige",
+              werden weder Cookies für das Conversion-Tracking gesetzt noch Daten aus dem Formular
+              an Google übermittelt.
+            </LegalP>
+            <LegalP>
+              Die Datenübermittlung in die USA ist auf die Standardvertragsklauseln der
+              EU-Kommission gestützt. Details dazu finden Sie bei Google unter
+              https://policies.google.com/privacy sowie unter
+              https://business.safety.google/adscontrollerterms/.
+            </LegalP>
+          </LegalSubsection>
         </LegalSubsection>
       </LegalSection>
 
       {/* 6. Stand */}
       <LegalSection title="6. Stand und Aktualität dieser Datenschutzerklärung">
         <LegalP>
-          Stand dieser Datenschutzerklärung: Juli 2026. Wir behalten uns vor, diese
+          Stand dieser Datenschutzerklärung: September 2026. Wir behalten uns vor, diese
           Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen
-          entspricht oder um Änderungen unserer Leistungen umzusetzen – etwa bei der Einführung
+          entspricht oder um Änderungen unserer Leistungen umzusetzen, etwa bei der Einführung
           neuer Dienste. Für Ihren erneuten Besuch gilt dann die jeweils aktuelle Fassung.
         </LegalP>
       </LegalSection>
