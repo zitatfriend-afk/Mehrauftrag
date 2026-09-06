@@ -494,7 +494,12 @@ export default function ElektrikerLanding() {
             initial={false}
             animate="show"
             variants={stagger}
-            className="relative z-10 mx-auto max-w-2xl pt-6 pb-4 text-center"
+            // max-w-4xl statt 2xl: bei 672 px brach die Ueberschrift auf drei Zeilen und
+            // "Ihren" stand allein in der Mitte. Mit 896 px passt sie in zwei Zeilen,
+            // dadurch rutscht auch der Absende-Button ueber die Sichtkante. Auf dem Handy
+            // aendert sich nichts, dort ist der Bildschirm ohnehin schmaler. Die Absaetze
+            // darunter haben ihre eigene, engere Breite und bleiben davon unberuehrt.
+            className="relative z-10 mx-auto max-w-4xl pt-6 pb-4 text-center"
           >
             <motion.div variants={fadeUp}>
               <div
