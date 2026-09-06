@@ -9,9 +9,10 @@ import StandorteLeiste from "./_components/standorte-leiste";
 // Google Analytics 4, Measurement-ID
 const GA_MEASUREMENT_ID = "G-7ZLRDEFHNB";
 
-// Google Ads – TODO: echte Conversion-ID nach Anlage in Google Ads eintragen
-// Zu finden unter: Google Ads → Ziele → Conversions → Conversion-Aktion → Tag-Details
-const GA_ADS_ID = "AW-XXXXXXXX"; // <-- hier eintragen
+// Google Ads Conversion-ID, Konto 735-056-7333 (info@mehrauftrag.de).
+// Angelegt am 06.09.2026. Zu finden unter Ziele → Conversions → Conversion-Aktion
+// → "Ereignis-Snippet ansehen".
+const GA_ADS_ID = "AW-18287779811";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

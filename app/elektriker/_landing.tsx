@@ -48,10 +48,13 @@ declare global {
   }
 }
 
-// Google Ads Conversion-IDs
-// TODO: nach Anlage in Google Ads → Ziele → Conversions eintragen
-const GA_ADS_CONVERSION_FORM  = "AW-XXXXXXXX/YYYYYYYYYY"; // Formular gesendet
-const GA_ADS_CONVERSION_PHONE = "AW-XXXXXXXX/ZZZZZZZZZZ"; // Telefonklick
+// Google Ads Conversion-Labels, angelegt am 06.09.2026 im Konto 735-056-7333.
+// Beide Landingpages melden auf dieselben zwei Aktionen. Das ist gewollt:
+// Google Ads zaehlt eine Conversion ohnehin nur, wenn sie einem Anzeigenklick
+// zuzuordnen ist. Welche Seite den Lead gebracht hat, steht sauber in der
+// Supabase-Tabelle "leads", dort traegt jede Zeile ihre Quelle.
+const GA_ADS_CONVERSION_FORM  = "AW-18287779811/hS5HCOznt-8cEOO_pZBE"; // Formular gesendet
+const GA_ADS_CONVERSION_PHONE = "AW-18287779811/vAYnCO_nt-8cEOO_pZBE"; // Telefonklick
 
 // Google Ads Conversion "Telefonklick". Bewusst an JEDEM tel:-Link verwendet,
 // damit alle Anrufwege gezaehlt werden und nicht nur der Button im Header.
