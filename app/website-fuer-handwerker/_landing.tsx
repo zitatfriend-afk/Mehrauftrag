@@ -514,7 +514,7 @@ export default function HandwerkerLanding() {
                 {/* Unter 420 Pixel die kurze Beschriftung, sonst passt der
                     Knopf nicht neben den Schriftzug und wird beschnitten. */}
                 <span className="min-[420px]:hidden">Anfragen</span>
-                <span className="hidden min-[420px]:inline">Kostenlos anfragen</span>
+                <span className="hidden min-[420px]:inline">Entwurf sichern</span>
               </a>
             </div>
           </div>
@@ -557,7 +557,7 @@ export default function HandwerkerLanding() {
               // hyphens: "none", weil die Seite global auf hyphens: auto steht. In einer
               // Ueberschrift dieser Groesse trennt der Browser sonst mitten im Wort und es
               // stand dort "Mehr Anfragen fuer Ih-ren Handwerksbe-trieb".
-              style={{ fontSize: "clamp(30px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", hyphens: "none" }}
+              style={{ fontSize: "clamp(28px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", hyphens: "none" }}
             >
               Mehr Anfragen für Ihren{" "}
               <span className="gradient-text-blue">Handwerksbetrieb</span>

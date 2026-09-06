@@ -499,9 +499,9 @@ export default function ElektrikerLanding() {
             // dadurch rutscht auch der Absende-Button ueber die Sichtkante. Auf dem Handy
             // aendert sich nichts, dort ist der Bildschirm ohnehin schmaler. Die Absaetze
             // darunter haben ihre eigene, engere Breite und bleiben davon unberuehrt.
-            className="relative z-10 mx-auto max-w-4xl pt-6 pb-4 text-center"
+            className="relative z-10 mx-auto max-w-4xl pt-2 pb-4 text-center sm:pt-6"
           >
-            <motion.div variants={fadeUp}>
+            <motion.div variants={fadeUp} className="hidden sm:block">
               <div
                 className="badge-glow mb-5 inline-flex items-center gap-2 rounded-full px-4 py-1.5 sm:mb-8"
                 style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.26)" }}
@@ -519,7 +519,7 @@ export default function ElektrikerLanding() {
               // hyphens: "none", weil die Seite global auf hyphens: auto steht. In einer
               // Ueberschrift dieser Groesse trennt der Browser sonst mitten im Wort und es
               // stand dort "Mehr Anfragen fuer Ih-ren Handwerksbe-trieb".
-              style={{ fontSize: "clamp(30px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", hyphens: "none" }}
+              style={{ fontSize: "clamp(28px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", hyphens: "none" }}
             >
               Mehr Anfragen für Ihren{" "}
               <span className="gradient-text-blue">Elektrobetrieb</span>
@@ -544,7 +544,7 @@ export default function ElektrikerLanding() {
                 className="rounded-2xl p-6 text-left"
                 style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(59,130,246,0.28)", boxShadow: "0 12px 50px rgba(0,0,0,0.4)" }}
               >
-                <p className="mb-4 text-center text-[15px] font-bold text-white">Kostenloses Erstgespräch sichern</p>
+                <p className="mb-4 hidden text-center text-[15px] font-bold text-white sm:block">Kostenloses Erstgespräch sichern</p>
                 <LeadForm />
               </div>
               <p className="mt-4 text-center text-sm text-slate-400">
