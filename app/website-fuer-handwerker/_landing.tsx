@@ -974,7 +974,7 @@ export default function HandwerkerLanding() {
                   <span className="mb-1.5 text-sm text-slate-400">einmalig</span>
                 </div>
                 <div className="mt-2 flex items-end justify-center gap-2">
-                  <span className="text-3xl font-bold gradient-text-blue">+ 100 €</span>
+                  <span className="text-3xl font-bold gradient-text-blue">+ 99 €</span>
                   <span className="mb-1 text-sm text-slate-400">pro Monat</span>
                 </div>
               </div>

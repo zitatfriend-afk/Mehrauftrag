@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Website für Handwerker, die Aufträge bringt",
     description:
-      "In 7 Tagen online. Fester Preis ab 250 Euro plus 100 Euro im Monat, monatlich kündbar. Websites für Handwerksbetriebe in ganz Deutschland.",
+      "In 7 Tagen online. Fester Preis ab 250 Euro plus 99 Euro im Monat, monatlich kündbar. Websites für Handwerksbetriebe in ganz Deutschland.",
     url: "https://www.mehrauftrag.de/website-fuer-handwerker",
     siteName: "Mehr Auftrag",
     locale: "de_DE",
