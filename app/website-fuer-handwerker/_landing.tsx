@@ -535,9 +535,9 @@ export default function HandwerkerLanding() {
             // dadurch rutscht auch der Absende-Button ueber die Sichtkante. Auf dem Handy
             // aendert sich nichts, dort ist der Bildschirm ohnehin schmaler. Die Absaetze
             // darunter haben ihre eigene, engere Breite und bleiben davon unberuehrt.
-            className="relative z-10 mx-auto max-w-4xl pt-6 pb-4 text-center"
+            className="relative z-10 mx-auto max-w-4xl pt-2 pb-4 text-center sm:pt-6"
           >
-            <motion.div variants={fadeUp}>
+            <motion.div variants={fadeUp} className="hidden sm:block">
               <div
                 className="badge-glow mb-5 inline-flex items-center gap-2 rounded-full px-4 py-1.5 sm:mb-8"
                 style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.26)" }}
@@ -563,10 +563,10 @@ export default function HandwerkerLanding() {
 
             <motion.p
               variants={fadeUp}
-              className="mx-auto mt-5 max-w-xl text-base font-light leading-relaxed sm:mt-7 sm:text-xl"
+              className="mx-auto mt-4 max-w-xl text-base font-light leading-relaxed sm:mt-7 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              Eine Website, die bei Google gefunden wird, in 7 Tagen online, zum festen Preis. Für Handwerksbetriebe in ganz Deutschland.
+              Eine Website, die bei Google gefunden wird. In 7 Tagen online, zum festen Preis.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-7">
@@ -580,7 +580,7 @@ export default function HandwerkerLanding() {
                 className="rounded-2xl p-6 text-left"
                 style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(59,130,246,0.28)", boxShadow: "0 12px 50px rgba(0,0,0,0.4)" }}
               >
-                <p className="mb-4 text-center text-[15px] font-bold text-white">Kostenloses Erstgespräch sichern</p>
+                <p className="mb-4 hidden text-center text-[15px] font-bold text-white sm:block">Kostenloses Erstgespräch sichern</p>
                 <LeadForm />
               </div>
               <p className="mt-4 text-center text-sm text-slate-400">
