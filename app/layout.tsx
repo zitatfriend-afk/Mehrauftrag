@@ -9,6 +9,10 @@ import StandorteLeiste from "./_components/standorte-leiste";
 // Google Analytics 4, Measurement-ID
 const GA_MEASUREMENT_ID = "G-7ZLRDEFHNB";
 
+// Google Ads – TODO: echte Conversion-ID nach Anlage in Google Ads eintragen
+// Zu finden unter: Google Ads → Ziele → Conversions → Conversion-Aktion → Tag-Details
+const GA_ADS_ID = "AW-XXXXXXXX"; // <-- hier eintragen
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -87,6 +91,10 @@ export default function RootLayout({
         />
         <Script id="ga-config" strategy="afterInteractive">
           {`gtag('config', '${GA_MEASUREMENT_ID}', { anonymize_ip: true });`}
+        </Script>
+        {/* Google Ads Conversion-Tracking – läuft über denselben gtag-Stack */}
+        <Script id="ga-ads-config" strategy="afterInteractive">
+          {`gtag('config', '${GA_ADS_ID}');`}
         </Script>
 
         {children}

@@ -5,12 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import MaMark from "../_components/ma-mark";
+import GoogleReviews from "../_components/google-reviews";
 import { FAQS } from "./_faqs";
 
 /**
- * Landingpage /elektriker für Mehr Auftrag.
+ * Landingpage /website-fuer-handwerker für Mehr Auftrag.
  *
- * Zielgruppe: Elektriker-Betriebsinhaber (35–55), Region Frankfurt & Rhein-Main.
+ * Zielgruppe: Inhaber von Handwerks- und handwerksnahen Betrieben, bundesweit.
+ * Zielseite der Google-Ads-Anzeigengruppe "Handwerker Website" (siehe Vault,
+ * "Mehr Auftrag - Google Ads Kampagne Website-Verkauf"). Bewusst als Next.js
+ * Route gebaut und nicht als statische Datei in public/, weil nur so das
+ * Conversion-Tracking und der Consent Mode aus app/layout.tsx greifen.
  * Branding konsistent zur Startseite (dunkles Blau, Glas-Cards, Shimmer-CTA, Geist).
  *
  * Formular → Supabase Edge Function "submit-website-lead" → leads-Tabelle.
@@ -21,7 +26,7 @@ import { FAQS } from "./_faqs";
 // ─── Konfiguration (öffentliche Werte) ───────────────────────────────────────
 const SUBMIT_URL =
   "https://ezrxxxilssmzcavdvvbe.supabase.co/functions/v1/submit-website-lead";
-const PAGE_LABEL = "Elektriker LP";
+const PAGE_LABEL = "Handwerker LP";
 const LEAD_SOURCE = `Website - ${PAGE_LABEL}`;
 
 /**
@@ -101,13 +106,6 @@ function SectionLabel({ children, center = false }: { children: React.ReactNode;
   );
 }
 
-function Stars() {
-  return (
-    <span className="text-[#fbbf24] tracking-wide" aria-label="5 von 5 Sternen">
-      ★★★★★
-    </span>
-  );
-}
 
 function CheckIcon({ color = "#3b82f6" }: { color?: string }) {
   return (
@@ -125,7 +123,7 @@ function CheckIcon({ color = "#3b82f6" }: { color?: string }) {
 const BUILD_FEATURES: { icon: React.ReactNode; title: string; desc: string }[] = [
   {
     title: "Leistungsübersicht",
-    desc: "Alle Ihre Elektro-Leistungen klar strukturiert, von der Installation über E-Check bis zur PV- und Wallbox-Montage. Kunden sehen sofort, was Sie können.",
+    desc: "Alle Ihre Gewerke klar strukturiert, damit Kunden sofort sehen, was Sie machen und was nicht. Genau danach wird gesucht.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
@@ -181,7 +179,7 @@ const BUILD_FEATURES: { icon: React.ReactNode; title: string; desc: string }[] =
 ];
 
 const PRICE_INCLUDES = [
-  "Individuelle Website für Ihren Elektrobetrieb",
+  "Individuelle Website für Ihren Betrieb",
   "Hosting & sichere SSL-Verschlüsselung",
   "Laufende Pflege, Updates & Sicherheit",
   "Inhaltliche Anpassungen jederzeit",
@@ -189,19 +187,22 @@ const PRICE_INCLUDES = [
   "Persönlicher Ansprechpartner",
 ];
 
-const TESTIMONIALS = [
-  {
-    text: "Fester Preis, kein Kleingedrucktes. Sie wissen vorab genau, was Sie bekommen, und was es kostet. Monatlich kündbar, keine lange Bindung.",
-    name: "Unser Versprechen an Sie",
-  },
-  {
-    text: "Ein fester Ansprechpartner statt Hotline. Sie reden mit einem Menschen, Rückruf innerhalb von 24 Stunden, ohne Verkaufsdruck.",
-    name: "Mehr Auftrag · Patrick Sauna",
-  },
-];
-/* TODO: Sobald echte Google-Bewertungen vorliegen, hier als Kundenstimmen einsetzen. */
+// Kundenstimmen kommen aus app/_components/google-reviews.tsx, also woertlich aus
+// dem oeffentlichen Google-Profil. Die frueher hier stehenden Eigenzitate mit
+// fuenf Sternen sahen aus wie Kundenbewertungen, waren aber Versprechen von Mehr
+// Auftrag selbst. Das ist auf einer Anzeigen-Zielseite ein Vertrauens- und ein
+// Richtlinienrisiko und deshalb bewusst ersetzt.
 
 const REFERENCES = [
+  {
+    name: "SZ Innenausbau",
+    branche: "Renovierung & Sanierung · Frankfurt am Main",
+    text: "Alle Gewerke von Fliesen bis Sandstrahlen auf einen Blick, mit Vorher-nachher-Regler und Anfrage mit direkter Leistungsauswahl.",
+    href: "https://sz-innenausbau.de/",
+    domain: "sz-innenausbau.de",
+    image: "/referenzen/sz-innenausbau.jpg",
+    emoji: "🛠️",
+  },
   {
     name: "SOROKIN Mobiler Schweißservice",
     branche: "Metallbau & Schweißservice · Sauerland",
@@ -220,11 +221,20 @@ const REFERENCES = [
     image: "/referenzen/blitz.png",
     emoji: "🧽",
   },
+  {
+    name: "Blitz Industrie & Gebäudereinigung",
+    branche: "Gebäudereinigung & Hausmeisterservice · Region Bebra",
+    text: "Zwei Leistungsbereiche unter einem Namen, sauber getrennt und trotzdem übersichtlich, mit Galerie und echten Bewertungen.",
+    href: "https://reinigungblitz.com/",
+    domain: "reinigungblitz.com",
+    image: "/referenzen/reinigungblitz.jpg",
+    emoji: "🧹",
+  },
 ];
 
 
 // ─── Formular ─────────────────────────────────────────────────────────────────
-type SubmitState = "idle" | "loading" | "success" | "error";
+type SubmitState = "idle" | "loading" | "success" | "invalid" | "failed";
 
 function LeadForm() {
   const [name, setName] = useState("");
@@ -235,7 +245,7 @@ function LeadForm() {
     e.preventDefault();
     if (state === "loading") return;
     if (!name.trim() || !phone.trim()) {
-      setState("error");
+      setState("invalid");
       return;
     }
     setState("loading");
@@ -252,7 +262,7 @@ function LeadForm() {
       // (d. h. Marketing-Cookies wurden zugestimmt). Bestehende Implementierung
       // wird nicht verändert.
       if (typeof window !== "undefined" && typeof window.fbq === "function") {
-        window.fbq("track", "Lead", { content_name: "Elektriker LP" });
+        window.fbq("track", "Lead", { content_name: PAGE_LABEL });
       }
 
       // Google Ads Conversion-Event – Formular gesendet
@@ -263,7 +273,7 @@ function LeadForm() {
 
       setState("success");
     } catch {
-      setState("error");
+      setState("failed");
     }
   }
 
@@ -291,6 +301,17 @@ function LeadForm() {
         <p className="mt-2 text-sm text-slate-400">
           Wir rufen Sie innerhalb von 24 Stunden zurück, ganz ohne Verkaufsdruck.
         </p>
+        <a
+          href="tel:+4915202069625"
+          onClick={trackPhoneClick}
+          className="mt-5 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-white"
+          style={{ border: "1px solid rgba(96,165,250,0.4)", background: "rgba(59,130,246,0.12)" }}
+        >
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Lieber sofort sprechen? Jetzt anrufen
+        </a>
       </motion.div>
     );
   }
@@ -307,7 +328,7 @@ function LeadForm() {
           value={name}
           onChange={(e) => {
             setName(e.target.value);
-            if (state === "error") setState("idle");
+            if (state === "invalid" || state === "failed") setState("idle");
           }}
           required
           className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06]"
@@ -324,16 +345,26 @@ function LeadForm() {
           value={phone}
           onChange={(e) => {
             setPhone(e.target.value);
-            if (state === "error") setState("idle");
+            if (state === "invalid" || state === "failed") setState("idle");
           }}
           required
           className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06]"
         />
       </div>
 
-      {state === "error" && (
+      {state === "invalid" && (
         <p className="text-sm text-red-400">
-          Bitte Vorname und Telefonnummer eingeben. Klappt es nicht, rufen Sie uns gern direkt an.
+          Bitte Vorname und Telefonnummer eingeben.
+        </p>
+      )}
+
+      {state === "failed" && (
+        <p className="text-sm text-red-400">
+          Das hat gerade nicht geklappt, das liegt an uns. Bitte noch einmal senden oder direkt{" "}
+          <a href="tel:+4915202069625" onClick={trackPhoneClick} className="font-semibold underline underline-offset-2">
+            anrufen unter 0152 02069625
+          </a>
+          .
         </p>
       )}
 
@@ -355,6 +386,11 @@ function LeadForm() {
       </button>
       <p className="text-center text-xs leading-relaxed text-slate-500">
         Wir melden uns per WhatsApp oder Anruf, wie es Ihnen lieber ist. Kein Verkaufsdruck.
+        Ihre Daten nutzen wir nur, um Ihre Anfrage zu beantworten, mehr dazu in der{" "}
+        <Link href="/datenschutz" className="underline underline-offset-2 hover:text-slate-300">
+          Datenschutzerklärung
+        </Link>
+        .
       </p>
     </form>
   );
@@ -441,7 +477,7 @@ function FaqList() {
 }
 
 // ─── Seite ──────────────────────────────────────────────────────────────────
-export default function ElektrikerLanding() {
+export default function HandwerkerLanding() {
   return (
     <>
       <AmbientBackground />
@@ -503,7 +539,7 @@ export default function ElektrikerLanding() {
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-[#60a5fa] animate-pulse" />
                 <span className="text-[11px] font-semibold tracking-[0.06em]" style={{ color: "#93c5fd" }}>
-                  Speziell für Elektrikerbetriebe
+                  Für Handwerk und handwerksnahe Betriebe
                 </span>
               </div>
             </motion.div>
@@ -514,7 +550,7 @@ export default function ElektrikerLanding() {
               style={{ fontSize: "clamp(30px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em" }}
             >
               Mehr Anfragen für Ihren{" "}
-              <span className="gradient-text-blue">Elektrobetrieb</span>
+              <span className="gradient-text-blue">Handwerksbetrieb</span>
             </motion.h1>
 
             <motion.p
@@ -522,7 +558,7 @@ export default function ElektrikerLanding() {
               className="mx-auto mt-5 max-w-xl text-base font-light leading-relaxed sm:mt-7 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              Eine Website, die bei Google gefunden wird, in 7 Tagen online, zum festen Preis. Für Elektriker in Frankfurt &amp; Rhein-Main.
+              Eine Website, die bei Google gefunden wird, in 7 Tagen online, zum festen Preis. Für Handwerksbetriebe in ganz Deutschland.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-7">
@@ -541,7 +577,7 @@ export default function ElektrikerLanding() {
               </div>
               <p className="mt-4 text-center text-sm text-slate-400">
                 Lieber direkt schreiben?{" "}
-                <a href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20f%C3%BCr%20meinen%20Elektrobetrieb." target="_blank" rel="noopener" className="font-semibold text-[#25D366] hover:text-white">WhatsApp</a>
+                <a href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20f%C3%BCr%20meinen%20Handwerksbetrieb." target="_blank" rel="noopener" className="font-semibold text-[#25D366] hover:text-white">WhatsApp</a>
                 {" "}oder{" "}
                 <a href="tel:+4915202069625" onClick={trackPhoneClick} className="font-semibold text-[#60a5fa] hover:text-white">anrufen</a>
               </p>
@@ -565,10 +601,10 @@ export default function ElektrikerLanding() {
               variants={fadeUp}
               className="text-2xl font-bold leading-snug text-white sm:text-3xl"
             >
-              Ihre Kunden suchen „Elektriker Frankfurt" auf Google. Finden sie Sie?
+              Ihre Kunden suchen Ihr Gewerk auf Google. Finden sie dabei Sie?
             </motion.h2>
             <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
-              Wer heute einen Elektriker braucht, googelt zuerst. Tauchen Sie dort nicht auf, oder mit einer
+              Wer heute einen Handwerker braucht, googelt zuerst. Tauchen Sie dort nicht auf, oder mit einer
               veralteten Seite, ruft der Kunde beim Nächsten an. Jeden Tag gehen so Aufträge an Betriebe,
               die online einfach besser zu finden sind. Nicht, weil sie besser arbeiten, sondern weil man sie
               überhaupt findet.
@@ -624,7 +660,7 @@ export default function ElektrikerLanding() {
             </div>
             <motion.p variants={fadeUp} className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-slate-400">
               Eine Website allein bringt noch keine Anrufe. Gefunden wird sie erst, wenn Inhalt, Technik und
-              Google-Profil zusammenspielen. Was dazugehört, wenn ein Elektrobetrieb bei der Suche nach seinem Gewerk
+              Google-Profil zusammenspielen. Was dazugehört, wenn ein Handwerksbetrieb bei der Suche nach seinem Gewerk
               auftauchen soll, steht auf unserer Seite zur{" "}
               <Link
                 href="/suchmaschinenoptimierung"
@@ -763,7 +799,10 @@ export default function ElektrikerLanding() {
           </div>
         </motion.section>
 
-        {/* ─── Testimonials ─── */}
+        {/* ─── Echte Google-Bewertungen ─── */}
+        {/* Container bewusst breiter als der Rest (6xl statt 4xl): die
+            Bewertungs-Komponente stellt ab lg drei Spalten nebeneinander,
+            die brauchen die Breite. Auf dem Handy bleibt es einspaltig. */}
         <motion.section
           initial="hidden"
           whileInView="show"
@@ -771,34 +810,19 @@ export default function ElektrikerLanding() {
           variants={stagger}
           className="relative px-5 py-16 sm:px-8 sm:py-20"
         >
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-6xl">
             <div className="mb-10 text-center">
               <motion.div variants={fadeUp}>
-                <SectionLabel center>Warum Mehr Auftrag</SectionLabel>
+                <SectionLabel center>Echte Bewertungen</SectionLabel>
               </motion.div>
               <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">
-                Fair, transparent, persönlich
+                Das sagen Kunden über die Zusammenarbeit
               </motion.h2>
             </div>
 
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-              {TESTIMONIALS.map((t, i) => (
-                <motion.div
-                  key={i}
-                  variants={fadeUp}
-                  className="flex flex-col rounded-2xl p-8"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(59,130,246,0.15)",
-                    boxShadow: "0 4px 40px rgba(0,0,0,0.3)",
-                  }}
-                >
-                  <div className="mb-4 text-lg"><Stars /></div>
-                  <p className="flex-1 text-base font-light leading-relaxed text-slate-200">„{t.text}"</p>
-                  <p className="mt-6 text-sm font-medium text-slate-500">{t.name}</p>
-                </motion.div>
-              ))}
-            </div>
+            <motion.div variants={fadeUp}>
+              <GoogleReviews variant="dark" />
+            </motion.div>
           </div>
         </motion.section>
 
@@ -861,7 +885,7 @@ export default function ElektrikerLanding() {
 
         {/* ─── WhatsApp Floating-Button ─── */}
         <a
-          href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20f%C3%BCr%20meinen%20Elektrobetrieb."
+          href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20f%C3%BCr%20meinen%20Handwerksbetrieb."
           target="_blank"
           rel="noopener"
           aria-label="Per WhatsApp anfragen"

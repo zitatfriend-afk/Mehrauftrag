@@ -6,6 +6,7 @@
     { "pfad": "/google-ads", "quelle": ["app/google-ads/page.tsx"] },
     { "pfad": "/suchmaschinenoptimierung", "quelle": ["public/suchmaschinenoptimierung.html"] },
     { "pfad": "/elektriker", "quelle": ["app/elektriker/page.tsx"] },
+    { "pfad": "/website-fuer-handwerker", "quelle": ["app/website-fuer-handwerker/page.tsx", "app/website-fuer-handwerker/_landing.tsx", "app/_components/google-reviews.tsx"] },
     { "pfad": "/kostenlose-analyse", "quelle": ["app/kostenlose-analyse/page.tsx"] },
     { "pfad": "/webseite-fuer-kosmetikstudio", "quelle": ["public/webseite-fuer-kosmetikstudio.html"] },
     { "pfad": "/webseite-fuer-gastronomie", "quelle": ["public/webseite-fuer-gastronomie.html"] },
