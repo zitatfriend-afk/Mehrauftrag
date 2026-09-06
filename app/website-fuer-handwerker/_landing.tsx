@@ -547,7 +547,10 @@ export default function HandwerkerLanding() {
             <motion.h1
               variants={fadeUp}
               className="font-black tracking-tighter text-white"
-              style={{ fontSize: "clamp(30px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em" }}
+              // hyphens: "none", weil die Seite global auf hyphens: auto steht. In einer
+              // Ueberschrift dieser Groesse trennt der Browser sonst mitten im Wort und es
+              // stand dort "Mehr Anfragen fuer Ih-ren Handwerksbe-trieb".
+              style={{ fontSize: "clamp(30px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", hyphens: "none" }}
             >
               Mehr Anfragen für Ihren{" "}
               <span className="gradient-text-blue">Handwerksbetrieb</span>
