@@ -297,9 +297,10 @@ function LeadForm() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-lg font-bold text-white">Danke! Wir melden uns bald bei Ihnen.</h3>
+        <h3 className="text-lg font-bold text-white">Danke! Ihr Entwurf ist unterwegs.</h3>
         <p className="mt-2 text-sm text-slate-400">
-          Wir rufen Sie innerhalb von 24 Stunden zurück, ganz ohne Verkaufsdruck.
+          Wir melden uns innerhalb von 24 Stunden, klären kurz ein paar Fragen zu Ihrem Betrieb
+          und bauen danach Ihren Entwurf. Kostenlos und unverbindlich.
         </p>
         <a
           href="tel:+4915202069625"
@@ -377,7 +378,7 @@ function LeadForm() {
           boxShadow: "0 4px 20px rgba(59,130,246,0.45), 0 0 0 1px rgba(59,130,246,0.3)",
         }}
       >
-        <span className="relative z-10">{state === "loading" ? "Wird gesendet …" : "Kostenloses Erstgespräch sichern"}</span>
+        <span className="relative z-10">{state === "loading" ? "Wird gesendet …" : "Kostenlosen Entwurf sichern"}</span>
         {state !== "loading" && (
           <svg className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -385,8 +386,9 @@ function LeadForm() {
         )}
       </button>
       <p className="text-center text-xs leading-relaxed text-slate-500">
-        Wir melden uns innerhalb von 24 Stunden per WhatsApp oder Anruf, wie es Ihnen lieber ist.
-        Kein Verkaufsdruck. Ihre Daten nutzen wir nur, um Ihre Anfrage zu beantworten, mehr dazu in der{" "}
+        Wir melden uns innerhalb von 24 Stunden kurz, um Ihren Betrieb zu verstehen. Danach bekommen
+        Sie Ihren Entwurf, kostenlos und unverbindlich. Ihre Daten nutzen wir nur, um Ihre Anfrage
+        zu beantworten, mehr dazu in der{" "}
         <Link href="/datenschutz" className="underline underline-offset-2 hover:text-slate-300">
           Datenschutzerklärung
         </Link>
@@ -566,7 +568,7 @@ export default function HandwerkerLanding() {
               className="mx-auto mt-4 max-w-xl text-base font-light leading-relaxed sm:mt-7 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              Eine Website, die bei Google gefunden wird. In 7 Tagen online, zum festen Preis.
+              Sie sehen zuerst einen kostenlosen Entwurf. Erst wenn er überzeugt, geht es weiter.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-7">
@@ -580,7 +582,7 @@ export default function HandwerkerLanding() {
                 className="rounded-2xl p-6 text-left"
                 style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(59,130,246,0.28)", boxShadow: "0 12px 50px rgba(0,0,0,0.4)" }}
               >
-                <p className="mb-4 hidden text-center text-[15px] font-bold text-white sm:block">Kostenloses Erstgespräch sichern</p>
+                <p className="mb-4 hidden text-center text-[15px] font-bold text-white sm:block">Kostenlosen Entwurf sichern</p>
                 <LeadForm />
               </div>
               <p className="mt-4 text-center text-sm text-slate-400">
@@ -836,7 +838,7 @@ export default function HandwerkerLanding() {
                     boxShadow: "0 4px 20px rgba(59,130,246,0.45), 0 0 0 1px rgba(59,130,246,0.3)",
                   }}
                 >
-                  <span className="relative z-10">Jetzt anfragen</span>
+                  <span className="relative z-10">Kostenlosen Entwurf sichern</span>
                   <svg className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -883,10 +885,11 @@ export default function HandwerkerLanding() {
           <div className="relative mx-auto max-w-md">
             <div className="mb-8 text-center">
               <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">
-                Kostenloses Erstgespräch sichern
+                Kostenlosen Entwurf sichern
               </motion.h2>
               <motion.p variants={fadeUp} className="mt-3 text-base text-slate-400">
-                Vorname und Telefonnummer genügen. Wir kümmern uns um den Rest.
+                Vorname und Telefonnummer genügen. Den Rest machen wir, und Sie entscheiden erst,
+                wenn Sie Ihren Entwurf gesehen haben.
               </motion.p>
             </div>
             <motion.div
