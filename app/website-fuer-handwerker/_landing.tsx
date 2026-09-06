@@ -385,8 +385,8 @@ function LeadForm() {
         )}
       </button>
       <p className="text-center text-xs leading-relaxed text-slate-500">
-        Wir melden uns per WhatsApp oder Anruf, wie es Ihnen lieber ist. Kein Verkaufsdruck.
-        Ihre Daten nutzen wir nur, um Ihre Anfrage zu beantworten, mehr dazu in der{" "}
+        Wir melden uns innerhalb von 24 Stunden per WhatsApp oder Anruf, wie es Ihnen lieber ist.
+        Kein Verkaufsdruck. Ihre Daten nutzen wir nur, um Ihre Anfrage zu beantworten, mehr dazu in der{" "}
         <Link href="/datenschutz" className="underline underline-offset-2 hover:text-slate-300">
           Datenschutzerklärung
         </Link>
@@ -570,7 +570,7 @@ export default function HandwerkerLanding() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-7">
-              <span className="inline-flex items-center gap-1.5"><CheckIcon /> Fester Preis</span>
+              <span className="inline-flex items-center gap-1.5"><CheckIcon /> Entwurf vorab kostenlos</span>
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> In 7 Tagen online</span>
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> Monatlich kündbar</span>
             </motion.div>
@@ -733,6 +733,36 @@ export default function HandwerkerLanding() {
           </div>
         </motion.section>
 
+        {/* Reihenfolge bewusst so: Beweis vor Preis. Vorher standen die
+            Bewertungen hinter der Preisbox. Wer beim Preis abspringt, sah sie
+            nie, und das sind die staerksten Vertrauenssignale der Seite. */}
+        {/* ─── Echte Google-Bewertungen ─── */}
+        {/* Container bewusst breiter als der Rest (6xl statt 4xl): die
+            Bewertungs-Komponente stellt ab lg drei Spalten nebeneinander,
+            die brauchen die Breite. Auf dem Handy bleibt es einspaltig. */}
+        <motion.section
+          initial="hidden"
+          whileInView="show"
+          viewport={SECTION_VIEWPORT}
+          variants={stagger}
+          className="relative px-5 py-16 sm:px-8 sm:py-20"
+        >
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-10 text-center">
+              <motion.div variants={fadeUp}>
+                <SectionLabel center>Echte Bewertungen</SectionLabel>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">
+                Das sagen Kunden über die Zusammenarbeit
+              </motion.h2>
+            </div>
+
+            <motion.div variants={fadeUp}>
+              <GoogleReviews variant="dark" max={3} />
+            </motion.div>
+          </div>
+        </motion.section>
+
         {/* ─── Preisbox ─── */}
         <motion.section
           initial="hidden"
@@ -788,6 +818,15 @@ export default function HandwerkerLanding() {
                 Kein Kleingedrucktes. Kein „kostet dann doch mehr".
               </p>
 
+              {/* Einordnung statt bloßer Zahl. Die Spanne stammt aus den Anzeigen
+                  der Mitbewerber auf "website für handwerker" (Stand 06.09.2026),
+                  bewusst ohne Namen und als Spanne, weil sich Preise ändern. */}
+              <p className="mt-5 text-center text-sm leading-relaxed text-slate-400">
+                Andere Anbieter verlangen für den Einstieg 600 bis 1.000 Euro. Wir nehmen 250,
+                weil wir langfristig mit Ihnen arbeiten wollen und nicht einmalig abrechnen.
+                Bleibt die Seite nicht gut, kündigen Sie zum Monatsende.
+              </p>
+
               <div className="mt-7 flex justify-center">
                 <a
                   href="#anfrage"
@@ -803,33 +842,6 @@ export default function HandwerkerLanding() {
                   </svg>
                 </a>
               </div>
-            </motion.div>
-          </div>
-        </motion.section>
-
-        {/* ─── Echte Google-Bewertungen ─── */}
-        {/* Container bewusst breiter als der Rest (6xl statt 4xl): die
-            Bewertungs-Komponente stellt ab lg drei Spalten nebeneinander,
-            die brauchen die Breite. Auf dem Handy bleibt es einspaltig. */}
-        <motion.section
-          initial="hidden"
-          whileInView="show"
-          viewport={SECTION_VIEWPORT}
-          variants={stagger}
-          className="relative px-5 py-16 sm:px-8 sm:py-20"
-        >
-          <div className="mx-auto max-w-6xl">
-            <div className="mb-10 text-center">
-              <motion.div variants={fadeUp}>
-                <SectionLabel center>Echte Bewertungen</SectionLabel>
-              </motion.div>
-              <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">
-                Das sagen Kunden über die Zusammenarbeit
-              </motion.h2>
-            </div>
-
-            <motion.div variants={fadeUp}>
-              <GoogleReviews variant="dark" />
             </motion.div>
           </div>
         </motion.section>

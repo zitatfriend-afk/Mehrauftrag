@@ -111,9 +111,16 @@ function StarRow({ count = 5 }: { count?: number }) {
 
 export default function GoogleReviews({
   variant = "dark",
+  max,
 }: {
   variant?: "dark" | "light";
+  // Ohne Angabe werden alle Bewertungen gezeigt, so wie auf der Startseite.
+  // Auf einer Anzeigen-Zielseite ist eine Wand aus neun langen Zitaten zu viel,
+  // dort werden drei gesetzt. Reihenfolge bleibt wie in REVIEWS, die neueste
+  // steht dort bewusst vorn.
+  max?: number;
 }) {
+  const sichtbare = typeof max === "number" ? REVIEWS.slice(0, max) : REVIEWS;
   const isDark = variant === "dark";
   const cardBg = isDark ? "rgba(255,255,255,0.04)" : "#ffffff";
   const cardBorder = isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid #e7e9f2";
@@ -143,7 +150,7 @@ export default function GoogleReviews({
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {REVIEWS.map((r) => (
+        {sichtbare.map((r) => (
           <figure
             key={r.name + r.relativeTime}
             className="rounded-2xl p-6 flex flex-col gap-3"
