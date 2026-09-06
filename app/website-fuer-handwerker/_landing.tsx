@@ -239,10 +239,47 @@ const REFERENCES = [
 // ─── Formular ─────────────────────────────────────────────────────────────────
 type SubmitState = "idle" | "loading" | "success" | "invalid" | "failed";
 
+// Branchen fuer die Rueckfrage NACH dem Absenden. Bewusst nicht im Formular:
+// jedes zusaetzliche Feld vor dem Absenden kostet Anfragen, und zwar genau
+// dann, wenn der Klick schon bezahlt ist. Hier ist der Lead bereits gesichert
+// und die Conversion gezaehlt, jede Antwort ist reiner Zugewinn.
+const BRANCHEN = [
+  "Elektro",
+  "Sanitär & Heizung",
+  "Dachdecker",
+  "Maler & Stuck",
+  "Metallbau & Schweißen",
+  "Garten & Landschaft",
+  "Gebäudereinigung",
+  "Bau & Renovierung",
+  "Anderes Gewerk",
+];
+
 function LeadForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [state, setState] = useState<SubmitState>("idle");
+  // Fuer die Rueckfrage nach dem Absenden: die Lead-ID aus der ersten Antwort,
+  // die gewaehlte Branche und die freiwillige Anmerkung.
+  const [leadId, setLeadId] = useState<string | null>(null);
+  const [branche, setBranche] = useState<string | null>(null);
+  const [notiz, setNotiz] = useState("");
+  const [notizGesendet, setNotizGesendet] = useState(false);
+
+  /**
+   * Ergaenzt den bereits gespeicherten Lead. Bewusst ohne await im Aufrufer
+   * und ohne Fehleranzeige: der Lead ist zu diesem Zeitpunkt laengst sicher.
+   * Klappt der Nachtrag nicht, fehlt Patrick nur eine Zusatzinfo, der
+   * Interessent soll davon nichts merken.
+   */
+  function sendeNachtrag(daten: { industry?: string; message?: string }) {
+    if (!leadId) return;
+    void fetch(SUBMIT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nachtrag_id: leadId, ...daten }),
+    }).catch(() => {});
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -260,6 +297,15 @@ function LeadForm() {
         body: JSON.stringify({ name: name.trim(), phone: phone.trim(), source: attr.source, campaign: attr.campaign }),
       });
       if (!res.ok) throw new Error("Request failed");
+
+      // Die Antwort enthaelt die Lead-ID. Die brauchen wir gleich, um die
+      // Rueckfrage nach der Branche demselben Lead zuzuordnen.
+      try {
+        const daten = await res.json();
+        if (daten && typeof daten.id === "string") setLeadId(daten.id);
+      } catch {
+        // Ohne ID entfaellt die Rueckfrage einfach. Der Lead ist trotzdem da.
+      }
 
       // Meta-Pixel Conversion-Event, feuert nur, wenn das Pixel geladen ist
       // (d. h. Marketing-Cookies wurden zugestimmt). Bestehende Implementierung
@@ -316,6 +362,82 @@ function LeadForm() {
           </svg>
           Lieber sofort sprechen? Jetzt anrufen
         </a>
+
+        {/* ─── Rueckfrage NACH dem Absenden ───────────────────────────────
+            Der Lead ist an dieser Stelle gespeichert und die Conversion
+            gezaehlt. Deshalb kann diese Frage nichts mehr kosten, waehrend
+            dasselbe Feld im Formular Anfragen gekostet haette. Antwortet
+            niemand, bleibt es beim Anruf. Ohne Lead-ID (etwa wenn der
+            Notfallweg der Edge Function gegriffen hat) faellt der Block
+            ersatzlos weg. */}
+        {leadId && (
+          <div className="mt-7 border-t border-white/10 pt-6">
+            <p className="text-sm font-semibold text-white">
+              Eine Sache noch, dann passt Ihr Entwurf beim ersten Mal
+            </p>
+            <p className="mt-1 text-xs leading-relaxed text-slate-400">
+              In welcher Branche sind Sie? Ein Tipp genügt, freiwillig.
+            </p>
+
+            <div className="mt-4 flex flex-wrap justify-center gap-2">
+              {BRANCHEN.map((b) => {
+                const aktiv = branche === b;
+                return (
+                  <button
+                    key={b}
+                    type="button"
+                    onClick={() => {
+                      setBranche(b);
+                      sendeNachtrag({ industry: b });
+                    }}
+                    className="rounded-full px-3.5 py-2 text-[13px] font-medium transition"
+                    style={{
+                      border: aktiv ? "1px solid rgba(96,165,250,0.7)" : "1px solid rgba(255,255,255,0.14)",
+                      background: aktiv ? "rgba(59,130,246,0.25)" : "rgba(255,255,255,0.04)",
+                      color: aktiv ? "#ffffff" : "#cbd5e1",
+                    }}
+                  >
+                    {b}
+                  </button>
+                );
+              })}
+            </div>
+
+            {branche && !notizGesendet && (
+              <div className="mt-5 text-left">
+                <label htmlFor="lead-notiz" className="text-xs text-slate-400">
+                  Worauf kommt es Ihnen an? Freiwillig, hilft uns aber sehr.
+                </label>
+                <textarea
+                  id="lead-notiz"
+                  rows={3}
+                  value={notiz}
+                  onChange={(e) => setNotiz(e.target.value)}
+                  placeholder="Zum Beispiel: viele Notdienst-Anfragen, Karriereseite für Azubis, bestimmte Leistungen im Vordergrund."
+                  className="mt-2 w-full resize-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06]"
+                />
+                <button
+                  type="button"
+                  disabled={!notiz.trim()}
+                  onClick={() => {
+                    sendeNachtrag({ message: notiz.trim() });
+                    setNotizGesendet(true);
+                  }}
+                  className="mt-3 w-full rounded-xl px-4 py-3 text-sm font-semibold text-white transition disabled:opacity-40"
+                  style={{ border: "1px solid rgba(96,165,250,0.4)", background: "rgba(59,130,246,0.16)" }}
+                >
+                  Dazuschreiben
+                </button>
+              </div>
+            )}
+
+            {notizGesendet && (
+              <p className="mt-5 text-sm font-medium text-[#60a5fa]">
+                Notiert, danke. Damit können wir gleich passend vorbereiten.
+              </p>
+            )}
+          </div>
+        )}
       </motion.div>
     );
   }
