@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -153,6 +153,7 @@ export default function CookieConsent() {
   const [showSettings, setShowSettings] = useState(false);
   const [marketing, setMarketing] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const leisteRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -168,6 +169,24 @@ export default function CookieConsent() {
       }
     }
   }, []);
+
+  // Die Leiste liegt fix am unteren Rand und wuerde sonst den Absenden-Knopf
+  // des Formulars verdecken, solange der Besucher noch nicht geantwortet hat.
+  // Deshalb bekommt die Seite genau so viel Abstand nach unten, wie die Leiste
+  // hoch ist. Laeuft auch mit ausgeklappten Einstellungen, weil showSettings
+  // in den Abhaengigkeiten steht.
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    if (!open) {
+      document.body.style.paddingBottom = "";
+      return;
+    }
+    const hoehe = leisteRef.current?.offsetHeight ?? 0;
+    document.body.style.paddingBottom = hoehe > 0 ? `${hoehe}px` : "";
+    return () => {
+      document.body.style.paddingBottom = "";
+    };
+  }, [open, showSettings]);
 
   const save = useCallback((acceptMarketing: boolean) => {
     const consent: Consent = {
@@ -225,6 +244,7 @@ export default function CookieConsent() {
       <AnimatePresence>
         {open && (
           <motion.div
+            ref={leisteRef}
             role="region"
             aria-label="Cookie-Hinweis"
             initial={{ opacity: 0, y: 28 }}
