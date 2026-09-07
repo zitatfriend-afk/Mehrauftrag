@@ -25,7 +25,7 @@ export interface GoogleReview {
   source: "google";
 }
 
-// Stand 24.08.2026: 9 der 14 oeffentlichen Google-Bewertungen stehen hier.
+// Stand 07.09.2026: 9 der 15 oeffentlichen Google-Bewertungen stehen hier.
 // Die neueste (Rosa Kifel, vor 2 Wochen) steht bewusst an erster Position.
 // Zwei sehr kurze, generische Rezensionen (F., MG) wurden auf Wunsch von
 // Patrick entfernt. Die restlichen laedt Google im Rezensionen-Tab erst bei
@@ -119,8 +119,17 @@ export default function GoogleReviews({
   // dort werden drei gesetzt. Reihenfolge bleibt wie in REVIEWS, die neueste
   // steht dort bewusst vorn.
   max?: number;
+  // Optional: bestimmte Bewertungen in genau dieser Reihenfolge zeigen (Namen
+  // aus REVIEWS). Genutzt auf der Handwerker-Zielseite, die bundesweit wirbt:
+  // dort soll nicht als Erstes "Top Webdesign aus Hainburg" stehen.
+  auswahl?: string[];
 }) {
-  const sichtbare = typeof max === "number" ? REVIEWS.slice(0, max) : REVIEWS;
+  const basis = auswahl
+    ? auswahl
+        .map((n) => REVIEWS.find((r) => r.name === n))
+        .filter((r): r is GoogleReview => Boolean(r))
+    : REVIEWS;
+  const sichtbare = typeof max === "number" ? basis.slice(0, max) : basis;
   const isDark = variant === "dark";
   const cardBg = isDark ? "rgba(255,255,255,0.04)" : "#ffffff";
   const cardBorder = isDark ? "1px solid rgba(255,255,255,0.08)" : "1px solid #e7e9f2";
@@ -136,7 +145,7 @@ export default function GoogleReviews({
           className="text-sm font-semibold"
           style={{ color: isDark ? "#fff" : "#0a0f2a" }}
         >
-          5,0 von 5 · 14 Google-Bewertungen
+          5,0 von 5 · 15 Google-Bewertungen
         </span>
         <a
           href={GOOGLE_PROFILE_URL}

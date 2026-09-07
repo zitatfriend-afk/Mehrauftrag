@@ -932,7 +932,11 @@ export default function HandwerkerLanding() {
             </div>
 
             <motion.div variants={fadeUp}>
-              <GoogleReviews variant="dark" max={3} />
+              <GoogleReviews
+                variant="dark"
+                max={3}
+                auswahl={["Alpay Gün", "Julian Dielichtenergie", "Bilal Özdemir"]}
+              />
             </motion.div>
           </div>
         </motion.section>
