@@ -112,6 +112,7 @@ function StarRow({ count = 5 }: { count?: number }) {
 export default function GoogleReviews({
   variant = "dark",
   max,
+  auswahl,
 }: {
   variant?: "dark" | "light";
   // Ohne Angabe werden alle Bewertungen gezeigt, so wie auf der Startseite.
