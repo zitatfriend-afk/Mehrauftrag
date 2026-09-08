@@ -13,6 +13,17 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: projektWurzel,
   },
+  async headers() {
+    return [
+      {
+        // Das Freebie ist die Gegenleistung fuer die Anmeldung. Ohne diesen
+        // Header taucht die PDF-Datei irgendwann selbst in der Suche auf und
+        // jeder bekommt sie ohne Eintrag in die Liste.
+        source: "/Website-Check-Mehr-Auftrag.pdf",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+    ];
+  },
   async rewrites() {
     return [
       {

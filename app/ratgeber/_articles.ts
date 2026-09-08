@@ -12,6 +12,10 @@ export type Section = {
   // reiner Text gerendert, deshalb braucht ein Link im Fliesstext ein
   // eigenes Feld statt HTML im String.
   link?: RelatedLink;
+  // Zweiter und weiterer Kontextlink im selben Abschnitt. Gebraucht, seit ein
+  // Abschnitt sowohl seinen alten Verweis behalten als auch auf einen neuen
+  // Ratgeber zeigen soll, ohne dass dafuer ein eigener Abschnitt entsteht.
+  links?: RelatedLink[];
 };
 export type RelatedLink = { label: string; href: string };
 
@@ -582,8 +586,12 @@ export const ARTICLES: Article[] = [
           "Suchmaschinenoptimierung bringt dich in die unbezahlten Ergebnisse. Das dauert seine Zeit, wirkt dafür aber dauerhaft und ohne Klickkosten. Eine Seite, die für einen wichtigen Suchbegriff gut platziert ist, bringt über Monate und Jahre immer wieder Anfragen, ohne dass jeder Besucher extra kostet.",
           "Gerade für lokale Betriebe ist SEO stark, weil die Konkurrenz vor Ort meist überschaubar ist. Wer sein Google-Profil und seine Website konsequent pflegt, kann in der eigenen Region dauerhaft ganz vorn stehen.",
           "Weil SEO eine Weile braucht, bevor sie trägt, wiegt die Wahl des Dienstleisters hier schwerer als bei Anzeigen. Bei Google Ads siehst du nach wenigen Tagen, ob etwas passiert. Bei SEO merkst du eine schlechte Zusammenarbeit oft erst nach Monaten.",
+          "Und nicht jede Wartezeit ist eine Wartezeit. Manchmal steht die Seite gar nicht im Rennen, weil sie technisch blockiert ist oder es zu der Suche schlicht keine passende Seite auf ihr gibt. Bevor du auf Geduld setzt, lohnt sich deshalb ein kurzer Blick auf die üblichen Ursachen.",
         ],
         link: { label: "Woran du eine gute SEO-Agentur erkennst", href: "/ratgeber/seo-agentur-erkennen" },
+        links: [
+          { label: "Die häufigsten Gründe, warum eine Seite nicht auftaucht", href: "/ratgeber/website-nicht-bei-google-gefunden" },
+        ],
       },
       {
         heading: "Der direkte Vergleich",
@@ -902,7 +910,9 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Eine Agentur kostet mehr als ein Baukasten, liefert dafür aber ein Ergebnis, das auf Kundengewinnung ausgelegt ist: ein individuelles Design, das zu deiner Marke passt, technisch schnell und für Google optimiert, mit durchdachten Wegen zur Kontaktaufnahme. Und vor allem: Du musst dich um nichts kümmern und gewinnst deine Zeit für dein eigentliches Geschäft zurück.",
           "Der eigentliche Unterschied ist nicht die Optik, sondern das Ergebnis. Eine gut gemachte Website bringt Anfragen. Eine schnell selbstgebaute steht meist nur da. Bei einer professionellen Umsetzung sollte außerdem von Anfang an mitgedacht werden, wie die Seite bei Google und in KI-Systemen gefunden wird.",
+          "Zur technischen Umsetzung gehört auch die Frage, wer am Ende die Adresse und den Serverplatz in der Hand hält. Wer diese beiden Bausteine einmal auseinandersortiert hat, liest jedes Angebot anders.",
         ],
+        link: { label: "Was Domain und Web Hosting eigentlich unterscheidet", href: "/ratgeber/hosting-und-domain-erklaert" },
       },
       {
         heading: "Die versteckten Kosten des Selbermachens",
@@ -982,7 +992,9 @@ export const ARTICLES: Article[] = [
         heading: "Sie macht dich unabhängig von Plattformen",
         paragraphs: [
           "Wer nur auf Social Media oder Lieferplattformen setzt, ist von deren Regeln und Provisionen abhängig. Deine eigene Website gehört dir. Sie ist der einzige Kanal, den dir niemand wegnehmen oder von heute auf morgen ändern kann, und damit das stabile Fundament deiner Online-Präsenz.",
+          "Damit das wirklich stimmt, müssen Adresse und Serverplatz auf deinen Namen laufen und nicht auf den deiner Agentur. Das ist der Punkt, an dem viele Betriebe später merken, dass ihnen ihre Website eben doch nicht ganz gehört.",
         ],
+        link: { label: "Hosting und Domain verständlich erklärt", href: "/ratgeber/hosting-und-domain-erklaert" },
       },
       {
         heading: "Sie spart dir Zeit",
@@ -1060,7 +1072,9 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Auch die Website zahlt auf die lokale Sichtbarkeit ein. Sie sollte klar benennen, welche Leistungen du an welchen Orten anbietest, statt nur allgemein von deinem Fach zu sprechen. Eine eigene Seite pro wichtiger Leistung und Region hilft Google, dich der richtigen Suche zuzuordnen.",
           "Wichtig sind außerdem strukturierte Daten, mit denen Adresse, Öffnungszeiten und Leistungen maschinenlesbar hinterlegt werden. So versteht nicht nur Google, sondern auch KI-Systeme wie ChatGPT deinen Standort korrekt und können dich für Suchen in deiner Region empfehlen.",
+          "All das setzt allerdings voraus, dass deine Seite überhaupt im Google-Verzeichnis steht. Taucht sie dort gar nicht auf, hilft die beste Ortsangabe nichts, und die Ursache liegt fast immer an einer von wenigen konkreten Stellen.",
         ],
+        link: { label: "Warum eine Website bei Google nicht gefunden wird", href: "/ratgeber/website-nicht-bei-google-gefunden" },
       },
       {
         heading: "Lokale SEO ist ein Marathon, kein Sprint",
@@ -1245,6 +1259,264 @@ export const ARTICLES: Article[] = [
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
   },
+
+  {
+    slug: "website-nicht-bei-google-gefunden",
+    category: "Grundlagen",
+    title: "Warum finde ich meine Website nicht bei Google?",
+    metaTitle: "Website wird bei Google nicht gefunden: die neun häufigsten Gründe | Mehr Auftrag",
+    description:
+      "Deine Seite ist online, taucht bei Google aber nicht auf. Neun Gründe, wie du jeden davon in wenigen Minuten selbst prüfst, und in welcher Reihenfolge du vorgehst.",
+    datePublished: "2026-09-08",
+    dateModified: "2026-09-08",
+    readingTime: "8 Min.",
+    intro: [
+      "Die Seite ist fertig, sie ist online, sie sieht gut aus. Du tippst deine Leistung und deinen Ort bei Google ein und findest alles Mögliche, nur dich selbst nicht.",
+      "Das ist einer der häufigsten Anrufe, die wir bekommen, und in den meisten Fällen steckt kein großes Rätsel dahinter, sondern einer von wenigen konkreten Gründen. Dieser Ratgeber geht sie der Reihe nach durch, jeweils mit einer Prüfung, die du selbst machen kannst.",
+    ],
+    sections: [
+      {
+        heading: "Zuerst die eine Prüfung, die alles andere entscheidet",
+        paragraphs: [
+          "Bevor du irgendetwas anderes tust, klär, ob Google deine Seite überhaupt kennt. Tippe dazu in die Suche site:deine-adresse.de, also das Wort site, einen Doppelpunkt, dann deine Adresse, ohne Leerzeichen dazwischen.",
+          "Erscheinen Ergebnisse, kennt Google deine Seite. Dein Problem ist dann nicht die Aufnahme, sondern die Platzierung, und du springst direkt zu den Gründen fünf bis neun. Erscheint nichts, hat Google deine Seite nicht im Verzeichnis, und es liegt an einem der Gründe eins bis vier. Das sind die technischen.",
+          "Diese eine Abfrage spart dir viel Suchen an der falschen Stelle.",
+        ],
+      },
+      {
+        heading: "1. Die Seite ist noch zu neu",
+        paragraphs: [
+          "Eine frisch veröffentlichte Website ist nicht sofort auffindbar. Google muss sie erst finden, abrufen und einordnen, und das geschieht nicht auf Zuruf. Bei einer neuen Adresse ohne jede Bekanntheit dauert es länger als bei einer bestehenden Seite, die nur eine neue Unterseite bekommt.",
+          "Das ist der einzige Grund auf dieser Liste, bei dem Abwarten die richtige Antwort ist. Beschleunigen kannst du es, indem du die Seite in der Google Search Console anmeldest.",
+        ],
+      },
+      {
+        heading: "2. Die Seite sagt Google aktiv, dass sie nicht aufgenommen werden soll",
+        paragraphs: [
+          "Das klingt absurd, ist aber der mit Abstand häufigste technische Fund. Fast jede Website wird zuerst auf einer Testadresse gebaut, und damit die Testversion nicht in der Suche landet, wird sie auf nicht aufnehmen gestellt. Wenn beim Umzug auf die echte Adresse vergessen wird, das zurückzustellen, bleibt die fertige Seite unsichtbar.",
+          "So prüfst du es: Öffne deine Seite, klicke mit der rechten Maustaste und wähle Seitenquelltext anzeigen. Such mit der Tastenkombination für Suchen nach dem Wort noindex. Wird es gefunden, hast du deinen Grund.",
+        ],
+      },
+      {
+        heading: "3. Es gibt keine Sitemap, und die Seite ist nirgends angemeldet",
+        paragraphs: [
+          "Eine Sitemap ist ein Verzeichnis aller Unterseiten, das du Google übergibst. Ohne sie muss Google jede Seite selbst entdecken, und das dauert bei kleinen Websites ohne Verweise von außen sehr lange.",
+          "So prüfst du es: Ruf deine-adresse.de/sitemap.xml auf. Kommt eine Liste von Adressen, ist sie da. Kommt eine Fehlermeldung, fehlt sie.",
+          "Dazu gehört die Google Search Console. Sie ist kostenlos, und ohne sie arbeitest du im Blindflug: Du siehst weder, ob Google Probleme mit deiner Seite hat, noch wonach Menschen suchen, wenn sie bei dir landen.",
+        ],
+      },
+      {
+        heading: "4. Die Seite besteht aus Bildern statt aus Text",
+        paragraphs: [
+          "Manche Baukästen und ältere Seiten liefern Überschriften und ganze Absätze als Grafik aus. Für das Auge sieht das gleich aus, für eine Suchmaschine ist die Seite dann inhaltsleer.",
+          "So prüfst du es: Versuch, einen Absatz auf deiner Seite mit der Maus zu markieren. Wenn sich nichts markieren lässt, ist es ein Bild.",
+        ],
+      },
+      {
+        heading: "5. Du suchst nach deinem Firmennamen und schließt daraus zu viel",
+        paragraphs: [
+          "Wenn du deinen Firmennamen eingibst und dich findest, heißt das wenig. Nach deinem Namen sucht nur, wer dich schon kennt. Neue Kunden suchen nach der Leistung und dem Ort.",
+          "Such deshalb so, wie ein Fremder suchen würde, und sieh dir das ehrliche Ergebnis an.",
+        ],
+      },
+      {
+        heading: "6. Es gibt keine Seite zu dem, was gesucht wird",
+        paragraphs: [
+          "Das ist der wichtigste inhaltliche Grund und der, an dem die meisten Betriebe hängen.",
+          "Viele Websites haben eine einzige Leistungsseite, auf der alles aufgezählt ist. Google zeigt aber nicht Betriebe an, sondern Seiten, und zwar die Seite, die am besten zur konkreten Frage passt. Wenn deine Leistung nur ein Stichpunkt in einer Aufzählung ist, gibt es für die Suche danach nichts Passendes bei dir.",
+          "Die Lösung ist unspektakulär und wirkt fast immer: für jede wichtige Leistung eine eigene Seite mit eigenem Text, eigener Überschrift und eigenen Beispielen.",
+        ],
+      },
+      {
+        heading: "7. Der Begriff ist zu umkämpft für den Anfang",
+        paragraphs: [
+          "Bei sehr allgemeinen Begriffen stehen bundesweite Anbieter, Verzeichnisse und Portale vorn. Dagegen kommt eine neue Betriebswebsite zunächst nicht an.",
+          "Der Ausweg ist, spezifischer zu werden. Leistung plus Ort, Leistung plus Anlass, Leistung plus Zielgruppe. Diese Suchanfragen haben weniger Suchende, aber die Menschen dahinter wissen genauer, was sie wollen, und sie sind erreichbar.",
+        ],
+      },
+      {
+        heading: "8. Deine Seite gibt es doppelt",
+        paragraphs: [
+          "Wenn deine Website unter mehreren Adressen erreichbar ist, mit www und ohne, mit http und https, dann verteilt sich alles, was sie an Ansehen aufbaut, auf mehrere Varianten statt sich zu bündeln.",
+          "So prüfst du es: Ruf deine Adresse einmal mit www und einmal ohne auf. Springt die eine Variante automatisch auf die andere, ist es richtig eingerichtet. Bleiben beide stehen, nicht.",
+        ],
+      },
+      {
+        heading: "9. Du suchst im Kartenbereich, und dort zählt etwas anderes",
+        paragraphs: [
+          "Bei örtlichen Suchen zeigt Google oben oft einen Kartenausschnitt mit Betrieben. Wer dort erscheint, entscheidet sich nicht über die Website, sondern über das Google-Unternehmensprofil, über Bewertungen und über die Entfernung zum Suchenden.",
+          "Ein gepflegtes Profil ist für viele Betriebe der schnellste Hebel überhaupt.",
+        ],
+        link: { label: "Wie du bei der lokalen Suche und in Google Maps sichtbar wirst", href: "/ratgeber/lokale-seo-google-maps" },
+      },
+      {
+        heading: "In welcher Reihenfolge du vorgehst",
+        paragraphs: [
+          "Wichtig ist die Erwartung. Sichtbarkeit bei Google baut sich über Monate auf, nicht über Tage, und sie hält dann auch. Wer dir schnelle Platzierungen verspricht, verkauft dir entweder etwas anderes oder etwas Riskantes.",
+        ],
+        bullets: [
+          "Die site-Abfrage machen. Sie entscheidet, ob es ein technisches oder ein inhaltliches Problem ist",
+          "Bei technischem Befund: noindex prüfen, Sitemap prüfen, Search Console einrichten",
+          "Bei inhaltlichem Befund: prüfen, ob es für jede wichtige Leistung eine eigene Seite gibt",
+          "Das Google-Unternehmensprofil vollständig ausfüllen und um Bewertungen bitten",
+          "Erst danach über weitere Maßnahmen nachdenken",
+        ],
+        link: { label: "Woran du einen seriösen Anbieter erkennst", href: "/ratgeber/seo-agentur-erkennen" },
+      },
+      {
+        heading: "Wenn du es nicht selbst machen willst",
+        paragraphs: [
+          "Die Punkte eins bis vier kann jeder prüfen, der eine Viertelstunde Zeit hat. Ab Punkt sechs wird es Arbeit, weil dann Seiten entstehen müssen, die es vorher nicht gab.",
+          "Genau das ist unsere Arbeit. Wir bauen Websites für Handwerks- und Dienstleistungsbetriebe so auf, dass für jede Leistung eine eigene Seite existiert, und kümmern uns anschließend darum, dass diese Seiten gefunden werden.",
+        ],
+        link: { label: "Was zu unserer Suchmaschinenoptimierung gehört", href: "/suchmaschinenoptimierung" },
+      },
+      {
+        heading: "Wissen, woran es bei dir konkret liegt",
+        paragraphs: [
+          "Wenn du erst einmal wissen willst, woran es bei dir hängt, schauen wir uns deine Seite an und sagen dir, was wir sehen. Das ist kostenlos und unverbindlich, und wir arbeiten dabei vollständig aus der Ferne.",
+        ],
+        link: { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+      },
+    ],
+    faqs: [
+      {
+        q: "Wie lange dauert es, bis eine neue Seite bei Google auftaucht?",
+        a: "Das schwankt stark und hängt davon ab, ob die Adresse neu ist und ob es Verweise von anderen Seiten gibt. Eine Anmeldung in der Search Console beschleunigt es spürbar.",
+      },
+      {
+        q: "Kann ich Google zwingen, meine Seite aufzunehmen?",
+        a: "Zwingen nicht, aber du kannst sie in der Search Console zur Prüfung anmelden. Das ist der offizielle Weg und der schnellste.",
+      },
+      {
+        q: "Bringt es etwas, den Firmennamen überall einzutragen?",
+        a: "Für die Auffindbarkeit über die Leistung kaum. Für das Kartenergebnis hilft es, wenn Name, Adresse und Telefonnummer überall identisch geschrieben sind.",
+      },
+      {
+        q: "Meine Seite war früher gut auffindbar und ist jetzt weg. Was tun?",
+        a: "Zuerst die site-Abfrage, dann die Search Console auf Meldungen prüfen. Ein plötzlicher Verlust hat oft eine technische Ursache, etwa einen Umzug, ein Zertifikat oder ein versehentliches noindex.",
+      },
+    ],
+    related: [
+      { label: "Lokale Sichtbarkeit und Google Maps", href: "/ratgeber/lokale-seo-google-maps" },
+      { label: "SEO oder Google Ads?", href: "/ratgeber/seo-oder-google-ads" },
+      { label: "Hosting und Domain verständlich erklärt", href: "/ratgeber/hosting-und-domain-erklaert" },
+      { label: "Agentur auswählen: die Checkliste", href: "/ratgeber/seo-agentur-erkennen" },
+    ],
+  },
+
+  {
+    slug: "hosting-und-domain-erklaert",
+    category: "Grundlagen",
+    title: "Hosting und Domain verständlich erklärt",
+    metaTitle: "Hosting und Domain verständlich erklärt | Mehr Auftrag",
+    description:
+      "Was Domain, Web Hosting und Website wirklich voneinander unterscheidet, worauf du als Betrieb achten solltest und warum die Frage nach dem Eigentum die wichtigste ist.",
+    datePublished: "2026-09-08",
+    dateModified: "2026-09-08",
+    readingTime: "7 Min.",
+    intro: [
+      "Fast jeder Betrieb, der zum ersten Mal über eine eigene Website nachdenkt, stolpert über dieselben drei Wörter: Domain, Hosting, Website. Sie werden im Alltag durcheinandergeworfen, obwohl sie drei verschiedene Dinge bezeichnen. Wer den Unterschied einmal verstanden hat, trifft bei Angeboten deutlich bessere Entscheidungen und merkt schneller, wenn ihm jemand etwas verkauft, das er nicht braucht.",
+      "Dieser Ratgeber erklärt die drei Bausteine ohne Fachjargon und benennt am Ende die Frage, die im Verkaufsgespräch am häufigsten vergessen wird.",
+    ],
+    sections: [
+      {
+        heading: "Die drei Bausteine",
+        paragraphs: [
+          "Ein Vergleich, der überraschend gut trägt: stell dir deine Website als Ladengeschäft vor.",
+          "Du kannst die Adresse wechseln und die Einrichtung behalten. Du kannst umziehen und die Adresse mitnehmen. Und du kannst die schönste Einrichtung der Welt haben, wenn das Gebäude ständig geschlossen ist, sieht sie niemand.",
+        ],
+        bullets: [
+          "Die Domain ist die Adresse. Sie ist das, was Kunden eintippen, zum Beispiel dein-betrieb.de. Eine Adresse allein ist noch kein Laden, sie sagt nur, wo etwas zu finden ist",
+          "Das Web Hosting ist das Grundstück mit dem Gebäude. Es ist der Platz auf einem Rechner, der rund um die Uhr am Netz hängt und deine Seite ausliefert, sobald jemand die Adresse aufruft",
+          "Die Website ist die Einrichtung. Texte, Bilder, Formulare, Struktur. Das, woran deine Kunden dich tatsächlich messen",
+        ],
+      },
+      {
+        heading: "Was eine Domain wirklich ist",
+        paragraphs: [
+          "Eine Domain wird nicht gekauft, sie wird registriert und für einen Zeitraum gemietet. Sie läuft ab, wenn sie nicht verlängert wird. Genau darin liegt die häufigste Panne bei Betrieben: die Verlängerung hängt an einer alten E-Mail-Adresse, die niemand mehr abruft, und irgendwann ist die Seite offline.",
+          "Zwei Dinge sind an einer Domain wichtig. Erstens die Endung: für einen Betrieb, der in Deutschland Kunden sucht, ist Punkt de weiterhin die naheliegende Wahl, weil sie hier als normal und seriös gelesen wird. Exotische Endungen fallen auf, aber selten positiv. Zweitens der Name selbst: kurz, sprechbar und ohne Sonderzeichen. Der Test ist banal und trotzdem der beste. Kannst du die Adresse am Telefon einmal sagen, ohne buchstabieren zu müssen?",
+          "Eine Domain zu wechseln ist möglich, aber immer mit Aufwand verbunden, weil Google die alte Adresse kennt und die neue erst wieder einordnen muss. Es lohnt sich also, am Anfang eine Minute länger nachzudenken.",
+        ],
+      },
+      {
+        heading: "Was Web Hosting leistet",
+        paragraphs: [
+          "Web Hosting klingt nach Technik, entscheidet aber über Dinge, die deine Kunden direkt spüren.",
+          "Für die Suchmaschine ist vor allem das Tempo relevant. Google misst, wie schnell eine Seite nutzbar wird, und eine langsame Seite hat es schwerer, sich gegen eine schnelle durchzusetzen.",
+        ],
+        bullets: [
+          "Geschwindigkeit. Wie lange dauert es, bis die Seite auf einem Handy im Mobilfunknetz sichtbar ist. Wer zu lange wartet, geht zurück zu den Suchergebnissen und ruft den nächsten Betrieb an",
+          "Erreichbarkeit. Wie zuverlässig läuft der Server. Ausfälle sind selten, aber sie kommen immer zum ungünstigsten Zeitpunkt",
+          "Verschlüsselung. Ohne gültiges Zertifikat warnt der Browser den Besucher, bevor er überhaupt etwas gesehen hat. Das ist heute Grundausstattung und keine Zusatzleistung",
+          "Standort und Datenschutz. Wo die Daten liegen, ist für einen deutschen Betrieb keine Nebensache, sobald ein Kontaktformular im Spiel ist",
+        ],
+        link: { label: "Wie das mit den übrigen Ranking-Faktoren zusammenspielt", href: "/ratgeber/lokale-seo-google-maps" },
+      },
+      {
+        heading: "Was viele Betriebe unnötig mitbezahlen",
+        paragraphs: [
+          "Hosting-Angebote sind darauf ausgelegt, dass man mehr bucht, als man braucht. Typisch sind riesige Speichermengen, Werbeguthaben, das nie eingelöst wird, und Zusatzpakete für Funktionen, die eine moderne Website ohnehin mitbringt.",
+          "Für die Website eines Handwerks- oder Dienstleistungsbetriebs gilt fast immer: der Speicherplatz ist nicht das Problem. Eine Seite mit ein paar Dutzend Unterseiten und guten Fotos braucht wenig Platz. Was zählt, ist die Auslieferungsgeschwindigkeit, ein gültiges Zertifikat, verlässliche Sicherungen und ein Ansprechpartner, der antwortet, wenn etwas klemmt.",
+          "Zum Thema Preis eine bewusste Zurückhaltung: die Beträge unterscheiden sich je nach Anbieter, Laufzeit und Leistungsumfang so stark, dass jede Zahl hier in die Irre führen würde. Der sinnvolle Maßstab ist nicht, was ein Paket kostet, sondern ob du sagen kannst, wofür du zahlst.",
+        ],
+      },
+      {
+        heading: "Die Frage, die am häufigsten vergessen wird",
+        paragraphs: [
+          "Wem gehört die Domain? Das ist der Punkt, an dem es später richtig unangenehm werden kann. Wird die Domain auf den Namen der Agentur registriert und nicht auf den des Betriebs, dann gehört die Adresse der Agentur. Bei einem Wechsel steht der Betrieb vor der Wahl, entweder zu bleiben oder die Adresse aufzugeben, unter der ihn alle Kunden kennen.",
+          "Dasselbe gilt für die Zugänge zum Hosting und für die Website selbst. Frag vor Vertragsabschluss diese drei Dinge ab.",
+          "Drei Fragen, drei klare Antworten. Wer da ausweicht, sagt dir damit schon alles.",
+        ],
+        bullets: [
+          "Läuft die Domain auf meinen Namen als Inhaber?",
+          "Bekomme ich die Zugangsdaten zu Domain und Hosting?",
+          "Kann ich die Website mitnehmen, wenn wir uns trennen?",
+        ],
+      },
+      {
+        heading: "Wie wir das bei Mehr Auftrag handhaben",
+        paragraphs: [
+          "Wir bauen Websites so, dass sie nicht an uns hängen. Die Domain läuft auf den Betrieb, die Zugänge gehören dem Betrieb, und das Hosting läuft auf einer Infrastruktur, die Seiten weltweit verteilt ausliefert, damit sie auch auf dem Handy schnell da sind.",
+          "Wir arbeiten dabei vollständig aus der Ferne, Abstimmungen laufen per Telefon und Videotermin, und das funktioniert für Betriebe in ganz Deutschland genauso gut wie für die vor unserer Haustür.",
+        ],
+        link: { label: "Was wir für Betriebe bauen", href: "/" },
+      },
+      {
+        heading: "Unsicher, wie deine Seite technisch dasteht?",
+        paragraphs: [
+          "Wenn du nicht weißt, was bei deiner bestehenden Seite unter der Oberfläche läuft, sehen wir uns das an und sagen dir, was wirklich dahintersteckt. Das ist der einfachste Einstieg, kostenlos und unverbindlich.",
+        ],
+        link: { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+      },
+    ],
+    faqs: [
+      {
+        q: "Brauche ich Domain und Hosting getrennt?",
+        a: "Du kannst beides beim selben Anbieter haben oder getrennt halten. Getrennt zu bleiben hat den Vorteil, dass ein Wechsel des einen den anderen nicht berührt.",
+      },
+      {
+        q: "Was passiert, wenn ich das Hosting wechsle?",
+        a: "Die Website zieht um, die Domain zeigt danach auf den neuen Ort. Für Besucher ändert sich nichts, solange der Umzug sauber gemacht wird. Für Google ebenfalls nicht, weil die Adresse gleich bleibt.",
+      },
+      {
+        q: "Verliere ich meine Rankings, wenn die Seite kurz offline ist?",
+        a: "Bei kurzen Ausfällen normalerweise nicht. Bei wiederholten oder längeren Ausfällen schon, weil Google die Seite dann seltener als verlässlich einstuft.",
+      },
+      {
+        q: "Brauche ich für E-Mail dasselbe Hosting?",
+        a: "Nein. Postfächer können bei einem anderen Anbieter liegen als die Website. Wichtig ist nur, dass die Einträge im Domain-Verwaltungsbereich zusammenpassen.",
+      },
+    ],
+    related: [
+      { label: "Website selbst bauen oder Agentur?", href: "/ratgeber/website-selbst-oder-agentur" },
+      { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
+      { label: "Warum finde ich meine Website nicht bei Google?", href: "/ratgeber/website-nicht-bei-google-gefunden" },
+      { label: "Lokale Sichtbarkeit und Google Maps", href: "/ratgeber/lokale-seo-google-maps" },
+    ],
+  },
+
 
   // ─────────────────────────────────────────────────────────────────────────
   // REGIONAL

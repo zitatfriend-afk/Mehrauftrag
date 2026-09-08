@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getArticle, getAllSlugs, CATEGORY_LABEL } from "../_articles";
 import { getAnalyse } from "../../analyse/_analyse-content";
 import { RatgeberHeader, RatgeberFooter } from "../_shell";
+import WebsiteCheckBox from "../../_components/website-check-box";
 
 const BASE = "https://www.mehrauftrag.de";
 
@@ -193,19 +194,25 @@ export default async function ArticlePage({
                       ))}
                     </ul>
                   )}
-                  {s.link && (
-                    <p className="mt-4 text-base leading-relaxed">
+                  {[...(s.link ? [s.link] : []), ...(s.links ?? [])].map((l, m) => (
+                    <p key={m} className="mt-4 text-base leading-relaxed">
                       <Link
-                        href={s.link.href}
+                        href={l.href}
                         className="font-semibold text-[#3b82f6] underline underline-offset-4 hover:text-[#6aa8ff]"
                       >
-                        {s.link.label}
+                        {l.label}
                       </Link>
                     </p>
-                  )}
+                  ))}
                 </section>
               ))}
             </div>
+
+            {/* Anmeldebox fuer das Freebie. Platzierung bewusst nach dem
+                Fliesstext und vor den haeufigen Fragen: wer bis hierhin
+                gelesen hat, ist im Thema, und die FAQ halten den Leser
+                danach noch auf der Seite. */}
+            <WebsiteCheckBox />
 
             {/* FAQ */}
             {article.faqs.length > 0 && (
