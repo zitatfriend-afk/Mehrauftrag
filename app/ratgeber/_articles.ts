@@ -1264,7 +1264,7 @@ export const ARTICLES: Article[] = [
     slug: "website-nicht-bei-google-gefunden",
     category: "Grundlagen",
     title: "Warum finde ich meine Website nicht bei Google?",
-    metaTitle: "Website wird bei Google nicht gefunden: die neun häufigsten Gründe | Mehr Auftrag",
+    metaTitle: "Website nicht bei Google gefunden: 9 Gründe | Mehr Auftrag",
     description:
       "Deine Seite ist online, taucht bei Google aber nicht auf. Neun Gründe, wie du jeden davon in wenigen Minuten selbst prüfst, und in welcher Reihenfolge du vorgehst.",
     datePublished: "2026-09-08",
