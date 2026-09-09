@@ -7,7 +7,7 @@ import { RatgeberHeader, RatgeberFooter } from "../../ratgeber/_shell";
 // Index: sonst laege das PDF ueber die Suche frei, und die Anmeldung waere
 // wertlos.
 export const metadata: Metadata = {
-  title: "Deine Checkliste ist unterwegs | Mehr Auftrag",
+  title: "Deine Checkliste liegt bereit | Mehr Auftrag",
   description:
     "Danke für die Bestätigung. Hier kannst du den Website-Check direkt herunterladen.",
   robots: { index: false, follow: true },
@@ -40,12 +40,12 @@ export default function DankeSeite() {
           </div>
 
           <h1 className="text-3xl font-black leading-tight tracking-[-0.03em] text-white sm:text-4xl">
-            Deine Checkliste ist unterwegs
+            Deine Checkliste liegt bereit
           </h1>
 
           <p className="mt-5 text-lg leading-relaxed text-slate-300">
-            Die E-Mail mit dem Download ist raus und sollte in den nächsten Minuten bei dir
-            sein. Du kannst sie auch direkt hier herunterladen.
+            Lad sie dir hier direkt herunter. Den Link schicke ich dir gleich auch noch
+            per E-Mail, damit du ihn später wiederfindest.
           </p>
 
           <a

@@ -45,7 +45,7 @@ export default function BitteBestaetigenSeite() {
 
           <p className="mt-5 text-lg leading-relaxed text-slate-300">
             Wir haben dir eine E-Mail geschickt. Klick darin auf den Bestätigungslink, dann
-            kommt die Checkliste sofort.
+            kommst du direkt zur Checkliste.
           </p>
 
           <p className="mt-4 text-base leading-relaxed text-slate-400">

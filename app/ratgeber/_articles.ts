@@ -566,7 +566,7 @@ export const ARTICLES: Article[] = [
     description:
       "SEO oder Google Ads für kleine Unternehmen? Der ehrliche Vergleich: Kosten, Geschwindigkeit, Nachhaltigkeit und wann sich welcher Weg lohnt.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-09",
     readingTime: "6 Min.",
     intro: [
       "Wer online mehr Kunden gewinnen will, stößt schnell auf zwei Wege: bei Google ganz oben in den bezahlten Anzeigen erscheinen (Google Ads) oder durch Suchmaschinenoptimierung (SEO) in den normalen, unbezahlten Ergebnissen nach oben kommen. Beide führen zum Ziel, funktionieren aber völlig unterschiedlich.",
@@ -891,7 +891,7 @@ export const ARTICLES: Article[] = [
     description:
       "Baukasten selbst bauen, WordPress nehmen oder eine Agentur beauftragen? Kosten, Zeitaufwand und Ergebnis im ehrlichen Vergleich für kleine Betriebe.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-09",
     readingTime: "6 Min.",
     intro: [
       "Eine Website muss her, und sofort stellt sich die Frage: selbst machen mit einem Baukasten oder eine Agentur beauftragen? Beide Wege haben ihre Berechtigung, und die richtige Antwort hängt weniger vom Budget ab als davon, was die Website leisten soll und wie viel Zeit du hast.",
@@ -963,7 +963,7 @@ export const ARTICLES: Article[] = [
     description:
       "Was eine professionelle Webpräsenz kleinen Betrieben bringt: Anfragen, Vertrauen und Sichtbarkeit bei Google und in KI-Antworten. Ehrlich eingeordnet.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-09",
     readingTime: "5 Min.",
     intro: [
       "Braucht mein Betrieb wirklich eine gute Website, oder reicht ein Eintrag bei Google und ein bisschen Social Media? Diese Frage stellen sich viele Selbstständige, und die ehrliche Antwort lautet: Eine professionelle Website ist selten Selbstzweck, aber sie ist der Punkt, an dem aus Interesse ein Auftrag wird.",
@@ -1033,7 +1033,7 @@ export const ARTICLES: Article[] = [
     description:
       "Lokale SEO für kleine Betriebe: wie du in der Nähe-Suche und auf Google Maps nach oben kommst. Google-Profil, NAP-Daten, Bewertungen, lokale Inhalte.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-09",
     readingTime: "7 Min.",
     intro: [
       "Wenn jemand in deiner Nähe nach einem Betrieb wie deinem sucht, entscheiden wenige Zeilen bei Google darüber, wer den Auftrag bekommt: die drei Einträge, die zusammen mit der Karte ganz oben erscheinen. Dieses sogenannte lokale Dreier-Paket bekommt mit Abstand die meisten Klicks und Anrufe. Wer dort steht, gewinnt, wer darunter landet, wird oft gar nicht mehr gesehen.",
@@ -1195,7 +1195,7 @@ export const ARTICLES: Article[] = [
     description:
       "Warum Logo, Visitenkarten, Fahrzeugbeschriftung und Firmenkleidung zusammengehören und wie ein einheitlicher Auftritt größer wirken lässt.",
     datePublished: "2026-08-11",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-09",
     readingTime: "6 Min.",
     intro: [
       "Die meisten kleinen Betriebe sammeln ihren Auftritt über die Jahre zusammen. Das Logo hat mal ein Bekannter gemacht, die Visitenkarten kamen von einer Online-Druckerei, die Beschriftung am Transporter hat der Werbetechniker vor Ort entworfen, und die Arbeitsshirts sind schlicht die, die gerade im Angebot waren.",
@@ -1268,7 +1268,7 @@ export const ARTICLES: Article[] = [
     description:
       "Deine Seite ist online, taucht bei Google aber nicht auf. Neun Gründe, wie du jeden davon in wenigen Minuten selbst prüfst, und in welcher Reihenfolge du vorgehst.",
     datePublished: "2026-09-08",
-    dateModified: "2026-09-08",
+    dateModified: "2026-09-09",
     readingTime: "8 Min.",
     intro: [
       "Die Seite ist fertig, sie ist online, sie sieht gut aus. Du tippst deine Leistung und deinen Ort bei Google ein und findest alles Mögliche, nur dich selbst nicht.",
@@ -1413,7 +1413,7 @@ export const ARTICLES: Article[] = [
     description:
       "Was Domain, Web Hosting und Website wirklich voneinander unterscheidet, worauf du als Betrieb achten solltest und warum die Frage nach dem Eigentum die wichtigste ist.",
     datePublished: "2026-09-08",
-    dateModified: "2026-09-08",
+    dateModified: "2026-09-09",
     readingTime: "7 Min.",
     intro: [
       "Fast jeder Betrieb, der zum ersten Mal über eine eigene Website nachdenkt, stolpert über dieselben drei Wörter: Domain, Hosting, Website. Sie werden im Alltag durcheinandergeworfen, obwohl sie drei verschiedene Dinge bezeichnen. Wer den Unterschied einmal verstanden hat, trifft bei Angeboten deutlich bessere Entscheidungen und merkt schneller, wenn ihm jemand etwas verkauft, das er nicht braucht.",
