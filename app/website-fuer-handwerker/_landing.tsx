@@ -1001,7 +1001,7 @@ export default function HandwerkerLanding() {
               <GoogleReviews
                 variant="dark"
                 max={3}
-                auswahl={["Alpay Gün", "Julian Dielichtenergie", "Bilal Özdemir"]}
+                auswahl={["Alpay Gün", "Rosa Kifel", "Julian Dielichtenergie"]}
               />
             </motion.div>
           </div>

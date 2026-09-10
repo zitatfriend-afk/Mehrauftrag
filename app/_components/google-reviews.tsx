@@ -122,7 +122,10 @@ export default function GoogleReviews({
   max?: number;
   // Optional: bestimmte Bewertungen in genau dieser Reihenfolge zeigen (Namen
   // aus REVIEWS). Genutzt auf der Handwerker-Zielseite, die bundesweit wirbt:
-  // dort soll nicht als Erstes "Top Webdesign aus Hainburg" stehen.
+  // dort steht die Bewertung, die mit "Top Webdesign aus Hainburg" beginnt,
+  // bewusst nicht an erster Stelle, sondern in der Mitte. Ein Betrieb aus
+  // Hamburg soll nicht als Erstes lesen, dass hier eine Agentur aus einem
+  // 15000-Einwohner-Ort wirbt.
   auswahl?: string[];
 }) {
   const basis = auswahl
@@ -173,7 +176,7 @@ export default function GoogleReviews({
             >
               „{r.text}“
             </blockquote>
-            <figcaption className="flex items-center justify-between pt-2 text-sm">
+            <figcaption className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 pt-2 text-sm">
               <span className="font-semibold" style={{ color: nameColor }}>
                 {r.name}
               </span>
