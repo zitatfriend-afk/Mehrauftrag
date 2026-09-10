@@ -1008,12 +1008,17 @@ export default function HandwerkerLanding() {
         </motion.section>
 
         {/* ─── Preisbox ─── */}
+        {/* id="preis": Sprungziel fuer den Google-Ads-Sitelink "Ohne Abo
+            moeglich". Der Klick soll direkt auf dem Kasten mit dem Einmalkauf
+            landen und nicht wieder oben auf der Seite. scroll-mt sorgt dafuer,
+            dass die Ueberschrift nicht am oberen Rand klebt. */}
         <motion.section
+          id="preis"
           initial="hidden"
           whileInView="show"
           viewport={SECTION_VIEWPORT}
           variants={stagger}
-          className="relative px-5 py-16 sm:px-8 sm:py-20"
+          className="relative scroll-mt-6 px-5 py-16 sm:px-8 sm:py-20"
         >
           <div className="mx-auto max-w-2xl">
             <div className="mb-10 text-center">
