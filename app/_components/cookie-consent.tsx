@@ -170,21 +170,45 @@ export default function CookieConsent() {
     }
   }, []);
 
-  // Die Leiste liegt fix am unteren Rand und wuerde sonst den Absenden-Knopf
-  // des Formulars verdecken, solange der Besucher noch nicht geantwortet hat.
-  // Deshalb bekommt die Seite genau so viel Abstand nach unten, wie die Leiste
-  // hoch ist. Laeuft auch mit ausgeklappten Einstellungen, weil showSettings
-  // in den Abhaengigkeiten steht.
+  // Die Leiste liegt fix am unteren Rand und wuerde sonst verdecken, was dort
+  // steht. Zwei Dinge passieren deshalb, solange sie offen ist:
+  //
+  // 1. Die Seite bekommt genau so viel Abstand nach unten, wie die Leiste hoch
+  //    ist. Sonst liegt die Leiste dauerhaft auf der Fusszeile.
+  // 2. Die Hoehe wird als CSS-Variable --ma-consent-h veroeffentlicht. Alles,
+  //    was sonst unten klebt (WhatsApp-Knopf, mobile Anfrage-Leiste), rueckt
+  //    damit ueber die Leiste statt darunter zu verschwinden. Ohne das war der
+  //    Besucher beim ersten Seitenaufruf, also bei 100 Prozent des bezahlten
+  //    Traffics, von jedem Kontaktweg am unteren Rand abgeschnitten.
+  //
+  // showSettings steht mit in den Abhaengigkeiten, damit die Werte auch beim
+  // Ausklappen der Einstellungen stimmen.
   useEffect(() => {
     if (typeof document === "undefined") return;
+    const wurzel = document.documentElement;
     if (!open) {
       document.body.style.paddingBottom = "";
+      wurzel.style.removeProperty("--ma-consent-h");
       return;
     }
-    const hoehe = leisteRef.current?.offsetHeight ?? 0;
-    document.body.style.paddingBottom = hoehe > 0 ? `${hoehe}px` : "";
+    const setzen = () => {
+      const hoehe = leisteRef.current?.offsetHeight ?? 0;
+      document.body.style.paddingBottom = hoehe > 0 ? `${hoehe}px` : "";
+      wurzel.style.setProperty("--ma-consent-h", `${hoehe}px`);
+    };
+    setzen();
+    // Die Leiste wird eingeblendet, ihre Endhoehe steht erst nach der
+    // Animation fest. Ein Beobachter haelt die Werte automatisch aktuell,
+    // auch beim Drehen des Geraets.
+    let beobachter: ResizeObserver | null = null;
+    if (typeof ResizeObserver !== "undefined" && leisteRef.current) {
+      beobachter = new ResizeObserver(setzen);
+      beobachter.observe(leisteRef.current);
+    }
     return () => {
+      if (beobachter) beobachter.disconnect();
       document.body.style.paddingBottom = "";
+      wurzel.style.removeProperty("--ma-consent-h");
     };
   }, [open, showSettings]);
 
@@ -253,12 +277,10 @@ export default function CookieConsent() {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-x-0 bottom-0 z-[80] border-t border-white/10 bg-[#070d20]/95 shadow-[0_-8px_30px_rgba(0,0,0,0.45)] backdrop-blur"
           >
-            <div className="mx-auto w-full max-w-5xl px-4 py-3 sm:px-6 sm:py-4">
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
-                <p className="text-[13px] leading-snug text-slate-300 sm:flex-1 sm:text-sm">
-                  Wir nutzen Cookies, um die Website bereitzustellen und, mit Ihrer Einwilligung,
-                  die Wirkung unserer Werbung zu messen (Meta-Pixel, Google Analytics, Microsoft
-                  Clarity).{" "}
+            <div className="mx-auto w-full max-w-5xl px-4 py-2.5 sm:px-6 sm:py-3">
+              <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-6">
+                <p className="text-[12.5px] leading-snug text-slate-300 sm:flex-1 sm:text-[13px]">
+                  Cookies: notwendige immer, Werbemessung nur mit Ihrer Einwilligung.{" "}
                   <Link
                     href="/datenschutz"
                     className="text-blue-400 underline underline-offset-2 hover:text-blue-300"
@@ -279,14 +301,14 @@ export default function CookieConsent() {
                   <button
                     type="button"
                     onClick={() => save(false)}
-                    className="flex-1 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-medium text-slate-200 transition hover:border-white/30 hover:text-white sm:flex-none sm:px-5"
+                    className="flex-1 rounded-lg border border-white/15 px-4 py-2 text-[13px] font-medium text-slate-200 transition hover:border-white/30 hover:text-white sm:flex-none sm:px-5"
                   >
                     Nur notwendige
                   </button>
                   <button
                     type="button"
                     onClick={() => save(true)}
-                    className="flex-1 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-500 sm:flex-none sm:px-5"
+                    className="flex-1 rounded-lg bg-blue-600 px-4 py-2 text-[13px] font-semibold text-white transition hover:bg-blue-500 sm:flex-none sm:px-5"
                   >
                     Alle akzeptieren
                   </button>

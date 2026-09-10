@@ -113,3 +113,22 @@ export function sendeTelefonklickConversion(): void {
   if (!gtag) return;
   gtag("event", "conversion", { send_to: GA_ADS_CONVERSION_PHONE });
 }
+
+/**
+ * Conversion "WhatsApp-Klick".
+ *
+ * Meldet bewusst auf dieselbe Conversion-Aktion wie der Telefonklick. Fuer den
+ * Betrieb ist beides derselbe Vorgang: Jemand nimmt direkt Kontakt auf, ohne
+ * den Umweg ueber das Formular. Google Ads braucht dieses Signal, sonst
+ * optimiert die Kampagne nur auf Formular-Anfragen und wertet jeden Besucher,
+ * der lieber schreibt oder anruft, als wertlos.
+ *
+ * Wenn im Konto sauber getrennt werden soll, welcher Weg wie oft genutzt wird,
+ * braucht es eine eigene Conversion-Aktion. Bis dahin ist ein gezaehlter
+ * Kontakt besser als ein nicht gezaehlter.
+ */
+export function sendeWhatsappConversion(): void {
+  const gtag = holeGtag();
+  if (!gtag) return;
+  gtag("event", "conversion", { send_to: GA_ADS_CONVERSION_PHONE });
+}

@@ -4,7 +4,11 @@ import { useState, useEffect, type FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { sendeFormularConversion, sendeTelefonklickConversion } from "../_lib/ads-conversion";
+import {
+  sendeFormularConversion,
+  sendeTelefonklickConversion,
+  sendeWhatsappConversion,
+} from "../_lib/ads-conversion";
 import MaMark from "../_components/ma-mark";
 import GoogleReviews from "../_components/google-reviews";
 import { FAQS } from "./_faqs";
@@ -28,6 +32,10 @@ import { FAQS } from "./_faqs";
 const SUBMIT_URL =
   "https://ezrxxxilssmzcavdvvbe.supabase.co/functions/v1/submit-website-lead";
 const PAGE_LABEL = "Handwerker LP";
+const TELEFON = "+4915202069625";
+const TELEFON_ANZEIGE = "0152 02069625";
+const WHATSAPP_URL =
+  "https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20f%C3%BCr%20meinen%20Handwerksbetrieb.";
 const LEAD_SOURCE = `Website - ${PAGE_LABEL}`;
 
 /**
@@ -59,6 +67,7 @@ declare global {
 // Marketing-Einwilligung vor, wird die Telefonnummer als user_data mitgesendet,
 // damit Google den Lead auch ohne Cookie dem Anzeigenklick zuordnen kann.
 const trackPhoneClick = sendeTelefonklickConversion;
+const trackWhatsappClick = sendeWhatsappConversion;
 
 // ─── Shared Motion ────────────────────────────────────────────────────────────
 const EASE_OUT = [0.16, 1, 0.3, 1] as [number, number, number, number];
@@ -447,7 +456,7 @@ function LeadForm() {
             if (state === "invalid" || state === "failed") setState("idle");
           }}
           required
-          className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06]"
+          className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06] sm:py-3"
         />
       </div>
       <div>
@@ -464,7 +473,7 @@ function LeadForm() {
             if (state === "invalid" || state === "failed") setState("idle");
           }}
           required
-          className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06]"
+          className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06] sm:py-3"
         />
       </div>
 
@@ -500,10 +509,55 @@ function LeadForm() {
           </svg>
         )}
       </button>
+        {/* WhatsApp und Anruf stehen bewusst gleichwertig neben dem
+            Formular und nicht mehr als Nebensatz in Kleinschrift.
+            Grund: Das Formular verlangt eine Telefonnummer, bevor der
+            Besucher irgendetwas bekommen hat. Wer die nicht hergeben
+            will, hatte bisher keinen sichtbaren zweiten Weg und ist
+            abgesprungen. Ein Handwerker auf der Baustelle tippt
+            ausserdem lieber zwei Zeilen in WhatsApp, als ein Formular
+            auszufuellen. Beide Wege zaehlen im Konto als Conversion. */}
+        <div className="mt-4">
+          <div className="flex items-center gap-3" aria-hidden="true">
+            <div className="h-px flex-1 bg-white/10" />
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+              oder direkt
+            </span>
+            <div className="h-px flex-1 bg-white/10" />
+          </div>
+          <div className="mt-3 grid grid-cols-2 gap-2.5">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener"
+              onClick={trackWhatsappClick}
+              className="inline-flex items-center justify-center gap-2 rounded-xl px-3 py-3 text-sm font-semibold text-white transition hover:brightness-125"
+              style={{ background: "rgba(37,211,102,0.14)", border: "1px solid rgba(37,211,102,0.5)" }}
+            >
+              <svg viewBox="0 0 24 24" fill="#25D366" className="h-[18px] w-[18px] shrink-0" aria-hidden="true">
+                <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+              </svg>
+              WhatsApp
+            </a>
+            <a
+              href={`tel:${TELEFON}`}
+              onClick={trackPhoneClick}
+              className="inline-flex items-center justify-center gap-2 rounded-xl px-3 py-3 text-sm font-semibold text-white transition hover:brightness-125"
+              style={{ background: "rgba(59,130,246,0.14)", border: "1px solid rgba(59,130,246,0.5)" }}
+            >
+              <svg className="h-[18px] w-[18px] shrink-0" fill="none" viewBox="0 0 24 24" stroke="#60a5fa" strokeWidth={2} aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Anrufen
+            </a>
+          </div>
+          <p className="mt-2.5 text-center text-xs text-slate-500">
+            Kein Formular nötig: {TELEFON_ANZEIGE}
+          </p>
+        </div>
       <p className="text-center text-xs leading-relaxed text-slate-500">
-        Wir melden uns innerhalb von 24 Stunden kurz, um Ihren Betrieb zu verstehen. Danach bekommen
-        Sie Ihren Entwurf, kostenlos und unverbindlich. Ihre Daten nutzen wir nur, um Ihre Anfrage
-        zu beantworten, mehr dazu in der{" "}
+        Wir melden uns innerhalb von 24 Stunden. Ihr Entwurf ist kostenlos und unverbindlich, Ihre
+        Daten nutzen wir nur für Ihre Anfrage, mehr dazu in der{" "}
         <Link href="/datenschutz" className="underline underline-offset-2 hover:text-slate-300">
           Datenschutzerklärung
         </Link>
@@ -583,7 +637,10 @@ function AnfrageLeiste() {
           animate={{ y: 0 }}
           exit={{ y: 80 }}
           transition={{ duration: 0.25, ease: EASE_OUT }}
-          className="fixed inset-x-0 bottom-0 z-[55] border-t border-white/10 bg-[#050b1c]/95 py-3 pl-4 pr-[76px] backdrop-blur sm:hidden"
+          className="fixed inset-x-0 z-[55] border-t border-white/10 bg-[#050b1c]/95 py-3 pl-4 pr-[76px] backdrop-blur sm:hidden"
+          // Solange die Cookie-Leiste offen ist, sitzt diese Leiste darueber
+          // statt dahinter. --ma-consent-h kommt aus cookie-consent.tsx.
+          style={{ bottom: "var(--ma-consent-h, 0px)" }}
         >
           <a
             href="#anfrage"
@@ -693,7 +750,7 @@ export default function HandwerkerLanding() {
         </header>
 
         {/* ─── Hero ─── */}
-        <section className="relative flex items-center justify-center overflow-hidden px-5 pt-20 pb-10 sm:px-8 sm:pt-28 sm:pb-16">
+        <section className="relative flex items-center justify-center overflow-hidden px-5 pt-20 pb-10 sm:px-8 sm:pt-16 sm:pb-16">
           <div className="absolute inset-0 pointer-events-none">
             <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 55% at 60% 26%, rgba(59,130,246,0.13) 0%, transparent 100%)" }} />
           </div>
@@ -709,11 +766,18 @@ export default function HandwerkerLanding() {
             // dadurch rutscht auch der Absende-Button ueber die Sichtkante. Auf dem Handy
             // aendert sich nichts, dort ist der Bildschirm ohnehin schmaler. Die Absaetze
             // darunter haben ihre eigene, engere Breite und bleiben davon unberuehrt.
-            className="relative z-10 mx-auto max-w-4xl pt-2 pb-4 text-center sm:pt-6"
+            className="relative z-10 mx-auto max-w-4xl pt-2 pb-4 text-center sm:pt-1"
           >
+            {/* Bei flachen Fenstern faellt das Abzeichen weg. Es ist Schmuck,
+                der Absende-Knopf ist es nicht: Unter etwa 720 Pixel Fensterhoehe
+                entscheiden diese 50 Pixel darueber, ob der Knopf ueber oder
+                hinter der Cookie-Leiste liegt. Die Aussage steht ohnehin in der
+                Ueberschrift. Bewusst als eigene Huelle, damit sich die Regeln
+                fuer Breite und Hoehe nicht gegenseitig ueberschreiben. */}
+            <div className="[@media(max-height:720px)]:hidden">
             <motion.div variants={fadeUp} className="hidden sm:block">
               <div
-                className="badge-glow mb-5 inline-flex items-center gap-2 rounded-full px-4 py-1.5 sm:mb-8"
+                className="badge-glow mb-5 inline-flex items-center gap-2 rounded-full px-4 py-1.5 sm:mb-5"
                 style={{ background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.26)" }}
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-[#60a5fa] animate-pulse" />
@@ -722,6 +786,7 @@ export default function HandwerkerLanding() {
                 </span>
               </div>
             </motion.div>
+            </div>
 
             <motion.h1
               variants={fadeUp}
@@ -737,32 +802,25 @@ export default function HandwerkerLanding() {
 
             <motion.p
               variants={fadeUp}
-              className="mx-auto mt-4 max-w-xl text-base font-light leading-relaxed sm:mt-7 sm:text-xl"
+              className="mx-auto mt-4 max-w-xl text-base font-light leading-relaxed sm:mt-5 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
               Sie sehen zuerst einen kostenlosen Entwurf. Erst wenn er überzeugt, geht es weiter.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-7">
+            <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-5">
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> Entwurf vorab kostenlos</span>
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> In 7 Tagen online</span>
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> Monatlich kündbar</span>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="mx-auto mt-5 max-w-md sm:mt-8">
+            <motion.div variants={fadeUp} className="mx-auto mt-5 max-w-md sm:mt-6">
               <div
-                className="rounded-2xl p-6 text-left"
+                className="rounded-2xl p-6 text-left sm:p-5"
                 style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(59,130,246,0.28)", boxShadow: "0 12px 50px rgba(0,0,0,0.4)" }}
               >
-                <p className="mb-4 hidden text-center text-[15px] font-bold text-white sm:block">Kostenlosen Entwurf sichern</p>
                 <LeadForm />
               </div>
-              <p className="mt-4 text-center text-sm text-slate-400">
-                Lieber direkt schreiben?{" "}
-                <a href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20f%C3%BCr%20meinen%20Handwerksbetrieb." target="_blank" rel="noopener" className="font-semibold text-[#25D366] hover:text-white">WhatsApp</a>
-                {" "}oder{" "}
-                <a href="tel:+4915202069625" onClick={trackPhoneClick} className="font-semibold text-[#60a5fa] hover:text-white">anrufen</a>
-              </p>
             </motion.div>
           </motion.div>
         </section>
@@ -873,6 +931,14 @@ export default function HandwerkerLanding() {
               </motion.h2>
               <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400">
                 Keine Musterbeispiele, echte Kunden aus Handwerk &amp; Dienstleistung. Schauen Sie selbst rein.
+              </motion.p>
+              {/* Wir haben noch keine Referenz aus jedem Gewerk. Das offen
+                  anzusprechen ist besser, als den Besucher selbst merken zu
+                  lassen, dass sein Gewerk fehlt, und dann wegzuklicken. */}
+              <motion.p variants={fadeUp} className="mx-auto mt-3 max-w-xl text-sm text-slate-500">
+                Ihr Gewerk ist nicht dabei? Der Aufbau bleibt derselbe, es wechseln nur Leistungen,
+                Bilder und Ansprache. Genau das sehen Sie im kostenlosen Entwurf, bevor Sie sich
+                entscheiden.
               </motion.p>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -1086,12 +1152,20 @@ export default function HandwerkerLanding() {
 
         {/* ─── WhatsApp Floating-Button ─── */}
         <a
-          href="https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website%20f%C3%BCr%20meinen%20Handwerksbetrieb."
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener"
+          onClick={trackWhatsappClick}
           aria-label="Per WhatsApp anfragen"
-          className="fixed bottom-4 right-4 z-[60] inline-flex items-center gap-2 rounded-full p-3.5 text-sm font-semibold text-white shadow-xl transition hover:scale-105 sm:bottom-5 sm:right-5 sm:px-4 sm:py-3.5"
-          style={{ background: "#25D366", boxShadow: "0 8px 28px rgba(37,211,102,0.5)" }}
+          className="fixed right-4 z-[60] inline-flex items-center gap-2 rounded-full p-3.5 text-sm font-semibold text-white shadow-xl transition hover:scale-105 sm:right-5 sm:px-4 sm:py-3.5"
+          // Der Abstand nach unten waechst um die Hoehe der Cookie-Leiste.
+          // Vorher lag der Knopf beim ersten Besuch komplett dahinter, also
+          // genau bei den Besuchern, fuer die wir bezahlt haben.
+          style={{
+            bottom: "calc(1rem + var(--ma-consent-h, 0px))",
+            background: "#25D366",
+            boxShadow: "0 8px 28px rgba(37,211,102,0.5)",
+          }}
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
           {/* Auf dem Handy nur das Symbol. Die Pille mit Schrift war rund 150 px
