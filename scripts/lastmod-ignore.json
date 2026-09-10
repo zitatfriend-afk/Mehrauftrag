@@ -29,5 +29,12 @@
       "app/page.tsx",
       "app/_components/karriere-shell.tsx"
     ]
+  },
+  "b7ec64a": {
+    "grund": "10.09.2026: In diesem Commit wurde auf der ganzen Website nur die Anrede von Du auf Sie umgestellt (Startseite, Ratgeber, Analyse-Seiten, Stadt- und Branchenseiten, Formulare, Metadaten). Aussagen, Zahlen, Preise und Aufbau sind unveraendert, ein Besucher bekommt keinen neuen Inhalt. Ohne diesen Eintrag truegen rund 80 URLs denselben Zeitstempel und npm run lastmod wuerde abbrechen. Entscheidung von Patrick am 10.09.2026.",
+    "pfade": [
+      "app/",
+      "public/"
+    ]
   }
 }
