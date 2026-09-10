@@ -5,7 +5,15 @@
 // sichtbar auf der Seite stehen, deshalb darf das nie auseinanderlaufen.
 // Gehoert zu /website-fuer-handwerker.
 //
-// Die letzten beiden Fragen kommen aus der Wettbewerbsanalyse vom 06.09.2026:
+// Die Frage "Geht es auch ohne monatliche Kosten?" kam am 10.09.2026 dazu.
+// Grund: Die Seite bot nur das Monatsmodell an und hat den Einmalkauf in der
+// Antwort darunter sogar abgewertet ("nicht einmalig abkassieren"). Wer genau
+// das sucht, liest daraus, dass er nicht gemeint ist, und springt ab, bevor er
+// den kostenlosen Entwurf ueberhaupt anfragt. Bewusst OHNE Preis: Der Entwurf
+// bleibt der einzige Einstieg, eine zweite Zahl wuerde die 250 Euro entwerten
+// und zum Vergleichen einladen statt zum Anfragen.
+//
+// Die beiden Fragen davor kommen aus der Wettbewerbsanalyse vom 06.09.2026:
 // Die Anzeigen der Mitbewerber positionieren sich fast alle gegen Baukaesten,
 // und ihre Einstiegspreise liegen bei 599 bis 1.000 Euro. Bei 250 Euro
 // Einstieg entsteht deshalb die Frage, wo der Haken ist. Beide Einwaende
@@ -31,11 +39,15 @@ export const FAQS: Faq[] = [
     a: "Nein. Monatlich kündbar. Kein Kleingedrucktes, keine langfristige Bindung.",
   },
   {
+    q: "Geht es auch ohne monatliche Kosten?",
+    a: "Ja. Sie können die Website auch einmalig kaufen, dann gehört sie Ihnen. Hosting, Pflege und spätere Änderungen können Sie danach dazubuchen, müssen Sie aber nicht. Sagen Sie im Gespräch einfach Bescheid, dann rechnen wir Ihnen beide Wege vor und Sie entscheiden in Ruhe.",
+  },
+  {
     q: "Ist das eine Vorlage aus dem Baukasten?",
     a: "Nein. Ihre Seite wird für Ihren Betrieb gebaut, mit Ihren Leistungen, Ihren Fotos und Ihrer Region. Sie können sich unsere bestehenden Kundenseiten ansehen und selbst vergleichen, keine davon sieht aus wie die andere.",
   },
   {
     q: "Warum ist der Einstieg so günstig?",
-    a: "Weil wir langfristig mit Ihnen arbeiten wollen und nicht einmalig abkassieren. Andere verlangen 600 bis 1.000 Euro auf einen Schlag und sind danach weg. Bei uns ist der Start bewusst niedrig, dafür betreuen wir die Seite jeden Monat weiter. Bleibt sie nicht gut, kündigen Sie einfach.",
+    a: "Weil wir langfristig mit Ihnen arbeiten wollen. Andere verlangen 600 bis 1.000 Euro auf einen Schlag und sind danach weg. Bei uns ist der Start bewusst niedrig, dafür betreuen wir die Seite jeden Monat weiter. Bleibt sie nicht gut, kündigen Sie einfach. Und wer die Seite lieber einmalig kauft, kann das ebenfalls tun.",
   },
 ];

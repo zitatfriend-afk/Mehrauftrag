@@ -1067,9 +1067,30 @@ export default function HandwerkerLanding() {
                   bewusst ohne Namen und als Spanne, weil sich Preise ändern. */}
               <p className="mt-5 text-center text-sm leading-relaxed text-slate-400">
                 Andere Anbieter verlangen für den Einstieg 600 bis 1.000 Euro. Wir nehmen 250,
-                weil wir langfristig mit Ihnen arbeiten wollen und nicht einmalig abrechnen.
-                Bleibt die Seite nicht gut, kündigen Sie zum Monatsende.
+                weil wir langfristig mit Ihnen arbeiten wollen. Bleibt die Seite nicht gut,
+                kündigen Sie zum Monatsende.
               </p>
+
+              {/* Der Einwand "ich will kein Abo" entsteht genau hier, an der
+                  Zahl mit dem "pro Monat" daneben. Deshalb wird er hier
+                  abgeraeumt und nicht erst in der FAQ, die viele nie erreichen.
+                  Bewusst als ruhiger Hinweis und NICHT als zweite Preisbox:
+                  Zwei Preise nebeneinander zwingen zu einer Entscheidung, und
+                  die Seite will an dieser Stelle gar keine Entscheidung, nur
+                  die Anfrage nach dem kostenlosen Entwurf. */}
+              <div
+                className="mx-auto mt-6 max-w-md rounded-xl px-5 py-4 text-center"
+                style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.09)" }}
+              >
+                <p className="text-sm font-semibold text-white">
+                  Lieber einmalig kaufen statt monatlich zahlen?
+                </p>
+                <p className="mt-1.5 text-sm leading-relaxed text-slate-400">
+                  Geht auch. Dann gehört die Seite Ihnen. Hosting und Pflege können Sie dazubuchen,
+                  müssen Sie aber nicht. Sagen Sie im Gespräch Bescheid, dann rechnen wir Ihnen
+                  beide Wege vor.
+                </p>
+              </div>
 
               <div className="mt-7 flex justify-center">
                 <a
