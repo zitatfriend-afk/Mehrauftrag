@@ -22,5 +22,12 @@
     "pfade": [
       "public/webdesign-"
     ]
+  },
+  "be6c347": {
+    "grund": "10.09.2026: In diesem Commit wurde auf der Startseite und im Header der Karriereseite nur das Linkziel der Buchungs-Buttons von Calendly auf die eigene Terminseite termine.mehrauftrag.de umgestellt. Beschriftung und Seitentext sind unveraendert, ein Besucher sieht keinen neuen Inhalt. Die uebrigen Dateien des Commits (google-ads/_landing.tsx, grafikdesign/_landing.tsx, datenschutz/page.tsx) sind in routen.json keiner Sitemap-URL zugeordnet und bewegen ohnehin kein lastmod.",
+    "pfade": [
+      "app/page.tsx",
+      "app/_components/karriere-shell.tsx"
+    ]
   }
 }
