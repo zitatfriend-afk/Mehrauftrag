@@ -17,7 +17,7 @@ import MaMark from "../_components/ma-mark";
  */
 
 // ─── Konfiguration (öffentliche Werte) ───────────────────────────────────────
-const CALENDLY_URL = "https://calendly.com/mehrauftrag-info/30min";
+const TERMIN_URL = "https://termine.mehrauftrag.de/";
 const TEL_URL = "tel:+4915202069625";
 const WHATSAPP_URL =
   "https://wa.me/4915202069625?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Google%20Ads%20f%C3%BCr%20mein%20Unternehmen.";
@@ -256,7 +256,7 @@ function SoftCta({ variant = "solid" }: { variant?: "solid" | "ghost" }) {
     <div className="flex flex-col items-center gap-4">
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
         <a
-          href={CALENDLY_URL}
+          href={TERMIN_URL}
           target="_blank"
           rel="noopener"
           className="shimmer-btn group inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-xl px-7 py-4 text-base font-semibold text-white transition"

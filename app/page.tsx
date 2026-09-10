@@ -1401,7 +1401,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row gap-3 justify-center"
             >
               <motion.a
-                href="https://calendly.com/mehrauftrag-info/30min"
+                href="https://termine.mehrauftrag.de/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -2, boxShadow: "0 12px 40px rgba(59,130,246,0.65), 0 0 0 1px rgba(59,130,246,0.45)" }}
@@ -2080,7 +2080,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
                 <motion.a
-                  href="https://calendly.com/mehrauftrag-info/30min"
+                  href="https://termine.mehrauftrag.de/"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ background: "rgba(59,130,246,0.1)", borderColor: "rgba(59,130,246,0.38)", boxShadow: "0 4px 24px rgba(59,130,246,0.14)" }}

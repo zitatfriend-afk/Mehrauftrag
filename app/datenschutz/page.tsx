@@ -371,36 +371,11 @@ export default function DatenschutzPage() {
           </LegalP>
         </LegalSubsection>
 
-        <LegalSubsection title="Terminbuchung (Calendly)">
-          <LegalP>
-            Für die Vereinbarung von Beratungs- und Erstgesprächen bieten wir Ihnen die Möglichkeit,
-            über den Dienst „Calendly" einen Termin zu buchen. Anbieter ist die Calendly LLC, 271
-            17th Street NW, Suite 1000, Atlanta, GA 30363, USA („Calendly"). Wenn Sie auf einen
-            Terminbuchungs-Button klicken, werden Sie zu Calendly weitergeleitet. Die von Ihnen im
-            Rahmen der Buchung angegebenen Daten (z. B. Name, E-Mail-Adresse, Terminwunsch sowie
-            ggf. weitere von Ihnen gemachte Angaben) werden von Calendly verarbeitet, um den Termin
-            zu organisieren und Sie ggf. daran zu erinnern.
-          </LegalP>
-          <LegalP>
-            Rechtsgrundlage für die Verarbeitung ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)
-            sowie die Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage hin (Art. 6 Abs. 1
-            lit. b DSGVO). Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft
-            widerrufen. Bei der Nutzung von Calendly kann es zu einer Übermittlung
-            personenbezogener Daten in die USA kommen; diese stützt sich auf die
-            Standardvertragsklauseln der EU-Kommission. Weitere Informationen finden Sie in der
-            Datenschutzerklärung von Calendly:{" "}
-            <LegalLink href="https://calendly.com/de/privacy">
-              https://calendly.com/de/privacy
-            </LegalLink>
-          </LegalP>
-        </LegalSubsection>
-
         <LegalSubsection title="Terminbuchung über unsere eigene Terminseite">
           <LegalP>
-            Neben Calendly stellen wir für Erstgespräche eine eigene Terminseite bereit, die wir
-            selbst betreiben. Wenn Sie dort einen Termin buchen, bleiben Ihre Daten in unserer Hand
-            und werden nicht an Calendly übermittelt. Wir verarbeiten dann die von Ihnen
-            eingegebenen Angaben: Vor- und Nachname,
+            Für Erstgespräche stellen wir unter termine.mehrauftrag.de eine eigene Terminseite
+            bereit, die wir selbst betreiben. Wenn Sie dort einen Termin buchen, verarbeiten wir die
+            von Ihnen eingegebenen Angaben: Vor- und Nachname,
             E-Mail-Adresse, Telefonnummer, auf Wunsch Ihren Firmennamen, die gewählte Gesprächsform
             (Telefon oder Videogespräch) und den gewählten Zeitpunkt. Zusätzlich speichern wir den
             Status des Termins, damit eine Absage oder Verschiebung möglich ist. Diese Daten
