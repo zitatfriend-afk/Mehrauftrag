@@ -24,7 +24,7 @@ export default function StandorteLeiste() {
           href="/webdesign-standorte"
           className="text-[11px] tracking-wide text-white/40 transition-colors hover:text-white/70"
         >
-          Webdesign in deiner Stadt
+          Webdesign in Ihrer Stadt
         </a>
       </div>
     </div>

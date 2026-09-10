@@ -6,9 +6,9 @@ import { RatgeberHeader, RatgeberFooter } from "../../ratgeber/_shell";
 // den Index: eine Seite, die nur im Ablauf einer Anmeldung Sinn ergibt, hat in
 // den Suchergebnissen nichts verloren.
 export const metadata: Metadata = {
-  title: "Bitte bestätige deine Anmeldung | Mehr Auftrag",
+  title: "Bitte bestätigen Sie Ihre Anmeldung | Mehr Auftrag",
   description:
-    "Fast geschafft. Bestätige deine Anmeldung zum Website-Check mit einem Klick in der E-Mail.",
+    "Fast geschafft. Bestätigen Sie Ihre Anmeldung zum Website-Check mit einem Klick in der E-Mail.",
   robots: { index: false, follow: true },
 };
 
@@ -40,17 +40,17 @@ export default function BitteBestaetigenSeite() {
           </div>
 
           <h1 className="text-3xl font-black leading-tight tracking-[-0.03em] text-white sm:text-4xl">
-            Fast geschafft, bitte bestätige noch kurz
+            Fast geschafft, bitte bestätigen Sie noch kurz
           </h1>
 
           <p className="mt-5 text-lg leading-relaxed text-slate-300">
-            Wir haben dir eine E-Mail geschickt. Klick darin auf den Bestätigungslink, dann
-            kommst du direkt zur Checkliste.
+            Wir haben Ihnen eine E-Mail geschickt. Klicken Sie darin auf den Bestätigungslink, dann
+            kommen Sie direkt zur Checkliste.
           </p>
 
           <p className="mt-4 text-base leading-relaxed text-slate-400">
-            Falls die Nachricht nicht ankommt, schau bitte im Spam-Ordner nach und markiere
-            sie als kein Spam, damit die folgenden E-Mails zuverlässig ankommen.
+            Falls die Nachricht nicht ankommt, schauen Sie bitte im Spam-Ordner nach und markieren Sie
+            diese als kein Spam, damit die folgenden E-Mails zuverlässig ankommen.
           </p>
 
           <div className="mt-10">

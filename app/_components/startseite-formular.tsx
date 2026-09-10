@@ -103,9 +103,9 @@ export default function StartseiteFormular() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-lg font-bold text-white">Danke, wir melden uns bei dir.</h3>
+        <h3 className="text-lg font-bold text-white">Danke, wir melden uns bei Ihnen.</h3>
         <p className="mt-2 text-sm text-slate-400">
-          Wir rufen dich innerhalb von 24 Stunden zurück. Kostenlos, unverbindlich und ohne Verkaufsdruck.
+          Wir rufen Sie innerhalb von 24 Stunden zurück. Kostenlos, unverbindlich und ohne Verkaufsdruck.
         </p>
       </motion.div>
     );
@@ -122,12 +122,12 @@ export default function StartseiteFormular() {
       </div>
 
       <div>
-        <label htmlFor="start-name" className="sr-only">Dein Name</label>
+        <label htmlFor="start-name" className="sr-only">Ihr Name</label>
         <input
           id="start-name"
           type="text"
           autoComplete="name"
-          placeholder="Dein Name"
+          placeholder="Ihr Name"
           ref={nameRef}
           value={name}
           onChange={(e) => { setName(e.target.value); if (state === "error") setState("idle"); }}
@@ -144,7 +144,7 @@ export default function StartseiteFormular() {
           type="tel"
           inputMode="tel"
           autoComplete="tel"
-          placeholder="Deine Telefonnummer"
+          placeholder="Ihre Telefonnummer"
           ref={phoneRef}
           value={phone}
           onChange={(e) => { setPhone(e.target.value); if (state === "error") setState("idle"); }}
@@ -160,7 +160,7 @@ export default function StartseiteFormular() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m0 3.75h.008M10.34 3.94l-7.5 12.99A1.5 1.5 0 004.14 19.5h15.72a1.5 1.5 0 001.3-2.57l-7.5-12.99a1.5 1.5 0 00-2.6 0z" />
           </svg>
           <span>
-            Bitte Name und Telefonnummer eintragen. Klappt es weiterhin nicht, ruf uns gern direkt an unter{" "}
+            Bitte Name und Telefonnummer eintragen. Klappt es weiterhin nicht, rufen Sie uns gern direkt an unter{" "}
             <a href="tel:+4915202069625" className="underline">+49 152 02069625</a>.
           </span>
         </p>
@@ -181,7 +181,7 @@ export default function StartseiteFormular() {
       </button>
 
       <p className="text-center text-xs leading-relaxed text-slate-500">
-        Mit dem Absenden stimmst du der{" "}
+        Mit dem Absenden stimmen Sie der{" "}
         <a href="/datenschutz" className="underline hover:text-slate-300">Datenschutzerklärung</a> zu.
       </p>
     </form>

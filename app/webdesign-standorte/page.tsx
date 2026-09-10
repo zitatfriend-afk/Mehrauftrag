@@ -3,12 +3,12 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 export const metadata: Metadata = {
-  title: "Webdesign in deiner Stadt | Alle Standorte | Mehr Auftrag",
+  title: "Webdesign in Ihrer Stadt | Alle Standorte | Mehr Auftrag",
   description:
     "Alle Städte, in denen wir Websites für lokale Betriebe bauen, von Hanau und Offenbach bis Frankfurt, Köln und Leipzig. Ein Standort je Seite.",
   alternates: { canonical: "https://www.mehrauftrag.de/webdesign-standorte" },
   openGraph: {
-    title: "Webdesign in deiner Stadt",
+    title: "Webdesign in Ihrer Stadt",
     description:
       "Alle Standorte von Mehr Auftrag im Überblick. Websites, die lokal gefunden werden.",
     url: "https://www.mehrauftrag.de/webdesign-standorte",
@@ -174,12 +174,12 @@ export default function StandortePage() {
             Einsatzgebiet
           </span>
           <h1 className="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Webdesign in deiner Stadt
+            Webdesign in Ihrer Stadt
           </h1>
           <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-white/55">
             Für jede Stadt haben wir eine eigene Seite gebaut, mit den Zahlen und
-            Branchen, die dort tatsächlich zählen. Such dir deine Stadt heraus,
-            oder ruf einfach an: wir arbeiten auch dort, wo noch keine Seite
+            Branchen, die dort tatsächlich zählen. Suchen Sie sich Ihre Stadt heraus,
+            oder rufen Sie einfach an: wir arbeiten auch dort, wo noch keine Seite
             steht.
           </p>
 
@@ -273,13 +273,13 @@ export default function StandortePage() {
             </p>
 
             <h2 className="pt-4 text-2xl font-bold tracking-tight text-white">
-              Deine Stadt steht nicht dabei?
+              Ihre Stadt steht nicht dabei?
             </h2>
             <p>
               Dann heißt das nur, dass es dafür noch keine eigene Seite gibt, nicht dass wir dort
               nicht arbeiten. Wir betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz.
-              Ruf an oder schreib per WhatsApp, dann schauen wir uns deinen Markt an. Wenn du
-              zusätzlich wissen willst, wofür dein Betrieb heute gefunden wird und wofür nicht,
+              Rufen Sie an oder schreiben Sie per WhatsApp, dann schauen wir uns Ihren Markt an. Wenn Sie
+              zusätzlich wissen wollen, wofür Ihr Betrieb heute gefunden wird und wofür nicht,
               führt der schnellste Weg über die{" "}
               <a href="/suchmaschinenoptimierung" className="underline underline-offset-4 hover:text-white/90">
                 Suchmaschinenoptimierung
@@ -322,11 +322,11 @@ export default function StandortePage() {
 
           <section className="mt-16 rounded-3xl border border-cyan-400/25 bg-gradient-to-br from-cyan-400/[0.13] to-cyan-600/[0.04] p-8 sm:p-10">
             <h2 className="text-2xl font-bold tracking-tight text-white">
-              Deine Stadt ist nicht dabei?
+              Ihre Stadt ist nicht dabei?
             </h2>
             <p className="mt-3 max-w-2xl text-[15.5px] leading-relaxed text-white/60">
               Kein Problem, wir bauen bundesweit. Die Seiten hier entstehen nach
-              und nach, das Einsatzgebiet ist längst größer. Ruf an oder schreib
+              und nach, das Einsatzgebiet ist längst größer. Rufen Sie an oder schreiben Sie
               uns, dann klären wir in fünf Minuten, ob wir zueinander passen.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">

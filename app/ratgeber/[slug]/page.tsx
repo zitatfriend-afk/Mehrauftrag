@@ -239,10 +239,10 @@ export default async function ArticlePage({
             {/* CTA */}
             <section className="mt-14 rounded-3xl border border-white/8 bg-gradient-to-br from-[#0a1230] to-[#04081c] p-8 text-center">
               <h2 className="text-xl font-black tracking-[-0.02em] text-white sm:text-2xl">
-                Mehr Anfragen für deinen Betrieb?
+                Mehr Anfragen für Ihren Betrieb?
               </h2>
               <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-slate-400">
-                Wir schauen uns deinen Auftritt an und zeigen dir kostenlos, wo dein
+                Wir schauen uns Ihren Auftritt an und zeigen Ihnen kostenlos, wo Ihr
                 größtes Potenzial liegt, ganz unverbindlich.
               </p>
               <Link
@@ -257,7 +257,7 @@ export default async function ArticlePage({
             {article.related.length > 0 && (
               <section className="mt-14">
                 <h2 className="mb-5 text-lg font-bold tracking-[-0.02em] text-white">
-                  Das könnte dich auch interessieren
+                  Das könnte Sie auch interessieren
                 </h2>
                 <div className="flex flex-wrap gap-3">
                   {article.related.filter((r) => r.href !== "/kostenlose-analyse").map((r, i) => (

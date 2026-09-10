@@ -117,7 +117,7 @@ export default function AnalyseForm({
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-lg font-bold text-white">Danke! Wir melden uns bald bei dir.</h3>
+        <h3 className="text-lg font-bold text-white">Danke! Wir melden uns bald bei Ihnen.</h3>
         <p className="mt-2 text-sm text-slate-400">{successNote}</p>
       </motion.div>
     );
@@ -133,7 +133,7 @@ export default function AnalyseForm({
           id="lead-name"
           type="text"
           autoComplete="given-name"
-          placeholder="Dein Vorname"
+          placeholder="Ihr Vorname"
           value={name}
           onChange={(e) => {
             setName(e.target.value);
@@ -152,7 +152,7 @@ export default function AnalyseForm({
           type="tel"
           inputMode="tel"
           autoComplete="tel"
-          placeholder="Deine Telefonnummer"
+          placeholder="Ihre Telefonnummer"
           value={phone}
           onChange={(e) => {
             setPhone(e.target.value);
@@ -165,7 +165,7 @@ export default function AnalyseForm({
 
       {state === "error" && (
         <p className="text-sm text-red-400">
-          Bitte Vorname und Telefonnummer eingeben. Klappt es nicht, ruf uns gern direkt an.
+          Bitte Vorname und Telefonnummer eingeben. Klappt es nicht, rufen Sie uns gern direkt an.
         </p>
       )}
 

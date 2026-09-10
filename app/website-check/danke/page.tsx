@@ -7,9 +7,9 @@ import { RatgeberHeader, RatgeberFooter } from "../../ratgeber/_shell";
 // Index: sonst laege das PDF ueber die Suche frei, und die Anmeldung waere
 // wertlos.
 export const metadata: Metadata = {
-  title: "Deine Checkliste liegt bereit | Mehr Auftrag",
+  title: "Ihre Checkliste liegt bereit | Mehr Auftrag",
   description:
-    "Danke für die Bestätigung. Hier kannst du den Website-Check direkt herunterladen.",
+    "Danke für die Bestätigung. Hier können Sie den Website-Check direkt herunterladen.",
   robots: { index: false, follow: true },
 };
 
@@ -40,12 +40,12 @@ export default function DankeSeite() {
           </div>
 
           <h1 className="text-3xl font-black leading-tight tracking-[-0.03em] text-white sm:text-4xl">
-            Deine Checkliste liegt bereit
+            Ihre Checkliste liegt bereit
           </h1>
 
           <p className="mt-5 text-lg leading-relaxed text-slate-300">
-            Lad sie dir hier direkt herunter. Den Link schicke ich dir gleich auch noch
-            per E-Mail, damit du ihn später wiederfindest.
+            Laden Sie sich die Checkliste hier direkt herunter. Den Link schicke ich Ihnen gleich auch noch
+            per E-Mail, damit Sie ihn später wiederfinden.
           </p>
 
           <a
@@ -63,8 +63,8 @@ export default function DankeSeite() {
             Mehr als drei Punkte offen?
           </h2>
           <p className="mt-3 text-base leading-relaxed text-slate-400">
-            Wenn du beim Durchgehen merkst, dass mehr als drei Punkte offen sind, schauen wir
-            uns deine Seite gerne einmal an und sagen dir ehrlich, was wir sehen. Kostenlos,
+            Wenn Sie beim Durchgehen merken, dass mehr als drei Punkte offen sind, schauen wir
+            uns Ihre Seite gerne einmal an und sagen Ihnen ehrlich, was wir sehen. Kostenlos,
             unverbindlich, telefonisch oder per Videotermin.
           </p>
           <a

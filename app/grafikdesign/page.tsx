@@ -81,31 +81,31 @@ function GrafikdesignSchema() {
         mainEntity: [
           {
             "@type": "Question",
-            name: "Gestaltet ihr wirklich alles selbst?",
+            name: "Gestalten Sie wirklich alles selbst?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Ja. Wir haben ein eigenes Grafikteam und erstellen jedes Design individuell für deinen Betrieb. Du bekommst keine fertige Vorlage, sondern eine Gestaltung, die zu dir passt.",
+              text: "Ja. Wir haben ein eigenes Grafikteam und erstellen jedes Design individuell für Ihren Betrieb. Sie bekommen keine fertige Vorlage, sondern eine Gestaltung, die zu Ihnen passt.",
             },
           },
           {
             "@type": "Question",
-            name: "Übernehmt ihr auch den Druck?",
+            name: "Übernehmen Sie auch den Druck?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Auf Wunsch gern. Wir erstellen druckfertige Daten und kümmern uns auf Wunsch um den kompletten Druck. Wenn du eine eigene Druckerei hast, liefern wir die Daten im passenden Format.",
+              text: "Auf Wunsch gern. Wir erstellen druckfertige Daten und kümmern uns auf Wunsch um den kompletten Druck. Wenn Sie eine eigene Druckerei haben, liefern wir die Daten im passenden Format.",
             },
           },
           {
             "@type": "Question",
-            name: "Bedruckt ihr auch Kleidung mit unserem Logo?",
+            name: "Bedrucken Sie auch Kleidung mit unserem Logo?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Ja. Wir bedrucken Firmenkleidung mit deinem Logo, von einzelnen T-Shirts, Poloshirts und Hoodies bis zur kompletten Arbeitskleidung fürs Team. Auf Wunsch gibt es passende Werbeartikel wie bedruckte Kugelschreiber gleich dazu.",
+              text: "Ja. Wir bedrucken Firmenkleidung mit Ihrem Logo, von einzelnen T-Shirts, Poloshirts und Hoodies bis zur kompletten Arbeitskleidung fürs Team. Auf Wunsch gibt es passende Werbeartikel wie bedruckte Kugelschreiber gleich dazu.",
             },
           },
           {
             "@type": "Question",
-            name: "Arbeitet ihr auch in Frankfurt und Umgebung?",
+            name: "Arbeiten Sie auch in Frankfurt und Umgebung?",
             acceptedAnswer: {
               "@type": "Answer",
               text: "Ja. Wir sitzen im Rhein-Main-Gebiet und betreuen Kunden in Frankfurt und der ganzen Region. Vieles lässt sich bequem aus der Ferne klären, für den persönlichen Termin sind die Wege kurz.",
@@ -116,15 +116,15 @@ function GrafikdesignSchema() {
             name: "Bekomme ich Grafik und Website aus einer Hand?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Ja, und genau darin liegt der Vorteil. Weil wir auch deine Website bauen, sprechen Print und Online dieselbe Sprache und deine Marke wirkt überall gleich.",
+              text: "Ja, und genau darin liegt der Vorteil. Weil wir auch Ihre Website bauen, sprechen Print und Online dieselbe Sprache und Ihre Marke wirkt überall gleich.",
             },
           },
           {
             "@type": "Question",
-            name: "Was kostet ein Design bei euch?",
+            name: "Was kostet ein Design bei Ihnen?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Das hängt davon ab, was du brauchst, von der Visitenkarte bis zur kompletten Fahrzeugbeschriftung. Im kostenlosen Erstgespräch schauen wir uns dein Vorhaben an und nennen dir einen klaren Preis.",
+              text: "Das hängt davon ab, was Sie brauchen, von der Visitenkarte bis zur kompletten Fahrzeugbeschriftung. Im kostenlosen Erstgespräch schauen wir uns Ihr Vorhaben an und nennen Ihnen einen klaren Preis.",
             },
           },
         ],

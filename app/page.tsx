@@ -379,26 +379,26 @@ function ReferenceCards() {
 
 // ─── FAQ ──────────────────────────────────────────────────────────────────────
 const FAQS: { q: string; a: React.ReactNode; schemaText: string }[] = [
-  { q: "Für welche Branchen arbeitet ihr?", a: "Wir arbeiten mit Handwerksbetrieben, Physiotherapeuten, Industrieunternehmen, Gastronomie, Dienstleistern und vielen weiteren Branchen. Unser System ist branchenunabhängig und auf messbares Wachstum ausgerichtet.",
+  { q: "Für welche Branchen arbeiten Sie?", a: "Wir arbeiten mit Handwerksbetrieben, Physiotherapeuten, Industrieunternehmen, Gastronomie, Dienstleistern und vielen weiteren Branchen. Unser System ist branchenunabhängig und auf messbares Wachstum ausgerichtet.",
     schemaText: "Wir arbeiten mit Handwerksbetrieben, Physiotherapeuten, Industrieunternehmen, Gastronomie, Dienstleistern und vielen weiteren Branchen. Unser System ist branchenunabhängig und auf messbares Wachstum ausgerichtet." },
   { q: "Wie schnell sehe ich erste Ergebnisse?", a: "Die meisten Kunden sehen erste messbare Ergebnisse in den ersten 30 bis 60 Tagen. Eine neue Website geht in unter 14 Tagen live.",
     schemaText: "Die meisten Kunden sehen erste messbare Ergebnisse in den ersten 30 bis 60 Tagen. Eine neue Website geht in unter 14 Tagen live." },
-  { q: "Was kostet eine Zusammenarbeit?", a: "Das kommt ganz auf dein Unternehmen, deine Ziele und den aktuellen Stand an. Jeder Betrieb braucht eine individuelle Lösung. Deshalb schauen wir uns im kostenlosen Erstgespräch alles gemeinsam an und erstellen anschließend ein passendes Konzept für dich.",
-    schemaText: "Das kommt auf dein Unternehmen, deine Ziele und den aktuellen Stand an. Im kostenlosen Erstgespräch schauen wir uns alles gemeinsam an und erstellen anschließend ein passendes Konzept. Es gibt beides: einen einmaligen Festpreis und eine laufende Betreuung im Monats-Abo, beides transparent und ohne versteckte Kosten." },
-  { q: "Was passiert im kostenlosen Erstgespräch?", a: "Wir analysieren deinen Online-Auftritt, identifizieren Wachstumspotenziale und zeigen dir konkret, welche Maßnahmen den größten Impact hätten. Dauer: ca. 30 Minuten.",
-    schemaText: "Wir analysieren deinen Online-Auftritt, identifizieren Wachstumspotenziale und zeigen dir konkret, welche Maßnahmen den größten Effekt hätten. Das dauert rund 30 Minuten und läuft per Telefon oder Videocall." },
-  { q: "Muss die Agentur in meiner Stadt sitzen?", a: "Nein. Wir arbeiten ortsunabhängig und betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Für jemanden, der den ganzen Tag auf der Baustelle steht, ist das ein Vorteil: kein Termin, der den Arbeitstag zerreißt. Was zählt, ist nicht die Entfernung, sondern ob wir deinen Markt kennen.",
-    schemaText: "Nein. Wir arbeiten ortsunabhängig und betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Für jemanden, der den ganzen Tag auf der Baustelle steht, ist das ein Vorteil, weil kein Termin den Arbeitstag zerreißt. Was zählt, ist nicht die Entfernung, sondern ob wir deinen Markt kennen." },
-  { q: "Welche Leistungen bietet ihr?", a: "Webdesign und Website-Erstellung, Suchmaschinenoptimierung, Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel, Printdesign und Textildruck. Alles aus einer Hand, damit dein Auftritt zusammenpasst.",
+  { q: "Was kostet eine Zusammenarbeit?", a: "Das kommt ganz auf Ihr Unternehmen, Ihre Ziele und den aktuellen Stand an. Jeder Betrieb braucht eine individuelle Lösung. Deshalb schauen wir uns im kostenlosen Erstgespräch alles gemeinsam an und erstellen anschließend ein passendes Konzept für Sie.",
+    schemaText: "Das kommt auf Ihr Unternehmen, Ihre Ziele und den aktuellen Stand an. Im kostenlosen Erstgespräch schauen wir uns alles gemeinsam an und erstellen anschließend ein passendes Konzept. Es gibt beides: einen einmaligen Festpreis und eine laufende Betreuung im Monats-Abo, beides transparent und ohne versteckte Kosten." },
+  { q: "Was passiert im kostenlosen Erstgespräch?", a: "Wir analysieren Ihren Online-Auftritt, identifizieren Wachstumspotenziale und zeigen Ihnen konkret, welche Maßnahmen den größten Impact hätten. Dauer: ca. 30 Minuten.",
+    schemaText: "Wir analysieren Ihren Online-Auftritt, identifizieren Wachstumspotenziale und zeigen Ihnen konkret, welche Maßnahmen den größten Effekt hätten. Das dauert rund 30 Minuten und läuft per Telefon oder Videocall." },
+  { q: "Muss die Agentur in meiner Stadt sitzen?", a: "Nein. Wir arbeiten ortsunabhängig und betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Für jemanden, der den ganzen Tag auf der Baustelle steht, ist das ein Vorteil: kein Termin, der den Arbeitstag zerreißt. Was zählt, ist nicht die Entfernung, sondern ob wir Ihren Markt kennen.",
+    schemaText: "Nein. Wir arbeiten ortsunabhängig und betreuen Betriebe in ganz Deutschland, Österreich und der Schweiz. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall. Für jemanden, der den ganzen Tag auf der Baustelle steht, ist das ein Vorteil, weil kein Termin den Arbeitstag zerreißt. Was zählt, ist nicht die Entfernung, sondern ob wir Ihren Markt kennen." },
+  { q: "Welche Leistungen bieten Sie?", a: "Webdesign und Website-Erstellung, Suchmaschinenoptimierung, Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel, Printdesign und Textildruck. Alles aus einer Hand, damit Ihr Auftritt zusammenpasst.",
     schemaText: "Webdesign und Website-Erstellung, Suchmaschinenoptimierung, Google-Ads-Betreuung, Grafik- und Corporate Design sowie Werbemittel, Printdesign und Textildruck. Alles aus einer Hand, damit der Auftritt zusammenpasst." },
   { q: "Gibt es eine Mindestvertragslaufzeit?", a: (
     <>
-      <p>Nein. Unsere Websites werden in erster Linie schlüsselfertig an den Kunden übergeben. Das bedeutet: Du besitzt deine Website vollständig und entscheidest selbst, wie du sie betreiben möchtest.</p>
+      <p>Nein. Unsere Websites werden in erster Linie schlüsselfertig an den Kunden übergeben. Das bedeutet: Sie besitzen Ihre Website vollständig und entscheiden selbst, wie Sie die Seite betreiben möchten.</p>
       <p className="mt-3">Auf Wunsch übernehmen wir auch Hosting, Wartung und technische Betreuung. Da der Aufwand je nach Projekt unterschiedlich ist, besprechen wir das individuell und transparent.</p>
       <p className="mt-3 text-slate-500 text-xs tracking-wide">Keine versteckten Verpflichtungen. Keine langfristige Bindung.</p>
     </>
   ),
-    schemaText: "Nein. Die Websites werden schlüsselfertig übergeben, du besitzt deine Website vollständig. Auf Wunsch übernehmen wir Hosting, Wartung und technische Betreuung, monatlich kündbar und ohne lange Vertragsbindung." },
+    schemaText: "Nein. Die Websites werden schlüsselfertig übergeben, Sie besitzen Ihre Website vollständig. Auf Wunsch übernehmen wir Hosting, Wartung und technische Betreuung, monatlich kündbar und ohne lange Vertragsbindung." },
 ];
 
 function FAQ() {
@@ -599,7 +599,7 @@ const SERVICES: Svc[] = [
     color: "#10b981",
     title: "Employer Branding",
     sub: "Recruiting & Marke",
-    desc: "Positioniere dich als attraktiven Arbeitgeber. Karriereseiten, Stellenanzeigen und gezielte Recruiting-Kampagnen.",
+    desc: "Positionieren Sie sich als attraktiven Arbeitgeber. Karriereseiten, Stellenanzeigen und gezielte Recruiting-Kampagnen.",
     features: ["Karriereseite", "Meta Recruiting Ads", "Bewerbermanagement", "Employer Story"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -1333,7 +1333,7 @@ export default function Home() {
               className="text-sm sm:text-base font-medium tracking-[0.26em] uppercase mb-6"
               style={{ color: "rgba(147,197,253,0.62)" }}
             >
-              Dein Betrieb verdient
+              Ihr Betrieb verdient
             </motion.p>
 
             {/* Typewriter headline, height locked to prevent CLS */}
@@ -1460,7 +1460,7 @@ export default function Home() {
             >
               {[
                 { head: "Handwerk & Dienstleistungen", label: "Unsere Spezialität",       desc: "Vom Schweißbetrieb bis zur Gebäudereinigung" },
-                { head: "Schlüsselfertig",           label: "Deine Website gehört dir",  desc: "Keine Bindung, keine Abhängigkeit" },
+                { head: "Schlüsselfertig",           label: "Ihre Website gehört Ihnen",  desc: "Keine Bindung, keine Abhängigkeit" },
                 { head: "Bundesweit",                label: "Von Hamburg bis ins Sauerland", desc: "Lokale Betriebe, echte Projekte" },
               ].map((s, i) => (
                 <motion.div
@@ -1497,7 +1497,7 @@ export default function Home() {
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="mb-16 max-w-xl">
               <SectionLabel>Das Problem</SectionLabel>
               <h2 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight mb-4 text-white">
-                Erkennst du dich wieder?
+                Erkennen Sie sich wieder?
               </h2>
               <p className="text-lg leading-relaxed text-slate-400">
                 Die meisten Betriebe kämpfen täglich mit denselben digitalen Problemen und verlieren dabei täglich Aufträge.
@@ -1511,10 +1511,10 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               {[
-                { n: "01", title: "Veraltete oder keine Website", desc: "Deine Konkurrenz gewinnt täglich Kunden online während du noch auf Weiterempfehlung wartest." },
-                { n: "02", title: "Keine Anfragen aus dem Internet", desc: "Google findet dich nicht. Social Media stagniert. Dein Budget verpufft ohne messbare Ergebnisse." },
+                { n: "01", title: "Veraltete oder keine Website", desc: "Ihre Konkurrenz gewinnt täglich Kunden online während Sie noch auf Weiterempfehlung warten." },
+                { n: "02", title: "Keine Anfragen aus dem Internet", desc: "Google findet Sie nicht. Social Media stagniert. Ihr Budget verpufft ohne messbare Ergebnisse." },
                 { n: "03", title: "Kein System für Neukundengewinnung", desc: "Alles hängt an einzelnen Personen. Kein skalierbares System bedeutet keine Planbarkeit." },
-                { n: "04", title: "Schlechtes Image trotz guter Arbeit", desc: "Du leistest Qualität, aber dein Online-Auftritt vermittelt das nicht. Das kostet dich täglich Aufträge." },
+                { n: "04", title: "Schlechtes Image trotz guter Arbeit", desc: "Sie leisten Qualität, aber Ihr Online-Auftritt vermittelt das nicht. Das kostet Sie täglich Aufträge." },
               ].map((c, i) => (
                 <motion.div
                   key={i}
@@ -1568,8 +1568,8 @@ export default function Home() {
               className="grid grid-cols-1 md:grid-cols-3 gap-5"
             >
               {[
-                { n: "01", title: "Analyse & Strategie", desc: "Wir analysieren deinen Betrieb, deine Branche und die Konkurrenz. Daraus entsteht eine Wachstumsstrategie mit konkreten KPIs." },
-                { n: "02", title: "Umsetzung & Launch", desc: "Wir bauen deine Website, richten deine Kanäle ein und starten die ersten Kampagnen in unter 14 Tagen." },
+                { n: "01", title: "Analyse & Strategie", desc: "Wir analysieren Ihren Betrieb, Ihre Branche und die Konkurrenz. Daraus entsteht eine Wachstumsstrategie mit konkreten KPIs." },
+                { n: "02", title: "Umsetzung & Launch", desc: "Wir bauen Ihre Website, richten Ihre Kanäle ein und starten die ersten Kampagnen in unter 14 Tagen." },
                 { n: "03", title: "Wachstum & Skalierung", desc: "Kontinuierliche Optimierung auf Basis echter Daten. Mehr Anfragen, mehr Umsatz Monat für Monat." },
               ].map((s, i) => (
                 <motion.div
@@ -1615,7 +1615,7 @@ export default function Home() {
                 Alles aus einer Hand.
               </h2>
               <p className="text-lg leading-relaxed text-slate-400">
-                Von der Website bis zur Kampagne wir liefern die komplette digitale Infrastruktur für dein Wachstum.
+                Von der Website bis zur Kampagne wir liefern die komplette digitale Infrastruktur für Ihr Wachstum.
               </p>
             </motion.div>
             <motion.div
@@ -1676,7 +1676,7 @@ export default function Home() {
                     Grafikdesign & Werbetechnik
                   </h2>
                   <p className="text-base leading-relaxed text-slate-300 mb-4 max-w-2xl">
-                    Von der Visitenkarte über den Flyer bis zur Fahrzeugbeschriftung gestalten wir alles, was deinen Betrieb sichtbar macht. Jedes Design entsteht bei uns im eigenen Grafikteam und wird individuell für dich erstellt, auf Wunsch bis zum fertigen Druck.
+                    Von der Visitenkarte über den Flyer bis zur Fahrzeugbeschriftung gestalten wir alles, was Ihren Betrieb sichtbar macht. Jedes Design entsteht bei uns im eigenen Grafikteam und wird individuell für Sie erstellt, auf Wunsch bis zum fertigen Druck.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-7">
                     {["Logo Design", "Visitenkarten", "Flyer", "Autoaufkleber", "Fahrzeugbeschriftung", "Corporate Design"].map((t) => (
@@ -1747,7 +1747,7 @@ export default function Home() {
                     Suchmaschinenoptimierung
                   </h2>
                   <p className="text-base leading-relaxed text-slate-300 mb-4 max-w-2xl">
-                    Gefunden werden, ohne für jeden Klick zu bezahlen. Wir bringen deine Website technisch in Ordnung, geben jeder Leistung eine eigene Seite und richten dein Google-Unternehmensprofil so ein, dass es zu diesen Inhalten passt. Danach sehen wir jeden Monat in der Search Console nach, was sich bewegt.
+                    Gefunden werden, ohne für jeden Klick zu bezahlen. Wir bringen Ihre Website technisch in Ordnung, geben jeder Leistung eine eigene Seite und richten Ihr Google-Unternehmensprofil so ein, dass es zu diesen Inhalten passt. Danach sehen wir jeden Monat in der Search Console nach, was sich bewegt.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-7">
                     {["Lokale SEO", "Google-Unternehmensprofil", "Technische Basis", "Eine Seite je Leistung", "Bewertungen", "Sichtbarkeit in KI-Antworten"].map((t) => (
@@ -1805,7 +1805,7 @@ export default function Home() {
                     style={{ background: "rgba(59,130,246,0.12)", border: "1px solid rgba(59,130,246,0.22)" }}
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#3b82f6]" />
-                    <span className="text-[#60a5fa] text-[11px] font-semibold">Dein Ansprechpartner</span>
+                    <span className="text-[#60a5fa] text-[11px] font-semibold">Ihr Ansprechpartner</span>
                   </div>
                   <div
                     className="relative overflow-hidden w-full"
@@ -1845,7 +1845,7 @@ export default function Home() {
                 <SectionLabel>Über uns</SectionLabel>
                 <h2 className="text-4xl sm:text-5xl font-black tracking-tight leading-tight mb-6 text-white">
                   Kein Dienstleister.{" "}
-                  <span className="gradient-text-blue">Dein Partner.</span>
+                  <span className="gradient-text-blue">Ihr Partner.</span>
                 </h2>
                 <p className="text-lg leading-relaxed mb-5 text-slate-300">
                   Ich bin Patrick Sauna, Geschäftsführer von Mehr Auftrag. Ich habe selbst erlebt,
@@ -1880,7 +1880,7 @@ export default function Home() {
                   className="shimmer-btn inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-semibold text-white"
                   style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 16px rgba(59,130,246,0.32)", display: "inline-flex" }}
                 >
-                  <span>Lern uns kennen</span>
+                  <span>Lernen Sie uns kennen</span>
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -1909,7 +1909,7 @@ export default function Home() {
                 Für jede Branche.
               </h2>
               <p className="text-lg leading-relaxed text-slate-400">
-                Wir verstehen die Besonderheiten deiner Branche und liefern maßgeschneiderte Lösungen ohne generische Einheitspakete.
+                Wir verstehen die Besonderheiten Ihrer Branche und liefern maßgeschneiderte Lösungen ohne generische Einheitspakete.
               </p>
             </motion.div>
             <motion.div
@@ -1968,7 +1968,7 @@ export default function Home() {
                 Erfolgreich umgesetzte Kundenprojekte
               </h2>
               <p className="text-lg text-slate-400">
-                Keine Musterbeispiele, keine Demo-Projekte. Bei jedem Projekt zeigen wir die Ausgangssituation, unsere Umsetzung und das Ergebnis, damit du genau siehst, was dahintersteckt.
+                Keine Musterbeispiele, keine Demo-Projekte. Bei jedem Projekt zeigen wir die Ausgangssituation, unsere Umsetzung und das Ergebnis, damit Sie genau sehen, was dahintersteckt.
               </p>
             </motion.div>
             <div>
@@ -2023,7 +2023,7 @@ export default function Home() {
                     Häufige Fragen.
                   </h2>
                   <p className="text-lg leading-relaxed mb-8 text-slate-400">
-                    Alles was du wissen musst, bevor wir starten. Noch Fragen? Ruf an.
+                    Alles was Sie wissen müssen, bevor wir starten. Noch Fragen? Rufen Sie an.
                   </p>
                   <a href="#kontakt" className="inline-flex items-center gap-2 text-sm font-medium text-[#3b82f6] hover:text-[#60a5fa] transition-colors">
                     Direkt ansprechen
@@ -2060,13 +2060,13 @@ export default function Home() {
                 Jetzt starten
               </p>
               <h2 className="text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter leading-[0.95] mb-6">
-                Dein Wachstum
+                Ihr Wachstum
                 <br />
                 <span className="gradient-text-blue">beginnt heute.</span>
               </h2>
               <p className="text-lg max-w-lg mx-auto mb-9 leading-relaxed text-slate-400">
-                Kostenloses Erstgespräch. Wir analysieren deinen Betrieb und
-                zeigen dir in 30 Minuten, wie du planbar mehr Aufträge gewinnst.
+                Kostenloses Erstgespräch. Wir analysieren Ihren Betrieb und
+                zeigen Ihnen in 30 Minuten, wie Sie planbar mehr Aufträge gewinnen.
               </p>
               <div className="mb-8">
                 <StartseiteFormular />

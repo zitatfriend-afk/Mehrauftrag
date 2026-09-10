@@ -44,7 +44,7 @@ export default function WebsiteCheckBox() {
     if (state === "loading") return;
     if (!istMail(email)) {
       setState("error");
-      setMeldung("Bitte trag eine gültige E-Mail-Adresse ein.");
+      setMeldung("Bitte tragen Sie eine gültige E-Mail-Adresse ein.");
       emailRef.current?.focus();
       return;
     }
@@ -66,7 +66,7 @@ export default function WebsiteCheckBox() {
     } catch {
       setState("error");
       setMeldung(
-        "Das hat gerade nicht geklappt. Versuch es bitte gleich noch einmal oder schreib uns an info@mehrauftrag.de.",
+        "Das hat gerade nicht geklappt. Versuchen Sie es bitte gleich noch einmal oder schreiben Sie uns an info@mehrauftrag.de.",
       );
     }
   }
@@ -83,7 +83,7 @@ export default function WebsiteCheckBox() {
         id="website-check-titel"
         className="mt-3 text-xl font-black leading-tight tracking-[-0.02em] text-white sm:text-2xl"
       >
-        Prüf deine Website in einer Viertelstunde selbst
+        Prüfen Sie Ihre Website in einer Viertelstunde selbst
       </h2>
       <p className="mt-3 text-base leading-relaxed text-slate-400">
         Zwölf Punkte, an denen sich entscheidet, ob aus Besuchern Anfragen werden. Als PDF
@@ -115,7 +115,7 @@ export default function WebsiteCheckBox() {
             type="email"
             inputMode="email"
             autoComplete="email"
-            placeholder="Deine E-Mail-Adresse"
+            placeholder="Ihre E-Mail-Adresse"
             ref={emailRef}
             value={email}
             onChange={(e) => {

@@ -106,7 +106,7 @@ const LEISTUNGEN: { title: string; desc: string; items: string[]; icon: React.Re
   },
   {
     title: "Geschäftsausstattung",
-    desc: "Ein stimmiger Auftritt beginnt bei den Dingen, die täglich in Kundenhand gehen. Wir gestalten deine gesamte Ausstattung aus einem Guss.",
+    desc: "Ein stimmiger Auftritt beginnt bei den Dingen, die täglich in Kundenhand gehen. Wir gestalten Ihre gesamte Ausstattung aus einem Guss.",
     items: ["Visitenkarten gestalten", "Briefpapier", "Geschäftsausstattung", "Firmenschilder"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -117,7 +117,7 @@ const LEISTUNGEN: { title: string; desc: string; items: string[]; icon: React.Re
   },
   {
     title: "Textildruck & Firmenkleidung",
-    desc: "Deine Marke zum Anziehen. Wir bedrucken und besticken Kleidung mit deinem Logo, vom einzelnen Shirt bis zur kompletten Team-Ausstattung, sauber verarbeitet und langlebig.",
+    desc: "Ihre Marke zum Anziehen. Wir bedrucken und besticken Kleidung mit Ihrem Logo, vom einzelnen Shirt bis zur kompletten Team-Ausstattung, sauber verarbeitet und langlebig.",
     items: ["T-Shirts bedrucken", "Poloshirts", "Hoodies & Pullover", "Arbeitskleidung", "Kugelschreiber & Kulis", "Werbeartikel"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -127,7 +127,7 @@ const LEISTUNGEN: { title: string; desc: string; items: string[]; icon: React.Re
   },
   {
     title: "Werbetechnik & Fahrzeug",
-    desc: "Große Flächen wollen sauber gedacht sein. Wir gestalten Werbetechnik, die aus Entfernung wirkt und deine Marke sichtbar durch die Stadt trägt.",
+    desc: "Große Flächen wollen sauber gedacht sein. Wir gestalten Werbetechnik, die aus Entfernung wirkt und Ihre Marke sichtbar durch die Stadt trägt.",
     items: ["Autoaufkleber", "Fahrzeugbeschriftung", "Schaufensterbeschriftung", "Roll-ups", "Banner", "Aufkleber"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -138,7 +138,7 @@ const LEISTUNGEN: { title: string; desc: string; items: string[]; icon: React.Re
   },
   {
     title: "Marke & Corporate Design",
-    desc: "Eine Marke ist mehr als ein Logo. Wir entwickeln einen einheitlichen Auftritt, an dem Kunden dich sofort wiedererkennen, online wie offline.",
+    desc: "Eine Marke ist mehr als ein Logo. Wir entwickeln einen einheitlichen Auftritt, an dem Kunden Sie sofort wiedererkennen, online wie offline.",
     items: ["Logo Design", "Corporate Design", "Social Media Grafiken"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -149,7 +149,7 @@ const LEISTUNGEN: { title: string; desc: string; items: string[]; icon: React.Re
   },
   {
     title: "Druck & Datenservice",
-    desc: "Auf Wunsch bleibt es nicht beim Entwurf. Wir bereiten druckfertige Daten vor und übernehmen den kompletten Druck, damit du dich um nichts kümmern musst.",
+    desc: "Auf Wunsch bleibt es nicht beim Entwurf. Wir bereiten druckfertige Daten vor und übernehmen den kompletten Druck, damit Sie sich um nichts kümmern müssen.",
     items: ["Druckdaten Erstellung", "Druckservice"],
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -163,7 +163,7 @@ const LEISTUNGEN: { title: string; desc: string; items: string[]; icon: React.Re
 const VORTEILE: { title: string; desc: string; icon: React.ReactNode }[] = [
   {
     title: "Eigenes Grafikteam",
-    desc: "Deine Gestaltung entsteht bei uns im Haus. Kein anonymer Baukasten und keine Vorlage von der Stange, sondern ein festes Team, das deine Marke kennt.",
+    desc: "Ihre Gestaltung entsteht bei uns im Haus. Kein anonymer Baukasten und keine Vorlage von der Stange, sondern ein festes Team, das Ihre Marke kennt.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -172,7 +172,7 @@ const VORTEILE: { title: string; desc: string; icon: React.ReactNode }[] = [
   },
   {
     title: "Individuell gestaltet",
-    desc: "Jedes Design entsteht neu und passt zu deinem Betrieb. So hebt sich dein Auftritt von der Konkurrenz ab, statt austauschbar zu wirken.",
+    desc: "Jedes Design entsteht neu und passt zu Ihrem Betrieb. So hebt sich Ihr Auftritt von der Konkurrenz ab, statt austauschbar zu wirken.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -181,7 +181,7 @@ const VORTEILE: { title: string; desc: string; icon: React.ReactNode }[] = [
   },
   {
     title: "Alles aus einer Hand",
-    desc: "Grafik, Werbetechnik und Druck laufen bei uns zusammen. Du hast einen Ansprechpartner statt drei und alles greift sauber ineinander.",
+    desc: "Grafik, Werbetechnik und Druck laufen bei uns zusammen. Sie haben einen Ansprechpartner statt drei und alles greift sauber ineinander.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
@@ -190,7 +190,7 @@ const VORTEILE: { title: string; desc: string; icon: React.ReactNode }[] = [
   },
   {
     title: "Zum Auftritt passend",
-    desc: "Deine Printprodukte und deine Website sprechen dieselbe Sprache. Weil wir beides machen, wirkt deine Marke überall wie aus einem Guss.",
+    desc: "Ihre Printprodukte und Ihre Website sprechen dieselbe Sprache. Weil wir beides machen, wirkt Ihre Marke überall wie aus einem Guss.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v10a1 1 0 01-1 1H5a1 1 0 01-1-1V5z" />
@@ -200,7 +200,7 @@ const VORTEILE: { title: string; desc: string; icon: React.ReactNode }[] = [
   },
   {
     title: "Druckfertig geliefert",
-    desc: "Du bekommst saubere Druckdaten im richtigen Format. Kein Ärger mit der Druckerei und keine bösen Überraschungen beim fertigen Produkt.",
+    desc: "Sie bekommen saubere Druckdaten im richtigen Format. Kein Ärger mit der Druckerei und keine bösen Überraschungen beim fertigen Produkt.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -224,50 +224,50 @@ const ABLAUF: { n: string; title: string; desc: string }[] = [
   {
     n: "01",
     title: "Gespräch & Idee",
-    desc: "Wir hören zu, schauen uns deinen Betrieb an und klären, was du brauchst und wie dein Auftritt bisher wirkt. Daraus wird eine klare Richtung.",
+    desc: "Wir hören zu, schauen uns Ihren Betrieb an und klären, was Sie brauchen und wie Ihr Auftritt bisher wirkt. Daraus wird eine klare Richtung.",
   },
   {
     n: "02",
     title: "Entwurf",
-    desc: "Unser Grafikteam gestaltet die ersten Vorschläge, passend zu deiner Marke. Du siehst früh etwas Konkretes und gibst uns dein Feedback.",
+    desc: "Unser Grafikteam gestaltet die ersten Vorschläge, passend zu Ihrer Marke. Sie sehen früh etwas Konkretes und geben uns Ihr Feedback.",
   },
   {
     n: "03",
     title: "Feinschliff",
-    desc: "Wir arbeiten deine Anmerkungen ein, bis das Ergebnis wirklich sitzt. Farben, Schrift und Aufbau stimmen wir sorgfältig aufeinander ab.",
+    desc: "Wir arbeiten Ihre Anmerkungen ein, bis das Ergebnis wirklich sitzt. Farben, Schrift und Aufbau stimmen wir sorgfältig aufeinander ab.",
   },
   {
     n: "04",
     title: "Druck & Übergabe",
-    desc: "Auf Wunsch übernehmen wir Druckdaten und Druck. Du bekommst das fertige Produkt in die Hand oder die sauberen Daten für deine eigene Druckerei.",
+    desc: "Auf Wunsch übernehmen wir Druckdaten und Druck. Sie bekommen das fertige Produkt in die Hand oder die sauberen Daten für Ihre eigene Druckerei.",
   },
 ];
 
 // ─── FAQ ──────────────────────────────────────────────────────────────────────
 const FAQS: { q: string; a: string }[] = [
   {
-    q: "Gestaltet ihr wirklich alles selbst?",
-    a: "Ja. Wir haben ein eigenes Grafikteam und erstellen jedes Design individuell für deinen Betrieb. Du bekommst keine fertige Vorlage, sondern eine Gestaltung, die zu dir passt.",
+    q: "Gestalten Sie wirklich alles selbst?",
+    a: "Ja. Wir haben ein eigenes Grafikteam und erstellen jedes Design individuell für Ihren Betrieb. Sie bekommen keine fertige Vorlage, sondern eine Gestaltung, die zu Ihnen passt.",
   },
   {
-    q: "Übernehmt ihr auch den Druck?",
-    a: "Auf Wunsch gern. Wir erstellen druckfertige Daten und kümmern uns auf Wunsch um den kompletten Druck. Wenn du eine eigene Druckerei hast, liefern wir die Daten im passenden Format.",
+    q: "Übernehmen Sie auch den Druck?",
+    a: "Auf Wunsch gern. Wir erstellen druckfertige Daten und kümmern uns auf Wunsch um den kompletten Druck. Wenn Sie eine eigene Druckerei haben, liefern wir die Daten im passenden Format.",
   },
   {
-    q: "Bedruckt ihr auch Kleidung mit unserem Logo?",
-    a: "Ja. Wir bedrucken Firmenkleidung mit deinem Logo, von einzelnen T-Shirts, Poloshirts und Hoodies bis zur kompletten Arbeitskleidung fürs Team. Auf Wunsch gibt es passende Werbeartikel wie bedruckte Kugelschreiber gleich dazu.",
+    q: "Bedrucken Sie auch Kleidung mit unserem Logo?",
+    a: "Ja. Wir bedrucken Firmenkleidung mit Ihrem Logo, von einzelnen T-Shirts, Poloshirts und Hoodies bis zur kompletten Arbeitskleidung fürs Team. Auf Wunsch gibt es passende Werbeartikel wie bedruckte Kugelschreiber gleich dazu.",
   },
   {
-    q: "Arbeitet ihr auch in Frankfurt und Umgebung?",
+    q: "Arbeiten Sie auch in Frankfurt und Umgebung?",
     a: "Ja. Wir sitzen im Rhein-Main-Gebiet und betreuen Kunden in Frankfurt und der ganzen Region. Vieles lässt sich bequem aus der Ferne klären, für den persönlichen Termin sind die Wege kurz.",
   },
   {
     q: "Bekomme ich Grafik und Website aus einer Hand?",
-    a: "Ja, und genau darin liegt der Vorteil. Weil wir auch deine Website bauen, sprechen Print und Online dieselbe Sprache und deine Marke wirkt überall gleich.",
+    a: "Ja, und genau darin liegt der Vorteil. Weil wir auch Ihre Website bauen, sprechen Print und Online dieselbe Sprache und Ihre Marke wirkt überall gleich.",
   },
   {
-    q: "Was kostet ein Design bei euch?",
-    a: "Das hängt davon ab, was du brauchst, von der Visitenkarte bis zur kompletten Fahrzeugbeschriftung. Im kostenlosen Erstgespräch schauen wir uns dein Vorhaben an und nennen dir einen klaren Preis.",
+    q: "Was kostet ein Design bei Ihnen?",
+    a: "Das hängt davon ab, was Sie brauchen, von der Visitenkarte bis zur kompletten Fahrzeugbeschriftung. Im kostenlosen Erstgespräch schauen wir uns Ihr Vorhaben an und nennen Ihnen einen klaren Preis.",
   },
 ];
 
@@ -460,7 +460,7 @@ export default function GrafikdesignLanding() {
               className="font-black tracking-tighter text-white"
               style={{ fontSize: "clamp(30px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em" }}
             >
-              Grafikdesign, das deine Marke{" "}
+              Grafikdesign, das Ihre Marke{" "}
               <span className="gradient-text-blue">unverwechselbar</span> macht
             </motion.h1>
 
@@ -469,7 +469,7 @@ export default function GrafikdesignLanding() {
               className="mx-auto mt-6 max-w-2xl text-base font-light leading-relaxed sm:mt-7 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              Von der Visitenkarte über den Flyer und bedruckte Firmenkleidung bis zur Fahrzeugbeschriftung gestalten wir alles, was deinen Betrieb sichtbar macht. Jedes Design entsteht bei uns im eigenen Grafikteam und wird individuell für dich erstellt.
+              Von der Visitenkarte über den Flyer und bedruckte Firmenkleidung bis zur Fahrzeugbeschriftung gestalten wir alles, was Ihren Betrieb sichtbar macht. Jedes Design entsteht bei uns im eigenen Grafikteam und wird individuell für Sie erstellt.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-5 flex max-w-2xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-7">
@@ -494,7 +494,7 @@ export default function GrafikdesignLanding() {
         >
           <div className="mx-auto max-w-3xl text-center">
             <motion.p variants={fadeUp} className="text-base leading-relaxed text-slate-300 sm:text-lg">
-              Ein guter Auftritt entscheidet sich in Sekunden. Wer deinen Flyer in der Hand hält oder dein Fahrzeug im Vorbeifahren sieht, bildet sich sofort ein Urteil. Genau hier setzen wir an. Wir gestalten Werbemittel und Werbetechnik, die zu deinem Betrieb passen und einen bleibenden Eindruck hinterlassen. Alles kommt aus einer Hand und greift sauber ineinander, von der ersten Skizze bis zum fertigen Druck.
+              Ein guter Auftritt entscheidet sich in Sekunden. Wer Ihren Flyer in der Hand hält oder Ihr Fahrzeug im Vorbeifahren sieht, bildet sich sofort ein Urteil. Genau hier setzen wir an. Wir gestalten Werbemittel und Werbetechnik, die zu Ihrem Betrieb passen und einen bleibenden Eindruck hinterlassen. Alles kommt aus einer Hand und greift sauber ineinander, von der ersten Skizze bis zum fertigen Druck.
             </motion.p>
           </div>
         </motion.section>
@@ -517,7 +517,7 @@ export default function GrafikdesignLanding() {
                 Alles rund um Grafikdesign und Werbemittel
               </motion.h2>
               <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-base text-slate-400 sm:text-lg">
-                Ob einzelnes Werbemittel oder kompletter Markenauftritt, wir gestalten die passenden Produkte für deinen Betrieb. Jede Leistung entsteht individuell und lässt sich auf Wunsch bis zum fertigen Druck begleiten.
+                Ob einzelnes Werbemittel oder kompletter Markenauftritt, wir gestalten die passenden Produkte für Ihren Betrieb. Jede Leistung entsteht individuell und lässt sich auf Wunsch bis zum fertigen Druck begleiten.
               </motion.p>
             </div>
 
@@ -569,7 +569,7 @@ export default function GrafikdesignLanding() {
               >
                 <h3 className="mb-2 text-lg font-bold text-white">Etwas anderes im Kopf?</h3>
                 <p className="mb-6 text-sm leading-relaxed text-slate-300">
-                  Du brauchst ein Werbemittel, das hier nicht steht? Sag uns einfach, was du vorhast. Wir setzen es um.
+                  Sie brauchen ein Werbemittel, das hier nicht steht? Sagen Sie uns einfach, was Sie vorhaben. Wir setzen es um.
                 </p>
                 <a
                   href="#erstgespraech"
@@ -677,7 +677,7 @@ export default function GrafikdesignLanding() {
                 </div>
 
                 <p className="mt-6 text-sm leading-relaxed text-slate-400">
-                  Ob einzelnes T-Shirt, Poloshirt, Hoodie oder komplette Arbeitskleidung fürs Team: Wir bedrucken Kleidung mit deinem Logo und liefern auf Wunsch passende Werbeartikel wie bedruckte Kugelschreiber gleich mit dazu.
+                  Ob einzelnes T-Shirt, Poloshirt, Hoodie oder komplette Arbeitskleidung fürs Team: Wir bedrucken Kleidung mit Ihrem Logo und liefern auf Wunsch passende Werbeartikel wie bedruckte Kugelschreiber gleich mit dazu.
                 </p>
               </div>
             </motion.div>
@@ -695,13 +695,13 @@ export default function GrafikdesignLanding() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
               <motion.div variants={fadeUp}>
-                <SectionLabel center>Deine Vorteile</SectionLabel>
+                <SectionLabel center>Ihre Vorteile</SectionLabel>
               </motion.div>
               <motion.h2 variants={fadeUp} className="text-3xl font-bold text-white sm:text-4xl">
                 Warum sich professionelles Design auszahlt
               </motion.h2>
               <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-base text-slate-400 sm:text-lg">
-                Gutes Design ist kein Luxus, sondern der Unterschied zwischen übersehen werden und in Erinnerung bleiben. Diese Punkte bekommst du bei uns.
+                Gutes Design ist kein Luxus, sondern der Unterschied zwischen übersehen werden und in Erinnerung bleiben. Diese Punkte bekommen Sie bei uns.
               </motion.p>
             </div>
 
@@ -753,17 +753,17 @@ export default function GrafikdesignLanding() {
             >
               <SectionLabel>Warum Mehr Auftrag</SectionLabel>
               <h2 className="text-2xl font-bold text-white sm:text-3xl">
-                Ein eigenes Grafikteam, das deine Marke ernst nimmt
+                Ein eigenes Grafikteam, das Ihre Marke ernst nimmt
               </h2>
               <div className="mt-6 space-y-5 text-base leading-relaxed text-slate-300">
                 <p>
-                  Bei uns landet deine Gestaltung nicht in einem anonymen Baukasten und nicht bei wechselnden Freelancern. Wir haben ein festes Grafikteam im Haus, das sich in deinen Betrieb hineindenkt und jedes Design von Grund auf für dich entwickelt. So entsteht ein Auftritt, den es genau einmal gibt, nämlich deinen.
+                  Bei uns landet Ihre Gestaltung nicht in einem anonymen Baukasten und nicht bei wechselnden Freelancern. Wir haben ein festes Grafikteam im Haus, das sich in Ihren Betrieb hineindenkt und jedes Design von Grund auf für Sie entwickelt. So entsteht ein Auftritt, den es genau einmal gibt, nämlich Ihren.
                 </p>
                 <p>
-                  Der zweite Vorteil liegt darin, dass wir nicht nur gestalten, sondern auch deine Website bauen und dein Marketing betreuen. Deine Visitenkarte, dein Flyer und deine Seite sprechen deshalb dieselbe Sprache. Wenn ein Kunde dich sieht, erkennt er dich sofort wieder, egal ob im Briefkasten, auf der Straße oder im Netz.
+                  Der zweite Vorteil liegt darin, dass wir nicht nur gestalten, sondern auch Ihre Website bauen und Ihr Marketing betreuen. Ihre Visitenkarte, Ihr Flyer und Ihre Seite sprechen deshalb dieselbe Sprache. Wenn ein Kunde Sie sieht, erkennt er Sie sofort wieder, egal ob im Briefkasten, auf der Straße oder im Netz.
                 </p>
                 <p>
-                  Und wir bleiben nicht beim Entwurf stehen. Auf Wunsch bereiten wir druckfertige Daten vor und übernehmen den kompletten Druck. Du hast einen Ansprechpartner für alles und bekommst am Ende ein Ergebnis, das du in die Hand nehmen kannst.
+                  Und wir bleiben nicht beim Entwurf stehen. Auf Wunsch bereiten wir druckfertige Daten vor und übernehmen den kompletten Druck. Sie haben einen Ansprechpartner für alles und bekommen am Ende ein Ergebnis, das Sie in die Hand nehmen können.
                 </p>
               </div>
             </motion.div>
@@ -787,7 +787,7 @@ export default function GrafikdesignLanding() {
                 In vier Schritten zum fertigen Design
               </motion.h2>
               <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-2xl text-base text-slate-400 sm:text-lg">
-                Vom ersten Gespräch bis zum fertigen Produkt begleiten wir dich Schritt für Schritt. Du weißt immer, woran wir gerade arbeiten.
+                Vom ersten Gespräch bis zum fertigen Produkt begleiten wir Sie Schritt für Schritt. Sie wissen immer, woran wir gerade arbeiten.
               </motion.p>
             </div>
 
@@ -831,14 +831,14 @@ export default function GrafikdesignLanding() {
               <SectionLabel>Region</SectionLabel>
             </motion.div>
             <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">
-              Dein Grafikdesigner für Frankfurt und das Rhein-Main-Gebiet
+              Ihr Grafikdesigner für Frankfurt und das Rhein-Main-Gebiet
             </motion.h2>
             <motion.div variants={fadeUp} className="mt-6 space-y-5 text-base leading-relaxed text-slate-300">
               <p>
-                Wenn du in Frankfurt nach einem Grafikdesigner suchst, der Visitenkarten gestalten, Flyer gestalten und die komplette Werbetechnik aus einer Hand liefert, bist du bei uns richtig. Wir sitzen im Rhein-Main-Gebiet und arbeiten für Betriebe in Frankfurt und der ganzen Region. Ob du ein Logo erstellen lassen willst, neue Autoaufkleber brauchst oder deinen ganzen Markenauftritt neu aufstellst, wir kümmern uns darum.
+                Wenn Sie in Frankfurt nach einem Grafikdesigner suchen, der Visitenkarten gestalten, Flyer gestalten und die komplette Werbetechnik aus einer Hand liefert, sind Sie bei uns richtig. Wir sitzen im Rhein-Main-Gebiet und arbeiten für Betriebe in Frankfurt und der ganzen Region. Ob Sie ein Logo erstellen lassen wollen, neue Autoaufkleber brauchen oder Ihren ganzen Markenauftritt neu aufstellen, wir kümmern uns darum.
               </p>
               <p>
-                Grafikdesign ist bei uns Teil eines größeren Ganzen. Neben Werbemitteln und Werbetechnik in Frankfurt bekommst du bei uns auch Webdesign, den Aufbau einer Website, Google Werbung und Unterstützung als Marketingagentur und SEO Agentur für die Region. So passt am Ende alles zusammen und du hast nur einen Ansprechpartner.
+                Grafikdesign ist bei uns Teil eines größeren Ganzen. Neben Werbemitteln und Werbetechnik in Frankfurt bekommen Sie bei uns auch Webdesign, den Aufbau einer Website, Google Werbung und Unterstützung als Marketingagentur und SEO Agentur für die Region. So passt am Ende alles zusammen und Sie haben nur einen Ansprechpartner.
               </p>
             </motion.div>
 
@@ -898,10 +898,10 @@ export default function GrafikdesignLanding() {
           <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 60% 60% at 50% 40%, rgba(59,130,246,0.1), transparent 70%)" }} />
           <div className="relative mx-auto max-w-2xl text-center">
             <motion.h2 variants={fadeUp} className="text-3xl font-bold text-white sm:text-4xl">
-              Lass uns über dein Design sprechen
+              Lassen Sie uns über Ihr Design sprechen
             </motion.h2>
             <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400 sm:text-lg">
-              Erzähl uns kurz, was du vorhast. Im kostenlosen Erstgespräch schauen wir gemeinsam, was zu deinem Betrieb passt, und du bekommst einen klaren Preis. Ohne Verpflichtung und ohne Druck.
+              Erzählen Sie uns kurz, was Sie vorhaben. Im kostenlosen Erstgespräch schauen wir gemeinsam, was zu Ihrem Betrieb passt, und Sie bekommen einen klaren Preis. Ohne Verpflichtung und ohne Druck.
             </motion.p>
             <motion.div variants={fadeUp} className="mt-9">
               <SoftCta />

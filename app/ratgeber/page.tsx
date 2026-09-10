@@ -88,7 +88,7 @@ export default function RatgeberPage() {
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-400">
               Praxisnahe Tipps zu Webdesign, Google, SEO und Online-Marketing für
               Handwerk, Gastronomie und Dienstleister, ohne Fachchinesisch und mit
-              konkreten Schritten, die du sofort umsetzen kannst.
+              konkreten Schritten, die Sie sofort umsetzen können.
             </p>
           </div>
         </section>
@@ -142,8 +142,8 @@ export default function RatgeberPage() {
               Bereit für mehr Anfragen?
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-slate-400">
-              Wir schauen uns deinen aktuellen Auftritt an und zeigen dir kostenlos,
-              wo dein größtes Potenzial für mehr Kunden liegt.
+              Wir schauen uns Ihren aktuellen Auftritt an und zeigen Ihnen kostenlos,
+              wo Ihr größtes Potenzial für mehr Kunden liegt.
             </p>
             <Link
               href="/analyse/allgemein"

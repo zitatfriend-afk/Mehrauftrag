@@ -105,7 +105,7 @@ export default function ReferenzenPage() {
               braucht getrennte Strecken für Unterhaltsreinigung und Bauendreinigung, weil
               Auftraggeber genau so suchen. Eine Pizzeria braucht die Speisekarte als Seite und nicht
               als Datei zum Herunterladen. Das klingt banal, entscheidet aber darüber, ob eine
-              Suchanfrage bei dir landet oder beim Wettbewerber.
+              Suchanfrage bei Ihnen landet oder beim Wettbewerber.
             </p>
             <p>
               Der zweite wiederkehrende Punkt ist die Anfragestrecke. Eine Website, die schön aussieht
@@ -176,8 +176,8 @@ export default function ReferenzenPage() {
           <section className="mt-14 rounded-2xl border border-[#3b82f6]/25 bg-[#3b82f6]/[0.06] p-6 sm:p-8">
             <h2 className="text-xl font-bold text-white">Wie so ein Projekt beginnt</h2>
             <p className="mt-2.5 text-base leading-relaxed text-slate-300">
-              Mit einem Gespräch per Telefon oder Videocall, in dem wir uns anschauen, wofür du heute
-              gefunden wirst und wofür nicht. Danach bekommst du einen Entwurf, bevor über Geld
+              Mit einem Gespräch per Telefon oder Videocall, in dem wir uns anschauen, wofür Sie heute
+              gefunden werden und wofür nicht. Danach bekommen Sie einen Entwurf, bevor über Geld
               gesprochen wird.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">

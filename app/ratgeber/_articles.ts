@@ -57,7 +57,7 @@ export const ARTICLES: Article[] = [
     dateModified: "2026-08-25",
     readingTime: "7 Min.",
     intro: [
-      "Die meisten Gäste entscheiden heute am Handy, wo sie essen gehen. Sie tippen etwas wie Pizzeria in der Nähe oder Restaurant Offenbach in Google ein und schauen sich in wenigen Sekunden an, was ihnen angezeigt wird: die Karte, die Bewertungen, die Fotos, die Öffnungszeiten. Wer hier nicht sauber auftaucht, verliert Gäste an das Lokal von nebenan, oft ohne es überhaupt zu merken.",
+      "Die meisten Gäste entscheiden heute am Handy, wo sie essen gehen. Die Gäste tippen etwas wie Pizzeria in der Nähe oder Restaurant Offenbach in Google ein und schauen sich in wenigen Sekunden an, was ihnen angezeigt wird: die Karte, die Bewertungen, die Fotos, die Öffnungszeiten. Wer hier nicht sauber auftaucht, verliert Gäste an das Lokal von nebenan, oft ohne es überhaupt zu merken.",
       "Die gute Nachricht: Für ein Restaurant ist gutes Online-Marketing kein Hexenwerk. Es kommt auf wenige Bausteine an, die zusammenspielen. Dieser Leitfaden zeigt sie der Reihe nach.",
     ],
     sections: [
@@ -77,14 +77,14 @@ export const ARTICLES: Article[] = [
       {
         heading: "Die eigene Website: der Ort, an dem der Gast bucht",
         paragraphs: [
-          "Das Google-Profil bringt den Gast zu dir, die Website macht aus dem Interesse eine Buchung. Sie muss auf dem Handy blitzschnell laden und das Wichtigste sofort zeigen: Speisekarte, Öffnungszeiten, Anfahrt und eine einfache Möglichkeit, einen Tisch zu reservieren oder anzurufen. Alles, was einen hungrigen Menschen zum Suchen zwingt, kostet Reservierungen.",
-          "Gerade Lieferdienste, Foodtrucks und kleinere Lokale unterschätzen oft, wie viel eine klare, schnelle Seite ausmacht. Sie ist außerdem die Basis dafür, dass Google und KI-Systeme wie ChatGPT deinen Betrieb korrekt verstehen und weiterempfehlen können.",
+          "Das Google-Profil bringt den Gast zu Ihnen, die Website macht aus dem Interesse eine Buchung. Sie muss auf dem Handy blitzschnell laden und das Wichtigste sofort zeigen: Speisekarte, Öffnungszeiten, Anfahrt und eine einfache Möglichkeit, einen Tisch zu reservieren oder anzurufen. Alles, was einen hungrigen Menschen zum Suchen zwingt, kostet Reservierungen.",
+          "Gerade Lieferdienste, Foodtrucks und kleinere Lokale unterschätzen oft, wie viel eine klare, schnelle Seite ausmacht. Sie ist außerdem die Basis dafür, dass Google und KI-Systeme wie ChatGPT Ihren Betrieb korrekt verstehen und weiterempfehlen können.",
         ],
       },
       {
         heading: "Bewertungen sind die neue Mundpropaganda",
         paragraphs: [
-          "Kaum jemand geht heute essen, ohne vorher kurz auf die Sterne zu schauen. Bewertungen wirken doppelt: Sie überzeugen unentschlossene Gäste und sie verbessern deine Position bei Google. Wichtig ist nicht nur die Menge, sondern auch, dass regelmäßig neue dazukommen und dass du darauf reagierst.",
+          "Kaum jemand geht heute essen, ohne vorher kurz auf die Sterne zu schauen. Bewertungen wirken doppelt, denn sie überzeugen unentschlossene Gäste und verbessern Ihre Position bei Google. Wichtig ist nicht nur die Menge, sondern auch, dass regelmäßig neue dazukommen und dass Sie darauf reagieren.",
           "Der einfachste Weg zu mehr Bewertungen ist, aktiv danach zu fragen: ein kleiner Hinweis auf dem Kassenbon, ein QR-Code am Tisch oder eine kurze Nachricht nach der Reservierung mit einem direkten Bewertungslink. Zufriedene Gäste bewerten gern, wenn man es ihnen leicht macht.",
         ],
       },
@@ -103,11 +103,11 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Wie bekomme ich mehr Google-Bewertungen für mein Lokal?",
-        a: "Frag aktiv danach und mach es den Gästen leicht: ein QR-Code am Tisch oder auf dem Kassenbon, der direkt zum Bewertungsformular führt, wirkt am besten. Antworte außerdem auf jede Bewertung, das erhöht die Wahrscheinlichkeit weiterer Bewertungen.",
+        a: "Fragen Sie aktiv danach und machen Sie es den Gästen leicht: ein QR-Code am Tisch oder auf dem Kassenbon, der direkt zum Bewertungsformular führt, wirkt am besten. Antworten Sie außerdem auf jede Bewertung, das erhöht die Wahrscheinlichkeit weiterer Bewertungen.",
       },
       {
         q: "Lohnt sich eine eigene Website, wenn ich schon bei Lieferdiensten gelistet bin?",
-        a: "Ja. Auf Lieferplattformen zahlst du hohe Provisionen und der Gast gehört der Plattform, nicht dir. Eine eigene, schnelle Website mit Reservierung und Direktbestellung macht dich unabhängiger und ist die Basis dafür, dass Google und KI-Systeme dich korrekt anzeigen.",
+        a: "Ja. Auf Lieferplattformen zahlen Sie hohe Provisionen und der Gast gehört der Plattform, nicht Ihnen. Eine eigene, schnelle Website mit Reservierung und Direktbestellung macht Sie unabhängiger und ist die Basis dafür, dass Google und KI-Systeme Sie korrekt anzeigen.",
       },
     ],
     related: [
@@ -138,8 +138,8 @@ export const ARTICLES: Article[] = [
       {
         heading: "In der Nähe gefunden werden: lokale Sichtbarkeit",
         paragraphs: [
-          "Wenn jemand Elektriker Rodgau oder Gebäudereinigung Frankfurt sucht, entscheidet die lokale Suche bei Google darüber, wer den Auftrag bekommt. Zwei Dinge zahlen darauf ein: ein vollständiges Google-Unternehmensprofil und eine Website, die eindeutig sagt, was du machst und wo du tätig bist.",
-          "Trage überall dieselben Kontaktdaten ein, exakt gleich geschrieben: Name, Adresse und Telefonnummer. Diese Konsistenz über Website, Google und Branchenverzeichnisse hinweg ist einer der wichtigsten Faktoren für gute lokale Platzierungen.",
+          "Wenn jemand Elektriker Rodgau oder Gebäudereinigung Frankfurt sucht, entscheidet die lokale Suche bei Google darüber, wer den Auftrag bekommt. Zwei Dinge zahlen darauf ein: ein vollständiges Google-Unternehmensprofil und eine Website, die eindeutig sagt, was Sie machen und wo Sie tätig sind.",
+          "Tragen Sie überall dieselben Kontaktdaten ein, exakt gleich geschrieben: Name, Adresse und Telefonnummer. Diese Konsistenz über Website, Google und Branchenverzeichnisse hinweg ist einer der wichtigsten Faktoren für gute lokale Platzierungen.",
         ],
       },
       {
@@ -159,7 +159,7 @@ export const ARTICLES: Article[] = [
         heading: "Bewertungen entscheiden den Auftrag",
         paragraphs: [
           "Beim Handwerk geht es um Vertrauen, und Bewertungen sind der schnellste Vertrauensbeweis. Ein Betrieb mit vielen aktuellen, guten Bewertungen wird deutlich häufiger angerufen als einer ohne, selbst bei gleicher Qualität der Arbeit.",
-          "Mach es dir zur Gewohnheit, nach jedem erledigten Auftrag um eine kurze Bewertung zu bitten. Ein direkter Link per WhatsApp oder auf der Rechnung senkt die Hürde. So wächst deine Reputation stetig, statt zufällig.",
+          "Machen Sie es sich zur Gewohnheit, nach jedem erledigten Auftrag um eine kurze Bewertung zu bitten. Ein direkter Link per WhatsApp oder auf der Rechnung senkt die Hürde. So wächst Ihre Reputation stetig, statt zufällig.",
         ],
       },
       {
@@ -173,7 +173,7 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Brauche ich als Handwerker überhaupt eine Website, wenn ich von Empfehlungen lebe?",
-        a: "Ja, gerade dann. Wer eine Empfehlung bekommt, prüft dich heute trotzdem online, bevor er anruft. Ohne aktuellen Auftritt entsteht Zweifel. Eine Website bestätigt die Empfehlung und fängt zusätzlich die vielen Menschen ab, die direkt online nach einem Betrieb suchen.",
+        a: "Ja, gerade dann. Wer eine Empfehlung bekommt, prüft Sie heute trotzdem online, bevor er anruft. Ohne aktuellen Auftritt entsteht Zweifel. Eine Website bestätigt die Empfehlung und fängt zusätzlich die vielen Menschen ab, die direkt online nach einem Betrieb suchen.",
       },
       {
         q: "Wie werde ich bei Google in meiner Region gefunden?",
@@ -210,21 +210,21 @@ export const ARTICLES: Article[] = [
       {
         heading: "Für die richtigen Suchbegriffe sichtbar sein",
         paragraphs: [
-          "Auftraggeber suchen selten allgemein, sondern konkret: Gebäudereinigung Frankfurt, Büroreinigung in der Nähe oder Unterhaltsreinigung Rhein-Main. Deine Website und dein Google-Profil sollten genau diese Leistungen und Regionen klar benennen, damit du bei diesen Suchen erscheinst.",
+          "Auftraggeber suchen selten allgemein, sondern konkret: Gebäudereinigung Frankfurt, Büroreinigung in der Nähe oder Unterhaltsreinigung Rhein-Main. Ihre Website und Ihr Google-Profil sollten genau diese Leistungen und Regionen klar benennen, damit Sie bei diesen Suchen erscheinen.",
           "Wichtig ist, die einzelnen Leistungen sauber zu trennen: Unterhaltsreinigung, Grundreinigung, Fensterreinigung, Bauendreinigung. Je klarer eine Seite eine bestimmte Leistung bedient, desto besser findet Google sie und desto passender ist die Anfrage.",
         ],
       },
       {
         heading: "Seriosität sichtbar machen",
         paragraphs: [
-          "Gewerbliche Auftraggeber vergeben Reinigungsaufträge oft langfristig und achten deshalb genau auf Seriosität. Eine professionelle Website mit echten Referenzen, klar benannten Leistungen, Angaben zu Versicherung und Zuverlässigkeit sowie sichtbaren Bewertungen hebt dich von Anbietern ab, die nur mit dem Preis werben.",
-          "Zeig, dass du auch größere Objekte zuverlässig betreust. Referenzen von Büros, Praxen oder Wohnanlagen wirken bei Entscheidern stärker als jede Selbstbeschreibung.",
+          "Gewerbliche Auftraggeber vergeben Reinigungsaufträge oft langfristig und achten deshalb genau auf Seriosität. Eine professionelle Website mit echten Referenzen, klar benannten Leistungen, Angaben zu Versicherung und Zuverlässigkeit sowie sichtbaren Bewertungen hebt Sie von Anbietern ab, die nur mit dem Preis werben.",
+          "Zeigen Sie, dass Sie auch größere Objekte zuverlässig betreuen. Referenzen von Büros, Praxen oder Wohnanlagen wirken bei Entscheidern stärker als jede Selbstbeschreibung.",
         ],
       },
       {
         heading: "Bewertungen und Empfehlungen gezielt aufbauen",
         paragraphs: [
-          "Auch im B2B-Geschäft schauen Entscheider auf Bewertungen. Ein Betrieb mit vielen positiven Rückmeldungen wirkt verlässlich und wird eher zur Angebotsabgabe eingeladen. Bitte zufriedene Auftraggeber aktiv um eine kurze Bewertung, am besten mit einem direkten Link, der die Sache in einer Minute erledigt.",
+          "Auch im B2B-Geschäft schauen Entscheider auf Bewertungen. Ein Betrieb mit vielen positiven Rückmeldungen wirkt verlässlich und wird eher zur Angebotsabgabe eingeladen. Bitten Sie zufriedene Auftraggeber aktiv um eine kurze Bewertung, am besten mit einem direkten Link, der die Sache in einer Minute erledigt.",
         ],
       },
       {
@@ -246,7 +246,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Wie wichtig sind Bewertungen im B2B-Geschäft?",
-        a: "Sehr wichtig. Auch Entscheider in Hausverwaltungen und Unternehmen prüfen Bewertungen, bevor sie einen Dienstleister zur Angebotsabgabe einladen. Regelmäßige, gute Bewertungen erhöhen deine Chancen deutlich.",
+        a: "Sehr wichtig. Auch Entscheider in Hausverwaltungen und Unternehmen prüfen Bewertungen, bevor sie einen Dienstleister zur Angebotsabgabe einladen. Regelmäßige, gute Bewertungen erhöhen Ihre Chancen deutlich.",
       },
     ],
     related: [
@@ -275,14 +275,14 @@ export const ARTICLES: Article[] = [
       {
         heading: "Instagram reicht allein nicht aus",
         paragraphs: [
-          "Instagram ist gut geeignet, um Ergebnisse zu zeigen und eine Community aufzubauen, aber es ist keine Visitenkarte für die Google-Suche. Wer Kosmetikstudio Aschaffenburg oder Wimpernverlängerung in der Nähe sucht, bekommt in erster Linie Websites angezeigt, keine Instagram-Profile. Ohne eigene Website bist du für diese Suchenden praktisch unsichtbar.",
-          "Eine Website und ein Instagram-Profil ergänzen sich am besten: Instagram für Reichweite und Inspiration, die Website als fester Anlaufpunkt, über den neue Kundinnen dich finden und direkt einen Termin buchen können.",
+          "Instagram ist gut geeignet, um Ergebnisse zu zeigen und eine Community aufzubauen, aber es ist keine Visitenkarte für die Google-Suche. Wer Kosmetikstudio Aschaffenburg oder Wimpernverlängerung in der Nähe sucht, bekommt in erster Linie Websites angezeigt, keine Instagram-Profile. Ohne eigene Website sind Sie für diese Suchenden praktisch unsichtbar.",
+          "Eine Website und ein Instagram-Profil ergänzen sich am besten: Instagram für Reichweite und Inspiration, die Website als fester Anlaufpunkt, über den neue Kundinnen Sie finden und direkt einen Termin buchen können.",
         ],
       },
       {
         heading: "Online-Terminbuchung ist der größte Hebel",
         paragraphs: [
-          "Kaum etwas kostet in einem Kosmetikstudio mehr Zeit als die Terminvergabe per Anruf oder Instagram-Nachricht, gerade während einer laufenden Behandlung. Eine Online-Terminbuchung, die rund um die Uhr erreichbar ist, nimmt dir diese Arbeit ab und macht es Kundinnen leicht, spontan einen freien Termin zu finden, auch abends oder am Wochenende, wenn du selbst nicht erreichbar bist.",
+          "Kaum etwas kostet in einem Kosmetikstudio mehr Zeit als die Terminvergabe per Anruf oder Instagram-Nachricht, gerade während einer laufenden Behandlung. Eine Online-Terminbuchung, die rund um die Uhr erreichbar ist, nimmt Ihnen diese Arbeit ab und macht es Kundinnen leicht, spontan einen freien Termin zu finden, auch abends oder am Wochenende, wenn Sie selbst nicht erreichbar sind.",
           "Studios mit Online-Buchung wirken zudem professioneller und moderner, was gerade bei neuen Kundinnen den Ausschlag geben kann.",
         ],
         bullets: [
@@ -296,13 +296,13 @@ export const ARTICLES: Article[] = [
         heading: "Vorher-Nachher-Bilder und Bewertungen schaffen Vertrauen",
         paragraphs: [
           "In der Kosmetik entscheidet Vertrauen über die Terminbuchung, schließlich geht es um das eigene Gesicht oder den eigenen Körper. Echte Vorher-Nachher-Bilder und Fotos aus dem Studio zeigen die Qualität der Arbeit überzeugender als jede Beschreibung.",
-          "Genauso wichtig sind Google-Bewertungen. Bitte zufriedene Kundinnen direkt nach der Behandlung um eine kurze Bewertung, am besten mit einem Link, den sie in einer Minute ausfüllen können. Viele aktuelle Bewertungen wirken auf neue Kundinnen und auf Google gleichermaßen überzeugend.",
+          "Genauso wichtig sind Google-Bewertungen. Bitten Sie zufriedene Kundinnen direkt nach der Behandlung um eine kurze Bewertung, am besten mit einem Link, den sie in einer Minute ausfüllen können. Viele aktuelle Bewertungen wirken auf neue Kundinnen und auf Google gleichermaßen überzeugend.",
         ],
       },
       {
-        heading: "Bei Google in deiner Stadt gefunden werden",
+        heading: "Bei Google in Ihrer Stadt gefunden werden",
         paragraphs: [
-          "Ein vollständiges Google-Unternehmensprofil mit korrekten Öffnungszeiten, Adresse und Fotos ist die Basis. Deine Website sollte zusätzlich klar benennen, welche Behandlungen du anbietest und in welcher Stadt oder welchem Stadtteil, damit du bei lokalen Suchen wie Kosmetikstudio Frankfurt oder Permanent Make-up in der Nähe erscheinst.",
+          "Ein vollständiges Google-Unternehmensprofil mit korrekten Öffnungszeiten, Adresse und Fotos ist die Basis. Ihre Website sollte zusätzlich klar benennen, welche Behandlungen Sie anbieten und in welcher Stadt oder welchem Stadtteil, damit Sie bei lokalen Suchen wie Kosmetikstudio Frankfurt oder Permanent Make-up in der Nähe erscheinen.",
           "Das gilt für alle Beauty-Bereiche gleichermaßen, ob Kosmetik, Nagelstudio, Wimpernverlängerung, Permanent Make-up, Fußpflege oder Waxing. Je klarer eine Seite die eigenen Leistungen und den Standort benennt, desto passender sind die Anfragen, die ankommen.",
         ],
         link: { label: "Website für Kosmetikstudios mit Online-Terminbuchung", href: "/webseite-fuer-kosmetikstudio" },
@@ -311,15 +311,15 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Reicht Instagram nicht auch ohne eigene Website?",
-        a: "Für die Community ja, für die Google-Suche nicht. Wer online nach einem Kosmetikstudio in seiner Nähe sucht, findet dabei fast ausschließlich Websites, keine Instagram-Profile. Eine eigene Website macht dich zusätzlich über Google auffindbar und lässt Kundinnen direkt einen Termin buchen.",
+        a: "Für die Community ja, für die Google-Suche nicht. Wer online nach einem Kosmetikstudio in seiner Nähe sucht, findet dabei fast ausschließlich Websites, keine Instagram-Profile. Eine eigene Website macht Sie zusätzlich über Google auffindbar und lässt Kundinnen direkt einen Termin buchen.",
       },
       {
         q: "Wie wichtig ist eine Online-Terminbuchung wirklich?",
-        a: "Sehr wichtig. Sie ist rund um die Uhr erreichbar, auch wenn du gerade eine Kundin behandelst, und nimmt dir viele Anrufe und Nachrichten ab. Für Kundinnen ist es außerdem bequemer, selbst einen freien Termin auszuwählen.",
+        a: "Sehr wichtig. Die Online-Terminbuchung ist rund um die Uhr erreichbar, auch wenn Sie gerade eine Kundin behandeln, und nimmt Ihnen viele Anrufe und Nachrichten ab. Für Kundinnen ist es außerdem bequemer, selbst einen freien Termin auszuwählen.",
       },
       {
         q: "Welche Rolle spielen Bewertungen für ein Kosmetikstudio?",
-        a: "Eine große. Kosmetik ist eine Vertrauensfrage, und aktuelle Google-Bewertungen mit echten Erfahrungen überzeugen unentschlossene Kundinnen schneller als jede Werbeaussage. Bitte deshalb nach jeder Behandlung aktiv um eine kurze Bewertung.",
+        a: "Eine große. Kosmetik ist eine Vertrauensfrage, und aktuelle Google-Bewertungen mit echten Erfahrungen überzeugen unentschlossene Kundinnen schneller als jede Werbeaussage. Bitten Sie deshalb nach jeder Behandlung aktiv um eine kurze Bewertung.",
       },
     ],
     related: [
@@ -333,7 +333,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "auftraege-hausmeisterservice",
     category: "Branchen",
-    title: "Ausschreibungen für Hausmeisterdienstleistungen: wo sie stehen und wie du dich bewirbst",
+    title: "Ausschreibungen für Hausmeisterdienstleistungen: wo sie stehen und wie Sie sich bewerben",
     metaTitle: "Ausschreibungen für Hausmeisterdienste finden | Ratgeber",
     description:
       "Wo Ausschreibungen für Hausmeisterdienstleistungen veröffentlicht werden, welche Unterlagen Verwalter erwarten und woran Bewerbungen scheitern.",
@@ -342,14 +342,14 @@ export const ARTICLES: Article[] = [
     readingTime: "6 Min.",
     intro: [
       "Ein Hausmeisterservice lebt selten von einmaligen Aufträgen. Das Geschäft, das wirklich trägt, sind laufende Objektbetreuungen: eine Wohnanlage, ein Bürogebäude, mehrere Objekte einer Hausverwaltung, betreut über Jahre. Genau diese Verträge werden heute zunehmend online angebahnt.",
-      "Die Menschen, die darüber entscheiden, sind aber keine Privatleute. Es sind Hausverwalter, WEG-Verwalter und Objektmanager, die nach einem verlässlichen Partner für eine Dauerlösung suchen. Sie ticken anders als jemand, der kurzfristig einen Handwerker braucht, und darauf sollte dein Auftritt eingestellt sein.",
+      "Die Menschen, die darüber entscheiden, sind aber keine Privatleute. Es sind Hausverwalter, WEG-Verwalter und Objektmanager, die nach einem verlässlichen Partner für eine Dauerlösung suchen. Diese ticken anders als jemand, der kurzfristig einen Handwerker braucht, und darauf sollte Ihr Auftritt eingestellt sein.",
     ],
     sections: [
       {
         heading: "Wer wirklich sucht, ist die Hausverwaltung",
         paragraphs: [
           "Wer einen Hausmeisterservice sucht, sucht meistens beruflich: eine Verwaltung, die ein neues Objekt übernommen hat, ein WEG-Beirat, der mit dem bisherigen Dienstleister unzufrieden ist, oder ein Gewerbebetrieb, der die Betreuung auslagern will. Diese Personen vergleichen nüchtern und entscheiden für längere Zeit.",
-          "Das ändert die Ansprache. Statt Werbesprüchen zählen konkrete Angaben: welche Objektarten du betreust, wie groß deine Kapazität ist, welche Leistungen zum Grundpaket gehören und wie eine Zusammenarbeit praktisch abläuft. Wer diese Fragen auf seiner Website schon beantwortet, wird angerufen. Wer sie offenlässt, fällt aus der engeren Auswahl.",
+          "Das ändert die Ansprache. Statt Werbesprüchen zählen konkrete Angaben: welche Objektarten Sie betreuen, wie groß Ihre Kapazität ist, welche Leistungen zum Grundpaket gehören und wie eine Zusammenarbeit praktisch abläuft. Wer diese Fragen auf seiner Website schon beantwortet, wird angerufen. Wer sie offenlässt, fällt aus der engeren Auswahl.",
         ],
         bullets: [
           "Objektarten klar benennen: Wohnanlagen, WEG, Büro- und Gewerbeobjekte",
@@ -366,10 +366,10 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        heading: "Zuverlässigkeit ist dein eigentliches Verkaufsargument",
+        heading: "Zuverlässigkeit ist Ihr eigentliches Verkaufsargument",
         paragraphs: [
-          "Bei der Objektbetreuung geht es weniger um Perfektion als um Verlässlichkeit. Eine Verwaltung will nicht hinterhertelefonieren müssen. Was sie überzeugt, sind Dinge, die andere Anbieter oft gar nicht erwähnen: dass du erreichbar bist, dass bei Krankheit oder Urlaub eine Vertretung übernimmt, dass du versichert bist und dass Beschwerden schnell bearbeitet werden.",
-          "Diese Punkte gehören sichtbar auf die Website, nicht ins Kleingedruckte. Sie beantworten genau die Sorge, die ein Entscheider hat, bevor er eine Betreuung über Jahre vergibt.",
+          "Bei der Objektbetreuung geht es weniger um Perfektion als um Verlässlichkeit. Eine Verwaltung will nicht hinterhertelefonieren müssen. Was sie überzeugt, sind Dinge, die andere Anbieter oft gar nicht erwähnen: dass Sie erreichbar sind, dass bei Krankheit oder Urlaub eine Vertretung übernimmt, dass Sie versichert sind und dass Beschwerden schnell bearbeitet werden.",
+          "Diese Punkte gehören sichtbar auf die Website, nicht ins Kleingedruckte, denn sie beantworten genau die Sorge, die ein Entscheider hat, bevor er eine Betreuung über Jahre vergibt.",
         ],
       },
       {
@@ -388,7 +388,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Soll ich jede Leistung einzeln auf der Website beschreiben?",
-        a: "Ja. Winterdienst, Grünpflege, Treppenhausreinigung und Kleinreparaturen sollten jeweils erkennbar und mit eigenen Worten beschrieben sein. Nur dann kann Google deine Seite bei der jeweiligen Suche anzeigen, und die Anfragen passen besser zu dem, was du tatsächlich anbietest.",
+        a: "Ja. Winterdienst, Grünpflege, Treppenhausreinigung und Kleinreparaturen sollten jeweils erkennbar und mit eigenen Worten beschrieben sein. Nur dann kann Google Ihre Seite bei der jeweiligen Suche anzeigen, und die Anfragen passen besser zu dem, was Sie tatsächlich anbieten.",
       },
       {
         q: "Wann sollte ich Winterdienst auf der Website sichtbar machen?",
@@ -433,14 +433,14 @@ export const ARTICLES: Article[] = [
       {
         heading: "Verfahren und Qualifikationen schaffen Vertrauen",
         paragraphs: [
-          "Was in vielen Branchen nach Fachchinesisch klingt, ist beim Schweißen ein echtes Verkaufsargument. Wenn du angibst, welche Verfahren du beherrschst, also WIG, MIG oder MAG, und welche Werkstoffe du verarbeitest, also Stahl, Edelstahl oder Aluminium, dann erkennt ein Industriekunde sofort, ob du für ihn infrage kommst.",
+          "Was in vielen Branchen nach Fachchinesisch klingt, ist beim Schweißen ein echtes Verkaufsargument. Wenn Sie angeben, welche Verfahren Sie beherrschen, also WIG, MIG oder MAG, und welche Werkstoffe Sie verarbeiten, also Stahl, Edelstahl oder Aluminium, dann erkennt ein Industriekunde sofort, ob Sie für ihn infrage kommen.",
           "Dasselbe gilt für Prüfungen und Zertifikate. Wer eine gültige Schweißerprüfung oder eine Zertifizierung nach den einschlägigen Normen hat, sollte das nennen. Für gewerbliche Auftraggeber ist das oft die Voraussetzung, um überhaupt anfragen zu dürfen, und viele Betriebe verschenken diesen Vorteil, weil er nirgends steht.",
         ],
       },
       {
-        heading: "Projektfotos sind dein stärkstes Argument",
+        heading: "Projektfotos sind Ihr stärkstes Argument",
         paragraphs: [
-          "Nichts überzeugt bei Metallarbeiten so schnell wie ein gutes Foto. Ein sauber gefertigtes Geländer, eine gelungene Reparatur, eine Sonderanfertigung, die es so nicht von der Stange gibt, all das sagt mehr über deine Arbeit aus als jeder Beschreibungstext.",
+          "Nichts überzeugt bei Metallarbeiten so schnell wie ein gutes Foto. Ein sauber gefertigtes Geländer, eine gelungene Reparatur, eine Sonderanfertigung, die es so nicht von der Stange gibt, all das sagt mehr über Ihre Arbeit aus als jeder Beschreibungstext.",
           "Wichtig ist, dass es echte Fotos aus der eigenen Werkstatt und von eigenen Projekten sind. Stockbilder erkennt jeder Fachkunde sofort, und sie kosten Glaubwürdigkeit. Ein Bild vorher und nachher wirkt bei Reparaturen besonders stark, weil es die Leistung sichtbar macht, die sonst unsichtbar bleibt.",
         ],
       },
@@ -448,7 +448,7 @@ export const ARTICLES: Article[] = [
         heading: "Mobile Einsätze und Einzugsgebiet klar benennen",
         paragraphs: [
           "Viele Schweißbetriebe arbeiten nicht nur in der eigenen Werkstatt, sondern fahren zum Kunden, etwa für Reparaturen an Maschinen, Geländern oder Toren vor Ort. Das ist ein starker Vorteil gegenüber reinen Werkstattbetrieben, wird aber oft nicht erwähnt.",
-          "Schreib deshalb konkret, dass du mobile Einsätze anbietest, und nenne dein Einzugsgebiet mit den Orten, in die du tatsächlich fährst. Das hilft doppelt: Google ordnet deine Seite den passenden Regionen zu, und Anfragen von zu weit weg bleiben dir erspart.",
+          "Schreiben Sie deshalb konkret, dass Sie mobile Einsätze anbieten, und nennen Sie Ihr Einzugsgebiet mit den Orten, in die Sie tatsächlich fahren. Das hilft doppelt: Google ordnet Ihre Seite den passenden Regionen zu, und Anfragen von zu weit weg bleiben Ihnen erspart.",
         ],
         link: { label: "Website für Schweißbetriebe und Metallbauer, die Aufträge bringt", href: "/webseite-fuer-schweisser" },
       },
@@ -481,10 +481,10 @@ export const ARTICLES: Article[] = [
   {
     slug: "ki-suche-google-2026",
     category: "Grundlagen",
-    title: "KI-Suche und Google 2026: So wird dein Betrieb jetzt gefunden",
-    metaTitle: "KI-Suche & Google 2026: so wirst du gefunden | Ratgeber",
+    title: "KI-Suche und Google 2026: So wird Ihr Betrieb jetzt gefunden",
+    metaTitle: "KI-Suche & Google 2026: so werden Sie gefunden | Ratgeber",
     description:
-      "Wie kleine Betriebe 2026 über Google UND KI wie ChatGPT und Perplexity gefunden werden: Was sich in der Suche ändert und was du konkret tun musst.",
+      "Wie kleine Betriebe 2026 über Google UND KI wie ChatGPT und Perplexity gefunden werden: Was sich in der Suche ändert und was Sie konkret tun müssen.",
     datePublished: "2026-08-02",
     dateModified: "2026-08-25",
     readingTime: "7 Min.",
@@ -497,7 +497,7 @@ export const ARTICLES: Article[] = [
         heading: "Was sich in der Suche gerade ändert",
         paragraphs: [
           "Früher tippte man einen Suchbegriff bei Google ein und wählte aus einer Liste von Links. Heute beantworten KI-Systeme die Frage oft direkt: Die KI-Übersicht steht ganz oben in den Google-Ergebnissen, und Werkzeuge wie ChatGPT oder Perplexity nennen auf Wunsch gleich einen passenden Anbieter samt Begründung.",
-          "Das heißt nicht, dass klassisches Google verschwindet. Aber es kommt eine zweite Ebene dazu: Es reicht nicht mehr nur, in der Linkliste zu erscheinen. Du musst auch die Quelle sein, aus der die KI ihre Antwort zieht.",
+          "Das heißt nicht, dass klassisches Google verschwindet. Aber es kommt eine zweite Ebene dazu: Es reicht nicht mehr nur, in der Linkliste zu erscheinen. Sie müssen auch die Quelle sein, aus der die KI ihre Antwort zieht.",
         ],
       },
       {
@@ -508,7 +508,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        heading: "Wie du bei Google UND KI gefunden wirst",
+        heading: "Wie Sie bei Google UND KI gefunden werden",
         paragraphs: [
           "Die gute Nachricht: Die Grundlagen für gutes Google-Ranking und für KI-Sichtbarkeit überschneiden sich stark. Wer sauber aufgestellt ist, gewinnt auf beiden Ebenen.",
         ],
@@ -543,7 +543,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Wie werde ich von ChatGPT oder Perplexity empfohlen?",
-        a: "Indem deine Website leicht lesbar und vertrauenswürdig ist: klare Inhalte, die echte Fragen beantworten, strukturierte Daten, ein gepflegtes Google-Profil, gute Bewertungen und einheitliche Kontaktdaten. So kann die KI dich sicher erkennen, einordnen und als Quelle nennen.",
+        a: "Indem Ihre Website leicht lesbar und vertrauenswürdig ist: klare Inhalte, die echte Fragen beantworten, strukturierte Daten, ein gepflegtes Google-Profil, gute Bewertungen und einheitliche Kontaktdaten. So kann die KI Sie sicher erkennen, einordnen und als Quelle nennen.",
       },
       {
         q: "Verliere ich Besucher, wenn die KI die Antwort direkt zeigt?",
@@ -570,25 +570,25 @@ export const ARTICLES: Article[] = [
     readingTime: "6 Min.",
     intro: [
       "Wer online mehr Kunden gewinnen will, stößt schnell auf zwei Wege: bei Google ganz oben in den bezahlten Anzeigen erscheinen (Google Ads) oder durch Suchmaschinenoptimierung (SEO) in den normalen, unbezahlten Ergebnissen nach oben kommen. Beide führen zum Ziel, funktionieren aber völlig unterschiedlich.",
-      "Die Frage ist nicht, welcher Weg grundsätzlich besser ist, sondern welcher zu deiner Situation passt. Dieser Vergleich hilft bei der Entscheidung.",
+      "Die Frage ist nicht, welcher Weg grundsätzlich besser ist, sondern welcher zu Ihrer Situation passt. Dieser Vergleich hilft bei der Entscheidung.",
     ],
     sections: [
       {
         heading: "Google Ads: schnell, aber laufende Kosten",
         paragraphs: [
-          "Mit Google Ads stehst du innerhalb weniger Stunden ganz oben, für genau die Suchbegriffe, die du wählst. Das ist der große Vorteil: sofortige Sichtbarkeit und planbare Anfragen. Du zahlst pro Klick, und sobald du das Budget abschaltest, verschwindet die Sichtbarkeit wieder.",
-          "Google Ads eignet sich besonders, wenn du schnell Anfragen brauchst, ein neues Angebot testen willst oder in einem umkämpften Markt kurzfristig sichtbar sein musst. Der Erfolg steht und fällt aber mit der richtigen Einrichtung, sonst verbrennt man Budget für Klicks, die nichts bringen.",
+          "Mit Google Ads stehen Sie innerhalb weniger Stunden ganz oben, für genau die Suchbegriffe, die Sie wählen. Das ist der große Vorteil: sofortige Sichtbarkeit und planbare Anfragen. Sie zahlen pro Klick, und sobald Sie das Budget abschalten, verschwindet die Sichtbarkeit wieder.",
+          "Google Ads eignet sich besonders, wenn Sie schnell Anfragen brauchen, ein neues Angebot testen wollen oder in einem umkämpften Markt kurzfristig sichtbar sein müssen. Der Erfolg steht und fällt aber mit der richtigen Einrichtung, sonst verbrennt man Budget für Klicks, die nichts bringen.",
         ],
       },
       {
         heading: "SEO: langsamer, dafür nachhaltig",
         paragraphs: [
-          "Suchmaschinenoptimierung bringt dich in die unbezahlten Ergebnisse. Das dauert seine Zeit, wirkt dafür aber dauerhaft und ohne Klickkosten. Eine Seite, die für einen wichtigen Suchbegriff gut platziert ist, bringt über Monate und Jahre immer wieder Anfragen, ohne dass jeder Besucher extra kostet.",
+          "Suchmaschinenoptimierung bringt Sie in die unbezahlten Ergebnisse. Das dauert seine Zeit, wirkt dafür aber dauerhaft und ohne Klickkosten. Eine Seite, die für einen wichtigen Suchbegriff gut platziert ist, bringt über Monate und Jahre immer wieder Anfragen, ohne dass jeder Besucher extra kostet.",
           "Gerade für lokale Betriebe ist SEO stark, weil die Konkurrenz vor Ort meist überschaubar ist. Wer sein Google-Profil und seine Website konsequent pflegt, kann in der eigenen Region dauerhaft ganz vorn stehen.",
-          "Weil SEO eine Weile braucht, bevor sie trägt, wiegt die Wahl des Dienstleisters hier schwerer als bei Anzeigen. Bei Google Ads siehst du nach wenigen Tagen, ob etwas passiert. Bei SEO merkst du eine schlechte Zusammenarbeit oft erst nach Monaten.",
-          "Und nicht jede Wartezeit ist eine Wartezeit. Manchmal steht die Seite gar nicht im Rennen, weil sie technisch blockiert ist oder es zu der Suche schlicht keine passende Seite auf ihr gibt. Bevor du auf Geduld setzt, lohnt sich deshalb ein kurzer Blick auf die üblichen Ursachen.",
+          "Weil SEO eine Weile braucht, bevor sie trägt, wiegt die Wahl des Dienstleisters hier schwerer als bei Anzeigen. Bei Google Ads sehen Sie nach wenigen Tagen, ob etwas passiert. Bei SEO merken Sie eine schlechte Zusammenarbeit oft erst nach Monaten.",
+          "Und nicht jede Wartezeit ist eine Wartezeit. Manchmal steht die Seite gar nicht im Rennen, weil sie technisch blockiert ist oder es zu der Suche schlicht keine passende Seite auf ihr gibt. Bevor Sie auf Geduld setzen, lohnt sich deshalb ein kurzer Blick auf die üblichen Ursachen.",
         ],
-        link: { label: "Woran du eine gute SEO-Agentur erkennst", href: "/ratgeber/seo-agentur-erkennen" },
+        link: { label: "Woran Sie eine gute SEO-Agentur erkennen", href: "/ratgeber/seo-agentur-erkennen" },
         links: [
           { label: "Die häufigsten Gründe, warum eine Seite nicht auftaucht", href: "/ratgeber/website-nicht-bei-google-gefunden" },
         ],
@@ -632,7 +632,7 @@ export const ARTICLES: Article[] = [
     related: [
       { label: "Unser Angebot zur Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
       { label: "Google Ads Betreuung", href: "/google-ads" },
-      { label: "Woran du eine gute SEO-Agentur erkennst", href: "/ratgeber/seo-agentur-erkennen" },
+      { label: "Woran Sie eine gute SEO-Agentur erkennen", href: "/ratgeber/seo-agentur-erkennen" },
       { label: "Was SEO kostet und ab wann es sich rechnet", href: "/ratgeber/was-seo-kostet" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
       { label: "Was bringt eine professionelle Website?", href: "/ratgeber/professionelle-website-vorteile" },
@@ -642,23 +642,23 @@ export const ARTICLES: Article[] = [
   {
     slug: "seo-agentur-erkennen",
     category: "Grundlagen",
-    title: "Woran du eine gute SEO-Agentur erkennst, und woran eine schlechte",
+    title: "Woran Sie eine gute SEO-Agentur erkennen, und woran eine schlechte",
     metaTitle: "Gute SEO-Agentur erkennen: die Warnzeichen | Ratgeber",
     description:
-      "Woran du eine gute SEO-Agentur erkennst und woran eine unseriöse: die Versprechen, bei denen du hellhörig wirst, und die Fragen fürs erste Gespräch.",
+      "Woran Sie eine gute SEO-Agentur erkennen und woran eine unseriöse: die Versprechen, bei denen Sie hellhörig werden, und die Fragen fürs erste Gespräch.",
     datePublished: "2026-08-25",
     dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Wer nach einer SEO-Agentur sucht, bekommt Hunderte Treffer und fast überall dieselben Sätze: mehr Sichtbarkeit, mehr Anfragen, ganz nach oben bei Google. Für einen Handwerksbetrieb, ein Restaurant oder eine Reinigungsfirma ist von außen kaum zu erkennen, wer davon tatsächlich arbeitet und wer nur gut verkauft.",
-      "Es gibt aber Merkmale, die sich prüfen lassen, ohne dass du selbst Fachmann sein musst. Einen Teil davon nennt Google in seiner eigenen Anleitung für Website-Betreiber, die einen SEO-Dienstleister suchen. Dieser Ratgeber fasst zusammen, worauf du achtest, bevor du unterschreibst.",
+      "Es gibt aber Merkmale, die sich prüfen lassen, ohne dass Sie selbst Fachmann sein müssen. Einen Teil davon nennt Google in seiner eigenen Anleitung für Website-Betreiber, die einen SEO-Dienstleister suchen. Dieser Ratgeber fasst zusammen, worauf Sie achten, bevor Sie unterschreiben.",
     ],
     sections: [
       {
         heading: "Das eine Versprechen, das niemand halten kann",
         paragraphs: [
-          "Wenn ein Anbieter dir Platz eins bei Google garantiert, ist das Gespräch im Grunde beendet. Google schreibt in seiner Anleitung zur Auswahl eines SEO-Dienstleisters wörtlich, dass niemand eine Platzierung auf Platz eins garantieren kann. Die Reihenfolge der Ergebnisse entsteht aus einem Verfahren, auf das kein Dienstleister direkten Zugriff hat, und sie verändert sich laufend.",
-          "Wer sein Handwerk beherrscht, sagt dir deshalb, was er tut und woran ihr den Fortschritt gemeinsam messt. Er sagt dir nicht, welchen Platz du in welcher Woche belegen wirst.",
+          "Wenn ein Anbieter Ihnen Platz eins bei Google garantiert, ist das Gespräch im Grunde beendet. Google schreibt in seiner Anleitung zur Auswahl eines SEO-Dienstleisters wörtlich, dass niemand eine Platzierung auf Platz eins garantieren kann. Die Reihenfolge der Ergebnisse entsteht aus einem Verfahren, auf das kein Dienstleister direkten Zugriff hat, und sie verändert sich laufend.",
+          "Wer sein Handwerk beherrscht, sagt Ihnen deshalb, was er tut und woran Sie den Fortschritt gemeinsam messen. Er sagt Ihnen nicht, welchen Platz Sie in welcher Woche belegen werden.",
         ],
       },
       {
@@ -667,9 +667,9 @@ export const ARTICLES: Article[] = [
           "Google nennt Website-Betreibern eine Reihe von Mustern, bei denen sie vorsichtig sein sollen. Wer eines davon erlebt, sollte genauer hinschauen.",
         ],
         bullets: [
-          "Der Kontakt kommt unaufgefordert per E-Mail, oft mit einer angeblichen Fehleranalyse deiner Seite",
+          "Der Kontakt kommt unaufgefordert per E-Mail, oft mit einer angeblichen Fehleranalyse Ihrer Seite",
           "Der Anbieter erklärt nicht klar, was er konkret tun wird, oder behandelt seine Vorgehensweise als Geheimnis",
-          "Er behauptet eine besondere Beziehung zu Google oder eine bevorzugte Anmeldung deiner Seite",
+          "Er behauptet eine besondere Beziehung zu Google oder eine bevorzugte Anmeldung Ihrer Seite",
           "Er garantiert bestimmte Platzierungen",
           "Er verkauft Linkpakete oder die Anmeldung bei tausenden Suchmaschinen",
         ],
@@ -678,31 +678,31 @@ export const ARTICLES: Article[] = [
         heading: "Warum gekaufte Links das teuerste Angebot sind",
         paragraphs: [
           "Der letzte Punkt verdient eine eigene Erklärung, weil er so oft verkauft wird. Links von anderen Websites sind ein echter Faktor, aber Google zählt das Kaufen und Verkaufen von Links zu Rankingzwecken ausdrücklich zu den Spam-Praktiken. Dazu gehört auch, Waren oder Leistungen gegen Links zu tauschen.",
-          "Die Folge steht ebenso klar in den Richtlinien: Seiten, die dagegen verstoßen, können schlechter platziert werden oder gar nicht mehr in den Ergebnissen erscheinen. Das Risiko trägt dabei nicht die Agentur, sondern deine Domain. Wenn die Zusammenarbeit endet, bleiben die gekauften Links und das Problem bei dir.",
+          "Die Folge steht ebenso klar in den Richtlinien: Seiten, die dagegen verstoßen, können schlechter platziert werden oder gar nicht mehr in den Ergebnissen erscheinen. Das Risiko trägt dabei nicht die Agentur, sondern Ihre Domain. Wenn die Zusammenarbeit endet, bleiben die gekauften Links und das Problem bei Ihnen.",
         ],
       },
       {
-        heading: "Woran du erkennst, dass jemand wirklich arbeitet",
+        heading: "Woran Sie erkennen, dass jemand wirklich arbeitet",
         paragraphs: [
-          "Die Gegenprobe ist einfacher, als sie klingt. Ein guter Anbieter kann drei Dinge: fertige Arbeiten zeigen, in normalen Worten erklären was er vorhat, und offenlegen, was er an deiner Website verändert.",
+          "Die Gegenprobe ist einfacher, als sie klingt. Ein guter Anbieter kann drei Dinge: fertige Arbeiten zeigen, in normalen Worten erklären was er vorhat, und offenlegen, was er an Ihrer Website verändert.",
         ],
         bullets: [
           "Er zeigt Beispiele abgeschlossener Projekte, nicht nur eine Wand voller Kundenlogos",
           "Er arbeitet nach den offiziellen Vorgaben von Google, nicht gegen sie",
-          "Er kann sagen, was er in deiner Branche bereits gemacht hat",
-          "Er teilt dir jede Änderung mit, die er an deiner Seite vornimmt",
-          "Er sagt dir, welche Art von Ergebnis er erwartet und woran ihr es messen werdet",
+          "Er kann sagen, was er in Ihrer Branche bereits gemacht hat",
+          "Er teilt Ihnen jede Änderung mit, die er an Ihrer Seite vornimmt",
+          "Er sagt Ihnen, welche Art von Ergebnis er erwartet und woran Sie es messen werden",
         ],
       },
       {
-        heading: "Die Zugänge gehören dir, nicht der Agentur",
+        heading: "Die Zugänge gehören Ihnen, nicht der Agentur",
         paragraphs: [
           "Ein Punkt, der in Verkaufsgesprächen selten vorkommt und später wehtut: Wem gehören am Ende Domain, Website, Google-Unternehmensprofil und der Zugang zur Search Console?",
-          "Eine faire Zusammenarbeit klärt das vorher und schriftlich. Du solltest jederzeit selbst in deine Search Console schauen können, und die Domain sollte auf deinen Betrieb laufen, nicht auf den Dienstleister. Wer hier ausweicht, baut eine Abhängigkeit auf, die mit der Qualität der Arbeit nichts zu tun hat.",
+          "Eine faire Zusammenarbeit klärt das vorher und schriftlich. Sie sollten jederzeit selbst in Ihre Search Console schauen können, und die Domain sollte auf Ihren Betrieb laufen, nicht auf den Dienstleister. Wer hier ausweicht, baut eine Abhängigkeit auf, die mit der Qualität der Arbeit nichts zu tun hat.",
         ],
         bullets: [
-          "Die Domain ist auf deinen Betrieb registriert",
-          "Du hast eigenen Zugang zur Search Console und zum Google-Unternehmensprofil",
+          "Die Domain ist auf Ihren Betrieb registriert",
+          "Sie haben eigenen Zugang zur Search Console und zum Google-Unternehmensprofil",
           "Texte und Bilder bleiben nach Vertragsende nutzbar",
           "Es steht schriftlich, was bei einem Wechsel übergeben wird",
         ],
@@ -711,35 +711,35 @@ export const ARTICLES: Article[] = [
         heading: "Berichte, die man tatsächlich lesen kann",
         paragraphs: [
           "Viele Berichte aus laufenden SEO-Betreuungen bestehen aus Diagrammen, die gut aussehen und wenig sagen. Der hauseigene Sichtbarkeitsindex eines Werkzeugherstellers, die Zahl bearbeiteter Suchbegriffe, die Menge gesetzter Links: das misst Aufwand, nicht Wirkung.",
-          "Was für deinen Betrieb zählt, steht in der Google Search Console, und dieser Zugang kostet nichts. Dort siehst du, für welche Suchanfragen du erscheinst, auf welcher Position, wie oft geklickt wird. Ein Bericht, der genau diese Zahlen erklärt und daraus die nächsten Schritte ableitet, ist mehr wert als zehn Seiten Grafik.",
+          "Was für Ihren Betrieb zählt, steht in der Google Search Console, und dieser Zugang kostet nichts. Dort sehen Sie, für welche Suchanfragen Sie erscheinen, auf welcher Position, wie oft geklickt wird. Ein Bericht, der genau diese Zahlen erklärt und daraus die nächsten Schritte ableitet, ist mehr wert als zehn Seiten Grafik.",
         ],
       },
       {
-        heading: "Muss die Agentur bei dir um die Ecke sitzen?",
+        heading: "Muss die Agentur bei Ihnen um die Ecke sitzen?",
         paragraphs: [
-          "Für deine Sichtbarkeit in der lokalen Suche zählt, was auf deiner Website und in deinem Google-Unternehmensprofil steht. Wo dein Dienstleister sitzt, spielt dafür keine Rolle. Entscheidend ist etwas anderes: ob er den Markt kennt, in dem du verkaufst. Wie dicht dein Gewerk in deiner Region besetzt ist, welche Betriebsgrößen dort üblich sind und wonach deine Kunden tatsächlich suchen, das entscheidet darüber, welche Inhalte gebraucht werden.",
-          "Die Zusammenarbeit selbst läuft ohnehin meist aus der Ferne, per Telefon, Videocall und WhatsApp. Wichtiger als die Entfernung ist, dass du einen festen Ansprechpartner hast und eine Antwort bekommst, wenn du fragst. Wie das in der Praxis aussieht, steht auf unserer Seite zur Suchmaschinenoptimierung.",
+          "Für Ihre Sichtbarkeit in der lokalen Suche zählt, was auf Ihrer Website und in Ihrem Google-Unternehmensprofil steht. Wo Ihr Dienstleister sitzt, spielt dafür keine Rolle. Entscheidend ist etwas anderes: ob er den Markt kennt, in dem Sie verkaufen. Wie dicht Ihr Gewerk in Ihrer Region besetzt ist, welche Betriebsgrößen dort üblich sind und wonach Ihre Kunden tatsächlich suchen, das entscheidet darüber, welche Inhalte gebraucht werden.",
+          "Die Zusammenarbeit selbst läuft ohnehin meist aus der Ferne, per Telefon, Videocall und WhatsApp. Wichtiger als die Entfernung ist, dass Sie einen festen Ansprechpartner haben und eine Antwort bekommen, wenn Sie fragen. Wie das in der Praxis aussieht, steht auf unserer Seite zur Suchmaschinenoptimierung.",
         ],
         link: { label: "So gehen wir Suchmaschinenoptimierung für kleine Betriebe an", href: "/suchmaschinenoptimierung" },
       },
       {
         heading: "Fünf Fragen, die im ersten Gespräch Klarheit bringen",
         paragraphs: [
-          "Du brauchst kein Fachwissen, um einen Anbieter einzuschätzen. Es reicht, ein paar Fragen zu stellen und darauf zu achten, ob eine verständliche Antwort kommt oder ob ausgewichen wird. Google empfiehlt Website-Betreibern genau diese Richtung.",
+          "Sie brauchen kein Fachwissen, um einen Anbieter einzuschätzen. Es reicht, ein paar Fragen zu stellen und darauf zu achten, ob eine verständliche Antwort kommt oder ob ausgewichen wird. Google empfiehlt Website-Betreibern genau diese Richtung.",
         ],
         bullets: [
-          "Kannst du mir Beispiele deiner bisherigen Arbeit zeigen?",
-          "Wie lange machst du das schon?",
-          "Was hast du in meiner Branche bereits umgesetzt?",
-          "Welche Änderungen nimmst du an meiner Seite vor, und erfahre ich von jeder einzelnen?",
-          "Welches Ergebnis erwartest du, und woran werden wir es messen?",
+          "Können Sie mir Beispiele Ihrer bisherigen Arbeit zeigen?",
+          "Wie lange machen Sie das schon?",
+          "Was haben Sie in meiner Branche bereits umgesetzt?",
+          "Welche Änderungen nehmen Sie an meiner Seite vor, und erfahre ich von jeder einzelnen?",
+          "Welches Ergebnis erwarten Sie, und woran werden wir es messen?",
         ],
       },
     ],
     faqs: [
       {
         q: "Kann eine SEO-Agentur Platz eins bei Google garantieren?",
-        a: "Nein. Google schreibt in seiner eigenen Anleitung ausdrücklich, dass niemand eine Platzierung auf Platz eins garantieren kann. Wer es trotzdem verspricht, verkauft entweder etwas, das er nicht liefern kann, oder arbeitet mit Methoden, die deiner Domain schaden.",
+        a: "Nein. Google schreibt in seiner eigenen Anleitung ausdrücklich, dass niemand eine Platzierung auf Platz eins garantieren kann. Wer es trotzdem verspricht, verkauft entweder etwas, das er nicht liefern kann, oder arbeitet mit Methoden, die Ihrer Domain schaden.",
       },
       {
         q: "Woran erkenne ich ein unseriöses SEO-Angebot?",
@@ -747,11 +747,11 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Muss eine SEO-Agentur in meiner Stadt sitzen?",
-        a: "Nein. Für die lokale Suche zählt, was auf deiner Website und in deinem Google-Unternehmensprofil steht, nicht der Sitz des Dienstleisters. Wichtig ist, dass er den Markt kennt, in dem du verkaufst, und dass du ihn erreichst, wenn du eine Frage hast.",
+        a: "Nein. Für die lokale Suche zählt, was auf Ihrer Website und in Ihrem Google-Unternehmensprofil steht, nicht der Sitz des Dienstleisters. Wichtig ist, dass er den Markt kennt, in dem Sie verkaufen, und dass Sie ihn erreichen, wenn Sie eine Frage haben.",
       },
       {
         q: "Was sollte ich vor der Zusammenarbeit schriftlich klären?",
-        a: "Wem Domain, Website und Zugänge gehören, welche Leistungen enthalten sind, wie berichtet wird und was bei einem Wechsel übergeben wird. Eigene Zugänge zur Search Console und zum Google-Unternehmensprofil solltest du in jedem Fall behalten.",
+        a: "Wem Domain, Website und Zugänge gehören, welche Leistungen enthalten sind, wie berichtet wird und was bei einem Wechsel übergeben wird. Eigene Zugänge zur Search Console und zum Google-Unternehmensprofil sollten Sie in jedem Fall behalten.",
       },
     ],
     related: [
@@ -770,13 +770,13 @@ export const ARTICLES: Article[] = [
     title: "Was SEO kostet und ab wann es sich rechnet",
     metaTitle: "Was kostet SEO? Preis, Nutzen, Warnzeichen | Ratgeber",
     description:
-      "Was SEO-Beratung kostet, wovon der Preis abhängt und wie du selbst ausrechnest, ab wann sich Suchmaschinenoptimierung für deinen Betrieb trägt.",
+      "Was SEO-Beratung kostet, wovon der Preis abhängt und wie Sie selbst ausrechnen, ab wann sich Suchmaschinenoptimierung für Ihren Betrieb trägt.",
     datePublished: "2026-08-25",
     dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
-      "Was kostet SEO? Die ehrliche Antwort ist unbequem: Es gibt keinen Listenpreis. Wer dir eine Zahl nennt, ohne deine Website und deinen Wettbewerb angesehen zu haben, rät.",
-      "Das heißt aber nicht, dass du im Dunkeln stehst. Du kannst genau verstehen, wovon der Preis abhängt, du kannst ein unseriöses Angebot erkennen, und du kannst selbst ausrechnen, ab wann sich die Sache für deinen Betrieb trägt. Darum geht es hier.",
+      "Was kostet SEO? Die ehrliche Antwort ist unbequem: Es gibt keinen Listenpreis. Wer Ihnen eine Zahl nennt, ohne Ihre Website und Ihren Wettbewerb angesehen zu haben, rät.",
+      "Das heißt aber nicht, dass Sie im Dunkeln stehen. Sie können genau verstehen, wovon der Preis abhängt, Sie können ein unseriöses Angebot erkennen, und Sie können selbst ausrechnen, ab wann sich die Sache für Ihren Betrieb trägt. Darum geht es hier.",
     ],
     sections: [
       {
@@ -789,13 +789,13 @@ export const ARTICLES: Article[] = [
       {
         heading: "Wovon der Preis tatsächlich abhängt",
         paragraphs: [
-          "Wenn du Angebote vergleichst, hilft es zu wissen, welche Stellschrauben den Aufwand bewegen. Es sind im Kern sechs.",
+          "Wenn Sie Angebote vergleichen, hilft es zu wissen, welche Stellschrauben den Aufwand bewegen. Es sind im Kern sechs.",
         ],
         bullets: [
-          "Der Zustand deiner Website: eine schnelle, saubere Seite braucht weniger Vorarbeit als eine, die erst repariert werden muss",
+          "Der Zustand Ihrer Website: eine schnelle, saubere Seite braucht weniger Vorarbeit als eine, die erst repariert werden muss",
           "Wie viele Leistungen sichtbar werden sollen: eine einzelne Leistung ist weniger Arbeit als ein ganzer Leistungskatalog",
-          "Wie viele Orte du erreichen willst",
-          "Wie dicht dein Gewerk in deinem Markt besetzt ist",
+          "Wie viele Orte Sie erreichen wollen",
+          "Wie dicht Ihr Gewerk in Ihrem Markt besetzt ist",
           "Ob Texte und Bilder vorhanden sind oder erst entstehen müssen",
           "Ob einmal aufgeräumt werden soll oder ob es eine laufende Betreuung wird",
         ],
@@ -804,18 +804,18 @@ export const ARTICLES: Article[] = [
         heading: "Einmalige Arbeit und laufende Betreuung sind zwei Paar Schuhe",
         paragraphs: [
           "Die Grundoptimierung ist ein Projekt mit Anfang und Ende: Technik in Ordnung bringen, Struktur klären, je Leistung eine eigene Seite, Google-Unternehmensprofil sauber aufsetzen, Firmendaten überall angleichen. Das ist irgendwann fertig.",
-          "Die laufende Betreuung ist etwas anderes. Sie ist Pflege, weil deine Wettbewerber weiterarbeiten und Google seine Bewertung laufend ändert. Wer beides in einen Topf wirft, vergleicht Angebote, die nicht vergleichbar sind. Frag deshalb bei jedem Angebot: Was ist einmalig, was kommt monatlich wieder, was genau ist enthalten, und was passiert, wenn ich die Betreuung beende?",
+          "Die laufende Betreuung ist etwas anderes. Sie ist Pflege, weil Ihre Wettbewerber weiterarbeiten und Google seine Bewertung laufend ändert. Wer beides in einen Topf wirft, vergleicht Angebote, die nicht vergleichbar sind. Fragen Sie deshalb bei jedem Angebot: Was ist einmalig, was kommt monatlich wieder, was genau ist enthalten, und was passiert, wenn ich die Betreuung beende?",
         ],
       },
       {
-        heading: "Woran du ein unseriöses Angebot erkennst",
+        heading: "Woran Sie ein unseriöses Angebot erkennen",
         paragraphs: [
-          "Beim Preis zeigt sich Unseriosität meist früher als bei der Arbeit selbst. Diese Muster sollten dich stutzig machen.",
+          "Beim Preis zeigt sich Unseriosität meist früher als bei der Arbeit selbst. Diese Muster sollten Sie stutzig machen.",
         ],
         bullets: [
-          "Eine Pauschale wird genannt, bevor jemand deine Seite und deinen Wettbewerb angesehen hat",
+          "Eine Pauschale wird genannt, bevor jemand Ihre Seite und Ihren Wettbewerb angesehen hat",
           "Das Angebot nennt nur einen Monatsbetrag, aber keinen Umfang",
-          "Eine lange Mindestlaufzeit, aus der du nicht herauskommst",
+          "Eine lange Mindestlaufzeit, aus der Sie nicht herauskommen",
           "Bestimmte Platzierungen werden garantiert, was laut Google niemand kann",
           "Links werden als Paket verkauft, obwohl Google den Kauf von Links zu den Spam-Praktiken zählt",
           "Der Bericht misst Aufwand statt Wirkung: Zahl der bearbeiteten Suchbegriffe, Menge gesetzter Links, hauseigene Sichtbarkeitsindizes",
@@ -824,15 +824,15 @@ export const ARTICLES: Article[] = [
       {
         heading: "Der Platz selbst ist nicht käuflich",
         paragraphs: [
-          "Ein Missverständnis hält sich hartnäckig: dass man sich bei Google in die unbezahlten Ergebnisse einkaufen könne. Google schreibt selbst, dass das Erscheinen in den organischen Suchergebnissen nichts kostet. Was du bezahlst, ist also die Arbeit an deiner Website und an deinem Profil, nicht der Platz in der Liste.",
-          "Das ist der wichtigste Unterschied zu Anzeigen. Bei Google Ads kaufst du Klicks, und die Sichtbarkeit endet in dem Moment, in dem das Budget aus ist. Bei der Suchmaschinenoptimierung bleibt die Arbeit an deiner Seite, auch wenn du die Betreuung pausierst. Deine Positionen brechen dann nicht sofort weg, verlieren aber mit der Zeit an Boden, weil andere weitermachen.",
+          "Ein Missverständnis hält sich hartnäckig: dass man sich bei Google in die unbezahlten Ergebnisse einkaufen könne. Google schreibt selbst, dass das Erscheinen in den organischen Suchergebnissen nichts kostet. Was Sie bezahlen, ist also die Arbeit an Ihrer Website und an Ihrem Profil, nicht der Platz in der Liste.",
+          "Das ist der wichtigste Unterschied zu Anzeigen. Bei Google Ads kaufen Sie Klicks, und die Sichtbarkeit endet in dem Moment, in dem das Budget aus ist. Bei der Suchmaschinenoptimierung bleibt die Arbeit an Ihrer Seite, auch wenn Sie die Betreuung pausieren. Ihre Positionen brechen dann nicht sofort weg, verlieren aber mit der Zeit an Boden, weil andere weitermachen.",
         ],
       },
       {
-        heading: "Ab wann es sich rechnet: die Rechnung, die nur du machen kannst",
+        heading: "Ab wann es sich rechnet: die Rechnung, die nur Sie machen können",
         paragraphs: [
-          "Keine Agentur kann dir sagen, ab wann sich SEO für dich lohnt, weil dafür drei Größen nötig sind, die du besser kennst als jeder Dienstleister: was ein durchschnittlicher Auftrag bei dir einbringt, wie viele Anfragen du brauchst, bis daraus ein Auftrag wird, und wie lange ein gewonnener Kunde bei dir bleibt.",
-          "Aus diesen drei Zahlen ergibt sich, was dir eine zusätzliche Anfrage im Monat wert ist. Genau dagegen rechnest du die Kosten, nicht gegen ein Bauchgefühl. Für einen Metallbauer mit hohen Auftragswerten kann sich der Aufwand schon bei wenigen zusätzlichen Anfragen tragen. Ein Betrieb mit vielen kleinen Aufträgen braucht entsprechend mehr, dafür kommen die Anfragen dort meist häufiger.",
+          "Keine Agentur kann Ihnen sagen, ab wann sich SEO für Sie lohnt, weil dafür drei Größen nötig sind, die Sie besser kennen als jeder Dienstleister: was ein durchschnittlicher Auftrag bei Ihnen einbringt, wie viele Anfragen Sie brauchen, bis daraus ein Auftrag wird, und wie lange ein gewonnener Kunde bei Ihnen bleibt.",
+          "Aus diesen drei Zahlen ergibt sich, was Ihnen eine zusätzliche Anfrage im Monat wert ist. Genau dagegen rechnen Sie die Kosten, nicht gegen ein Bauchgefühl. Für einen Metallbauer mit hohen Auftragswerten kann sich der Aufwand schon bei wenigen zusätzlichen Anfragen tragen. Ein Betrieb mit vielen kleinen Aufträgen braucht entsprechend mehr, dafür kommen die Anfragen dort meist häufiger.",
           "Ein Punkt, der in dieser Rechnung gern vergessen wird: Anfragen über die eigene Website kosten keine Vermittlungsgebühr. Wer heute den Großteil seiner Aufträge über Portale bekommt, sollte deren Provision mit in die Gegenrechnung nehmen.",
         ],
         link: { label: "So gehen wir Suchmaschinenoptimierung für kleine Betriebe an", href: "/suchmaschinenoptimierung" },
@@ -841,42 +841,42 @@ export const ARTICLES: Article[] = [
         heading: "Warum der Ort im Preis auftaucht, der Sitz der Agentur aber nicht",
         paragraphs: [
           "Wer nach Suchmaschinenoptimierung für Hanau, Offenbach oder eine andere Stadt sucht, meint fast nie den Sitz des Dienstleisters, sondern die eigene Sichtbarkeit vor Ort. Und die kostet je nach Ort unterschiedlich viel Arbeit.",
-          "In einem Ort, in dem nur eine Handvoll Betriebe deines Gewerks um dieselbe Suche konkurrieren, reicht oft eine saubere Grundlage. In einer Großstadt, in der viele Anbieter um dieselbe Suche konkurrieren, ist deutlich mehr nötig, bis du oben ankommst. Was den Preis bewegt, ist also der Wettbewerb in deinem Markt, nicht die Entfernung zwischen dir und dem, der die Arbeit macht.",
+          "In einem Ort, in dem nur eine Handvoll Betriebe Ihres Gewerks um dieselbe Suche konkurrieren, reicht oft eine saubere Grundlage. In einer Großstadt, in der viele Anbieter um dieselbe Suche konkurrieren, ist deutlich mehr nötig, bis Sie oben ankommen. Was den Preis bewegt, ist also der Wettbewerb in Ihrem Markt, nicht die Entfernung zwischen Ihnen und dem, der die Arbeit macht.",
         ],
       },
       {
-        heading: "Was passiert, bevor du etwas bezahlst",
+        heading: "Was passiert, bevor Sie etwas bezahlen",
         paragraphs: [
-          "Bei uns steht am Anfang ein Blick auf deine aktuelle Sichtbarkeit und ein Entwurf. Beides kostet dich nichts und verpflichtet dich zu nichts. Erst danach steht ein fester Preis im Raum, mit klar benanntem Umfang, damit du weißt, wofür du bezahlst.",
-          "Eine Pauschale ohne Blick auf deinen Wettbewerb nennen wir bewusst nicht. Nicht aus Geheimniskrämerei, sondern weil eine solche Zahl entweder deutlich zu hoch wäre, um jeden Fall abzudecken, oder zu niedrig, um die Arbeit wirklich zu machen.",
+          "Bei uns steht am Anfang ein Blick auf Ihre aktuelle Sichtbarkeit und ein Entwurf. Beides kostet Sie nichts und verpflichtet Sie zu nichts. Erst danach steht ein fester Preis im Raum, mit klar benanntem Umfang, damit Sie wissen, wofür Sie bezahlen.",
+          "Eine Pauschale ohne Blick auf Ihren Wettbewerb nennen wir bewusst nicht. Nicht aus Geheimniskrämerei, sondern weil eine solche Zahl entweder deutlich zu hoch wäre, um jeden Fall abzudecken, oder zu niedrig, um die Arbeit wirklich zu machen.",
         ],
       },
     ],
     faqs: [
       {
         q: "Was kostet Suchmaschinenoptimierung für einen kleinen Betrieb?",
-        a: "Es gibt keinen Listenpreis, weil der Aufwand vom Zustand deiner Website, von der Zahl der Leistungen und Orte und vom Wettbewerb in deinem Markt abhängt. Seriös wird ein Preis erst genannt, wenn jemand beides angesehen hat. Bei uns gibt es vorab einen Blick auf deine Sichtbarkeit und einen Entwurf ohne Kosten, danach einen festen Preis mit benanntem Umfang.",
+        a: "Es gibt keinen Listenpreis, weil der Aufwand vom Zustand Ihrer Website, von der Zahl der Leistungen und Orte und vom Wettbewerb in Ihrem Markt abhängt. Seriös wird ein Preis erst genannt, wenn jemand beides angesehen hat. Bei uns gibt es vorab einen Blick auf Ihre Sichtbarkeit und einen Entwurf ohne Kosten, danach einen festen Preis mit benanntem Umfang.",
       },
       {
         q: "Ist SEO teurer als Google Ads?",
-        a: "Die Kostenstruktur ist eine andere. Bei Anzeigen zahlst du für jeden Klick, und die Sichtbarkeit endet mit dem Budget. Bei SEO bezahlst du Arbeit, die an deiner Website bleibt. Google weist selbst darauf hin, dass das Erscheinen in den unbezahlten Ergebnissen nichts kostet, bezahlt wird also die Arbeit, nicht der Platz.",
+        a: "Die Kostenstruktur ist eine andere. Bei Anzeigen zahlen Sie für jeden Klick, und die Sichtbarkeit endet mit dem Budget. Bei SEO bezahlen Sie Arbeit, die an Ihrer Website bleibt. Google weist selbst darauf hin, dass das Erscheinen in den unbezahlten Ergebnissen nichts kostet, bezahlt wird also die Arbeit, nicht der Platz.",
       },
       {
         q: "Ab wann rechnet sich SEO?",
-        a: "Sobald der Wert der zusätzlich gewonnenen Aufträge über den Kosten liegt. Diese Rechnung kannst nur du aufmachen, weil du weißt, was ein Auftrag bei dir einbringt und wie viele Anfragen du dafür brauchst. Bei hohen Auftragswerten genügen wenige zusätzliche Anfragen, bei kleinen Beträgen braucht es entsprechend mehr.",
+        a: "Sobald der Wert der zusätzlich gewonnenen Aufträge über den Kosten liegt. Diese Rechnung können nur Sie aufmachen, weil Sie wissen, was ein Auftrag bei Ihnen einbringt und wie viele Anfragen Sie dafür brauchen. Bei hohen Auftragswerten genügen wenige zusätzliche Anfragen, bei kleinen Beträgen braucht es entsprechend mehr.",
       },
       {
         q: "Was bringt eine SEO-Beratung, bevor ich Geld ausgebe?",
-        a: "Sie klärt, woran es bei dir tatsächlich liegt. Ob Technik, Inhalte oder das Google-Unternehmensprofil der Engpass sind, sieht man erst nach einem Blick auf die Zahlen. Ohne diese Klärung wird oft das optimiert, was ohnehin schon funktioniert, und das ist der teuerste Weg.",
+        a: "Die Beratung klärt, woran es bei Ihnen tatsächlich liegt. Ob Technik, Inhalte oder das Google-Unternehmensprofil der Engpass sind, sieht man erst nach einem Blick auf die Zahlen. Ohne diese Klärung wird oft das optimiert, was ohnehin schon funktioniert, und das ist der teuerste Weg.",
       },
       {
         q: "Kann ich einen Teil selbst machen und dadurch sparen?",
-        a: "Ja. Das Google-Unternehmensprofil pflegen, Fotos aktuell halten, Bewertungen sammeln und auf sie antworten kostet vor allem deine Zeit. Auch der Zugang zur Google Search Console ist kostenlos, dort siehst du selbst, für welche Suchanfragen du erscheinst. Aufwendiger wird es bei Technik, Struktur und eigenen Seiten je Leistung.",
+        a: "Ja. Das Google-Unternehmensprofil pflegen, Fotos aktuell halten, Bewertungen sammeln und auf sie antworten kostet vor allem Ihre Zeit. Auch der Zugang zur Google Search Console ist kostenlos, dort sehen Sie selbst, für welche Suchanfragen Sie erscheinen. Aufwendiger wird es bei Technik, Struktur und eigenen Seiten je Leistung.",
       },
     ],
     related: [
       { label: "Unser Angebot zur Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
-      { label: "Woran du eine gute SEO-Agentur erkennst", href: "/ratgeber/seo-agentur-erkennen" },
+      { label: "Woran Sie eine gute SEO-Agentur erkennen", href: "/ratgeber/seo-agentur-erkennen" },
       { label: "SEO oder Google Ads im Vergleich", href: "/ratgeber/seo-oder-google-ads" },
       { label: "Website bringt keine Anfragen: die Ursachen", href: "/website-bringt-keine-anfragen" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
@@ -894,7 +894,7 @@ export const ARTICLES: Article[] = [
     dateModified: "2026-09-09",
     readingTime: "6 Min.",
     intro: [
-      "Eine Website muss her, und sofort stellt sich die Frage: selbst machen mit einem Baukasten oder eine Agentur beauftragen? Beide Wege haben ihre Berechtigung, und die richtige Antwort hängt weniger vom Budget ab als davon, was die Website leisten soll und wie viel Zeit du hast.",
+      "Eine Website muss her, und sofort stellt sich die Frage: selbst machen mit einem Baukasten oder eine Agentur beauftragen? Beide Wege haben ihre Berechtigung, und die richtige Antwort hängt weniger vom Budget ab als davon, was die Website leisten soll und wie viel Zeit Sie haben.",
       "Dieser Beitrag vergleicht beide Wege ehrlich, inklusive der Punkte, die in Werbeversprechen gern verschwiegen werden.",
     ],
     sections: [
@@ -908,7 +908,7 @@ export const ARTICLES: Article[] = [
       {
         heading: "Die Agentur: mehr Investition, dafür ein Werkzeug",
         paragraphs: [
-          "Eine Agentur kostet mehr als ein Baukasten, liefert dafür aber ein Ergebnis, das auf Kundengewinnung ausgelegt ist: ein individuelles Design, das zu deiner Marke passt, technisch schnell und für Google optimiert, mit durchdachten Wegen zur Kontaktaufnahme. Und vor allem: Du musst dich um nichts kümmern und gewinnst deine Zeit für dein eigentliches Geschäft zurück.",
+          "Eine Agentur kostet mehr als ein Baukasten, liefert dafür aber ein Ergebnis, das auf Kundengewinnung ausgelegt ist: ein individuelles Design, das zu Ihrer Marke passt, technisch schnell und für Google optimiert, mit durchdachten Wegen zur Kontaktaufnahme. Und vor allem: Sie müssen sich um nichts kümmern und gewinnen Ihre Zeit für Ihr eigentliches Geschäft zurück.",
           "Der eigentliche Unterschied ist nicht die Optik, sondern das Ergebnis. Eine gut gemachte Website bringt Anfragen. Eine schnell selbstgebaute steht meist nur da. Bei einer professionellen Umsetzung sollte außerdem von Anfang an mitgedacht werden, wie die Seite bei Google und in KI-Systemen gefunden wird.",
           "Zur technischen Umsetzung gehört auch die Frage, wer am Ende die Adresse und den Serverplatz in der Hand hält. Wer diese beiden Bausteine einmal auseinandersortiert hat, liest jedes Angebot anders.",
         ],
@@ -929,7 +929,7 @@ export const ARTICLES: Article[] = [
       {
         heading: "Was passt zu wem?",
         paragraphs: [
-          "Ein Baukasten kann reichen, wenn du technisch fit bist, Zeit mitbringst und nur eine einfache Visitenkarte im Netz brauchst. Sobald die Website aktiv Kunden bringen soll, du deine Zeit lieber in dein Geschäft steckst oder Wert auf einen professionellen Eindruck legst, ist die Agentur meist die wirtschaftlichere Wahl, weil sie sich über die zusätzlichen Anfragen bezahlt macht.",
+          "Ein Baukasten kann reichen, wenn Sie technisch fit sind, Zeit mitbringen und nur eine einfache Visitenkarte im Netz brauchen. Sobald die Website aktiv Kunden bringen soll, Sie Ihre Zeit lieber in Ihr Geschäft stecken oder Wert auf einen professionellen Eindruck legen, ist die Agentur meist die wirtschaftlichere Wahl, weil sie sich über die zusätzlichen Anfragen bezahlt macht.",
         ],
         link: { label: "Was ein Relaunch der bestehenden Seite kostet und wie er abläuft", href: "/website-relaunch" },
       },
@@ -941,7 +941,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Lohnt sich eine Agentur für einen kleinen Betrieb überhaupt?",
-        a: "Wenn die Website Anfragen bringen soll, meist ja. Schon wenige zusätzliche Aufträge im Jahr decken die Kosten. Der größte Gewinn ist oft die gesparte Zeit, die du sonst in Einarbeitung und Pflege stecken würdest.",
+        a: "Wenn die Website Anfragen bringen soll, meist ja. Schon wenige zusätzliche Aufträge im Jahr decken die Kosten. Der größte Gewinn ist oft die gesparte Zeit, die Sie sonst in Einarbeitung und Pflege stecken würden.",
       },
       {
         q: "Kann ich später von einem Baukasten zu einer Agentur wechseln?",
@@ -971,33 +971,33 @@ export const ARTICLES: Article[] = [
     ],
     sections: [
       {
-        heading: "Sie verwandelt Interesse in Anfragen",
+        heading: "Die Website verwandelt Interesse in Anfragen",
         paragraphs: [
-          "Egal ob jemand über Google, eine Empfehlung oder Social Media auf dich aufmerksam wird: Am Ende landet er auf deiner Website, und dort entscheidet sich, ob er anfragt. Eine gute Seite führt den Besucher klar zum nächsten Schritt, ob Anruf, Formular oder WhatsApp. Eine schlechte oder fehlende Seite lässt genau diese Interessenten wieder abspringen.",
+          "Egal ob jemand über Google, eine Empfehlung oder Social Media auf Sie aufmerksam wird: Am Ende landet er auf Ihrer Website, und dort entscheidet sich, ob er anfragt. Eine gute Seite führt den Besucher klar zum nächsten Schritt, ob Anruf, Formular oder WhatsApp. Eine schlechte oder fehlende Seite lässt genau diese Interessenten wieder abspringen.",
         ],
       },
       {
-        heading: "Sie schafft Vertrauen",
+        heading: "Die Website schafft Vertrauen",
         paragraphs: [
           "Ein professioneller Auftritt signalisiert in Sekunden, dass hinter dem Betrieb jemand steckt, der seine Sache ernst nimmt. Echte Fotos, klare Leistungen und sichtbare Bewertungen wirken stärker als jedes Versprechen. Gerade wenn Kunden zwischen mehreren Anbietern wählen, gibt dieser erste Eindruck oft den Ausschlag.",
         ],
       },
       {
-        heading: "Sie macht dich bei Google und KI auffindbar",
+        heading: "Die Website macht Sie bei Google und KI auffindbar",
         paragraphs: [
-          "Eine technisch saubere Website ist die Voraussetzung dafür, dass Google und zunehmend auch KI-Systeme wie ChatGPT oder Perplexity deinen Betrieb verstehen und weiterempfehlen können. Mit strukturierten Daten und klaren Inhalten wird aus der Website eine Quelle, die diese Systeme zitieren, wenn jemand nach einem Anbieter wie dir fragt.",
+          "Eine technisch saubere Website ist die Voraussetzung dafür, dass Google und zunehmend auch KI-Systeme wie ChatGPT oder Perplexity Ihren Betrieb verstehen und weiterempfehlen können. Mit strukturierten Daten und klaren Inhalten wird aus der Website eine Quelle, die diese Systeme zitieren, wenn jemand nach einem Anbieter wie Ihnen fragt.",
         ],
       },
       {
-        heading: "Sie macht dich unabhängig von Plattformen",
+        heading: "Die Website macht Sie unabhängig von Plattformen",
         paragraphs: [
-          "Wer nur auf Social Media oder Lieferplattformen setzt, ist von deren Regeln und Provisionen abhängig. Deine eigene Website gehört dir. Sie ist der einzige Kanal, den dir niemand wegnehmen oder von heute auf morgen ändern kann, und damit das stabile Fundament deiner Online-Präsenz.",
-          "Damit das wirklich stimmt, müssen Adresse und Serverplatz auf deinen Namen laufen und nicht auf den deiner Agentur. Das ist der Punkt, an dem viele Betriebe später merken, dass ihnen ihre Website eben doch nicht ganz gehört.",
+          "Wer nur auf Social Media oder Lieferplattformen setzt, ist von deren Regeln und Provisionen abhängig. Ihre eigene Website gehört Ihnen. Sie ist der einzige Kanal, den Ihnen niemand wegnehmen oder von heute auf morgen ändern kann, und damit das stabile Fundament Ihrer Online-Präsenz.",
+          "Damit das wirklich stimmt, müssen Adresse und Serverplatz auf Ihren Namen laufen und nicht auf den Ihrer Agentur. Das ist der Punkt, an dem viele Betriebe später merken, dass ihnen ihre Website eben doch nicht ganz gehört.",
         ],
         link: { label: "Hosting und Domain verständlich erklärt", href: "/ratgeber/hosting-und-domain-erklaert" },
       },
       {
-        heading: "Sie spart dir Zeit",
+        heading: "Die Website spart Ihnen Zeit",
         paragraphs: [
           "Eine gute Website beantwortet die immer gleichen Fragen von selbst: Was bietet ihr an, was kostet es ungefähr, wie erreiche ich euch, wann habt ihr geöffnet. Das reduziert Rückfragen und sorgt dafür, dass die Anfragen, die kommen, besser vorqualifiziert sind.",
         ],
@@ -1007,11 +1007,11 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Reicht nicht ein Google-Eintrag und Instagram?",
-        a: "Als Ergänzung sind beide wertvoll, aber sie ersetzen keine Website. Google und Social Media machen auf dich aufmerksam, die Website ist der Ort, an dem daraus eine Anfrage wird, und der einzige Kanal, der wirklich dir gehört und nicht der Plattform.",
+        a: "Als Ergänzung sind beide wertvoll, aber sie ersetzen keine Website. Google und Social Media machen auf Sie aufmerksam, die Website ist der Ort, an dem daraus eine Anfrage wird, und der einzige Kanal, der wirklich Ihnen gehört und nicht der Plattform.",
       },
       {
         q: "Bringt eine Website auch etwas, wenn ich vor allem von Empfehlungen lebe?",
-        a: "Ja. Empfohlene Kunden prüfen dich heute fast immer erst online. Eine professionelle Website bestätigt die Empfehlung und verhindert Zweifel. Ohne sie geht ein Teil der empfohlenen Interessenten wieder verloren.",
+        a: "Ja. Empfohlene Kunden prüfen Sie heute fast immer erst online. Eine professionelle Website bestätigt die Empfehlung und verhindert Zweifel. Ohne sie geht ein Teil der empfohlenen Interessenten wieder verloren.",
       },
       {
         q: "Was unterscheidet eine professionelle von einer einfachen Website?",
@@ -1028,22 +1028,22 @@ export const ARTICLES: Article[] = [
   {
     slug: "lokale-seo-google-maps",
     category: "Grundlagen",
-    title: "Lokale SEO: so kommt dein Betrieb bei Google und auf der Karte nach oben",
+    title: "Lokale SEO: so kommt Ihr Betrieb bei Google und auf der Karte nach oben",
     metaTitle: "Lokale SEO: bei Google & auf der Karte nach oben | Ratgeber",
     description:
-      "Lokale SEO für kleine Betriebe: wie du in der Nähe-Suche und auf Google Maps nach oben kommst. Google-Profil, NAP-Daten, Bewertungen, lokale Inhalte.",
+      "Lokale SEO für kleine Betriebe: wie Sie in der Nähe-Suche und auf Google Maps nach oben kommen. Google-Profil, NAP-Daten, Bewertungen, lokale Inhalte.",
     datePublished: "2026-08-02",
     dateModified: "2026-09-09",
     readingTime: "7 Min.",
     intro: [
-      "Wenn jemand in deiner Nähe nach einem Betrieb wie deinem sucht, entscheiden wenige Zeilen bei Google darüber, wer den Auftrag bekommt: die drei Einträge, die zusammen mit der Karte ganz oben erscheinen. Dieses sogenannte lokale Dreier-Paket bekommt mit Abstand die meisten Klicks und Anrufe. Wer dort steht, gewinnt, wer darunter landet, wird oft gar nicht mehr gesehen.",
+      "Wenn jemand in Ihrer Nähe nach einem Betrieb wie Ihrem sucht, entscheiden wenige Zeilen bei Google darüber, wer den Auftrag bekommt: die drei Einträge, die zusammen mit der Karte ganz oben erscheinen. Dieses sogenannte lokale Dreier-Paket bekommt mit Abstand die meisten Klicks und Anrufe. Wer dort steht, gewinnt, wer darunter landet, wird oft gar nicht mehr gesehen.",
       "Dort hinzukommen ist kein Zufall, sondern das Ergebnis von lokaler Suchmaschinenoptimierung, kurz lokale SEO. Die gute Nachricht: Die wichtigsten Hebel kann jeder Betrieb selbst in die Hand nehmen. Dieser Leitfaden zeigt sie der Reihe nach.",
     ],
     sections: [
       {
-        heading: "Das Google-Unternehmensprofil ist dein wichtigster Hebel",
+        heading: "Das Google-Unternehmensprofil ist Ihr wichtigster Hebel",
         paragraphs: [
-          "Für die lokale Suche ist das Google-Unternehmensprofil noch wichtiger als die Website. Es entscheidet darüber, ob du im Kartenausschnitt und im Dreier-Paket auftauchst. Damit das passiert, muss es vollständig und aktiv gepflegt sein: richtige Kategorie, alle Leistungen, korrekte Öffnungszeiten, Telefonnummer, Fotos und eine aussagekräftige Beschreibung.",
+          "Für die lokale Suche ist das Google-Unternehmensprofil noch wichtiger als die Website. Es entscheidet darüber, ob Sie im Kartenausschnitt und im Dreier-Paket auftauchen. Damit das passiert, muss es vollständig und aktiv gepflegt sein: richtige Kategorie, alle Leistungen, korrekte Öffnungszeiten, Telefonnummer, Fotos und eine aussagekräftige Beschreibung.",
           "Google bevorzugt Profile, die lebendig wirken. Wer regelmäßig Fotos hochlädt, Beiträge veröffentlicht und auf Bewertungen antwortet, sendet das Signal eines aktiven Betriebs und wird dafür mit besserer Sichtbarkeit belohnt. Ein einmal angelegtes und dann vergessenes Profil verliert dagegen mit der Zeit an Boden.",
         ],
         bullets: [
@@ -1057,22 +1057,22 @@ export const ARTICLES: Article[] = [
         heading: "Einheitliche Kontaktdaten: der unterschätzte Rankingfaktor",
         paragraphs: [
           "Einer der stärksten und zugleich am häufigsten übersehenen Faktoren für lokale SEO sind einheitliche Kontaktdaten. Name, Adresse und Telefonnummer, oft mit NAP abgekürzt, müssen überall exakt gleich geschrieben sein: auf der Website, im Google-Profil und in jedem Branchenverzeichnis.",
-          "Schon kleine Abweichungen wie Straße gegen Str. oder eine alte Telefonnummer verwirren Google und schwächen das Vertrauen in deine Daten. Wer hier für saubere Konsistenz sorgt, verschafft sich einen Vorteil, den viele Mitbewerber schlicht liegen lassen.",
+          "Schon kleine Abweichungen wie Straße gegen Str. oder eine alte Telefonnummer verwirren Google und schwächen das Vertrauen in Ihre Daten. Wer hier für saubere Konsistenz sorgt, verschafft sich einen Vorteil, den viele Mitbewerber schlicht liegen lassen.",
         ],
       },
       {
-        heading: "Bewertungen entscheiden über deine Position",
+        heading: "Bewertungen entscheiden über Ihre Position",
         paragraphs: [
           "Anzahl, Bewertung und Aktualität der Google-Rezensionen zählen zu den wichtigsten Faktoren für die lokale Platzierung. Ein Betrieb mit vielen aktuellen, guten Bewertungen erscheint weiter oben und wird gleichzeitig häufiger angeklickt, weil die Sterne sofort Vertrauen schaffen.",
-          "Entscheidend ist der stetige Fluss: Lieber jeden Monat ein paar neue Bewertungen als einmal zwanzig auf einen Schlag und danach jahrelang nichts. Bitte deine Kunden aktiv und mach es ihnen mit einem direkten Link so leicht wie möglich.",
+          "Entscheidend ist der stetige Fluss: Lieber jeden Monat ein paar neue Bewertungen als einmal zwanzig auf einen Schlag und danach jahrelang nichts. Bitten Sie Ihre Kunden aktiv und machen Sie es ihnen mit einem direkten Link so leicht wie möglich.",
         ],
       },
       {
-        heading: "Deine Website muss den Ort kennen",
+        heading: "Ihre Website muss den Ort kennen",
         paragraphs: [
-          "Auch die Website zahlt auf die lokale Sichtbarkeit ein. Sie sollte klar benennen, welche Leistungen du an welchen Orten anbietest, statt nur allgemein von deinem Fach zu sprechen. Eine eigene Seite pro wichtiger Leistung und Region hilft Google, dich der richtigen Suche zuzuordnen.",
-          "Wichtig sind außerdem strukturierte Daten, mit denen Adresse, Öffnungszeiten und Leistungen maschinenlesbar hinterlegt werden. So versteht nicht nur Google, sondern auch KI-Systeme wie ChatGPT deinen Standort korrekt und können dich für Suchen in deiner Region empfehlen.",
-          "All das setzt allerdings voraus, dass deine Seite überhaupt im Google-Verzeichnis steht. Taucht sie dort gar nicht auf, hilft die beste Ortsangabe nichts, und die Ursache liegt fast immer an einer von wenigen konkreten Stellen.",
+          "Auch die Website zahlt auf die lokale Sichtbarkeit ein. Die Seite sollte klar benennen, welche Leistungen Sie an welchen Orten anbieten, statt nur allgemein von Ihrem Fach zu sprechen. Eine eigene Seite pro wichtiger Leistung und Region hilft Google, Sie der richtigen Suche zuzuordnen.",
+          "Wichtig sind außerdem strukturierte Daten, mit denen Adresse, Öffnungszeiten und Leistungen maschinenlesbar hinterlegt werden. So versteht nicht nur Google, sondern auch KI-Systeme wie ChatGPT Ihren Standort korrekt und können Sie für Suchen in Ihrer Region empfehlen.",
+          "All das setzt allerdings voraus, dass Ihre Seite überhaupt im Google-Verzeichnis steht. Taucht sie dort gar nicht auf, hilft die beste Ortsangabe nichts, und die Ursache liegt fast immer an einer von wenigen konkreten Stellen.",
         ],
         link: { label: "Warum eine Website bei Google nicht gefunden wird", href: "/ratgeber/website-nicht-bei-google-gefunden" },
       },
@@ -1091,7 +1091,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Wie komme ich in das lokale Dreier-Paket bei Google?",
-        a: "Die wichtigsten Hebel sind ein vollständiges, aktiv gepflegtes Google-Unternehmensprofil, einheitliche Kontaktdaten über alle Plattformen hinweg, viele aktuelle Bewertungen und eine Website, die deine Leistungen und Orte klar benennt. Diese Faktoren zusammen entscheiden über die Platzierung.",
+        a: "Die wichtigsten Hebel sind ein vollständiges, aktiv gepflegtes Google-Unternehmensprofil, einheitliche Kontaktdaten über alle Plattformen hinweg, viele aktuelle Bewertungen und eine Website, die Ihre Leistungen und Orte klar benennt. Diese Faktoren zusammen entscheiden über die Platzierung.",
       },
       {
         q: "Wie lange dauert es, bis lokale SEO wirkt?",
@@ -1110,37 +1110,37 @@ export const ARTICLES: Article[] = [
   {
     slug: "google-bewertungen-mehr-kunden",
     category: "Grundlagen",
-    title: "Google-Bewertungen: warum sie über neue Kunden entscheiden und wie du mehr bekommst",
+    title: "Google-Bewertungen: warum sie über neue Kunden entscheiden und wie Sie mehr bekommen",
     metaTitle: "Google-Bewertungen: mehr Kunden gewinnen | Ratgeber",
     description:
-      "Warum Google-Bewertungen über neue Kunden und deine Platzierung entscheiden, und wie du als kleiner Betrieb systematisch mehr echte Bewertungen bekommst.",
+      "Warum Google-Bewertungen über neue Kunden und Ihre Platzierung entscheiden, und wie Sie als kleiner Betrieb systematisch mehr echte Bewertungen bekommen.",
     datePublished: "2026-08-02",
     dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
-      "Kaum jemand ruft heute einen Betrieb an, beauftragt einen Handwerker oder geht essen, ohne vorher kurz auf die Sterne zu schauen. Google-Bewertungen sind zur wichtigsten Form der Mundpropaganda geworden, und sie wirken doppelt: Sie überzeugen unentschlossene Interessenten und sie verbessern gleichzeitig deine Position bei Google.",
-      "Trotzdem lassen viele Betriebe dieses Potenzial liegen, weil sie nicht aktiv nach Bewertungen fragen. Dabei ist genau das der Schlüssel. Dieser Leitfaden zeigt, warum Bewertungen so stark wirken und wie du systematisch mehr davon bekommst.",
+      "Kaum jemand ruft heute einen Betrieb an, beauftragt einen Handwerker oder geht essen, ohne vorher kurz auf die Sterne zu schauen. Google-Bewertungen sind zur wichtigsten Form der Mundpropaganda geworden, und sie wirken doppelt, denn sie überzeugen unentschlossene Interessenten und verbessern gleichzeitig Ihre Position bei Google.",
+      "Trotzdem lassen viele Betriebe dieses Potenzial liegen, weil sie nicht aktiv nach Bewertungen fragen. Dabei ist genau das der Schlüssel. Dieser Leitfaden zeigt, warum Bewertungen so stark wirken und wie Sie systematisch mehr davon bekommen.",
     ],
     sections: [
       {
         heading: "Warum Bewertungen doppelt wirken",
         paragraphs: [
           "Der erste Effekt ist das Vertrauen: Ein Betrieb mit vielen guten Bewertungen wirkt sofort seriös, und die Entscheidung fällt zugunsten dessen, der die meisten überzeugenden Stimmen hat. Bei ansonsten ähnlichen Anbietern geben die Sterne oft den Ausschlag.",
-          "Der zweite Effekt ist die Sichtbarkeit: Anzahl, Durchschnitt und Aktualität der Bewertungen zählen zu den wichtigsten Faktoren für die lokale Platzierung bei Google. Mehr gute Bewertungen bedeuten also nicht nur mehr Vertrauen, sondern auch, dass mehr Menschen dich überhaupt erst sehen.",
+          "Der zweite Effekt ist die Sichtbarkeit: Anzahl, Durchschnitt und Aktualität der Bewertungen zählen zu den wichtigsten Faktoren für die lokale Platzierung bei Google. Mehr gute Bewertungen bedeuten also nicht nur mehr Vertrauen, sondern auch, dass mehr Menschen Sie überhaupt erst sehen.",
         ],
       },
       {
         heading: "Der wichtigste Schritt: aktiv danach fragen",
         paragraphs: [
           "Die meisten zufriedenen Kunden bewerten nicht von allein, nicht aus Unzufriedenheit, sondern weil sie nicht daran denken. Verärgerte Kunden dagegen werden oft von selbst aktiv. Wer nicht aktiv nach Bewertungen fragt, bekommt deshalb häufig ein verzerrtes, zu negatives Bild.",
-          "Die Lösung ist einfach: Frag jeden zufriedenen Kunden im richtigen Moment um eine kurze Bewertung, direkt nach dem erledigten Auftrag, beim Bezahlen oder kurz danach. Genau dann ist die Zufriedenheit am größten und die Bereitschaft am höchsten.",
+          "Die Lösung ist einfach: Fragen Sie jeden zufriedenen Kunden im richtigen Moment um eine kurze Bewertung, direkt nach dem erledigten Auftrag, beim Bezahlen oder kurz danach. Genau dann ist die Zufriedenheit am größten und die Bereitschaft am höchsten.",
         ],
       },
       {
-        heading: "Mach es dem Kunden so leicht wie möglich",
+        heading: "Machen Sie es dem Kunden so leicht wie möglich",
         paragraphs: [
-          "Jede zusätzliche Hürde kostet Bewertungen. Niemand sucht dein Profil erst umständlich bei Google. Ein direkter Bewertungslink, der mit einem Klick genau zum Bewertungsfenster führt, ist deshalb der wirksamste Hebel überhaupt.",
-          "Diesen Link kannst du überall einsetzen, wo du mit Kunden in Kontakt bist. Am besten funktioniert er dort, wo der Kunde ohnehin schon sein Handy in der Hand hat.",
+          "Jede zusätzliche Hürde kostet Bewertungen. Niemand sucht Ihr Profil erst umständlich bei Google. Ein direkter Bewertungslink, der mit einem Klick genau zum Bewertungsfenster führt, ist deshalb der wirksamste Hebel überhaupt.",
+          "Diesen Link können Sie überall einsetzen, wo Sie mit Kunden in Kontakt sind. Am besten funktioniert er dort, wo der Kunde ohnehin schon sein Handy in der Hand hat.",
         ],
         bullets: [
           "Direkten Bewertungslink per WhatsApp oder SMS nach dem Auftrag senden",
@@ -1167,15 +1167,15 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Wie bekomme ich mehr Google-Bewertungen?",
-        a: "Frag jeden zufriedenen Kunden aktiv im richtigen Moment und mach es ihm mit einem direkten Bewertungslink so leicht wie möglich, etwa per WhatsApp nach dem Auftrag oder über einen QR-Code auf der Rechnung. Regelmäßiges, freundliches Fragen ist der mit Abstand wirksamste Hebel.",
+        a: "Fragen Sie jeden zufriedenen Kunden aktiv im richtigen Moment und machen Sie es ihm mit einem direkten Bewertungslink so leicht wie möglich, etwa per WhatsApp nach dem Auftrag oder über einen QR-Code auf der Rechnung. Regelmäßiges, freundliches Fragen ist der mit Abstand wirksamste Hebel.",
       },
       {
         q: "Beeinflussen Bewertungen wirklich mein Google-Ranking?",
-        a: "Ja. Anzahl, Durchschnittsnote und Aktualität der Bewertungen gehören zu den wichtigsten Faktoren für die lokale Platzierung. Mehr aktuelle, gute Bewertungen verbessern also nicht nur das Vertrauen, sondern auch deine Sichtbarkeit in der Nähe-Suche.",
+        a: "Ja. Anzahl, Durchschnittsnote und Aktualität der Bewertungen gehören zu den wichtigsten Faktoren für die lokale Platzierung. Mehr aktuelle, gute Bewertungen verbessern also nicht nur das Vertrauen, sondern auch Ihre Sichtbarkeit in der Nähe-Suche.",
       },
       {
         q: "Wie soll ich auf eine schlechte Bewertung reagieren?",
-        a: "Sachlich, freundlich und lösungsorientiert, ohne dich zu rechtfertigen oder emotional zu werden. Andere Interessenten lesen mit und achten mehr auf deine Reaktion als auf die Kritik selbst. Eine gute Antwort verwandelt eine negative Bewertung oft in einen Vertrauensbeweis.",
+        a: "Sachlich, freundlich und lösungsorientiert, ohne sich zu rechtfertigen oder emotional zu werden. Andere Interessenten lesen mit und achten mehr auf Ihre Reaktion als auf die Kritik selbst. Eine gute Antwort verwandelt eine negative Bewertung oft in einen Vertrauensbeweis.",
       },
     ],
     related: [
@@ -1205,7 +1205,7 @@ export const ARTICLES: Article[] = [
       {
         heading: "Warum Einheitlichkeit wichtiger ist als Schönheit",
         paragraphs: [
-          "Ein Kunde begegnet deinem Betrieb selten nur einmal. Er sieht den beschrifteten Transporter in der Straße, bekommt später eine Visitenkarte in die Hand, findet die Website bei Google und trifft schließlich einen Mitarbeiter im Firmenshirt. Wenn all diese Begegnungen gleich aussehen, entsteht Wiedererkennung, und Wiedererkennung erzeugt Vertrauen.",
+          "Ein Kunde begegnet Ihrem Betrieb selten nur einmal. Er sieht den beschrifteten Transporter in der Straße, bekommt später eine Visitenkarte in die Hand, findet die Website bei Google und trifft schließlich einen Mitarbeiter im Firmenshirt. Wenn all diese Begegnungen gleich aussehen, entsteht Wiedererkennung, und Wiedererkennung erzeugt Vertrauen.",
           "Wenn dagegen jedes Element anders aussieht, andere Farben, ein anderes Logo, eine andere Schrift, dann verpuffen diese Kontakte. Der Kunde verbindet sie nicht miteinander. Deshalb ist ein durchgehend gleicher Auftritt fast immer wirksamer als ein einzelnes besonders schönes Design.",
         ],
         bullets: [
@@ -1249,7 +1249,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Warum sollte alles vom selben Anbieter kommen?",
-        a: "Weil sonst du derjenige bist, der Dateien, Farben und Formate zwischen mehreren Dienstleistern koordiniert. Liegen Logo, Druck, Werbetechnik und Textildruck an einer Stelle, passen die Ergebnisse automatisch zusammen und ein neues Werbemittel ist nur noch eine kurze Bestellung.",
+        a: "Weil sonst Sie derjenige sind, der Dateien, Farben und Formate zwischen mehreren Dienstleistern koordiniert. Liegen Logo, Druck, Werbetechnik und Textildruck an einer Stelle, passen die Ergebnisse automatisch zusammen und ein neues Werbemittel ist nur noch eine kurze Bestellung.",
       },
     ],
     related: [
@@ -1266,64 +1266,64 @@ export const ARTICLES: Article[] = [
     title: "Warum finde ich meine Website nicht bei Google?",
     metaTitle: "Website nicht bei Google gefunden: 9 Gründe | Mehr Auftrag",
     description:
-      "Deine Seite ist online, taucht bei Google aber nicht auf. Neun Gründe, wie du jeden davon in wenigen Minuten selbst prüfst, und in welcher Reihenfolge du vorgehst.",
+      "Ihre Seite ist online, taucht bei Google aber nicht auf. Neun Gründe, wie Sie jeden davon in wenigen Minuten selbst prüfen, und in welcher Reihenfolge Sie vorgehen.",
     datePublished: "2026-09-08",
     dateModified: "2026-09-09",
     readingTime: "8 Min.",
     intro: [
-      "Die Seite ist fertig, sie ist online, sie sieht gut aus. Du tippst deine Leistung und deinen Ort bei Google ein und findest alles Mögliche, nur dich selbst nicht.",
-      "Das ist einer der häufigsten Anrufe, die wir bekommen, und in den meisten Fällen steckt kein großes Rätsel dahinter, sondern einer von wenigen konkreten Gründen. Dieser Ratgeber geht sie der Reihe nach durch, jeweils mit einer Prüfung, die du selbst machen kannst.",
+      "Die Seite ist fertig, sie ist online, sie sieht gut aus. Sie tippen Ihre Leistung und Ihren Ort bei Google ein und finden alles Mögliche, nur sich selbst nicht.",
+      "Das ist einer der häufigsten Anrufe, die wir bekommen, und in den meisten Fällen steckt kein großes Rätsel dahinter, sondern einer von wenigen konkreten Gründen. Dieser Ratgeber geht sie der Reihe nach durch, jeweils mit einer Prüfung, die Sie selbst machen können.",
     ],
     sections: [
       {
         heading: "Zuerst die eine Prüfung, die alles andere entscheidet",
         paragraphs: [
-          "Bevor du irgendetwas anderes tust, klär, ob Google deine Seite überhaupt kennt. Tippe dazu in die Suche site:deine-adresse.de, also das Wort site, einen Doppelpunkt, dann deine Adresse, ohne Leerzeichen dazwischen.",
-          "Erscheinen Ergebnisse, kennt Google deine Seite. Dein Problem ist dann nicht die Aufnahme, sondern die Platzierung, und du springst direkt zu den Gründen fünf bis neun. Erscheint nichts, hat Google deine Seite nicht im Verzeichnis, und es liegt an einem der Gründe eins bis vier. Das sind die technischen.",
-          "Diese eine Abfrage spart dir viel Suchen an der falschen Stelle.",
+          "Bevor Sie irgendetwas anderes tun, klären Sie, ob Google Ihre Seite überhaupt kennt. Tippen Sie dazu in die Suche site:ihre-adresse.de, also das Wort site, einen Doppelpunkt, dann Ihre Adresse, ohne Leerzeichen dazwischen.",
+          "Erscheinen Ergebnisse, kennt Google Ihre Seite. Ihr Problem ist dann nicht die Aufnahme, sondern die Platzierung, und Sie springen direkt zu den Gründen fünf bis neun. Erscheint nichts, hat Google Ihre Seite nicht im Verzeichnis, und es liegt an einem der Gründe eins bis vier. Das sind die technischen.",
+          "Diese eine Abfrage spart Ihnen viel Suchen an der falschen Stelle.",
         ],
       },
       {
         heading: "1. Die Seite ist noch zu neu",
         paragraphs: [
           "Eine frisch veröffentlichte Website ist nicht sofort auffindbar. Google muss sie erst finden, abrufen und einordnen, und das geschieht nicht auf Zuruf. Bei einer neuen Adresse ohne jede Bekanntheit dauert es länger als bei einer bestehenden Seite, die nur eine neue Unterseite bekommt.",
-          "Das ist der einzige Grund auf dieser Liste, bei dem Abwarten die richtige Antwort ist. Beschleunigen kannst du es, indem du die Seite in der Google Search Console anmeldest.",
+          "Das ist der einzige Grund auf dieser Liste, bei dem Abwarten die richtige Antwort ist. Beschleunigen können Sie es, indem Sie die Seite in der Google Search Console anmelden.",
         ],
       },
       {
         heading: "2. Die Seite sagt Google aktiv, dass sie nicht aufgenommen werden soll",
         paragraphs: [
           "Das klingt absurd, ist aber der mit Abstand häufigste technische Fund. Fast jede Website wird zuerst auf einer Testadresse gebaut, und damit die Testversion nicht in der Suche landet, wird sie auf nicht aufnehmen gestellt. Wenn beim Umzug auf die echte Adresse vergessen wird, das zurückzustellen, bleibt die fertige Seite unsichtbar.",
-          "So prüfst du es: Öffne deine Seite, klicke mit der rechten Maustaste und wähle Seitenquelltext anzeigen. Such mit der Tastenkombination für Suchen nach dem Wort noindex. Wird es gefunden, hast du deinen Grund.",
+          "So prüfen Sie es: Öffnen Sie Ihre Seite, klicken Sie mit der rechten Maustaste und wählen Sie Seitenquelltext anzeigen. Suchen Sie mit der Tastenkombination für Suchen nach dem Wort noindex. Wird es gefunden, haben Sie Ihren Grund.",
         ],
       },
       {
         heading: "3. Es gibt keine Sitemap, und die Seite ist nirgends angemeldet",
         paragraphs: [
-          "Eine Sitemap ist ein Verzeichnis aller Unterseiten, das du Google übergibst. Ohne sie muss Google jede Seite selbst entdecken, und das dauert bei kleinen Websites ohne Verweise von außen sehr lange.",
-          "So prüfst du es: Ruf deine-adresse.de/sitemap.xml auf. Kommt eine Liste von Adressen, ist sie da. Kommt eine Fehlermeldung, fehlt sie.",
-          "Dazu gehört die Google Search Console. Sie ist kostenlos, und ohne sie arbeitest du im Blindflug: Du siehst weder, ob Google Probleme mit deiner Seite hat, noch wonach Menschen suchen, wenn sie bei dir landen.",
+          "Eine Sitemap ist ein Verzeichnis aller Unterseiten, das Sie Google übergeben. Ohne sie muss Google jede Seite selbst entdecken, und das dauert bei kleinen Websites ohne Verweise von außen sehr lange.",
+          "So prüfen Sie es: Rufen Sie ihre-adresse.de/sitemap.xml auf. Kommt eine Liste von Adressen, ist sie da. Kommt eine Fehlermeldung, fehlt sie.",
+          "Dazu gehört die Google Search Console. Sie ist kostenlos, und ohne die Search Console arbeiten Sie im Blindflug: Sie sehen weder, ob Google Probleme mit Ihrer Seite hat, noch wonach Menschen suchen, wenn sie bei Ihnen landen.",
         ],
       },
       {
         heading: "4. Die Seite besteht aus Bildern statt aus Text",
         paragraphs: [
           "Manche Baukästen und ältere Seiten liefern Überschriften und ganze Absätze als Grafik aus. Für das Auge sieht das gleich aus, für eine Suchmaschine ist die Seite dann inhaltsleer.",
-          "So prüfst du es: Versuch, einen Absatz auf deiner Seite mit der Maus zu markieren. Wenn sich nichts markieren lässt, ist es ein Bild.",
+          "So prüfen Sie es: Versuchen Sie, einen Absatz auf Ihrer Seite mit der Maus zu markieren. Wenn sich nichts markieren lässt, ist es ein Bild.",
         ],
       },
       {
-        heading: "5. Du suchst nach deinem Firmennamen und schließt daraus zu viel",
+        heading: "5. Sie suchen nach Ihrem Firmennamen und schließen daraus zu viel",
         paragraphs: [
-          "Wenn du deinen Firmennamen eingibst und dich findest, heißt das wenig. Nach deinem Namen sucht nur, wer dich schon kennt. Neue Kunden suchen nach der Leistung und dem Ort.",
-          "Such deshalb so, wie ein Fremder suchen würde, und sieh dir das ehrliche Ergebnis an.",
+          "Wenn Sie Ihren Firmennamen eingeben und sich finden, heißt das wenig. Nach Ihrem Namen sucht nur, wer Sie schon kennt. Neue Kunden suchen nach der Leistung und dem Ort.",
+          "Suchen Sie deshalb so, wie ein Fremder suchen würde, und sehen Sie sich das ehrliche Ergebnis an.",
         ],
       },
       {
         heading: "6. Es gibt keine Seite zu dem, was gesucht wird",
         paragraphs: [
           "Das ist der wichtigste inhaltliche Grund und der, an dem die meisten Betriebe hängen.",
-          "Viele Websites haben eine einzige Leistungsseite, auf der alles aufgezählt ist. Google zeigt aber nicht Betriebe an, sondern Seiten, und zwar die Seite, die am besten zur konkreten Frage passt. Wenn deine Leistung nur ein Stichpunkt in einer Aufzählung ist, gibt es für die Suche danach nichts Passendes bei dir.",
+          "Viele Websites haben eine einzige Leistungsseite, auf der alles aufgezählt ist. Google zeigt aber nicht Betriebe an, sondern Seiten, und zwar die Seite, die am besten zur konkreten Frage passt. Wenn Ihre Leistung nur ein Stichpunkt in einer Aufzählung ist, gibt es für die Suche danach nichts Passendes bei Ihnen.",
           "Die Lösung ist unspektakulär und wirkt fast immer: für jede wichtige Leistung eine eigene Seite mit eigenem Text, eigener Überschrift und eigenen Beispielen.",
         ],
       },
@@ -1335,24 +1335,24 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        heading: "8. Deine Seite gibt es doppelt",
+        heading: "8. Ihre Seite gibt es doppelt",
         paragraphs: [
-          "Wenn deine Website unter mehreren Adressen erreichbar ist, mit www und ohne, mit http und https, dann verteilt sich alles, was sie an Ansehen aufbaut, auf mehrere Varianten statt sich zu bündeln.",
-          "So prüfst du es: Ruf deine Adresse einmal mit www und einmal ohne auf. Springt die eine Variante automatisch auf die andere, ist es richtig eingerichtet. Bleiben beide stehen, nicht.",
+          "Wenn Ihre Website unter mehreren Adressen erreichbar ist, mit www und ohne, mit http und https, dann verteilt sich alles, was sie an Ansehen aufbaut, auf mehrere Varianten statt sich zu bündeln.",
+          "So prüfen Sie es: Rufen Sie Ihre Adresse einmal mit www und einmal ohne auf. Springt die eine Variante automatisch auf die andere, ist es richtig eingerichtet. Bleiben beide stehen, nicht.",
         ],
       },
       {
-        heading: "9. Du suchst im Kartenbereich, und dort zählt etwas anderes",
+        heading: "9. Sie suchen im Kartenbereich, und dort zählt etwas anderes",
         paragraphs: [
           "Bei örtlichen Suchen zeigt Google oben oft einen Kartenausschnitt mit Betrieben. Wer dort erscheint, entscheidet sich nicht über die Website, sondern über das Google-Unternehmensprofil, über Bewertungen und über die Entfernung zum Suchenden.",
           "Ein gepflegtes Profil ist für viele Betriebe der schnellste Hebel überhaupt.",
         ],
-        link: { label: "Wie du bei der lokalen Suche und in Google Maps sichtbar wirst", href: "/ratgeber/lokale-seo-google-maps" },
+        link: { label: "Wie Sie bei der lokalen Suche und in Google Maps sichtbar werden", href: "/ratgeber/lokale-seo-google-maps" },
       },
       {
-        heading: "In welcher Reihenfolge du vorgehst",
+        heading: "In welcher Reihenfolge Sie vorgehen",
         paragraphs: [
-          "Wichtig ist die Erwartung. Sichtbarkeit bei Google baut sich über Monate auf, nicht über Tage, und sie hält dann auch. Wer dir schnelle Platzierungen verspricht, verkauft dir entweder etwas anderes oder etwas Riskantes.",
+          "Wichtig ist die Erwartung. Sichtbarkeit bei Google baut sich über Monate auf, nicht über Tage, und sie hält dann auch. Wer Ihnen schnelle Platzierungen verspricht, verkauft Ihnen entweder etwas anderes oder etwas Riskantes.",
         ],
         bullets: [
           "Die site-Abfrage machen. Sie entscheidet, ob es ein technisches oder ein inhaltliches Problem ist",
@@ -1361,10 +1361,10 @@ export const ARTICLES: Article[] = [
           "Das Google-Unternehmensprofil vollständig ausfüllen und um Bewertungen bitten",
           "Erst danach über weitere Maßnahmen nachdenken",
         ],
-        link: { label: "Woran du einen seriösen Anbieter erkennst", href: "/ratgeber/seo-agentur-erkennen" },
+        link: { label: "Woran Sie einen seriösen Anbieter erkennen", href: "/ratgeber/seo-agentur-erkennen" },
       },
       {
-        heading: "Wenn du es nicht selbst machen willst",
+        heading: "Wenn Sie es nicht selbst machen wollen",
         paragraphs: [
           "Die Punkte eins bis vier kann jeder prüfen, der eine Viertelstunde Zeit hat. Ab Punkt sechs wird es Arbeit, weil dann Seiten entstehen müssen, die es vorher nicht gab.",
           "Genau das ist unsere Arbeit. Wir bauen Websites für Handwerks- und Dienstleistungsbetriebe so auf, dass für jede Leistung eine eigene Seite existiert, und kümmern uns anschließend darum, dass diese Seiten gefunden werden.",
@@ -1372,9 +1372,9 @@ export const ARTICLES: Article[] = [
         link: { label: "Was zu unserer Suchmaschinenoptimierung gehört", href: "/suchmaschinenoptimierung" },
       },
       {
-        heading: "Wissen, woran es bei dir konkret liegt",
+        heading: "Wissen, woran es bei Ihnen konkret liegt",
         paragraphs: [
-          "Wenn du erst einmal wissen willst, woran es bei dir hängt, schauen wir uns deine Seite an und sagen dir, was wir sehen. Das ist kostenlos und unverbindlich, und wir arbeiten dabei vollständig aus der Ferne.",
+          "Wenn Sie erst einmal wissen wollen, woran es bei Ihnen hängt, schauen wir uns Ihre Seite an und sagen Ihnen, was wir sehen. Das ist kostenlos und unverbindlich, und wir arbeiten dabei vollständig aus der Ferne.",
         ],
         link: { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
       },
@@ -1386,7 +1386,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Kann ich Google zwingen, meine Seite aufzunehmen?",
-        a: "Zwingen nicht, aber du kannst sie in der Search Console zur Prüfung anmelden. Das ist der offizielle Weg und der schnellste.",
+        a: "Zwingen nicht, aber Sie können die Seite in der Search Console zur Prüfung anmelden. Das ist der offizielle Weg und der schnellste.",
       },
       {
         q: "Bringt es etwas, den Firmennamen überall einzutragen?",
@@ -1411,39 +1411,39 @@ export const ARTICLES: Article[] = [
     title: "Hosting und Domain verständlich erklärt",
     metaTitle: "Hosting und Domain verständlich erklärt | Mehr Auftrag",
     description:
-      "Was Domain, Web Hosting und Website wirklich voneinander unterscheidet, worauf du als Betrieb achten solltest und warum die Frage nach dem Eigentum die wichtigste ist.",
+      "Was Domain, Web Hosting und Website wirklich voneinander unterscheidet, worauf Sie als Betrieb achten sollten und warum die Frage nach dem Eigentum die wichtigste ist.",
     datePublished: "2026-09-08",
     dateModified: "2026-09-09",
     readingTime: "7 Min.",
     intro: [
-      "Fast jeder Betrieb, der zum ersten Mal über eine eigene Website nachdenkt, stolpert über dieselben drei Wörter: Domain, Hosting, Website. Sie werden im Alltag durcheinandergeworfen, obwohl sie drei verschiedene Dinge bezeichnen. Wer den Unterschied einmal verstanden hat, trifft bei Angeboten deutlich bessere Entscheidungen und merkt schneller, wenn ihm jemand etwas verkauft, das er nicht braucht.",
+      "Fast jeder Betrieb, der zum ersten Mal über eine eigene Website nachdenkt, stolpert über dieselben drei Wörter: Domain, Hosting, Website. Die drei Wörter werden im Alltag durcheinandergeworfen, obwohl sie drei verschiedene Dinge bezeichnen. Wer den Unterschied einmal verstanden hat, trifft bei Angeboten deutlich bessere Entscheidungen und merkt schneller, wenn ihm jemand etwas verkauft, das er nicht braucht.",
       "Dieser Ratgeber erklärt die drei Bausteine ohne Fachjargon und benennt am Ende die Frage, die im Verkaufsgespräch am häufigsten vergessen wird.",
     ],
     sections: [
       {
         heading: "Die drei Bausteine",
         paragraphs: [
-          "Ein Vergleich, der überraschend gut trägt: stell dir deine Website als Ladengeschäft vor.",
-          "Du kannst die Adresse wechseln und die Einrichtung behalten. Du kannst umziehen und die Adresse mitnehmen. Und du kannst die schönste Einrichtung der Welt haben, wenn das Gebäude ständig geschlossen ist, sieht sie niemand.",
+          "Ein Vergleich, der überraschend gut trägt: stellen Sie sich Ihre Website als Ladengeschäft vor.",
+          "Sie können die Adresse wechseln und die Einrichtung behalten. Sie können umziehen und die Adresse mitnehmen. Und Sie können die schönste Einrichtung der Welt haben, wenn das Gebäude ständig geschlossen ist, sieht sie niemand.",
         ],
         bullets: [
-          "Die Domain ist die Adresse. Sie ist das, was Kunden eintippen, zum Beispiel dein-betrieb.de. Eine Adresse allein ist noch kein Laden, sie sagt nur, wo etwas zu finden ist",
-          "Das Web Hosting ist das Grundstück mit dem Gebäude. Es ist der Platz auf einem Rechner, der rund um die Uhr am Netz hängt und deine Seite ausliefert, sobald jemand die Adresse aufruft",
-          "Die Website ist die Einrichtung. Texte, Bilder, Formulare, Struktur. Das, woran deine Kunden dich tatsächlich messen",
+          "Die Domain ist die Adresse. Sie ist das, was Kunden eintippen, zum Beispiel ihr-betrieb.de. Eine Adresse allein ist noch kein Laden, sie sagt nur, wo etwas zu finden ist",
+          "Das Web Hosting ist das Grundstück mit dem Gebäude. Es ist der Platz auf einem Rechner, der rund um die Uhr am Netz hängt und Ihre Seite ausliefert, sobald jemand die Adresse aufruft",
+          "Die Website ist die Einrichtung. Texte, Bilder, Formulare, Struktur. Das, woran Ihre Kunden Sie tatsächlich messen",
         ],
       },
       {
         heading: "Was eine Domain wirklich ist",
         paragraphs: [
           "Eine Domain wird nicht gekauft, sie wird registriert und für einen Zeitraum gemietet. Sie läuft ab, wenn sie nicht verlängert wird. Genau darin liegt die häufigste Panne bei Betrieben: die Verlängerung hängt an einer alten E-Mail-Adresse, die niemand mehr abruft, und irgendwann ist die Seite offline.",
-          "Zwei Dinge sind an einer Domain wichtig. Erstens die Endung: für einen Betrieb, der in Deutschland Kunden sucht, ist Punkt de weiterhin die naheliegende Wahl, weil sie hier als normal und seriös gelesen wird. Exotische Endungen fallen auf, aber selten positiv. Zweitens der Name selbst: kurz, sprechbar und ohne Sonderzeichen. Der Test ist banal und trotzdem der beste. Kannst du die Adresse am Telefon einmal sagen, ohne buchstabieren zu müssen?",
+          "Zwei Dinge sind an einer Domain wichtig. Erstens die Endung: für einen Betrieb, der in Deutschland Kunden sucht, ist Punkt de weiterhin die naheliegende Wahl, weil sie hier als normal und seriös gelesen wird. Exotische Endungen fallen auf, aber selten positiv. Zweitens der Name selbst: kurz, sprechbar und ohne Sonderzeichen. Der Test ist banal und trotzdem der beste. Können Sie die Adresse am Telefon einmal sagen, ohne buchstabieren zu müssen?",
           "Eine Domain zu wechseln ist möglich, aber immer mit Aufwand verbunden, weil Google die alte Adresse kennt und die neue erst wieder einordnen muss. Es lohnt sich also, am Anfang eine Minute länger nachzudenken.",
         ],
       },
       {
         heading: "Was Web Hosting leistet",
         paragraphs: [
-          "Web Hosting klingt nach Technik, entscheidet aber über Dinge, die deine Kunden direkt spüren.",
+          "Web Hosting klingt nach Technik, entscheidet aber über Dinge, die Ihre Kunden direkt spüren.",
           "Für die Suchmaschine ist vor allem das Tempo relevant. Google misst, wie schnell eine Seite nutzbar wird, und eine langsame Seite hat es schwerer, sich gegen eine schnelle durchzusetzen.",
         ],
         bullets: [
@@ -1459,15 +1459,15 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Hosting-Angebote sind darauf ausgelegt, dass man mehr bucht, als man braucht. Typisch sind riesige Speichermengen, Werbeguthaben, das nie eingelöst wird, und Zusatzpakete für Funktionen, die eine moderne Website ohnehin mitbringt.",
           "Für die Website eines Handwerks- oder Dienstleistungsbetriebs gilt fast immer: der Speicherplatz ist nicht das Problem. Eine Seite mit ein paar Dutzend Unterseiten und guten Fotos braucht wenig Platz. Was zählt, ist die Auslieferungsgeschwindigkeit, ein gültiges Zertifikat, verlässliche Sicherungen und ein Ansprechpartner, der antwortet, wenn etwas klemmt.",
-          "Zum Thema Preis eine bewusste Zurückhaltung: die Beträge unterscheiden sich je nach Anbieter, Laufzeit und Leistungsumfang so stark, dass jede Zahl hier in die Irre führen würde. Der sinnvolle Maßstab ist nicht, was ein Paket kostet, sondern ob du sagen kannst, wofür du zahlst.",
+          "Zum Thema Preis eine bewusste Zurückhaltung: die Beträge unterscheiden sich je nach Anbieter, Laufzeit und Leistungsumfang so stark, dass jede Zahl hier in die Irre führen würde. Der sinnvolle Maßstab ist nicht, was ein Paket kostet, sondern ob Sie sagen können, wofür Sie zahlen.",
         ],
       },
       {
         heading: "Die Frage, die am häufigsten vergessen wird",
         paragraphs: [
           "Wem gehört die Domain? Das ist der Punkt, an dem es später richtig unangenehm werden kann. Wird die Domain auf den Namen der Agentur registriert und nicht auf den des Betriebs, dann gehört die Adresse der Agentur. Bei einem Wechsel steht der Betrieb vor der Wahl, entweder zu bleiben oder die Adresse aufzugeben, unter der ihn alle Kunden kennen.",
-          "Dasselbe gilt für die Zugänge zum Hosting und für die Website selbst. Frag vor Vertragsabschluss diese drei Dinge ab.",
-          "Drei Fragen, drei klare Antworten. Wer da ausweicht, sagt dir damit schon alles.",
+          "Dasselbe gilt für die Zugänge zum Hosting und für die Website selbst. Fragen Sie vor Vertragsabschluss diese drei Dinge ab.",
+          "Drei Fragen, drei klare Antworten. Wer da ausweicht, sagt Ihnen damit schon alles.",
         ],
         bullets: [
           "Läuft die Domain auf meinen Namen als Inhaber?",
@@ -1484,9 +1484,9 @@ export const ARTICLES: Article[] = [
         link: { label: "Was wir für Betriebe bauen", href: "/" },
       },
       {
-        heading: "Unsicher, wie deine Seite technisch dasteht?",
+        heading: "Unsicher, wie Ihre Seite technisch dasteht?",
         paragraphs: [
-          "Wenn du nicht weißt, was bei deiner bestehenden Seite unter der Oberfläche läuft, sehen wir uns das an und sagen dir, was wirklich dahintersteckt. Das ist der einfachste Einstieg, kostenlos und unverbindlich.",
+          "Wenn Sie nicht wissen, was bei Ihrer bestehenden Seite unter der Oberfläche läuft, sehen wir uns das an und sagen Ihnen, was wirklich dahintersteckt. Das ist der einfachste Einstieg, kostenlos und unverbindlich.",
         ],
         link: { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
       },
@@ -1494,7 +1494,7 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Brauche ich Domain und Hosting getrennt?",
-        a: "Du kannst beides beim selben Anbieter haben oder getrennt halten. Getrennt zu bleiben hat den Vorteil, dass ein Wechsel des einen den anderen nicht berührt.",
+        a: "Sie können beides beim selben Anbieter haben oder getrennt halten. Getrennt zu bleiben hat den Vorteil, dass ein Wechsel des einen den anderen nicht berührt.",
       },
       {
         q: "Was passiert, wenn ich das Hosting wechsle?",
@@ -1527,20 +1527,20 @@ export const ARTICLES: Article[] = [
     title: "Agentur auswählen: die Checkliste für kleine Betriebe",
     metaTitle: "Agentur auswählen: Checkliste für kleine Betriebe | Ratgeber",
     description:
-      "Woran du eine gute Werbe-, Web- oder SEO-Agentur erkennst: welche Fragen du stellst, welche Antworten warnen und was im Angebot stehen muss.",
+      "Woran Sie eine gute Werbe-, Web- oder SEO-Agentur erkennen: welche Fragen Sie stellen, welche Antworten warnen und was im Angebot stehen muss.",
     datePublished: "2026-08-02",
     dateModified: "2026-08-25",
     readingTime: "6 Min.",
     intro: [
       "Das Rhein-Main-Gebiet rund um Frankfurt, Offenbach und Hanau hat viele Agenturen, von der großen Full-Service-Agentur bis zum Ein-Mann-Freelancer. Für einen kleinen oder mittleren Betrieb ist die Auswahl deshalb gar nicht so einfach. Groß ist nicht automatisch gut, und günstig nicht automatisch schlecht.",
-      "Diese Checkliste hilft dir, eine Agentur zu finden, die wirklich zu deinem Betrieb passt und dich weiterbringt.",
+      "Diese Checkliste hilft Ihnen, eine Agentur zu finden, die wirklich zu Ihrem Betrieb passt und Sie weiterbringt.",
     ],
     sections: [
       {
         heading: "Versteht die Agentur kleine Betriebe?",
         paragraphs: [
           "Große Agenturen sind oft auf Konzernkunden ausgerichtet, mit entsprechenden Preisen und langen Abstimmungswegen. Für einen Handwerksbetrieb, ein Restaurant oder eine Praxis ist häufig eine Agentur besser, die genau diese Zielgruppe kennt und weiß, wie man mit überschaubarem Budget echte Anfragen erzeugt.",
-          "Frag nach Referenzen aus deiner Branche oder von ähnlich großen Betrieben. Wer schon für vergleichbare Kunden gearbeitet hat, versteht deine Situation schneller.",
+          "Fragen Sie nach Referenzen aus Ihrer Branche oder von ähnlich großen Betrieben. Wer schon für vergleichbare Kunden gearbeitet hat, versteht Ihre Situation schneller.",
         ],
       },
       {
@@ -1552,21 +1552,21 @@ export const ARTICLES: Article[] = [
       {
         heading: "Ist alles aus einer Hand?",
         paragraphs: [
-          "Website, Google-Sichtbarkeit, Werbung, Grafik und Printmaterial hängen zusammen. Eine Agentur, die all das aus einer Hand liefert, spart dir das Koordinieren mehrerer Dienstleister und sorgt dafür, dass dein Auftritt online wie offline dieselbe Sprache spricht, von der Website über die Google-Anzeige bis zur Visitenkarte.",
+          "Website, Google-Sichtbarkeit, Werbung, Grafik und Printmaterial hängen zusammen. Eine Agentur, die all das aus einer Hand liefert, spart Ihnen das Koordinieren mehrerer Dienstleister und sorgt dafür, dass Ihr Auftritt online wie offline dieselbe Sprache spricht, von der Website über die Google-Anzeige bis zur Visitenkarte.",
         ],
         bullets: [
-          "Frag nach Referenzen aus deiner Branche",
-          "Achte darauf, ob über Ergebnisse gesprochen wird, nicht nur über Optik",
-          "Kläre, was genau im Preis enthalten ist",
-          "Prüfe, ob Vertragsbindung und Kündigungsfristen fair sind",
-          "Sieh dir die eigene Online-Präsenz der Agentur an",
+          "Fragen Sie nach Referenzen aus Ihrer Branche",
+          "Achten Sie darauf, ob über Ergebnisse gesprochen wird, nicht nur über Optik",
+          "Klären Sie, was genau im Preis enthalten ist",
+          "Prüfen Sie, ob Vertragsbindung und Kündigungsfristen fair sind",
+          "Sehen Sie sich die eigene Online-Präsenz der Agentur an",
         ],
       },
       {
         heading: "Sind die Konditionen fair und transparent?",
         paragraphs: [
-          "Achte auf klare Preise ohne versteckte Kosten und auf faire Vertragsbedingungen. Lange Knebelverträge sind für einen kleinen Betrieb ein unnötiges Risiko. Eine Agentur, die von ihrer Arbeit überzeugt ist, braucht keine jahrelange Bindung, um Kunden zu halten.",
-          "Ein einfacher, oft übersehener Test: Wie sieht die Agentur selbst online aus? Wer die eigene Website und den eigenen Google-Auftritt vernachlässigt, wird sich um deinen kaum besser kümmern.",
+          "Achten Sie auf klare Preise ohne versteckte Kosten und auf faire Vertragsbedingungen. Lange Knebelverträge sind für einen kleinen Betrieb ein unnötiges Risiko. Eine Agentur, die von ihrer Arbeit überzeugt ist, braucht keine jahrelange Bindung, um Kunden zu halten.",
+          "Ein einfacher, oft übersehener Test: Wie sieht die Agentur selbst online aus? Wer die eigene Website und den eigenen Google-Auftritt vernachlässigt, wird sich um Ihren kaum besser kümmern.",
         ],
         link: { label: "Fünf Projekte mit Ausgangslage, Vorgehen und Ergebnis", href: "/referenzen" },
       },
@@ -1574,7 +1574,7 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Muss die Agentur bei mir in der Nähe sitzen?",
-        a: "Nähe ist angenehm für persönliche Termine, aber kein Muss. Viel wichtiger ist, dass die Agentur deine Branche versteht und dich zuverlässig betreut. Vieles lässt sich heute problemlos aus der Ferne klären, und im Rhein-Main-Gebiet sind die Wege für einen Termin ohnehin kurz.",
+        a: "Nähe ist angenehm für persönliche Termine, aber kein Muss. Viel wichtiger ist, dass die Agentur Ihre Branche versteht und Sie zuverlässig betreut. Vieles lässt sich heute problemlos aus der Ferne klären, und im Rhein-Main-Gebiet sind die Wege für einen Termin ohnehin kurz.",
       },
       {
         q: "Woran erkenne ich eine unseriöse Agentur?",
@@ -1582,7 +1582,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Was sollte im Angebot einer Agentur enthalten sein?",
-        a: "Ein transparentes Angebot benennt klar, was geliefert wird, was es kostet und welche laufenden Kosten anfallen. Achte darauf, ob Punkte wie Suchmaschinenoptimierung, Pflege und Erreichbarkeit für Rückfragen enthalten sind oder extra berechnet werden.",
+        a: "Ein transparentes Angebot benennt klar, was geliefert wird, was es kostet und welche laufenden Kosten anfallen. Achten Sie darauf, ob Punkte wie Suchmaschinenoptimierung, Pflege und Erreichbarkeit für Rückfragen enthalten sind oder extra berechnet werden.",
       },
     ],
     related: [
@@ -1608,14 +1608,14 @@ export const ARTICLES: Article[] = [
     readingTime: "7 Min.",
     intro: [
       "Frankfurt und das umliegende Rhein-Main-Gebiet sind wirtschaftlich stark und entsprechend hart umkämpft. Für lokale Betriebe, ob Handwerk, Gastronomie oder Dienstleistung, ist eine gute Website deshalb kein Luxus, sondern die Basis, um in diesem Umfeld sichtbar zu bleiben und neue Kunden zu gewinnen.",
-      "Dieser Leitfaden erklärt, woran du erkennst, ob deine Website diese Aufgabe erfüllt, und an welchen vier Stellen sich in der Praxis entscheidet, ob sie Anfragen bringt oder nur existiert.",
+      "Dieser Leitfaden erklärt, woran Sie erkennen, ob Ihre Website diese Aufgabe erfüllt, und an welchen vier Stellen sich in der Praxis entscheidet, ob sie Anfragen bringt oder nur existiert.",
     ],
     sections: [
       {
         heading: "Lokale Website heißt: in der Region gefunden werden",
         paragraphs: [
-          "Für einen lokalen Betrieb ist die wichtigste Aufgabe der Website, bei Suchen mit regionalem Bezug aufzutauchen, etwa Friseur Frankfurt Bornheim oder Elektriker Offenbach. Dafür muss die Seite klar benennen, was du anbietest und in welchen Orten du tätig bist, und technisch so gebaut sein, dass Google sie versteht und der lokalen Suche zuordnet.",
-          "Ein gepflegtes Google-Unternehmensprofil, das eng mit der Website verzahnt ist, verstärkt diesen Effekt zusätzlich. Beides zusammen entscheidet darüber, ob du in der Region vor deinen Mitbewerbern erscheinst.",
+          "Für einen lokalen Betrieb ist die wichtigste Aufgabe der Website, bei Suchen mit regionalem Bezug aufzutauchen, etwa Friseur Frankfurt Bornheim oder Elektriker Offenbach. Dafür muss die Seite klar benennen, was Sie anbieten und in welchen Orten Sie tätig sind, und technisch so gebaut sein, dass Google sie versteht und der lokalen Suche zuordnet.",
+          "Ein gepflegtes Google-Unternehmensprofil, das eng mit der Website verzahnt ist, verstärkt diesen Effekt zusätzlich. Beides zusammen entscheidet darüber, ob Sie in der Region vor Ihren Mitbewerbern erscheinen.",
         ],
         link: {
           label: "Konkret für Frankfurt: so bauen wir Websites für ortsansässige Betriebe",
@@ -1631,13 +1631,13 @@ export const ARTICLES: Article[] = [
       {
         heading: "Design, das zur Region und zur Zielgruppe passt",
         paragraphs: [
-          "Ein Auftritt, der zu einer Anwaltskanzlei im Frankfurter Bankenviertel passt, ist ein anderer als der für einen Handwerksbetrieb im Umland. Gutes Webdesign trifft den richtigen Ton für deine Zielgruppe: seriös, aber nahbar, professionell, aber verständlich. Wichtig sind echte Inhalte und Fotos aus deinem Betrieb statt austauschbarer Stockbilder, die man auf hundert anderen Seiten sieht.",
+          "Ein Auftritt, der zu einer Anwaltskanzlei im Frankfurter Bankenviertel passt, ist ein anderer als der für einen Handwerksbetrieb im Umland. Gutes Webdesign trifft den richtigen Ton für Ihre Zielgruppe: seriös, aber nahbar, professionell, aber verständlich. Wichtig sind echte Inhalte und Fotos aus Ihrem Betrieb statt austauschbarer Stockbilder, die man auf hundert anderen Seiten sieht.",
         ],
       },
       {
         heading: "Bereit für Google und KI",
         paragraphs: [
-          "Modernes Webdesign denkt von Anfang an mit, wie eine Seite gefunden wird, nicht nur bei Google, sondern auch in KI-Systemen wie ChatGPT oder Perplexity, die immer häufiger konkrete Anbieter empfehlen. Strukturierte Daten, klare Inhalte und eine saubere technische Basis sorgen dafür, dass dein Betrieb korrekt verstanden und weiterempfohlen wird. Wer das früh berücksichtigt, hat einen Vorsprung vor Mitbewerbern, deren Seiten nur schön aussehen.",
+          "Modernes Webdesign denkt von Anfang an mit, wie eine Seite gefunden wird, nicht nur bei Google, sondern auch in KI-Systemen wie ChatGPT oder Perplexity, die immer häufiger konkrete Anbieter empfehlen. Strukturierte Daten, klare Inhalte und eine saubere technische Basis sorgen dafür, dass Ihr Betrieb korrekt verstanden und weiterempfohlen wird. Wer das früh berücksichtigt, hat einen Vorsprung vor Mitbewerbern, deren Seiten nur schön aussehen.",
         ],
         link: { label: "Webdesign Frankfurt: das Angebot für Betriebe in der Stadt", href: "/webdesign-frankfurt" },
       },
@@ -1648,7 +1648,7 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Woran erkenne ich, ob meine Website lokal überhaupt gefunden wird?",
-        a: "Ein einfacher Test: Suche bei Google nach deiner Leistung plus Ort, etwa Elektriker Offenbach, und schau nach, ob du auftauchst. Genauer wird es mit der kostenlosen Google Search Console. Dort siehst du, zu welchen Suchbegriffen deine Seite angezeigt wird und auf welcher Position. Steht dort kaum etwas mit regionalem Bezug, fehlt deiner Seite die lokale Einordnung.",
+        a: "Ein einfacher Test: Suchen Sie bei Google nach Ihrer Leistung plus Ort, etwa Elektriker Offenbach, und schauen Sie nach, ob Sie auftauchen. Genauer wird es mit der kostenlosen Google Search Console. Dort sehen Sie, zu welchen Suchbegriffen Ihre Seite angezeigt wird und auf welcher Position. Steht dort kaum etwas mit regionalem Bezug, fehlt Ihrer Seite die lokale Einordnung.",
       },
       {
         q: "Was ist wichtiger, die Website oder das Google-Unternehmensprofil?",
@@ -1656,15 +1656,15 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Wie schnell muss eine Website auf dem Handy laden?",
-        a: "Als Faustregel sollte der sichtbare Bereich in unter zwei Sekunden stehen. Google misst das über die Core Web Vitals, die du ebenfalls in der Search Console einsehen kannst. Bei Suchen unterwegs ist die Geduld besonders knapp, dort kostet jede zusätzliche Sekunde spürbar Besucher.",
+        a: "Als Faustregel sollte der sichtbare Bereich in unter zwei Sekunden stehen. Google misst das über die Core Web Vitals, die Sie ebenfalls in der Search Console einsehen können. Bei Suchen unterwegs ist die Geduld besonders knapp, dort kostet jede zusätzliche Sekunde spürbar Besucher.",
       },
       {
         q: "Reichen Stockfotos oder braucht es eigene Bilder?",
-        a: "Eigene Bilder gewinnen fast immer. Sie zeigen dein Team, deine Fahrzeuge und echte Arbeiten und machen den Betrieb greifbar. Stockfotos wirken austauschbar, weil dieselben Motive auf vielen anderen Seiten stehen. Wenn Zeit oder Budget knapp sind, sind ein paar gute Handyfotos immer noch besser als eine Bildagentur.",
+        a: "Eigene Bilder gewinnen fast immer. Die Bilder zeigen Ihr Team, Ihre Fahrzeuge und echte Arbeiten und machen den Betrieb greifbar. Stockfotos wirken austauschbar, weil dieselben Motive auf vielen anderen Seiten stehen. Wenn Zeit oder Budget knapp sind, sind ein paar gute Handyfotos immer noch besser als eine Bildagentur.",
       },
       {
         q: "Muss die Agentur in Frankfurt sitzen, um eine lokale Website zu bauen?",
-        a: "Nein. Entscheidend ist, dass die Agentur lokale Suche versteht und deinen Markt kennt: welche Betriebsgrößen dort üblich sind, wie stark dein Gewerk besetzt ist und wonach deine Kunden tatsächlich suchen. Mehr Auftrag arbeitet ortsunabhängig und betreut Betriebe im Rhein-Main-Gebiet ebenso wie in Nordrhein-Westfalen, Sachsen und der übrigen DACH-Region. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall.",
+        a: "Nein. Entscheidend ist, dass die Agentur lokale Suche versteht und Ihren Markt kennt: welche Betriebsgrößen dort üblich sind, wie stark Ihr Gewerk besetzt ist und wonach Ihre Kunden tatsächlich suchen. Mehr Auftrag arbeitet ortsunabhängig und betreut Betriebe im Rhein-Main-Gebiet ebenso wie in Nordrhein-Westfalen, Sachsen und der übrigen DACH-Region. Abstimmung, Entwurf und Freigabe laufen per Telefon, WhatsApp und Videocall.",
       },
     ],
     related: [
@@ -1695,7 +1695,7 @@ export const ARTICLES: Article[] = [
         heading: "Ein Markt, drei Länder: das Potenzial der DACH-Region",
         paragraphs: [
           "Deutschland, Österreich und die Schweiz teilen dieselbe Sprache und sehr ähnliche Kaufgewohnheiten. Wer digitale Leistungen oder ortsunabhängige Dienstleistungen anbietet, kann seinen Markt schlagartig vergrößern, indem er alle drei Länder anspricht statt nur die eigene Stadt.",
-          "Der Schlüssel ist ein Auftritt, der klar macht: Wir betreuen Kunden in ganz DE, AT und CH. Schon diese eine Aussage öffnet Anfragen, die sonst gar nicht erst entstehen, weil Interessenten aus dem Nachbarland annehmen, du seist nur regional tätig.",
+          "Der Schlüssel ist ein Auftritt, der klar macht: Wir betreuen Kunden in ganz DE, AT und CH. Schon diese eine Aussage öffnet Anfragen, die sonst gar nicht erst entstehen, weil Interessenten aus dem Nachbarland annehmen, Sie seien nur regional tätig.",
         ],
       },
       {
@@ -1729,7 +1729,7 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Kann ich als Betrieb wirklich Kunden in Österreich und der Schweiz gewinnen?",
-        a: "Ja, besonders bei digitalen Leistungen und ortsunabhängigen Dienstleistungen. Entscheidend ist ein Auftritt, der klar macht, dass du die ganze DACH-Region betreust, und der in allen drei Ländern bei Google gefunden wird.",
+        a: "Ja, besonders bei digitalen Leistungen und ortsunabhängigen Dienstleistungen. Entscheidend ist ein Auftritt, der klar macht, dass Sie die ganze DACH-Region betreuen, und der in allen drei Ländern bei Google gefunden wird.",
       },
       {
         q: "Muss ich für jedes Land eine eigene Website haben?",
@@ -1737,7 +1737,7 @@ export const ARTICLES: Article[] = [
       },
       {
         q: "Wie läuft die Zusammenarbeit über die Ländergrenzen ab?",
-        a: "Komplett aus der Ferne: per Telefon, Videocall und WhatsApp. Du hast einen festen Ansprechpartner für die ganze DACH-Region, sodass alles aus einer Hand kommt, ohne Reisen oder mehrere Dienstleister.",
+        a: "Komplett aus der Ferne: per Telefon, Videocall und WhatsApp. Sie haben einen festen Ansprechpartner für die ganze DACH-Region, sodass alles aus einer Hand kommt, ohne Reisen oder mehrere Dienstleister.",
       },
     ],
     related: [

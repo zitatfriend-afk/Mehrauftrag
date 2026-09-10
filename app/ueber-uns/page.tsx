@@ -138,13 +138,13 @@ export default function UeberUnsPage() {
               <div className="space-y-4 text-base leading-relaxed text-slate-300">
                 <p>
                   Der Ablauf ist bei jedem Projekt gleich, und er beginnt nicht mit einem Angebot,
-                  sondern mit einem Entwurf. Du siehst, was du bekommst, bevor du dich entscheidest.
+                  sondern mit einem Entwurf. Sie sehen, was Sie bekommen, bevor Sie sich entscheiden.
                 </p>
               </div>
               <ol className="mt-5 space-y-4">
                 {[
-                  ["Gespräch", "Per Telefon oder Videocall, kostenlos. Wir wollen verstehen, was du anbietest, wer deine Kunden sind und wofür du gefunden werden willst."],
-                  ["Entwurf", "Du bekommst einen Entwurf als Link und schaust ihn dir an, wann es dir passt. Erst danach reden wir über Geld."],
+                  ["Gespräch", "Per Telefon oder Videocall, kostenlos. Wir wollen verstehen, was Sie anbieten, wer Ihre Kunden sind und wofür Sie gefunden werden wollen."],
+                  ["Entwurf", "Sie bekommen einen Entwurf als Link und schauen ihn sich an, wann es Ihnen passt. Erst danach reden wir über Geld."],
                   ["Umsetzung", "In der Regel innerhalb von rund ein bis zwei Wochen, abhängig davon, wie viele Leistungen dargestellt werden."],
                   ["Sichtbarkeit", "Google-Unternehmensprofil, technische Grundlagen, eine eigene Seite je Leistung. Danach schauen wir in die Search Console, statt zu behaupten, es liefe."],
                 ].map(([t, d], i) => (
@@ -174,11 +174,11 @@ export default function UeberUnsPage() {
                   ist kein Problem.
                 </p>
                 <p>
-                  Für die Sichtbarkeit selbst spielt die Entfernung ohnehin keine Rolle. Ob dein
-                  Betrieb bei einer Suche nach deinem Gewerk plus deinem Ort auftaucht, hängt an
+                  Für die Sichtbarkeit selbst spielt die Entfernung ohnehin keine Rolle. Ob Ihr
+                  Betrieb bei einer Suche nach Ihrem Gewerk plus Ihrem Ort auftaucht, hängt an
                   Inhalt, Technik und Google-Profil, nicht an der Postleitzahl der Agentur. Was zählt,
-                  ist Marktkenntnis: welche Betriebsgrößen in deiner Stadt üblich sind, wie stark dein
-                  Gewerk dort besetzt ist und mit welchen Wörtern deine Kunden suchen. Genau das
+                  ist Marktkenntnis: welche Betriebsgrößen in Ihrer Stadt üblich sind, wie stark Ihr
+                  Gewerk dort besetzt ist und mit welchen Wörtern Ihre Kunden suchen. Genau das
                   recherchieren wir, bevor eine Zeile geschrieben wird.
                 </p>
                 <p>
@@ -199,7 +199,7 @@ export default function UeberUnsPage() {
               </h2>
               <ul className="space-y-2.5">
                 {[
-                  "Platz eins in vier Wochen versprechen. Wir sagen vorher, was in deinem Wettbewerb realistisch ist.",
+                  "Platz eins in vier Wochen versprechen. Wir sagen vorher, was in Ihrem Wettbewerb realistisch ist.",
                   "Preise nennen, bevor wir wissen, was gebaut werden soll. Der Entwurf kommt zuerst.",
                   "Lange Vertragsbindungen. Die laufende Betreuung ist monatlich kündbar.",
                   "Zahlen erfinden. Wo wir kein Ergebnis belegen können, schreiben wir, was sich verändert hat, und keine Prozentangabe.",
@@ -254,7 +254,7 @@ export default function UeberUnsPage() {
               <h2 className="text-xl font-bold text-white">Direkt sprechen</h2>
               <p className="mt-2.5 text-base leading-relaxed text-slate-300">
                 Erstgespräch per Telefon oder Videocall, kostenlos und ohne Verpflichtung. Wenn wir
-                der Meinung sind, dass sich der Aufwand in deinem Markt nicht lohnt, sagen wir das
+                der Meinung sind, dass sich der Aufwand in Ihrem Markt nicht lohnt, sagen wir das
                 auch.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">

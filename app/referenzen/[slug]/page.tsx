@@ -209,7 +209,7 @@ export default async function CasePage({
           </section>
 
           <section className="mt-12 rounded-2xl border border-[#3b82f6]/25 bg-[#3b82f6]/[0.06] p-6 sm:p-8">
-            <h2 className="text-xl font-bold text-white">Soll dein Betrieb der nächste sein?</h2>
+            <h2 className="text-xl font-bold text-white">Soll Ihr Betrieb der nächste sein?</h2>
             <p className="mt-2.5 text-base leading-relaxed text-slate-300">
               Erstgespräch per Telefon oder Videocall, danach ein Entwurf zum Anschauen. Kostenlos,
               ohne Termin im Betrieb und ohne Verpflichtung.

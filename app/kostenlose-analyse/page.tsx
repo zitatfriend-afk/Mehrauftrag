@@ -3,14 +3,14 @@ import { FAQS } from "./_faqs";
 import AnalyseLanding from "./_landing";
 
 export const metadata: Metadata = {
-  title: "Kostenlose Website-Analyse für deinen Betrieb | Mehr Auftrag",
+  title: "Kostenlose Website-Analyse für Ihren Betrieb | Mehr Auftrag",
   description:
-    "Kostenloser Check für deinen Betrieb: Wir prüfen Sichtbarkeit bei Google, Ladezeit und Mobilansicht. Unverbindlich, in 30 Minuten, ohne Vertrag.",
+    "Kostenloser Check für Ihren Betrieb: Wir prüfen Sichtbarkeit bei Google, Ladezeit und Mobilansicht. Unverbindlich, in 30 Minuten, ohne Vertrag.",
   alternates: { canonical: "https://www.mehrauftrag.de/kostenlose-analyse" },
   openGraph: {
-    title: "Kostenlose Website-Analyse für deinen Betrieb",
+    title: "Kostenlose Website-Analyse für Ihren Betrieb",
     description:
-      "Potenzial-Check für deinen Betrieb, kostenlos und unverbindlich, in 30 Minuten.",
+      "Potenzial-Check für Ihren Betrieb, kostenlos und unverbindlich, in 30 Minuten.",
     url: "https://www.mehrauftrag.de/kostenlose-analyse",
     siteName: "Mehr Auftrag",
     locale: "de_DE",
