@@ -1529,7 +1529,7 @@ export const ARTICLES: Article[] = [
     description:
       "Woran Sie eine gute Werbe-, Web- oder SEO-Agentur erkennen: welche Fragen Sie stellen, welche Antworten warnen und was im Angebot stehen muss.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-10",
     readingTime: "6 Min.",
     intro: [
       "Das Rhein-Main-Gebiet rund um Frankfurt, Offenbach und Hanau hat viele Agenturen, von der großen Full-Service-Agentur bis zum Ein-Mann-Freelancer. Für einen kleinen oder mittleren Betrieb ist die Auswahl deshalb gar nicht so einfach. Groß ist nicht automatisch gut, und günstig nicht automatisch schlecht.",
@@ -1574,7 +1574,7 @@ export const ARTICLES: Article[] = [
     faqs: [
       {
         q: "Muss die Agentur bei mir in der Nähe sitzen?",
-        a: "Nähe ist angenehm für persönliche Termine, aber kein Muss. Viel wichtiger ist, dass die Agentur Ihre Branche versteht und Sie zuverlässig betreut. Vieles lässt sich heute problemlos aus der Ferne klären, und im Rhein-Main-Gebiet sind die Wege für einen Termin ohnehin kurz.",
+        a: "Nein, Nähe ist kein Muss. Viel wichtiger ist, dass die Agentur Ihre Branche versteht und Sie zuverlässig betreut. Alles lässt sich heute problemlos aus der Ferne klären, per Telefon, Videocall und WhatsApp.",
       },
       {
         q: "Woran erkenne ich eine unseriöse Agentur?",

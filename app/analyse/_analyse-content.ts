@@ -395,7 +395,7 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     benefits: [
       "Einordnung im regionalen Wettbewerb",
       "Lokale Sichtbarkeit rund um Frankfurt",
-      "Kurze Wege für den persönlichen Termin",
+      "Abstimmung per Telefon, Videocall und WhatsApp",
       "Klare Empfehlung ohne Verkaufsdruck",
     ],
     formHeadline: "Kostenlose Analyse für Ihren Betrieb",

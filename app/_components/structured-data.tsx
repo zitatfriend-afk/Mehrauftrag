@@ -123,7 +123,7 @@ export default function StructuredData() {
         provider: { "@id": "https://www.mehrauftrag.de/#organization" },
         areaServed: DACH_AREA,
         description:
-          "Gestaltung und Druck von Werbemitteln: Visitenkarten, Flyer und Broschueren.",
+          "Gestaltung und Druck von Werbemitteln: Visitenkarten, Flyer und Broschüren.",
       },
       {
         "@type": "Service",

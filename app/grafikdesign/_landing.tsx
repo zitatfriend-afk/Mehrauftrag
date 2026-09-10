@@ -209,7 +209,7 @@ const VORTEILE: { title: string; desc: string; icon: React.ReactNode }[] = [
   },
   {
     title: "Fest im Rhein-Main-Gebiet",
-    desc: "Wir sitzen in der Nähe von Frankfurt und kennen die Region. Termine und Abstimmung sind unkompliziert, oft geht sogar der persönliche Weg.",
+    desc: "Wir sitzen in der Nähe von Frankfurt und kennen die Region. Termine und Abstimmung laufen unkompliziert per Telefon, Videocall und WhatsApp.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -259,7 +259,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Arbeiten Sie auch in Frankfurt und Umgebung?",
-    a: "Ja. Wir sitzen im Rhein-Main-Gebiet und betreuen Kunden in Frankfurt und der ganzen Region. Vieles lässt sich bequem aus der Ferne klären, für den persönlichen Termin sind die Wege kurz.",
+    a: "Ja. Wir sitzen im Rhein-Main-Gebiet und betreuen Kunden in Frankfurt und der ganzen Region. Alles lässt sich bequem aus der Ferne klären, per Telefon, Videocall und WhatsApp.",
   },
   {
     q: "Bekomme ich Grafik und Website aus einer Hand?",

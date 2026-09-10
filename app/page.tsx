@@ -1511,7 +1511,7 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               {[
-                { n: "01", title: "Veraltete oder keine Website", desc: "Ihre Konkurrenz gewinnt täglich Kunden online während Sie noch auf Weiterempfehlung warten." },
+                { n: "01", title: "Veraltete oder keine Website", desc: "Ihre Konkurrenz gewinnt täglich Kunden online, während Sie noch auf Weiterempfehlung warten." },
                 { n: "02", title: "Keine Anfragen aus dem Internet", desc: "Google findet Sie nicht. Social Media stagniert. Ihr Budget verpufft ohne messbare Ergebnisse." },
                 { n: "03", title: "Kein System für Neukundengewinnung", desc: "Alles hängt an einzelnen Personen. Kein skalierbares System bedeutet keine Planbarkeit." },
                 { n: "04", title: "Schlechtes Image trotz guter Arbeit", desc: "Sie leisten Qualität, aber Ihr Online-Auftritt vermittelt das nicht. Das kostet Sie täglich Aufträge." },
@@ -1615,7 +1615,7 @@ export default function Home() {
                 Alles aus einer Hand.
               </h2>
               <p className="text-lg leading-relaxed text-slate-400">
-                Von der Website bis zur Kampagne wir liefern die komplette digitale Infrastruktur für Ihr Wachstum.
+                Von der Website bis zur Kampagne: Wir liefern die komplette digitale Infrastruktur für Ihr Wachstum.
               </p>
             </motion.div>
             <motion.div
@@ -1852,7 +1852,7 @@ export default function Home() {
                   wie schwer es ist, als kleiner Betrieb online gegen große Unternehmen mit riesigen Budgets zu bestehen.
                 </p>
                 <p className="leading-relaxed mb-8 text-slate-400">
-                  Deshalb haben wir Mehr Auftrag gegründet eine Digitalagentur,
+                  Deshalb haben wir Mehr Auftrag gegründet: eine Digitalagentur,
                   die wirklich liefert. Keine leeren Versprechen. Keine generischen
                   Pakete. Nur maßgeschneiderte Strategien, die messbar mehr Aufträge bringen.{" "}
                   <a href="/ueber-uns" className="text-[#3b82f6] underline underline-offset-4 hover:text-[#6aa8ff]">

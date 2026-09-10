@@ -108,7 +108,7 @@ function GrafikdesignSchema() {
             name: "Arbeiten Sie auch in Frankfurt und Umgebung?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Ja. Wir sitzen im Rhein-Main-Gebiet und betreuen Kunden in Frankfurt und der ganzen Region. Vieles lässt sich bequem aus der Ferne klären, für den persönlichen Termin sind die Wege kurz.",
+              text: "Ja. Wir sitzen im Rhein-Main-Gebiet und betreuen Kunden in Frankfurt und der ganzen Region. Alles lässt sich bequem aus der Ferne klären, per Telefon, Videocall und WhatsApp.",
             },
           },
           {
