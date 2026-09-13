@@ -1067,14 +1067,26 @@ export default function HandwerkerLanding() {
                 Kein Kleingedrucktes. Kein „kostet dann doch mehr".
               </p>
 
-              {/* Einordnung statt bloßer Zahl. Die Spanne stammt aus den Anzeigen
-                  der Mitbewerber auf "website für handwerker" (Stand 06.09.2026),
-                  bewusst ohne Namen und als Spanne, weil sich Preise ändern. */}
-              <p className="mt-5 text-center text-sm leading-relaxed text-slate-400">
-                Andere Anbieter verlangen für den Einstieg 600 bis 1.000 Euro. Wir nehmen 250,
-                weil wir langfristig mit Ihnen arbeiten wollen. Bleibt die Seite nicht gut,
-                kündigen Sie zum Monatsende.
-              </p>
+              {/* Kostenaufschlüsselung in eigenen Worten, ohne Vergleich mit
+                  Mitbewerbern. Die frühere Aussage über fremde Preise ist am
+                  13.09.2026 auf Patricks Wunsch komplett entfallen. Typografie
+                  bewusst wie im übrigen Abschnitt: zentriert, kleine
+                  Versallinie wie bei den anderen Rubriken der Seite, danach
+                  zwei ruhige Absätze in text-sm. */}
+              <div className="mt-6 text-center">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#60a5fa]">
+                  Fairer Start. Klare Kosten.
+                </p>
+                <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
+                  Sie zahlen einmalig 250 € für die Erstellung Ihrer Website. Danach kostet die
+                  laufende Betreuung 99 € pro Monat, inklusive Hosting, Updates, Sicherheit und
+                  persönlicher Unterstützung.
+                </p>
+                <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
+                  Keine versteckten Kosten. Keine Überraschungen. Sie wissen von Anfang an, was
+                  Sie bezahlen.
+                </p>
+              </div>
 
               {/* Der Einwand "ich will kein Abo" entsteht genau hier, an der
                   Zahl mit dem "pro Monat" daneben. Deshalb wird er hier
