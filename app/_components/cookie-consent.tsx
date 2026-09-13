@@ -251,7 +251,12 @@ export default function CookieConsent() {
             setOpen(true);
           }}
           aria-label="Cookie-Einstellungen öffnen"
-          className="fixed bottom-4 left-4 z-[60] rounded-full border border-white/10 bg-[#0a1024]/80 px-3 py-2 text-xs text-slate-300 shadow-lg backdrop-blur transition hover:border-blue-500/50 hover:text-white"
+          className="fixed left-4 z-[50] rounded-full border border-white/10 bg-[#0a1024]/80 px-3 py-2 text-xs text-slate-300 shadow-lg backdrop-blur transition hover:border-blue-500/50 hover:text-white"
+          // Auf dem Handy sitzt unten auf manchen Seiten eine Leiste mit dem
+          // Anfrage-Knopf. Dieser Knopf lag bisher darauf und verdeckte die
+          // linke Haelfte davon. --ma-cta-h kommt aus der jeweiligen Leiste und
+          // ist 0, wenn keine da ist.
+          style={{ bottom: "calc(1rem + var(--ma-cta-h, 0px))" }}
         >
           Cookie-Einstellungen
         </button>
