@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -603,7 +603,6 @@ function AmbientBackground() {
 function AnfrageLeiste() {
   const [gescrollt, setGescrollt] = useState(false);
   const [formularImBild, setFormularImBild] = useState(false);
-  const leisteRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     function beiScroll() {
@@ -630,40 +629,10 @@ function AnfrageLeiste() {
 
   const zeigen = gescrollt && !formularImBild;
 
-  // Diese Leiste liegt fix am unteren Rand. Der runde Knopf
-  // "Cookie-Einstellungen" sitzt dort ebenfalls und lag bisher darueber, weil
-  // er die hoehere Ebene hatte. Auf dem Handy verdeckte er dadurch die linke
-  // Haelfte des Anfrage-Knopfes. Deshalb veroeffentlicht die Leiste jetzt ihre
-  // Hoehe als --ma-cta-h, und der Cookie-Knopf setzt sich darueber.
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    const wurzel = document.documentElement;
-    if (!zeigen) {
-      wurzel.style.removeProperty("--ma-cta-h");
-      return;
-    }
-    const setzen = () => {
-      const hoehe = leisteRef.current?.offsetHeight ?? 0;
-      if (hoehe > 0) wurzel.style.setProperty("--ma-cta-h", `${hoehe}px`);
-      else wurzel.style.removeProperty("--ma-cta-h");
-    };
-    setzen();
-    let beobachter: ResizeObserver | null = null;
-    if (typeof ResizeObserver !== "undefined" && leisteRef.current) {
-      beobachter = new ResizeObserver(setzen);
-      beobachter.observe(leisteRef.current);
-    }
-    return () => {
-      if (beobachter) beobachter.disconnect();
-      wurzel.style.removeProperty("--ma-cta-h");
-    };
-  }, [zeigen]);
-
   return (
     <AnimatePresence>
       {zeigen && (
         <motion.div
-          ref={leisteRef}
           initial={{ y: 80 }}
           animate={{ y: 0 }}
           exit={{ y: 80 }}
