@@ -1204,10 +1204,16 @@ export default function HandwerkerLanding() {
                   >
                     {TELEFON_ANZEIGE}
                   </a>
-                  <Link href="/referenzen" className="text-slate-400 transition hover:text-slate-200">
+                  <Link
+                    href="/referenzen"
+                    className="text-slate-300 underline decoration-white/25 underline-offset-4 transition hover:text-white hover:decoration-white/60"
+                  >
                     Projekte ansehen
                   </Link>
-                  <Link href="/ueber-uns" className="text-slate-400 transition hover:text-slate-200">
+                  <Link
+                    href="/ueber-uns"
+                    className="text-slate-300 underline decoration-white/25 underline-offset-4 transition hover:text-white hover:decoration-white/60"
+                  >
                     Mehr über mich
                   </Link>
                 </div>
