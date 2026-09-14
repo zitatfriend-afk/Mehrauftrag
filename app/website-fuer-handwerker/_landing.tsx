@@ -1149,6 +1149,73 @@ export default function HandwerkerLanding() {
           </div>
         </motion.section>
 
+        {/* ─── Wer dahintersteht ────────────────────────────────────────────
+            Die Clarity-Aufzeichnungen vom 06. und 10.09.2026 zeigen zwei
+            Besucher, die sich acht bis neun Minuten durch die FAQ gelesen
+            haben und danach ins Impressum gegangen sind. Das ist die
+            Vertrauensfrage, und beantwortet hat sie bisher eine Rechtsseite
+            mit Privatadresse und Steuernummer. Deshalb steht sie jetzt hier:
+            direkt nach der FAQ, direkt vor dem Formular, an genau der Stelle,
+            an der der Zweifel entsteht. Bewusst ruhig gehalten und ohne
+            zweiten grossen Knopf, damit die Seite weiter auf das Formular
+            zulaeuft. */}
+        <motion.section
+          initial="hidden"
+          whileInView="show"
+          viewport={SECTION_VIEWPORT}
+          variants={stagger}
+          className="relative px-5 pb-2 sm:px-8"
+        >
+          <motion.div
+            variants={fadeUp}
+            className="mx-auto max-w-2xl rounded-2xl p-6 sm:p-8"
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.09)",
+            }}
+          >
+            <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:gap-6 sm:text-left">
+              <Image
+                src="/neuesprofilbild.webp"
+                alt="Patrick Sauna von Mehr Auftrag"
+                width={160}
+                height={160}
+                className="h-24 w-24 flex-shrink-0 rounded-2xl object-cover sm:h-28 sm:w-28"
+              />
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#60a5fa]">
+                  Wer das macht
+                </p>
+                <p className="mt-2 text-lg font-semibold text-white">Patrick Sauna</p>
+                <p className="text-sm text-slate-400">Mehr Auftrag, Hainburg bei Frankfurt</p>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">
+                  Sie sprechen mit mir, nicht mit einem Vertrieb. Ihren Entwurf baue ich selbst,
+                  und ich bleibe danach Ihr Ansprechpartner. Wenn Sie anrufen, gehe ich ran.
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">
+                  Fünf Projekte sind mit Ausgangslage, Vorgehen und Ergebnis dokumentiert. Alle
+                  Websites sind live und öffentlich erreichbar, Sie können sie sich vorher ansehen.
+                </p>
+                <div className="mt-4 flex flex-col items-center gap-x-4 gap-y-2 text-sm sm:flex-row sm:items-start">
+                  <a
+                    href={`tel:${TELEFON}`}
+                    onClick={trackPhoneClick}
+                    className="font-semibold text-[#60a5fa] transition hover:text-white"
+                  >
+                    {TELEFON_ANZEIGE}
+                  </a>
+                  <Link href="/referenzen" className="text-slate-400 transition hover:text-slate-200">
+                    Projekte ansehen
+                  </Link>
+                  <Link href="/ueber-uns" className="text-slate-400 transition hover:text-slate-200">
+                    Mehr über mich
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.section>
+
         {/* ─── Anfrage / Formular ─── */}
         <motion.section
           id="anfrage"
@@ -1219,6 +1286,7 @@ export default function HandwerkerLanding() {
             <MALogo />
             <p className="text-xs text-slate-500">
               © {new Date().getFullYear()} Mehr Auftrag ·{" "}
+              <Link href="/ueber-uns" className="hover:text-slate-300">Über uns</Link> ·{" "}
               <Link href="/impressum" className="hover:text-slate-300">Impressum</Link> ·{" "}
               <Link href="/datenschutz" className="hover:text-slate-300">Datenschutz</Link> ·{" "}
               <Link href="/agb" className="hover:text-slate-300">AGB</Link>

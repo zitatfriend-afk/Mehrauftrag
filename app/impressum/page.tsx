@@ -29,6 +29,7 @@ export default function ImpressumPage() {
           city="63512 Hainburg"
           country="Deutschland"
           email="info@mehrauftrag.de"
+          phone="+49 152 02069625"
           vatId="DE454534138"
         />
       </LegalSection>
