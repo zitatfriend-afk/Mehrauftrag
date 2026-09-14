@@ -251,14 +251,16 @@ export default function CookieConsent() {
             setOpen(true);
           }}
           aria-label="Cookie-Einstellungen öffnen"
-          // Auf dem Handy sitzt unten auf der Handwerker-Landingpage eine
-          // Leiste mit dem Anfrage-Knopf (rund 70 px hoch). Dieser Knopf lag
-          // darauf und verdeckte deren linke Haelfte, Tippen dort oeffnete den
-          // Cookie-Dialog statt zum Formular zu springen. Der z-Index hilft
-          // nicht, weil die Leiste in einem eigenen Stapelkontext liegt
-          // (main hat relative z-[1]). Deshalb weicht der Knopf auf dem Handy
-          // nach oben aus. Am Rechner gibt es die Leiste nicht.
-          className="fixed bottom-24 left-4 z-[50] rounded-full border border-white/10 bg-[#0a1024]/80 px-3 py-2 text-xs text-slate-300 shadow-lg backdrop-blur transition hover:border-blue-500/50 hover:text-white sm:bottom-4"
+          // Der Knopf sitzt normal unten links. Auf Seiten, die auf dem Handy
+          // eine eigene Leiste am unteren Rand haben (die Handwerker-LP mit
+          // "Kostenlosen Entwurf sichern"), laege er darauf und wuerde sie
+          // verdecken. Ein hoeherer z-Index half dort nicht, weil die Leiste
+          // in main mit relative z-[1] einen eigenen Stapelkontext hat.
+          // Deshalb meldet die jeweilige Seite ihre Leistenhoehe als
+          // --ma-cta-h, und nur dann weicht der Knopf nach oben aus. Ohne
+          // Leiste ist die Variable nicht gesetzt und alles bleibt wie immer.
+          className="fixed left-4 z-[50] rounded-full border border-white/10 bg-[#0a1024]/80 px-3 py-2 text-xs text-slate-300 shadow-lg backdrop-blur transition hover:border-blue-500/50 hover:text-white"
+          style={{ bottom: "calc(1rem + var(--ma-cta-h, 0px))" }}
         >
           Cookie-Einstellungen
         </button>

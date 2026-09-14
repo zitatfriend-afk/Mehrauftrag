@@ -629,6 +629,31 @@ function AnfrageLeiste() {
 
   const zeigen = gescrollt && !formularImBild;
 
+  // Der runde Knopf "Cookie-Einstellungen" sitzt global unten links und lag
+  // frueher auf dieser Leiste. Deshalb meldet die Leiste ihre Hoehe als
+  // --ma-cta-h, solange sie sichtbar ist, und der Cookie-Knopf setzt sich
+  // darueber. Bewusst ein fester Wert statt einer Messung: ein frueherer
+  // Versuch ueber ResizeObserver hat den Wechsel von unsichtbar auf sichtbar
+  // nicht gemeldet und ist still gescheitert. Die Leiste ist konstant rund
+  // 69 px hoch, 72 gibt etwas Luft. Die Leiste selbst ist sm:hidden, deshalb
+  // wird die Variable nur unterhalb des sm-Breakpoints gesetzt, sonst wuerde
+  // der Knopf am Rechner grundlos hochspringen.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const wurzel = document.documentElement;
+    const schmal = window.matchMedia("(max-width: 639px)");
+    const setzen = () => {
+      if (zeigen && schmal.matches) wurzel.style.setProperty("--ma-cta-h", "72px");
+      else wurzel.style.removeProperty("--ma-cta-h");
+    };
+    setzen();
+    schmal.addEventListener("change", setzen);
+    return () => {
+      schmal.removeEventListener("change", setzen);
+      wurzel.style.removeProperty("--ma-cta-h");
+    };
+  }, [zeigen]);
+
   return (
     <AnimatePresence>
       {zeigen && (
