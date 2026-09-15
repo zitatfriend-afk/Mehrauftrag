@@ -1200,12 +1200,20 @@ export default function HandwerkerLanding() {
             }}
           >
             <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:gap-6 sm:text-left">
+              {/* Das Foto ist hochkant (1023 x 1537), der Rahmen quadratisch.
+                  object-cover schneidet dann oben und unten gleich viel weg,
+                  und weil der Kopf im oberen Drittel sitzt, war der Scheitel
+                  ab. Gemessen: bei zentrierter Position beginnt der Ausschnitt
+                  bei y = 257, der Haaransatz liegt aber schon bei y = 145.
+                  14 Prozent setzt den Ausschnitt auf y = 72 und laesst etwas
+                  Luft ueber dem Kopf. */}
               <Image
                 src="/neuesprofilbild.webp"
                 alt="Patrick Sauna von Mehr Auftrag"
                 width={160}
                 height={160}
                 className="h-24 w-24 flex-shrink-0 rounded-2xl object-cover sm:h-28 sm:w-28"
+                style={{ objectPosition: "center 14%" }}
               />
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#60a5fa]">

@@ -87,8 +87,14 @@ export default function UeberUnsPage() {
             <span className="text-slate-400">Über uns</span>
           </nav>
 
+          {/* h1 bis h5 tragen global hyphens: auto, damit lange deutsche
+              Komposita auf schmalen Telefonen nicht aus dem Bild ragen. Bei
+              dieser Ueberschrift trennte die Regel ausgerechnet den
+              Markennamen: "Mehr Auf-" / "trag steht". Die globale Regel bleibt,
+              nur der Name wird zusammengehalten. */}
           <h1 className="text-3xl font-black leading-tight tracking-[-0.03em] text-white sm:text-4xl">
-            Wer hinter Mehr Auftrag steht
+            Wer hinter{" "}
+            <span className="whitespace-nowrap [hyphens:none]">Mehr Auftrag</span> steht
           </h1>
 
           <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center">
@@ -98,6 +104,9 @@ export default function UeberUnsPage() {
               width={160}
               height={160}
               className="h-32 w-32 flex-shrink-0 rounded-2xl object-cover"
+              // Gleicher Ausschnitt wie im Vertrauensblock der
+              // Handwerker-Landingpage, damit der Kopf vollstaendig im Bild ist.
+              style={{ objectPosition: "center 14%" }}
             />
             <div>
               <p className="text-lg font-semibold text-white">Patrick Sauna</p>
