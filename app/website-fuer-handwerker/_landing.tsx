@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   sendeFormularConversion,
+  sendeGa4Lead,
   sendeTelefonklickConversion,
   sendeWhatsappConversion,
 } from "../_lib/ads-conversion";
@@ -318,6 +319,13 @@ function LeadForm() {
       // geladen ist. Bei vorliegender Einwilligung geht die Telefonnummer als
       // erweiterte Conversion mit, sonst nur das reine Ereignis.
       sendeFormularConversion(phone.trim());
+
+      // GA4 bekommt dasselbe Ereignis getrennt. Der Aufruf oben geht ueber
+      // send_to nur an Google Ads, GA4 sieht davon nichts. Deshalb stand dort
+      // bis zum 18.09.2026 kein einziger Lead, obwohl die Anfrage in Supabase
+      // lag. Als Quelle geht derselbe Wert mit, der auch in der Datenbank
+      // steht, damit sich beide Seiten vergleichen lassen.
+      sendeGa4Lead("handwerker_lp", attr.source);
 
       setState("success");
     } catch {

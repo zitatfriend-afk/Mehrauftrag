@@ -28,6 +28,9 @@
 export const GA_ADS_CONVERSION_FORM = "AW-18287779811/hS5HCOznt-8cEOO_pZBE"; // Formular gesendet
 export const GA_ADS_CONVERSION_PHONE = "AW-18287779811/vAYnCO_nt-8cEOO_pZBE"; // Telefonklick
 
+// GA4-Mess-ID, identisch mit der in app/layout.tsx.
+export const GA4_MESS_ID = "G-7ZLRDEFHNB";
+
 const CONSENT_KEY = "ma-consent-v1";
 
 type GtagFunktion = (...args: unknown[]) => void;
@@ -131,4 +134,31 @@ export function sendeWhatsappConversion(): void {
   const gtag = holeGtag();
   if (!gtag) return;
   gtag("event", "conversion", { send_to: GA_ADS_CONVERSION_PHONE });
+}
+
+/**
+ * GA4-Ereignis "generate_lead".
+ *
+ * Google Ads und GA4 sind getrennte Empfaenger. Die Conversions oben gehen
+ * ueber send_to ausschliesslich an Google Ads, in GA4 kommt davon nichts an.
+ * Ohne diesen Aufruf taucht eine Anfrage in GA4 nirgends auf, auch dann nicht,
+ * wenn der Besucher im Banner zugestimmt hat. Genau das war der Befund vom
+ * 17.09.2026: in 28 Tagen kein einziges Ereignis form_submit oder
+ * generate_lead, und damit kein Schluesselereignis fuer Leads.
+ *
+ * send_to zeigt bewusst nur auf die GA4-Mess-ID. Ohne diese Angabe wuerde
+ * gtag das Ereignis zusaetzlich an das Ads-Konto schicken, wo es nichts zu
+ * suchen hat.
+ *
+ * Feuert unabhaengig von der Einwilligung. Ohne Zustimmung geht es als
+ * cookieloser Ping raus (gcs=G100), mit Zustimmung normal (gcs=G111).
+ */
+export function sendeGa4Lead(formularId: string, quelle: string): void {
+  const gtag = holeGtag();
+  if (!gtag) return;
+  gtag("event", "generate_lead", {
+    send_to: GA4_MESS_ID,
+    form_id: formularId,
+    source: quelle,
+  });
 }
