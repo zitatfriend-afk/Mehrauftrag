@@ -24,11 +24,11 @@ export type Faq = { q: string; a: string };
 export const FAQS: Faq[] = [
   {
     q: "Was, wenn die Website keine Anfragen bringt?",
-    a: "Dann schauen wir uns gemeinsam an, was optimiert werden kann, kostenlos. Wir lassen Sie damit nicht allein.",
+    a: "Ehrlich: Anfragen garantieren kann Ihnen niemand, ich auch nicht. Wer das verspricht, verkauft Ihnen etwas. Was ich zusage: Sie sitzen in keiner Laufzeit fest. Bringt die Seite nichts, kündigen Sie zum Monatsende und zahlen keinen Cent weiter. Vorher nehme ich sie mir noch einmal vor, Texte, Bilder, Ihr Google-Unternehmensprofil und eigene Seiten für Ihre einzelnen Leistungen. Das kostet Sie nichts extra.",
   },
   {
     q: "Wie lange dauert es wirklich?",
-    a: "7 Tage nach Eingang Ihrer Infos und Fotos ist Ihre Seite online. Kein Hin-und-Her, keine Verzögerungen.",
+    a: "7 Tage nach Eingang Ihrer Infos und Fotos ist Ihre Seite online. Dauert es länger, entfallen die 250 € für die Erstellung. Den Starttermin bekommen Sie schriftlich, damit Sie mitzählen können.",
   },
   {
     q: "Was muss ich selbst tun?",

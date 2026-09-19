@@ -827,10 +827,13 @@ export default function HandwerkerLanding() {
               // hyphens: "none", weil die Seite global auf hyphens: auto steht. In einer
               // Ueberschrift dieser Groesse trennt der Browser sonst mitten im Wort und es
               // stand dort "Mehr Anfragen fuer Ih-ren Handwerksbe-trieb".
-              style={{ fontSize: "clamp(28px, 6.2vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", hyphens: "none" }}
+              // Die Schriftgroesse ist bewusst kleiner als vorher (52 statt 64 Pixel).
+              // Der Satz ist laenger als die alte Floskel, bei 64 Pixel drueckt er auf
+              // dem Handy das Formular unter die Falz.
+              style={{ fontSize: "clamp(26px, 5.6vw, 52px)", lineHeight: 1.08, letterSpacing: "-0.03em", hyphens: "none" }}
             >
-              Mehr Anfragen für Ihren{" "}
-              <span className="gradient-text-blue">Handwerksbetrieb</span>
+              Ihre neue Website ist{" "}
+              <span className="gradient-text-blue">in 7 Tagen online</span>. Sonst zahlen Sie die Erstellung nicht.
             </motion.h1>
 
             <motion.p
@@ -838,13 +841,13 @@ export default function HandwerkerLanding() {
               className="mx-auto mt-4 max-w-xl text-base font-light leading-relaxed sm:mt-5 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              Sie sehen zuerst einen kostenlosen Entwurf. Erst wenn er überzeugt, geht es weiter.
+              250 € einmalig, 99 € im Monat, monatlich kündbar. Sie sprechen mit mir, nicht mit einem Vertrieb.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-5">
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> Entwurf vorab kostenlos</span>
-              <span className="inline-flex items-center gap-1.5"><CheckIcon /> In 7 Tagen online</span>
-              <span className="inline-flex items-center gap-1.5"><CheckIcon /> Monatlich kündbar</span>
+              <span className="inline-flex items-center gap-1.5"><CheckIcon /> 7 Tage ab Ihren Unterlagen</span>
+              <span className="inline-flex items-center gap-1.5"><CheckIcon /> Keine Vertragslaufzeit</span>
             </motion.div>
 
             <motion.div variants={fadeUp} className="mx-auto mt-5 max-w-md sm:mt-6">
@@ -858,94 +861,12 @@ export default function HandwerkerLanding() {
           </motion.div>
         </section>
 
-        {/* ─── Problem ─── */}
-        <motion.section
-          initial="hidden"
-          whileInView="show"
-          viewport={SECTION_VIEWPORT}
-          variants={stagger}
-          className="relative px-5 py-20 sm:px-8 sm:py-24"
-        >
-          <div className="mx-auto max-w-3xl text-center">
-            <motion.div variants={fadeUp}>
-              <SectionLabel center>Das Problem</SectionLabel>
-            </motion.div>
-            <motion.h2
-              variants={fadeUp}
-              className="text-2xl font-bold leading-snug text-white sm:text-3xl"
-            >
-              Ihre Kunden suchen Ihr Gewerk auf Google. Finden sie dabei Sie?
-            </motion.h2>
-            <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
-              Wer heute einen Handwerker braucht, googelt zuerst. Tauchen Sie dort nicht auf, oder mit einer
-              veralteten Seite, ruft der Kunde beim Nächsten an. Jeden Tag gehen so Aufträge an Betriebe,
-              die online einfach besser zu finden sind. Nicht, weil sie besser arbeiten, sondern weil man sie
-              überhaupt findet.
-            </motion.p>
-          </div>
-        </motion.section>
-
-        {/* ─── Was wir bauen ─── */}
-        <motion.section
-          initial="hidden"
-          whileInView="show"
-          viewport={SECTION_VIEWPORT}
-          variants={stagger}
-          className="relative px-5 py-16 sm:px-8 sm:py-20"
-        >
-          <div className="mx-auto max-w-6xl">
-            <div className="mb-12 text-center">
-              <motion.div variants={fadeUp}>
-                <SectionLabel center>Was wir bauen</SectionLabel>
-              </motion.div>
-              <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">
-                Eine Website, die zu Ihrem Betrieb passt
-              </motion.h2>
-              <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400">
-                Kein Baukasten von der Stange. Alles speziell auf das ausgerichtet, wonach Ihre Kunden suchen.
-              </motion.p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {BUILD_FEATURES.map((f) => (
-                <motion.div
-                  key={f.title}
-                  variants={fadeUp}
-                  whileHover={{ y: -5 }}
-                  transition={{ stiffness: 280, damping: 28 }}
-                  className="relative flex h-full flex-col rounded-2xl p-6 sm:p-7"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.07)",
-                    boxShadow: "0 2px 12px rgba(0,0,0,0.2)",
-                  }}
-                >
-                  <div
-                    className="mb-5 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl"
-                    style={{ background: "rgba(59,130,246,0.12)", color: "#60a5fa", border: "1px solid rgba(59,130,246,0.2)" }}
-                  >
-                    {f.icon}
-                  </div>
-                  <h3 className="mb-2 text-base font-bold text-white">{f.title}</h3>
-                  <p className="text-sm leading-relaxed text-slate-400">{f.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-            <motion.p variants={fadeUp} className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-slate-400">
-              Eine Website allein bringt noch keine Anrufe. Gefunden wird sie erst, wenn Inhalt, Technik und
-              Google-Profil zusammenspielen. Was dazugehört, wenn ein Handwerksbetrieb bei der Suche nach seinem Gewerk
-              auftauchen soll, steht auf unserer Seite zur{" "}
-              <Link
-                href="/suchmaschinenoptimierung"
-                className="font-semibold text-[#60a5fa] underline decoration-[#60a5fa]/40 underline-offset-4 hover:text-white"
-              >
-                lokalen Suchmaschinenoptimierung
-              </Link>
-              .
-            </motion.p>
-          </div>
-        </motion.section>
-
+        {/* Reihenfolge am 19.09.2026 geaendert. Vorher kamen erst zwei
+            Abschnitte Text (Das Problem, Was wir bauen) und der Beweis erst
+            bei rund 2400 Pixeln. Wer ueber eine Anzeige kommt, kennt sein
+            Problem und will wissen, ob der Anbieter echt ist. Also stehen
+            jetzt fremde Projekte und fremde Bewertungen direkt unter dem
+            Hero, der erklaerende Text danach. */}
         {/* ─── Referenzen / Echte Kundenprojekte ─── */}
         <motion.section
           initial="hidden"
@@ -1040,6 +961,94 @@ export default function HandwerkerLanding() {
           </div>
         </motion.section>
 
+        {/* ─── Problem ─── */}
+        <motion.section
+          initial="hidden"
+          whileInView="show"
+          viewport={SECTION_VIEWPORT}
+          variants={stagger}
+          className="relative px-5 py-20 sm:px-8 sm:py-24"
+        >
+          <div className="mx-auto max-w-3xl text-center">
+            <motion.div variants={fadeUp}>
+              <SectionLabel center>Das Problem</SectionLabel>
+            </motion.div>
+            <motion.h2
+              variants={fadeUp}
+              className="text-2xl font-bold leading-snug text-white sm:text-3xl"
+            >
+              Ihre Kunden suchen Ihr Gewerk auf Google. Finden sie dabei Sie?
+            </motion.h2>
+            <motion.p variants={fadeUp} className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
+              Wer heute einen Handwerker braucht, googelt zuerst. Tauchen Sie dort nicht auf, oder mit einer
+              veralteten Seite, ruft der Kunde beim Nächsten an. Jeden Tag gehen so Aufträge an Betriebe,
+              die online einfach besser zu finden sind. Nicht, weil sie besser arbeiten, sondern weil man sie
+              überhaupt findet.
+            </motion.p>
+          </div>
+        </motion.section>
+
+        {/* ─── Was wir bauen ─── */}
+        <motion.section
+          initial="hidden"
+          whileInView="show"
+          viewport={SECTION_VIEWPORT}
+          variants={stagger}
+          className="relative px-5 py-16 sm:px-8 sm:py-20"
+        >
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-12 text-center">
+              <motion.div variants={fadeUp}>
+                <SectionLabel center>Was wir bauen</SectionLabel>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white sm:text-3xl">
+                Eine Website, die zu Ihrem Betrieb passt
+              </motion.h2>
+              <motion.p variants={fadeUp} className="mx-auto mt-4 max-w-xl text-base text-slate-400">
+                Kein Baukasten von der Stange. Alles speziell auf das ausgerichtet, wonach Ihre Kunden suchen.
+              </motion.p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {BUILD_FEATURES.map((f) => (
+                <motion.div
+                  key={f.title}
+                  variants={fadeUp}
+                  whileHover={{ y: -5 }}
+                  transition={{ stiffness: 280, damping: 28 }}
+                  className="relative flex h-full flex-col rounded-2xl p-6 sm:p-7"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.07)",
+                    boxShadow: "0 2px 12px rgba(0,0,0,0.2)",
+                  }}
+                >
+                  <div
+                    className="mb-5 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl"
+                    style={{ background: "rgba(59,130,246,0.12)", color: "#60a5fa", border: "1px solid rgba(59,130,246,0.2)" }}
+                  >
+                    {f.icon}
+                  </div>
+                  <h3 className="mb-2 text-base font-bold text-white">{f.title}</h3>
+                  <p className="text-sm leading-relaxed text-slate-400">{f.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+            <motion.p variants={fadeUp} className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-slate-400">
+              Eine Website allein bringt noch keine Anrufe. Gefunden wird sie erst, wenn Inhalt, Technik und
+              Google-Profil zusammenspielen. Was dazugehört, wenn ein Handwerksbetrieb bei der Suche nach seinem Gewerk
+              auftauchen soll, steht auf unserer Seite zur{" "}
+              <Link
+                href="/suchmaschinenoptimierung"
+                className="font-semibold text-[#60a5fa] underline decoration-[#60a5fa]/40 underline-offset-4 hover:text-white"
+              >
+                lokalen Suchmaschinenoptimierung
+              </Link>
+              .
+            </motion.p>
+          </div>
+        </motion.section>
+
         {/* ─── Preisbox ─── */}
         {/* id="preis": Sprungziel fuer den Google-Ads-Sitelink "Ohne Abo
             moeglich". Der Klick soll direkt auf dem Kasten mit dem Einmalkauf
@@ -1118,6 +1127,31 @@ export default function HandwerkerLanding() {
                 <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
                   Keine versteckten Kosten. Keine Überraschungen. Sie wissen von Anfang an, was
                   Sie bezahlen.
+                </p>
+              </div>
+
+              {/* Garantiekasten, 19.09.2026. Die Seite hat vorher zugesagt "in 7
+                  Tagen online", ohne dass daran etwas haengt. Eine Zusage ohne
+                  Folge ist eine Behauptung, und Behauptungen stehen auf jeder
+                  Handwerker-Website. Hier haengt eine Zahl daran, die der
+                  Betrieb nachrechnen kann. Das Risiko ist bewusst auf die
+                  Erstellungsgebuehr gedeckelt und die Frist startet erst mit
+                  den Unterlagen, sonst haftet Patrick fuer Kunden, die nicht
+                  liefern. */}
+              <div
+                className="mx-auto mt-6 max-w-md rounded-xl px-5 py-5 text-center"
+                style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.3)" }}
+              >
+                <p className="text-sm font-bold text-white">
+                  In 7 Tagen online, sonst entfällt die Erstellungsgebühr
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                  Sobald Ihre Texte, Bilder und Angaben vollständig bei mir sind, läuft die Frist.
+                  Ist Ihre Website dann nicht innerhalb von 7 Tagen erreichbar, entfallen die
+                  250 € für die Erstellung.
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  Den Starttermin bekommen Sie schriftlich, damit Sie mitzählen können.
                 </p>
               </div>
 
