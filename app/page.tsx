@@ -1749,6 +1749,12 @@ export default function Home() {
                   <p className="text-base leading-relaxed text-slate-300 mb-4 max-w-2xl">
                     Gefunden werden, ohne für jeden Klick zu bezahlen. Wir bringen Ihre Website technisch in Ordnung, geben jeder Leistung eine eigene Seite und richten Ihr Google-Unternehmensprofil so ein, dass es zu diesen Inhalten passt. Danach sehen wir jeden Monat in der Search Console nach, was sich bewegt.
                   </p>
+                  <p className="text-base leading-relaxed text-slate-300 mb-4 max-w-2xl">
+                    Als SEO Agentur für kleine Betriebe kennen wir vor allem den Markt rund um Hanau, Offenbach und den Main-Kinzig-Kreis, arbeiten aber für Betriebe in ganz Deutschland.{" "}
+                    <a href="/suchmaschinenoptimierung#regionen" className="font-semibold text-emerald-400 underline underline-offset-4 hover:text-emerald-300">
+                      SEO für Betriebe in Hanau und im Rhein-Main-Gebiet
+                    </a>
+                  </p>
                   <div className="flex flex-wrap gap-2 mb-7">
                     {["Lokale SEO", "Google-Unternehmensprofil", "Technische Basis", "Eine Seite je Leistung", "Bewertungen", "Sichtbarkeit in KI-Antworten"].map((t) => (
                       <span
@@ -1920,15 +1926,17 @@ export default function Home() {
               className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"
             >
               {[
-                { icon: "🔧", label: "Handwerk" },
-                { icon: "🏥", label: "Physiotherapie" },
-                { icon: "⚙️", label: "Industrie" },
-                { icon: "🍽️", label: "Gastronomie" },
-                { icon: "💼", label: "Dienstleister" },
-                { icon: "✦",  label: "Weitere" },
+                { icon: "🔧", label: "Handwerk", href: "/website-fuer-handwerker", title: "Website für Handwerker" },
+                { icon: "🏥", label: "Physiotherapie", href: "/webseite-fuer-physiotherapie", title: "Website für Physiotherapie" },
+                { icon: "⚙️", label: "Industrie", href: "/webseite-fuer-schweisser", title: "Website für Schweißer und Metallbau" },
+                { icon: "🍽️", label: "Gastronomie", href: "/webseite-fuer-gastronomie", title: "Website für Gastronomie" },
+                { icon: "💼", label: "Dienstleister", href: "/webseite-fuer-gebaeudereinigung", title: "Website für Gebäudereinigung" },
+                { icon: "✦",  label: "Weitere", href: "/referenzen", title: "Referenzen und Fallstudien" },
               ].map((item, i) => (
-                <motion.div
+                <motion.a
                   key={i}
+                  href={item.href}
+                  title={item.title}
                   variants={fadeUp}
                  
                   whileHover={{ y: -4, background: "rgba(59,130,246,0.08)", borderColor: "rgba(59,130,246,0.22)", boxShadow: "0 10px 28px rgba(59,130,246,0.12)" }}
@@ -1943,7 +1951,7 @@ export default function Home() {
                 >
                   <div className="text-3xl mb-2.5 leading-none">{item.icon}</div>
                   <div className="text-xs font-medium text-slate-300">{item.label}</div>
-                </motion.div>
+                </motion.a>
               ))}
             </motion.div>
           </div>

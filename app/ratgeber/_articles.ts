@@ -167,7 +167,10 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Der beste Auftritt nützt nichts, wenn Anfragen im Postfach untergehen. Eine saubere Anfrage-Strecke sorgt dafür, dass jede Anfrage sofort ankommt, idealerweise gleichzeitig per E-Mail und in einer einfachen Übersicht, damit nichts vergessen wird. Wer schnell zurückruft, gewinnt den Auftrag oft schon allein durch das Tempo.",
         ],
-        link: { label: "Wie eine Website für einen Elektrobetrieb konkret aussieht", href: "/elektriker" },
+        links: [
+          { label: "Website für Handwerker erstellen lassen: Aufbau, Ablauf und Preis", href: "/website-fuer-handwerker" },
+          { label: "Wie eine Website für einen Elektrobetrieb konkret aussieht", href: "/elektriker" },
+        ],
       },
     ],
     faqs: [
@@ -185,6 +188,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "Website für Handwerker", href: "/website-fuer-handwerker" },
       { label: "Website für Elektriker", href: "/elektriker" },
       { label: "Website für Schweißer", href: "/webseite-fuer-schweisser" },
       { label: "Website für Hausmeisterservice", href: "/webseite-fuer-hausmeisterservice" },
@@ -411,13 +415,45 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Einkäufer im Metallbau Aufträge vergeben: Anfrage, Angebotsvergleich, Qualifikationen und Nachweise. Für Lohnfertiger, Stahlbau und Metallverarbeitung.",
     datePublished: "2026-08-11",
-    dateModified: "2026-08-25",
-    readingTime: "6 Min.",
+    dateModified: "2026-09-19",
+    readingTime: "10 Min.",
     intro: [
+      "Aufträge im Metallbau werden anders vergeben, als viele Betriebe annehmen. Die wenigsten landen auf einem Portal. Die meisten gehen an Betriebe, die der Einkäufer schon kennt oder bei einer gezielten Suche findet. Dieser Ratgeber beschreibt den Weg von der Anfrage bis zur Freigabe als Lieferant, nennt die Nachweise, die dabei verlangt werden, und zeigt, was davon auf Ihre Website gehört.",
       "Schweißen ist eine Leistung, die kaum jemand beurteilen kann, bevor sie fertig ist. Weder der Industriekunde, der eine Reparatur an einer Anlage braucht, noch der Hausbesitzer, der ein Geländer will, kann von außen erkennen, ob eine Naht sauber ausgeführt wurde. Beide entscheiden deshalb nach dem, was sie sehen können, und das ist heute meistens die Website.",
       "Die Besonderheit bei Schweißfachbetrieben: Es sind zwei völlig verschiedene Kundengruppen, die auch völlig verschieden suchen. Wer beide bedienen will, muss beide sichtbar ansprechen.",
     ],
     sections: [
+      {
+        heading: "Wie ein Auftrag im Metallbau tatsächlich vergeben wird",
+        paragraphs: [
+          "In der Industrie läuft die Vergabe selten über eine offene Ausschreibung. Der Einkauf oder die Instandhaltung hat einen Bedarf, etwa eine Schweißbaugruppe, eine Reparatur oder eine Serie von Blechteilen, und fragt gezielt einige wenige Betriebe an. Wer auf dieser kurzen Liste nicht steht, erfährt von dem Auftrag gar nicht erst.",
+          "Auf die Liste kommt ein Betrieb auf drei Wegen: weil er schon einmal geliefert hat, weil ihn jemand empfohlen hat, oder weil der Einkäufer ihn bei der Suche nach einem konkreten Verfahren oder Werkstoff gefunden hat. Danach folgt fast immer derselbe Ablauf: Anfrage mit Zeichnung, Angebot, Vergleich, häufig ein Probeauftrag, und erst dann die Aufnahme als freigegebener Lieferant.",
+          "Für kleinere Betriebe ist der dritte Weg der einzige, den sie selbst in der Hand haben. Ein Einkäufer, der nach Lohnfertigung Edelstahl oder nach Reparaturschweißen in seiner Region sucht, muss auf eine Seite treffen, die genau diese Wörter verwendet und die Fragen beantwortet, die er ohnehin stellen würde.",
+        ],
+        bullets: [
+          "Bedarf entsteht in Einkauf, Konstruktion oder Instandhaltung",
+          "Angefragt werden wenige, bereits bekannte oder gezielt gesuchte Betriebe",
+          "Verglichen werden Preis, Liefertermin, Nachweise und Erreichbarkeit",
+          "Nach einem sauberen Probeauftrag folgt die Aufnahme als Lieferant",
+        ],
+      },
+      {
+        heading: "Welche Nachweise Einkäufer sehen wollen",
+        paragraphs: [
+          "Im gewerblichen Bereich entscheidet oft ein einziges Dokument darüber, ob ein Betrieb anbieten darf. Für tragende Bauteile aus Stahl und Aluminium ist das die Zertifizierung nach DIN EN 1090 mit der passenden Ausführungsklasse. Ohne sie darf ein tragendes Bauteil nicht mit CE-Kennzeichnung in Verkehr gebracht werden, und ein Einkäufer fragt deshalb gar nicht erst an.",
+          "Dazu kommen gültige Schweißerprüfungen nach DIN EN ISO 9606, in vielen Betrieben ein Qualitätsnachweis nach DIN EN ISO 3834 und bei größeren Kunden ein Managementsystem nach ISO 9001. Wer für den Druckbehälterbau oder für Schienenfahrzeuge arbeitet, braucht die jeweils eigenen Zulassungen.",
+          "Entscheidend ist, dass diese Nachweise auf der Website stehen, mit Geltungsbereich und am besten als Dokument zum Herunterladen. Ein Einkäufer, der drei Betriebe vergleicht, nimmt den, bei dem er nicht nachfragen muss.",
+        ],
+      },
+      {
+        heading: "Öffentliche Aufträge und Ausschreibungen für Schweißarbeiten",
+        paragraphs: [
+          "Anders läuft es bei Kommunen, Landesbetrieben und dem Bund. Dort werden Bauleistungen nach der VOB/A vergeben, Liefer- und Dienstleistungen nach der Unterschwellenvergabeordnung oder oberhalb der EU-Schwellenwerte nach der Vergabeverordnung. Veröffentlicht wird auf Vergabeplattformen wie service.bund.de, der e-Vergabe des Bundes oder dem Deutschen Vergabeportal, dazu auf den Portalen der Länder.",
+          "Wer dort regelmäßig anbieten will, spart sich viel Papier mit einer Präqualifikation. Für Bauleistungen ist das der Eintrag im Präqualifikationsverzeichnis, mit dem die Eignungsnachweise einmal geprüft und danach nur noch per Nummer angegeben werden.",
+          "Für viele kleine Betriebe lohnt sich die öffentliche Ausschreibung erst als zweites Standbein. Der Aufwand je Angebot ist hoch, und es gewinnt meist der günstigste Bieter. Als Subunternehmer eines größeren Stahlbauers kommt man oft leichter an dieselben Projekte.",
+        ],
+        link: { label: "Lohnschweißen: wie Sie an Aufträge aus der Industrie kommen", href: "/ratgeber/lohnschweissen-industrieauftraege" },
+      },
       {
         heading: "Zwei Zielgruppen, zwei völlig verschiedene Suchen",
         paragraphs: [
@@ -455,6 +491,14 @@ export const ARTICLES: Article[] = [
     ],
     faqs: [
       {
+        q: "Wo finde ich Ausschreibungen für Schweißarbeiten und Metallbau?",
+        a: "Öffentliche Auftraggeber veröffentlichen auf Vergabeplattformen wie service.bund.de, der e-Vergabe des Bundes, dem Deutschen Vergabeportal und den Portalen der Länder. Industrieaufträge werden dagegen fast nie ausgeschrieben, sondern gezielt bei wenigen bekannten oder online gefundenen Betrieben angefragt.",
+      },
+      {
+        q: "Brauche ich eine Zertifizierung nach DIN EN 1090, um Aufträge zu bekommen?",
+        a: "Für tragende Bauteile aus Stahl und Aluminium ja, weil sie ohne diese Zertifizierung nicht mit CE-Kennzeichnung in Verkehr gebracht werden dürfen. Für Reparaturen, nicht tragende Teile und viele Privataufträge ist sie nicht vorgeschrieben, wird von gewerblichen Kunden aber trotzdem häufig als Nachweis verlangt.",
+      },
+      {
         q: "Soll ich als Schweißer Industrie- und Privatkunden auf einer Website ansprechen?",
         a: "Ja, aber getrennt. Beide Gruppen suchen mit ganz unterschiedlichen Begriffen, der eine nach Reparaturschweißen oder Lohnfertigung, der andere nach Geländer oder Tor. Eigene Abschnitte für beide Bereiche werden von Google besser eingeordnet und sprechen jede Gruppe direkt an.",
       },
@@ -469,8 +513,99 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { label: "Website für Schweißer", href: "/webseite-fuer-schweisser" },
+      { label: "Lohnschweißen: Aufträge aus der Industrie", href: "/ratgeber/lohnschweissen-industrieauftraege" },
       { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
       { label: "Website für Elektriker", href: "/elektriker" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+    ],
+  },
+
+  {
+    slug: "lohnschweissen-industrieauftraege",
+    category: "Branchen",
+    title: "Lohnschweißen: wie Schweißbetriebe an Aufträge aus der Industrie kommen",
+    metaTitle: "Lohnschweißen: Aufträge aus der Industrie | Mehr Auftrag",
+    description:
+      "Wie Lohnschweißer und mobile Schweißbetriebe an Industrieaufträge kommen: wer vergibt, was Einkäufer prüfen und was auf der Website stehen muss.",
+    datePublished: "2026-09-19",
+    dateModified: "2026-09-19",
+    readingTime: "8 Min.",
+    intro: [
+      "Lohnschweißen heißt: Der Kunde liefert Zeichnung und oft auch das Material, Sie liefern die Naht. Für kleine Schweißbetriebe und mobile Schweißer ist das der direkteste Weg in die Industrie, weil kein eigenes Produkt und kein Vertrieb nötig sind. Schwierig ist nur der Anfang, denn Schweißaufträge aus der Industrie werden selten öffentlich vergeben.",
+      "Dieser Ratgeber zeigt, wer Schweißarbeiten überhaupt nach außen gibt, wie diese Betriebe ihre Lohnschweißer finden und was Sie vorbereitet haben sollten, bevor die erste Anfrage kommt.",
+    ],
+    sections: [
+      {
+        heading: "Wer Schweißarbeiten nach außen vergibt",
+        paragraphs: [
+          "Drei Gruppen vergeben regelmäßig Schweißarbeiten. Die erste sind Maschinen- und Anlagenbauer, die Gestelle, Rahmen und Schweißbaugruppen nicht selbst fertigen oder Auftragsspitzen abfedern müssen. Die zweite sind Stahl- und Metallbauer, die für einzelne Projekte Subunternehmer brauchen, in der Werkstatt oder auf der Baustelle. Die dritte sind Betriebe mit eigener Instandhaltung, bei denen eine Anlage steht und schnell jemand mit dem passenden Verfahren gebraucht wird.",
+          "Jede dieser Gruppen sucht anders. Der Anlagenbauer sucht einen verlässlichen Partner für wiederkehrende Teile und achtet auf Nachweise und Termintreue. Der Stahlbauer sucht Kapazität für einen begrenzten Zeitraum. Die Instandhaltung sucht jemanden, der heute noch ans Telefon geht.",
+        ],
+        bullets: [
+          "Maschinen- und Anlagenbau: Schweißbaugruppen, Gestelle, Auftragsspitzen",
+          "Stahl- und Metallbau: Subunternehmer für Werkstatt und Montage",
+          "Instandhaltung: Reparaturschweißen, oft unter Zeitdruck und vor Ort",
+        ],
+      },
+      {
+        heading: "Wie diese Betriebe ihre Lohnschweißer finden",
+        paragraphs: [
+          "Der häufigste Weg ist die Empfehlung unter Kollegen, der zweithäufigste die Suche im Netz. Gesucht wird selten nach dem Wort Schweißer allein, sondern nach der konkreten Aufgabe: Lohnschweißen Edelstahl, WIG-Schweißen Aluminium, Reparaturschweißen Gusseisen, mobiler Schweißservice mit dem Namen der Region. Wer diese Begriffe auf seiner Seite nicht verwendet, taucht bei diesen Suchen nicht auf, egal wie gut die Arbeit ist.",
+          "Daneben gibt es Zulieferportale und Auftragsbörsen für die Metallbearbeitung. Sie können für den Einstieg sinnvoll sein, haben aber zwei Nachteile: Sie konkurrieren dort fast nur über den Preis, und der Kontakt gehört der Plattform. Eine Anfrage, die über die eigene Seite kommt, ist dagegen von Anfang an ein direkter Kundenkontakt.",
+        ],
+        link: { label: "Wie die Auftragsvergabe im Metallbau insgesamt abläuft", href: "/ratgeber/auftraege-schweisser-metallbau" },
+      },
+      {
+        heading: "Was ein Einkäufer vor der ersten Anfrage prüft",
+        paragraphs: [
+          "Bevor ein Industriekunde eine Zeichnung schickt, will er in wenigen Minuten wissen, ob Sie infrage kommen. Er sucht nach Verfahren und Werkstoffen, nach den maximalen Abmessungen und Gewichten, die Sie handhaben können, nach gültigen Schweißerprüfungen und, wenn es um tragende Bauteile geht, nach der Zertifizierung nach DIN EN 1090.",
+          "Fehlt eine dieser Angaben, ruft er nicht an, um nachzufragen. Er nimmt den nächsten Betrieb auf der Liste. Deshalb gehören diese Angaben gesammelt an eine Stelle, am besten als kurze Übersicht mit den Nachweisen zum Herunterladen.",
+        ],
+        bullets: [
+          "Verfahren: WIG, MIG, MAG, E-Hand, mit den jeweiligen Werkstoffen",
+          "Kapazität: Werkstattgröße, Krane, größte Bauteilabmessung",
+          "Nachweise: Schweißerprüfungen, DIN EN 1090, DIN EN ISO 3834, soweit vorhanden",
+          "Einsatzgebiet: Werkstatt, mobil beim Kunden oder beides, mit Region",
+        ],
+      },
+      {
+        heading: "Das Angebot: schnell schlägt perfekt",
+        paragraphs: [
+          "Bei Lohnarbeiten gewinnt häufig der Betrieb, der zuerst ein nachvollziehbares Angebot schickt. Nachvollziehbar heißt: klare Abgrenzung, was enthalten ist und was nicht, etwa Materialbeistellung, Nahtvorbereitung, Prüfungen und Transport. Ein Stundensatz für Arbeiten beim Kunden und ein Stückpreis für Werkstattteile gehören getrennt ausgewiesen.",
+          "Wenn Sie beim Kunden im Betrieb arbeiten, sollte vertraglich eindeutig sein, dass Sie ein eigenes Werk schulden und nicht als überlassene Arbeitskraft eingesetzt werden. Das ist eine rechtliche Frage, die Sie einmal mit Ihrem Steuerberater oder Anwalt klären sollten, bevor der erste größere Einsatz ansteht.",
+        ],
+      },
+      {
+        heading: "Vom Probeauftrag zum festen Lieferanten",
+        paragraphs: [
+          "Der erste Auftrag ist fast immer klein. Er ist der eigentliche Test: Stimmt die Qualität, kommt die Ware zum zugesagten Termin, ist jemand erreichbar, wenn etwas unklar ist. Wer diesen Test besteht, wird als Lieferant angelegt und bekommt die nächsten Anfragen automatisch.",
+          "Fotos solcher Aufträge, mit Einverständnis des Kunden und ohne vertrauliche Details, sind danach Ihr stärkstes Verkaufsargument. Ein Einkäufer erkennt an einer sauber fotografierten Naht mehr als an jedem Werbetext.",
+        ],
+        link: { label: "Website für Schweißer und Metallbauer, die solche Anfragen bringt", href: "/webseite-fuer-schweisser" },
+      },
+    ],
+    faqs: [
+      {
+        q: "Was ist Lohnschweißen?",
+        a: "Beim Lohnschweißen führt ein Schweißbetrieb Schweißarbeiten im Auftrag eines anderen Unternehmens aus, nach dessen Zeichnung und häufig mit beigestelltem Material. Abgerechnet wird je Stück oder nach Aufwand. Typische Auftraggeber sind Maschinenbauer, Stahlbauer und Betriebe mit eigener Instandhaltung.",
+      },
+      {
+        q: "Wie komme ich als Lohnschweißer an Aufträge?",
+        a: "Über drei Wege: Empfehlungen aus bestehenden Kontakten, direkte Ansprache von Maschinenbauern und Stahlbauern in der Region und eine Website, die Verfahren, Werkstoffe, Kapazität und Nachweise so konkret nennt, dass Einkäufer sie bei ihrer Suche finden. Portale können ergänzen, ersetzen den direkten Kundenkontakt aber nicht.",
+      },
+      {
+        q: "Brauche ich als Lohnschweißer eine Zertifizierung?",
+        a: "Gültige Schweißerprüfungen nach DIN EN ISO 9606 werden praktisch immer erwartet. Für tragende Bauteile aus Stahl und Aluminium ist zusätzlich die Zertifizierung nach DIN EN 1090 nötig. Für Reparaturen und nicht tragende Teile ist sie nicht vorgeschrieben, erleichtert aber den Zugang zu größeren Kunden.",
+      },
+      {
+        q: "Lohnen sich Auftragsbörsen für Schweißarbeiten?",
+        a: "Für den Einstieg können sie erste Kontakte bringen. Auf Dauer ist der Preisdruck dort hoch, und der Kundenkontakt liegt bei der Plattform. Sinnvoll ist, Portale als Ergänzung zu nutzen und parallel die eigene Auffindbarkeit aufzubauen.",
+      },
+    ],
+    related: [
+      { label: "Website für Schweißer", href: "/webseite-fuer-schweisser" },
+      { label: "Auftragsvergabe im Metallbau", href: "/ratgeber/auftraege-schweisser-metallbau" },
+      { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
   },
@@ -755,6 +890,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "Website selbst bauen oder Agentur beauftragen?", href: "/ratgeber/website-selbst-oder-agentur" },
       { label: "Unser Angebot zur Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
       { label: "Was SEO kostet und ab wann es sich rechnet", href: "/ratgeber/was-seo-kostet" },
       { label: "SEO oder Google Ads im Vergleich", href: "/ratgeber/seo-oder-google-ads" },
@@ -1266,7 +1402,7 @@ export const ARTICLES: Article[] = [
     title: "Warum finde ich meine Website nicht bei Google?",
     metaTitle: "Website nicht bei Google gefunden: 9 Gründe | Mehr Auftrag",
     description:
-      "Ihre Seite ist online, taucht bei Google aber nicht auf. Neun Gründe, wie Sie jeden davon in wenigen Minuten selbst prüfen, und in welcher Reihenfolge Sie vorgehen.",
+      "Ihre Website ist online, wird bei Google aber nicht gefunden? Neun Gründe, die Sie in wenigen Minuten selbst prüfen können, und die richtige Reihenfolge.",
     datePublished: "2026-09-08",
     dateModified: "2026-09-09",
     readingTime: "8 Min.",
@@ -1369,7 +1505,10 @@ export const ARTICLES: Article[] = [
           "Die Punkte eins bis vier kann jeder prüfen, der eine Viertelstunde Zeit hat. Ab Punkt sechs wird es Arbeit, weil dann Seiten entstehen müssen, die es vorher nicht gab.",
           "Genau das ist unsere Arbeit. Wir bauen Websites für Handwerks- und Dienstleistungsbetriebe so auf, dass für jede Leistung eine eigene Seite existiert, und kümmern uns anschließend darum, dass diese Seiten gefunden werden.",
         ],
-        link: { label: "Was zu unserer Suchmaschinenoptimierung gehört", href: "/suchmaschinenoptimierung" },
+        links: [
+          { label: "Was zu unserer Suchmaschinenoptimierung gehört", href: "/suchmaschinenoptimierung" },
+          { label: "Die Website wird gefunden, bringt aber keine Anfragen? Woran das liegt", href: "/website-bringt-keine-anfragen" },
+        ],
       },
       {
         heading: "Wissen, woran es bei Ihnen konkret liegt",
@@ -1398,6 +1537,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "KI-Suche und Google: was sich für Betriebe ändert", href: "/ratgeber/ki-suche-google-2026" },
       { label: "Lokale Sichtbarkeit und Google Maps", href: "/ratgeber/lokale-seo-google-maps" },
       { label: "SEO oder Google Ads?", href: "/ratgeber/seo-oder-google-ads" },
       { label: "Hosting und Domain verständlich erklärt", href: "/ratgeber/hosting-und-domain-erklaert" },
@@ -1411,7 +1551,7 @@ export const ARTICLES: Article[] = [
     title: "Hosting und Domain verständlich erklärt",
     metaTitle: "Hosting und Domain verständlich erklärt | Mehr Auftrag",
     description:
-      "Was Domain, Web Hosting und Website wirklich voneinander unterscheidet, worauf Sie als Betrieb achten sollten und warum die Frage nach dem Eigentum die wichtigste ist.",
+      "Was Domain, Web Hosting und Website voneinander unterscheidet, worauf Betriebe achten sollten und warum die Frage nach dem Eigentum die wichtigste ist.",
     datePublished: "2026-09-08",
     dateModified: "2026-09-09",
     readingTime: "7 Min.",
@@ -1586,6 +1726,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     related: [
+      { label: "Corporate Design und Werbemittel aus einer Hand", href: "/ratgeber/corporate-design-werbemittel" },
       { label: "So arbeiten wir bei der Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
       { label: "Webdesign in Frankfurt & Umgebung", href: "/ratgeber/webdesign-frankfurt" },
       { label: "Google Ads Betreuung", href: "/google-ads" },

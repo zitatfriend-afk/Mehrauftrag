@@ -182,6 +182,28 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     successNote: DEFAULT_SUCCESS,
   },
 
+  "lohnschweissen-industrieauftraege": {
+    slug: "lohnschweissen-industrieauftraege",
+    audience: "Lohnschweißer & mobile Schweißbetriebe",
+    metaTitle: "Kostenlose Website-Analyse für Lohnschweißer | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse für Lohnschweißer und mobile Schweißbetriebe: ob Einkäufer aus der Industrie Sie finden und auf Ihrer Seite alles sehen, was sie vor einer Anfrage prüfen.",
+    eyebrow: "Für Lohnschweißer & mobile Schweißbetriebe",
+    h1: "Kostenlose Website-Analyse für Ihren Lohnschweißbetrieb",
+    intro:
+      "Wir prüfen, ob ein Einkäufer aus der Industrie Sie bei seiner Suche findet und ob Verfahren, Werkstoffe, Kapazität und Nachweise so auf Ihrer Seite stehen, dass er ohne Rückfrage anfragen kann.",
+    benefits: [
+      "Bei Suchen nach Verfahren und Werkstoff gefunden werden",
+      "Nachweise und Kapazität auf einen Blick zeigen",
+      "Mobile Einsätze und Region klar benennen",
+      "Anfragen direkt statt über Portale bekommen",
+    ],
+    formHeadline: "Kostenlose Analyse für Ihren Betrieb",
+    formNote: "Wir melden uns per WhatsApp oder Anruf, wie es Ihnen lieber ist.",
+    leadSource: "Analyse - Lohnschweissen",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   // ─── Grundlagen & Vergleiche ────────────────────────────────────────────────
   "corporate-design-werbemittel": {
     slug: "corporate-design-werbemittel",
