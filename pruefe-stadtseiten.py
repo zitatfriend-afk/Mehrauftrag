@@ -106,7 +106,11 @@ def kopf(html: str, feld: str):
 
 
 def stadtteile(html: str):
-    return set(re.findall(r'<span class="badge">📍 ([^<]+)</span>', html))
+    # Die Ortsmarke steht seit dem 20.09.2026 als gezeichnetes Symbol (SVG) im
+    # Abzeichen, vorher als Emoji. Beide Schreibweisen zaehlen, die Grenzwerte
+    # bleiben unveraendert.
+    return set(o.strip() for o in re.findall(
+        r'<span class="badge">(?:📍|<svg\b[^>]*>.*?</svg>)\s*([^<]+)</span>', html, re.S))
 
 
 # ----------------------------------------------------------------- Laden
