@@ -77,6 +77,7 @@ export const CASES: Case[] = [
         heading: "Was sich dadurch verändert hat",
         paragraphs: [
           "Der Betrieb wirkt online jetzt so verlässlich wie am Bau. Besucher sehen sofort, dass alles aus einer Hand kommt, und fragen gezielt die passende Leistung an statt allgemein nach einem Angebot. Das spart auf beiden Seiten den ersten Klärungsdurchlauf.",
+          "Dazu kommt ein Effekt, den uns mehrere Kunden unabhängig voneinander schildern. Seit Interessenten ihre Anfrage online stellen können, klingelt das Telefon seltener wegen Fragen, die die Website längst beantwortet. Was ankommt, ist eher eine konkrete Anfrage mit Leistung und Eckdaten als ein Anruf zwischen zwei Baustellen. Das nimmt im Arbeitsalltag spürbar Druck heraus.",
         ],
       },
       {
@@ -91,7 +92,7 @@ export const CASES: Case[] = [
       { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
     ],
     datePublished: "2026-08-25",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-21",
   },
   {
     slug: "pizzeria-da-salvatore",
@@ -244,6 +245,13 @@ export const CASES: Case[] = [
         ],
       },
       {
+        heading: "Weniger Anrufe ohne Ziel, mehr Anfragen mit Substanz",
+        paragraphs: [
+          "In der Reinigung kostet jeder Anruf ohne konkretes Anliegen Zeit, die im Objekt fehlt. Das Anfrageformular fragt deshalb gleich ab, worum es geht und um welche Art von Objekt es sich handelt.",
+          "Von mehreren Kunden hören wir seither dasselbe: weniger Anrufe, die zu nichts führen, dafür mehr Anfragen, mit denen sich direkt ein Angebot vorbereiten lässt. Wer schriftlich anfragt, hat sich vorher mit den Leistungen beschäftigt und meint es in aller Regel ernst.",
+        ],
+      },
+      {
         heading: "Ergebnis",
         paragraphs: [
           "Interessenten finden schnell die passende Leistung und fragen direkt an, statt woanders weiterzusuchen.",
@@ -255,7 +263,7 @@ export const CASES: Case[] = [
       { label: "Rahmenverträge in der Gebäudereinigung", href: "/ratgeber/auftraege-gebaeudereinigung" },
     ],
     datePublished: "2026-08-25",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-21",
   },
   {
     slug: "blitz-industrie-gebaeudereinigung",
@@ -305,6 +313,13 @@ export const CASES: Case[] = [
           "Kunden erkennen sofort, welcher Bereich zu ihnen passt, und der Betrieb wirkt online so verlässlich wie im echten Geschäft.",
         ],
       },
+      {
+        heading: "Was uns Kunden nach dem Start berichten",
+        paragraphs: [
+          "Eine Rückmeldung bekommen wir nach dem Start einer neuen Seite immer wieder. Wer online anfragen kann, ruft nicht mehr wegen jeder Kleinigkeit an. Die Anfragen kommen schriftlich, mit Objekt und gewünschter Leistung, und lassen sich in Ruhe beantworten.",
+          "Für einen Betrieb, der tagsüber in den Objekten unterwegs ist, heißt das vor allem weniger Stress. Das Telefon bleibt frei für die Gespräche, auf die es ankommt.",
+        ],
+      },
     ],
     links: [
       { label: "Website für Hausmeisterservice und Objektbetreuung", href: "/webseite-fuer-hausmeisterservice" },
@@ -312,7 +327,7 @@ export const CASES: Case[] = [
       { label: "Ausschreibungen für Hausmeisterdienste finden", href: "/ratgeber/auftraege-hausmeisterservice" },
     ],
     datePublished: "2026-08-25",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-21",
   },
 ];
 
