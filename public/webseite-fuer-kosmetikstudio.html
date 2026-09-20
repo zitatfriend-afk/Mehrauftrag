@@ -475,7 +475,16 @@
     .nav-call{border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--border)}
   }
   h1,h2,h3,h4,h5{overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
-</style>
+
+  /* SYMBOLE-2026-09-20  gezeichnete Symbole statt Emoji, sonst unveraendert */
+  .ma-i{width:1.2em;height:1.2em;flex:none;display:inline-block;vertical-align:-.2em;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+  .badge .ma-i,.btn .ma-i,.pill .ma-i{width:1.05em;height:1.05em}
+  .ico,.ic,.fi,.mi{color:var(--gold-d,var(--rose-d,var(--accent,currentColor)))}
+  input,textarea,select{font-size:16px!important}
+    /* SCHRIFT-2026-09-20  Fliesstext in Geist, Ueberschriften bleiben in der Serifenschrift */
+  @font-face{font-family:"Geist";src:url("/fonts/geist-variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+  body,.btn,input,textarea,button{font-family:"Geist",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  </style>
 </head>
 <body>
 
@@ -590,12 +599,12 @@
       <p>Eine Kundin überfliegt Ihre Seite in Sekunden. Beantwortet sie diese Fragen sofort, bucht sie. Wenn nicht, geht sie zur nächsten.</p>
     </div>
     <div class="grid g3">
-      <div class="card"><div class="ic">💅</div><h3>Was bietest du an?</h3><p>Alle Behandlungen klar sortiert, von Gesichtsbehandlung über Wimpern bis Permanent Make-up. Verständlich beschrieben, nicht in Fachsprache versteckt.</p></div>
-      <div class="card"><div class="ic">💶</div><h3>Was kostet es?</h3><p>Transparente Preise geben Sicherheit. Wer vorher weiß, was auf sie zukommt, bucht eher und fragt seltener zögernd nach.</p></div>
-      <div class="card"><div class="ic">📅</div><h3>Wie bekomme ich einen Termin?</h3><p>Buchen mit einem Tap, rund um die Uhr. Kein Warten auf eine Antwort im Chat, kein Termin geht mehr verloren.</p></div>
-      <div class="card"><div class="ic">✨</div><h3>Kann sie das wirklich?</h3><p>Echte Vorher-Nachher-Bilder Ihrer Arbeit sagen mehr als jeder Werbetext. Die Bilder sind der stärkste Grund, ausgerechnet Sie zu buchen.</p></div>
-      <div class="card"><div class="ic">📍</div><h3>Wo finde ich dich?</h3><p>Adresse, Karte und ein Klick zur Route. Ob eigenes Studio oder mobil, der Weg zu Ihnen darf nie das Hindernis sein.</p></div>
-      <div class="card"><div class="ic">⭐</div><h3>Kann ich dir vertrauen?</h3><p>Ihre Qualifikation, Hygiene und echte Google-Bewertungen sichtbar eingebunden. Genau das gibt den letzten Anstoß zur Buchung.</p></div>
+      <div class="card"><div class="ic"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></div><h3>Was bietest du an?</h3><p>Alle Behandlungen klar sortiert, von Gesichtsbehandlung über Wimpern bis Permanent Make-up. Verständlich beschrieben, nicht in Fachsprache versteckt.</p></div>
+      <div class="card"><div class="ic"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.500" y="6" width="19" height="12" rx="2.500"/><circle cx="12" cy="12" r="2.800"/><path d="M6 9.500v5M18 9.500v5"/></svg></div><h3>Was kostet es?</h3><p>Transparente Preise geben Sicherheit. Wer vorher weiß, was auf sie zukommt, bucht eher und fragt seltener zögernd nach.</p></div>
+      <div class="card"><div class="ic"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div><h3>Wie bekomme ich einen Termin?</h3><p>Buchen mit einem Tap, rund um die Uhr. Kein Warten auf eine Antwort im Chat, kein Termin geht mehr verloren.</p></div>
+      <div class="card"><div class="ic"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></div><h3>Kann sie das wirklich?</h3><p>Echte Vorher-Nachher-Bilder Ihrer Arbeit sagen mehr als jeder Werbetext. Die Bilder sind der stärkste Grund, ausgerechnet Sie zu buchen.</p></div>
+      <div class="card"><div class="ic"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><h3>Wo finde ich dich?</h3><p>Adresse, Karte und ein Klick zur Route. Ob eigenes Studio oder mobil, der Weg zu Ihnen darf nie das Hindernis sein.</p></div>
+      <div class="card"><div class="ic"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2.5 14.9 8.6 21.5 9.5 16.7 14.1 17.9 20.7 12 17.5 6.1 20.7 7.3 14.1 2.5 9.5 9.1 8.6"/></svg></div><h3>Kann ich dir vertrauen?</h3><p>Ihre Qualifikation, Hygiene und echte Google-Bewertungen sichtbar eingebunden. Genau das gibt den letzten Anstoß zur Buchung.</p></div>
     </div>
   </div>
 </section>
@@ -609,14 +618,14 @@
       <p>Jeder Baustein hat eine Aufgabe: aus einer neugierigen Besucherin eine feste Kundin machen. Das richten wir Ihnen komplett fertig ein.</p>
     </div>
     <div class="grid g2">
-      <div class="feat"><span class="fi">📅</span><div><h3>Online-Terminbuchung</h3><p>Kundinnen buchen ihren Termin direkt über die Seite, rund um die Uhr. Auf Wunsch mit automatischer Erinnerung gegen No-Shows.</p></div></div>
-      <div class="feat"><span class="fi">💅</span><div><h3>Behandlungen &amp; Preise</h3><p>Ihre Leistungen übersichtlich mit Beschreibung, Dauer und Preis. In Minuten selbst aktualisiert, ohne neuen Druck.</p></div></div>
-      <div class="feat"><span class="fi">✨</span><div><h3>Vorher-Nachher-Galerie</h3><p>Ihre Ergebnisse ins beste Licht gerückt. Echte Bilder Ihrer Arbeit sind das stärkste Verkaufsargument, das Sie haben.</p></div></div>
-      <div class="feat"><span class="fi">🗺️</span><div><h3>Sichtbar bei Google Maps</h3><p>Auf Ihre Behandlungen und Ihren Ort optimiert, damit Sie bei „Kosmetik", „Wimpern" oder „Nägel in der Nähe" erscheinen.</p></div></div>
-      <div class="feat"><span class="fi">📱</span><div><h3>Für das Handy gebaut</h3><p>Blitzschnell und fingerfreundlich, denn genau am Handy entscheidet sich Ihre Kundin. Alles Wichtige sofort erreichbar.</p></div></div>
-      <div class="feat"><span class="fi">📸</span><div><h3>Instagram sinnvoll verbunden</h3><p>Ihr Feed wird eingebunden, aber die Buchung passiert bei Ihnen. So wird aus Followern endlich planbarer Umsatz.</p></div></div>
-      <div class="feat"><span class="fi">⭐</span><div><h3>Google-Profil &amp; Bewertungen</h3><p>Wir verbinden Seite und Google-Unternehmensprofil und binden Ihre Sterne dort ein, wo sie zur Buchung führen.</p></div></div>
-      <div class="feat"><span class="fi">🔒</span><div><h3>DSGVO &amp; Vertrauen</h3><p>Sauberer Datenschutz, sichere Formulare und eine einfache Einverständnislösung für Kundenbilder. Rechtlich auf der sicheren Seite.</p></div></div>
+      <div class="feat"><span class="fi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><div><h3>Online-Terminbuchung</h3><p>Kundinnen buchen ihren Termin direkt über die Seite, rund um die Uhr. Auf Wunsch mit automatischer Erinnerung gegen No-Shows.</p></div></div>
+      <div class="feat"><span class="fi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></span><div><h3>Behandlungen &amp; Preise</h3><p>Ihre Leistungen übersichtlich mit Beschreibung, Dauer und Preis. In Minuten selbst aktualisiert, ohne neuen Druck.</p></div></div>
+      <div class="feat"><span class="fi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></span><div><h3>Vorher-Nachher-Galerie</h3><p>Ihre Ergebnisse ins beste Licht gerückt. Echte Bilder Ihrer Arbeit sind das stärkste Verkaufsargument, das Sie haben.</p></div></div>
+      <div class="feat"><span class="fi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><h3>Sichtbar bei Google Maps</h3><p>Auf Ihre Behandlungen und Ihren Ort optimiert, damit Sie bei „Kosmetik", „Wimpern" oder „Nägel in der Nähe" erscheinen.</p></div></div>
+      <div class="feat"><span class="fi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><div><h3>Für das Handy gebaut</h3><p>Blitzschnell und fingerfreundlich, denn genau am Handy entscheidet sich Ihre Kundin. Alles Wichtige sofort erreichbar.</p></div></div>
+      <div class="feat"><span class="fi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2.5h7L17 8h3a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 20 20H4a1.5 1.5 0 0 1-1.5-1.5v-9A1.5 1.5 0 0 1 4 8z"/><circle cx="12" cy="13.5" r="3.5"/></svg></span><div><h3>Instagram sinnvoll verbunden</h3><p>Ihr Feed wird eingebunden, aber die Buchung passiert bei Ihnen. So wird aus Followern endlich planbarer Umsatz.</p></div></div>
+      <div class="feat"><span class="fi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2.5 14.9 8.6 21.5 9.5 16.7 14.1 17.9 20.7 12 17.5 6.1 20.7 7.3 14.1 2.5 9.5 9.1 8.6"/></svg></span><div><h3>Google-Profil &amp; Bewertungen</h3><p>Wir verbinden Seite und Google-Unternehmensprofil und binden Ihre Sterne dort ein, wo sie zur Buchung führen.</p></div></div>
+      <div class="feat"><span class="fi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10.5" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span><div><h3>DSGVO &amp; Vertrauen</h3><p>Sauberer Datenschutz, sichere Formulare und eine einfache Einverständnislösung für Kundenbilder. Rechtlich auf der sicheren Seite.</p></div></div>
     </div>
   </div>
 </section>
@@ -681,16 +690,16 @@
               <span class="mock-btn">Termin anfragen</span>
             </div>
             <div class="mock-cards">
-              <div class="mock-svc"><div class="mi">💄</div><div class="mt">Braut Make-up</div><div class="mp">ab 250 €</div></div>
-              <div class="mock-svc"><div class="mi">✨</div><div class="mt">Microneedling</div><div class="mp">ab 65 €</div></div>
-              <div class="mock-svc"><div class="mi">👁️</div><div class="mt">Wimpern &amp; Brauen</div><div class="mp">ab 10 €</div></div>
+              <div class="mock-svc"><div class="mi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></div><div class="mt">Braut Make-up</div><div class="mp">ab 250 €</div></div>
+              <div class="mock-svc"><div class="mi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></div><div class="mt">Microneedling</div><div class="mp">ab 65 €</div></div>
+              <div class="mock-svc"><div class="mi"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="mt">Wimpern &amp; Brauen</div><div class="mp">ab 10 €</div></div>
             </div>
           </div>
         </div>
       </a>
       <div>
         <div class="badges">
-          <span class="badge">💄 Kosmetik &amp; Make-up</span>
+          <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg> Kosmetik &amp; Make-up</span>
           <span class="badge">Mobiler Service</span>
           <span class="badge">Live im Netz</span>
         </div>
@@ -715,7 +724,7 @@
       <p>Wir sind eine kleine Digitalagentur, die liefert statt lange zu reden. 5,0 von 5 Sternen bei Google, das sagen Kundinnen und Kunden über die Zusammenarbeit.</p>
     </div>
     <div class="badges" style="justify-content:center;margin-bottom:26px">
-      <span class="badge">⭐ 5,0 bei Google</span>
+      <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2.5 14.9 8.6 21.5 9.5 16.7 14.1 17.9 20.7 12 17.5 6.1 20.7 7.3 14.1 2.5 9.5 9.1 8.6"/></svg> 5,0 bei Google</span>
       <span class="badge">Kostenloser Entwurf vorab</span>
       <span class="badge">Keine lange Vertragsbindung</span>
     </div>

@@ -500,6 +500,46 @@ h1,h2,h3,h4{overflow-wrap:break-word;hyphens:auto}
   body{font-family:var(--font);text-rendering:optimizeLegibility}
   h1,h2{text-wrap:balance}
   .brand-logo,.logo-mark{border-radius:0!important;object-fit:contain!important;box-shadow:none!important;background:none!important}
+  
+  /* PREMIUM-SCHICHT-2026-09-20  dunkle Seiten
+     Reine Gestaltung ueber der bestehenden Vorlage: Lichtschein und Raster im
+     Einstieg, abgesetzte Abschnitte, deutlichere Karten, groessere Lesetexte,
+     gezeichnete Symbole statt Emoji. Kein Text, kein Formular, kein Link geaendert. */
+  :root{--ma:var(--acc,var(--blue,#3b82f6));--ma-2:var(--acc-2,var(--blue-2,#2563eb));--ma-soft:var(--acc-soft,var(--blue-soft,rgba(59,130,246,.12)))}
+  body{font-size:16.5px;line-height:1.68;background-image:radial-gradient(900px 520px at 85% -120px,color-mix(in srgb,var(--ma) 22%,transparent),transparent 70%),radial-gradient(700px 480px at -10% 30%,color-mix(in srgb,var(--ma) 10%,transparent),transparent 70%);background-repeat:no-repeat}
+  .ma-i{width:1.2em;height:1.2em;flex:none;display:inline-block;vertical-align:-.2em;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+  .badge .ma-i,.btn .ma-i{width:1.05em;height:1.05em}
+  .ico,.ic,.fi,.mi{color:var(--ma);background:linear-gradient(145deg,color-mix(in srgb,var(--ma) 22%,transparent),color-mix(in srgb,var(--ma) 8%,transparent))!important;border:1px solid color-mix(in srgb,var(--ma) 38%,transparent)!important;box-shadow:0 8px 22px -12px var(--ma)}
+  h1{letter-spacing:-.03em;line-height:1.06}
+  h2{letter-spacing:-.025em;line-height:1.12;font-size:clamp(1.6rem,4.2vw,2.45rem)}
+  h3{letter-spacing:-.012em}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;letter-spacing:.15em}
+  .eyebrow:before{content:"";width:22px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--ma),transparent)}
+  .section-head.center .eyebrow{justify-content:center}
+  .section-head p,.lead{color:color-mix(in srgb,var(--text,#eaf1fb) 78%,transparent)}
+  p,li{color:color-mix(in srgb,var(--text,#eaf1fb) 74%,transparent)}
+  .hero{position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:46px 46px;-webkit-mask-image:radial-gradient(75% 80% at 65% 10%,#000,transparent 75%);mask-image:radial-gradient(75% 80% at 65% 10%,#000,transparent 75%)}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--ma) 60%,transparent),transparent)}
+  .hero>*{position:relative}
+  main>section:nth-of-type(even):not(.hero){background-color:rgba(255,255,255,.022);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+  .btn{transition:transform .18s ease,box-shadow .22s ease,border-color .2s ease,background .2s ease}
+  .btn-primary{box-shadow:0 1px 0 rgba(255,255,255,.28) inset,0 14px 34px -12px var(--ma)!important}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.34) inset,0 20px 42px -12px var(--ma)!important}
+  .btn-secondary:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--ma) 60%,transparent)}
+  .card,.step,.stat,.feat,.faq details,details{transition:transform .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 24px 50px -34px rgba(0,0,0,.9)}
+  .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--ma) 45%,transparent);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03))}
+  .hero-form,.lead-box,.formcard{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.035))!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 40px 90px -40px rgba(0,0,0,.95),0 0 0 1px color-mix(in srgb,var(--ma) 14%,transparent)}
+  .hero-form:before,.lead-box:before,.formcard:before{content:"";position:absolute;left:18px;right:18px;top:0;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--ma),transparent)}
+  input,textarea,select{font-size:16px!important}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ma)!important;box-shadow:0 0 0 4px color-mix(in srgb,var(--ma) 22%,transparent)}
+  .field-check,.check-row,.consent{color:color-mix(in srgb,var(--text,#eaf1fb) 72%,transparent)!important}
+  .badge,.pill{backdrop-filter:blur(6px)}
+  details[open]{border-color:color-mix(in srgb,var(--ma) 45%,transparent)!important}
+  footer{border-top:1px solid rgba(255,255,255,.08)}
+  @media(max-width:600px){body{font-size:16px}h1{font-size:clamp(1.9rem,8.4vw,2.4rem)}.hero{padding-top:34px!important;padding-bottom:46px!important}section{scroll-margin-top:70px}}
+  @supports not (color:color-mix(in srgb,red,blue)){.ico,.ic,.fi,.mi{background:var(--ma-soft)!important}p,li{color:var(--muted,#9fb0c9)}}
   </style>
 </head>
 <body>
@@ -544,7 +584,7 @@ h1,h2,h3,h4{overflow-wrap:break-word;hyphens:auto}
       </div>
       <div class="hero-cta">
         <a href="#anfrage" class="btn btn-primary">Kostenlosen Entwurf sichern</a>
-        <a href="https://wa.me/4915202069625" class="btn btn-secondary" target="_blank" rel="noopener">💬 WhatsApp schreiben</a>
+        <a href="https://wa.me/4915202069625" class="btn btn-secondary" target="_blank" rel="noopener"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> WhatsApp schreiben</a>
       </div>
     </div>
 
@@ -626,7 +666,7 @@ h1,h2,h3,h4{overflow-wrap:break-word;hyphens:auto}
       <p>Wer in Walsum sucht, bekommt andere Treffer als jemand in Rheinhausen. Wir nehmen die Ortsteile auf, in denen Sie tatsächlich Aufträge annehmen, nicht alle 46. Eine ehrliche kurze Liste wirkt besser als eine Aufzählung, die nach Textbaustein riecht.</p>
     </div>
     <div class="badges">
-      <span class="badge">📍 Altstadt</span> <span class="badge">📍 Neudorf</span> <span class="badge">📍 Hochfeld</span> <span class="badge">📍 Meiderich</span> <span class="badge">📍 Ruhrort</span> <span class="badge">📍 Marxloh</span> <span class="badge">📍 Hamborn</span> <span class="badge">📍 Walsum</span> <span class="badge">📍 Rheinhausen-Mitte</span> <span class="badge">📍 Homberg</span> <span class="badge">📍 Buchholz</span> <span class="badge">📍 Großenbaum</span> <span class="badge">📍 Huckingen</span> <span class="badge">📍 Wanheimerort</span>
+      <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Altstadt</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Neudorf</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Hochfeld</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Meiderich</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Ruhrort</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Marxloh</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Hamborn</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Walsum</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Rheinhausen-Mitte</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Homberg</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Buchholz</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Großenbaum</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Huckingen</span> <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Wanheimerort</span>
     </div>
   </div>
 </section>
@@ -649,12 +689,12 @@ h1,h2,h3,h4{overflow-wrap:break-word;hyphens:auto}
       <p>Nicht was technisch möglich ist, sondern was den Anruf auslöst.</p>
     </div>
     <div class="grid g3">
-      <article class="card"><div class="ico">☎️</div><h3>Rufnummer ohne Scrollen</h3><p>Auf dem Handy steht die Nummer im ersten sichtbaren Bereich und ist ein Tippen entfernt. Bei Betrieben ohne Büro kommt der Auftrag über den Anruf, nicht über ein Kontaktformular mit acht Feldern.</p></article>
-      <article class="card"><div class="ico">👷</div><h3>Ein Gesicht statt einer Fassade</h3><p>Bei einem Einzelunternehmen kauft der Kunde die Person. Ein echtes Foto und ein Satz, wer Sie sind, wirken stärker als jede Stockfoto-Galerie mit lächelnden Fremden.</p></article>
-      <article class="card"><div class="ico">🗺️</div><h3>Nur die Ortsteile, in denen Sie arbeiten</h3><p>Wir tragen ein, wohin Sie wirklich fahren. Das ist glaubwürdiger als eine Liste aller 46 Ortsteile und wirkt bei lokalen Suchen genauso.</p></article>
-      <article class="card"><div class="ico">📶</div><h3>Schnell auch bei schlechtem Netz</h3><p>Im Hafengebiet und in den Gewerbegebieten ist die Verbindung oft dünn. Die Seite ist so gebaut, dass sie trotzdem in unter zwei Sekunden steht.</p></article>
-      <article class="card"><div class="ico">⚖️</div><h3>Rechtstexte inklusive</h3><p>Impressum, Datenschutz und Cookie-Handling schreiben wir mit. Hosting nach DSGVO, keine externen Schriftarten, keine ungefragten Tracker.</p></article>
-      <article class="card"><div class="ico">🔎</div><h3>Auch für KI-Antworten aufbereitet</h3><p>Immer mehr Leute fragen einen Assistenten statt einer Suchmaschine. Klare Angaben zu Leistung, Einsatzgebiet und Erreichbarkeit sorgen dafür, dass Ihr Betrieb dort richtig wiedergegeben wird.</p></article>
+      <article class="card"><div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Rufnummer ohne Scrollen</h3><p>Auf dem Handy steht die Nummer im ersten sichtbaren Bereich und ist ein Tippen entfernt. Bei Betrieben ohne Büro kommt der Auftrag über den Anruf, nicht über ein Kontaktformular mit acht Feldern.</p></article>
+      <article class="card"><div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></div><h3>Ein Gesicht statt einer Fassade</h3><p>Bei einem Einzelunternehmen kauft der Kunde die Person. Ein echtes Foto und ein Satz, wer Sie sind, wirken stärker als jede Stockfoto-Galerie mit lächelnden Fremden.</p></article>
+      <article class="card"><div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><h3>Nur die Ortsteile, in denen Sie arbeiten</h3><p>Wir tragen ein, wohin Sie wirklich fahren. Das ist glaubwürdiger als eine Liste aller 46 Ortsteile und wirkt bei lokalen Suchen genauso.</p></article>
+      <article class="card"><div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 3.5v17h17"/><path d="M7.5 15.5l4-5 3.5 3 5-7"/></svg></div><h3>Schnell auch bei schlechtem Netz</h3><p>Im Hafengebiet und in den Gewerbegebieten ist die Verbindung oft dünn. Die Seite ist so gebaut, dass sie trotzdem in unter zwei Sekunden steht.</p></article>
+      <article class="card"><div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.4 8.3-8 9-4.6-.7-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Rechtstexte inklusive</h3><p>Impressum, Datenschutz und Cookie-Handling schreiben wir mit. Hosting nach DSGVO, keine externen Schriftarten, keine ungefragten Tracker.</p></article>
+      <article class="card"><div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><h3>Auch für KI-Antworten aufbereitet</h3><p>Immer mehr Leute fragen einen Assistenten statt einer Suchmaschine. Klare Angaben zu Leistung, Einsatzgebiet und Erreichbarkeit sorgen dafür, dass Ihr Betrieb dort richtig wiedergegeben wird.</p></article>
     </div>
   </div>
 </section>
@@ -774,8 +814,8 @@ h1,h2,h3,h4{overflow-wrap:break-word;hyphens:auto}
         <!-- nachbarstaedte-footer:end --></div>
       <div class="foot-col">
         <h4>Kontakt</h4>
-        <a href="tel:+4915202069625">📞 +49 152 02069625</a>
-        <a href="https://wa.me/4915202069625" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="tel:+4915202069625"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +49 152 02069625</a>
+        <a href="https://wa.me/4915202069625" target="_blank" rel="noopener"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> WhatsApp</a>
         <a href="https://www.mehrauftrag.de/">Zur Startseite</a>
         <a href="https://www.mehrauftrag.de/webdesign-standorte">Alle Standorte</a>
         <a href="https://www.mehrauftrag.de/impressum">Impressum</a>

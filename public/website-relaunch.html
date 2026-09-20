@@ -291,6 +291,46 @@
   body{font-family:var(--font);text-rendering:optimizeLegibility}
   h1,h2{text-wrap:balance}
   .brand-logo,.logo-mark{border-radius:0!important;object-fit:contain!important;box-shadow:none!important;background:none!important}
+  
+  /* PREMIUM-SCHICHT-2026-09-20  dunkle Seiten
+     Reine Gestaltung ueber der bestehenden Vorlage: Lichtschein und Raster im
+     Einstieg, abgesetzte Abschnitte, deutlichere Karten, groessere Lesetexte,
+     gezeichnete Symbole statt Emoji. Kein Text, kein Formular, kein Link geaendert. */
+  :root{--ma:var(--acc,var(--blue,#3b82f6));--ma-2:var(--acc-2,var(--blue-2,#2563eb));--ma-soft:var(--acc-soft,var(--blue-soft,rgba(59,130,246,.12)))}
+  body{font-size:16.5px;line-height:1.68;background-image:radial-gradient(900px 520px at 85% -120px,color-mix(in srgb,var(--ma) 22%,transparent),transparent 70%),radial-gradient(700px 480px at -10% 30%,color-mix(in srgb,var(--ma) 10%,transparent),transparent 70%);background-repeat:no-repeat}
+  .ma-i{width:1.2em;height:1.2em;flex:none;display:inline-block;vertical-align:-.2em;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+  .badge .ma-i,.btn .ma-i{width:1.05em;height:1.05em}
+  .ico,.ic,.fi,.mi{color:var(--ma);background:linear-gradient(145deg,color-mix(in srgb,var(--ma) 22%,transparent),color-mix(in srgb,var(--ma) 8%,transparent))!important;border:1px solid color-mix(in srgb,var(--ma) 38%,transparent)!important;box-shadow:0 8px 22px -12px var(--ma)}
+  h1{letter-spacing:-.03em;line-height:1.06}
+  h2{letter-spacing:-.025em;line-height:1.12;font-size:clamp(1.6rem,4.2vw,2.45rem)}
+  h3{letter-spacing:-.012em}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;letter-spacing:.15em}
+  .eyebrow:before{content:"";width:22px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--ma),transparent)}
+  .section-head.center .eyebrow{justify-content:center}
+  .section-head p,.lead{color:color-mix(in srgb,var(--text,#eaf1fb) 78%,transparent)}
+  p,li{color:color-mix(in srgb,var(--text,#eaf1fb) 74%,transparent)}
+  .hero{position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:46px 46px;-webkit-mask-image:radial-gradient(75% 80% at 65% 10%,#000,transparent 75%);mask-image:radial-gradient(75% 80% at 65% 10%,#000,transparent 75%)}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--ma) 60%,transparent),transparent)}
+  .hero>*{position:relative}
+  main>section:nth-of-type(even):not(.hero){background-color:rgba(255,255,255,.022);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+  .btn{transition:transform .18s ease,box-shadow .22s ease,border-color .2s ease,background .2s ease}
+  .btn-primary{box-shadow:0 1px 0 rgba(255,255,255,.28) inset,0 14px 34px -12px var(--ma)!important}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.34) inset,0 20px 42px -12px var(--ma)!important}
+  .btn-secondary:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--ma) 60%,transparent)}
+  .card,.step,.stat,.feat,.faq details,details{transition:transform .2s ease,border-color .2s ease,background .2s ease,box-shadow .2s ease}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 24px 50px -34px rgba(0,0,0,.9)}
+  .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--ma) 45%,transparent);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03))}
+  .hero-form,.lead-box,.formcard{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.035))!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 40px 90px -40px rgba(0,0,0,.95),0 0 0 1px color-mix(in srgb,var(--ma) 14%,transparent)}
+  .hero-form:before,.lead-box:before,.formcard:before{content:"";position:absolute;left:18px;right:18px;top:0;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--ma),transparent)}
+  input,textarea,select{font-size:16px!important}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ma)!important;box-shadow:0 0 0 4px color-mix(in srgb,var(--ma) 22%,transparent)}
+  .field-check,.check-row,.consent{color:color-mix(in srgb,var(--text,#eaf1fb) 72%,transparent)!important}
+  .badge,.pill{backdrop-filter:blur(6px)}
+  details[open]{border-color:color-mix(in srgb,var(--ma) 45%,transparent)!important}
+  footer{border-top:1px solid rgba(255,255,255,.08)}
+  @media(max-width:600px){body{font-size:16px}h1{font-size:clamp(1.9rem,8.4vw,2.4rem)}.hero{padding-top:34px!important;padding-bottom:46px!important}section{scroll-margin-top:70px}}
+  @supports not (color:color-mix(in srgb,red,blue)){.ico,.ic,.fi,.mi{background:var(--ma-soft)!important}p,li{color:var(--muted,#9fb0c9)}}
   </style>
 </head>
 <body>
@@ -332,7 +372,7 @@
       </div>
       <div class="hero-cta">
         <a href="#anfrage" class="btn btn-primary">Kostenloses Angebot einholen</a>
-        <a href="https://wa.me/4915202069625" class="btn btn-secondary" target="_blank" rel="noopener">💬 WhatsApp schreiben</a>
+        <a href="https://wa.me/4915202069625" class="btn btn-secondary" target="_blank" rel="noopener"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> WhatsApp schreiben</a>
       </div>
     </div>
 
@@ -371,37 +411,37 @@
     </div>
     <div class="grid g3">
       <article class="card">
-        <div class="ico">📱</div>
+        <div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
         <span class="tag">Anzeichen 1</span>
         <h3>Auf dem Handy schwer bedienbar</h3>
         <p>Texte zu klein, Buttons verrutscht, waagerechtes Scrollen nötig. Über zwei Drittel der Besucher kommen mobil, eine nicht mobiloptimierte Seite kostet direkt Anfragen.</p>
       </article>
       <article class="card">
-        <div class="ico">🐢</div>
+        <div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></div>
         <span class="tag">Anzeichen 2</span>
         <h3>Spürbar langsame Ladezeit</h3>
         <p>Alte Technik und unkomprimierte Bilder summieren sich über die Jahre. Wer mehrere Sekunden auf die Startseite wartet, ist häufig schon wieder weg.</p>
       </article>
       <article class="card">
-        <div class="ico">🗓️</div>
+        <div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div>
         <span class="tag">Anzeichen 3</span>
         <h3>Letztes Update liegt Jahre zurück</h3>
         <p>Veraltetes Design wirkt auf Besucher wie ein veraltetes Unternehmen, unabhängig davon, wie aktuell die eigentliche Arbeit tatsächlich ist.</p>
       </article>
       <article class="card">
-        <div class="ico">📝</div>
+        <div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2.5H7A2.5 2.5 0 0 0 4.5 5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h5"/></svg></div>
         <span class="tag">Anzeichen 4</span>
         <h3>Inhalte passen nicht mehr zum Angebot</h3>
         <p>Neue Leistungen fehlen, alte werden noch beworben, Preise oder Ansprechpartner stimmen nicht mehr. Das verunsichert eher, als dass es überzeugt.</p>
       </article>
       <article class="card">
-        <div class="ico">🔍</div>
+        <div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
         <span class="tag">Anzeichen 5</span>
         <h3>Kaum noch bei Google auffindbar</h3>
         <p>Technisch veraltete Seiten verlieren mit der Zeit an Sichtbarkeit, weil sie moderne Anforderungen an Ladezeit und mobile Nutzung nicht mehr erfüllen.</p>
       </article>
       <article class="card">
-        <div class="ico">🧩</div>
+        <div class="ico"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 4.5a2 2 0 1 1 4 0V6H18v4.5h1.5a2 2 0 1 1 0 4H18V19h-4.5v-1.5a2 2 0 1 0-4 0V19H5v-4.5H3.5a2 2 0 1 1 0-4H5V6h4.5z"/></svg></div>
         <span class="tag">Anzeichen 6</span>
         <h3>Kein System für eigene Änderungen</h3>
         <p>Jede kleine Textänderung braucht extern Hilfe, weil kein vernünftiges Baukastensystem oder CMS im Hintergrund läuft.</p>
@@ -489,10 +529,10 @@
       <p>Konzept, Abstimmung und Umsetzung laufen komplett aus der Ferne, in ganz Deutschland, Österreich und der Schweiz.</p>
     </div>
     <div class="remote-box">
-      <span class="pill">📹 Termin per Videocall</span>
-      <span class="pill">💬 Rückmeldung per WhatsApp</span>
-      <span class="pill">📝 Kontaktformular oder Anruf</span>
-      <span class="pill">🕐 Rückruf zu Ihrer Zeitzone</span>
+      <span class="pill"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="13" height="12" rx="2.5"/><path d="M15.5 10.5l6-3.5v10l-6-3.5z"/></svg> Termin per Videocall</span>
+      <span class="pill"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> Rückmeldung per WhatsApp</span>
+      <span class="pill"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2.5H7A2.5 2.5 0 0 0 4.5 5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h5"/></svg> Kontaktformular oder Anruf</span>
+      <span class="pill"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg> Rückruf zu Ihrer Zeitzone</span>
     </div>
   </div>
 </section>
@@ -579,8 +619,8 @@
       </div>
       <div class="foot-col">
         <h4>Kontakt</h4>
-        <a href="tel:+4915202069625">📞 +49 152 02069625</a>
-        <a href="https://wa.me/4915202069625" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="tel:+4915202069625"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +49 152 02069625</a>
+        <a href="https://wa.me/4915202069625" target="_blank" rel="noopener"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg> WhatsApp</a>
         <a href="https://www.mehrauftrag.de/impressum">Impressum</a>
         <a href="https://www.mehrauftrag.de/datenschutz">Datenschutz</a>
       </div>
