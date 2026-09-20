@@ -36,5 +36,11 @@
       "app/",
       "public/"
     ]
+  },
+  "72d63fe": {
+    "grund": "20.09.2026: In diesem Commit wurden auf 28 Landingpages in public/ nur Schrift (Geist, lokal) und Logo-Datei getauscht. Reine Gestaltung, der Seitentext ist unveraendert, ein Besucher bekommt keinen neuen Inhalt. Ohne diesen Eintrag truegen alle 16 Stadtseiten und 12 weitere Seiten denselben Zeitstempel.",
+    "pfade": [
+      "public/"
+    ]
   }
 }
