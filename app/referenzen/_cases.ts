@@ -77,7 +77,7 @@ export const CASES: Case[] = [
         heading: "Was sich dadurch verändert hat",
         paragraphs: [
           "Der Betrieb wirkt online jetzt so verlässlich wie am Bau. Besucher sehen sofort, dass alles aus einer Hand kommt, und fragen gezielt die passende Leistung an statt allgemein nach einem Angebot. Das spart auf beiden Seiten den ersten Klärungsdurchlauf.",
-          "Dazu kommt ein Effekt, den uns mehrere Kunden unabhängig voneinander schildern. Seit Interessenten ihre Anfrage online stellen können, klingelt das Telefon seltener wegen Fragen, die die Website längst beantwortet. Was ankommt, ist eher eine konkrete Anfrage mit Leistung und Eckdaten als ein Anruf zwischen zwei Baustellen. Das nimmt im Arbeitsalltag spürbar Druck heraus.",
+          "Das Formular mit Leistungsauswahl verfolgt noch ein zweites Ziel. Wer online anfragen kann, muss nicht wegen Fragen anrufen, die die Website längst beantwortet. Ankommen soll eine konkrete Anfrage mit Leistung und Eckdaten statt eines Anrufs zwischen zwei Baustellen. Ein Werkstattkunde hat uns genau das nach dem Start seiner Seite geschildert: weniger Anrufe ohne Anliegen, mehr brauchbare Anfragen und dadurch weniger Stress im Alltag.",
         ],
       },
       {
@@ -248,7 +248,7 @@ export const CASES: Case[] = [
         heading: "Weniger Anrufe ohne Ziel, mehr Anfragen mit Substanz",
         paragraphs: [
           "In der Reinigung kostet jeder Anruf ohne konkretes Anliegen Zeit, die im Objekt fehlt. Das Anfrageformular fragt deshalb gleich ab, worum es geht und um welche Art von Objekt es sich handelt.",
-          "Von mehreren Kunden hören wir seither dasselbe: weniger Anrufe, die zu nichts führen, dafür mehr Anfragen, mit denen sich direkt ein Angebot vorbereiten lässt. Wer schriftlich anfragt, hat sich vorher mit den Leistungen beschäftigt und meint es in aller Regel ernst.",
+          "Das Ziel dahinter: weniger Anrufe, die zu nichts führen, dafür Anfragen, mit denen sich direkt ein Angebot vorbereiten lässt. Wer schriftlich anfragt, hat sich vorher mit den Leistungen beschäftigt und meint es in aller Regel ernst.",
         ],
       },
       {
@@ -314,10 +314,10 @@ export const CASES: Case[] = [
         ],
       },
       {
-        heading: "Was uns Kunden nach dem Start berichten",
+        heading: "Warum die Anfrage schriftlich ankommen soll",
         paragraphs: [
-          "Eine Rückmeldung bekommen wir nach dem Start einer neuen Seite immer wieder. Wer online anfragen kann, ruft nicht mehr wegen jeder Kleinigkeit an. Die Anfragen kommen schriftlich, mit Objekt und gewünschter Leistung, und lassen sich in Ruhe beantworten.",
-          "Für einen Betrieb, der tagsüber in den Objekten unterwegs ist, heißt das vor allem weniger Stress. Das Telefon bleibt frei für die Gespräche, auf die es ankommt.",
+          "Wer online anfragen kann, muss nicht wegen jeder Kleinigkeit anrufen. Die Anfrage kommt schriftlich, mit Objekt und gewünschter Leistung, und lässt sich in Ruhe beantworten.",
+          "Für einen Betrieb, der tagsüber in den Objekten unterwegs ist, ist das vor allem eine Entlastung. Das Telefon bleibt frei für die Gespräche, auf die es ankommt.",
         ],
       },
     ],
