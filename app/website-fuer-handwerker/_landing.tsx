@@ -336,6 +336,11 @@ function LeadForm() {
   // keine Moeglichkeit anzufragen. Genau dort ging die teuerste Huerde der
   // Seite durch: der Klick war bezahlt, der Besucher sprang trotzdem ab.
   const [email, setEmail] = useState("");
+  // Das E-Mail-Feld ist auf dem Handy zunaechst eingeklappt. Ausgeklappt
+  // schiebt es den Absendeknopf zusammen mit der Preiserklaerung unter die
+  // Falz, gemessen am 23.09.2026 bei 390 Pixel Breite: Unterkante 839 von
+  // 844. Wer die E-Mail will, klappt sie mit einem Tipp auf.
+  const [emailOffen, setEmailOffen] = useState(false);
   const [state, setState] = useState<SubmitState>("idle");
   // Fehlertext getrennt vom Zustand, weil es jetzt zwei Gruende fuer
   // "invalid" gibt: fehlender Vorname oder gar kein Kontaktweg.
@@ -626,14 +631,6 @@ function LeadForm() {
           className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06] sm:py-3"
         />
       </div>
-      {/* Ein Wort dazu, warum hier zwei Felder stehen und nicht eines.
-          Wer seine Nummer nicht herausgeben will, soll sehen, dass er
-          trotzdem anfragen kann, bevor er das Telefonfeld ueberhaupt
-          anfasst. Deshalb steht die Zeile ueber beiden Feldern. */}
-      <p className="pt-1 text-sm text-slate-400">
-        Wie sollen wir uns melden? Telefon oder E-Mail, ganz wie Sie mögen.
-      </p>
-
       <div>
         <label htmlFor="lead-phone" className="sr-only">Telefonnummer</label>
         <input
@@ -650,7 +647,21 @@ function LeadForm() {
           className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06] sm:py-3"
         />
       </div>
-      <div>
+      {/* Wer nicht angerufen werden will, muss sehen, dass er trotzdem
+          anfragen kann. Sichtbar bleibt deshalb immer diese eine Zeile, das
+          Feld selbst kommt erst auf Tipp. So bleibt der Absendeknopf auf dem
+          Handy ueber der Falz und der zweite Weg trotzdem auffindbar. */}
+      {!emailOffen && (
+        <button
+          type="button"
+          onClick={() => setEmailOffen(true)}
+          className="text-sm text-slate-400 underline underline-offset-2 transition hover:text-slate-200"
+        >
+          Lieber per E-Mail? Hier eintragen.
+        </button>
+      )}
+
+      <div className={emailOffen ? "" : "hidden"}>
         <label htmlFor="lead-email" className="sr-only">E-Mail</label>
         <input
           id="lead-email"
@@ -1036,7 +1047,7 @@ export default function HandwerkerLanding() {
               className="mx-auto mt-3 max-w-lg text-sm leading-relaxed"
               style={{ color: "rgba(148,163,184,0.7)" }}
             >
-              Warum so günstig? Weil ich selbst baue und keine Agentur mitverdient. Die 250 € decken die Erstellung, alles Weitere läuft über die monatliche Betreuung. Deshalb können Sie jederzeit zum Monatsende kündigen.
+              Warum so günstig? Ich baue selbst, keine Agentur verdient mit. Kündbar zum Monatsende.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-5">
