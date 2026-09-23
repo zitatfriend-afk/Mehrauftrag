@@ -171,13 +171,17 @@ Deno.serve(async (req: Request) => {
 
     const industry = String(payload.industry ?? "").trim().slice(0, 80);
     const message = String(payload.message ?? "").trim().slice(0, 2000);
-    if (!industry && !message) return json({ error: "nichts zu ergänzen" }, 400);
+    // Telefonnummer darf nachgereicht werden. Die Landingpage fragt danach,
+    // wenn die Anfrage nur mit E-Mail kam. Ohne Nummer wird aus einer Anfrage
+    // ein Mailwechsel statt eines Gespraechs.
+    const nachtragPhone = String(payload.phone ?? "").trim().slice(0, 60);
+    if (!industry && !message && !nachtragPhone) return json({ error: "nichts zu ergänzen" }, 400);
 
     try {
       const supabase = adminClient();
       const { data: lead, error: leseFehler } = await supabase
         .from("leads")
-        .select("id, created_at, notes, history, industry")
+        .select("id, created_at, notes, history, industry, phone, draft_channel")
         .eq("id", nachtragId)
         .single();
 
@@ -196,6 +200,7 @@ Deno.serve(async (req: Request) => {
 
       const teile: string[] = [];
       if (industry) teile.push(`Branche: ${industry}`);
+      if (nachtragPhone) teile.push(`Telefonnummer nachgereicht: ${nachtragPhone}`);
       if (message) teile.push(message);
       const notizText = teile.join(" · ");
 
@@ -205,6 +210,11 @@ Deno.serve(async (req: Request) => {
       };
       // Branche nur setzen, wenn noch keine drinsteht. Nichts ueberschreiben.
       if (industry && !lead.industry) update.industry = industry;
+      // Dasselbe fuer die Nummer: nur eintragen, wenn das Feld leer ist.
+      if (nachtragPhone && !lead.phone) {
+        update.phone = nachtragPhone;
+        update.draft_channel = "both";
+      }
 
       const { error: schreibFehler } = await supabase.from("leads").update(update).eq("id", nachtragId);
       if (schreibFehler) {

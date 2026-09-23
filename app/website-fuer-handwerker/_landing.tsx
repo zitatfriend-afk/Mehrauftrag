@@ -346,6 +346,9 @@ function LeadForm() {
   const [branche, setBranche] = useState<string | null>(null);
   const [notiz, setNotiz] = useState("");
   const [notizGesendet, setNotizGesendet] = useState(false);
+  // Nachfrage nach der Telefonnummer, nur wenn die Anfrage ohne Nummer kam.
+  const [nummerNachtrag, setNummerNachtrag] = useState("");
+  const [nummerGesendet, setNummerGesendet] = useState(false);
 
   // Einmal beim Laden: gclid und utm_campaign festhalten, siehe
   // merkeKampagnenParameter. Laeuft in beiden Formularen der Seite, das
@@ -360,7 +363,7 @@ function LeadForm() {
    * Klappt der Nachtrag nicht, fehlt Patrick nur eine Zusatzinfo, der
    * Interessent soll davon nichts merken.
    */
-  function sendeNachtrag(daten: { industry?: string; message?: string }) {
+  function sendeNachtrag(daten: { industry?: string; message?: string; phone?: string }) {
     if (!leadId) return;
     void fetch(SUBMIT_URL, {
       method: "POST",
@@ -473,6 +476,58 @@ function LeadForm() {
           </svg>
           Lieber sofort sprechen? Jetzt anrufen
         </a>
+
+        {/* Nummer nachfragen, aber nur wenn keine da ist.
+            Der Lead ist hier schon gespeichert und die Conversion gezaehlt,
+            diese Frage kann also nichts mehr kosten. Sie loest das Problem,
+            das ein reiner E-Mail-Lead fuer den Verkauf hat: ohne Nummer wird
+            aus der Anfrage ein Mailwechsel statt eines Gespraechs. Wer die
+            Nummer trotzdem nicht geben will, laesst das Feld einfach leer,
+            die Anfrage bleibt bestehen. */}
+        {leadId && !phone.trim() && !nummerGesendet && (
+          <div className="mt-7 border-t border-white/10 pt-6">
+            <p className="text-sm font-semibold text-white">
+              Soll es schneller gehen?
+            </p>
+            <p className="mt-1 text-xs leading-relaxed text-slate-400">
+              Mit einer Nummer klären wir das in fünf Minuten am Telefon statt in drei Mails.
+              Freiwillig, wir schreiben Ihnen sonst einfach.
+            </p>
+            <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+              <input
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                placeholder="Ihre Telefonnummer"
+                value={nummerNachtrag}
+                onChange={(e) => setNummerNachtrag(e.target.value)}
+                className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 sm:text-sm"
+              />
+              <button
+                type="button"
+                disabled={!nummerNachtrag.trim()}
+                onClick={() => {
+                  const wert = nummerNachtrag.trim();
+                  if (!wert) return;
+                  sendeNachtrag({ phone: wert });
+                  setNummerGesendet(true);
+                }}
+                className="shrink-0 rounded-xl px-5 py-3 text-sm font-semibold text-white transition disabled:opacity-50"
+                style={{ background: "rgba(59,130,246,0.25)", border: "1px solid rgba(96,165,250,0.45)" }}
+              >
+                Senden
+              </button>
+            </div>
+          </div>
+        )}
+
+        {leadId && !phone.trim() && nummerGesendet && (
+          <div className="mt-7 border-t border-white/10 pt-6">
+            <p className="text-sm text-slate-300">
+              Danke, wir rufen an.
+            </p>
+          </div>
+        )}
 
         {/* ─── Rueckfrage NACH dem Absenden ───────────────────────────────
             Der Lead ist an dieser Stelle gespeichert und die Conversion
