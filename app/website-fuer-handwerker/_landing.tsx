@@ -90,12 +90,14 @@ function getLeadAttribution(): { source: string; campaign: string | null; campai
   // Erst die aktuelle URL, dann der Zwischenspeicher aus dem ersten Aufruf.
   const gclid = p.get("gclid") || lesePuffer(GCLID_SPEICHER);
   const kampagne = p.get("utm_campaign") || lesePuffer(KAMPAGNE_SPEICHER);
-  let channel = "Website";
-  if (gclid || us.includes("google")) channel = "Google Ad";
-  else if (p.get("fbclid") || us.includes("facebook") || us.includes("instagram") || us.includes("meta")) channel = "Meta Ad";
-  else if (us.includes("tiktok") || us.includes("linkedin") || us.includes("youtube") || us.includes("social")) channel = "Social";
+  // Der Kanal haengt hinten dran, damit die Quelle immer mit "Website" beginnt.
+  // Das CRM sortiert Anfragen nach diesem Anfang in seine Inbox ein.
+  let kanalZusatz = "";
+  if (gclid || us.includes("google")) kanalZusatz = " - Google Ad";
+  else if (p.get("fbclid") || us.includes("facebook") || us.includes("instagram") || us.includes("meta")) kanalZusatz = " - Meta Ad";
+  else if (us.includes("tiktok") || us.includes("linkedin") || us.includes("youtube") || us.includes("social")) kanalZusatz = " - Social";
   // Ohne gclid bleibt campaignId bewusst leer, kein Platzhalter.
-  return { source: `${channel} - ${PAGE_LABEL}`, campaign: kampagne, campaignId: gclid };
+  return { source: `${LEAD_SOURCE}${kanalZusatz}`, campaign: kampagne, campaignId: gclid };
 }
 
 // fbq + gtag global (Pixel/Ads werden consent-gated von cookie-consent.tsx geladen)
@@ -401,8 +403,10 @@ function LeadForm() {
           name: name.trim(),
           phone: phone.trim(),
           email: email.trim(),
-          // Welchen Weg der Betrieb selbst gewaehlt hat. Steht spaeter in
-          // leads.draft_channel und sagt Patrick, wie er sich melden soll.
+          // Welchen Weg der Betrieb selbst gewaehlt hat. Die Edge Function
+          // schreibt das in die Anfrage-Mail. In die Spalte leads.draft_channel
+          // kommt es nur, wenn gar keine Telefonnummer da ist, weil diese
+          // Spalte im CRM die Versandart des Entwurfs steuert.
           draft_channel: phone.trim() && email.trim() ? "both" : phone.trim() ? "phone" : "email",
           source: attr.source,
           campaign: attr.campaign,

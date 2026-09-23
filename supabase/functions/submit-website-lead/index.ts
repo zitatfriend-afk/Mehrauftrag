@@ -240,9 +240,10 @@ Deno.serve(async (req: Request) => {
       // Branche nur setzen, wenn noch keine drinsteht. Nichts ueberschreiben.
       if (industry && !lead.industry) update.industry = industry;
       // Dasselbe fuer die Nummer: nur eintragen, wenn das Feld leer ist.
+      // draft_channel wird hier bewusst nicht angefasst. Die Versandart stellt
+      // Patrick im CRM ein, die nachgereichte Nummer steht in der Mail.
       if (nachtragPhone && !lead.phone) {
         update.phone = nachtragPhone;
-        update.draft_channel = "both";
       }
 
       const { error: schreibFehler } = await supabase.from("leads").update(update).eq("id", nachtragId);
@@ -314,7 +315,11 @@ Deno.serve(async (req: Request) => {
         source,
         leadgen_id: null,
         industry: industry || null,
-        draft_channel: kanal,
+        // Die Spalte draft_channel gehoert dem CRM (Versandart: whatsapp oder email).
+        // Ohne Telefonnummer ist E-Mail die einzige Moeglichkeit, das darf gesetzt
+        // werden. In allen anderen Faellen bleibt die Spalte leer, damit das CRM
+        // seine eigene Auswahl behaelt.
+        draft_channel: kanal === "email" ? "email" : null,
         // Ohne gclid bleibt das Feld leer, kein Platzhalter.
         campaign_id: campaignId || null,
         campaign_name: campaignName || null,
