@@ -44,15 +44,58 @@ const LEAD_SOURCE = `Website - ${PAGE_LABEL}`;
  * ist, woher der Lead kam (Meta / Google / Social / direkt). Meta hängt bei Ad-Klicks
  * automatisch `fbclid` an, Google `gclid`. utm_source/utm_campaign werden zusätzlich genutzt.
  */
-function getLeadAttribution(): { source: string; campaign: string | null } {
-  if (typeof window === "undefined") return { source: LEAD_SOURCE, campaign: null };
+const GCLID_SPEICHER = "ma_gclid";
+const KAMPAGNE_SPEICHER = "ma_utm_campaign";
+
+function lesePuffer(schluessel: string): string | null {
+  try {
+    return sessionStorage.getItem(schluessel);
+  } catch {
+    // Privater Modus oder blockierter Speicher. Dann gibt es eben keine
+    // Zuordnung, das Formular funktioniert trotzdem.
+    return null;
+  }
+}
+
+function schreibePuffer(schluessel: string, wert: string): void {
+  try {
+    sessionStorage.setItem(schluessel, wert);
+  } catch {
+    // siehe lesePuffer
+  }
+}
+
+/**
+ * Haelt gclid und utm_campaign fest, sobald die Seite geladen ist.
+ *
+ * Der gclid haengt nur am ersten Aufruf in der URL. Wer danach im Menue auf
+ * eine andere Seite geht und zurueckkommt, hat ihn nicht mehr. Ohne diesen
+ * Zwischenspeicher blieb campaign_id in der Datenbank deshalb leer und es war
+ * hinterher nicht zu unterscheiden, ob eine Anfrage aus Google Ads kam oder
+ * organisch.
+ */
+function merkeKampagnenParameter(): void {
+  if (typeof window === "undefined") return;
+  const p = new URLSearchParams(window.location.search);
+  const gclid = p.get("gclid");
+  if (gclid) schreibePuffer(GCLID_SPEICHER, gclid);
+  const kampagne = p.get("utm_campaign");
+  if (kampagne) schreibePuffer(KAMPAGNE_SPEICHER, kampagne);
+}
+
+function getLeadAttribution(): { source: string; campaign: string | null; campaignId: string | null } {
+  if (typeof window === "undefined") return { source: LEAD_SOURCE, campaign: null, campaignId: null };
   const p = new URLSearchParams(window.location.search);
   const us = (p.get("utm_source") || "").toLowerCase();
+  // Erst die aktuelle URL, dann der Zwischenspeicher aus dem ersten Aufruf.
+  const gclid = p.get("gclid") || lesePuffer(GCLID_SPEICHER);
+  const kampagne = p.get("utm_campaign") || lesePuffer(KAMPAGNE_SPEICHER);
   let channel = "Website";
-  if (p.get("gclid") || us.includes("google")) channel = "Google Ad";
+  if (gclid || us.includes("google")) channel = "Google Ad";
   else if (p.get("fbclid") || us.includes("facebook") || us.includes("instagram") || us.includes("meta")) channel = "Meta Ad";
   else if (us.includes("tiktok") || us.includes("linkedin") || us.includes("youtube") || us.includes("social")) channel = "Social";
-  return { source: `${channel} - ${PAGE_LABEL}`, campaign: p.get("utm_campaign") };
+  // Ohne gclid bleibt campaignId bewusst leer, kein Platzhalter.
+  return { source: `${channel} - ${PAGE_LABEL}`, campaign: kampagne, campaignId: gclid };
 }
 
 // fbq + gtag global (Pixel/Ads werden consent-gated von cookie-consent.tsx geladen)
@@ -197,7 +240,35 @@ const PRICE_INCLUDES = [
 // Auftrag selbst. Das ist auf einer Anzeigen-Zielseite ein Vertrauens- und ein
 // Richtlinienrisiko und deshalb bewusst ersetzt.
 
-const REFERENCES = [
+/**
+ * Referenzen.
+ *
+ * `ergebnis` ist bewusst optional und steht bei den meisten Eintraegen auf
+ * undefined. Ein Handwerker kauft keine schoene Seite, er will Auftraege,
+ * deshalb gehoert hier ein Ergebnis hin und nicht nur eine Beschreibung der
+ * Optik. Die Zahlen duerfen aber NICHT geschaetzt werden. Solange der Wert
+ * ERGEBNIS_PLATZHALTER_... lautet, wird die Zeile nicht angezeigt. Erst wenn
+ * Patrick den echten Wert geliefert hat, wird der Platzhalter ersetzt und die
+ * Zeile erscheint automatisch.
+ */
+const ERGEBNIS_PLATZHALTER_SZ_INNENAUSBAU = "ERGEBNIS_PLATZHALTER_SZ_INNENAUSBAU";
+const ERGEBNIS_PLATZHALTER_SOROKIN = "ERGEBNIS_PLATZHALTER_SOROKIN";
+
+/** Platzhalter zeigen wir nicht an. Lieber keine Zahl als eine erfundene. */
+function istEchtesErgebnis(wert?: string): boolean {
+  return !!wert && !wert.startsWith("ERGEBNIS_PLATZHALTER");
+}
+
+const REFERENCES: {
+  name: string;
+  branche: string;
+  text: string;
+  href: string;
+  domain: string;
+  image: string;
+  emoji: string;
+  ergebnis?: string;
+}[] = [
   {
     name: "SZ Innenausbau",
     branche: "Renovierung & Sanierung · Frankfurt am Main",
@@ -206,6 +277,7 @@ const REFERENCES = [
     domain: "sz-innenausbau.de",
     image: "/referenzen/sz-innenausbau.jpg",
     emoji: "🛠️",
+    ergebnis: ERGEBNIS_PLATZHALTER_SZ_INNENAUSBAU,
   },
   {
     name: "SOROKIN Mobiler Schweißservice",
@@ -215,6 +287,7 @@ const REFERENCES = [
     domain: "sorokinschweisser.de",
     image: "/referenzen/sorokin.jpg",
     emoji: "🔧",
+    ergebnis: ERGEBNIS_PLATZHALTER_SOROKIN,
   },
   {
     name: "Blitzgebäudereinigung",
@@ -259,13 +332,27 @@ const BRANCHEN = [
 function LeadForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  // Zweiter Kontaktweg. Wer nicht angerufen werden will, hatte vorher gar
+  // keine Moeglichkeit anzufragen. Genau dort ging die teuerste Huerde der
+  // Seite durch: der Klick war bezahlt, der Besucher sprang trotzdem ab.
+  const [email, setEmail] = useState("");
   const [state, setState] = useState<SubmitState>("idle");
+  // Fehlertext getrennt vom Zustand, weil es jetzt zwei Gruende fuer
+  // "invalid" gibt: fehlender Vorname oder gar kein Kontaktweg.
+  const [fehlertext, setFehlertext] = useState("");
   // Fuer die Rueckfrage nach dem Absenden: die Lead-ID aus der ersten Antwort,
   // die gewaehlte Branche und die freiwillige Anmerkung.
   const [leadId, setLeadId] = useState<string | null>(null);
   const [branche, setBranche] = useState<string | null>(null);
   const [notiz, setNotiz] = useState("");
   const [notizGesendet, setNotizGesendet] = useState(false);
+
+  // Einmal beim Laden: gclid und utm_campaign festhalten, siehe
+  // merkeKampagnenParameter. Laeuft in beiden Formularen der Seite, das
+  // schadet nicht, es wird nur derselbe Wert erneut gespeichert.
+  useEffect(() => {
+    merkeKampagnenParameter();
+  }, []);
 
   /**
    * Ergaenzt den bereits gespeicherten Lead. Bewusst ohne await im Aufrufer
@@ -285,7 +372,14 @@ function LeadForm() {
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (state === "loading") return;
-    if (!name.trim() || !phone.trim()) {
+    if (!name.trim()) {
+      setFehlertext("Bitte Ihren Vornamen eingeben.");
+      setState("invalid");
+      return;
+    }
+    // Bewusst ODER statt UND: einer der beiden Wege genuegt.
+    if (!phone.trim() && !email.trim()) {
+      setFehlertext("Bitte eine Telefonnummer oder eine E-Mail, damit wir Ihnen den Entwurf schicken können.");
       setState("invalid");
       return;
     }
@@ -295,7 +389,17 @@ function LeadForm() {
       const res = await fetch(SUBMIT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name.trim(), phone: phone.trim(), source: attr.source, campaign: attr.campaign }),
+        body: JSON.stringify({
+          name: name.trim(),
+          phone: phone.trim(),
+          email: email.trim(),
+          // Welchen Weg der Betrieb selbst gewaehlt hat. Steht spaeter in
+          // leads.draft_channel und sagt Patrick, wie er sich melden soll.
+          draft_channel: phone.trim() && email.trim() ? "both" : phone.trim() ? "phone" : "email",
+          source: attr.source,
+          campaign: attr.campaign,
+          campaign_id: attr.campaignId,
+        }),
       });
       if (!res.ok) throw new Error("Request failed");
 
@@ -467,6 +571,14 @@ function LeadForm() {
           className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06] sm:py-3"
         />
       </div>
+      {/* Ein Wort dazu, warum hier zwei Felder stehen und nicht eines.
+          Wer seine Nummer nicht herausgeben will, soll sehen, dass er
+          trotzdem anfragen kann, bevor er das Telefonfeld ueberhaupt
+          anfasst. Deshalb steht die Zeile ueber beiden Feldern. */}
+      <p className="pt-1 text-sm text-slate-400">
+        Wie sollen wir uns melden? Telefon oder E-Mail, ganz wie Sie mögen.
+      </p>
+
       <div>
         <label htmlFor="lead-phone" className="sr-only">Telefonnummer</label>
         <input
@@ -480,14 +592,29 @@ function LeadForm() {
             setPhone(e.target.value);
             if (state === "invalid" || state === "failed") setState("idle");
           }}
-          required
+          className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06] sm:py-3"
+        />
+      </div>
+      <div>
+        <label htmlFor="lead-email" className="sr-only">E-Mail</label>
+        <input
+          id="lead-email"
+          type="email"
+          inputMode="email"
+          autoComplete="email"
+          placeholder="Ihre E-Mail (wenn Ihnen das lieber ist)"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            if (state === "invalid" || state === "failed") setState("idle");
+          }}
           className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-base text-white placeholder:text-slate-500 outline-none transition focus:border-blue-500/60 focus:bg-white/[0.06] sm:py-3"
         />
       </div>
 
       {state === "invalid" && (
         <p className="text-sm text-red-400">
-          Bitte Vorname und Telefonnummer eingeben.
+          {fehlertext}
         </p>
       )}
 
@@ -844,6 +971,19 @@ export default function HandwerkerLanding() {
               250 € einmalig, 99 € im Monat, monatlich kündbar. Sie sprechen mit mir, nicht mit einem Vertrieb.
             </motion.p>
 
+            {/* Der Zweifel am Preis entsteht hier oben, nicht unten in der FAQ.
+                Wer 2.000 bis 5.000 Euro von Agenturen kennt, denkt bei 250 Euro
+                zuerst an einen Haken. Deshalb steht die Erklaerung direkt unter
+                der Zahl, bewusst klein und ruhig, sie soll beruhigen und nicht
+                rufen. Die FAQ-Frage unten bleibt zusaetzlich stehen. */}
+            <motion.p
+              variants={fadeUp}
+              className="mx-auto mt-3 max-w-lg text-sm leading-relaxed"
+              style={{ color: "rgba(148,163,184,0.7)" }}
+            >
+              Warum so günstig? Weil ich selbst baue und keine Agentur mitverdient. Die 250 € decken die Erstellung, alles Weitere läuft über die monatliche Betreuung. Deshalb können Sie jederzeit zum Monatsende kündigen.
+            </motion.p>
+
             <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-5">
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> Entwurf vorab kostenlos</span>
               <span className="inline-flex items-center gap-1.5"><CheckIcon /> 7 Tage ab Ihren Unterlagen</span>
@@ -914,6 +1054,14 @@ export default function HandwerkerLanding() {
                     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#60a5fa]">{r.branche}</p>
                     <h3 className="mt-1.5 text-base font-bold text-white">{r.emoji} {r.name}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{r.text}</p>
+                    {istEchtesErgebnis(r.ergebnis) && (
+                      <p
+                        className="mt-3 rounded-lg px-3 py-2 text-sm font-semibold text-white"
+                        style={{ background: "rgba(59,130,246,0.12)", border: "1px solid rgba(59,130,246,0.3)" }}
+                      >
+                        {r.ergebnis}
+                      </p>
+                    )}
                     <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#60a5fa] group-hover:text-white">
                       Live ansehen
                       <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
