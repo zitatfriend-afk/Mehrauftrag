@@ -129,14 +129,43 @@ async function notify(
   }
 }
 
-/** Kurze Mail zum Nachtrag, damit Patrick die Zusatzinfos auch im Postfach sieht. */
-async function notifyNachtrag(id: string, industry: string, message: string) {
+/**
+ * Kurze Mail zum Nachtrag.
+ *
+ * 23.09.2026: Die Mail enthielt frueher nur Branche und Anmerkung. Reicht ein
+ * Interessent seine Telefonnummer nach, war beides leer und im Postfach stand
+ * nur die Lead-ID. Genau in dem Fall ist die Information aber am meisten wert,
+ * weil eine Nummer zum Anrufen dazugekommen ist. Deshalb gehen jetzt Name und
+ * beide Kontaktwege mit, und die Betreffzeile sagt, worum es geht.
+ */
+async function notifyNachtrag(
+  id: string,
+  industry: string,
+  message: string,
+  nachgereichtePhone: string,
+  name: string,
+  email: string,
+) {
   const key = Deno.env.get("BREVO_API_KEY");
   if (!key) return;
+  const teile: string[] = [];
+  if (nachgereichtePhone) teile.push("Telefonnummer nachgereicht");
+  if (industry) teile.push("Branche");
+  if (message) teile.push("Anmerkung");
+  const betreff = nachgereichtePhone
+    ? `Telefonnummer nachgereicht: ${name || "Website-Anfrage"}`
+    : `Zusatzinfos zur Anfrage${industry ? " (" + industry + ")" : ""}`;
   const html =
-    `<h2>Zusatzinfos zu einer Website-Anfrage</h2>` +
+    `<h2>${nachgereichtePhone ? "Telefonnummer nachgereicht" : "Zusatzinfos zu einer Website-Anfrage"}</h2>` +
+    (name ? `<p><b>Name:</b> ${esc(name)}</p>` : "") +
+    (nachgereichtePhone
+      ? `<p style="font-size:18px"><b>Telefon:</b> <a href="tel:${esc(nachgereichtePhone)}">${esc(nachgereichtePhone)}</a><br>` +
+        `<span style="font-size:14px;color:#555">Der Betrieb hat vorher nur eine E-Mail hinterlassen und die Nummer freiwillig nachgereicht. Anruf ist also erwünscht.</span></p>`
+      : "") +
+    (email ? `<p><b>E-Mail:</b> ${esc(email)}</p>` : "") +
     (industry ? `<p><b>Branche:</b> ${esc(industry)}</p>` : "") +
     (message ? `<p><b>Worauf es dem Betrieb ankommt:</b><br>${esc(message)}</p>` : "") +
+    (teile.length ? "" : `<p>Es wurde nichts Neues mitgeschickt. Diese Mail ist ein Hinweis ohne Inhalt und sollte nicht vorkommen.</p>`) +
     `<p style="color:#888">Lead-ID: ${esc(id)}</p>`;
   try {
     await fetch("https://api.brevo.com/v3/smtp/email", {
@@ -145,7 +174,7 @@ async function notifyNachtrag(id: string, industry: string, message: string) {
       body: JSON.stringify({
         sender: { name: "MehrAuftrag Website", email: "info@mehrauftrag.de" },
         to: [{ email: "info@mehrauftrag.de" }],
-        subject: `Zusatzinfos zur Anfrage${industry ? " (" + industry + ")" : ""}`,
+        subject: betreff,
         htmlContent: html,
       }),
     });
@@ -181,7 +210,7 @@ Deno.serve(async (req: Request) => {
       const supabase = adminClient();
       const { data: lead, error: leseFehler } = await supabase
         .from("leads")
-        .select("id, created_at, notes, history, industry, phone, draft_channel")
+        .select("id, created_at, notes, history, industry, phone, draft_channel, name, email")
         .eq("id", nachtragId)
         .single();
 
@@ -222,7 +251,14 @@ Deno.serve(async (req: Request) => {
         return json({ error: "Konnte Zusatzinfos nicht speichern" }, 500);
       }
 
-      await notifyNachtrag(nachtragId, industry, message);
+      await notifyNachtrag(
+        nachtragId,
+        industry,
+        message,
+        nachtragPhone,
+        String(lead.name ?? ""),
+        String(lead.email ?? ""),
+      );
       return json({ ok: true }, 200);
     } catch (e) {
       console.error("Nachtrag fehlgeschlagen:", e);
