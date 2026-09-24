@@ -163,6 +163,14 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
+        heading: "Am Bau läuft die Vergabe anders als beim Privatkunden",
+        paragraphs: [
+          "Wer hauptsächlich für Privatkunden arbeitet, lebt von lokaler Sichtbarkeit und Bewertungen. Wer dagegen für Bauunternehmen und Generalunternehmer arbeitet, wird nach anderen Kriterien ausgewählt: Gewerke, Einsatzgebiet, Kapazität und die Nachweise, die vor der Beauftragung abgefragt werden.",
+          "Für Gewerke wie Trockenbau und Innenausbau sind das zwei getrennte Wege, die sich beide lohnen. Wie die Vergabe dort abläuft und was ein Bauleiter sehen will, bevor er anfragt, steht im eigenen Leitfaden dazu.",
+        ],
+        link: { label: "Aufträge im Trockenbau und Innenausbau gewinnen", href: "/ratgeber/auftraege-trockenbau-innenausbau" },
+      },
+      {
         heading: "Anfragen dürfen nicht verloren gehen",
         paragraphs: [
           "Der beste Auftritt nützt nichts, wenn Anfragen im Postfach untergehen. Eine saubere Anfrage-Strecke sorgt dafür, dass jede Anfrage sofort ankommt, idealerweise gleichzeitig per E-Mail und in einer einfachen Übersicht, damit nichts vergessen wird. Wer schnell zurückruft, gewinnt den Auftrag oft schon allein durch das Tempo.",
@@ -515,6 +523,7 @@ export const ARTICLES: Article[] = [
     related: [
       { label: "Website für Schweißer", href: "/webseite-fuer-schweisser" },
       { label: "Lohnschweißen: Aufträge aus der Industrie", href: "/ratgeber/lohnschweissen-industrieauftraege" },
+      { label: "Aufträge im Trockenbau und Innenausbau gewinnen", href: "/ratgeber/auftraege-trockenbau-innenausbau" },
       { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
       { label: "Website für Elektriker", href: "/elektriker" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },

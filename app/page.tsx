@@ -2196,6 +2196,9 @@ export default function Home() {
               <a href="/webseite-fuer-schweisser" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website für Schweißer
               </a>
+              <a href="/webseite-fuer-trockenbau" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
+                Website für Trockenbau
+              </a>
               <a href="/webseite-fuer-physiotherapie" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website für Physiotherapiepraxis
               </a>
