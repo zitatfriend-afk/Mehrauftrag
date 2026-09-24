@@ -5,30 +5,31 @@
 // sichtbar auf der Seite stehen, deshalb darf das nie auseinanderlaufen.
 // Gehoert zu /website-fuer-handwerker.
 //
-// Die Frage "Geht es auch ohne monatliche Kosten?" kam am 10.09.2026 dazu.
-// Grund: Die Seite bot nur das Monatsmodell an und hat den Einmalkauf in der
-// Antwort darunter sogar abgewertet ("nicht einmalig abkassieren"). Wer genau
-// das sucht, liest daraus, dass er nicht gemeint ist, und springt ab, bevor er
-// den kostenlosen Entwurf ueberhaupt anfragt. Bewusst OHNE Preis: Der Entwurf
-// bleibt der einzige Einstieg, eine zweite Zahl wuerde die 250 Euro entwerten
-// und zum Vergleichen einladen statt zum Anfragen.
+// 24.09.2026: Preismodell umgestellt. 82 Klicks aus Google Ads, null Anfragen.
+// Die Mitbewerber auf demselben Suchbegriff verkaufen Festpreise zwischen 490
+// und 1.490 Euro und damit Eigentum, wir haben als einzige nur vermietet. Der
+// Kauf ist jetzt das Hauptangebot (1.290 Euro netto), die Miete bleibt als
+// Einstieg mit Kaufoption (250 Euro netto Start, 75 Euro netto im Monat).
 //
-// Die beiden Fragen davor kommen aus der Wettbewerbsanalyse vom 06.09.2026:
-// Die Anzeigen der Mitbewerber positionieren sich fast alle gegen Baukaesten,
-// und ihre Einstiegspreise liegen bei 599 bis 1.000 Euro. Bei 250 Euro
-// Einstieg entsteht deshalb die Frage, wo der Haken ist. Beide Einwaende
-// werden hier offen beantwortet, statt sie zu ignorieren.
+// Die fruehere Frage "Warum ist der Einstieg so guenstig?" ist entfallen. Sie
+// hat einen Einstiegspreis verteidigt, den es so nicht mehr gibt. An ihrer
+// Stelle steht die Frage, die bei zwei Modellen wirklich aufkommt: was kostet
+// mich das auf Dauer. Die Antwort rechnet beide Wege ehrlich vor, auch dort,
+// wo die Miete guenstiger ist.
+//
+// Alle Betraege stehen hier netto, weil das Angebot sich an Gewerbetreibende
+// richtet. Keine Zahl ohne den Zusatz.
 
 export type Faq = { q: string; a: string };
 
 export const FAQS: Faq[] = [
   {
     q: "Was, wenn die Website keine Anfragen bringt?",
-    a: "Ehrlich: Anfragen garantieren kann Ihnen niemand, ich auch nicht. Wer das verspricht, verkauft Ihnen etwas. Was ich zusage: Sie sitzen in keiner Laufzeit fest. Bringt die Seite nichts, kündigen Sie zum Monatsende und zahlen keinen Cent weiter. Vorher nehme ich sie mir noch einmal vor, Texte, Bilder, Ihr Google-Unternehmensprofil und eigene Seiten für Ihre einzelnen Leistungen. Das kostet Sie nichts extra.",
+    a: "Ehrlich: Anfragen garantieren kann Ihnen niemand, ich auch nicht. Wer das verspricht, verkauft Ihnen etwas. Was ich zusage: Sie sitzen in keiner Laufzeit fest. Sind Sie monatlich gestartet, kündigen Sie zum Monatsende und zahlen keinen Cent weiter. Haben Sie gekauft, gehört Ihnen die Seite und Sie können die Pflege jederzeit beenden. Vorher nehme ich sie mir noch einmal vor, Texte, Bilder, Ihr Google-Unternehmensprofil und eigene Seiten für Ihre einzelnen Leistungen. Das kostet Sie nichts extra.",
   },
   {
     q: "Wie lange dauert es wirklich?",
-    a: "7 Tage nach Eingang Ihrer Infos und Fotos ist Ihre Seite online. Dauert es länger, entfallen die 250 € für die Erstellung. Den Starttermin bekommen Sie schriftlich, damit Sie mitzählen können.",
+    a: "7 Tage nach Eingang Ihrer Infos und Fotos ist Ihre Seite online. Dauert es länger, entfällt die Erstellungsgebühr: beim Kauf die 1.290 € netto, beim monatlichen Start die 250 € netto. Den Starttermin bekommen Sie schriftlich, damit Sie mitzählen können.",
   },
   {
     q: "Was muss ich selbst tun?",
@@ -36,18 +37,22 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Gibt es eine Mindestlaufzeit?",
-    a: "Nein. Monatlich kündbar. Kein Kleingedrucktes, keine langfristige Bindung.",
+    a: "Nein. Beim Kauf gibt es ohnehin keine, die Seite gehört Ihnen. Das optionale Pflegepaket für 49 € netto im Monat und der monatliche Einstieg sind zum Monatsende kündbar. Kein Kleingedrucktes, keine langfristige Bindung.",
   },
   {
     q: "Geht es auch ohne monatliche Kosten?",
-    a: "Ja. Sie können die Website auch einmalig kaufen, dann gehört sie Ihnen. Hosting, Pflege und spätere Änderungen können Sie danach dazubuchen, müssen Sie aber nicht. Sagen Sie im Gespräch einfach Bescheid, dann rechnen wir Ihnen beide Wege vor und Sie entscheiden in Ruhe.",
+    a: "Ja, das ist inzwischen der normale Weg. Sie kaufen die Website einmalig für 1.290 € netto, danach gehört sie Ihnen und es läuft nichts weiter. Pflege, Hosting und Updates können Sie für 49 € netto im Monat dazubuchen, müssen Sie aber nicht. Wer lieber klein anfängt, startet monatlich und kauft später.",
+  },
+  {
+    q: "Kann ich erst mieten und später kaufen?",
+    a: "Ja. Sie starten monatlich, testen die Website im echten Betrieb, und wenn sie überzeugt, kaufen Sie sie. Die Hälfte Ihrer bisher gezahlten Monatsbeiträge wird auf den Kaufpreis angerechnet, maximal zwölf Monate. Ein Beispiel: Nach einem Jahr haben Sie 900 € netto an Monatsbeiträgen gezahlt, davon werden 450 € netto angerechnet, der Kauf kostet dann noch 840 € netto statt 1.290 € netto. Es gibt keine Frist und keinen Zwang. Sie können auch einfach weiter mieten oder zum Monatsende kündigen.",
   },
   {
     q: "Ist das eine Vorlage aus dem Baukasten?",
     a: "Nein. Ihre Seite wird für Ihren Betrieb gebaut, mit Ihren Leistungen, Ihren Fotos und Ihrer Region. Sie können sich unsere bestehenden Kundenseiten ansehen und selbst vergleichen, keine davon sieht aus wie die andere.",
   },
   {
-    q: "Warum ist der Einstieg so günstig?",
-    a: "Weil wir langfristig mit Ihnen arbeiten wollen. Andere verlangen 600 bis 1.000 Euro auf einen Schlag und sind danach weg. Bei uns ist der Start bewusst niedrig, dafür betreuen wir die Seite jeden Monat weiter. Bleibt sie nicht gut, kündigen Sie einfach. Und wer die Seite lieber einmalig kauft, kann das ebenfalls tun.",
+    q: "Was kostet mich das auf Dauer?",
+    a: "Beim Kauf zahlen Sie 1.290 € netto einmalig. Pflege, Hosting und Updates kosten optional 49 € netto im Monat, jederzeit kündbar. Beim monatlichen Einstieg zahlen Sie 250 € netto zum Start und danach 75 € netto im Monat. Nach einem Jahr sind das beim Kauf mit Pflege 1.878 € netto, bei der Miete 1.150 € netto. Am Anfang ist die Miete also günstiger. Ohne Pflegepaket holt der Kauf das nach rund 14 Monaten auf, mit Pflegepaket nach gut drei Jahren. Dafür gehört Ihnen die Seite vom ersten Tag an, und wenn Sie später doch kaufen, wird die Hälfte Ihrer Monatsbeiträge angerechnet.",
   },
 ];

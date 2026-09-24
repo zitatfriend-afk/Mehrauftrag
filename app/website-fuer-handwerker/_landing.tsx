@@ -229,11 +229,10 @@ const BUILD_FEATURES: { icon: React.ReactNode; title: string; desc: string }[] =
 
 const PRICE_INCLUDES = [
   "Individuelle Website für Ihren Betrieb",
-  "Hosting & sichere SSL-Verschlüsselung",
-  "Laufende Pflege, Updates & Sicherheit",
-  "Inhaltliche Anpassungen jederzeit",
-  "Click-to-Call, Google Maps & Bewertungen",
-  "Persönlicher Ansprechpartner",
+  "In 7 Tagen online, sonst entfällt die Gebühr",
+  "Click-to-Call, Google Maps und Bewertungen eingebunden",
+  "Die Seite gehört Ihnen",
+  "Pflege, Hosting und Updates optional 49 € netto im Monat, jederzeit kündbar",
 ];
 
 // Kundenstimmen kommen aus app/_components/google-reviews.tsx, also woertlich aus
@@ -1038,20 +1037,19 @@ export default function HandwerkerLanding() {
               className="mx-auto mt-4 max-w-xl text-base font-light leading-relaxed sm:mt-5 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              250 € einmalig, 99 € im Monat, monatlich kündbar. Sie sprechen mit mir, nicht mit einem Vertrieb.
+              Festpreis ab 1.290 € netto, die Website gehört Ihnen. Oder monatlich ab 75 € netto starten und später kaufen. Sie sprechen mit mir, nicht mit einem Vertrieb.
             </motion.p>
 
-            {/* Der Zweifel am Preis entsteht hier oben, nicht unten in der FAQ.
-                Wer 2.000 bis 5.000 Euro von Agenturen kennt, denkt bei 250 Euro
-                zuerst an einen Haken. Deshalb steht die Erklaerung direkt unter
-                der Zahl, bewusst klein und ruhig, sie soll beruhigen und nicht
-                rufen. Die FAQ-Frage unten bleibt zusaetzlich stehen. */}
+            {/* 24.09.2026: Das Preismodell ist auf Kauf umgestellt, deshalb ist
+                hier nicht mehr die Guenstigkeit zu erklaeren. Der Satz nimmt
+                stattdessen das Risiko aus der Zahl: niemand zahlt etwas, bevor
+                er den Entwurf gesehen hat. Bewusst klein und ruhig. */}
             <motion.p
               variants={fadeUp}
               className="mx-auto mt-3 max-w-lg text-sm leading-relaxed"
               style={{ color: "rgba(148,163,184,0.7)" }}
             >
-              Warum so günstig? Ich baue selbst, keine Agentur verdient mit. Kündbar zum Monatsende.
+              Sie sehen zuerst einen kostenlosen Entwurf. Erst wenn er überzeugt, geht es weiter.
             </motion.p>
 
             <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-5">
@@ -1303,15 +1301,19 @@ export default function HandwerkerLanding() {
                 className="absolute inset-x-10 top-0 h-px"
                 style={{ background: "linear-gradient(to right, transparent, rgba(59,130,246,0.6), transparent)" }}
               />
+              {/* 24.09.2026: Der Kauf ist das Hauptangebot. Die Zahl steht allein
+                  und gross, die Miete weiter unten bewusst als schmaler Block.
+                  Die Schriftgroesse ist auf dem Handy kleiner, sonst bricht
+                  "1.290 € netto" bei 390 Pixel in zwei Zeilen um. */}
               <div className="flex flex-col items-center text-center">
-                <div className="flex items-end justify-center gap-2">
-                  <span className="text-5xl font-black text-white">250 €</span>
-                  <span className="mb-1.5 text-sm text-slate-400">einmalig</span>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#60a5fa]">
+                  Website kaufen
+                </p>
+                <div className="mt-3 flex flex-wrap items-end justify-center gap-x-2">
+                  <span className="text-[40px] font-black leading-none text-white sm:text-5xl">1.290 €</span>
+                  <span className="text-base font-semibold text-slate-300">netto</span>
                 </div>
-                <div className="mt-2 flex items-end justify-center gap-2">
-                  <span className="text-3xl font-bold gradient-text-blue">+ 99 €</span>
-                  <span className="mb-1 text-sm text-slate-400">pro Monat</span>
-                </div>
+                <p className="mt-2 text-sm text-slate-400">einmalig, danach gehört sie Ihnen</p>
               </div>
 
               <ul className="mx-auto mt-8 max-w-md space-y-3">
@@ -1338,9 +1340,9 @@ export default function HandwerkerLanding() {
                   Fairer Start. Klare Kosten.
                 </p>
                 <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
-                  Sie zahlen einmalig 250 € für die Erstellung Ihrer Website. Danach kostet die
-                  laufende Betreuung 99 € pro Monat, inklusive Hosting, Updates, Sicherheit und
-                  persönlicher Unterstützung.
+                  Sie zahlen 1.290 € netto einmalig für Ihre Website. Danach gehört sie Ihnen.
+                  Pflege, Hosting und Updates kosten optional 49 € netto im Monat und sind
+                  jederzeit zum Monatsende kündbar.
                 </p>
                 <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
                   Keine versteckten Kosten. Keine Überraschungen. Sie wissen von Anfang an, was
@@ -1365,34 +1367,41 @@ export default function HandwerkerLanding() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-300">
                   Sobald Ihre Texte, Bilder und Angaben vollständig bei mir sind, läuft die Frist.
-                  Ist Ihre Website dann nicht innerhalb von 7 Tagen erreichbar, entfallen die
-                  250 € für die Erstellung.
+                  Ist Ihre Website dann nicht innerhalb von 7 Tagen erreichbar, entfällt die
+                  Erstellungsgebühr: beim Kauf die 1.290 € netto, beim monatlichen Start die
+                  250 € netto.
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">
                   Den Starttermin bekommen Sie schriftlich, damit Sie mitzählen können.
                 </p>
               </div>
 
-              {/* Der Einwand "ich will kein Abo" entsteht genau hier, an der
-                  Zahl mit dem "pro Monat" daneben. Deshalb wird er hier
-                  abgeraeumt und nicht erst in der FAQ, die viele nie erreichen.
-                  Bewusst als ruhiger Hinweis und NICHT als zweite Preisbox:
-                  Zwei Preise nebeneinander zwingen zu einer Entscheidung, und
-                  die Seite will an dieser Stelle gar keine Entscheidung, nur
-                  die Anfrage nach dem kostenlosen Entwurf. */}
+              {/* 24.09.2026: Die Miete ist jetzt die Nebenoption und bewusst ein
+                  schmaler, ruhiger Block. Eine zweite gleich grosse Kachel
+                  wuerde zwei Preise gegeneinander stellen und an dieser Stelle
+                  eine Entscheidung erzwingen. Die Seite will hier nur die
+                  Anfrage nach dem kostenlosen Entwurf. */}
               <div
-                className="mx-auto mt-6 max-w-md rounded-xl px-5 py-4 text-center"
+                className="mx-auto mt-6 max-w-md rounded-xl px-5 py-4 text-left"
                 style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.09)" }}
               >
                 <p className="text-sm font-semibold text-white">
-                  Lieber einmalig kaufen statt monatlich zahlen?
+                  Lieber erst testen?
                 </p>
                 <p className="mt-1.5 text-sm leading-relaxed text-slate-400">
-                  Geht auch. Dann gehört die Seite Ihnen. Hosting und Pflege können Sie dazubuchen,
-                  müssen Sie aber nicht. Sagen Sie im Gespräch Bescheid, dann rechnen wir Ihnen
-                  beide Wege vor.
+                  Starten Sie monatlich mit 250 € netto und 75 € netto im Monat, jederzeit zum
+                  Monatsende kündbar. Wenn die Website überzeugt, können Sie sie jederzeit kaufen.
+                  Die Hälfte Ihrer bisherigen Monatsbeiträge wird angerechnet, bis zu zwölf Monate.
                 </p>
               </div>
+
+              {/* Pflichtangabe. Alle Zahlen auf dieser Seite sind netto, das
+                  Angebot richtet sich an Gewerbetreibende. Bewusst unter allen
+                  Preisen und nicht im Kleingedruckten am Seitenende. */}
+              <p className="mx-auto mt-5 max-w-md text-center text-xs leading-relaxed text-slate-400">
+                Alle Preise verstehen sich netto, zzgl. 19 % USt. Das Angebot richtet sich an
+                Gewerbetreibende.
+              </p>
 
               <div className="mt-7 flex justify-center">
                 <a
