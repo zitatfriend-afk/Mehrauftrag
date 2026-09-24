@@ -83,6 +83,10 @@ const nextConfig: NextConfig = {
         destination: "/suchmaschinenoptimierung.html",
       },
       {
+        source: "/webseite-fuer-trockenbau",
+        destination: "/webseite-fuer-trockenbau.html",
+      },
+      {
         source: "/webdesign-:slug",
         destination: "/webdesign-:slug.html",
       },

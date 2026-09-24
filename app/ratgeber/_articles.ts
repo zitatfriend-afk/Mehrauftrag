@@ -190,6 +190,7 @@ export const ARTICLES: Article[] = [
     related: [
       { label: "Website für Handwerker", href: "/website-fuer-handwerker" },
       { label: "Website für Elektriker", href: "/elektriker" },
+      { label: "Aufträge im Trockenbau und Innenausbau gewinnen", href: "/ratgeber/auftraege-trockenbau-innenausbau" },
       { label: "Website für Schweißer", href: "/webseite-fuer-schweisser" },
       { label: "Website für Hausmeisterservice", href: "/webseite-fuer-hausmeisterservice" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
@@ -606,6 +607,120 @@ export const ARTICLES: Article[] = [
       { label: "Website für Schweißer", href: "/webseite-fuer-schweisser" },
       { label: "Auftragsvergabe im Metallbau", href: "/ratgeber/auftraege-schweisser-metallbau" },
       { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
+      { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+    ],
+  },
+
+  {
+    slug: "auftraege-trockenbau-innenausbau",
+    category: "Branchen",
+    title: "Aufträge im Trockenbau und Innenausbau gewinnen",
+    metaTitle: "Aufträge im Trockenbau gewinnen: so läuft die Vergabe | Ratgeber",
+    description:
+      "Wie Aufträge im Trockenbau und Innenausbau vergeben werden: Nachunternehmer beim Generalunternehmer, welche Nachweise verlangt werden, Privatkunden und was online darüber entscheidet.",
+    datePublished: "2026-09-24",
+    dateModified: "2026-09-24",
+    readingTime: "9 Min.",
+    intro: [
+      "Im Trockenbau und Innenausbau entscheidet selten der schönste Prospekt über den Auftrag. Es entscheidet, ob ein Bauleiter Sie kennt oder findet, wenn er kurzfristig jemanden für Wände, Decken oder Spachtelarbeiten braucht. Und es entscheidet, ob Sie ihm in wenigen Minuten belegen können, dass Sie sauber arbeiten und Ihre Nachweise beisammen haben.",
+      "Dieser Leitfaden beschreibt den Weg, den ein Auftrag im Innenausbau wirklich nimmt: von der Anfrage des Generalunternehmers über die Nachweise bis zum privaten Bauherrn, der sein Dachgeschoss ausbauen lassen will. Und er zeigt, an welchen Stellen ein Betrieb online abgehängt wird, ohne es zu merken.",
+    ],
+    sections: [
+      {
+        heading: "Wie ein Auftrag im Innenausbau tatsächlich vergeben wird",
+        paragraphs: [
+          "Am Anfang steht fast immer eine Kette: Der Bauherr beauftragt einen Generalunternehmer oder ein Bauunternehmen, und dieses vergibt die einzelnen Gewerke weiter. Trockenbau, Bodenbelag und Malerarbeiten gehen dabei an Nachunternehmer. Wer in dieser Kette einmal drin ist, bekommt Folgeaufträge oft ohne neuen Wettbewerb. Wer draußen ist, kommt schwer hinein, weil die Vergabe selten öffentlich stattfindet.",
+          "Der zweite, viel unterschätzte Weg ist die kurzfristige Lücke. Ein Nachunternehmer fällt aus, eine Kolonne ist krank, ein Termin wackelt. Dann sucht ein Bauleiter unter Zeitdruck, und zwar genauso, wie alle anderen auch suchen: am Telefon über Google. In diesem Moment gewinnt der Betrieb, der auffindbar ist, sein Gebiet nennt und sofort erkennen lässt, welche Arbeiten er ausführt.",
+          "Der dritte Weg ist der private Bauherr. Er hat keinen Generalunternehmer, sondern eine Idee vom fertigen Dachgeschoss. Er sucht, vergleicht, schaut sich Bilder an und fragt am Ende zwei oder drei Betriebe an. Hier zählt nicht die Vergabepraxis, sondern Vertrauen.",
+        ],
+      },
+      {
+        heading: "Was ein Generalunternehmer sehen will, bevor er Sie anfragt",
+        paragraphs: [
+          "Ein Bauleiter hat wenig Zeit und ein hohes Risiko. Fällt sein Nachunternehmer aus oder arbeitet schlecht, hat er den Ärger. Deshalb prüft er vorab, ob Sie ins Raster passen. Diese Punkte sollten deshalb ohne Nachfragen sichtbar sein:",
+        ],
+        bullets: [
+          "Welche Gewerke Sie wirklich ausführen, einzeln benannt statt als Aufzählung",
+          "Ihr Einsatzgebiet und wie weit Sie fahren",
+          "Wie viele Leute Sie stellen können und ob Sie mit Kolonnen arbeiten",
+          "Referenzen, am besten mit Bildern vom fertigen Ergebnis",
+          "Nachweise und Versicherung, damit die Zusammenarbeit nicht am Papierkram hängt",
+        ],
+        link: { label: "Website für Trockenbau und Innenausbau, die Anfragen bringt", href: "/webseite-fuer-trockenbau" },
+      },
+      {
+        heading: "Die Nachweise, nach denen im Bau gefragt wird",
+        paragraphs: [
+          "Bei Bauleistungen hält der Auftraggeber grundsätzlich fünfzehn Prozent der Rechnungssumme ein und führt sie als Bauabzugsteuer ans Finanzamt ab. Das entfällt, wenn Sie eine gültige Freistellungsbescheinigung nach Paragraf 48b Einkommensteuergesetz vorlegen. Viele Auftraggeber fragen sie deshalb schon vor der Beauftragung ab. Wer sie sofort schicken kann, wirkt eingespielt.",
+          "Dazu kommen je nach Auftraggeber und Betrieb weitere Unterlagen: Unbedenklichkeitsbescheinigungen von Krankenkasse, Berufsgenossenschaft und Sozialkasse der Bauwirtschaft, eine Betriebshaftpflicht mit ausreichender Deckung und bei größeren Bauvorhaben eine Nachunternehmererklärung. Das ist kein Hexenwerk, aber es entscheidet oft darüber, wer beim zweiten Anruf noch dabei ist.",
+          "Legen Sie diese Unterlagen griffbereit ab, digital und aktuell. Nichts bremst eine Vergabe so zuverlässig wie ein fehlendes Papier, das erst besorgt werden muss.",
+        ],
+      },
+      {
+        heading: "Öffentliche Ausschreibungen für Trockenbau: lohnt sich der Aufwand?",
+        paragraphs: [
+          "Öffentliche Auftraggeber schreiben Innenausbauleistungen über Vergabeplattformen aus, in der Regel nach der Vergabe- und Vertragsordnung für Bauleistungen. Die Leistung steht dann in einem Leistungsverzeichnis, Sie bepreisen Position für Position und reichen das Angebot fristgerecht digital ein.",
+          "Für kleine Betriebe ist das zweischneidig. Der Aufwand je Angebot ist hoch, die Eignungsnachweise sind formal, und der Preis wiegt schwer. Dafür sind die Auftraggeber zahlungssicher und die Bauvolumen planbar. Sinnvoll ist es meist erst, wenn Sie eine Person haben, die Angebote sauber kalkulieren und Fristen einhalten kann. Bis dahin bringen Generalunternehmer und Privatkunden pro Stunde Aufwand deutlich mehr.",
+        ],
+      },
+      {
+        heading: "Zwei Zielgruppen, zwei völlig verschiedene Suchen",
+        paragraphs: [
+          "Ein Bauleiter sucht anders als ein Hausbesitzer. Der eine tippt Begriffe wie Trockenbau Nachunternehmer oder Trockenbaufirma mit dem Ort ein, der andere sucht nach Dachgeschoss ausbauen lassen oder Trockenbauer in der Nähe. Beide sollen fündig werden, aber sie brauchen unterschiedliche Antworten auf der Seite.",
+          "Der Fehler, den fast jeder Betrieb macht: Er schreibt für beide denselben Text. Dann steht dort eine Mischung, die den Bauleiter nicht überzeugt und den Privatkunden nicht abholt. Besser ist ein eigener Abschnitt je Zielgruppe, jeweils mit der Sprache, die dort üblich ist.",
+        ],
+      },
+      {
+        heading: "Projektfotos sind im Innenausbau das stärkste Argument",
+        paragraphs: [
+          "Kaum ein Gewerk lässt sich so gut zeigen wie Innenausbau. Eine fertige Akustikdecke, eine saubere Kante, ein Dachgeschoss vor und nach dem Ausbau: solche Bilder beantworten in zwei Sekunden die Frage, die jeder Interessent hat, nämlich ob Sie ordentlich arbeiten.",
+          "Es braucht dafür keinen Fotografen. Ein aktuelles Handy reicht, wenn Sie auf drei Dinge achten: aufgeräumte Fläche, Tageslicht, immer derselbe Standpunkt für Vorher und Nachher. Fragen Sie den Kunden vorher kurz, ob Sie die Bilder zeigen dürfen, dann gibt es später keine Diskussion.",
+        ],
+        link: { label: "Wie ein Frankfurter Innenausbaubetrieb seine Gewerke sortiert hat", href: "/referenzen/sz-innenausbau" },
+      },
+      {
+        heading: "Oberflächengüte, Brandschutz, Schallschutz: die Sprache der Planer",
+        paragraphs: [
+          "Wer mit Architekten und Planungsbüros zu tun hat, wird an Begriffen gemessen. Die Oberflächengüten Q1 bis Q4 gehören dazu: Sie beschreiben, wie weit eine gespachtelte Fläche fertiggestellt ist, von der reinen Grundverspachtelung bis zur Fläche für Glanz- und Streiflichtbeanspruchung. Wer im Angebot und auf der Website die Güte benennt, die er ausführt, vermeidet Streit auf der Baustelle und wirkt fachlich sicher.",
+          "Dasselbe gilt für Brandschutz und Schallschutz. Geprüfte Wand- und Deckenaufbauten, sauber dokumentiert, sind bei Gewerbeobjekten oft der Punkt, an dem sich zwei Angebote unterscheiden. Diese Kompetenz gehört auf die Website, nicht nur ins Angebot.",
+        ],
+      },
+      {
+        heading: "Wie Sie unabhängiger von einem einzigen Auftraggeber werden",
+        paragraphs: [
+          "Viele Innenausbaubetriebe hängen an ein oder zwei Generalunternehmern. Das ist bequem, solange es läuft, und gefährlich, sobald einer wegbricht oder den Preis drückt. Der Ausweg ist keine Werbekampagne, sondern eine Mischung: feste Auftraggeber am Bau, dazu eine eigene Sichtbarkeit, über die Privatkunden und neue Bauunternehmen von allein anfragen.",
+          "Diese Sichtbarkeit entsteht nicht über Nacht. Sie entsteht dadurch, dass Ihre Leistungen einzeln auffindbar sind, Ihr Gebiet klar benannt ist und Ihre Projekte sichtbar sind. Es ist die Grundlage, auf der lokale Suchmaschinenoptimierung überhaupt erst wirken kann.",
+        ],
+        link: { label: "Was zu unserer lokalen Suchmaschinenoptimierung gehört", href: "/suchmaschinenoptimierung" },
+      },
+    ],
+    faqs: [
+      {
+        q: "Wie komme ich als Trockenbauer an Aufträge von Generalunternehmern?",
+        a: "Über zwei Wege. Erstens direkt: Bauunternehmen und Generalunternehmer in Ihrem Gebiet kennen, ansprechen und als Nachunternehmer gelistet werden. Zweitens über die Suche, denn bei kurzfristigen Ausfällen sucht ein Bauleiter online nach einem Betrieb, der die Leistung sofort übernehmen kann. Dafür müssen Ihre Gewerke, Ihr Gebiet und Ihre Erreichbarkeit im Netz eindeutig zu finden sein.",
+      },
+      {
+        q: "Brauche ich für Bauleistungen eine Freistellungsbescheinigung?",
+        a: "Ohne gültige Freistellungsbescheinigung nach Paragraf 48b Einkommensteuergesetz muss Ihr Auftraggeber fünfzehn Prozent der Rechnungssumme einbehalten und ans Finanzamt abführen. Die Bescheinigung beantragen Sie beim Finanzamt. Viele Auftraggeber fragen sie bereits vor der Beauftragung ab, deshalb sollten Sie sie jederzeit griffbereit haben.",
+      },
+      {
+        q: "Wo finde ich Ausschreibungen für Trockenbau und Innenausbau?",
+        a: "Öffentliche Auftraggeber veröffentlichen Bauleistungen auf Vergabeplattformen, private Auftraggeber vergeben dagegen meist direkt über Generalunternehmer. Rechnen Sie bei öffentlichen Ausschreibungen mit formalen Eignungsnachweisen und mit Preiswettbewerb. Für kleinere Betriebe bringt der direkte Weg über Bauunternehmen und Privatkunden pro Stunde Aufwand in der Regel mehr.",
+      },
+      {
+        q: "Lohnt sich eine eigene Website, wenn ich nur als Subunternehmer arbeite?",
+        a: "Gerade dann. Als Subunternehmer hängen Sie an wenigen Auftraggebern, und genau das ist das Risiko. Eine eigene Seite macht Sie für andere Bauunternehmen auffindbar und öffnet zusätzlich das Privatkundengeschäft, etwa beim Dachgeschossausbau. Sie verhandeln anders, wenn Sie nicht auf einen einzigen Auftraggeber angewiesen sind.",
+      },
+      {
+        q: "Wie wichtig sind Fotos meiner fertigen Arbeiten?",
+        a: "Im Innenausbau sind sie das stärkste Argument, weil das Ergebnis sichtbar ist. Vorher-nachher-Bilder aus demselben Blickwinkel, eine fertige Decke, ein Detail einer sauberen Kante. Ein aktuelles Handy reicht dafür völlig. Wichtig ist nur, den Kunden vorher zu fragen, ob Sie die Bilder verwenden dürfen.",
+      },
+    ],
+    related: [
+      { label: "Website für Trockenbau und Innenausbau", href: "/webseite-fuer-trockenbau" },
+      { label: "Fallstudie: SZ Innenausbau aus Frankfurt", href: "/referenzen/sz-innenausbau" },
+      { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
+      { label: "Auftragsvergabe im Metallbau verstehen", href: "/ratgeber/auftraege-schweisser-metallbau" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
   },
@@ -1404,7 +1519,7 @@ export const ARTICLES: Article[] = [
     description:
       "Ihre Website ist online, wird bei Google aber nicht gefunden? Neun Gründe, die Sie in wenigen Minuten selbst prüfen können, und die richtige Reihenfolge.",
     datePublished: "2026-09-08",
-    dateModified: "2026-09-09",
+    dateModified: "2026-09-24",
     readingTime: "8 Min.",
     intro: [
       "Die Seite ist fertig, sie ist online, sie sieht gut aus. Sie tippen Ihre Leistung und Ihren Ort bei Google ein und finden alles Mögliche, nur sich selbst nicht.",
@@ -1500,6 +1615,18 @@ export const ARTICLES: Article[] = [
         link: { label: "Woran Sie einen seriösen Anbieter erkennen", href: "/ratgeber/seo-agentur-erkennen" },
       },
       {
+        heading: "Wenn die Seite im Index steht, aber trotzdem nicht angezeigt wird",
+        paragraphs: [
+          "Es gibt zwei ganz verschiedene Fälle, die sich für den Betrieb gleich anfühlen. Im ersten kennt Google die Seite überhaupt nicht, sie steht nicht im Index. Im zweiten steht sie im Index, wird aber bei den Suchbegriffen, die zählen, so weit hinten angezeigt, dass sie niemand sieht.",
+          "Unterscheiden lässt sich das in einer Minute. Geben Sie site: gefolgt von Ihrer Adresse in die Suche ein. Kommt kein einziges Ergebnis, ist die Seite nicht im Index, und die Punkte zwei und drei weiter oben sind Ihre Baustelle. Kommen Ergebnisse, ist die Aufnahme in Ordnung, und es geht ab Punkt sechs um Inhalte, die zu den Suchbegriffen Ihrer Kunden passen.",
+          "Der dritte Fall ist neu: Ihre Seite erscheint in der normalen Trefferliste, aber nicht in der KI-Antwort, die Google oben einblendet. Das ist kein Fehler Ihrer Seite und kein Grund, etwas umzubauen. Die Auswahl dort folgt eigenen Regeln, und sie ändert sich laufend.",
+        ],
+        links: [
+          { label: "Was sich mit der KI-Suche für Betriebe ändert", href: "/ratgeber/ki-suche-google-2026" },
+          { label: "Wie Sie bei der lokalen Suche und in Google Maps sichtbar werden", href: "/ratgeber/lokale-seo-google-maps" },
+        ],
+      },
+      {
         heading: "Wenn Sie es nicht selbst machen wollen",
         paragraphs: [
           "Die Punkte eins bis vier kann jeder prüfen, der eine Viertelstunde Zeit hat. Ab Punkt sechs wird es Arbeit, weil dann Seiten entstehen müssen, die es vorher nicht gab.",
@@ -1519,6 +1646,14 @@ export const ARTICLES: Article[] = [
       },
     ],
     faqs: [
+      {
+        q: "Meine Homepage wird bei Google nicht angezeigt. Was prüfe ich zuerst?",
+        a: "Suchen Sie nach site: gefolgt von Ihrer Adresse, ohne Leerzeichen dazwischen. Erscheint kein Ergebnis, kennt Google die Seite nicht: dann fehlen meist Sitemap und Anmeldung in der Search Console, oder die Seite steht auf noindex. Erscheinen Ergebnisse, ist die Seite aufgenommen und wird nur für Ihre Suchbegriffe zu weit hinten angezeigt.",
+      },
+      {
+        q: "Warum wird meine Website nicht in der KI-Antwort von Google angezeigt?",
+        a: "Die KI-Antwort stellt Google aus Quellen zusammen, die es für passend hält, und diese Auswahl wechselt häufig. Sie lässt sich nicht erzwingen. Wer dort auftaucht, ist in aller Regel auch in der normalen Trefferliste vorn, deshalb bleibt die Reihenfolge dieselbe: erst gefunden werden, dann gut ranken.",
+      },
       {
         q: "Wie lange dauert es, bis eine neue Seite bei Google auftaucht?",
         a: "Das schwankt stark und hängt davon ab, ob die Adresse neu ist und ob es Verweise von anderen Seiten gibt. Eine Anmeldung in der Search Console beschleunigt es spürbar.",

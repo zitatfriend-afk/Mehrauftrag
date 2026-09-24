@@ -205,6 +205,28 @@ export const ANALYSE: Record<string, AnalyseContent> = {
   },
 
   // ─── Grundlagen & Vergleiche ────────────────────────────────────────────────
+  "auftraege-trockenbau-innenausbau": {
+    slug: "auftraege-trockenbau-innenausbau",
+    audience: "Trockenbau & Innenausbau",
+    metaTitle: "Kostenlose Website-Analyse für Trockenbau & Innenausbau | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse für Trockenbau- und Innenausbaubetriebe: Wie Sie über Website und Google Anfragen von Generalunternehmern und Bauherren gewinnen.",
+    eyebrow: "Für Trockenbau & Innenausbau",
+    h1: "Kostenlose Website-Analyse für Ihren Innenausbaubetrieb",
+    intro:
+      "Wir schauen uns Ihren Auftritt an und sagen Ihnen konkret, warum Bauleiter und private Bauherren Sie bisher nicht finden und was sich mit wenig Aufwand ändern lässt. Unverbindlich und verständlich erklärt.",
+    benefits: [
+      "Sind Ihre Gewerke einzeln auffindbar oder stehen sie in einer Liste?",
+      "Sieht ein Bauleiter Ihr Einsatzgebiet und Ihre Nachweise sofort?",
+      "Wirken Ihre Projektfotos so gut wie Ihre Arbeit?",
+      "Unverbindlich und ohne Verkaufsdruck",
+    ],
+    formHeadline: "Jetzt kostenlose Analyse anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf, wie es Ihnen lieber ist.",
+    leadSource: "Analyse - Trockenbau",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   "corporate-design-werbemittel": {
     slug: "corporate-design-werbemittel",
     audience: "Ihren Marken- und Werbeauftritt",

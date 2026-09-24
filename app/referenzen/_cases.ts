@@ -88,6 +88,7 @@ export const CASES: Case[] = [
       },
     ],
     links: [
+      { label: "Website für Trockenbau und Innenausbau", href: "/webseite-fuer-trockenbau" },
       { label: "Webdesign Frankfurt: das Angebot für Betriebe in der Stadt", href: "/webdesign-frankfurt" },
       { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
     ],
