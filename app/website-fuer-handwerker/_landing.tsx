@@ -239,8 +239,8 @@ const PRICE_INCLUDES = [
   "Individuelle Website für Ihren Betrieb",
   "In 7 Tagen online, sonst entfällt die Gebühr",
   "Click-to-Call, Google Maps und Bewertungen eingebunden",
-  "Die Seite gehört Ihnen",
-  "Pflege, Hosting und Updates optional 49 € im Monat, jederzeit kündbar",
+  "Die Seite gehört Ihnen und bleibt online, ohne laufende Kosten",
+  "Laufende Betreuung und spätere Änderungen sind nicht enthalten",
 ];
 
 // Kundenstimmen kommen aus app/_components/google-reviews.tsx, also woertlich aus
@@ -1327,7 +1327,7 @@ export default function HandwerkerLanding() {
                 <div className="mt-3 flex justify-center">
                   <span className="text-[44px] font-black leading-none text-white sm:text-5xl">1.290 €</span>
                 </div>
-                <p className="mt-2 text-sm text-slate-400">einmalig, danach gehört sie Ihnen</p>
+                <p className="mt-2 text-sm text-slate-400">einmalig, danach keine laufenden Kosten</p>
               </div>
 
               {/* 25.09.2026: Haken jetzt in einem eigenen Kreis, Text eine Spur
@@ -1362,13 +1362,13 @@ export default function HandwerkerLanding() {
                   Fairer Start. Klare Kosten.
                 </p>
                 <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
-                  Sie zahlen 1.290 € einmalig für Ihre Website. Danach gehört sie Ihnen.
-                  Pflege, Hosting und Updates kosten optional 49 € im Monat und sind
-                  jederzeit zum Monatsende kündbar.
+                  Sie zahlen 1.290 € einmalig für Ihre Website. Danach gehört sie Ihnen, sie
+                  bleibt online, und es kommt kein Cent mehr dazu.
                 </p>
                 <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
-                  Keine versteckten Kosten. Keine Überraschungen. Sie wissen von Anfang an, was
-                  Sie bezahlen.
+                  Was nicht dabei ist: die laufende Betreuung. Wenn Sie möchten, dass ich mich
+                  weiter um die Seite kümmere und Änderungen übernehme, starten Sie stattdessen
+                  monatlich. Keine versteckten Kosten, keine Überraschungen.
                 </p>
               </div>
 
@@ -1411,9 +1411,11 @@ export default function HandwerkerLanding() {
                   Lieber erst testen?
                 </p>
                 <p className="mt-1.5 text-sm leading-relaxed text-slate-400">
-                  Starten Sie monatlich mit 250 € und 75 € im Monat, jederzeit zum
-                  Monatsende kündbar. Wenn die Website überzeugt, können Sie sie jederzeit kaufen.
-                  Die Hälfte Ihrer bisherigen Monatsbeiträge wird angerechnet, bis zu zwölf Monate.
+                  Starten Sie monatlich mit 250 € und 75 € im Monat, jederzeit zum Monatsende
+                  kündbar. Darin ist die laufende Betreuung enthalten: Hosting, Pflege, Updates
+                  und Änderungen an Ihrer Seite. Wenn die Website überzeugt, können Sie sie
+                  jederzeit kaufen. Die Hälfte Ihrer bisherigen Monatsbeiträge wird angerechnet,
+                  bis zu zwölf Monate.
                 </p>
               </div>
 

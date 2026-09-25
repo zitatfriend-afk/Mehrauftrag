@@ -8,8 +8,14 @@
 // 24.09.2026: Preismodell umgestellt. 82 Klicks aus Google Ads, null Anfragen.
 // Die Mitbewerber auf demselben Suchbegriff verkaufen Festpreise zwischen 490
 // und 1.490 Euro und damit Eigentum, wir haben als einzige nur vermietet. Der
-// Kauf ist jetzt das Hauptangebot (1.290 Euro), die Miete bleibt als
-// Einstieg mit Kaufoption (250 Euro Start, 75 Euro im Monat).
+// Es gibt genau zwei Wege, und der Unterschied ist die Betreuung:
+// Kauf 1.290 Euro einmalig, danach keine laufenden Kosten, die Seite bleibt
+// online, aber ohne laufende Betreuung und ohne spaetere Aenderungen.
+// Miete 250 Euro zum Start und 75 Euro im Monat, darin ist die Betreuung
+// enthalten, monatlich kuendbar, jederzeit kaufbar mit Anrechnung der halben
+// Monatsbeitraege bis zu zwoelf Monate.
+// 25.09.2026: Das frueher angebotene Pflegepaket fuer 49 Euro im Monat ist
+// ersatzlos entfallen. Es stand quer zur Aussage "keine laufenden Kosten".
 //
 // Die fruehere Frage "Warum ist der Einstieg so guenstig?" ist entfallen. Sie
 // hat einen Einstiegspreis verteidigt, den es so nicht mehr gibt. An ihrer
@@ -26,7 +32,7 @@ export type Faq = { q: string; a: string };
 export const FAQS: Faq[] = [
   {
     q: "Was, wenn die Website keine Anfragen bringt?",
-    a: "Ehrlich: Anfragen garantieren kann Ihnen niemand, ich auch nicht. Wer das verspricht, verkauft Ihnen etwas. Was ich zusage: Sie sitzen in keiner Laufzeit fest. Sind Sie monatlich gestartet, kündigen Sie zum Monatsende und zahlen keinen Cent weiter. Haben Sie gekauft, gehört Ihnen die Seite und Sie können die Pflege jederzeit beenden. Vorher nehme ich sie mir noch einmal vor, Texte, Bilder, Ihr Google-Unternehmensprofil und eigene Seiten für Ihre einzelnen Leistungen. Das kostet Sie nichts extra.",
+    a: "Ehrlich: Anfragen garantieren kann Ihnen niemand, ich auch nicht. Wer das verspricht, verkauft Ihnen etwas. Was ich zusage: Sie sitzen in keiner Laufzeit fest. Sind Sie monatlich gestartet, kündigen Sie zum Monatsende und zahlen keinen Cent weiter. Haben Sie gekauft, gehört Ihnen die Seite und es läuft ohnehin nichts weiter. Vorher nehme ich sie mir noch einmal vor, Texte, Bilder, Ihr Google-Unternehmensprofil und eigene Seiten für Ihre einzelnen Leistungen. Das kostet Sie nichts extra.",
   },
   {
     q: "Wie lange dauert es wirklich?",
@@ -38,11 +44,11 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Gibt es eine Mindestlaufzeit?",
-    a: "Nein. Beim Kauf gibt es ohnehin keine, die Seite gehört Ihnen. Das optionale Pflegepaket für 49 € im Monat und der monatliche Einstieg sind zum Monatsende kündbar. Kein Kleingedrucktes, keine langfristige Bindung.",
+    a: "Nein. Beim Kauf gibt es ohnehin keine, die Seite gehört Ihnen und es läuft nichts weiter. Der monatliche Einstieg ist jederzeit zum Monatsende kündbar. Kein Kleingedrucktes, keine langfristige Bindung.",
   },
   {
     q: "Geht es auch ohne monatliche Kosten?",
-    a: "Ja, das ist inzwischen der normale Weg. Sie kaufen die Website einmalig für 1.290 €, danach gehört sie Ihnen und es läuft nichts weiter. Pflege, Hosting und Updates können Sie für 49 € im Monat dazubuchen, müssen Sie aber nicht. Wer lieber klein anfängt, startet monatlich und kauft später.",
+    a: "Ja, das ist der Kauf und inzwischen der normale Weg. Sie zahlen einmalig 1.290 €, danach gehört die Website Ihnen, sie bleibt online und es kommt nichts mehr dazu. Was in dem Preis nicht steckt, ist die laufende Betreuung: Änderungen an der Seite übernehme ich dann nicht mehr. Wer das möchte, startet monatlich, da ist die Betreuung drin.",
   },
   {
     q: "Kann ich erst mieten und später kaufen?",
@@ -54,6 +60,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Was kostet mich das auf Dauer?",
-    a: "Beim Kauf zahlen Sie 1.290 € einmalig. Pflege, Hosting und Updates kosten optional 49 € im Monat, jederzeit kündbar. Beim monatlichen Einstieg zahlen Sie 250 € zum Start und danach 75 € im Monat. Nach einem Jahr sind das beim Kauf mit Pflege 1.878 €, bei der Miete 1.150 €. Am Anfang ist die Miete also günstiger. Ohne Pflegepaket holt der Kauf das nach rund 14 Monaten auf, mit Pflegepaket nach gut drei Jahren. Dafür gehört Ihnen die Seite vom ersten Tag an, und wenn Sie später doch kaufen, wird die Hälfte Ihrer Monatsbeiträge angerechnet.",
+    a: "Es gibt genau zwei Wege. Beim Kauf zahlen Sie 1.290 € einmalig und danach nichts mehr, die Seite gehört Ihnen und bleibt online. Beim monatlichen Einstieg zahlen Sie 250 € zum Start und 75 € im Monat, dafür ist die laufende Betreuung dabei. Das sind nach einem Jahr 1.150 € und nach zwei Jahren 2.050 €. Ab rund 14 Monaten haben Sie mit der Miete mehr gezahlt, als der Kauf gekostet hätte. Dafür kümmere ich mich in der Zeit um Ihre Seite, und wenn Sie später kaufen, wird die Hälfte Ihrer Monatsbeiträge angerechnet.",
   },
 ];
