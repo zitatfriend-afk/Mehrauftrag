@@ -118,15 +118,23 @@ const trackWhatsappClick = sendeWhatsappConversion;
 // ─── Shared Motion ────────────────────────────────────────────────────────────
 const EASE_OUT = [0.16, 1, 0.3, 1] as [number, number, number, number];
 const fadeUp = {
-  hidden: { opacity: 0, y: 26 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: EASE_OUT } },
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.38, ease: EASE_OUT } },
 };
 const stagger = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.09, delayChildren: 0.04 } },
+  show: { transition: { staggerChildren: 0.05, delayChildren: 0 } },
 };
 
-const SECTION_VIEWPORT = { once: true, amount: 0.25 };
+// 25.09.2026: Beim schnellen Scrollen sah man erst eine leere Flaeche und die
+// Inhalte kamen deutlich zu spaet. Ursache war nicht die Ladezeit, sondern der
+// Ausloeser: Vorher startete die Einblendung erst, wenn ein Viertel des
+// Abschnitts sichtbar war. Bei einem langen Abschnitt wie dem Preisbereich sind
+// das mehrere hundert Pixel. Jetzt genuegt ein Hauch des Abschnitts, und der
+// Erkennungsbereich reicht 300 Pixel unter die Sichtkante. Die Einblendung
+// laeuft also schon, bevor der Abschnitt ueberhaupt im Bild ist. Dazu sind die
+// Dauer und der Versatz zwischen den Elementen deutlich kuerzer.
+const SECTION_VIEWPORT = { once: true, amount: 0.01, margin: "0px 0px 300px 0px" };
 
 // ─── Kleine Bausteine ─────────────────────────────────────────────────────────
 function MALogo() {
@@ -1052,10 +1060,17 @@ export default function HandwerkerLanding() {
               Sie sehen zuerst einen kostenlosen Entwurf. Erst wenn er überzeugt, geht es weiter.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="mx-auto mt-4 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-300 sm:mt-5">
-              <span className="inline-flex items-center gap-1.5"><CheckIcon /> Entwurf vorab kostenlos</span>
-              <span className="inline-flex items-center gap-1.5"><CheckIcon /> 7 Tage ab Ihren Unterlagen</span>
-              <span className="inline-flex items-center gap-1.5"><CheckIcon /> Keine Vertragslaufzeit</span>
+            {/* 25.09.2026: Auf dem Handy standen die drei Haken als drei mittig
+                zentrierte Zeilen untereinander. Jede Zeile war anders breit und
+                fing an einer anderen Stelle an, das sah unruhig aus. Jetzt
+                stehen sie linksbuendig untereinander und der Block als Ganzes
+                ist mittig. Auf dem Desktop bleibt die Reihe nebeneinander. */}
+            <motion.div variants={fadeUp} className="mt-5 flex justify-center sm:mt-6">
+              <div className="flex flex-col items-start gap-y-2.5 text-[15px] text-slate-200 sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2">
+                <span className="inline-flex items-center gap-2"><CheckIcon /> Entwurf vorab kostenlos</span>
+                <span className="inline-flex items-center gap-2"><CheckIcon /> 7 Tage ab Ihren Unterlagen</span>
+                <span className="inline-flex items-center gap-2"><CheckIcon /> Keine Vertragslaufzeit</span>
+              </div>
             </motion.div>
 
             <motion.div variants={fadeUp} className="mx-auto mt-5 max-w-md sm:mt-6">
@@ -1316,11 +1331,19 @@ export default function HandwerkerLanding() {
                 <p className="mt-2 text-sm text-slate-400">einmalig, danach gehört sie Ihnen</p>
               </div>
 
-              <ul className="mx-auto mt-8 max-w-md space-y-3">
+              {/* 25.09.2026: Haken jetzt in einem eigenen Kreis, Text eine Spur
+                  groesser und heller. Der Kreis haelt alle Zeilen auf derselben
+                  Kante, auch wenn der Text umbricht. */}
+              <ul className="mx-auto mt-8 max-w-md space-y-3.5">
                 {PRICE_INCLUDES.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-slate-300">
-                    <span className="mt-0.5"><CheckIcon /></span>
-                    {item}
+                  <li key={item} className="flex items-start gap-3 text-[15px] leading-relaxed text-slate-200">
+                    <span
+                      className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full"
+                      style={{ background: "rgba(59,130,246,0.16)", border: "1px solid rgba(96,165,250,0.35)" }}
+                    >
+                      <CheckIcon />
+                    </span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
