@@ -240,7 +240,7 @@ const PRICE_INCLUDES = [
   "In 7 Tagen online, sonst entfällt die Gebühr",
   "Click-to-Call, Google Maps und Bewertungen eingebunden",
   "Die Seite gehört Ihnen",
-  "Pflege, Hosting und Updates optional 49 € netto im Monat, jederzeit kündbar",
+  "Pflege, Hosting und Updates optional 49 € im Monat, jederzeit kündbar",
 ];
 
 // Kundenstimmen kommen aus app/_components/google-reviews.tsx, also woertlich aus
@@ -1045,7 +1045,7 @@ export default function HandwerkerLanding() {
               className="mx-auto mt-4 max-w-xl text-base font-light leading-relaxed sm:mt-5 sm:text-xl"
               style={{ color: "rgba(148,163,184,0.85)" }}
             >
-              Festpreis ab 1.290 € netto, die Website gehört Ihnen. Oder monatlich ab 75 € netto starten und später kaufen. Sie sprechen mit mir, nicht mit einem Vertrieb.
+              Festpreis ab 1.290 €, die Website gehört Ihnen. Oder monatlich ab 75 € starten und später kaufen. Sie sprechen mit mir, nicht mit einem Vertrieb.
             </motion.p>
 
             {/* 24.09.2026: Das Preismodell ist auf Kauf umgestellt, deshalb ist
@@ -1318,15 +1318,14 @@ export default function HandwerkerLanding() {
               />
               {/* 24.09.2026: Der Kauf ist das Hauptangebot. Die Zahl steht allein
                   und gross, die Miete weiter unten bewusst als schmaler Block.
-                  Die Schriftgroesse ist auf dem Handy kleiner, sonst bricht
-                  "1.290 € netto" bei 390 Pixel in zwei Zeilen um. */}
+                  25.09.2026: Der Zusatz "netto" an jeder Zahl ist raus, der
+                  Hinweis zur Umsatzsteuer steht einmal unter allen Preisen. */}
               <div className="flex flex-col items-center text-center">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#60a5fa]">
                   Website kaufen
                 </p>
-                <div className="mt-3 flex flex-wrap items-end justify-center gap-x-2">
-                  <span className="text-[40px] font-black leading-none text-white sm:text-5xl">1.290 €</span>
-                  <span className="text-base font-semibold text-slate-300">netto</span>
+                <div className="mt-3 flex justify-center">
+                  <span className="text-[44px] font-black leading-none text-white sm:text-5xl">1.290 €</span>
                 </div>
                 <p className="mt-2 text-sm text-slate-400">einmalig, danach gehört sie Ihnen</p>
               </div>
@@ -1363,8 +1362,8 @@ export default function HandwerkerLanding() {
                   Fairer Start. Klare Kosten.
                 </p>
                 <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
-                  Sie zahlen 1.290 € netto einmalig für Ihre Website. Danach gehört sie Ihnen.
-                  Pflege, Hosting und Updates kosten optional 49 € netto im Monat und sind
+                  Sie zahlen 1.290 € einmalig für Ihre Website. Danach gehört sie Ihnen.
+                  Pflege, Hosting und Updates kosten optional 49 € im Monat und sind
                   jederzeit zum Monatsende kündbar.
                 </p>
                 <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-400">
@@ -1391,8 +1390,8 @@ export default function HandwerkerLanding() {
                 <p className="mt-2 text-sm leading-relaxed text-slate-300">
                   Sobald Ihre Texte, Bilder und Angaben vollständig bei mir sind, läuft die Frist.
                   Ist Ihre Website dann nicht innerhalb von 7 Tagen erreichbar, entfällt die
-                  Erstellungsgebühr: beim Kauf die 1.290 € netto, beim monatlichen Start die
-                  250 € netto.
+                  Erstellungsgebühr: beim Kauf die 1.290 €, beim monatlichen Start die
+                  250 €.
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-400">
                   Den Starttermin bekommen Sie schriftlich, damit Sie mitzählen können.
@@ -1412,7 +1411,7 @@ export default function HandwerkerLanding() {
                   Lieber erst testen?
                 </p>
                 <p className="mt-1.5 text-sm leading-relaxed text-slate-400">
-                  Starten Sie monatlich mit 250 € netto und 75 € netto im Monat, jederzeit zum
+                  Starten Sie monatlich mit 250 € und 75 € im Monat, jederzeit zum
                   Monatsende kündbar. Wenn die Website überzeugt, können Sie sie jederzeit kaufen.
                   Die Hälfte Ihrer bisherigen Monatsbeiträge wird angerechnet, bis zu zwölf Monate.
                 </p>
@@ -1422,8 +1421,7 @@ export default function HandwerkerLanding() {
                   Angebot richtet sich an Gewerbetreibende. Bewusst unter allen
                   Preisen und nicht im Kleingedruckten am Seitenende. */}
               <p className="mx-auto mt-5 max-w-md text-center text-xs leading-relaxed text-slate-400">
-                Alle Preise verstehen sich netto, zzgl. 19 % USt. Das Angebot richtet sich an
-                Gewerbetreibende.
+                Alle Preise zzgl. 19 % USt. Das Angebot richtet sich an Gewerbetreibende.
               </p>
 
               <div className="mt-7 flex justify-center">
