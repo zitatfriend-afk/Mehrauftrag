@@ -321,6 +321,22 @@
   .ref-quote .who{display:block;margin-top:9px;font-style:normal;font-size:.82rem;color:var(--ink-3);font-weight:600}
   .band.plum .badge{background:rgba(247,239,233,.06);border-color:var(--line-dk);color:var(--paper-2)}
 
+  /* Zweite Referenz: echter Screenshot im selben Browserrahmen, dazu die Handyansicht im Rahmen der Hero-Telefongrafik */
+  .ref-next{margin-top:88px;padding-top:72px;border-top:1px solid var(--line-2)}
+  @media(max-width:920px){.ref-next{margin-top:60px;padding-top:52px}}
+  .ref-media{position:relative;padding-bottom:17%}
+  .ref-shot{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top center;background:#6b1d2a}
+  .ref-phone{position:absolute;right:5%;bottom:0;width:26%;background:#fff;border:6px solid #efe3dc;border-radius:22px;overflow:hidden;
+    box-shadow:0 22px 50px -18px rgba(120,60,85,.55);transition:transform .25s ease}
+  .ref-frame:hover .ref-phone{transform:translateY(-6px)}
+  .ref-phone img{display:block;width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top center}
+  @media(max-width:560px){.ref-media{padding-bottom:22%}.ref-phone{width:31%;right:4%}}
+  @media(max-width:430px){.ref-phone{border-width:4px;border-radius:16px}}
+  .ref-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:9px}
+  .ref-list li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:var(--ink-2);line-height:1.5}
+  .ref-list li:before{content:"✓";color:var(--rose-d);font-weight:800;flex:none}
+  .ref-list-h{margin-top:18px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--ink-3)}
+
   /* Reviews */
   .review .stars{color:var(--gold);letter-spacing:2px;font-size:1rem;margin-bottom:9px}
   .review p{color:var(--ink-2);font-size:.96rem}
@@ -494,7 +510,7 @@
     <nav class="nav-links">
       <a href="#deine-seite">Ihre Website</a>
       <a href="#gefunden">Bei Google gefunden</a>
-      <a href="#referenz">Referenz</a>
+      <a href="#referenz">Referenzen</a>
       <a href="#faq">Fragen</a>
     </nav>
     <div class="nav-cta">
@@ -670,7 +686,7 @@
   </div>
 </section>
 
-<!-- =================== REFERENZ: ROSA SHINE =================== -->
+<!-- =================== REFERENZEN: ROSA SHINE + AXÉRA BEAUTY =================== -->
 <section class="band cream" id="referenz">
   <div class="wrap">
     <div class="section-head">
@@ -710,6 +726,45 @@
           <span class="who">Kundenstimme sinngemäß, Rosa Shine Kosmetik</span>
         </div>
         <a href="https://rosa-shine-by-kosmetik.de/" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top:18px">Website live ansehen →</a>
+      </div>
+    </div>
+
+    <!-- =================== REFERENZ 2: AXÉRA BEAUTY =================== -->
+    <div class="ref-next" id="referenz-axera-beauty">
+      <div class="section-head">
+        <span class="eyebrow">Zweite Referenz aus der Kosmetik</span>
+        <h2>Axéra Beauty, Website für Kosmetikstudio in Offenbach</h2>
+        <p>Für Axéra Beauty, ein Skin &amp; Aesthetics Studio in Offenbach am Main, haben wir einen Premium Auftritt in Bordeaux und Gold gebaut. Aqua Glow Facial, Microneedling, Signature Facials, Brows und Cold Plasma Scalp Therapy stehen dort übersichtlich mit Preisen.</p>
+      </div>
+      <div class="ref">
+        <a class="ref-frame ref-media" href="https://axerabeauty.de" target="_blank" rel="noopener" aria-label="Website für Kosmetikstudio Axéra Beauty in Offenbach ansehen">
+          <div class="siteframe">
+            <div class="sf-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">axerabeauty.de</span></div>
+            <img class="ref-shot" src="/referenzen/axerabeauty-referenz-desktop-760.webp" srcset="/referenzen/axerabeauty-referenz-desktop-760.webp 760w, /referenzen/axerabeauty-referenz-desktop.webp 1440w" sizes="(max-width:920px) 92vw, 560px" width="1440" height="900" loading="lazy" decoding="async" alt="Website für Kosmetikstudio Axéra Beauty in Offenbach, Desktop Ansicht">
+          </div>
+          <div class="ref-phone">
+            <img src="/referenzen/axerabeauty-referenz-mobil-390.webp" srcset="/referenzen/axerabeauty-referenz-mobil-390.webp 390w, /referenzen/axerabeauty-referenz-mobil.webp 780w" sizes="(max-width:920px) 26vw, 150px" width="780" height="1688" loading="lazy" decoding="async" alt="Website für Kosmetikstudio Axéra Beauty in Offenbach, mobile Ansicht">
+          </div>
+        </a>
+        <div>
+          <div class="badges">
+            <span class="badge"><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9zM18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg> Skin &amp; Aesthetics Studio</span>
+            <span class="badge">Offenbach am Main</span>
+            <span class="badge">Live im Netz</span>
+          </div>
+          <h3 style="margin:4px 0 12px">Website und Google Profil aus einer Hand</h3>
+          <p>Neue Kundinnen sehen sofort, welche Behandlungen es gibt und was sie kosten, und fragen ihren Termin direkt per WhatsApp an.</p>
+          <div class="ref-list-h">Umgesetzt</div>
+          <ul class="ref-list">
+            <li>Premium Website mit vollständiger Preisliste</li>
+            <li>Vorher/Nachher Slider</li>
+            <li>Terminanfrage direkt per WhatsApp</li>
+            <li>Instagram Einbindung</li>
+            <li>SEO für Kosmetikstudio Offenbach</li>
+            <li>Google Unternehmensprofil komplett eingerichtet, mit allen Leistungen und Preisen, Logo, Titelbild und Fotos</li>
+          </ul>
+          <a href="https://axerabeauty.de" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top:20px">Website ansehen →</a>
+        </div>
       </div>
     </div>
   </div>
