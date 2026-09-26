@@ -9,6 +9,7 @@ import {
   sendeGa4Lead,
   sendeTelefonklickConversion,
   sendeWhatsappConversion,
+  meldeKontaktversuch,
 } from "../_lib/ads-conversion";
 import MaMark from "../_components/ma-mark";
 import GoogleReviews from "../_components/google-reviews";
@@ -390,12 +391,14 @@ function LeadForm() {
     e.preventDefault();
     if (state === "loading") return;
     if (!name.trim()) {
+      meldeKontaktversuch("formular_fehler");
       setFehlertext("Bitte Ihren Vornamen eingeben.");
       setState("invalid");
       return;
     }
     // Bewusst ODER statt UND: einer der beiden Wege genuegt.
     if (!phone.trim() && !email.trim()) {
+      meldeKontaktversuch("formular_fehler");
       setFehlertext("Bitte eine Telefonnummer oder eine E-Mail, damit wir Ihnen den Entwurf schicken können.");
       setState("invalid");
       return;

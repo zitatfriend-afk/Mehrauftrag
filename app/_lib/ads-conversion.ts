@@ -33,6 +33,68 @@ export const GA4_MESS_ID = "G-7ZLRDEFHNB";
 
 const CONSENT_KEY = "ma-consent-v1";
 
+// ─── Anonyme Zaehlung, unabhaengig vom Cookie-Banner ────────────────────────
+//
+// 26.09.2026. Das Problem: gtag wird nur geladen, wenn der Besucher im Banner
+// zugestimmt hat. Ohne Zustimmung feuert keine der Conversions unten, ein
+// Anruf ueber die Seite ist dann fuer uns unsichtbar. Nach 72 bezahlten Klicks
+// stand deshalb ueberall eine Null, ohne dass sich sagen liess, ob wirklich
+// niemand Kontakt aufgenommen hat.
+//
+// Diese Zaehlung laeuft daneben her und speichert bewusst nichts, was auf eine
+// Person zeigt: keine IP, kein User-Agent, keine Kennung, kein Cookie, kein
+// Zugriff auf Speicher im Geraet. Nur die Art des Klicks, der Pfad der Seite
+// und das Wort "google", wenn ein gclid in der Adresse stand. Die gclid selbst
+// wird nie uebertragen.
+const ZAEHL_URL =
+  "https://ezrxxxilssmzcavdvvbe.supabase.co/functions/v1/zaehle-ereignis";
+
+export type Kontaktart =
+  | "telefonklick"
+  | "whatsappklick"
+  | "formular_abgeschickt"
+  | "formular_fehler";
+
+/**
+ * Meldet einen Kontaktversuch anonym. Schlaegt das fehl, passiert nichts
+ * weiter: die Zaehlung darf den Anruf oder das Formular nie stoeren.
+ */
+export function meldeKontaktversuch(typ: Kontaktart): void {
+  if (typeof window === "undefined") return;
+  try {
+    const p = new URLSearchParams(window.location.search);
+    const quelle = p.get("gclid")
+      ? "google"
+      : p.get("fbclid")
+      ? "meta"
+      : "ohne";
+    const koerper = JSON.stringify({
+      typ,
+      seite: window.location.pathname,
+      quelle,
+    });
+
+    // Bewusst text/plain statt application/json. Nur damit bleibt es eine
+    // einfache Anfrage ohne CORS-Vorabfrage, und nur einfache Anfragen kann
+    // sendBeacon ueberhaupt verschicken. Der Server liest den Text trotzdem
+    // als JSON. Mit application/json schlug der Aufruf im Browser fehl.
+    const TYP = "text/plain;charset=UTF-8";
+
+    // sendBeacon ueberlebt den Seitenwechsel, den ein tel:-Link ausloest.
+    const beacon = navigator.sendBeacon?.bind(navigator);
+    if (beacon && beacon(ZAEHL_URL, new Blob([koerper], { type: TYP }))) return;
+
+    void fetch(ZAEHL_URL, {
+      method: "POST",
+      headers: { "Content-Type": TYP },
+      body: koerper,
+      keepalive: true,
+    }).catch(() => {});
+  } catch {
+    // bewusst still
+  }
+}
+
 type GtagFunktion = (...args: unknown[]) => void;
 
 function holeGtag(): GtagFunktion | null {
@@ -94,6 +156,7 @@ export function normalisiereTelefon(roh: string): string | null {
  * Setzt vorher die Telefonnummer als user_data, sofern eingewilligt wurde.
  */
 export function sendeFormularConversion(telefonRoh: string): void {
+  meldeKontaktversuch("formular_abgeschickt");
   const gtag = holeGtag();
   if (!gtag) return;
 
@@ -112,6 +175,8 @@ export function sendeFormularConversion(telefonRoh: string): void {
  * Anrufwege gezaehlt werden und nicht nur der Knopf im Header.
  */
 export function sendeTelefonklickConversion(): void {
+  // Zuerst die anonyme Zaehlung, die laeuft auch ohne Einwilligung.
+  meldeKontaktversuch("telefonklick");
   const gtag = holeGtag();
   if (!gtag) return;
   gtag("event", "conversion", { send_to: GA_ADS_CONVERSION_PHONE });
@@ -131,6 +196,7 @@ export function sendeTelefonklickConversion(): void {
  * Kontakt besser als ein nicht gezaehlter.
  */
 export function sendeWhatsappConversion(): void {
+  meldeKontaktversuch("whatsappklick");
   const gtag = holeGtag();
   if (!gtag) return;
   gtag("event", "conversion", { send_to: GA_ADS_CONVERSION_PHONE });
