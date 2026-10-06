@@ -48,5 +48,14 @@
     "pfade": [
       "public/"
     ]
+  },
+  "90b5392": {
+    "grund": "06.10.2026: /elektriker wird per 301 auf /website-fuer-handwerker weitergeleitet. In diesem Commit wurden auf 16 Stadtseiten, auf /suchmaschinenoptimierung, im Footer von /webseite-fuer-trockenbau und in zwei Ratgeber-Artikeln nur die internen Links auf /elektriker umgebogen, dabei Linkziel und Linktext von Elektriker auf Handwerker angepasst. Kein neuer Seiteninhalt. Ohne diesen Eintrag truegen alle 16 Stadtseiten denselben Zeitstempel.",
+    "pfade": [
+      "public/webdesign-",
+      "public/suchmaschinenoptimierung.html",
+      "public/webseite-fuer-trockenbau.html",
+      "app/ratgeber/_articles.ts"
+    ]
   }
 }

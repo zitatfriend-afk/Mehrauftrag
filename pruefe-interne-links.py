@@ -28,7 +28,7 @@ WARTE = os.path.join(BASIS, "_stadtseiten-warteschlange")
 
 # Routen, die von Next.js kommen und nicht als Datei in public/ liegen.
 NEXT_ROUTEN = {
-    "/", "/grafikdesign", "/google-ads", "/elektriker", "/kostenlose-analyse",
+    "/", "/grafikdesign", "/google-ads", "/website-fuer-handwerker", "/kostenlose-analyse",
     "/karriere", "/ratgeber", "/webdesign-standorte", "/impressum",
     "/datenschutz", "/agb",
 }

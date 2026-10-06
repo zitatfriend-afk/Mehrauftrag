@@ -425,6 +425,52 @@ export const ANALYSE: Record<string, AnalyseContent> = {
     successNote: DEFAULT_SUCCESS,
   },
 
+  "website-nicht-bei-google-gefunden": {
+    slug: "website-nicht-bei-google-gefunden",
+    audience: "Websites, die bei Google nicht auftauchen",
+    metaTitle: "Kostenloser Check: Warum fehlt Ihre Website bei Google? | Mehr Auftrag",
+    metaDescription:
+      "Ihre Website ist online, taucht bei Google aber nicht auf? Wir prüfen kostenlos, ob Google die Seite kennt, was sie blockiert und woran die Platzierung scheitert.",
+    eyebrow: "Nicht bei Google gefunden",
+    h1: "Kostenloser Check, warum Ihre Website bei Google fehlt",
+    intro:
+      "Wir prüfen zuerst, ob Google Ihre Seite überhaupt im Verzeichnis hat. Danach suchen wir die Ursache: eine technische Sperre, fehlende Unterseiten zu Ihren Leistungen, ein unvollständiges Google-Profil oder schlicht zu wenig Inhalt. Sie bekommen eine klare Antwort, woran es liegt und in welcher Reihenfolge Sie es angehen.",
+    benefits: [
+      "Prüfung, ob Google Ihre Seite überhaupt kennt",
+      "Suche nach Sperren wie noindex oder einer falschen robots.txt",
+      "Abgleich Ihrer Leistungen mit den Begriffen, die Ihre Kunden eintippen",
+      "Eine Reihenfolge der Schritte statt einer langen Mängelliste",
+    ],
+    formHeadline: "Kostenlosen Google-Check anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf, wie es Ihnen lieber ist.",
+    leadSource: "Analyse - Nicht bei Google",
+    successNote:
+      "Wir prüfen, ob und wie Google Ihre Seite sieht, und melden uns innerhalb von 24 Stunden per WhatsApp oder Anruf mit dem Ergebnis.",
+  },
+
+  "hosting-und-domain-erklaert": {
+    slug: "hosting-und-domain-erklaert",
+    audience: "Ihre Domain und Ihr Hosting",
+    metaTitle: "Kostenloser Check von Domain und Hosting | Mehr Auftrag",
+    metaDescription:
+      "Wem gehört Ihre Domain, wo liegt Ihre Website und kommen Sie im Notfall an Ihre Zugänge? Wir prüfen Domain und Hosting kostenlos und erklären das Ergebnis verständlich.",
+    eyebrow: "Domain und Hosting",
+    h1: "Kostenloser Check von Domain und Hosting",
+    intro:
+      "Viele Betriebe wissen nicht genau, auf wessen Namen ihre Domain eingetragen ist und wer die Zugänge zum Hosting hat. Das merkt man meist erst beim Wechsel des Dienstleisters. Wir schauen uns an, wie Ihre Adresse, Ihr Hosting und Ihre Website zusammenhängen, und sagen Ihnen offen, ob Sie im Ernstfall selbst handeln können.",
+    benefits: [
+      "Klarheit, auf wen Ihre Domain eingetragen ist",
+      "Check, ob Ihr Hosting zur Website passt und verschlüsselt ausliefert",
+      "Überblick, wer welche Zugänge besitzt",
+      "Verständliche Erklärung ohne Fachjargon",
+    ],
+    formHeadline: "Check von Domain und Hosting anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf, wie es Ihnen lieber ist.",
+    leadSource: "Analyse - Hosting und Domain",
+    successNote:
+      "Wir sehen uns Domain und Hosting an und melden uns innerhalb von 24 Stunden per WhatsApp oder Anruf mit einer verständlichen Einschätzung.",
+  },
+
   // ─── Regional ───────────────────────────────────────────────────────────────
   "werbeagentur-rhein-main-finden": {
     slug: "werbeagentur-rhein-main-finden",

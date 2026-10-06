@@ -24,6 +24,21 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        // 06.10.2026, Entscheidung Patrick: Mehr Auftrag hat keinen
+        // Elektriker als Referenzkunden, und /elektriker war zu groessten
+        // Teilen in /website-fuer-handwerker enthalten. Dauerhafte
+        // Weiterleitung, damit keine Doppelung entsteht und vorhandene
+        // Signale auf die Handwerker-Seite uebergehen. Der Quellcode unter
+        // app/elektriker bleibt liegen, wird aber nicht mehr ausgeliefert.
+        source: "/elektriker",
+        destination: "/website-fuer-handwerker",
+        statusCode: 301,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
