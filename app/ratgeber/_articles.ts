@@ -177,7 +177,6 @@ export const ARTICLES: Article[] = [
         ],
         links: [
           { label: "Website für Handwerker erstellen lassen: Aufbau, Ablauf und Preis", href: "/website-fuer-handwerker" },
-          { label: "Wie eine Website für einen Elektrobetrieb konkret aussieht", href: "/elektriker" },
         ],
       },
     ],
@@ -197,7 +196,6 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { label: "Website für Handwerker", href: "/website-fuer-handwerker" },
-      { label: "Website für Elektriker", href: "/elektriker" },
       { label: "Aufträge im Trockenbau und Innenausbau gewinnen", href: "/ratgeber/auftraege-trockenbau-innenausbau" },
       { label: "Website für Schweißer", href: "/webseite-fuer-schweisser" },
       { label: "Website für Hausmeisterservice", href: "/webseite-fuer-hausmeisterservice" },
@@ -525,7 +523,7 @@ export const ARTICLES: Article[] = [
       { label: "Lohnschweißen: Aufträge aus der Industrie", href: "/ratgeber/lohnschweissen-industrieauftraege" },
       { label: "Aufträge im Trockenbau und Innenausbau gewinnen", href: "/ratgeber/auftraege-trockenbau-innenausbau" },
       { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
-      { label: "Website für Elektriker", href: "/elektriker" },
+      { label: "Website für Handwerker", href: "/website-fuer-handwerker" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
   },
