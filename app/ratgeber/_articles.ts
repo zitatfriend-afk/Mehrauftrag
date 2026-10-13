@@ -1189,8 +1189,10 @@ export const ARTICLES: Article[] = [
         heading: "Was passt zu wem?",
         paragraphs: [
           "Ein Baukasten kann reichen, wenn Sie technisch fit sind, Zeit mitbringen und nur eine einfache Visitenkarte im Netz brauchen. Sobald die Website aktiv Kunden bringen soll, Sie Ihre Zeit lieber in Ihr Geschäft stecken oder Wert auf einen professionellen Eindruck legen, ist die Agentur meist die wirtschaftlichere Wahl, weil sie sich über die zusätzlichen Anfragen bezahlt macht.",
+          "Fällt die Wahl auf eine Agentur, bleibt eine zweite Frage offen, die im Angebot oft nur in einem Nebensatz steht: ob die Seite mit WordPress gebaut oder individuell programmiert wird. Davon hängen Wartung, Ladezeit und die Frage ab, wer später Änderungen macht.",
         ],
         link: { label: "Was ein Relaunch der bestehenden Seite kostet und wie er abläuft", href: "/website-relaunch" },
+        links: [{ label: "WordPress oder individuell gebaut: was wirklich besser passt", href: "/ratgeber/wordpress-oder-individuell" }],
       },
     ],
     faqs: [
@@ -1685,6 +1687,120 @@ export const ARTICLES: Article[] = [
       { label: "SEO oder Google Ads?", href: "/ratgeber/seo-oder-google-ads" },
       { label: "Hosting und Domain verständlich erklärt", href: "/ratgeber/hosting-und-domain-erklaert" },
       { label: "Agentur auswählen: die Checkliste", href: "/ratgeber/seo-agentur-erkennen" },
+    ],
+  },
+
+  {
+    slug: "wordpress-oder-individuell",
+    category: "Grundlagen",
+    title: "WordPress oder individuell gebaut: was für einen kleinen Betrieb wirklich besser ist",
+    metaTitle: "WordPress oder individuell gebaut? Ratgeber für Betriebe",
+    description:
+      "WordPress oder eine individuell programmierte Website? Wartung, Tempo, Sicherheit und eigene Änderungen ehrlich verglichen, plus was beim Wechsel der WordPress-Agentur zu klären ist.",
+    datePublished: "2026-10-13",
+    dateModified: "2026-10-13",
+    readingTime: "7 Min.",
+    intro: [
+      "In fast jedem Angebot für eine neue Website steckt eine Entscheidung, die selten offen besprochen wird: Wird die Seite mit WordPress gebaut oder individuell programmiert? Viele Agenturen empfehlen einfach das, womit sie immer arbeiten. Für den Betrieb, der die Seite danach jahrelang nutzt, ist die Frage aber wichtiger als die Farbe des Logos.",
+      "Dieser Ratgeber vergleicht beide Wege ohne Glaubenskrieg. Es gibt Betriebe, für die WordPress genau richtig ist, und andere, die mit einer schlanken, individuell gebauten Seite besser fahren. Am Ende wissen Sie, welche Fragen Sie stellen sollten, bevor Sie unterschreiben.",
+    ],
+    sections: [
+      {
+        heading: "Was WordPress eigentlich ist",
+        paragraphs: [
+          "WordPress ist ein Redaktionssystem, ursprünglich für Blogs entwickelt. Heute läuft darauf ein großer Teil aller Websites weltweit. Der Kern ist kostenlos, das Aussehen kommt über ein Theme, zusätzliche Funktionen über Plugins: Kontaktformular, Galerie, Cookie-Hinweis, Suchmaschinen-Einstellungen, Terminbuchung.",
+          "Genau darin liegt seine Stärke. Für fast jeden Wunsch gibt es ein fertiges Plugin, und fast jede Agentur kennt das System. Inhalte lassen sich in einer Oberfläche im Browser ändern, ohne eine Zeile Code anzufassen.",
+        ],
+      },
+      {
+        heading: "Was individuell gebaut bedeutet",
+        paragraphs: [
+          "Eine individuell gebaute Website wird für genau einen Betrieb programmiert. Es gibt kein Theme, das für unzählige andere Seiten gedacht war, und keinen Stapel an Erweiterungen von verschiedenen Herstellern. Moderne Werkzeuge erzeugen die Seiten vorab fertig, der Server muss sie beim Aufruf nur noch ausliefern.",
+          "Der Preis dafür: Es gibt keine Oberfläche, in der jeder Laie alles verschieben kann, es sei denn, sie wird bewusst mitgebaut. Wer etwas ändern will, braucht entweder diesen Zugang oder jemanden, der es für ihn erledigt.",
+        ],
+      },
+      {
+        heading: "Der Unterschied, über den kaum jemand spricht: die Wartung",
+        paragraphs: [
+          "Eine WordPress-Seite ist nie fertig. Der Kern, das Theme und jedes einzelne Plugin bekommen regelmäßig Aktualisierungen, oft weil eine Sicherheitslücke geschlossen wird. Bleiben diese Updates liegen, wird die Seite angreifbar. Werden sie eingespielt, kann es passieren, dass sich zwei Plugins plötzlich nicht mehr vertragen und das Kontaktformular still aufhört zu senden.",
+          "Das ist kein Argument gegen WordPress, sondern eine Rechnung, die in vielen Angeboten fehlt. Fragen Sie deshalb immer, wer die Updates einspielt, wie oft und ob danach geprüft wird, ob alles noch funktioniert.",
+          "Eine individuell gebaute Seite hat deutlich weniger bewegliche Teile. Es gibt keine fremden Erweiterungen, die sich gegenseitig stören, und keine Verwaltungsoberfläche, die von außen angegriffen werden kann. Ganz ohne Pflege geht es auch hier nicht, aber der Aufwand ist planbarer.",
+        ],
+      },
+      {
+        heading: "Tempo auf dem Handy",
+        paragraphs: [
+          "WordPress kann schnell sein. In der Praxis sind viele WordPress-Seiten von kleinen Betrieben aber langsam, weil ein schweres Theme, ein Baukasten-Plugin für das Layout und viele weitere Erweiterungen bei jedem Aufruf mitgeladen werden. Jedes davon bringt eigenen Code mit, auch für Funktionen, die auf der Seite gar nicht genutzt werden.",
+          "Eine individuell gebaute Seite startet schlank, weil nur das hineinkommt, was die Seite wirklich braucht. Für Kunden, die im Mobilfunknetz nach einem Betrieb suchen, ist das spürbar. Für Google auch, denn die Suchmaschine misst, wie schnell eine Seite nutzbar ist.",
+        ],
+      },
+      {
+        heading: "Selbst ändern oder ändern lassen",
+        paragraphs: [
+          "Hier hat WordPress einen echten Vorteil, und der sollte ehrlich benannt werden. Wer jede Woche neue Beiträge veröffentlicht, laufend Angebote austauscht oder selbst Bilder hochladen will, ist mit einem Redaktionssystem gut bedient.",
+          "Viele Handwerks- und Dienstleistungsbetriebe ändern ihre Website aber selten. Neue Leistung, neues Foto, geänderte Öffnungszeit. Für diese Fälle ist eine kurze Nachricht an den Dienstleister oft schneller, als sich nach Monaten wieder in eine Verwaltungsoberfläche einzuloggen und das Passwort zu suchen.",
+        ],
+      },
+      {
+        heading: "Wann welcher Weg passt",
+        paragraphs: [
+          "Eine einfache Faustregel: Je öfter Sie selbst Inhalte ändern wollen, desto mehr spricht für WordPress. Je wichtiger Ihnen Tempo, geringe Wartung und eine Seite ohne fremde Bausteine sind, desto mehr spricht für eine individuell gebaute Lösung.",
+        ],
+        bullets: [
+          "WordPress passt, wenn Sie regelmäßig selbst Beiträge schreiben, viele Seiten pflegen oder bestimmte Plugins zwingend brauchen",
+          "WordPress passt, wenn jemand die Updates zuverlässig übernimmt und das schriftlich zugesagt ist",
+          "Individuell gebaut passt, wenn die Seite vor allem Anfragen bringen soll und sich selten ändert",
+          "Individuell gebaut passt, wenn Ladezeit auf dem Handy und wenig Pflegeaufwand Vorrang haben",
+        ],
+        link: { label: "Welche Websites wir für Betriebe bauen", href: "/" },
+      },
+      {
+        heading: "Die WordPress-Agentur wechseln: das vorher klären",
+        paragraphs: [
+          "Viele Betriebe stellen die Systemfrage erst, wenn sie mit ihrer bisherigen Agentur unzufrieden sind. Dann zeigt sich, ob die Seite wirklich dem Betrieb gehört. Bevor Sie wechseln, sollten Sie die Zugänge zu Domain, Hosting und der WordPress-Verwaltung selbst in der Hand haben, und zwar als Administrator, nicht als eingeschränkter Nutzer.",
+          "Ob Sie danach bei WordPress bleiben oder auf eine individuell gebaute Seite umsteigen: Entscheidend für Google ist, dass jede bisherige Adresse auf die passende neue Seite weitergeleitet wird. Dann bleiben die Rankings erhalten, die sich die alte Seite erarbeitet hat.",
+        ],
+        link: { label: "So läuft ein Relaunch ohne Rankingverlust", href: "/website-relaunch" },
+        links: [{ label: "Wem Domain und Hosting gehören sollten", href: "/ratgeber/hosting-und-domain-erklaert" }],
+      },
+      {
+        heading: "Erst das System klären, dann die Agentur suchen",
+        paragraphs: [
+          "Wer nach einer WordPress-Agentur in Alzenau, Aschaffenburg oder Hanau sucht, sucht oft eigentlich etwas anderes: jemanden, der eine gute Seite baut und sie danach nicht verwahrlosen lässt. Ob die Agentur in derselben Stadt sitzt, spielt dafür keine Rolle. Wichtiger ist, dass sie Ihnen offen sagt, warum sie ein bestimmtes System empfiehlt, und was das für Sie in ein paar Jahren bedeutet.",
+          "Eine Agentur, die beide Wege kennt, kann Ihnen diese Frage ehrlich beantworten. Eine, die nur eines anbietet, wird Ihnen meist genau das empfehlen.",
+        ],
+      },
+      {
+        heading: "Unsicher, was zu Ihrem Betrieb passt?",
+        paragraphs: [
+          "Wenn Sie schon eine Website haben, sehen wir sie uns an und sagen Ihnen, ob sich ein Umbau lohnt und auf welchem Weg. Wenn Sie neu anfangen, zeigen wir Ihnen vorab einen kostenlosen Entwurf. Danach gibt es einen festen Preis mit benanntem Umfang.",
+        ],
+        link: { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+      },
+    ],
+    faqs: [
+      {
+        q: "Ist WordPress unsicher?",
+        a: "Nicht grundsätzlich. Die meisten Probleme entstehen durch veraltete Plugins und Themes, deren Updates nicht eingespielt wurden. Wer die Seite regelmäßig aktualisiert und danach prüft, betreibt WordPress sicher.",
+      },
+      {
+        q: "Kann ich von WordPress auf eine individuell gebaute Website wechseln, ohne Rankings zu verlieren?",
+        a: "Ja. Wichtig ist, dass jede bisherige Adresse dauerhaft auf die passende neue Seite weitergeleitet wird und gut rankende Inhalte übernommen werden. Dann gibt Google die erarbeiteten Signale an die neue Seite weiter.",
+      },
+      {
+        q: "Ist eine individuell gebaute Website teurer als WordPress?",
+        a: "Das lässt sich nicht pauschal sagen, es hängt vom Umfang ab und davon, was die laufende Pflege kostet. Bei uns sehen Sie vorab einen kostenlosen Entwurf und bekommen danach einen festen Preis mit benanntem Umfang.",
+      },
+      {
+        q: "Brauche ich WordPress, um bei Google gefunden zu werden?",
+        a: "Nein. Google bewertet Inhalte, Ladezeit, Aufbau und Verständlichkeit einer Seite, nicht das System, mit dem sie gebaut wurde. Beide Wege können gut ranken, wenn sie sauber umgesetzt sind.",
+      },
+    ],
+    related: [
+      { label: "Baukasten, WordPress oder Agentur?", href: "/ratgeber/website-selbst-oder-agentur" },
+      { label: "Hosting und Domain verständlich erklärt", href: "/ratgeber/hosting-und-domain-erklaert" },
+      { label: "Website erstellen lassen ohne Termin im Betrieb", href: "/ratgeber/website-erstellen-lassen-ohne-termin" },
+      { label: "Warum finde ich meine Website nicht bei Google?", href: "/ratgeber/website-nicht-bei-google-gefunden" },
     ],
   },
 

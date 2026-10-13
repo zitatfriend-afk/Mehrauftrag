@@ -448,6 +448,28 @@ export const ANALYSE: Record<string, AnalyseContent> = {
       "Wir prüfen, ob und wie Google Ihre Seite sieht, und melden uns innerhalb von 24 Stunden per WhatsApp oder Anruf mit dem Ergebnis.",
   },
 
+  "wordpress-oder-individuell": {
+    slug: "wordpress-oder-individuell",
+    audience: "Betriebe vor der Systemwahl",
+    metaTitle: "Kostenlose Website-Analyse: WordPress oder individuell? | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse Ihrer Website: Wir prüfen Technik, Ladezeit und Wartungsstand und sagen Ihnen ehrlich, ob WordPress oder eine individuell gebaute Seite besser zu Ihrem Betrieb passt.",
+    eyebrow: "WordPress oder individuell",
+    h1: "Kostenlose Analyse: welches System passt zu Ihrem Betrieb?",
+    intro:
+      "Ob Sie schon eine WordPress-Seite haben oder ganz neu anfangen: Wir sehen uns an, was Ihre Seite leisten soll, wie oft Sie selbst etwas ändern wollen und wie es um Ladezeit und Wartung steht. Danach sagen wir Ihnen offen, welcher Weg sich für Sie lohnt.",
+    benefits: [
+      "Ehrlicher Blick auf Technik, Ladezeit und Updates",
+      "Klare Empfehlung für WordPress oder individuell gebaut",
+      "Hinweise, was bei einem Wechsel zu beachten ist",
+      "Unverbindlich und ohne Verkaufsdruck",
+    ],
+    formHeadline: "Jetzt kostenlose Analyse anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf, wie es Ihnen lieber ist.",
+    leadSource: "Analyse - WordPress",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   "website-erstellen-lassen-ohne-termin": {
     slug: "website-erstellen-lassen-ohne-termin",
     audience: "Betriebe ohne Zeit für Agenturtermine",
