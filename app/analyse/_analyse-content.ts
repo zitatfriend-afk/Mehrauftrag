@@ -448,6 +448,28 @@ export const ANALYSE: Record<string, AnalyseContent> = {
       "Wir prüfen, ob und wie Google Ihre Seite sieht, und melden uns innerhalb von 24 Stunden per WhatsApp oder Anruf mit dem Ergebnis.",
   },
 
+  "website-erstellen-lassen-ohne-termin": {
+    slug: "website-erstellen-lassen-ohne-termin",
+    audience: "Betriebe ohne Zeit für Agenturtermine",
+    metaTitle: "Kostenlose Website-Analyse ohne Termin vor Ort | Mehr Auftrag",
+    metaDescription:
+      "Kostenlose Analyse Ihres Auftritts, komplett aus der Ferne: Wir sehen uns Ihre Website an und sagen Ihnen per WhatsApp oder Anruf, was fehlt. Ohne Termin im Betrieb.",
+    eyebrow: "Ohne Termin im Betrieb",
+    h1: "Kostenlose Website-Analyse, ganz ohne Termin",
+    intro:
+      "Sie haben tagsüber keine Zeit für Besprechungen? Müssen Sie auch nicht. Wir sehen uns Ihren Auftritt aus der Ferne an, sagen Ihnen offen, was fehlt, und zeigen Ihnen auf Wunsch vorab einen kostenlosen Entwurf, den Sie sich in Ruhe auf dem Handy ansehen.",
+    benefits: [
+      "Ehrliche Einschätzung Ihres aktuellen Auftritts",
+      "Abstimmung per Telefon, Videocall und WhatsApp",
+      "Entwurf vorab kostenlos, danach ein fester Preis",
+      "Unverbindlich und ohne Verkaufsdruck",
+    ],
+    formHeadline: "Jetzt kostenlose Analyse anfordern",
+    formNote: "Wir melden uns per WhatsApp oder Anruf, wie es Ihnen lieber ist.",
+    leadSource: "Analyse - Ohne Termin",
+    successNote: DEFAULT_SUCCESS,
+  },
+
   "hosting-und-domain-erklaert": {
     slug: "hosting-und-domain-erklaert",
     audience: "Ihre Domain und Ihr Hosting",

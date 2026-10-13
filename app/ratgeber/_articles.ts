@@ -1149,7 +1149,7 @@ export const ARTICLES: Article[] = [
     description:
       "Baukasten selbst bauen, WordPress nehmen oder eine Agentur beauftragen? Kosten, Zeitaufwand und Ergebnis im ehrlichen Vergleich für kleine Betriebe.",
     datePublished: "2026-08-02",
-    dateModified: "2026-09-09",
+    dateModified: "2026-10-13",
     readingTime: "6 Min.",
     intro: [
       "Eine Website muss her, und sofort stellt sich die Frage: selbst machen mit einem Baukasten oder eine Agentur beauftragen? Beide Wege haben ihre Berechtigung, und die richtige Antwort hängt weniger vom Budget ab als davon, was die Website leisten soll und wie viel Zeit Sie haben.",
@@ -1166,11 +1166,12 @@ export const ARTICLES: Article[] = [
       {
         heading: "Die Agentur: mehr Investition, dafür ein Werkzeug",
         paragraphs: [
-          "Eine Agentur kostet mehr als ein Baukasten, liefert dafür aber ein Ergebnis, das auf Kundengewinnung ausgelegt ist: ein individuelles Design, das zu Ihrer Marke passt, technisch schnell und für Google optimiert, mit durchdachten Wegen zur Kontaktaufnahme. Und vor allem: Sie müssen sich um nichts kümmern und gewinnen Ihre Zeit für Ihr eigentliches Geschäft zurück.",
+          "Eine Agentur kostet mehr als ein Baukasten, liefert dafür aber ein Ergebnis, das auf Kundengewinnung ausgelegt ist: ein individuelles Design, das zu Ihrer Marke passt, technisch schnell und für Google optimiert, mit durchdachten Wegen zur Kontaktaufnahme. Und vor allem: Sie müssen sich um nichts kümmern und gewinnen Ihre Zeit für Ihr eigentliches Geschäft zurück. Das gilt auch für die Abstimmung selbst: Für eine gute Website muss niemand in Ihren Betrieb kommen, Telefon, WhatsApp und ein Entwurf als Link reichen vollkommen aus.",
           "Der eigentliche Unterschied ist nicht die Optik, sondern das Ergebnis. Eine gut gemachte Website bringt Anfragen. Eine schnell selbstgebaute steht meist nur da. Bei einer professionellen Umsetzung sollte außerdem von Anfang an mitgedacht werden, wie die Seite bei Google und in KI-Systemen gefunden wird.",
           "Zur technischen Umsetzung gehört auch die Frage, wer am Ende die Adresse und den Serverplatz in der Hand hält. Wer diese beiden Bausteine einmal auseinandersortiert hat, liest jedes Angebot anders.",
         ],
         link: { label: "Was Domain und Web Hosting eigentlich unterscheidet", href: "/ratgeber/hosting-und-domain-erklaert" },
+        links: [{ label: "Wie eine Website ohne einen einzigen Termin im Betrieb entsteht", href: "/ratgeber/website-erstellen-lassen-ohne-termin" }],
       },
       {
         heading: "Die versteckten Kosten des Selbermachens",
@@ -1688,6 +1689,129 @@ export const ARTICLES: Article[] = [
   },
 
   {
+    slug: "website-erstellen-lassen-ohne-termin",
+    category: "Grundlagen",
+    title: "Eine Website erstellen lassen, ohne einen einzigen Termin im Betrieb",
+    metaTitle: "Website erstellen lassen ohne Termin vor Ort | Ratgeber",
+    description:
+      "Wie eine Agentur Ihre Website komplett aus der Ferne erstellt: was sie von Ihnen braucht, wie Fotos und Texte ankommen und woran Sie saubere Fernarbeit erkennen.",
+    datePublished: "2026-10-13",
+    dateModified: "2026-10-13",
+    readingTime: "6 Min.",
+    intro: [
+      "Wer eine Agentur sucht, um eine Website erstellen zu lassen, rechnet meist mit dem üblichen Ablauf: ein Kennenlerntermin im Betrieb, ein zweiter Termin für die Inhalte, irgendwann ein dritter für die Präsentation. Jeder davon liegt mitten im Arbeitstag, jeder wird mindestens einmal verschoben, und zwischen den Treffen passiert oft wochenlang nichts.",
+      "Dieser Ratgeber zeigt, dass es diesen Ablauf für eine gute Website nicht braucht. Er erklärt, was eine Agentur wirklich von Ihnen benötigt, wie das alles ohne Besuch bei ihr ankommt und woran Sie erkennen, ob jemand aus der Ferne sauber arbeitet oder nur so tut.",
+    ],
+    sections: [
+      {
+        heading: "Warum der klassische Agenturtermin so oft hakt",
+        paragraphs: [
+          "Das Problem ist selten die Agentur und selten der Betrieb. Es ist der Termin selbst. Ein Inhaber, der tagsüber auf Baustellen, im Laden oder am Behandlungsstuhl steht, kann sich nicht einfach zwei Stunden freinehmen, um über Farben und Menüpunkte zu reden. Also wird der Termin auf den Abend geschoben, dann auf die nächste Woche, dann auf nach dem Urlaub.",
+          "Dazu kommt ein zweiter Effekt, über den kaum jemand spricht. Was im Gespräch besprochen wurde, existiert danach nur in den Notizen der Agentur. Ob das Gesagte richtig verstanden wurde, merken Sie erst beim Entwurf, und bis dahin sind Wochen vergangen. Schriftliche Abstimmung ist an dieser Stelle nicht unpersönlicher, sondern genauer: Sie sehen schwarz auf weiß, was ankommt, und können sofort korrigieren.",
+        ],
+      },
+      {
+        heading: "Was eine Agentur tatsächlich von Ihnen braucht",
+        paragraphs: [
+          "Wenn man es ehrlich herunterbricht, ist die Liste kurz. Fast alles davon haben Sie bereits, nur verteilt auf Handy, Ordner und Kopf. Nichts davon muss jemand bei Ihnen abholen.",
+          "Was fehlt, ist meist nicht Material, sondern Zeit, es zusammenzusuchen. Eine gute Agentur fragt deshalb gezielt nach, statt Ihnen ein langes Formular zu schicken.",
+        ],
+        bullets: [
+          "Ihre Leistungen in Ihren eigenen Worten, so wie Sie sie einem Kunden am Telefon erklären würden",
+          "Das Gebiet, in dem Sie arbeiten, und die Art von Aufträgen, die Sie gern mehr hätten",
+          "Fotos echter Arbeiten, gern direkt aus der Galerie Ihres Handys",
+          "Logo und Farben, falls es sie schon gibt. Falls nicht, entstehen sie mit",
+          "Die Wege, auf denen Kunden Sie erreichen sollen: Telefon, WhatsApp, Formular",
+        ],
+      },
+      {
+        heading: "So entsteht die Website bei uns, ganz ohne Besuch",
+        paragraphs: [
+          "Bei Mehr Auftrag gibt es grundsätzlich keine Termine im Betrieb, auch nicht bei großen Projekten. Das ist keine Sparmaßnahme, sondern der Ablauf, auf den die ganze Arbeit ausgelegt ist.",
+          "Der Unterschied zum klassischen Weg liegt vor allem in der Reihenfolge. Sie sehen zuerst, was entstehen würde, und entscheiden danach. Nicht umgekehrt.",
+        ],
+        bullets: [
+          "Ein Telefonat oder Videocall zu einer Zeit, die Sie selbst wählen. Darin klären wir, was die Seite leisten soll und für wen",
+          "Fotos, Logo und Stichpunkte schicken Sie per WhatsApp oder E-Mail, so wie es gerade passt",
+          "Sie bekommen vorab einen Entwurf als Link, kostenlos, und schauen ihn sich in Ruhe auf dem Handy an",
+          "Ihre Änderungswünsche schicken Sie als Nachricht oder Sprachnachricht, wir setzen sie direkt im Entwurf um",
+          "Gefällt Ihnen die Richtung, gibt es einen festen Preis mit benanntem Umfang, danach geht die Seite online",
+        ],
+        link: { label: "Welche Websites wir für Betriebe bauen", href: "/" },
+      },
+      {
+        heading: "Gute Fotos, ohne dass ein Fotograf anreist",
+        paragraphs: [
+          "Die häufigste Sorge bei Fernarbeit betrifft die Bilder. Dabei reicht ein aktuelles Handy fast immer aus, wenn ein paar Dinge beachtet werden. Entscheidend ist nicht die Kamera, sondern was auf dem Bild zu sehen ist.",
+          "Fotografieren Sie fertige Arbeiten bei Tageslicht und quer, nicht im Kunstlicht am Abend. Zeigen Sie Vorher und Nachher aus demselben Blickwinkel, das überzeugt mehr als jedes Hochglanzbild. Nehmen Sie auch Werkzeug, Fahrzeug und Team mit auf, denn Kunden wollen sehen, wer bei ihnen vor der Tür steht. Und schicken Sie lieber viele gewöhnliche Fotos als wenige perfekte, die Auswahl übernehmen wir.",
+          "Wenn ein Bild dann doch nicht reicht, sagen wir es Ihnen konkret: welches Motiv, aus welchem Winkel, zu welcher Tageszeit. Sie machen es beim nächsten Auftrag nebenbei.",
+        ],
+      },
+      {
+        heading: "Website erstellen lassen in Offenbach, ohne dass die Agentur in Offenbach sitzt",
+        paragraphs: [
+          "Viele Betriebe suchen nach einer Agentur in ihrer eigenen Stadt, weil sie annehmen, dass Google eine Seite nur dann vor Ort zeigt, wenn sie auch vor Ort gebaut wurde. Das stimmt nicht. Für die lokale Suche zählt, was auf Ihrer Seite und in Ihrem Google-Unternehmensprofil steht: welche Leistungen Sie anbieten, in welchen Orten Sie arbeiten und ob Ihre Angaben überall gleich lauten. Wo die Agentur ihren Schreibtisch hat, spielt dafür keine Rolle.",
+          "Ein Betrieb aus Offenbach, der seine Website erstellen lässt, braucht also keinen Dienstleister um die Ecke. Er braucht jemanden, der den Markt kennt: wie dort gesucht wird, welche Mitbewerber vorne stehen und welche Stadtteile und Nachbarorte zum Einsatzgebiet gehören. Dieses Wissen lässt sich aus der Ferne genauso gut einbringen wie aus dem Nachbarhaus.",
+        ],
+        link: { label: "Die Regionen, deren Markt wir kennen", href: "/webdesign-standorte" },
+      },
+      {
+        heading: "Woran Sie saubere Fernarbeit erkennen",
+        paragraphs: [
+          "Nicht jede Agentur, die ohne Termine arbeitet, macht das gut. Manche nutzen die Distanz, um unerreichbar zu sein. Diese Punkte trennen die beiden zuverlässig.",
+          "Wenn eine Agentur bei einem dieser Punkte ausweicht, ist die Entfernung nicht das Problem, sondern die Arbeitsweise.",
+        ],
+        bullets: [
+          "Sie sehen einen Entwurf, bevor Sie etwas unterschreiben",
+          "Es gibt einen festen Ansprechpartner, der auf Nachrichten antwortet",
+          "Umfang und Preis stehen schriftlich fest, bevor die Arbeit beginnt",
+          "Domain und Zugänge laufen auf Ihren Namen, nicht auf den der Agentur",
+          "Sie werden nach Ihrem Einsatzgebiet gefragt, nicht nur nach Ihrer Lieblingsfarbe",
+        ],
+        link: { label: "Wem Domain und Hosting gehören sollten", href: "/ratgeber/hosting-und-domain-erklaert" },
+      },
+      {
+        heading: "Für wen dieser Weg nicht passt",
+        paragraphs: [
+          "Es gibt Inhaber, die eine Zusammenarbeit erst dann ernst nehmen, wenn sie dem Gegenüber die Hand geschüttelt haben. Das ist eine legitime Haltung. Wenn Ihnen persönliche Treffen vor Ort wichtig sind, sagen Sie es gleich, dann sind wir die Falschen, und Sie sparen sich beide Zeit.",
+          "Für alle anderen gilt: Die gewonnene Zeit ist kein Nebeneffekt, sondern der eigentliche Vorteil. Sie arbeiten weiter, während Ihre Website entsteht, und schauen nur dann drauf, wenn es etwas zu entscheiden gibt.",
+        ],
+      },
+      {
+        heading: "Erst den Entwurf sehen, dann entscheiden",
+        paragraphs: [
+          "Der einfachste Einstieg ist ein Blick auf das, was Sie heute haben. Wir sehen uns Ihren Auftritt an, sagen Ihnen offen, was fehlt, und zeigen Ihnen auf Wunsch vorab einen kostenlosen Entwurf. Ohne Termin, ohne Verpflichtung.",
+        ],
+        link: { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
+      },
+    ],
+    faqs: [
+      {
+        q: "Kann ich eine Website erstellen lassen, ohne die Agentur je persönlich zu treffen?",
+        a: "Ja. Alles, was für eine gute Website nötig ist, lässt sich per Telefon, Videocall, WhatsApp und E-Mail klären. Bei Mehr Auftrag ist das der normale Ablauf, Termine im Betrieb gibt es grundsätzlich nicht.",
+      },
+      {
+        q: "Wie kommen meine Fotos und Texte zur Agentur?",
+        a: "Am einfachsten per WhatsApp oder E-Mail, direkt vom Handy. Texte müssen nicht fertig formuliert sein, Stichpunkte oder eine Sprachnachricht reichen. Daraus schreiben wir die Seite.",
+      },
+      {
+        q: "Was kostet eine Website, die komplett aus der Ferne entsteht?",
+        a: "Das hängt vom Umfang ab, nicht von der Entfernung. Bei uns sehen Sie vorab einen kostenlosen Entwurf. Gefällt er Ihnen, bekommen Sie einen festen Preis mit benanntem Umfang, bevor die Arbeit weitergeht.",
+      },
+      {
+        q: "Werde ich in Offenbach gefunden, wenn die Agentur woanders sitzt?",
+        a: "Ja. Google richtet sich bei lokalen Suchen nach Ihren Angaben zu Leistungen, Einsatzgebiet und Standort sowie nach Ihrem Unternehmensprofil, nicht nach dem Sitz der Agentur, die Ihre Website gebaut hat.",
+      },
+    ],
+    related: [
+      { label: "Hosting und Domain verständlich erklärt", href: "/ratgeber/hosting-und-domain-erklaert" },
+      { label: "Baukasten, WordPress oder Agentur?", href: "/ratgeber/website-selbst-oder-agentur" },
+      { label: "Agentur auswählen: die Checkliste", href: "/ratgeber/werbeagentur-rhein-main-finden" },
+      { label: "Lokale Sichtbarkeit und Google Maps", href: "/ratgeber/lokale-seo-google-maps" },
+    ],
+  },
+
+  {
     slug: "hosting-und-domain-erklaert",
     category: "Grundlagen",
     title: "Hosting und Domain verständlich erklärt",
@@ -1811,7 +1935,7 @@ export const ARTICLES: Article[] = [
     description:
       "Woran Sie eine gute Werbe-, Web- oder SEO-Agentur erkennen: welche Fragen Sie stellen, welche Antworten warnen und was im Angebot stehen muss.",
     datePublished: "2026-08-02",
-    dateModified: "2026-09-10",
+    dateModified: "2026-10-13",
     readingTime: "6 Min.",
     intro: [
       "Das Rhein-Main-Gebiet rund um Frankfurt, Offenbach und Hanau hat viele Agenturen, von der großen Full-Service-Agentur bis zum Ein-Mann-Freelancer. Für einen kleinen oder mittleren Betrieb ist die Auswahl deshalb gar nicht so einfach. Groß ist nicht automatisch gut, und günstig nicht automatisch schlecht.",
@@ -1823,7 +1947,9 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Große Agenturen sind oft auf Konzernkunden ausgerichtet, mit entsprechenden Preisen und langen Abstimmungswegen. Für einen Handwerksbetrieb, ein Restaurant oder eine Praxis ist häufig eine Agentur besser, die genau diese Zielgruppe kennt und weiß, wie man mit überschaubarem Budget echte Anfragen erzeugt.",
           "Fragen Sie nach Referenzen aus Ihrer Branche oder von ähnlich großen Betrieben. Wer schon für vergleichbare Kunden gearbeitet hat, versteht Ihre Situation schneller.",
+          "Ein weiterer Prüfstein ist der Ablauf. Eine Agentur, die kleine Betriebe kennt, weiß, dass ein Inhaber tagsüber keine Zeit für lange Besprechungen hat, und richtet die Abstimmung danach aus: kurze Telefonate, Nachrichten, ein Entwurf zum Anschauen am Handy, statt einer Kette von Terminen.",
         ],
+        link: { label: "Wie eine Website ohne einen einzigen Termin im Betrieb entsteht", href: "/ratgeber/website-erstellen-lassen-ohne-termin" },
       },
       {
         heading: "Redet die Agentur über Ergebnisse oder nur über Design?",
