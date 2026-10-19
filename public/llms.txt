@@ -1,45 +1,57 @@
 # Mehr Auftrag
 
-> Mehr Auftrag ist eine Digitalagentur aus dem Rhein-Main-Gebiet (Hainburg bei Frankfurt am Main). Wir erstellen Websites für Gastronomie, Handwerk und Dienstleister, die bei Google gefunden werden und planbar Anfragen bringen. Jeder Kunde bekommt zuerst einen kostenlosen Entwurf, die Seite ist in rund zwei Wochen online, ohne versteckte Kosten und ohne lange Vertragsbindung.
+> Mehr Auftrag ist eine Agentur für Websites und Sichtbarkeit bei Google für kleine und mittlere Betriebe aus Handwerk, Dienstleistung und Gastronomie in Deutschland, Österreich und der Schweiz. Die Zusammenarbeit läuft komplett aus der Ferne per Telefon, WhatsApp und Videocall. Jeder Kunde sieht zuerst einen kostenlosen Entwurf und entscheidet danach. Die Seite ist in rund zwei Wochen online, ohne versteckte Kosten und ohne lange Vertragsbindung.
 
 ## Was Mehr Auftrag macht
 
-- Webdesign und Website-Erstellung für Unternehmen
-- Lokale Suchmaschinenoptimierung (SEO), damit Kunden über Google in der eigenen Stadt gefunden werden
+- Webdesign und Website-Erstellung für Betriebe, mit einer eigenen Seite je Leistung
+- Suchmaschinenoptimierung (SEO), damit Betriebe für ihre Leistungen bei Google gefunden werden
+- Website-Analyse und Relaunch, wenn eine bestehende Website keine Anfragen bringt
 - Google Ads Betreuung
-- Grafikdesign und Corporate Design
-- Werbemittel und Printdesign: Visitenkarten, Flyer und Broschüren
-- Textildruck und Merchandise: Arbeitskleidung und Kleidung mit Firmenlogo
+- Grafikdesign und Corporate Design, Werbemittel und Printdesign, Textildruck mit Firmenlogo
 
-Kurz gesagt: alles aus einer Hand – von der Website über SEO und Google Ads bis zu Visitenkarten, Flyern und Kleidung mit Logo.
+Alles aus einer Hand, von der Website über SEO und Google Ads bis zu Visitenkarten, Flyern und Kleidung mit Logo.
 
-## Websites für die Gastronomie
+## Leistungsseiten
 
-Mehr Auftrag baut individuell gestaltete Websites für einzelne Gastronomie-Bereiche, jeweils mit digitaler Speisekarte, Online-Reservierung, Bestellung ohne Portal-Provision und lokaler SEO:
+- [Suchmaschinenoptimierung für kleine Betriebe](https://www.mehrauftrag.de/suchmaschinenoptimierung)
+- [Website bringt keine Anfragen: Ursachen und Lösungen](https://www.mehrauftrag.de/website-bringt-keine-anfragen)
+- [Website relaunchen lassen](https://www.mehrauftrag.de/website-relaunch)
+- [Website für Handwerker](https://www.mehrauftrag.de/website-fuer-handwerker)
+- [Google Ads](https://www.mehrauftrag.de/google-ads)
+- [Grafikdesign](https://www.mehrauftrag.de/grafikdesign)
+- [Kostenlose Analyse](https://www.mehrauftrag.de/kostenlose-analyse)
 
-- [Website für Gastronomie (Übersicht)](https://www.mehrauftrag.de/webseite-fuer-gastronomie): Restaurants, Pizzerien, Cafés, Bars, Foodtrucks und mehr.
-- [Website für Restaurant](https://www.mehrauftrag.de/webseite-fuer-restaurant): mit Online-Reservierung und Bereich für Feiern.
-- [Website für Pizzeria](https://www.mehrauftrag.de/webseite-fuer-pizzeria): mit eigener Bestellung ohne Lieferportal-Provision.
-- [Website für Café](https://www.mehrauftrag.de/webseite-fuer-cafe): für Frühstück, Bistro und Stammgäste aus der Nachbarschaft.
-- [Website für Bar](https://www.mehrauftrag.de/webseite-fuer-bar): mit Getränkekarte, Event-Kalender und Reservierung für Gruppen.
-- [Website für Foodtruck](https://www.mehrauftrag.de/webseite-fuer-foodtruck): mit aktuellem Standort und Catering-Anfrage.
+## Websites nach Branche
 
-## Websites für weitere Branchen
-
+- [Website für Schweißbetriebe und Metallbauer](https://www.mehrauftrag.de/webseite-fuer-schweisser)
+- [Website für Trockenbau und Innenausbau](https://www.mehrauftrag.de/webseite-fuer-trockenbau)
 - [Website für Gebäudereinigung](https://www.mehrauftrag.de/webseite-fuer-gebaeudereinigung)
 - [Website für Hausmeisterservice](https://www.mehrauftrag.de/webseite-fuer-hausmeisterservice)
-- [Website für Schweißer](https://www.mehrauftrag.de/webseite-fuer-schweisser)
-- [Grafikdesign](https://www.mehrauftrag.de/grafikdesign)
-- [Google Ads](https://www.mehrauftrag.de/google-ads)
+- [Website für Physiotherapie](https://www.mehrauftrag.de/webseite-fuer-physiotherapie)
+- [Website für Kosmetikstudio](https://www.mehrauftrag.de/webseite-fuer-kosmetikstudio)
+- [Website für Gastronomie](https://www.mehrauftrag.de/webseite-fuer-gastronomie), mit eigenen Seiten für [Restaurant](https://www.mehrauftrag.de/webseite-fuer-restaurant), [Pizzeria](https://www.mehrauftrag.de/webseite-fuer-pizzeria), [Café](https://www.mehrauftrag.de/webseite-fuer-cafe), [Bar](https://www.mehrauftrag.de/webseite-fuer-bar) und [Foodtruck](https://www.mehrauftrag.de/webseite-fuer-foodtruck)
 
-## Für wen
+## Ratgeber
 
-Mehr Auftrag arbeitet vor allem mit kleinen und mittleren Betrieben: Gastronomie (Restaurant, Pizzeria, Café, Bar, Imbiss, Lieferdienst, Foodtruck, Catering), Handwerk und Dienstleistung. Der Fokus liegt auf messbarem Wachstum durch mehr Sichtbarkeit bei Google und mehr Anfragen.
+Alle Ratgeber: https://www.mehrauftrag.de/ratgeber. Besonders gefragt:
+
+- [Warum wird meine Website bei Google nicht gefunden?](https://www.mehrauftrag.de/ratgeber/website-nicht-bei-google-gefunden)
+- [Aufträge im Metallbau gewinnen](https://www.mehrauftrag.de/ratgeber/auftraege-schweisser-metallbau)
+- [Lohnschweißen: Aufträge aus der Industrie](https://www.mehrauftrag.de/ratgeber/lohnschweissen-industrieauftraege)
+- [Aufträge im Trockenbau und Innenausbau gewinnen](https://www.mehrauftrag.de/ratgeber/auftraege-trockenbau-innenausbau)
+- [Kunden gewinnen als Handwerksbetrieb](https://www.mehrauftrag.de/ratgeber/kunden-gewinnen-handwerk)
+- [Was SEO kostet](https://www.mehrauftrag.de/ratgeber/was-seo-kostet)
+
+## Referenzen
+
+Echte Kundenprojekte mit Fallstudien: https://www.mehrauftrag.de/referenzen
 
 ## Kontakt
 
 - Website: https://www.mehrauftrag.de
 - Telefon: +49 152 02069625
 - WhatsApp: https://wa.me/4915202069625
-- Standort: Josefstraße 28, 63512 Hainburg (Rhein-Main, bei Frankfurt am Main)
+- E-Mail: info@mehrauftrag.de
+- Anschrift: Josefstraße 28, 63512 Hainburg
 - Gründer: Patrick Sauna

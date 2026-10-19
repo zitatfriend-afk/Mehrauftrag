@@ -34,6 +34,19 @@ export type Article = {
   sections: Section[];
   faqs: FAQ[];
   related: RelatedLink[];
+  // Optionaler Angebotsblock direkt nach der Einleitung. Gebraucht fuer
+  // Artikel, die Klicks von genau der Zielgruppe bekommen, die Mehr Auftrag
+  // als Kunden sucht (z. B. Schweissbetriebe). Ohne diesen Block sah ein
+  // Leser das passende Angebot erst ganz am Ende des Artikels.
+  angebot?: Angebot;
+};
+
+export type Angebot = {
+  titel: string;
+  text: string;
+  punkte?: string[];
+  cta: RelatedLink;
+  referenz?: RelatedLink;
 };
 
 export const CATEGORY_LABEL: Record<Category, string> = {
@@ -349,7 +362,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wo Ausschreibungen für Hausmeisterdienstleistungen veröffentlicht werden, welche Unterlagen Verwalter erwarten und woran Bewerbungen scheitern.",
     datePublished: "2026-08-11",
-    dateModified: "2026-08-25",
+    dateModified: "2026-10-19",
     readingTime: "6 Min.",
     intro: [
       "Ein Hausmeisterservice lebt selten von einmaligen Aufträgen. Das Geschäft, das wirklich trägt, sind laufende Objektbetreuungen: eine Wohnanlage, ein Bürogebäude, mehrere Objekte einer Hausverwaltung, betreut über Jahre. Genau diese Verträge werden heute zunehmend online angebahnt.",
@@ -412,20 +425,31 @@ export const ARTICLES: Article[] = [
       { label: "Lokale SEO", href: "/ratgeber/lokale-seo-google-maps" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
+    angebot: {
+      titel: "Sie führen einen Hausmeisterservice?",
+      text:
+        "Hausverwaltungen prüfen vor jeder Vergabe, wer verlässlich wirkt, und zwar zuerst online. Wir bauen Hausmeisterdiensten Websites mit Leistungsübersicht, Einsatzgebiet und klarer Vertretungsregelung, so wie Verwalter danach suchen. Den ersten Entwurf sehen Sie vorab und kostenlos.",
+      punkte: [
+        "Kostenloser Entwurf vorab, Entscheidung erst danach",
+        "Abstimmung komplett per Telefon, WhatsApp und Videocall",
+        "Rückmeldung innerhalb von 24 Stunden",
+      ],
+      cta: { label: "Kostenlosen Entwurf anfordern", href: "/webseite-fuer-hausmeisterservice#anfrage" },
+    },
   },
 
   {
     slug: "auftraege-schweisser-metallbau",
     category: "Branchen",
-    title: "Auftragsvergabe im Metallbau: wie Industrie und Handel ihre Aufträge platzieren",
-    metaTitle: "Auftragsvergabe im Metallbau verstehen | Ratgeber",
+    title: "Aufträge im Metallbau gewinnen: wie Industrie und Handel ihre Aufträge vergeben",
+    metaTitle: "Metallbau Aufträge gewinnen: so vergibt die Industrie",
     description:
-      "Wie Einkäufer im Metallbau Aufträge vergeben: Anfrage, Angebotsvergleich, Qualifikationen und Nachweise. Für Lohnfertiger, Stahlbau und Metallverarbeitung.",
+      "Wie Metallbauer, Stahlbauer und Metallverarbeiter an neue Aufträge kommen: wie die Industrie vergibt, wo Ausschreibungen stehen, welche Nachweise zählen und was auf die Website gehört.",
     datePublished: "2026-08-11",
-    dateModified: "2026-09-19",
+    dateModified: "2026-10-19",
     readingTime: "10 Min.",
     intro: [
-      "Aufträge im Metallbau werden anders vergeben, als viele Betriebe annehmen. Die wenigsten landen auf einem Portal. Die meisten gehen an Betriebe, die der Einkäufer schon kennt oder bei einer gezielten Suche findet. Dieser Ratgeber beschreibt den Weg von der Anfrage bis zur Freigabe als Lieferant, nennt die Nachweise, die dabei verlangt werden, und zeigt, was davon auf Ihre Website gehört.",
+      "Neue Aufträge im Metallbau kommen über drei Wege: über Stammkunden und Empfehlungen, über Einkäufer, die gezielt nach einem Verfahren oder Bauteil suchen und dabei auf Ihren Betrieb stoßen, und über öffentliche Ausschreibungen. Die wenigsten Industrieaufträge landen auf einem Portal. Dieser Ratgeber zeigt, wie Industrie und Handel Aufträge im Metallbau, im Stahlbau und in der Metallverarbeitung tatsächlich vergeben, welche Nachweise dabei verlangt werden und was davon auf Ihre Website gehört.",
       "Schweißen ist eine Leistung, die kaum jemand beurteilen kann, bevor sie fertig ist. Weder der Industriekunde, der eine Reparatur an einer Anlage braucht, noch der Hausbesitzer, der ein Geländer will, kann von außen erkennen, ob eine Naht sauber ausgeführt wurde. Beide entscheiden deshalb nach dem, was sie sehen können, und das ist heute meistens die Website.",
       "Die Besonderheit bei Schweißfachbetrieben: Es sind zwei völlig verschiedene Kundengruppen, die auch völlig verschieden suchen. Wer beide bedienen will, muss beide sichtbar ansprechen.",
     ],
@@ -445,6 +469,22 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
+        heading: "Mehr Aufträge im Metallbau: sieben Wege, die Sie selbst in der Hand haben",
+        paragraphs: [
+          "Nicht jeder Weg passt zu jedem Betrieb. Eine Schlosserei mit drei Leuten braucht etwas anderes als ein Stahlbauer mit eigener Montagekolonne. Die folgenden Wege sind nach Aufwand sortiert, vom kleinsten zum größten.",
+          "Für die meisten kleineren Betriebe bringen die ersten Wege am schnellsten etwas, weil sie ohne Ausschreibungsunterlagen und ohne Vorleistung auskommen. Die öffentliche Vergabe lohnt sich meist erst als zweites Standbein, wenn die Abläufe im Betrieb sitzen.",
+        ],
+        bullets: [
+          "Stammkunden gezielt nach Teilen und Baugruppen fragen, die sie bisher woanders fertigen lassen",
+          "Größeren Stahl- und Metallbauern der Region Kapazität als Nachunternehmer für Werkstatt und Montage anbieten",
+          "Die Instandhaltung von Industriebetrieben im Umkreis direkt anschreiben, mit einer kurzen Übersicht über Verfahren und Reaktionszeit",
+          "Für jedes Verfahren, jeden Werkstoff und jede Bauteilart eine eigene Seite auf der Website anlegen, damit Einkäufer Sie bei ihrer Suche finden",
+          "Das Google-Unternehmensprofil mit echten Fotos aus Werkstatt und Montage pflegen und zufriedene Kunden um eine Bewertung bitten",
+          "Auf den Vergabeplattformen einen Suchauftrag für Stahl- und Metallbauarbeiten in Ihrer Region anlegen",
+          "Eine Präqualifikation beantragen, sobald öffentliche Bauaufträge regelmäßig ein Thema sind",
+        ],
+      },
+      {
         heading: "Welche Nachweise Einkäufer sehen wollen",
         paragraphs: [
           "Im gewerblichen Bereich entscheidet oft ein einziges Dokument darüber, ob ein Betrieb anbieten darf. Für tragende Bauteile aus Stahl und Aluminium ist das die Zertifizierung nach DIN EN 1090 mit der passenden Ausführungsklasse. Ohne sie darf ein tragendes Bauteil nicht mit CE-Kennzeichnung in Verkehr gebracht werden, und ein Einkäufer fragt deshalb gar nicht erst an.",
@@ -460,6 +500,28 @@ export const ARTICLES: Article[] = [
           "Für viele kleine Betriebe lohnt sich die öffentliche Ausschreibung erst als zweites Standbein. Der Aufwand je Angebot ist hoch, und es gewinnt meist der günstigste Bieter. Als Subunternehmer eines größeren Stahlbauers kommt man oft leichter an dieselben Projekte.",
         ],
         link: { label: "Lohnschweißen: wie Sie an Aufträge aus der Industrie kommen", href: "/ratgeber/lohnschweissen-industrieauftraege" },
+      },
+      {
+        heading: "Stahlbau Ausschreibungen finden, ohne jeden Tag zu suchen",
+        paragraphs: [
+          "Wer öffentliche Aufträge im Stahl- und Metallbau sucht, muss nicht täglich mehrere Portale durchsehen. Viele Vergabeplattformen bieten nach einer kostenlosen Registrierung einen Suchauftrag an: Sie hinterlegen Begriffe wie Stahlbau, Metallbau, Schlosserarbeiten oder Geländer und Ihre Region und bekommen neue Bekanntmachungen per E-Mail. Aufträge oberhalb der EU-Schwellenwerte erscheinen zusätzlich im europäischen Amtsblatt auf ted.europa.eu.",
+          "Entscheidend ist die Auswahl. Lesen Sie bei jeder Bekanntmachung zuerst die Eignungsanforderungen und die Frist, bevor Sie die Leistungsbeschreibung durcharbeiten. Viele Ausschreibungen scheiden für einen kleinen Betrieb schon an Umfang, Termin oder geforderter Ausführungsklasse aus, und das sehen Sie in wenigen Minuten.",
+          "Nebenbei lohnt der Blick darauf, wer einen Auftrag gewonnen hat. Wer einen größeren Stahlbauauftrag bekommen hat, sucht oft Nachunternehmer für Teilleistungen. Eine kurze, sachliche Anfrage beim Gewinner ist manchmal der leichtere Weg in dasselbe Projekt.",
+        ],
+      },
+      {
+        heading: "Aufträge in der Metallverarbeitung: was Einkäufer von Zulieferern wissen wollen",
+        paragraphs: [
+          "In der Metallverarbeitung, also bei Dreh- und Frästeilen, Blechbearbeitung, Baugruppen und Lohnfertigung, läuft die Vergabe noch stärker über Fakten als im klassischen Metallbau. Ein Einkäufer im Maschinen- oder Anlagenbau will vor der ersten Anfrage wissen, ob Ihr Betrieb sein Teil überhaupt fertigen kann.",
+          "Er sucht dafür nach der Fertigungstechnik, nicht nach Firmennamen: Laserschneiden Edelstahl, Kantteile nach Zeichnung, Schweißbaugruppen in Kleinserie. Wer diese Begriffe auf seiner Website nicht verwendet, wird bei solchen Suchen nicht gefunden, auch wenn der Maschinenpark genau passt. Diese Angaben gehören deshalb auf die Seite:",
+        ],
+        bullets: [
+          "Eine Maschinenliste mit Arbeitsbereichen, etwa maximale Blechstärke, Kantlänge, Drehdurchmesser oder Verfahrwege",
+          "Die Werkstoffe, die regelmäßig verarbeitet werden",
+          "Typische Losgrößen, vom Einzelteil bis zur Serie",
+          "Nachweise und Zertifikate mit ihrem Geltungsbereich",
+          "Einen Ansprechpartner mit direkter Nummer, der Zeichnungen annimmt",
+        ],
       },
       {
         heading: "Zwei Zielgruppen, zwei völlig verschiedene Suchen",
@@ -498,6 +560,21 @@ export const ARTICLES: Article[] = [
     ],
     faqs: [
       {
+        q: "Wie bekomme ich Aufträge für meinen Metallbaubetrieb?",
+        a:
+          "Über Stammkunden und Empfehlungen, über Einkäufer, die gezielt nach einem Verfahren oder Bauteil suchen, und über öffentliche Ausschreibungen. Selbst ausbauen lassen sich vor allem die letzten beiden: mit einer Website, die Verfahren, Werkstoffe, Kapazität und Nachweise konkret nennt, und mit einem Suchauftrag auf den Vergabeplattformen.",
+      },
+      {
+        q: "Wie bekomme ich Aufträge im Stahlbau?",
+        a:
+          "Kleinere Stahlbaubetriebe kommen am leichtesten als Nachunternehmer größerer Stahlbauer oder Generalunternehmer an Projekte. Dazu kommen öffentliche Ausschreibungen, für die bei tragenden Bauteilen die Zertifizierung nach DIN EN 1090 in der passenden Ausführungsklasse Voraussetzung ist.",
+      },
+      {
+        q: "Wo finde ich Aufträge für die Metallverarbeitung?",
+        a:
+          "Vor allem bei Maschinen- und Anlagenbauern, die Teile und Baugruppen zukaufen. Deren Einkäufer suchen online nach Fertigungstechnik und Werkstoff. Eine Website mit Maschinenliste, Arbeitsbereichen, Losgrößen und Nachweisen sorgt dafür, dass Sie bei diesen Suchen auftauchen. Zulieferportale können ergänzen, der Preisdruck ist dort aber hoch.",
+      },
+      {
         q: "Wo finde ich Ausschreibungen für Schweißarbeiten und Metallbau?",
         a: "Öffentliche Auftraggeber veröffentlichen auf Vergabeplattformen wie service.bund.de, der e-Vergabe des Bundes, dem Deutschen Vergabeportal und den Portalen der Länder. Industrieaufträge werden dagegen fast nie ausgeschrieben, sondern gezielt bei wenigen bekannten oder online gefundenen Betrieben angefragt.",
       },
@@ -526,6 +603,18 @@ export const ARTICLES: Article[] = [
       { label: "Website für Handwerker", href: "/website-fuer-handwerker" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
+    angebot: {
+      titel: "Sie führen einen Metallbau- oder Schweißbetrieb?",
+      text:
+        "Dann entscheidet oft Ihre Website, ob ein Einkäufer Sie überhaupt auf seine Anfrageliste setzt. Wir bauen Metallbau- und Schweißbetrieben Websites, auf denen Verfahren, Werkstoffe, Nachweise und echte Projektfotos so stehen, wie Einkäufer danach suchen. Den ersten Entwurf sehen Sie vorab und kostenlos.",
+      punkte: [
+        "Kostenloser Entwurf vorab, Entscheidung erst danach",
+        "Abstimmung komplett per Telefon, WhatsApp und Videocall",
+        "Rückmeldung innerhalb von 24 Stunden",
+      ],
+      cta: { label: "Kostenlosen Entwurf anfordern", href: "/webseite-fuer-schweisser#anfrage" },
+      referenz: { label: "Beispiel ansehen: Website für SOROKIN Schweißservice", href: "/referenzen/sorokin-schweissservice" },
+    },
   },
 
   {
@@ -536,7 +625,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Lohnschweißer und mobile Schweißbetriebe an Industrieaufträge kommen: wer vergibt, was Einkäufer prüfen und was auf der Website stehen muss.",
     datePublished: "2026-09-19",
-    dateModified: "2026-09-19",
+    dateModified: "2026-10-19",
     readingTime: "8 Min.",
     intro: [
       "Lohnschweißen heißt: Der Kunde liefert Zeichnung und oft auch das Material, Sie liefern die Naht. Für kleine Schweißbetriebe und mobile Schweißer ist das der direkteste Weg in die Industrie, weil kein eigenes Produkt und kein Vertrieb nötig sind. Schwierig ist nur der Anfang, denn Schweißaufträge aus der Industrie werden selten öffentlich vergeben.",
@@ -556,12 +645,34 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
+        heading: "Lohnschweißen, Lohnschweißarbeiten, Schweißen im Lohn: was genau gemeint ist",
+        paragraphs: [
+          "Die Begriffe werden oft durcheinander verwendet, meinen aber dasselbe Geschäftsmodell: Ein Betrieb schweißt im Auftrag eines anderen Unternehmens, nach dessen Vorgaben. Lohnschweißarbeiten sind die einzelnen Aufträge, Lohnschweißer ist der Betrieb oder die Person, die sie ausführt. Verwandt ist die Lohnfertigung, bei der zusätzlich zugeschnitten, gekantet oder montiert wird.",
+          "Abzugrenzen ist das von der Arbeitnehmerüberlassung. Beim Lohnschweißen schulden Sie ein Ergebnis, also die fertige Naht oder Baugruppe, und arbeiten mit eigenem Gerät in eigener Verantwortung. Werden Sie dagegen in den Betrieb des Kunden eingegliedert und arbeiten nach dessen Weisung, kann das rechtlich als Überlassung gelten, mit ganz anderen Pflichten.",
+        ],
+      },
+      {
         heading: "Wie diese Betriebe ihre Lohnschweißer finden",
         paragraphs: [
           "Der häufigste Weg ist die Empfehlung unter Kollegen, der zweithäufigste die Suche im Netz. Gesucht wird selten nach dem Wort Schweißer allein, sondern nach der konkreten Aufgabe: Lohnschweißen Edelstahl, WIG-Schweißen Aluminium, Reparaturschweißen Gusseisen, mobiler Schweißservice mit dem Namen der Region. Wer diese Begriffe auf seiner Seite nicht verwendet, taucht bei diesen Suchen nicht auf, egal wie gut die Arbeit ist.",
           "Daneben gibt es Zulieferportale und Auftragsbörsen für die Metallbearbeitung. Sie können für den Einstieg sinnvoll sein, haben aber zwei Nachteile: Sie konkurrieren dort fast nur über den Preis, und der Kontakt gehört der Plattform. Eine Anfrage, die über die eigene Seite kommt, ist dagegen von Anfang an ein direkter Kundenkontakt.",
         ],
         link: { label: "Wie die Auftragsvergabe im Metallbau insgesamt abläuft", href: "/ratgeber/auftraege-schweisser-metallbau" },
+      },
+      {
+        heading: "Schweißaufträge finden: wo Sie konkret ansetzen",
+        paragraphs: [
+          "Wer Schweißaufträge sucht, wartet am besten nicht darauf, dass sie auf einem Portal auftauchen. Die meisten Aufträge entstehen, weil ein Betrieb im richtigen Moment bekannt oder auffindbar ist. Diese Stellen bringen erfahrungsgemäß am meisten:",
+        ],
+        bullets: [
+          "Einkauf und Instandhaltung von Industriebetrieben im Umkreis direkt anschreiben, mit Verfahren, Werkstoffen und Reaktionszeit auf einer Seite",
+          "Stahl- und Metallbauer der Region fragen, ob sie für Auftragsspitzen Kapazität brauchen",
+          "Regionale Treffen von Fachverbänden wie den DVS-Bezirksverbänden für Kontakte zu Betrieben nutzen, die Schweißarbeiten vergeben",
+          "Auf Vergabeplattformen einen Suchauftrag für Schweiß- und Metallbauarbeiten anlegen",
+          "Zulieferportale als Ergänzung nutzen, nicht als einzigen Kanal",
+          "Die eigene Website so aufbauen, dass sie bei Suchen nach Verfahren, Werkstoff und Region erscheint",
+        ],
+        link: { label: "Website für Schweißbetriebe, die bei diesen Suchen erscheint", href: "/webseite-fuer-schweisser" },
       },
       {
         heading: "Was ein Einkäufer vor der ersten Anfrage prüft",
@@ -609,6 +720,16 @@ export const ARTICLES: Article[] = [
         q: "Lohnen sich Auftragsbörsen für Schweißarbeiten?",
         a: "Für den Einstieg können sie erste Kontakte bringen. Auf Dauer ist der Preisdruck dort hoch, und der Kundenkontakt liegt bei der Plattform. Sinnvoll ist, Portale als Ergänzung zu nutzen und parallel die eigene Auffindbarkeit aufzubauen.",
       },
+      {
+        q: "Wie finde ich Schweißaufträge?",
+        a:
+          "Am zuverlässigsten über direkte Ansprache von Einkauf und Instandhaltung in Industriebetrieben, über Stahl- und Metallbauer mit Auftragsspitzen und über eine Website, die Verfahren, Werkstoffe und Einsatzgebiet so nennt, wie Einkäufer danach suchen. Portale und Vergabeplattformen ergänzen das.",
+      },
+      {
+        q: "Was sind Lohnschweißarbeiten?",
+        a:
+          "Lohnschweißarbeiten sind Schweißaufträge, die ein Betrieb für ein anderes Unternehmen nach dessen Zeichnung und Vorgaben ausführt, oft mit beigestelltem Material. Abgerechnet wird je Stück oder nach Aufwand.",
+      },
     ],
     related: [
       { label: "Website für Schweißer", href: "/webseite-fuer-schweisser" },
@@ -616,6 +737,18 @@ export const ARTICLES: Article[] = [
       { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
+    angebot: {
+      titel: "Sie suchen Lohnschweißaufträge für Ihren Betrieb?",
+      text:
+        "Dann muss ein Einkäufer, der nach Ihrem Verfahren und Ihrer Region sucht, auf Ihre Seite stoßen und dort in wenigen Minuten alles finden, was er prüft. Wir bauen Schweißbetrieben genau solche Websites, mit Verfahren, Werkstoffen, Nachweisen und Galerie. Den ersten Entwurf sehen Sie vorab und kostenlos.",
+      punkte: [
+        "Kostenloser Entwurf vorab, Entscheidung erst danach",
+        "Abstimmung komplett per Telefon, WhatsApp und Videocall",
+        "Rückmeldung innerhalb von 24 Stunden",
+      ],
+      cta: { label: "Kostenlosen Entwurf anfordern", href: "/webseite-fuer-schweisser#anfrage" },
+      referenz: { label: "Beispiel ansehen: Website für SOROKIN Schweißservice", href: "/referenzen/sorokin-schweissservice" },
+    },
   },
 
   {
@@ -626,7 +759,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Aufträge im Trockenbau und Innenausbau vergeben werden: Nachunternehmer beim Generalunternehmer, welche Nachweise verlangt werden, Privatkunden und was online darüber entscheidet.",
     datePublished: "2026-09-24",
-    dateModified: "2026-09-24",
+    dateModified: "2026-10-19",
     readingTime: "9 Min.",
     intro: [
       "Im Trockenbau und Innenausbau entscheidet selten der schönste Prospekt über den Auftrag. Es entscheidet, ob ein Bauleiter Sie kennt oder findet, wenn er kurzfristig jemanden für Wände, Decken oder Spachtelarbeiten braucht. Und es entscheidet, ob Sie ihm in wenigen Minuten belegen können, dass Sie sauber arbeiten und Ihre Nachweise beisammen haben.",
@@ -730,6 +863,18 @@ export const ARTICLES: Article[] = [
       { label: "Auftragsvergabe im Metallbau verstehen", href: "/ratgeber/auftraege-schweisser-metallbau" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
+    angebot: {
+      titel: "Sie führen einen Trockenbau- oder Innenausbaubetrieb?",
+      text:
+        "Dann sollte ein Bauleiter, der kurzfristig einen Nachunternehmer sucht, auf Ihrer Website in wenigen Sekunden sehen, welche Arbeiten Sie ausführen, in welchem Gebiet und mit welchen Nachweisen. Genau so bauen wir Websites für Trockenbau und Innenausbau. Den ersten Entwurf sehen Sie vorab und kostenlos.",
+      punkte: [
+        "Kostenloser Entwurf vorab, Entscheidung erst danach",
+        "Abstimmung komplett per Telefon, WhatsApp und Videocall",
+        "Rückmeldung innerhalb von 24 Stunden",
+      ],
+      cta: { label: "Kostenlosen Entwurf anfordern", href: "/webseite-fuer-trockenbau#anfrage" },
+      referenz: { label: "Beispiel ansehen: Website für SZ Innenausbau", href: "/referenzen/sz-innenausbau" },
+    },
   },
 
   // ─────────────────────────────────────────────────────────────────────────
@@ -1524,18 +1669,30 @@ export const ARTICLES: Article[] = [
   {
     slug: "website-nicht-bei-google-gefunden",
     category: "Grundlagen",
-    title: "Warum finde ich meine Website nicht bei Google?",
-    metaTitle: "Website nicht bei Google gefunden: 9 Gründe | Mehr Auftrag",
+    title: "Warum wird meine Website bei Google nicht gefunden?",
+    metaTitle: "Website wird bei Google nicht gefunden? 9 Gründe und Lösungen",
     description:
-      "Ihre Website ist online, wird bei Google aber nicht gefunden? Neun Gründe, die Sie in wenigen Minuten selbst prüfen können, und die richtige Reihenfolge.",
+      "Ihre Website oder Homepage erscheint nicht bei Google? Wie Google Seiten findet, neun Gründe zum Selbstprüfen und Schritt für Schritt, was in der Search Console zu tun ist.",
     datePublished: "2026-09-08",
-    dateModified: "2026-09-24",
-    readingTime: "8 Min.",
+    dateModified: "2026-10-19",
+    readingTime: "10 Min.",
     intro: [
       "Die Seite ist fertig, sie ist online, sie sieht gut aus. Sie tippen Ihre Leistung und Ihren Ort bei Google ein und finden alles Mögliche, nur sich selbst nicht.",
       "Das ist einer der häufigsten Anrufe, die wir bekommen, und in den meisten Fällen steckt kein großes Rätsel dahinter, sondern einer von wenigen konkreten Gründen. Dieser Ratgeber geht sie der Reihe nach durch, jeweils mit einer Prüfung, die Sie selbst machen können.",
     ],
     sections: [
+      {
+        heading: "Wie wird eine Webseite bei Google gefunden?",
+        paragraphs: [
+          "Damit eine Seite in der Trefferliste erscheint, muss sie drei Stufen schaffen. Erst muss Google sie entdecken: Der Googlebot folgt Links von Seiten, die er schon kennt, und liest Sitemaps. Dann muss Google sie aufnehmen: Die Seite wird abgerufen, gelesen und in den Index gespeichert, sofern nichts dagegen spricht. Erst danach kann sie angezeigt werden, und zwar dann, wenn sie zu einer Suchanfrage besser passt als andere Seiten.",
+          "Wird Ihre Website nicht gefunden, hakt es an einer dieser drei Stufen, und jede Stufe hat andere Ursachen. Deshalb bringt es wenig, an Texten zu feilen, solange Google die Seite noch gar nicht kennt, und umgekehrt hilft eine Sitemap nichts, wenn die Seite längst im Index steht und nur zu weit hinten erscheint.",
+        ],
+        bullets: [
+          "Entdecken: über Links aus bekannten Seiten und über die Sitemap",
+          "Aufnehmen: Abruf, Prüfung und Speicherung im Index",
+          "Anzeigen: Auswahl der passendsten Seiten für die jeweilige Suche",
+        ],
+      },
       {
         heading: "Zuerst die eine Prüfung, die alles andere entscheidet",
         paragraphs: [
@@ -1556,6 +1713,7 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Das klingt absurd, ist aber der mit Abstand häufigste technische Fund. Fast jede Website wird zuerst auf einer Testadresse gebaut, und damit die Testversion nicht in der Suche landet, wird sie auf nicht aufnehmen gestellt. Wenn beim Umzug auf die echte Adresse vergessen wird, das zurückzustellen, bleibt die fertige Seite unsichtbar.",
           "So prüfen Sie es: Öffnen Sie Ihre Seite, klicken Sie mit der rechten Maustaste und wählen Sie Seitenquelltext anzeigen. Suchen Sie mit der Tastenkombination für Suchen nach dem Wort noindex. Wird es gefunden, haben Sie Ihren Grund.",
+          "Ähnlich wirkt eine robots.txt, die Google den Zugriff verbietet. Rufen Sie ihre-adresse.de/robots.txt auf. Steht dort unter User-agent: * die Zeile Disallow: / allein, ist die ganze Seite für Suchmaschinen gesperrt. Bei Baukästen wie Wix oder Jimdo steckt dieselbe Sperre meist hinter einem Schalter in den Einstellungen, oft unter SEO oder Sichtbarkeit in Suchmaschinen.",
         ],
       },
       {
@@ -1625,6 +1783,26 @@ export const ARTICLES: Article[] = [
         link: { label: "Woran Sie einen seriösen Anbieter erkennen", href: "/ratgeber/seo-agentur-erkennen" },
       },
       {
+        heading: "Schritt für Schritt in der Google Search Console",
+        paragraphs: [
+          "Die Search Console ist das Werkzeug, mit dem Sie nicht raten müssen. Sie ist kostenlos, und so gehen Sie vor:",
+        ],
+        bullets: [
+          "Die Website als Property anlegen und die Inhaberschaft bestätigen",
+          "Unter Sitemaps die Adresse Ihrer Sitemap einreichen",
+          "Oben in die Suchleiste die Adresse einer wichtigen Unterseite eingeben, das ist die URL-Prüfung",
+          "Meldet die Prüfung, dass die URL nicht bei Google ist, auf Indexierung beantragen klicken",
+          "Nach einigen Tagen unter Indexierung und Seiten nachsehen, welche Seiten aufgenommen sind und welche nicht, jeweils mit Grund",
+        ],
+      },
+      {
+        heading: "Was die Meldungen in der Search Console bedeuten",
+        paragraphs: [
+          "Die Gründe im Bericht klingen technisch, sagen aber Klares. Gefunden, zurzeit nicht indexiert heißt: Google kennt die Adresse, hat die Seite aber noch nicht abgerufen. Gecrawlt, zurzeit nicht indexiert heißt: Google hat die Seite gelesen und vorerst nicht aufgenommen, meist weil sie zu wenig Eigenes bietet oder einer anderen Seite zu ähnlich ist. Durch noindex-Tag ausgeschlossen heißt: Die Seite verbietet die Aufnahme selbst, siehe Grund zwei.",
+          "Ein Beispiel aus unserer eigenen Arbeit: Als wir neue Unterseiten nur über eine einzige Übersichtsseite verlinkt hatten, meldete die URL-Prüfung, die Adresse sei Google nicht bekannt, obwohl der Link sauber im Quelltext stand. Erst als jede neue Seite zusätzlich aus mehreren bestehenden Seiten verlinkt war, wurde sie zuverlässig gefunden. Eine neue Seite braucht deshalb Links aus Seiten, die Google schon kennt, nicht nur einen Eintrag in der Sitemap.",
+        ],
+      },
+      {
         heading: "Wenn die Seite im Index steht, aber trotzdem nicht angezeigt wird",
         paragraphs: [
           "Es gibt zwei ganz verschiedene Fälle, die sich für den Betrieb gleich anfühlen. Im ersten kennt Google die Seite überhaupt nicht, sie steht nicht im Index. Im zweiten steht sie im Index, wird aber bei den Suchbegriffen, die zählen, so weit hinten angezeigt, dass sie niemand sieht.",
@@ -1657,6 +1835,16 @@ export const ARTICLES: Article[] = [
     ],
     faqs: [
       {
+        q: "Wie wird eine Webseite bei Google gefunden?",
+        a:
+          "In drei Stufen: Google entdeckt die Seite über Links und die Sitemap, nimmt sie nach dem Abruf in den Index auf und zeigt sie bei passenden Suchanfragen an. Wird Ihre Seite nicht gefunden, hakt es an einer dieser drei Stufen.",
+      },
+      {
+        q: "Warum findet Google meine Homepage nicht, obwohl sie online ist?",
+        a:
+          "Meist, weil Google sie noch nicht kennt, weil sie die Aufnahme per noindex oder robots.txt selbst verbietet oder weil sie zwar im Index steht, für Ihre Suchbegriffe aber zu weit hinten erscheint. Die site-Abfrage und die URL-Prüfung in der Search Console zeigen in wenigen Minuten, welcher Fall vorliegt.",
+      },
+      {
         q: "Meine Homepage wird bei Google nicht angezeigt. Was prüfe ich zuerst?",
         a: "Suchen Sie nach site: gefolgt von Ihrer Adresse, ohne Leerzeichen dazwischen. Erscheint kein Ergebnis, kennt Google die Seite nicht: dann fehlen meist Sitemap und Anmeldung in der Search Console, oder die Seite steht auf noindex. Erscheinen Ergebnisse, ist die Seite aufgenommen und wird nur für Ihre Suchbegriffe zu weit hinten angezeigt.",
       },
@@ -1688,6 +1876,17 @@ export const ARTICLES: Article[] = [
       { label: "Hosting und Domain verständlich erklärt", href: "/ratgeber/hosting-und-domain-erklaert" },
       { label: "Agentur auswählen: die Checkliste", href: "/ratgeber/seo-agentur-erkennen" },
     ],
+    angebot: {
+      titel: "Ihre Seite taucht nicht auf, und Sie wollen wissen, warum?",
+      text:
+        "Wir sehen uns Ihre Website an und sagen Ihnen kostenlos, an welcher Stufe es hakt: ob Google die Seite nicht kennt, nicht aufnimmt oder nur zu weit hinten zeigt. Die Prüfung läuft vollständig aus der Ferne, Sie brauchen nur Ihre Adresse.",
+      punkte: [
+        "Kostenlos und unverbindlich",
+        "Rückmeldung innerhalb von 24 Stunden",
+        "Konkrete Punkte statt allgemeiner Tipps",
+      ],
+      cta: { label: "Kostenlose Prüfung anfordern", href: "/analyse/website-nicht-bei-google-gefunden" },
+    },
   },
 
   {

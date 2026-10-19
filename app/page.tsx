@@ -1511,8 +1511,8 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               {[
-                { n: "01", title: "Veraltete oder keine Website", desc: "Ihre Konkurrenz gewinnt täglich Kunden online, während Sie noch auf Weiterempfehlung warten." },
-                { n: "02", title: "Keine Anfragen aus dem Internet", desc: "Google findet Sie nicht. Social Media stagniert. Ihr Budget verpufft ohne messbare Ergebnisse." },
+                { n: "01", title: "Veraltete oder keine Website", desc: "Ihre Konkurrenz gewinnt täglich Kunden online, während Sie noch auf Weiterempfehlung warten.", link: { href: "/website-relaunch", label: "Wann sich ein Relaunch lohnt" } },
+                { n: "02", title: "Keine Anfragen aus dem Internet", desc: "Google findet Sie nicht. Social Media stagniert. Ihr Budget verpufft ohne messbare Ergebnisse.", link: { href: "/website-bringt-keine-anfragen", label: "Warum eine Website keine Anfragen bringt" } },
                 { n: "03", title: "Kein System für Neukundengewinnung", desc: "Alles hängt an einzelnen Personen. Kein skalierbares System bedeutet keine Planbarkeit." },
                 { n: "04", title: "Schlechtes Image trotz guter Arbeit", desc: "Sie leisten Qualität, aber Ihr Online-Auftritt vermittelt das nicht. Das kostet Sie täglich Aufträge." },
               ].map((c, i) => (
@@ -1532,6 +1532,11 @@ export default function Home() {
                   <span className="text-[10px] font-bold tracking-[0.2em] uppercase mb-4 block text-slate-600">{c.n}</span>
                   <h3 className="font-bold mb-2.5 leading-snug text-white">{c.title}</h3>
                   <p className="text-sm leading-relaxed text-slate-400">{c.desc}</p>
+                  {"link" in c && c.link && (
+                    <a href={c.link.href} className="mt-3 inline-block text-sm font-semibold text-[#3b82f6] underline underline-offset-4 hover:text-[#6aa8ff]">
+                      {c.link.label}
+                    </a>
+                  )}
                 </motion.div>
               ))}
             </motion.div>

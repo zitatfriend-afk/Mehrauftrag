@@ -167,6 +167,40 @@ export default async function ArticlePage({
               ))}
             </div>
 
+            {/* Angebotsblock: nur bei Artikeln, deren Leser selbst Zielgruppe sind */}
+            {article.angebot && (
+              <aside className="mt-8 rounded-2xl border border-[#3b82f6]/30 bg-[#3b82f6]/[0.06] p-6 sm:p-7">
+                <p className="text-lg font-bold leading-snug text-white">{article.angebot.titel}</p>
+                <p className="mt-3 text-base leading-relaxed text-slate-300">{article.angebot.text}</p>
+                {article.angebot.punkte && article.angebot.punkte.length > 0 && (
+                  <ul className="mt-4 space-y-2">
+                    {article.angebot.punkte.map((pk, i) => (
+                      <li key={i} className="flex items-start gap-2.5 text-sm text-slate-300">
+                        <span aria-hidden className="mt-0.5 text-[#3b82f6]">✓</span>
+                        <span>{pk}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+                  <Link
+                    href={article.angebot.cta.href}
+                    className="inline-flex justify-center rounded-full bg-[#3b82f6] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
+                  >
+                    {article.angebot.cta.label}
+                  </Link>
+                  {article.angebot.referenz && (
+                    <Link
+                      href={article.angebot.referenz.href}
+                      className="text-sm font-semibold text-[#3b82f6] underline underline-offset-4 hover:text-[#6aa8ff]"
+                    >
+                      {article.angebot.referenz.label}
+                    </Link>
+                  )}
+                </div>
+              </aside>
+            )}
+
             {/* Sections */}
             <div className="mt-10 space-y-10">
               {article.sections.map((s, i) => (
