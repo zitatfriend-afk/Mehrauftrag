@@ -48,9 +48,52 @@ export function RatgeberHeader() {
   );
 }
 
+// Leistungs- und Branchenseiten, die Anfragen bringen sollen. Stehen hier, damit
+// jede Ratgeber-, Referenz- und Analyse-Seite sie verlinkt. Bis Oktober 2026
+// verlinkte keine dieser Seiten eine einzige Branchenseite, waehrend die
+// Stadtseiten ueber den Standort-Hub sitewide Links bekamen.
+const BRANCHEN_LINKS = [
+  { label: "Website für Schweißbetriebe", href: "/webseite-fuer-schweisser" },
+  { label: "Website für Trockenbau", href: "/webseite-fuer-trockenbau" },
+  { label: "Website für Hausmeisterservice", href: "/webseite-fuer-hausmeisterservice" },
+  { label: "Website für Gebäudereinigung", href: "/webseite-fuer-gebaeudereinigung" },
+  { label: "Website für Kosmetikstudio", href: "/webseite-fuer-kosmetikstudio" },
+  { label: "Website für Physiotherapie", href: "/webseite-fuer-physiotherapie" },
+  { label: "Website für Gastronomie", href: "/webseite-fuer-gastronomie" },
+  { label: "Website für Handwerker", href: "/website-fuer-handwerker" },
+];
+const LEISTUNG_LINKS = [
+  { label: "Website bringt keine Anfragen", href: "/website-bringt-keine-anfragen" },
+  { label: "Website relaunchen lassen", href: "/website-relaunch" },
+  { label: "Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
+  { label: "Referenzen", href: "/referenzen" },
+];
+
 export function RatgeberFooter() {
   return (
     <footer className="relative border-t border-white/5 px-5 py-10 sm:px-8">
+      <nav aria-label="Branchen und Leistungen" className="mx-auto mb-10 grid max-w-6xl gap-8 sm:grid-cols-2">
+        <div>
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Websites nach Branche</p>
+          <ul className="grid grid-cols-1 gap-2 text-sm sm:grid-cols-2">
+            {BRANCHEN_LINKS.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="text-slate-400 hover:text-white">{l.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Leistungen</p>
+          <ul className="grid grid-cols-1 gap-2 text-sm">
+            {LEISTUNG_LINKS.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="text-slate-400 hover:text-white">{l.label}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
         <Link href="/" className="inline-flex items-center gap-2.5 select-none">
           <MaMark size={34} />

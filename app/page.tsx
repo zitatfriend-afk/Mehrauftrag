@@ -1118,7 +1118,10 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Typewriter
-  const [text, setText] = useState("");
+  // Startet mit der vollen ersten Zeile statt leer: so steht die Ueberschrift
+  // schon im ausgelieferten HTML und ist sofort sichtbar (LCP). Der Zyklus
+  // beginnt danach wie gehabt mit dem Loeschen nach der Pause.
+  const [text, setText] = useState("MEHR AUFTRÄGE.");
   const [typeIdx, setTypeIdx] = useState(0);
   const [deleting, setDeleting] = useState(false);
   const HEADLINES = ["MEHR AUFTRÄGE.", "MEHR UMSATZ.", "MEHR WACHSTUM."];
@@ -1336,12 +1339,11 @@ export default function Home() {
               Ihr Betrieb verdient
             </motion.p>
 
-            {/* Typewriter headline, height locked to prevent CLS */}
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.75, delay: 0.14, ease: EASE_OUT }}
-            >
+            {/* Typewriter headline, height locked to prevent CLS.
+                Bewusst ohne Einblend-Animation: mit opacity 0 als Startwert war die
+                Ueberschrift bis zum Laden des JavaScripts unsichtbar, PageSpeed mass
+                am 19.10.2026 mobil 2,5 s Renderverzoegerung und LCP 6,2 s. */}
+            <div>
               <h1
                 className="hero-headline font-black tracking-tighter text-white mb-8"
                 style={{
@@ -1376,7 +1378,7 @@ export default function Home() {
                   />
                 </span>
               </h1>
-            </motion.div>
+            </div>
 
             {/* Sub */}
             <motion.p
