@@ -57,5 +57,18 @@
       "public/webseite-fuer-trockenbau.html",
       "app/ratgeber/_articles.ts"
     ]
+  },
+  "ad096dd": {
+    "grund": "19.10.2026: Startseite nur technisch geaendert, die Ueberschrift rendert ohne Einblend-Animation (Ladezeit). Text und Inhalt unveraendert. Der Ratgeber-Fuss im selben Commit liegt in app/ratgeber/_shell.tsx und zaehlt ohnehin nicht.",
+    "pfade": [
+      "app/page.tsx"
+    ]
+  },
+  "a384fc6": {
+    "grund": "19.10.2026: nur Meta-Descriptions gekuerzt (Metallbau, nicht gefunden, WordPress, ohne Termin, website-bringt-keine-anfragen inkl. og:description). Kein Seiteninhalt geaendert.",
+    "pfade": [
+      "app/ratgeber/_articles.ts",
+      "public/website-bringt-keine-anfragen.html"
+    ]
   }
 }
