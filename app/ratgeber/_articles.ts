@@ -363,12 +363,54 @@ export const ARTICLES: Article[] = [
       "Wo Ausschreibungen für Hausmeisterdienstleistungen veröffentlicht werden, welche Unterlagen Verwalter erwarten und woran Bewerbungen scheitern.",
     datePublished: "2026-08-11",
     dateModified: "2026-10-19",
-    readingTime: "6 Min.",
+    readingTime: "9 Min.",
     intro: [
       "Ein Hausmeisterservice lebt selten von einmaligen Aufträgen. Das Geschäft, das wirklich trägt, sind laufende Objektbetreuungen: eine Wohnanlage, ein Bürogebäude, mehrere Objekte einer Hausverwaltung, betreut über Jahre. Genau diese Verträge werden heute zunehmend online angebahnt.",
       "Die Menschen, die darüber entscheiden, sind aber keine Privatleute. Es sind Hausverwalter, WEG-Verwalter und Objektmanager, die nach einem verlässlichen Partner für eine Dauerlösung suchen. Diese ticken anders als jemand, der kurzfristig einen Handwerker braucht, und darauf sollte Ihr Auftritt eingestellt sein.",
     ],
     sections: [
+      {
+        heading: "Wo Ausschreibungen für Hausmeisterdienstleistungen veröffentlicht werden",
+        paragraphs: [
+          "Öffentlich ausgeschrieben werden Hausmeisterdienste vor allem von Kommunen, Schulträgern, Landesbetrieben und öffentlichen Wohnungsunternehmen. Diese Bekanntmachungen stehen auf Vergabeplattformen wie service.bund.de, dem Deutschen Vergabeportal und den Portalen der Länder, größere Aufträge oberhalb der EU-Schwellenwerte zusätzlich im europäischen Amtsblatt auf ted.europa.eu.",
+          "Private Hausverwaltungen und Eigentümergemeinschaften schreiben dagegen fast nie öffentlich aus. Sie holen in der Regel mehrere Vergleichsangebote ein, und bei einer Eigentümergemeinschaft entscheidet danach die Eigentümerversammlung. Wer hier mitbieten will, muss der Verwaltung bekannt sein, bevor sie die Angebote anfragt.",
+          "Damit Sie nicht täglich suchen müssen, legen Sie auf den Vergabeplattformen einen Suchauftrag an. Sinnvolle Begriffe sind Hausmeisterdienste, Hausmeisterleistungen, Objektbetreuung, Winterdienst und Grünflächenpflege, jeweils kombiniert mit Ihrer Region. Neue Bekanntmachungen kommen dann per E-Mail.",
+        ],
+      },
+      {
+        heading: "Welche Unterlagen Verwalter und Vergabestellen erwarten",
+        paragraphs: [
+          "Ob öffentlich oder privat, die Fragen sind dieselben: Ist der Betrieb echt, ist er versichert, zahlt er seine Abgaben, und hat er so etwas schon gemacht. Wer diese Unterlagen griffbereit hat, kann innerhalb weniger Tage ein vollständiges Angebot abgeben, und genau daran scheitern viele Mitbewerber.",
+        ],
+        bullets: [
+          "Gewerbeanmeldung oder Handelsregisterauszug",
+          "Nachweis der Betriebshaftpflichtversicherung mit Deckungssummen",
+          "Unbedenklichkeitsbescheinigungen von Finanzamt, Krankenkasse und Berufsgenossenschaft",
+          "Referenzen vergleichbarer Objekte mit Ansprechpartner",
+          "Angaben zu Personal, Erreichbarkeit und Vertretung bei Krankheit oder Urlaub",
+          "Bei öffentlichen Vergaben die geforderten Eigenerklärungen, oberhalb der EU-Schwellenwerte oft als Einheitliche Europäische Eigenerklärung",
+        ],
+      },
+      {
+        heading: "Einmal prüfen lassen, öfter bieten: die Präqualifikation",
+        paragraphs: [
+          "Wer regelmäßig bei öffentlichen Ausschreibungen für Dienstleistungen mitbietet, kann sich in das Amtliche Verzeichnis präqualifizierter Unternehmen eintragen lassen, das die Industrie- und Handelskammern führen. Die Eignungsnachweise werden dann einmal geprüft, und bei jeder Bewerbung genügt der Verweis auf den Eintrag statt eines neuen Stapels Papier.",
+          "Für einen Betrieb, der nur ab und zu öffentlich anbietet, lohnt sich der Aufwand meist nicht. Sobald öffentliche Objekte ein fester Teil des Geschäfts werden sollen, spart der Eintrag bei jeder einzelnen Bewerbung Zeit.",
+        ],
+      },
+      {
+        heading: "Woran Bewerbungen auf Hausmeister-Ausschreibungen scheitern",
+        paragraphs: [
+          "Die meisten Angebote verlieren nicht am Preis, sondern an Formfehlern und an einer Kalkulation, die beim ersten Winter nicht aufgeht. Diese Punkte sollten Sie vor jeder Abgabe prüfen:",
+        ],
+        bullets: [
+          "Frist verpasst oder Unterlagen unvollständig, damit ist das Angebot raus, bevor es gelesen wird",
+          "Leistungsverzeichnis nicht vollständig bepreist, auch einzelne leere Positionen können zum Ausschluss führen",
+          "Angebotene Objektbesichtigung ausgelassen und deshalb Flächen, Wege oder Zugänge falsch eingeschätzt",
+          "Winterdienst ohne Bereitschaftszeiten kalkuliert, die frühmorgens und am Wochenende anfallen",
+          "Keine Aussage dazu, wer bei Krankheit oder Urlaub übernimmt",
+        ],
+      },
       {
         heading: "Wer wirklich sucht, ist die Hausverwaltung",
         paragraphs: [
@@ -397,6 +439,14 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
+        heading: "Hausmeisterservice Aufträge ohne Ausschreibung: Verwaltungen direkt ansprechen",
+        paragraphs: [
+          "Der größere Teil der Objekte wird gar nicht ausgeschrieben, sondern unter Verwaltungen weitergegeben, die einen Dienstleister kennen. In diese Runde kommen Sie durch eine kurze, sachliche Vorstellung bei den Hausverwaltungen Ihrer Region: welche Objektarten Sie betreuen, in welchem Gebiet, mit wie vielen Leuten und wie Sie Vertretung und Erreichbarkeit regeln.",
+          "Der Zeitpunkt zählt. Verträge werden oft zum Jahresende gekündigt oder verlängert, und Winterdienst wird im Spätsommer vergeben. Wer sich vorher meldet und eine Website hat, auf der genau diese Angaben stehen, ist bei der nächsten Vergleichsanfrage dabei.",
+        ],
+        link: { label: "Website für Hausmeisterservice: was Hausverwaltungen darauf suchen", href: "/webseite-fuer-hausmeisterservice" },
+      },
+      {
         heading: "Saisonale Suchen sind planbare Auftragschancen",
         paragraphs: [
           "Anders als in vielen Branchen ist die Nachfrage beim Hausmeisterservice stark saisonal. Nach Winterdienst wird ab dem Spätsommer gesucht, wenn Verwaltungen die kommende Saison planen, nicht erst beim ersten Schnee. Grünpflege und Heckenschnitt werden im Frühjahr angefragt.",
@@ -406,6 +456,21 @@ export const ARTICLES: Article[] = [
       },
     ],
     faqs: [
+      {
+        q: "Wo finde ich Ausschreibungen für Hausmeisterdienstleistungen?",
+        a:
+          "Öffentliche Auftraggeber wie Kommunen, Schulträger und öffentliche Wohnungsunternehmen veröffentlichen auf Vergabeplattformen wie service.bund.de, dem Deutschen Vergabeportal und den Portalen der Länder, große Aufträge zusätzlich auf ted.europa.eu. Private Hausverwaltungen schreiben selten öffentlich aus und holen stattdessen Vergleichsangebote bei Betrieben ein, die sie kennen.",
+      },
+      {
+        q: "Welche Unterlagen brauche ich, um mich als Hausmeisterservice zu bewerben?",
+        a:
+          "Üblich sind Gewerbeanmeldung oder Handelsregisterauszug, ein Nachweis der Betriebshaftpflicht, Unbedenklichkeitsbescheinigungen von Finanzamt, Krankenkasse und Berufsgenossenschaft, Referenzen vergleichbarer Objekte sowie Angaben zu Personal und Vertretung. Bei öffentlichen Vergaben kommen die geforderten Eigenerklärungen dazu.",
+      },
+      {
+        q: "Wie bekomme ich als Hausmeisterservice Aufträge ohne Ausschreibung?",
+        a:
+          "Indem Sie sich bei den Hausverwaltungen Ihrer Region kurz und sachlich vorstellen, am besten vor dem Jahreswechsel und vor der Winterdienst-Saison, und eine Website haben, auf der Objektarten, Einsatzgebiet, Kapazität und Vertretungsregelung stehen. Die meisten Objekte werden über Vergleichsangebote vergeben, nicht über öffentliche Ausschreibungen.",
+      },
       {
         q: "Wie komme ich als Hausmeisterservice an Hausverwaltungen?",
         a: "Über eine Website, die gezielt auf Entscheider ausgerichtet ist: betreute Objektarten, Leistungsumfang, Einsatzgebiet, Erreichbarkeit und Vertretungsregelung klar benannt, dazu Referenzen von vergleichbaren Objekten. Verwaltungen suchen zunehmend online und wählen nach Verlässlichkeit aus, nicht nach dem lautesten Werbespruch.",
@@ -755,12 +820,12 @@ export const ARTICLES: Article[] = [
     slug: "auftraege-trockenbau-innenausbau",
     category: "Branchen",
     title: "Aufträge im Trockenbau und Innenausbau gewinnen",
-    metaTitle: "Aufträge im Trockenbau gewinnen: so läuft die Vergabe | Ratgeber",
+    metaTitle: "Aufträge im Trockenbau gewinnen: so läuft die Vergabe",
     description:
-      "Wie Aufträge im Trockenbau und Innenausbau vergeben werden: Nachunternehmer beim Generalunternehmer, welche Nachweise verlangt werden, Privatkunden und was online darüber entscheidet.",
+      "Wie Aufträge im Trockenbau und Innenausbau vergeben werden: Nachunternehmer, Nachweise, Nachträge, Privatkunden und was online darüber entscheidet.",
     datePublished: "2026-09-24",
     dateModified: "2026-10-19",
-    readingTime: "9 Min.",
+    readingTime: "11 Min.",
     intro: [
       "Im Trockenbau und Innenausbau entscheidet selten der schönste Prospekt über den Auftrag. Es entscheidet, ob ein Bauleiter Sie kennt oder findet, wenn er kurzfristig jemanden für Wände, Decken oder Spachtelarbeiten braucht. Und es entscheidet, ob Sie ihm in wenigen Minuten belegen können, dass Sie sauber arbeiten und Ihre Nachweise beisammen haben.",
       "Dieser Leitfaden beschreibt den Weg, den ein Auftrag im Innenausbau wirklich nimmt: von der Anfrage des Generalunternehmers über die Nachweise bis zum privaten Bauherrn, der sein Dachgeschoss ausbauen lassen will. Und er zeigt, an welchen Stellen ein Betrieb online abgehängt wird, ohne es zu merken.",
@@ -772,6 +837,13 @@ export const ARTICLES: Article[] = [
           "Am Anfang steht fast immer eine Kette: Der Bauherr beauftragt einen Generalunternehmer oder ein Bauunternehmen, und dieses vergibt die einzelnen Gewerke weiter. Trockenbau, Bodenbelag und Malerarbeiten gehen dabei an Nachunternehmer. Wer in dieser Kette einmal drin ist, bekommt Folgeaufträge oft ohne neuen Wettbewerb. Wer draußen ist, kommt schwer hinein, weil die Vergabe selten öffentlich stattfindet.",
           "Der zweite, viel unterschätzte Weg ist die kurzfristige Lücke. Ein Nachunternehmer fällt aus, eine Kolonne ist krank, ein Termin wackelt. Dann sucht ein Bauleiter unter Zeitdruck, und zwar genauso, wie alle anderen auch suchen: am Telefon über Google. In diesem Moment gewinnt der Betrieb, der auffindbar ist, sein Gebiet nennt und sofort erkennen lässt, welche Arbeiten er ausführt.",
           "Der dritte Weg ist der private Bauherr. Er hat keinen Generalunternehmer, sondern eine Idee vom fertigen Dachgeschoss. Er sucht, vergleicht, schaut sich Bilder an und fragt am Ende zwei oder drei Betriebe an. Hier zählt nicht die Vergabepraxis, sondern Vertrauen.",
+        ],
+      },
+      {
+        heading: "Wie kleine Bauunternehmen an Aufträge kommen",
+        paragraphs: [
+          "Für einen kleinen Trockenbau- oder Innenausbaubetrieb gibt es im Kern drei Kanäle: als Nachunternehmer bei Generalunternehmern und Bauträgern, direkt bei privaten Bauherren und über öffentliche Ausschreibungen. Die meisten kleinen Betriebe leben vom ersten Kanal und merken erst in einer Flaute, wie abhängig sie davon sind.",
+          "Der zweite Kanal ist der, den Sie am stärksten selbst steuern können. Private Bauherren suchen online nach der konkreten Arbeit und ihrem Ort, und sie vergleichen Fotos, Bewertungen und Erreichbarkeit. Ein Betrieb, der dort sichtbar ist, gleicht schwache Monate im Nachunternehmergeschäft aus.",
         ],
       },
       {
@@ -804,11 +876,32 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
+        heading: "Nachträge im Innenausbau vermeiden und sauber durchsetzen",
+        paragraphs: [
+          "Nachträge entstehen, wenn sich die Leistung gegenüber dem Vertrag ändert oder etwas dazukommt: eine zusätzliche Vorsatzschale, eine höhere Oberflächengüte, Wände, die anders stehen als im Plan. Ob und wie sie bezahlt werden, entscheidet sich meist schon vor dem ersten Arbeitstag.",
+          "Ist die VOB/B vereinbart, regelt deren Paragraf 2 die Vergütung geänderter und zusätzlicher Leistungen. Bei zusätzlichen Leistungen muss der Anspruch grundsätzlich angekündigt werden, bevor mit der Ausführung begonnen wird. Wer erst nach der Ausführung abrechnet, hat oft schlechte Karten. Für den Einzelfall gehört die Frage zu einem Anwalt für Baurecht.",
+        ],
+        bullets: [
+          "Leistungsverzeichnis vor dem Angebot gegen die Pläne prüfen und Unklarheiten als Bieterfrage klären",
+          "Annahmen, die dem Preis zugrunde liegen, im Angebot ausdrücklich nennen",
+          "Jede Änderung vor Ort mit Datum, Foto und Anweisung des Bauleiters festhalten",
+          "Zusätzliche Leistungen schriftlich ankündigen, bevor sie ausgeführt werden",
+        ],
+      },
+      {
         heading: "Zwei Zielgruppen, zwei völlig verschiedene Suchen",
         paragraphs: [
           "Ein Bauleiter sucht anders als ein Hausbesitzer. Der eine tippt Begriffe wie Trockenbau Nachunternehmer oder Trockenbaufirma mit dem Ort ein, der andere sucht nach Dachgeschoss ausbauen lassen oder Trockenbauer in der Nähe. Beide sollen fündig werden, aber sie brauchen unterschiedliche Antworten auf der Seite.",
           "Der Fehler, den fast jeder Betrieb macht: Er schreibt für beide denselben Text. Dann steht dort eine Mischung, die den Bauleiter nicht überzeugt und den Privatkunden nicht abholt. Besser ist ein eigener Abschnitt je Zielgruppe, jeweils mit der Sprache, die dort üblich ist.",
         ],
+      },
+      {
+        heading: "Aufträge für den Dachausbau und andere Privataufträge gewinnen",
+        paragraphs: [
+          "Der Dachgeschossausbau ist für viele Trockenbauer der lohnendste Privatauftrag: überschaubare Baustelle, hoher Anteil eigener Leistung und ein Bauherr, der selbst entscheidet. Gesucht wird er so, wie Bauherren denken, also nach Dachgeschoss ausbauen oder Dachausbau mit dem Namen des Ortes.",
+          "Was diese Bauherren vor der Anfrage wissen wollen, ist immer ähnlich: wie der Ablauf aussieht, welche Gewerke Sie selbst übernehmen und welche Sie koordinieren, ob für das Vorhaben eine Genehmigung nötig ist, was das jeweilige Landesbaurecht regelt, und wie fertige Ausbauten bei Ihnen aussehen. Eine eigene Seite zum Dachausbau mit Fotos vorher und nachher beantwortet genau das, und sie wird für diese Suchen gefunden, eine Sammelseite mit allen Leistungen nicht.",
+        ],
+        link: { label: "Website für Trockenbau und Innenausbau, die Privataufträge bringt", href: "/webseite-fuer-trockenbau" },
       },
       {
         heading: "Projektfotos sind im Innenausbau das stärkste Argument",
@@ -854,6 +947,21 @@ export const ARTICLES: Article[] = [
       {
         q: "Wie wichtig sind Fotos meiner fertigen Arbeiten?",
         a: "Im Innenausbau sind sie das stärkste Argument, weil das Ergebnis sichtbar ist. Vorher-nachher-Bilder aus demselben Blickwinkel, eine fertige Decke, ein Detail einer sauberen Kante. Ein aktuelles Handy reicht dafür völlig. Wichtig ist nur, den Kunden vorher zu fragen, ob Sie die Bilder verwenden dürfen.",
+      },
+      {
+        q: "Wie vermeide ich Streit um Nachträge im Innenausbau?",
+        a:
+          "Indem Sie das Leistungsverzeichnis vor dem Angebot gegen die Pläne prüfen, Annahmen im Angebot nennen, jede Änderung mit Datum und Foto dokumentieren und zusätzliche Leistungen schriftlich ankündigen, bevor Sie sie ausführen. Bei vereinbarter VOB/B regelt deren Paragraf 2 die Vergütung, im Einzelfall hilft ein Anwalt für Baurecht.",
+      },
+      {
+        q: "Wie bekomme ich Aufträge für den Dachausbau?",
+        a:
+          "Über eine eigene Seite zum Dachausbau, die den Ablauf erklärt, sagt, welche Gewerke Sie übernehmen, und fertige Ausbauten mit Fotos zeigt. Bauherren suchen nach Dachgeschoss ausbauen mit ihrem Ort und vergleichen genau diese Angaben, bevor sie anfragen.",
+      },
+      {
+        q: "Wie kommen kleine Bauunternehmen an Aufträge?",
+        a:
+          "Über drei Kanäle: als Nachunternehmer bei Generalunternehmern, direkt bei privaten Bauherren und über öffentliche Ausschreibungen. Den direkten Weg zum Bauherrn steuern Sie am stärksten selbst, über eine Website und ein Google-Profil mit Fotos und Bewertungen.",
       },
     ],
     related: [
