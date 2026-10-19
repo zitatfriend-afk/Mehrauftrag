@@ -444,7 +444,7 @@ export const ARTICLES: Article[] = [
     title: "Aufträge im Metallbau gewinnen: wie Industrie und Handel ihre Aufträge vergeben",
     metaTitle: "Metallbau Aufträge gewinnen: so vergibt die Industrie",
     description:
-      "Wie Metallbauer, Stahlbauer und Metallverarbeiter an neue Aufträge kommen: wie die Industrie vergibt, wo Ausschreibungen stehen, welche Nachweise zählen und was auf die Website gehört.",
+      "Wie Metallbauer, Stahlbauer und Metallverarbeiter an Aufträge kommen: wie die Industrie vergibt, wo Ausschreibungen stehen und was auf die Website gehört.",
     datePublished: "2026-08-11",
     dateModified: "2026-10-19",
     readingTime: "10 Min.",
@@ -1672,7 +1672,7 @@ export const ARTICLES: Article[] = [
     title: "Warum wird meine Website bei Google nicht gefunden?",
     metaTitle: "Website wird bei Google nicht gefunden? 9 Gründe und Lösungen",
     description:
-      "Ihre Website oder Homepage erscheint nicht bei Google? Wie Google Seiten findet, neun Gründe zum Selbstprüfen und Schritt für Schritt, was in der Search Console zu tun ist.",
+      "Ihre Website erscheint nicht bei Google? Wie Google Seiten findet, neun Gründe zum Selbstprüfen und was in der Search Console zu tun ist.",
     datePublished: "2026-09-08",
     dateModified: "2026-10-19",
     readingTime: "10 Min.",
@@ -1895,7 +1895,7 @@ export const ARTICLES: Article[] = [
     title: "WordPress oder individuell gebaut: was für einen kleinen Betrieb wirklich besser ist",
     metaTitle: "WordPress oder individuell gebaut? Ratgeber für Betriebe",
     description:
-      "WordPress oder eine individuell programmierte Website? Wartung, Tempo, Sicherheit und eigene Änderungen ehrlich verglichen, plus was beim Wechsel der WordPress-Agentur zu klären ist.",
+      "WordPress oder individuell programmiert? Wartung, Tempo, Sicherheit und eigene Änderungen ehrlich verglichen, dazu was beim Agenturwechsel zählt.",
     datePublished: "2026-10-13",
     dateModified: "2026-10-13",
     readingTime: "7 Min.",
@@ -2009,7 +2009,7 @@ export const ARTICLES: Article[] = [
     title: "Eine Website erstellen lassen, ohne einen einzigen Termin im Betrieb",
     metaTitle: "Website erstellen lassen ohne Termin vor Ort | Ratgeber",
     description:
-      "Wie eine Agentur Ihre Website komplett aus der Ferne erstellt: was sie von Ihnen braucht, wie Fotos und Texte ankommen und woran Sie saubere Fernarbeit erkennen.",
+      "Wie eine Agentur Ihre Website komplett aus der Ferne erstellt: was sie von Ihnen braucht, wie Fotos und Texte ankommen und woran Sie gute Arbeit erkennen.",
     datePublished: "2026-10-13",
     dateModified: "2026-10-13",
     readingTime: "6 Min.",
