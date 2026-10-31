@@ -1472,69 +1472,131 @@ export const ARTICLES: Article[] = [
   {
     slug: "professionelle-website-vorteile",
     category: "Grundlagen",
-    title: "Professioneller Internetauftritt: was er kleinen Betrieben wirklich bringt",
-    metaTitle: "Professioneller Internetauftritt: was bringt er? | Ratgeber",
+    title: "Professioneller Webauftritt: was ein guter Internetauftritt kleinen Betrieben bringt",
+    metaTitle: "Professioneller Webauftritt: was er Betrieben bringt",
     description:
-      "Was eine professionelle Webpräsenz kleinen Betrieben bringt: Anfragen, Vertrauen und Sichtbarkeit bei Google und in KI-Antworten. Ehrlich eingeordnet.",
+      "Was einen professionellen Webauftritt ausmacht, woran Kunden einen schwachen Internetauftritt erkennen und was eine gute Webpräsenz Ihrem Betrieb bringt.",
     datePublished: "2026-08-02",
-    dateModified: "2026-09-09",
-    readingTime: "5 Min.",
+    dateModified: "2026-10-31",
+    readingTime: "7 Min.",
     intro: [
-      "Braucht mein Betrieb wirklich eine gute Website, oder reicht ein Eintrag bei Google und ein bisschen Social Media? Diese Frage stellen sich viele Selbstständige, und die ehrliche Antwort lautet: Eine professionelle Website ist selten Selbstzweck, aber sie ist der Punkt, an dem aus Interesse ein Auftrag wird.",
-      "Was sie konkret bringt, lässt sich an fünf Punkten festmachen.",
+      "Braucht mein Betrieb wirklich einen professionellen Webauftritt, oder reicht ein Eintrag bei Google und ein bisschen Social Media? Diese Frage stellen sich viele Selbstständige, und die ehrliche Antwort lautet: Ein professioneller Internetauftritt ist selten Selbstzweck, aber er ist der Punkt, an dem aus Interesse ein Auftrag wird.",
+      "Dieser Ratgeber klärt zuerst, was einen professionellen Webauftritt überhaupt ausmacht und woran Kunden in Sekunden einen schwachen erkennen. Danach geht es darum, was eine gute Webpräsenz Ihrem Betrieb konkret bringt.",
     ],
     sections: [
       {
-        heading: "Die Website verwandelt Interesse in Anfragen",
+        heading: "Webauftritt, Internetauftritt, Webpräsenz: alles dasselbe?",
+        paragraphs: [
+          "Im Alltag werden die Begriffe durcheinander verwendet, und meistens ist auch dasselbe gemeint. Webauftritt und Internetauftritt bezeichnen die eigene Website eines Betriebs. Webpräsenz und Online-Auftritt werden oft etwas weiter gefasst: Dazu zählen dann auch das Google-Unternehmensprofil, Einträge in Branchenverzeichnissen und die Profile in sozialen Netzwerken.",
+          "Für die Praxis ist die Unterscheidung wichtiger, als sie klingt. Die Profile auf fremden Plattformen machen auf Sie aufmerksam. Die Website ist der einzige Teil Ihres Online-Auftritts, der Ihnen gehört und auf dem Sie selbst bestimmen, was ein Interessent sieht und wie er Sie erreicht. Ein professioneller Webauftritt verbindet beides: Profil und Website erzählen dasselbe, mit denselben Firmendaten und denselben Leistungen.",
+        ],
+      },
+      {
+        heading: "Was einen professionellen Webauftritt ausmacht",
+        paragraphs: [
+          "Professionell heißt nicht teuer und nicht verspielt. Ein professioneller Internetauftritt ist einer, auf dem ein Interessent ohne Suchen findet, was er wissen will, und ohne Hürde Kontakt aufnimmt. Woran sich das festmachen lässt:",
+        ],
+        bullets: [
+          "Er funktioniert auf dem Handy einwandfrei, denn dort kommt der größte Teil der Besucher an",
+          "Er lädt schnell, auch im Mobilfunknetz",
+          "Oben steht in einem Satz, was Sie anbieten und für wen",
+          "Jede Leistung hat ihren eigenen Abschnitt oder ihre eigene Seite",
+          "Echte Fotos von Ihnen, Ihrem Team und Ihren Arbeiten statt Bildern aus Bilddatenbanken",
+          "Telefon, WhatsApp oder Formular sind mit einem Tipp erreichbar",
+          "Bewertungen und Referenzen sind sichtbar",
+          "Eigene Domain, eine E-Mail-Adresse auf diese Domain, vollständiges Impressum und Datenschutzerklärung",
+          "Dieselben Firmendaten wie im Google-Unternehmensprofil",
+        ],
+      },
+      {
+        heading: "Woran Kunden einen schwachen Internetauftritt erkennen",
+        paragraphs: [
+          "Besucher prüfen eine Website nicht bewusst. Sie haben in wenigen Sekunden ein Gefühl, ob der Betrieb dahinter seine Sache ernst nimmt, und dieses Gefühl entscheidet über den nächsten Klick. Die häufigsten Gründe, warum ein Webauftritt unprofessionell wirkt, sind fast immer dieselben:",
+          "Wer mehrere dieser Punkte auf der eigenen Seite wiederfindet, muss nicht zwingend neu anfangen. Oft lässt sich der bestehende Auftritt gezielt überarbeiten, ohne dass die Platzierungen bei Google verloren gehen.",
+        ],
+        bullets: [
+          "Die Seite ist auf dem Handy zu klein, verrutscht oder lädt lange",
+          "Veraltete Angaben, etwa alte Öffnungszeiten, abgelaufene Aktionen oder ein Copyright aus vergangenen Jahren",
+          "Keine Telefonnummer oder ein Kontaktformular, das tief im Menü versteckt ist",
+          "Allgemeine Sätze, die auf jeden Betrieb passen würden, statt konkreter Leistungen",
+          "Eine E-Mail-Adresse von einem Freemail-Anbieter statt auf die eigene Domain",
+          "Fehlendes oder unvollständiges Impressum",
+        ],
+        link: { label: "Wie ein Relaunch abläuft, ohne Platzierungen zu verlieren", href: "/website-relaunch" },
+      },
+      {
+        heading: "Ein professioneller Webauftritt verwandelt Interesse in Anfragen",
         paragraphs: [
           "Egal ob jemand über Google, eine Empfehlung oder Social Media auf Sie aufmerksam wird: Am Ende landet er auf Ihrer Website, und dort entscheidet sich, ob er anfragt. Eine gute Seite führt den Besucher klar zum nächsten Schritt, ob Anruf, Formular oder WhatsApp. Eine schlechte oder fehlende Seite lässt genau diese Interessenten wieder abspringen.",
         ],
       },
       {
-        heading: "Die Website schafft Vertrauen",
+        heading: "Er schafft Vertrauen, bevor der erste Anruf kommt",
         paragraphs: [
           "Ein professioneller Auftritt signalisiert in Sekunden, dass hinter dem Betrieb jemand steckt, der seine Sache ernst nimmt. Echte Fotos, klare Leistungen und sichtbare Bewertungen wirken stärker als jedes Versprechen. Gerade wenn Kunden zwischen mehreren Anbietern wählen, gibt dieser erste Eindruck oft den Ausschlag.",
+          "Das gilt auch für Betriebe, die vor allem von Empfehlungen leben. Wer empfohlen wurde, schaut sich fast immer zuerst online an, mit wem er es zu tun hat. Ein überzeugender Internetauftritt bestätigt die Empfehlung, ein schwacher lässt Zweifel aufkommen.",
         ],
       },
       {
-        heading: "Die Website macht Sie bei Google und KI auffindbar",
+        heading: "Er macht Sie bei Google und KI auffindbar",
         paragraphs: [
           "Eine technisch saubere Website ist die Voraussetzung dafür, dass Google und zunehmend auch KI-Systeme wie ChatGPT oder Perplexity Ihren Betrieb verstehen und weiterempfehlen können. Mit strukturierten Daten und klaren Inhalten wird aus der Website eine Quelle, die diese Systeme zitieren, wenn jemand nach einem Anbieter wie Ihnen fragt.",
         ],
       },
       {
-        heading: "Die Website macht Sie unabhängig von Plattformen",
+        heading: "Er macht Sie unabhängig von Plattformen",
         paragraphs: [
-          "Wer nur auf Social Media oder Lieferplattformen setzt, ist von deren Regeln und Provisionen abhängig. Ihre eigene Website gehört Ihnen. Sie ist der einzige Kanal, den Ihnen niemand wegnehmen oder von heute auf morgen ändern kann, und damit das stabile Fundament Ihrer Online-Präsenz.",
+          "Wer nur auf Social Media oder Vermittlungsportale setzt, ist von deren Regeln und Provisionen abhängig. Ihre eigene Website gehört Ihnen. Sie ist der einzige Kanal, den Ihnen niemand wegnehmen oder von heute auf morgen ändern kann, und damit das stabile Fundament Ihrer Webpräsenz.",
           "Damit das wirklich stimmt, müssen Adresse und Serverplatz auf Ihren Namen laufen und nicht auf den Ihrer Agentur. Das ist der Punkt, an dem viele Betriebe später merken, dass ihnen ihre Website eben doch nicht ganz gehört.",
         ],
         link: { label: "Hosting und Domain verständlich erklärt", href: "/ratgeber/hosting-und-domain-erklaert" },
       },
       {
-        heading: "Die Website spart Ihnen Zeit",
+        heading: "Er spart Ihnen Zeit",
         paragraphs: [
-          "Eine gute Website beantwortet die immer gleichen Fragen von selbst: Was bietet ihr an, was kostet es ungefähr, wie erreiche ich euch, wann habt ihr geöffnet. Das reduziert Rückfragen und sorgt dafür, dass die Anfragen, die kommen, besser vorqualifiziert sind.",
+          "Eine gute Website beantwortet die immer gleichen Fragen von selbst: Was bieten Sie an, für wen, wie erreicht man Sie, wann sind Sie erreichbar. Das reduziert Rückfragen und sorgt dafür, dass die Anfragen, die kommen, besser vorqualifiziert sind.",
         ],
         link: { label: "Wenn die Website da ist und trotzdem keine Anfragen kommen", href: "/website-bringt-keine-anfragen" },
       },
+      {
+        heading: "So kommen Sie zu einem professionellen Webauftritt",
+        paragraphs: [
+          "Am Anfang steht keine Designfrage, sondern eine Inhaltsfrage: Welche Leistungen sollen Anfragen bringen, wer sind Ihre Kunden, und was tippen diese Kunden bei Google ein? Erst daraus ergibt sich, welche Seiten der Auftritt braucht und was auf ihnen stehen muss.",
+          "Bei Mehr Auftrag sehen Sie vorab einen kostenlosen Entwurf Ihrer neuen Website und entscheiden erst dann, ob Sie ihn umsetzen lassen. Abgestimmt wird per Telefon, WhatsApp und Link, ein Termin in Ihrem Betrieb ist dafür nicht nötig.",
+        ],
+        link: { label: "Kostenlosen Website-Entwurf anfragen", href: "/" },
+        links: [{ label: "Wie eine Website ohne einen einzigen Termin im Betrieb entsteht", href: "/ratgeber/website-erstellen-lassen-ohne-termin" }],
+      },
     ],
     faqs: [
+      {
+        q: "Was gehört zu einem professionellen Internetauftritt?",
+        a: "Eine Website, die auf dem Handy schnell und übersichtlich ist, jede Leistung klar benennt, echte Fotos und Bewertungen zeigt und mit einem Tipp zur Kontaktaufnahme führt. Dazu eine eigene Domain mit passender E-Mail-Adresse, ein vollständiges Impressum, eine Datenschutzerklärung und dieselben Firmendaten wie im Google-Unternehmensprofil.",
+      },
+      {
+        q: "Was ist der Unterschied zwischen Webauftritt, Internetauftritt und Webpräsenz?",
+        a: "Webauftritt und Internetauftritt meinen meist die eigene Website. Webpräsenz und Online-Auftritt werden oft weiter gefasst und schließen das Google-Unternehmensprofil, Verzeichniseinträge und Social-Media-Profile mit ein. Die Website ist dabei der einzige Teil, der wirklich Ihnen gehört.",
+      },
       {
         q: "Reicht nicht ein Google-Eintrag und Instagram?",
         a: "Als Ergänzung sind beide wertvoll, aber sie ersetzen keine Website. Google und Social Media machen auf Sie aufmerksam, die Website ist der Ort, an dem daraus eine Anfrage wird, und der einzige Kanal, der wirklich Ihnen gehört und nicht der Plattform.",
       },
       {
-        q: "Bringt eine Website auch etwas, wenn ich vor allem von Empfehlungen lebe?",
-        a: "Ja. Empfohlene Kunden prüfen Sie heute fast immer erst online. Eine professionelle Website bestätigt die Empfehlung und verhindert Zweifel. Ohne sie geht ein Teil der empfohlenen Interessenten wieder verloren.",
+        q: "Bringt ein Webauftritt auch etwas, wenn ich vor allem von Empfehlungen lebe?",
+        a: "Ja. Empfohlene Kunden prüfen Sie heute fast immer erst online. Ein professioneller Webauftritt bestätigt die Empfehlung und verhindert Zweifel. Ohne ihn geht ein Teil der empfohlenen Interessenten wieder verloren.",
       },
       {
         q: "Was unterscheidet eine professionelle von einer einfachen Website?",
         a: "Eine professionelle Website ist auf Kundengewinnung ausgelegt: schnell, für Handy und Google optimiert, mit klarer Führung zur Kontaktaufnahme, echten Inhalten und sauberer Technik. Eine einfache Seite ist oft nur ein digitaler Steckbrief, der da ist, aber wenig bewirkt.",
       },
+      {
+        q: "Muss ich meinen bestehenden Internetauftritt komplett neu machen lassen?",
+        a: "Nicht unbedingt. Wenn Aufbau und Technik grundsätzlich stimmen, reicht oft eine gezielte Überarbeitung von Texten, Fotos und Kontaktwegen. Ein Neubau lohnt sich, wenn die Seite auf dem Handy nicht funktioniert oder technisch so alt ist, dass jede Änderung mühsam wird. Wichtig ist in beiden Fällen, dass alte Adressen sauber weitergeleitet werden.",
+      },
     ],
     related: [
       { label: "Website selbst bauen oder Agentur?", href: "/ratgeber/website-selbst-oder-agentur" },
-      { label: "SEO oder Google Ads?", href: "/ratgeber/seo-oder-google-ads" },
+      { label: "WordPress oder individuell gebaut?", href: "/ratgeber/wordpress-oder-individuell" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
   },
