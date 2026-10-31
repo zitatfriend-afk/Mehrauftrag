@@ -1415,6 +1415,7 @@ export const ARTICLES: Article[] = [
           "Baukastensysteme werben mit einer Website in wenigen Minuten. Für einen einfachen Auftritt kann das reichen, und die monatlichen Kosten sind niedrig. Der Haken liegt woanders: Ein wirklich gutes Ergebnis kostet viele Stunden Einarbeitung, und diese Zeit fehlt im Betrieb.",
           "Dazu kommt, dass Baukasten-Seiten technisch oft nicht optimal sind: langsamere Ladezeiten, eingeschränkte Möglichkeiten bei der Suchmaschinenoptimierung und ein Design, das man vielen anderen Seiten ansieht. Für einen reinen Steckbrief ist das in Ordnung, für ein aktives Werkzeug zur Kundengewinnung selten.",
         ],
+        link: { label: "Woran Kunden einen professionellen Webauftritt erkennen", href: "/ratgeber/professionelle-website-vorteile" },
       },
       {
         heading: "Die Agentur: mehr Investition, dafür ein Werkzeug",
