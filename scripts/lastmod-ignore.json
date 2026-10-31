@@ -70,5 +70,11 @@
       "app/ratgeber/_articles.ts",
       "public/website-bringt-keine-anfragen.html"
     ]
+  },
+  "1024f07": {
+    "grund": "31.10.2026: In diesem Commit wurde im Ratgeber website-selbst-oder-agentur nur ein Kontextlink auf den ueberarbeiteten Ratgeber professionelle-website-vorteile ergaenzt. Linkpflege, der Artikeltext ist unveraendert. Ohne diesen Eintrag spraenge das lastmod des Baukasten-Ratgebers auf heute und widerspraeche seinem dateModified.",
+    "pfade": [
+      "app/ratgeber/_articles.ts"
+    ]
   }
 }
