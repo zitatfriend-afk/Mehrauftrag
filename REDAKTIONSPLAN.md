@@ -39,12 +39,16 @@ Anmerkung zu Nummer 1: Die Seite muss ortsunabhängig funktionieren. Sie nennt d
 
 Anmerkung zu Nummer 6: Das ist der erste Inhalt, der Remote ausdrücklich als Vorteil erzählt. Er wird nach Phase 5 geschrieben, damit er nicht der restlichen Website widerspricht.
 
-## Monat 3: November 2026. Regionale Suche ohne regionale Anschrift.
+## Monat 3: November 2026. Umgebaut am 31.10.2026 nach Search-Console-Daten.
 
-| # | Arbeitstitel | Zielkeyword | Intention | Verlinkt auf |
+Die ursprünglichen Nummern 7 und 8 wurden vor dem Schreiben gegengeprüft und gestrichen. Belege (90 Tage bis 29.10.2026): `seo hanau` 18 Impressionen auf Position 82,2, `local seo agentur` 0, alles mit `local seo` zusammen 3. Main-Kinzig-Kreis nur noch 22 Impressionen in 28 Tagen (vorher 65). Auf diese Begriffe sucht praktisch niemand. Stattdessen zwei Überarbeitungen mit belegter Nachfrage, beide auf bestehenden Seiten, also kein neues Kannibalisierungsrisiko.
+
+| # | Arbeitstitel | Zielkeyword (90 Tage bis 29.10.2026) | Intention | Verlinkt auf |
 |---|---|---|---|---|
-| 7 | Lokal gefunden werden, ohne dass die Agentur um die Ecke sitzt | `seo hanau` (46 / 8,4), `local seo agentur` (2 / 31,0) | informativ | `/suchmaschinenoptimierung`, `/ratgeber/lokale-seo-google-maps` |
-| 8 | Warum der Main-Kinzig-Kreis anders sucht als Frankfurt | `webdesign main-kinzig-kreis` (60 / 13,9), `webdesign agentur main-kinzig-kreis` (17 / 15,1), `marketing beratung main kinzig kreis` (7 / 7,9) | informativ | `/webdesign-standorte`, `/webdesign-hanau` |
+| 7 | **Überarbeitung** von `/ratgeber/professionelle-website-vorteile` zu „Professioneller Webauftritt" (vorgezogen aus Nummer 15). Erledigt 31.10.2026 | `professioneller webauftritt` (85 / 31,0), `internetauftritt` (56 / 21,9), `professioneller internetauftritt` (43 / 18,0), `professionelle webpräsenz` (28 / 37,5), `professionelle website` (22 / 35,5). Seite gesamt 350 / 31,6, 0 Klicks | informativ | Startseite, `/website-relaunch`. Eingehend aus `/ratgeber/website-selbst-oder-agentur` |
+| 8 | **Überarbeitung** des Branchenabschnitts auf `/suchmaschinenoptimierung` (SEO Agentur für Handwerksbetriebe, Bauunternehmen und Gebäudereinigung, zwei neue FAQ). Erledigt 31.10.2026 | `seo agentur für bauunternehmen` (45 / 41,5), `seo-agentur für die shk-betriebe` (44 / 82,3), `seo agentur gebäudereinigung` (43 / 84,5), `seo agentur für gebäudereinigungen` (39 / 84,4), `seo agentur für handwerksbetriebe` (12 / 89,1). Branchen-SEO gesamt 245 Impressionen, fast alles über `/suchmaschinenoptimierung` auf Position 77,3 | kommerziell | `/webseite-fuer-trockenbau`, `/webseite-fuer-gebaeudereinigung`, `/website-fuer-handwerker` |
+
+Dritter Inhalt im November nur, wenn die Messung am 16.11. dafür spricht. Kandidat mit belegter Nachfrage: `website erstellen lassen <Ort>` (zusammen 371 Impressionen in 90 Tagen, verteilt auf Startseite und Stadtseiten). Keine neuen Stadtseiten.
 
 ## Monat 4: Dezember 2026. Metall und Schweißen vertiefen.
 
@@ -68,7 +72,7 @@ Der stärkste Bereich der Domain. `/webseite-fuer-schweisser` ist die einzige Se
 
 | # | Arbeitstitel | Zielkeyword | Intention | Verlinkt auf |
 |---|---|---|---|---|
-| 15 | **Überarbeitung** von `/ratgeber/professionelle-website-vorteile` auf die tatsächlich gesuchten Wörter | `professionelle webpräsenz` (13 / 37,2), `professioneller internetauftritt` (10 / 36,7), `professioneller webauftritt` (10 / 39,0), `professionelle website` (7 / 40,7) | informativ | Startseite |
+| 15 | **Vorgezogen als Nummer 7 (31.10.2026).** Überarbeitung von `/ratgeber/professionelle-website-vorteile` auf die tatsächlich gesuchten Wörter | `professionelle webpräsenz` (13 / 37,2), `professioneller internetauftritt` (10 / 36,7), `professioneller webauftritt` (10 / 39,0), `professionelle website` (7 / 40,7) | informativ | Startseite |
 | 16 | Was eine Website kosten darf, und woran du einen zu hohen Preis erkennst | `agentur website erstellen` (26 / 92,0), `homepage erstellen agentur` (4 / 89,8), `internetseite erstellen agentur` (2 / 93,0) | informativ mit Kaufkante | Startseite, `/webdesign-standorte` |
 
 Anmerkung zu Nummer 15: Der Artikel existiert, rankt auf Position 36,9 und bekommt bei 44 Impressionen keinen Klick. Er zielt inhaltlich auf das Richtige, verwendet aber nicht die Wörter, die eingetippt werden. Das ist eine Überarbeitung, kein neuer Text.
