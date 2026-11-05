@@ -76,5 +76,14 @@
     "pfade": [
       "app/ratgeber/_articles.ts"
     ]
+  },
+  "f172f20": {
+    "grund": "05.11.2026: Reine Linkpflege fuer die neue Auftrags-Filter-Landingpage. Startseite (Link an Problemkarte 03 und in der Fusszeile), /website-fuer-handwerker (ein Verweissatz), Ratgeber-Fusszeile und Trockenbau-Fusszeile verlinken /ki-telefonassistent-handwerker. Kein neuer Seiteninhalt, deshalb soll sich kein lastmod bewegen.",
+    "pfade": [
+      "app/page.tsx",
+      "app/website-fuer-handwerker/",
+      "public/webseite-fuer-trockenbau.html",
+      "app/ratgeber/_shell.tsx"
+    ]
   }
 }
