@@ -564,6 +564,9 @@
   .istep p{font-size:.95rem}
   .narrow{max-width:820px;margin:0 auto}
   .hero-small{padding:44px 0 30px}
+  /* Keine automatische Silbentrennung: die Trennstriche wirken wie Gedankenstriche */
+  h1,h2,h3,h4,h5,p,li{-webkit-hyphens:manual;hyphens:manual}
+  @media(max-width:560px){.notice{flex-direction:column;gap:12px;padding:20px}}
 </style>
 </head>
 <body>
