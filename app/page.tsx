@@ -506,7 +506,7 @@ const NAV_LINKS = [
   { href: "#referenzen", label: "Referenzen" },
   { href: "#faq", label: "FAQ" },
   { href: "/ratgeber", label: "Ratgeber" },
-  { href: "/karriere", label: "Karriere" },
+  { href: "/ki-telefonassistent-handwerker", label: "Auftrags-Filter" },
 ];
 
 function PremiumNavLink({ href, label }: { href: string; label: string }) {
@@ -1214,7 +1214,7 @@ export default function Home() {
                 <PremiumNavLink key={n.href} href={n.href} label={n.label} />
               ))}
             </div>
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden xl:flex items-center gap-3">
               <a
                 href="#kontakt"
                 className="shimmer-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg text-[13px] font-semibold text-white transition-all duration-300 whitespace-nowrap"
@@ -1637,6 +1637,118 @@ export default function Home() {
                   <ServiceCard svc={svc} />
                 </motion.div>
               ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ══════════════════════ AUFTRAGS-FILTER TEASER
+            05.11.2026: Neues Produkt KI-Telefonassistentin fuer Handwerker. Bewusst
+            direkt nach den Leistungen und vor Grafikdesign, damit es auf der
+            Startseite nicht nur in der Fusszeile steht. Die drei Meldungen rechts
+            sind als Beispiel gekennzeichnet, keine echten Kundendaten. */}
+        <section id="auftrags-filter" className="py-16 sm:py-20 relative" style={sectionDark}>
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse 55% 45% at 70% 50%, rgba(34,197,94,0.06), transparent 65%)" }}
+          />
+          <div className="max-w-6xl mx-auto px-5 sm:px-8 relative">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              className="overflow-hidden rounded-3xl"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                backdropFilter: "blur(16px)",
+                border: "1px solid rgba(59,130,246,0.28)",
+                boxShadow: "0 8px 50px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.04) inset",
+              }}
+            >
+              <div className="flex flex-col lg:flex-row lg:items-center gap-10 p-7 sm:p-10 lg:p-12">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div
+                      className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                      style={{ background: "rgba(59,130,246,0.12)", color: "#60a5fa", border: "1px solid rgba(59,130,246,0.2)" }}
+                    >
+                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      </svg>
+                    </div>
+                    <span
+                      className="text-[10px] font-bold uppercase tracking-[0.2em] px-2.5 py-1 rounded-full"
+                      style={{ color: "#86efac", background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.25)" }}
+                    >
+                      Neu für Handwerker
+                    </span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl font-black tracking-tight leading-tight mb-4 text-white" style={{ hyphens: "manual", WebkitHyphens: "manual" }}>
+                    Der Auftrags-Filter: kein verpasster Anruf mehr
+                  </h2>
+                  <p className="text-base leading-relaxed text-slate-300 mb-4 max-w-2xl">
+                    Sie stehen auf der Baustelle und können nicht rangehen? Nach etwa 20 Sekunden übernimmt eine freundliche KI-Telefonassistentin, fragt Anliegen, Einsatzort und Dringlichkeit ab und schickt Ihnen die Anfrage sofort aufs Handy. Bewertet mit Grün, Gelb oder Rot, damit Sie sehen, welcher Rückruf sich lohnt.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-7">
+                    {["Ihre Handynummer bleibt", "Keine App", "E-Mail und SMS", "Grün, Gelb, Rot"].map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-lg px-3 py-1.5 text-[12px] font-medium text-slate-300"
+                        style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.16)" }}
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    <motion.a
+                      href="/ki-telefonassistent-handwerker"
+                      whileHover={{ y: -2, boxShadow: "0 8px 32px rgba(59,130,246,0.5)" }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={SPRING_FAST}
+                      className="shimmer-btn inline-flex max-w-full items-center justify-center gap-2.5 px-5 py-3 sm:px-6 rounded-xl font-semibold text-white text-sm"
+                      style={{ background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)", boxShadow: "0 4px 16px rgba(59,130,246,0.32)" }}
+                    >
+                      <span>Auftrags-Filter ansehen</span>
+                      <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </motion.a>
+                    <a
+                      href="/auftrags-filter"
+                      className="inline-flex max-w-full items-center justify-center px-5 py-3 sm:px-6 rounded-xl font-semibold text-slate-200 text-sm transition-colors hover:text-white"
+                      style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)" }}
+                    >
+                      In einer Minute erklärt
+                    </a>
+                  </div>
+                </div>
+                <div className="w-full lg:w-[340px] flex-shrink-0" aria-label="Beispiel: drei bewertete Anfragen des Auftrags-Filters" role="img">
+                  {[
+                    { c: "#22c55e", t: "Grün: Badsanierung komplett", d: "Diese Woche · ca. 8.000 bis 12.000 €", z: "jetzt" },
+                    { c: "#eab308", t: "Gelb: Heizung macht Geräusche", d: "Kein Zeitdruck · ca. 150 bis 400 €", z: "vor 25 Min." },
+                    { c: "#ef4444", t: "Rot: Wasserhahn tropft", d: "Außerhalb Ihres Radius · unter 100 €", z: "vor 1 Std." },
+                  ].map((n) => (
+                    <div
+                      key={n.t}
+                      className="relative mb-2.5 overflow-hidden rounded-2xl py-3 pl-5 pr-4"
+                      style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)" }}
+                    >
+                      <span className="absolute left-0 top-0 bottom-0 w-[5px]" style={{ background: n.c }} />
+                      <div className="mb-1 flex items-center justify-between gap-2 text-[11px] text-slate-400">
+                        <span className="flex items-center gap-1.5 font-semibold uppercase tracking-wider text-slate-300">
+                          <span className="inline-block h-2 w-2 rounded-full" style={{ background: n.c, boxShadow: `0 0 10px ${n.c}` }} />
+                          Auftrags-Filter
+                        </span>
+                        <span>{n.z}</span>
+                      </div>
+                      <p className="text-[14px] font-bold leading-snug text-white">{n.t}</p>
+                      <p className="text-[12.5px] leading-snug text-slate-300">{n.d}</p>
+                    </div>
+                  ))}
+                  <p className="mt-2 text-center text-[11px] text-slate-500">Beispiel. So sehen die Meldungen aus.</p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -2217,6 +2329,9 @@ export default function Home() {
               </a>
               <a href="/ki-telefonassistent-handwerker" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 KI Telefonassistent für Handwerker
+              </a>
+              <a href="/karriere" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
+                Karriere
               </a>
             </div>
 
