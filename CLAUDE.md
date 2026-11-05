@@ -124,3 +124,20 @@ geschätzten, gerundeten oder hochgerechneten Zahlen.
 5. Nach dem Deploy: Hub zuerst zur Indexierung anmelden, dann die neuen Seiten
 6. Ein bis zwei Tage später: Indexierung > Seiten kontrollieren.
    Referenzwert 18.08.2026: 43 indexiert, 19 nicht indexiert
+
+## IndexNow: Bing automatisch informieren (seit 05.11.2026)
+
+Bing hatte die Sitemap von Anfang August bis 05.11.2026 nicht mehr gelesen,
+nur 48 von 72 Seiten waren im Index. Die ChatGPT- und Copilot-Suche zieht
+ihre Ergebnisse aus Bing. Deshalb gilt:
+
+- JEDES Deploy-Skript ruft nach einem erfolgreichen `git push` auf:
+  `node scripts/indexnow.mjs <commit-vor-dem-push>`
+  Das Skript wartet, bis die neuen Seiten live sind (max. 6 Minuten), und
+  meldet genau die URLs, deren Eintrag in app/lastmod.json neu ist oder sich
+  geaendert hat. Fehler brechen den Deploy nicht ab
+- Schluesseldatei: public/32e2af6a9af025da4aa2b077db877bb0.txt. Nicht
+  loeschen und nicht umbenennen, sonst lehnt IndexNow jede Meldung ab
+- Alles einmal komplett melden: `node scripts/indexnow.mjs --alle`
+- Google nutzt IndexNow nicht. Neue Seiten dort weiter in der Search Console
+  zur Indexierung beantragen

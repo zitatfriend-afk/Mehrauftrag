@@ -9,7 +9,8 @@
     "lint": "eslint",
     "lastmod": "node scripts/lastmod.mjs",
     "nachbarstaedte": "node scripts/nachbarstaedte.mjs",
-    "seo:check": "node scripts/nachbarstaedte.mjs --check && node scripts/lastmod.mjs --check"
+    "seo:check": "node scripts/nachbarstaedte.mjs --check && node scripts/lastmod.mjs --check",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",
