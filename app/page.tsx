@@ -1515,7 +1515,7 @@ export default function Home() {
               {[
                 { n: "01", title: "Veraltete oder keine Website", desc: "Ihre Konkurrenz gewinnt täglich Kunden online, während Sie noch auf Weiterempfehlung warten.", link: { href: "/website-relaunch", label: "Wann sich ein Relaunch lohnt" } },
                 { n: "02", title: "Keine Anfragen aus dem Internet", desc: "Google findet Sie nicht. Social Media stagniert. Ihr Budget verpufft ohne messbare Ergebnisse.", link: { href: "/website-bringt-keine-anfragen", label: "Warum eine Website keine Anfragen bringt" } },
-                { n: "03", title: "Kein System für Neukundengewinnung", desc: "Alles hängt an einzelnen Personen. Kein skalierbares System bedeutet keine Planbarkeit." },
+                { n: "03", title: "Kein System für Neukundengewinnung", desc: "Alles hängt an einzelnen Personen. Kein skalierbares System bedeutet keine Planbarkeit.", link: { href: "/ki-telefonassistent-handwerker", label: "Verpasste Anrufe auffangen mit dem Auftrags-Filter" } },
                 { n: "04", title: "Schlechtes Image trotz guter Arbeit", desc: "Sie leisten Qualität, aber Ihr Online-Auftritt vermittelt das nicht. Das kostet Sie täglich Aufträge." },
               ].map((c, i) => (
                 <motion.div
@@ -2214,6 +2214,9 @@ export default function Home() {
               </a>
               <a href="/website-bringt-keine-anfragen" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
                 Website bringt keine Anfragen
+              </a>
+              <a href="/ki-telefonassistent-handwerker" className="text-[11px] tracking-wide text-white/40 hover:text-white/70 transition-colors">
+                KI Telefonassistent für Handwerker
               </a>
             </div>
 

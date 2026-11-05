@@ -66,6 +66,7 @@ const LEISTUNG_LINKS = [
   { label: "Website bringt keine Anfragen", href: "/website-bringt-keine-anfragen" },
   { label: "Website relaunchen lassen", href: "/website-relaunch" },
   { label: "Suchmaschinenoptimierung", href: "/suchmaschinenoptimierung" },
+  { label: "KI Telefonassistent für Handwerker", href: "/ki-telefonassistent-handwerker" },
   { label: "Referenzen", href: "/referenzen" },
 ];
 

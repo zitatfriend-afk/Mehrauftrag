@@ -1278,6 +1278,14 @@ export default function HandwerkerLanding() {
               >
                 lokalen Suchmaschinenoptimierung
               </Link>
+              . Und damit aus einem Anruf auch ein Auftrag wird, wenn Sie gerade auf der Baustelle stehen, gibt es
+              den{" "}
+              <Link
+                href="/ki-telefonassistent-handwerker"
+                className="font-semibold text-[#60a5fa] underline decoration-[#60a5fa]/40 underline-offset-4 hover:text-white"
+              >
+                KI Telefonassistenten für Handwerker
+              </Link>
               .
             </motion.p>
           </div>
