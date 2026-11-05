@@ -21,6 +21,8 @@
     { "pfad": "/website-bringt-keine-anfragen", "quelle": ["public/website-bringt-keine-anfragen.html"] },
     { "pfad": "/website-relaunch", "quelle": ["public/website-relaunch.html"] },
     { "pfad": "/webseite-fuer-physiotherapie", "quelle": ["public/webseite-fuer-physiotherapie.html"] },
+    { "pfad": "/ki-telefonassistent-handwerker", "quelle": ["public/ki-telefonassistent-handwerker.html"] },
+    { "pfad": "/auftrags-filter", "quelle": ["public/auftrags-filter.html"] },
     { "pfad": "/karriere", "quelle": ["app/karriere/page.tsx", "app/_components/karriere-shell.tsx"] },
     { "pfad": "/ratgeber", "quelle": ["app/ratgeber/page.tsx"] },
     { "pfad": "/referenzen", "quelle": ["app/referenzen/page.tsx", "app/referenzen/_cases.ts"] },

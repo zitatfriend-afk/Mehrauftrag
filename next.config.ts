@@ -102,6 +102,15 @@ const nextConfig: NextConfig = {
         destination: "/webseite-fuer-trockenbau.html",
       },
       {
+        // 05.11.2026: Auftrags-Filter, Landingpage und Erklaerseite
+        source: "/ki-telefonassistent-handwerker",
+        destination: "/ki-telefonassistent-handwerker.html",
+      },
+      {
+        source: "/auftrags-filter",
+        destination: "/auftrags-filter.html",
+      },
+      {
         source: "/webdesign-:slug",
         destination: "/webdesign-:slug.html",
       },
