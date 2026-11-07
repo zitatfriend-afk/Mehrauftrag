@@ -53,7 +53,13 @@ export type Kontaktart =
   | "telefonklick"
   | "whatsappklick"
   | "formular_abgeschickt"
-  | "formular_fehler";
+  | "formular_fehler"
+  // Ratgeber-Seiten, siehe app/_components/ratgeber-messung.tsx
+  | "ratgeber_aufruf"
+  | "ratgeber_hinweis_gesehen"
+  | "ratgeber_ende_erreicht"
+  | "ratgeber_klick_pruefung"
+  | "ratgeber_klick_entwurf";
 
 /**
  * Meldet einen Kontaktversuch anonym. Schlaegt das fehl, passiert nichts

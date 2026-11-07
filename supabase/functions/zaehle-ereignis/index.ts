@@ -33,6 +33,12 @@ const ERLAUBTE_TYPEN = [
   "whatsappklick",
   "formular_abgeschickt",
   "formular_fehler",
+  // 07.11.2026: Ratgeber-Seiten, siehe app/_components/ratgeber-messung.tsx
+  "ratgeber_aufruf",
+  "ratgeber_hinweis_gesehen",
+  "ratgeber_ende_erreicht",
+  "ratgeber_klick_pruefung",
+  "ratgeber_klick_entwurf",
 ];
 
 /** Nur diese Worte, nie die gclid selbst. */

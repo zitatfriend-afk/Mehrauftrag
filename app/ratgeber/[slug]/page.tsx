@@ -5,6 +5,11 @@ import { getArticle, getAllSlugs, CATEGORY_LABEL } from "../_articles";
 import { getAnalyse } from "../../analyse/_analyse-content";
 import { RatgeberHeader, RatgeberFooter } from "../_shell";
 import WebsiteCheckBox from "../../_components/website-check-box";
+import RatgeberMessung from "../../_components/ratgeber-messung";
+
+const TELEFON_ANZEIGE = "01520 2069625";
+const TELEFON_LINK = "tel:+4915202069625";
+const WHATSAPP_LINK = "https://wa.me/4915202069625";
 
 const BASE = "https://www.mehrauftrag.de";
 
@@ -182,13 +187,33 @@ export default async function ArticlePage({
                     ))}
                   </ul>
                 )}
-                <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
-                  <Link
-                    href={article.angebot.cta.href}
-                    className="inline-flex justify-center rounded-full bg-[#3b82f6] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
-                  >
-                    {article.angebot.cta.label}
-                  </Link>
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5">
+                  {article.angebot.pruefung ? (
+                    <>
+                      <Link
+                        href={article.angebot.pruefung.href}
+                        data-messung="ratgeber_klick_pruefung"
+                        className="inline-flex justify-center rounded-full bg-[#3b82f6] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
+                      >
+                        {article.angebot.pruefung.label}
+                      </Link>
+                      <Link
+                        href={article.angebot.cta.href}
+                        data-messung="ratgeber_klick_entwurf"
+                        className="text-sm font-semibold text-[#3b82f6] underline underline-offset-4 hover:text-[#6aa8ff]"
+                      >
+                        {article.angebot.cta.label}
+                      </Link>
+                    </>
+                  ) : (
+                    <Link
+                      href={article.angebot.cta.href}
+                      data-messung="ratgeber_klick_entwurf"
+                      className="inline-flex justify-center rounded-full bg-[#3b82f6] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
+                    >
+                      {article.angebot.cta.label}
+                    </Link>
+                  )}
                   {article.angebot.referenz && (
                     <Link
                       href={article.angebot.referenz.href}
@@ -198,6 +223,24 @@ export default async function ArticlePage({
                     </Link>
                   )}
                 </div>
+                {article.angebot.telefon && (
+                  <p className="mt-5 border-t border-white/10 pt-4 text-sm leading-relaxed text-slate-300">
+                    Lieber kurz sprechen? Rufen Sie an unter{" "}
+                    <a href={TELEFON_LINK} className="font-semibold text-white underline underline-offset-4 hover:text-[#6aa8ff]">
+                      {TELEFON_ANZEIGE}
+                    </a>{" "}
+                    oder schreiben Sie uns per{" "}
+                    <a
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-white underline underline-offset-4 hover:text-[#6aa8ff]"
+                    >
+                      WhatsApp
+                    </a>
+                    .
+                  </p>
+                )}
               </aside>
             )}
 
@@ -238,6 +281,21 @@ export default async function ArticlePage({
                       </Link>
                     </p>
                   ))}
+                  {s.hinweis && (
+                    <div
+                      data-messung-sicht="ratgeber_hinweis_gesehen"
+                      className="mt-6 rounded-2xl border border-[#3b82f6]/30 bg-[#3b82f6]/[0.06] p-5 sm:p-6"
+                    >
+                      <p className="text-base leading-relaxed text-slate-200">{s.hinweis.text}</p>
+                      <Link
+                        href={s.hinweis.cta.href}
+                        data-messung="ratgeber_klick_pruefung"
+                        className="mt-4 inline-flex justify-center rounded-full bg-[#3b82f6] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
+                      >
+                        {s.hinweis.cta.label}
+                      </Link>
+                    </div>
+                  )}
                 </section>
               ))}
             </div>
@@ -271,7 +329,7 @@ export default async function ArticlePage({
             )}
 
             {/* CTA */}
-            <section className="mt-14 rounded-3xl border border-white/8 bg-gradient-to-br from-[#0a1230] to-[#04081c] p-8 text-center">
+            <section data-messung-sicht="ratgeber_ende_erreicht" className="mt-14 rounded-3xl border border-white/8 bg-gradient-to-br from-[#0a1230] to-[#04081c] p-8 text-center">
               <h2 className="text-xl font-black tracking-[-0.02em] text-white sm:text-2xl">
                 Mehr Anfragen für Ihren Betrieb?
               </h2>
@@ -281,6 +339,7 @@ export default async function ArticlePage({
               </p>
               <Link
                 href={analyseHrefFor(article.slug)}
+                data-messung="ratgeber_klick_pruefung"
                 className="shimmer-btn mt-6 inline-flex rounded-full bg-[#3b82f6] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
               >
                 Kostenlose Analyse anfordern
@@ -320,6 +379,7 @@ export default async function ArticlePage({
         </article>
 
         <RatgeberFooter />
+        <RatgeberMessung />
       </main>
     </>
   );

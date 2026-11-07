@@ -371,6 +371,25 @@ export default function DatenschutzPage() {
           </LegalP>
         </LegalSubsection>
 
+        <LegalSubsection title="Anonyme Zählung von Seitenaufrufen und Klicks">
+          <LegalP>
+            Auf einigen Seiten zählen wir, wie oft die Seite aufgerufen wird, ob bestimmte Abschnitte
+            beim Lesen sichtbar werden und wie oft Besucher auf Kontaktwege wie Telefon, WhatsApp,
+            Anfrageformulare oder unsere kostenlose Prüfung klicken. Gespeichert werden dabei
+            ausschließlich die Art des Ereignisses, der Pfad der Seite, der Zeitpunkt und die Angabe,
+            ob der Besuch über eine Anzeige von Google oder Meta kam. Wir speichern keine IP-Adresse,
+            keine Gerätekennung und keine Kennung der Anzeige. Es werden keine Cookies gesetzt und
+            keine Informationen auf Ihrem Endgerät gespeichert. Eine Zuordnung zu Ihrer Person ist
+            uns nicht möglich.
+          </LegalP>
+          <LegalP>
+            Die Zählung läuft über eine Funktion bei Supabase (siehe oben). Beim Aufruf verarbeitet
+            Supabase technisch bedingt Ihre IP-Adresse, um die Anfrage entgegenzunehmen. Wir
+            speichern sie nicht. Rechtsgrundlage ist unser berechtigtes Interesse daran zu erkennen,
+            ob unsere Seiten und Kontaktwege funktionieren (Art. 6 Abs. 1 lit. f DSGVO).
+          </LegalP>
+        </LegalSubsection>
+
         <LegalSubsection title="Terminbuchung über unsere eigene Terminseite">
           <LegalP>
             Für Erstgespräche stellen wir unter termine.mehrauftrag.de eine eigene Terminseite
@@ -781,7 +800,7 @@ export default function DatenschutzPage() {
       {/* 7. Stand */}
       <LegalSection title="7. Stand und Aktualität dieser Datenschutzerklärung">
         <LegalP>
-          Stand dieser Datenschutzerklärung: September 2026. Wir behalten uns vor, diese
+          Stand dieser Datenschutzerklärung: November 2026. Wir behalten uns vor, diese
           Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen
           entspricht oder um Änderungen unserer Leistungen umzusetzen, etwa bei der Einführung
           neuer Dienste. Für Ihren erneuten Besuch gilt dann die jeweils aktuelle Fassung.

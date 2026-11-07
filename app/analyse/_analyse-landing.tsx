@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
+import { meldeKontaktversuch } from "../_lib/ads-conversion";
 
 /**
  * Interaktives Lead-Formular für die Analyse-Landingpages.
@@ -85,8 +86,12 @@ export default function AnalyseForm({
       if (typeof window !== "undefined" && typeof window.fbq === "function") {
         window.fbq("track", "Lead", { content_name: leadSource });
       }
+      // Anonyme Zaehlung, damit sich der Weg Ratgeber -> Analyse -> Anfrage
+      // auch ohne Cookie-Einwilligung nachvollziehen laesst.
+      meldeKontaktversuch("formular_abgeschickt");
       setState("success");
     } catch {
+      meldeKontaktversuch("formular_fehler");
       setState("error");
     }
   }
