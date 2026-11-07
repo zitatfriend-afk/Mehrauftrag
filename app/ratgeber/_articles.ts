@@ -16,6 +16,10 @@ export type Section = {
   // Abschnitt sowohl seinen alten Verweis behalten als auch auf einen neuen
   // Ratgeber zeigen soll, ohne dass dafuer ein eigener Abschnitt entsteht.
   links?: RelatedLink[];
+  // Kurzer Hinweis mit Knopf am Ende des Abschnitts. Gedacht fuer die Stelle,
+  // an der dem Leser gerade klar wird, was ihm fehlt. Ein Kasten am Anfang
+  // erreicht ihn dort nicht mehr.
+  hinweis?: { text: string; cta: RelatedLink };
 };
 export type RelatedLink = { label: string; href: string };
 
@@ -45,6 +49,13 @@ export type Angebot = {
   titel: string;
   text: string;
   punkte?: string[];
+  // Kleinerer erster Schritt (kostenlose Pruefung). Ist er gesetzt, wird er der
+  // Hauptknopf und cta rutscht als Textlink dahinter. Hintergrund 07.11.2026:
+  // Leser der Schweisser-Ratgeber suchen Auftraege, eine neue Website ist fuer
+  // sie ein grosser Schritt. Die Pruefung holt sie dort ab, wo sie stehen.
+  pruefung?: RelatedLink;
+  // Telefon und WhatsApp direkt im Kasten anzeigen.
+  telefon?: boolean;
   cta: RelatedLink;
   referenz?: RelatedLink;
 };
@@ -513,7 +524,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Metallbauer, Stahlbauer und Metallverarbeiter an Aufträge kommen: wie die Industrie vergibt, wo Ausschreibungen stehen und was auf die Website gehört.",
     datePublished: "2026-08-11",
-    dateModified: "2026-10-19",
+    dateModified: "2026-11-07",
     readingTime: "10 Min.",
     intro: [
       "Neue Aufträge im Metallbau kommen über drei Wege: über Stammkunden und Empfehlungen, über Einkäufer, die gezielt nach einem Verfahren oder Bauteil suchen und dabei auf Ihren Betrieb stoßen, und über öffentliche Ausschreibungen. Die wenigsten Industrieaufträge landen auf einem Portal. Dieser Ratgeber zeigt, wie Industrie und Handel Aufträge im Metallbau, im Stahlbau und in der Metallverarbeitung tatsächlich vergeben, welche Nachweise dabei verlangt werden und was davon auf Ihre Website gehört.",
@@ -558,6 +569,10 @@ export const ARTICLES: Article[] = [
           "Dazu kommen gültige Schweißerprüfungen nach DIN EN ISO 9606, in vielen Betrieben ein Qualitätsnachweis nach DIN EN ISO 3834 und bei größeren Kunden ein Managementsystem nach ISO 9001. Wer für den Druckbehälterbau oder für Schienenfahrzeuge arbeitet, braucht die jeweils eigenen Zulassungen.",
           "Entscheidend ist, dass diese Nachweise auf der Website stehen, mit Geltungsbereich und am besten als Dokument zum Herunterladen. Ein Einkäufer, der drei Betriebe vergleicht, nimmt den, bei dem er nicht nachfragen muss.",
         ],
+        hinweis: {
+          text: "Stehen Ihre Nachweise, Verfahren und Werkstoffe so auf Ihrer Website, dass ein Einkäufer nicht nachfragen muss? Wir prüfen das kostenlos und sagen Ihnen ehrlich, was fehlt.",
+          cta: { label: "Website kostenlos prüfen lassen", href: "/analyse/auftraege-schweisser-metallbau" },
+        },
       },
       {
         heading: "Öffentliche Aufträge und Ausschreibungen für Schweißarbeiten",
@@ -673,13 +688,15 @@ export const ARTICLES: Article[] = [
     angebot: {
       titel: "Sie führen einen Metallbau- oder Schweißbetrieb?",
       text:
-        "Dann entscheidet oft Ihre Website, ob ein Einkäufer Sie überhaupt auf seine Anfrageliste setzt. Wir bauen Metallbau- und Schweißbetrieben Websites, auf denen Verfahren, Werkstoffe, Nachweise und echte Projektfotos so stehen, wie Einkäufer danach suchen. Den ersten Entwurf sehen Sie vorab und kostenlos.",
+        "Dann entscheidet oft Ihre Website, ob ein Einkäufer Sie überhaupt auf seine Anfrageliste setzt. Wir prüfen kostenlos, ob Einkäufer Ihren Betrieb bei ihrer Suche finden und auf Ihrer Seite Verfahren, Werkstoffe, Nachweise und echte Projektfotos sehen. Sie bekommen eine ehrliche Einschätzung, ohne Verpflichtung.",
       punkte: [
-        "Kostenloser Entwurf vorab, Entscheidung erst danach",
+        "Kostenlose und unverbindliche Prüfung Ihres Auftritts",
         "Abstimmung komplett per Telefon, WhatsApp und Videocall",
         "Rückmeldung innerhalb von 24 Stunden",
       ],
-      cta: { label: "Kostenlosen Entwurf anfordern", href: "/webseite-fuer-schweisser#anfrage" },
+      pruefung: { label: "Website kostenlos prüfen lassen", href: "/analyse/auftraege-schweisser-metallbau" },
+      telefon: true,
+      cta: { label: "Oder gleich einen kostenlosen Entwurf anfordern", href: "/webseite-fuer-schweisser#anfrage" },
       referenz: { label: "Beispiel ansehen: Website für SOROKIN Schweißservice", href: "/referenzen/sorokin-schweissservice" },
     },
   },
@@ -692,7 +709,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Lohnschweißer und mobile Schweißbetriebe an Industrieaufträge kommen: wer vergibt, was Einkäufer prüfen und was auf der Website stehen muss.",
     datePublished: "2026-09-19",
-    dateModified: "2026-10-19",
+    dateModified: "2026-11-07",
     readingTime: "8 Min.",
     intro: [
       "Lohnschweißen heißt: Der Kunde liefert Zeichnung und oft auch das Material, Sie liefern die Naht. Für kleine Schweißbetriebe und mobile Schweißer ist das der direkteste Weg in die Industrie, weil kein eigenes Produkt und kein Vertrieb nötig sind. Schwierig ist nur der Anfang, denn Schweißaufträge aus der Industrie werden selten öffentlich vergeben.",
@@ -709,6 +726,9 @@ export const ARTICLES: Article[] = [
           "Maschinen- und Anlagenbau: Schweißbaugruppen, Gestelle, Auftragsspitzen",
           "Stahl- und Metallbau: Subunternehmer für Werkstatt und Montage",
           "Instandhaltung: Reparaturschweißen, oft unter Zeitdruck und vor Ort",
+        ],
+        links: [
+          { label: "Sie suchen selbst einen Lohnschweißer? Ein Beispiel aus unserer Arbeit: der mobile Schweißservice SOROKIN im Sauerland", href: "/referenzen/sorokin-schweissservice" },
         ],
       },
       {
@@ -753,6 +773,10 @@ export const ARTICLES: Article[] = [
           "Nachweise: Schweißerprüfungen, DIN EN 1090, DIN EN ISO 3834, soweit vorhanden",
           "Einsatzgebiet: Werkstatt, mobil beim Kunden oder beides, mit Region",
         ],
+        hinweis: {
+          text: "Steht das alles auf Ihrer Website? Wir prüfen kostenlos, ob ein Einkäufer Ihren Betrieb bei seiner Suche findet und dort alles sieht, was er vor einer Anfrage prüft.",
+          cta: { label: "Website kostenlos prüfen lassen", href: "/analyse/lohnschweissen-industrieauftraege" },
+        },
       },
       {
         heading: "Das Angebot: schnell schlägt perfekt",
@@ -807,13 +831,15 @@ export const ARTICLES: Article[] = [
     angebot: {
       titel: "Sie suchen Lohnschweißaufträge für Ihren Betrieb?",
       text:
-        "Dann muss ein Einkäufer, der nach Ihrem Verfahren und Ihrer Region sucht, auf Ihre Seite stoßen und dort in wenigen Minuten alles finden, was er prüft. Wir bauen Schweißbetrieben genau solche Websites, mit Verfahren, Werkstoffen, Nachweisen und Galerie. Den ersten Entwurf sehen Sie vorab und kostenlos.",
+        "Dann muss ein Einkäufer, der nach Ihrem Verfahren und Ihrer Region sucht, auf Ihre Seite stoßen und dort in wenigen Minuten alles finden, was er prüft. Wir schauen uns kostenlos an, ob das bei Ihnen schon so ist, und sagen Ihnen ehrlich, was fehlt.",
       punkte: [
-        "Kostenloser Entwurf vorab, Entscheidung erst danach",
+        "Kostenlose und unverbindliche Prüfung Ihres Auftritts",
         "Abstimmung komplett per Telefon, WhatsApp und Videocall",
         "Rückmeldung innerhalb von 24 Stunden",
       ],
-      cta: { label: "Kostenlosen Entwurf anfordern", href: "/webseite-fuer-schweisser#anfrage" },
+      pruefung: { label: "Website kostenlos prüfen lassen", href: "/analyse/lohnschweissen-industrieauftraege" },
+      telefon: true,
+      cta: { label: "Oder gleich einen kostenlosen Entwurf anfordern", href: "/webseite-fuer-schweisser#anfrage" },
       referenz: { label: "Beispiel ansehen: Website für SOROKIN Schweißservice", href: "/referenzen/sorokin-schweissservice" },
     },
   },
