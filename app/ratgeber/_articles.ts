@@ -141,7 +141,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Handwerksbetriebe online neue Kunden gewinnen: Website, lokale Google-Sichtbarkeit, Bewertungen und die richtige Anfrage-Strecke.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-25",
+    dateModified: "2026-11-07",
     readingTime: "7 Min.",
     intro: [
       "Viele Handwerksbetriebe leben seit Jahren von Empfehlungen und haben nie Werbung gebraucht. Trotzdem verändert sich der Markt: Auch wer eine Empfehlung bekommt, googelt heute erst einmal den Namen, bevor er anruft. Findet er dann nichts oder nur einen veralteten Auftritt, entsteht Zweifel, und der Anruf bleibt aus.",
@@ -187,9 +187,11 @@ export const ARTICLES: Article[] = [
         heading: "Anfragen dürfen nicht verloren gehen",
         paragraphs: [
           "Der beste Auftritt nützt nichts, wenn Anfragen im Postfach untergehen. Eine saubere Anfrage-Strecke sorgt dafür, dass jede Anfrage sofort ankommt, idealerweise gleichzeitig per E-Mail und in einer einfachen Übersicht, damit nichts vergessen wird. Wer schnell zurückruft, gewinnt den Auftrag oft schon allein durch das Tempo.",
+          "Am Telefon passiert dasselbe: Wer auf der Baustelle steht, verpasst Anrufe, und viele Anrufer probieren es einfach beim nächsten Betrieb. Ein KI Telefonassistent für Handwerker nimmt diese Anrufe an, wenn Sie nicht rangehen können, fragt Anliegen, Einsatzort und Dringlichkeit ab und schickt Ihnen die Anfrage sofort aufs Handy.",
         ],
         links: [
           { label: "Website für Handwerker erstellen lassen: Aufbau, Ablauf und Preis", href: "/website-fuer-handwerker" },
+          { label: "KI Telefonassistent für Handwerker: kein verpasster Anruf mehr", href: "/ki-telefonassistent-handwerker" },
         ],
       },
     ],
