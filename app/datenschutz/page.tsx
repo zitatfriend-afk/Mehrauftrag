@@ -494,6 +494,42 @@ export default function DatenschutzPage() {
             </LegalLink>
           </LegalP>
         </LegalSubsection>
+
+        <LegalSubsection title="YouTube-Videos und Link zu unserem YouTube-Kanal">
+          <LegalP>
+            Auf einzelnen Seiten (zum Beispiel /auftrags-filter und /ki-telefonassistent-handwerker)
+            können Sie ein Erklärvideo ansehen. Das Video wird von YouTube bereitgestellt und erst
+            geladen, wenn Sie auf das Vorschaubild klicken. Bis zu diesem Klick wird keine
+            Verbindung zu YouTube hergestellt und es werden keine Daten an YouTube übertragen. Wir
+            binden das Video im erweiterten Datenschutzmodus (youtube-nocookie.com) ein.
+          </LegalP>
+          <LegalP>
+            Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
+            Nach Ihrem Klick stellt Ihr Browser eine Verbindung zu den Servern von YouTube her. Dabei
+            wird unter anderem Ihre IP-Adresse übermittelt, und YouTube erfährt, welche unserer
+            Seiten Sie besucht haben. Sind Sie in Ihrem YouTube-Konto angemeldet, kann YouTube das
+            Abspielverhalten Ihrem persönlichen Profil zuordnen. Das können Sie verhindern, indem
+            Sie sich vorher aus Ihrem Konto abmelden. Auch im erweiterten Datenschutzmodus kann
+            YouTube nach dem Start des Videos auf Informationen in Ihrem Endgerät zugreifen oder
+            diese dort speichern.
+          </LegalP>
+          <LegalP>
+            Rechtsgrundlage ist Ihre Einwilligung, die Sie durch den Klick auf das Vorschaubild
+            erteilen (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Sie können diese Einwilligung
+            jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie die Seite neu laden und das
+            Video nicht starten. Google ist unter dem EU-US Data Privacy Framework zertifiziert, auf
+            dessen Grundlage Daten in die USA übermittelt werden können. Weitere Informationen
+            finden Sie in der Datenschutzerklärung von Google:{" "}
+            <LegalLink href="https://policies.google.com/privacy">
+              https://policies.google.com/privacy
+            </LegalLink>
+          </LegalP>
+          <LegalP>
+            Im Seitenfuß verlinken wir außerdem auf unseren YouTube-Kanal. Das ist ein gewöhnlicher
+            Link. Erst wenn Sie ihn anklicken, verlassen Sie unsere Website und es werden Daten an
+            YouTube übertragen.
+          </LegalP>
+        </LegalSubsection>
       </LegalSection>
 
       {/* 5. Analyse-Tools und Werbung */}

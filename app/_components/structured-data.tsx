@@ -56,6 +56,7 @@ export default function StructuredData() {
           "https://www.instagram.com/mehrauftrag",
           "https://www.facebook.com/mehrauftrag",
           "https://g.page/r/CccaeF7o_XxJEBM",
+          "https://www.youtube.com/@MehrAuftrag",
         ],
         // Kein aggregateRating hier: Google zeigt seit 2019 keine Sterne mehr an,
         // die ein Unternehmen ueber sich selbst im eigenen Schema auszeichnet
