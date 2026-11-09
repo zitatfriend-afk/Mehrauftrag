@@ -68,7 +68,7 @@
  "description": "Nicht jeder Anruf ist ein Auftrag. Die KI-Telefonassistentin Lena von Mehr Auftrag nimmt Anrufe an, fragt nach den Regeln des Betriebs (Einsatzgebiet, Mindestauftragswert, Leistungen) und schickt jede Anfrage bewertet mit Grün, Gelb oder Rot per SMS oder E-Mail.",
  "thumbnailUrl": [
   "https://i.ytimg.com/vi/rz_A0bZQ-rY/hqdefault.jpg",
-  "https://www.mehrauftrag.de/auftrags-filter-video.webp"
+  "https://www.mehrauftrag.de/lena-video-vorschau.webp"
  ],
  "uploadDate": "2026-11-09T22:02:27+01:00",
  "duration": "PT1M31S",
@@ -482,6 +482,17 @@
   .answer strong{color:#fff;font-weight:600}
   .answer-2{color:var(--muted);font-size:1rem;max-width:620px;margin-top:12px}
   .notice h2{font-size:clamp(1.15rem,2.4vw,1.35rem);line-height:1.25;margin-bottom:8px}
+
+  /* VIDEO-VORSCHAU-2026-11-09: eigenes Vorschaubild, Knopf unten links, Hinweis unter dem Video */
+  .video button{justify-content:flex-end!important;align-items:flex-start!important;flex-direction:column;padding:0 0 5.5% 5.6%!important;gap:0!important}
+  .video .vknopf{display:inline-flex;align-items:center;gap:14px;padding:8px 22px 8px 8px;border-radius:999px;background:rgba(2,8,24,.72);border:1px solid rgba(255,255,255,.18);box-shadow:0 18px 40px -14px rgba(0,0,0,.9);backdrop-filter:blur(6px);transition:transform .18s ease,background .18s ease}
+  .video button:hover .vknopf,.video button:focus-visible .vknopf{transform:scale(1.04);background:rgba(2,8,24,.85)}
+  .video .play{width:clamp(44px,7vw,64px)!important;height:clamp(44px,7vw,64px)!important;background:linear-gradient(135deg,#5AA2FF,#2f7cf0)!important;box-shadow:0 0 0 6px rgba(90,162,255,.22),0 14px 30px -10px #5AA2FF!important}
+  .video .play svg{width:42%!important;height:42%!important}
+  .video .vt{font-size:clamp(.88rem,2.2vw,1.1rem)!important;font-weight:700;color:#fff;white-space:nowrap}
+  .video-hinweis{margin-top:10px;font-size:.82rem;color:var(--muted-2,#7587a3);text-align:center}
+  .hero-video-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:#9cc6ff;font-weight:600;font-size:.95rem;text-decoration:underline;text-underline-offset:4px}
+  @media(max-width:560px){.video button{padding:0 0 3.5% 4%!important}.video .vknopf{gap:8px;padding:4px 12px 4px 4px}.video .play{width:34px!important;height:34px!important;box-shadow:0 0 0 4px rgba(90,162,255,.22)!important}.video .vt{font-size:.8rem!important}}
 </style>
 </head>
 <body>
@@ -521,13 +532,13 @@
     </div>
 
     <!-- Erklaervideo: Klick zum Laden ueber youtube-nocookie.com, Video-ID und Vorschaubild unten bei data-yt und data-poster. -->
-    <div class="video" data-yt="rz_A0bZQ-rY" data-poster="/auftrags-filter-video.webp">
+    <div class="video" data-yt="rz_A0bZQ-rY" data-poster="/lena-video-vorschau.webp">
       <button type="button" aria-label="Erklärvideo zum Auftrags-Filter">
-        <span class="play"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-        <span class="vt" data-vt>Erklärvideo abspielen</span>
-        <span class="vs" data-vs>Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an YouTube übertragen.</span>
+        <span class="vknopf"><span class="play"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="vt" data-vt>Video ansehen (1:31)</span></span>
       </button>
     </div>
+    <p class="video-hinweis" data-vs>Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an YouTube übertragen.</p>
   </div>
 </section>
 
@@ -678,9 +689,9 @@
   var btn = box.querySelector("button");
   if(!id){ box.setAttribute("data-leer", ""); btn.disabled = true; return; }
   var poster = (box.getAttribute("data-poster") || "").trim();
-  if(poster){ btn.style.backgroundImage = "linear-gradient(rgba(2,8,24,.35),rgba(2,8,24,.55)),url(" + poster + ")"; }
-  box.querySelector("[data-vt]").textContent = "Erklärvideo abspielen";
-  box.querySelector("[data-vs]").textContent = "Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an YouTube übertragen.";
+  if(poster){ btn.style.backgroundImage = "url(" + poster + ")"; }
+  box.querySelector("[data-vt]").textContent = "Video ansehen (1:31)";
+  var vs = document.querySelector("[data-vs]"); if(vs){ vs.textContent = "Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an YouTube übertragen."; }
   btn.addEventListener("click", function(){
     var f = document.createElement("iframe");
     f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) + "?autoplay=1&rel=0";
