@@ -1307,7 +1307,9 @@
   var status = box.querySelector("[data-lena-status]");
   var log = box.querySelector("[data-lena-log]");
   var danach = box.querySelector("[data-lena-danach]");
-  var conv = null, laeuft = false;
+  var conv = null, laeuft = false, abschied = false;
+  // Sicherheitsnetz: Hat Lena sich verabschiedet und zu Ende gesprochen, wird das Gespraech nach kurzer Pause beendet.
+  var ABSCHIED = /(sch\u00f6nen Tag noch|f\u00fcrs Ausprobieren)/i;
   // Jeder Besucher kann die Demo einmal nutzen. Merker im lokalen Speicher, ohne Gespraechsinhalt.
   var MERKER = "lena-demo";
   function merken(){ try{ localStorage.setItem(MERKER, new Date().toISOString().slice(0,10)); }catch(e){} }
@@ -1348,7 +1350,7 @@
   }
   startBtn.addEventListener("click", function(){
     if(laeuft || schonGenutzt()) return;
-    laeuft = true;
+    laeuft = true; abschied = false;
     startBtn.disabled = true;
     log.innerHTML = ""; log.hidden = true;
     zeige("Verbindung wird aufgebaut …", "connecting");
@@ -1367,10 +1369,18 @@
           ende(d && d.reason === "error" ? "Die Verbindung wurde unterbrochen. Bitte starten Sie das Gespräch neu." : null);
         },
         onError: function(msg){ if(window.console) console.warn("Lena:", msg); },
-        onMessage: function(p){ zeile(p.role || (p.source === "ai" ? "agent" : "user"), p.message); },
+        onMessage: function(p){
+          var rolle = p.role || (p.source === "ai" ? "agent" : "user");
+          zeile(rolle, p.message);
+          if(rolle === "agent" && ABSCHIED.test(p.message || "")){ abschied = true; }
+        },
         onModeChange: function(p){
           if(!conv) return;
           zeige(p.mode === "speaking" ? "Lena spricht …" : "Lena hört zu. Sprechen Sie einfach.", p.mode);
+          if(abschied && p.mode === "listening"){
+            var c = conv;
+            setTimeout(function(){ if(c && conv === c){ Promise.resolve(c.endSession()).catch(function(){}).then(function(){ ende("Gespräch beendet. Danke fürs Ausprobieren!"); }); } }, 1500);
+          }
         }
       });
     }).then(function(c){
