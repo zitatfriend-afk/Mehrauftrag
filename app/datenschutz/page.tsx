@@ -490,11 +490,15 @@ export default function DatenschutzPage() {
               verarbeitet: Ihre Spracheingabe als Audio, die daraus erstellte Mitschrift, Ihre
               IP-Adresse sowie technische Verbindungsdaten wie Browsertyp, Zeitpunkt und Dauer des
               Gesprächs. ElevenLabs wandelt Ihre Sprache in Text um, erzeugt die Antworten von Lena
-              und spielt sie als Sprache ab. Das Gespräch kann als Aufnahme und Mitschrift in unserem
-              Konto bei ElevenLabs gespeichert werden. Wir nutzen diese Daten ausschließlich, um die
-              Demo bereitzustellen, zu prüfen und zu verbessern, und löschen sie, sobald sie dafür
-              nicht mehr benötigt werden. Bitte nennen Sie im Testgespräch keine echten
-              persönlichen Daten.
+              und spielt sie als Sprache ab. Wir haben die Demo so eingestellt, dass ElevenLabs den
+              Inhalt der Gespräche nicht speichert: Weder die Aufnahme Ihrer Stimme noch die
+              Mitschrift werden aufbewahrt, sie werden nur für die Dauer des Gesprächs verarbeitet.
+              In unserem Konto bei ElevenLabs erscheinen lediglich technische Angaben wie Zeitpunkt
+              und Dauer eines Gesprächs, ohne dessen Inhalt. Die Mitschrift, die Sie während des
+              Gesprächs auf unserer Seite sehen, existiert nur in Ihrem Browser und verschwindet,
+              wenn Sie die Seite schließen oder neu laden. Wir setzen für die Demo keine Cookies
+              und legen nichts in Ihrem Browser ab. Bitte nennen Sie im Testgespräch trotzdem keine
+              echten persönlichen Daten.
             </LegalP>
             <LegalP>
               Rechtsgrundlage ist Ihre Einwilligung, die Sie durch den Klick auf „Gespräch mit Lena
@@ -504,6 +508,8 @@ export default function DatenschutzPage() {
               Mikrofonfreigabe in Ihrem Browser entziehen.
             </LegalP>
             <LegalP>
+              ElevenLabs verarbeitet diese Daten in unserem Auftrag. Grundlage ist ein Vertrag zur
+              Auftragsverarbeitung nach Art. 28 DSGVO (ElevenLabs Data Processing Addendum).
               Daten können dabei auch an Eleven Labs Inc. in den USA übermittelt werden. Eleven Labs
               Inc. ist nach eigenen Angaben unter dem EU-US Data Privacy Framework zertifiziert. Für
               andere Übermittlungen in Drittländer stützt sich ElevenLabs auf die
