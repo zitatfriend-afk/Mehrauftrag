@@ -496,9 +496,15 @@ export default function DatenschutzPage() {
               In unserem Konto bei ElevenLabs erscheinen lediglich technische Angaben wie Zeitpunkt
               und Dauer eines Gesprächs, ohne dessen Inhalt. Die Mitschrift, die Sie während des
               Gesprächs auf unserer Seite sehen, existiert nur in Ihrem Browser und verschwindet,
-              wenn Sie die Seite schließen oder neu laden. Wir setzen für die Demo keine Cookies
-              und legen nichts in Ihrem Browser ab. Bitte nennen Sie im Testgespräch trotzdem keine
-              echten persönlichen Daten.
+              wenn Sie die Seite schließen oder neu laden. Bitte nennen Sie im Testgespräch trotzdem
+              keine echten persönlichen Daten.
+            </LegalP>
+            <LegalP>
+              Damit jeder Besucher die Demo nur einmal nutzt, speichern wir nach dem Start im lokalen
+              Speicher Ihres Browsers (localStorage) einen Eintrag „lena-demo“ mit dem Datum des
+              Tests. Er enthält keine Inhalte des Gesprächs, wird nicht an uns übertragen und bleibt
+              bestehen, bis Sie ihn über die Einstellungen Ihres Browsers löschen. Cookies setzt die
+              Demo nicht. Zusätzlich ist die Zahl der Testgespräche pro Tag bei ElevenLabs begrenzt.
             </LegalP>
             <LegalP>
               Rechtsgrundlage ist Ihre Einwilligung, die Sie durch den Klick auf „Gespräch mit Lena

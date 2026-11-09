@@ -697,6 +697,8 @@
   @media(prefers-reduced-motion:reduce){.lena .lena-orb,.lena .lena-orb span{animation:none!important}}
   .lena .btn-primary{background:linear-gradient(135deg,var(--lena),#2f7cf0);--ma:var(--lena)}
   .lena-start{min-height:52px}
+  .lena-danach{display:grid;gap:10px;padding:14px;border-radius:14px;background:rgba(90,162,255,.10);border:1px solid rgba(90,162,255,.32)}
+  .lena-danach p{color:#e6eefb;font-size:.95rem;line-height:1.45}
   .lena-hinweis{font-size:.85rem;line-height:1.5;color:#a9b8cf}
   .lena-hinweis a{color:#9cc6ff;text-decoration:underline;text-underline-offset:2px}
   .lena-log{list-style:none;display:grid;gap:8px;max-height:280px;overflow-y:auto;padding:12px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);overscroll-behavior:contain}
@@ -810,7 +812,11 @@
         </div>
         <button type="button" class="btn btn-primary btn-block lena-start" data-lena-start><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg> <span data-lena-label>Gespräch mit Lena starten</span></button>
         <button type="button" class="btn btn-secondary btn-block" data-lena-stop hidden>Gespräch beenden</button>
-        <p class="lena-hinweis">Beim Start wird eine Verbindung zu ElevenLabs aufgebaut und Ihr Mikrofon genutzt. Das Gespräch wird zur Verarbeitung an ElevenLabs übertragen. Bitte nennen Sie keine echten persönlichen Daten. Mehr dazu in der <a href="/datenschutz#elevenlabs">Datenschutzerklärung</a>.</p>
+        <div class="lena-danach" data-lena-danach hidden>
+          <p>Lena für Ihren Betrieb? Wir richten sie ganz auf Ihr Gewerk und Ihr Gebiet ein.</p>
+          <a href="#anfrage" class="btn btn-primary btn-block">Unverbindlich anfragen</a>
+        </div>
+        <p class="lena-hinweis">Beim Start wird eine Verbindung zu ElevenLabs aufgebaut und Ihr Mikrofon genutzt. Das Gespräch wird zur Verarbeitung an ElevenLabs übertragen. Bitte nennen Sie keine echten persönlichen Daten. Jeder Besucher kann die Demo einmal nutzen, dafür merken wir uns in Ihrem Browser, dass Sie sie gestartet haben. Mehr dazu in der <a href="/datenschutz#elevenlabs">Datenschutzerklärung</a>.</p>
         <ol class="lena-log" data-lena-log aria-label="Mitschrift des Gesprächs" hidden></ol>
       </div>
     </div>
@@ -1284,7 +1290,18 @@
   var label = box.querySelector("[data-lena-label]");
   var status = box.querySelector("[data-lena-status]");
   var log = box.querySelector("[data-lena-log]");
+  var danach = box.querySelector("[data-lena-danach]");
   var conv = null, laeuft = false;
+  // Jeder Besucher kann die Demo einmal nutzen. Merker im lokalen Speicher, ohne Gespraechsinhalt.
+  var MERKER = "lena-demo";
+  function merken(){ try{ localStorage.setItem(MERKER, new Date().toISOString().slice(0,10)); }catch(e){} }
+  function schonGenutzt(){ try{ return !!localStorage.getItem(MERKER); }catch(e){ return false; } }
+  try{ if(/[?&]lena=neu\b/.test(location.search)){ localStorage.removeItem(MERKER); } }catch(e){}
+  function gesperrt(text){
+    startBtn.hidden = true; stopBtn.hidden = true; danach.hidden = false;
+    zeige(text || "Sie haben Lena bereits getestet. Danke fürs Ausprobieren!", "");
+  }
+  if(schonGenutzt()){ gesperrt(); }
   function zeige(text, zustand){ status.textContent = text; box.setAttribute("data-state", zustand || ""); }
   function zeile(rolle, text){
     if(!text) return;
@@ -1302,7 +1319,8 @@
     conv = null; laeuft = false;
     stopBtn.hidden = true; startBtn.hidden = false; startBtn.disabled = false;
     label.textContent = "Neues Gespräch starten";
-    zeige(text || "Gespräch beendet. Sie können jederzeit neu starten.", "");
+    if(schonGenutzt()){ gesperrt(text || "Gespräch beendet. Danke fürs Ausprobieren!"); return; }
+    zeige(text || "Gespräch beendet.", "");
   }
   function fehlertext(e){
     var t = ((e && (e.name || "")) + " " + (e && e.message ? e.message : e || "")).toLowerCase();
@@ -1313,7 +1331,7 @@
     return "Die Demo konnte gerade nicht starten. Bitte versuchen Sie es noch einmal oder rufen Sie uns an: 0152 02069625.";
   }
   startBtn.addEventListener("click", function(){
-    if(laeuft) return;
+    if(laeuft || schonGenutzt()) return;
     laeuft = true;
     startBtn.disabled = true;
     log.innerHTML = ""; log.hidden = true;
@@ -1327,7 +1345,7 @@
         agentId: agent,
         connectionType: "websocket",
         libsampleratePath: "/lena/libsamplerate.worklet.js",
-        onConnect: function(){ zeige("Lena ist dran. Sprechen Sie einfach.", "listening"); },
+        onConnect: function(){ merken(); zeige("Lena ist dran. Sprechen Sie einfach.", "listening"); },
         onDisconnect: function(d){
           if(!laeuft && !conv) return;
           ende(d && d.reason === "error" ? "Die Verbindung wurde unterbrochen. Bitte starten Sie das Gespräch neu." : null);
