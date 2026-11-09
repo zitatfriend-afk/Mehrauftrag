@@ -467,6 +467,54 @@ export default function DatenschutzPage() {
             Analyse- oder Werbedienste.
           </LegalP>
         </LegalSubsection>
+
+        <div id="elevenlabs" className="scroll-mt-28">
+          <LegalSubsection title="Sprach-Demo mit unserer KI-Assistentin Lena (ElevenLabs)">
+            <LegalP>
+              Auf der Seite /ki-telefonassistent-handwerker können Sie direkt im Browser ein
+              Testgespräch mit unserer KI-Assistentin Lena führen. Lena ist eine künstliche
+              Intelligenz, kein Mensch. Für die Sprach-Demo nutzen wir den Dienst ElevenLabs.
+              Anbieter ist die ElevenLabs Poland sp. z o.o., Plac Marszałka Józefa Piłsudskiego 8,
+              00-073 Warschau, Polen. Zur Unternehmensgruppe gehört die Eleven Labs Inc., 169 Madison Ave
+              #2484, New York, NY 10016, USA.
+            </LegalP>
+            <LegalP>
+              Die Demo startet erst, wenn Sie auf „Gespräch mit Lena starten“ klicken. Vorher wird
+              keine Verbindung zu ElevenLabs aufgebaut und es werden keine Daten an ElevenLabs
+              übertragen. Die dafür nötige Programmbibliothek liefern wir von unserem eigenen Server
+              aus. Nach dem Klick fragt Ihr Browser, ob die Seite Ihr Mikrofon nutzen darf. Erst
+              wenn Sie das erlauben, beginnt das Gespräch.
+            </LegalP>
+            <LegalP>
+              Während des Gesprächs werden folgende Daten an ElevenLabs übertragen und dort
+              verarbeitet: Ihre Spracheingabe als Audio, die daraus erstellte Mitschrift, Ihre
+              IP-Adresse sowie technische Verbindungsdaten wie Browsertyp, Zeitpunkt und Dauer des
+              Gesprächs. ElevenLabs wandelt Ihre Sprache in Text um, erzeugt die Antworten von Lena
+              und spielt sie als Sprache ab. Das Gespräch kann als Aufnahme und Mitschrift in unserem
+              Konto bei ElevenLabs gespeichert werden. Wir nutzen diese Daten ausschließlich, um die
+              Demo bereitzustellen, zu prüfen und zu verbessern, und löschen sie, sobald sie dafür
+              nicht mehr benötigt werden. Bitte nennen Sie im Testgespräch keine echten
+              persönlichen Daten.
+            </LegalP>
+            <LegalP>
+              Rechtsgrundlage ist Ihre Einwilligung, die Sie durch den Klick auf „Gespräch mit Lena
+              starten“ und die Freigabe Ihres Mikrofons erteilen (Art. 6 Abs. 1 lit. a DSGVO, § 25
+              Abs. 1 TDDDG). Sie können die Einwilligung jederzeit mit Wirkung für die Zukunft
+              widerrufen, indem Sie auf „Gespräch beenden“ klicken, die Seite schließen oder die
+              Mikrofonfreigabe in Ihrem Browser entziehen.
+            </LegalP>
+            <LegalP>
+              Daten können dabei auch an Eleven Labs Inc. in den USA übermittelt werden. Eleven Labs
+              Inc. ist nach eigenen Angaben unter dem EU-US Data Privacy Framework zertifiziert. Für
+              andere Übermittlungen in Drittländer stützt sich ElevenLabs auf die
+              Standardvertragsklauseln der EU-Kommission. Weitere Informationen finden Sie in der
+              Datenschutzerklärung von ElevenLabs:{" "}
+              <LegalLink href="https://elevenlabs.io/privacy-policy">
+                https://elevenlabs.io/privacy-policy
+              </LegalLink>
+            </LegalP>
+          </LegalSubsection>
+        </div>
       </LegalSection>
 
       {/* 4. Soziale Medien */}
