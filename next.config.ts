@@ -111,6 +111,26 @@ const nextConfig: NextConfig = {
         destination: "/auftrags-filter.html",
       },
       {
+        // 11.11.2026: Gewerke-Seite zum Auftrags-Filter
+        source: "/ki-telefonassistent-sanitaer-heizung",
+        destination: "/ki-telefonassistent-sanitaer-heizung.html",
+      },
+      {
+        // 11.11.2026: Gewerke-Seite zum Auftrags-Filter
+        source: "/ki-telefonassistent-elektriker",
+        destination: "/ki-telefonassistent-elektriker.html",
+      },
+      {
+        // 11.11.2026: Gewerke-Seite zum Auftrags-Filter
+        source: "/ki-telefonassistent-dachdecker",
+        destination: "/ki-telefonassistent-dachdecker.html",
+      },
+      {
+        // 11.11.2026: Gewerke-Seite zum Auftrags-Filter
+        source: "/ki-telefonassistent-maler",
+        destination: "/ki-telefonassistent-maler.html",
+      },
+      {
         source: "/webdesign-:slug",
         destination: "/webdesign-:slug.html",
       },

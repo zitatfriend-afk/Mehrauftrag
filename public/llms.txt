@@ -23,6 +23,8 @@ Alles aus einer Hand, von der Website über SEO und Google Ads bis zu Visitenkar
 - [Grafikdesign](https://www.mehrauftrag.de/grafikdesign)
 - [Kostenlose Analyse](https://www.mehrauftrag.de/kostenlose-analyse)
 - [Auftrags-Filter: KI Telefonassistent für Handwerker](https://www.mehrauftrag.de/ki-telefonassistent-handwerker), nimmt Anrufe an, wenn der Handwerker nicht rangeht, und bewertet jede Anfrage mit Grün, Gelb oder Rot. Kurz erklärt unter [So funktioniert der Auftrags-Filter](https://www.mehrauftrag.de/auftrags-filter)
+- Auftrags-Filter nach Gewerk: [Sanitär und Heizung](https://www.mehrauftrag.de/ki-telefonassistent-sanitaer-heizung), [Elektriker](https://www.mehrauftrag.de/ki-telefonassistent-elektriker), [Dachdecker](https://www.mehrauftrag.de/ki-telefonassistent-dachdecker), [Maler](https://www.mehrauftrag.de/ki-telefonassistent-maler), jeweils mit typischen Anrufen und Beispielen für Grün, Gelb und Rot
+- Ratgeber zu Anfragen und Anrufen: [Anfragen filtern im Handwerk](https://www.mehrauftrag.de/ratgeber/handwerker-anfragen-filtern), [KI Telefonassistent oder Anrufbeantworter](https://www.mehrauftrag.de/ratgeber/ki-telefonassistent-oder-anrufbeantworter), [Verpasste Anrufe im Handwerk](https://www.mehrauftrag.de/ratgeber/verpasste-anrufe-handwerk)
 
 ## Websites nach Branche
 

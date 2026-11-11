@@ -20,10 +20,17 @@ export type Section = {
   // an der dem Leser gerade klar wird, was ihm fehlt. Ein Kasten am Anfang
   // erreicht ihn dort nicht mehr.
   hinweis?: { text: string; cta: RelatedLink };
+  // Quellen mit externem Link, werden klein unter dem Abschnitt ausgegeben und
+  // oeffnen in einem neuen Tab. Seit 11.11.2026, damit Zahlen in den Artikeln
+  // direkt belegt sind.
+  quellen?: RelatedLink[];
+  // Einfache Vergleichstabelle. Erste Spalte ist die Zeilenueberschrift. Auf
+  // dem Handy ist die Tabelle waagerecht scrollbar.
+  tabelle?: { kopf: string[]; zeilen: string[][]; hinweis?: string };
 };
 export type RelatedLink = { label: string; href: string };
 
-export type Category = "Branchen" | "Grundlagen" | "Regional";
+export type Category = "Branchen" | "Grundlagen" | "Regional" | "Telefon";
 
 export type Article = {
   slug: string;
@@ -43,6 +50,11 @@ export type Article = {
   // als Kunden sucht (z. B. Schweissbetriebe). Ohne diesen Block sah ein
   // Leser das passende Angebot erst ganz am Ende des Artikels.
   angebot?: Angebot;
+  // Eigener Abschlusskasten statt "Kostenlose Analyse anfordern". Gebraucht fuer
+  // Artikel zum Auftrags-Filter, deren Leser kein Website-Thema haben.
+  abschluss?: { titel: string; text: string; cta: RelatedLink };
+  // Blendet die Anmeldebox fuer den Website-Check aus (passt nicht zu jedem Thema).
+  ohneWebsiteCheck?: boolean;
 };
 
 export type Angebot = {
@@ -64,6 +76,7 @@ export const CATEGORY_LABEL: Record<Category, string> = {
   Branchen: "Branchen-Ratgeber",
   Grundlagen: "Grundlagen & Vergleiche",
   Regional: "Regional",
+  Telefon: "Anfragen und Telefon",
 };
 
 export const ARTICLES: Article[] = [
@@ -152,7 +165,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Handwerksbetriebe online neue Kunden gewinnen: Website, lokale Google-Sichtbarkeit, Bewertungen und die richtige Anfrage-Strecke.",
     datePublished: "2026-08-02",
-    dateModified: "2026-11-07",
+    dateModified: "2026-11-11",
     readingTime: "7 Min.",
     intro: [
       "Viele Handwerksbetriebe leben seit Jahren von Empfehlungen und haben nie Werbung gebraucht. Trotzdem verändert sich der Markt: Auch wer eine Empfehlung bekommt, googelt heute erst einmal den Namen, bevor er anruft. Findet er dann nichts oder nur einen veralteten Auftritt, entsteht Zweifel, und der Anruf bleibt aus.",
@@ -199,8 +212,10 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Der beste Auftritt nützt nichts, wenn Anfragen im Postfach untergehen. Eine saubere Anfrage-Strecke sorgt dafür, dass jede Anfrage sofort ankommt, idealerweise gleichzeitig per E-Mail und in einer einfachen Übersicht, damit nichts vergessen wird. Wer schnell zurückruft, gewinnt den Auftrag oft schon allein durch das Tempo.",
           "Am Telefon passiert dasselbe: Wer auf der Baustelle steht, verpasst Anrufe, und viele Anrufer probieren es einfach beim nächsten Betrieb. Ein KI Telefonassistent für Handwerker nimmt diese Anrufe an, wenn Sie nicht rangehen können, fragt Anliegen, Einsatzort und Dringlichkeit ab und schickt Ihnen die Anfrage sofort aufs Handy.",
+          "Und nicht jede Anfrage lohnt sich. Wer vor dem Rückruf weiß, was gemacht werden soll und wo, spart viel Zeit. Wie Sie Anfragen mit festen Regeln und einer einfachen Bewertung in Grün, Gelb und Rot sortieren, steht im Ratgeber zum Filtern von Anfragen.",
         ],
         links: [
+          { label: "Zu viele unpassende Anfragen? So filtern Handwerker die lohnenden Aufträge raus", href: "/ratgeber/handwerker-anfragen-filtern" },
           { label: "Website für Handwerker erstellen lassen: Aufbau, Ablauf und Preis", href: "/website-fuer-handwerker" },
           { label: "KI Telefonassistent für Handwerker: kein verpasster Anruf mehr", href: "/ki-telefonassistent-handwerker" },
         ],
@@ -237,7 +252,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Hausverwaltungen, Objektbetreuer und Gewerbekunden Reinigungsaufträge vergeben: welche Nachweise sie prüfen, wie Angebote verglichen werden.",
     datePublished: "2026-08-02",
-    dateModified: "2026-08-25",
+    dateModified: "2026-11-11",
     readingTime: "6 Min.",
     intro: [
       "Die Gebäudereinigung ist ein hart umkämpfter Markt, und viele Aufträge, besonders die lukrativen mit Gewerbekunden und Rahmenverträgen, werden heute online angebahnt. Hausverwaltungen, Büros und Praxen suchen ihren Dienstleister zunehmend über Google, statt in die Zeitung zu schauen.",
@@ -268,8 +283,10 @@ export const ARTICLES: Article[] = [
         heading: "Anfragen schnell und professionell bearbeiten",
         paragraphs: [
           "Gerade bei Gewerbeanfragen zählt Reaktionsgeschwindigkeit. Wer innerhalb weniger Stunden ein sauberes Angebot liefert, während die Konkurrenz Tage braucht, gewinnt den Auftrag oft allein dadurch. Eine zuverlässige Anfrage-Strecke, bei der jede Anfrage sofort ankommt, ist deshalb bares Geld wert.",
+          "Gerade während einer Reinigung bleibt das Handy oft in der Tasche. Ein KI Telefonassistent nimmt solche Anrufe an, fragt nach Objekt, Fläche und gewünschtem Turnus und schickt Ihnen die Anfrage bewertet aufs Handy. So sehen Sie sofort, ob eine Unterhaltsreinigung im Büro oder eine einmalige Kleinigkeit wartet.",
         ],
         link: { label: "So sieht eine Website für Gebäudereinigung aus, die Anfragen bringt", href: "/webseite-fuer-gebaeudereinigung" },
+        links: [{ label: "KI Telefonassistent: Anfragen annehmen und bewerten lassen", href: "/ki-telefonassistent-handwerker" }],
       },
     ],
     faqs: [
@@ -375,7 +392,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wo Ausschreibungen für Hausmeisterdienstleistungen veröffentlicht werden, welche Unterlagen Verwalter erwarten und woran Bewerbungen scheitern.",
     datePublished: "2026-08-11",
-    dateModified: "2026-10-19",
+    dateModified: "2026-11-11",
     readingTime: "9 Min.",
     intro: [
       "Ein Hausmeisterservice lebt selten von einmaligen Aufträgen. Das Geschäft, das wirklich trägt, sind laufende Objektbetreuungen: eine Wohnanlage, ein Bürogebäude, mehrere Objekte einer Hausverwaltung, betreut über Jahre. Genau diese Verträge werden heute zunehmend online angebahnt.",
@@ -449,7 +466,9 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Bei der Objektbetreuung geht es weniger um Perfektion als um Verlässlichkeit. Eine Verwaltung will nicht hinterhertelefonieren müssen. Was sie überzeugt, sind Dinge, die andere Anbieter oft gar nicht erwähnen: dass Sie erreichbar sind, dass bei Krankheit oder Urlaub eine Vertretung übernimmt, dass Sie versichert sind und dass Beschwerden schnell bearbeitet werden.",
           "Diese Punkte gehören sichtbar auf die Website, nicht ins Kleingedruckte, denn sie beantworten genau die Sorge, die ein Entscheider hat, bevor er eine Betreuung über Jahre vergibt.",
+          "Zuverlässigkeit beginnt am Telefon. Wer eine Verwaltung zweimal nicht erreicht, verliert ihr Vertrauen, auch wenn die Arbeit vor Ort stimmt. Ein KI Telefonassistent nimmt an, wenn Sie im Objekt beschäftigt sind, und zeigt Ihnen, welche Anfrage eilt und welche ein neuer Dauerauftrag sein kann.",
         ],
+        links: [{ label: "KI Telefonassistent für Handwerker und Dienstleister", href: "/ki-telefonassistent-handwerker" }],
       },
       {
         heading: "Hausmeisterservice Aufträge ohne Ausschreibung: Verwaltungen direkt ansprechen",
@@ -524,7 +543,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Metallbauer, Stahlbauer und Metallverarbeiter an Aufträge kommen: wie die Industrie vergibt, wo Ausschreibungen stehen und was auf die Website gehört.",
     datePublished: "2026-08-11",
-    dateModified: "2026-11-07",
+    dateModified: "2026-11-11",
     readingTime: "10 Min.",
     intro: [
       "Neue Aufträge im Metallbau kommen über drei Wege: über Stammkunden und Empfehlungen, über Einkäufer, die gezielt nach einem Verfahren oder Bauteil suchen und dabei auf Ihren Betrieb stoßen, und über öffentliche Ausschreibungen. Die wenigsten Industrieaufträge landen auf einem Portal. Dieser Ratgeber zeigt, wie Industrie und Handel Aufträge im Metallbau, im Stahlbau und in der Metallverarbeitung tatsächlich vergeben, welche Nachweise dabei verlangt werden und was davon auf Ihre Website gehört.",
@@ -636,8 +655,10 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Viele Schweißbetriebe arbeiten nicht nur in der eigenen Werkstatt, sondern fahren zum Kunden, etwa für Reparaturen an Maschinen, Geländern oder Toren vor Ort. Das ist ein starker Vorteil gegenüber reinen Werkstattbetrieben, wird aber oft nicht erwähnt.",
           "Schreiben Sie deshalb konkret, dass Sie mobile Einsätze anbieten, und nennen Sie Ihr Einzugsgebiet mit den Orten, in die Sie tatsächlich fahren. Das hilft doppelt: Google ordnet Ihre Seite den passenden Regionen zu, und Anfragen von zu weit weg bleiben Ihnen erspart.",
+          "Ein klar benanntes Einzugsgebiet hilft auch am Telefon. Wer weiß, wie weit er fährt und ab welchem Umfang sich ein Einsatz lohnt, kann Anfragen schnell sortieren. Wie das mit festen Regeln und einer einfachen Bewertung in Grün, Gelb und Rot funktioniert, zeigt unser Ratgeber zum Filtern von Anfragen.",
         ],
         link: { label: "Website für Schweißbetriebe und Metallbauer, die Aufträge bringt", href: "/webseite-fuer-schweisser" },
+        links: [{ label: "Zu viele unpassende Anfragen? So filtern Handwerker die lohnenden Aufträge raus", href: "/ratgeber/handwerker-anfragen-filtern" }],
       },
     ],
     faqs: [
@@ -709,7 +730,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Lohnschweißer und mobile Schweißbetriebe an Industrieaufträge kommen: wer vergibt, was Einkäufer prüfen und was auf der Website stehen muss.",
     datePublished: "2026-09-19",
-    dateModified: "2026-11-07",
+    dateModified: "2026-11-11",
     readingTime: "8 Min.",
     intro: [
       "Lohnschweißen heißt: Der Kunde liefert Zeichnung und oft auch das Material, Sie liefern die Naht. Für kleine Schweißbetriebe und mobile Schweißer ist das der direkteste Weg in die Industrie, weil kein eigenes Produkt und kein Vertrieb nötig sind. Schwierig ist nur der Anfang, denn Schweißaufträge aus der Industrie werden selten öffentlich vergeben.",
@@ -783,7 +804,9 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Bei Lohnarbeiten gewinnt häufig der Betrieb, der zuerst ein nachvollziehbares Angebot schickt. Nachvollziehbar heißt: klare Abgrenzung, was enthalten ist und was nicht, etwa Materialbeistellung, Nahtvorbereitung, Prüfungen und Transport. Ein Stundensatz für Arbeiten beim Kunden und ein Stückpreis für Werkstattteile gehören getrennt ausgewiesen.",
           "Wenn Sie beim Kunden im Betrieb arbeiten, sollte vertraglich eindeutig sein, dass Sie ein eigenes Werk schulden und nicht als überlassene Arbeitskraft eingesetzt werden. Das ist eine rechtliche Frage, die Sie einmal mit Ihrem Steuerberater oder Anwalt klären sollten, bevor der erste größere Einsatz ansteht.",
+          "Schnell beginnt beim ersten Anruf. Ein Einkäufer, der niemanden erreicht, fragt den nächsten Lohnschweißer. Ein KI Telefonassistent nimmt an, wenn Sie am Werkstück stehen, fragt nach Werkstoff, Stückzahl und Termin und schickt Ihnen die Anfrage sofort mit einer Bewertung.",
         ],
+        links: [{ label: "KI Telefonassistent für Handwerksbetriebe", href: "/ki-telefonassistent-handwerker" }],
       },
       {
         heading: "Vom Probeauftrag zum festen Lieferanten",
@@ -852,7 +875,7 @@ export const ARTICLES: Article[] = [
     description:
       "Wie Aufträge im Trockenbau und Innenausbau vergeben werden: Nachunternehmer, Nachweise, Nachträge, Privatkunden und was online darüber entscheidet.",
     datePublished: "2026-09-24",
-    dateModified: "2026-10-19",
+    dateModified: "2026-11-11",
     readingTime: "11 Min.",
     intro: [
       "Im Trockenbau und Innenausbau entscheidet selten der schönste Prospekt über den Auftrag. Es entscheidet, ob ein Bauleiter Sie kennt oder findet, wenn er kurzfristig jemanden für Wände, Decken oder Spachtelarbeiten braucht. Und es entscheidet, ob Sie ihm in wenigen Minuten belegen können, dass Sie sauber arbeiten und Ihre Nachweise beisammen haben.",
@@ -928,8 +951,10 @@ export const ARTICLES: Article[] = [
         paragraphs: [
           "Der Dachgeschossausbau ist für viele Trockenbauer der lohnendste Privatauftrag: überschaubare Baustelle, hoher Anteil eigener Leistung und ein Bauherr, der selbst entscheidet. Gesucht wird er so, wie Bauherren denken, also nach Dachgeschoss ausbauen oder Dachausbau mit dem Namen des Ortes.",
           "Was diese Bauherren vor der Anfrage wissen wollen, ist immer ähnlich: wie der Ablauf aussieht, welche Gewerke Sie selbst übernehmen und welche Sie koordinieren, ob für das Vorhaben eine Genehmigung nötig ist, was das jeweilige Landesbaurecht regelt, und wie fertige Ausbauten bei Ihnen aussehen. Eine eigene Seite zum Dachausbau mit Fotos vorher und nachher beantwortet genau das, und sie wird für diese Suchen gefunden, eine Sammelseite mit allen Leistungen nicht.",
+          "Privatkunden rufen meist an, und zwar dann, wenn Sie auf der Baustelle stehen. Ein KI Telefonassistent nimmt diese Anrufe an, fragt nach Raum, Umfang und Zeitrahmen und zeigt Ihnen, ob der Dachausbau oder nur eine kleine Ausbesserung wartet.",
         ],
         link: { label: "Website für Trockenbau und Innenausbau, die Privataufträge bringt", href: "/webseite-fuer-trockenbau" },
+        links: [{ label: "KI Telefonassistent für Handwerker", href: "/ki-telefonassistent-handwerker" }],
       },
       {
         heading: "Projektfotos sind im Innenausbau das stärkste Argument",
@@ -2668,6 +2693,358 @@ export const ARTICLES: Article[] = [
       { label: "Werbeagentur im Rhein-Main-Gebiet finden", href: "/ratgeber/werbeagentur-rhein-main-finden" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // ANFRAGEN UND TELEFON (Auftrags-Filter, seit 11.11.2026)
+  // ─────────────────────────────────────────────────────────────────────────
+  {
+    slug: "handwerker-anfragen-filtern",
+    category: "Telefon",
+    title: "Zu viele unpassende Anfragen? So filtern Handwerker die lohnenden Aufträge raus",
+    metaTitle: "Anfragen filtern im Handwerk: lohnende Aufträge erkennen",
+    description:
+      "Viele Handwerker haben nicht zu wenig Anfragen, sondern zu viele falsche. So qualifizieren Sie Anfragen mit klaren Regeln, den richtigen Fragen und Grün, Gelb, Rot.",
+    datePublished: "2026-11-11",
+    dateModified: "2026-11-11",
+    readingTime: "7 Min.",
+    intro: [
+      "Gute Handwerksbetriebe haben selten zu wenig Anfragen. Sie haben zu viele, die nicht passen: der Kleinauftrag 60 Kilometer entfernt, der Preisvergleicher, der nur eine Zahl hören will, der Vertriebler mit dem nächsten Branchenbuch. Jeder dieser Anrufe kostet ein paar Minuten, und am Ende des Tages fehlen die Stunden für die Aufträge, die sich wirklich lohnen.",
+      "Dieser Ratgeber zeigt, wie Sie Anfragen filtern, bevor Sie Zeit hineinstecken: mit klaren Regeln für Ihren Betrieb, wenigen gezielten Fragen am Telefon und einer einfachen Bewertung in Grün, Gelb und Rot.",
+    ],
+    angebot: {
+      titel: "Anfragen automatisch bewerten lassen",
+      text: "Der Auftrags-Filter von Mehr Auftrag nimmt Anrufe an, wenn Sie nicht rangehen, und bewertet jede Anfrage nach Ihren Regeln mit Grün, Gelb oder Rot samt geschätztem Auftragswert.",
+      punkte: ["Ihre Handynummer bleibt", "Jede Anfrage per E-Mail und SMS", "Testen Sie die Demo am Telefon: 06182 6114054"],
+      cta: { label: "KI Telefonassistent ansehen", href: "/ki-telefonassistent-handwerker" },
+      telefon: true,
+    },
+    sections: [
+      {
+        heading: "Das eigentliche Problem: zu viele falsche Anfragen",
+        paragraphs: [
+          "Eine Umfrage des Handwerkerportals MyHammer aus dem Jahr 2020 zeigt, wie groß der Anteil unpassender Anfragen ist: Rund 40 Prozent der befragten Handwerker nehmen in der Regel weniger als zehn Prozent ihrer Kundenanfragen an. Nur knapp zehn Prozent nehmen alle Anfragen an. Die Befragten nutzen zum Teil ein Auftragsportal, der Wert gilt also nicht eins zu eins für jeden Betrieb. Die Richtung ist trotzdem klar: Der größte Teil der Anfragen wird am Ende nichts.",
+          "Gleichzeitig sind die Betriebe ausgelastet. Laut ZDH-Konjunkturbericht für das dritte Quartal 2026 reichen die Auftragsbestände im Gesamthandwerk im Schnitt für 8,0 Wochen, die Kapazitäten sind zu 78 Prozent ausgelastet. Wer so arbeitet, kann sich nicht jede Anfrage einzeln anhören. Er braucht einen Weg, die lohnenden in wenigen Sekunden zu erkennen.",
+        ],
+        quellen: [
+          { label: "Quelle: MyHammer-Umfrage 2020 bei Statista, Wie viele der gestellten Anfragen nehmen Sie an?", href: "https://de.statista.com/statistik/daten/studie/1119779/umfrage/handwerksbetriebe-annahme-von-kundenanfrage/" },
+          { label: "Quelle: ZDH-Konjunkturbericht 3. Quartal 2026", href: "https://www.zdh.de/ueber-uns/fachbereich-wirtschaft-energie-umwelt/konjunkturberichte/zdh-konjunkturbericht-2/2026/" },
+        ],
+      },
+      {
+        heading: "Woran Sie eine lohnende Anfrage erkennen",
+        paragraphs: [
+          "Eine lohnende Anfrage ist nicht automatisch die größte. Sie ist die, die zu Ihrem Betrieb passt. Fünf Punkte entscheiden fast immer:",
+        ],
+        bullets: [
+          "Der Einsatzort liegt in Ihrem Gebiet, die Anfahrt rechnet sich",
+          "Die Arbeit gehört zu Ihren Leistungen und am besten zu Ihren Wunschaufträgen",
+          "Der Umfang liegt über dem, was sich für Sie mindestens lohnt",
+          "Der Zeitrahmen passt zu Ihrem Auftragsbestand",
+          "Am Telefon ist jemand, der entscheiden darf: Eigentümer, Hausverwaltung, Bauleiter",
+        ],
+      },
+      {
+        heading: "Legen Sie Ihre Regeln einmal fest",
+        paragraphs: [
+          "Filtern funktioniert nur, wenn Sie wissen, wonach. Setzen Sie sich einmal hin und schreiben Sie auf: Wie weit fahren Sie? Ab welchem Auftragswert lohnt sich ein Termin? Welche Arbeiten machen Sie grundsätzlich nicht mehr? Welche Aufträge hätten Sie am liebsten öfter?",
+          "Diese vier Antworten sind Ihr Filter. Sie helfen Ihnen am Telefon, Ihren Mitarbeitern im Büro und jedem System, das Anfragen für Sie vorsortiert. Ohne sie bleibt jede Bewertung Bauchgefühl.",
+        ],
+      },
+      {
+        heading: "Die richtigen Fragen am Telefon",
+        paragraphs: [
+          "Mit fünf Fragen wissen Sie nach zwei Minuten, woran Sie sind. Wichtig ist die Reihenfolge: erst was und wo, dann wie dringend, dann wer.",
+        ],
+        bullets: [
+          "Was soll gemacht werden, und wie groß ist es ungefähr?",
+          "Wo ist der Einsatzort?",
+          "Bis wann muss es erledigt sein?",
+          "Sind Sie Eigentümer, Mieter oder rufen Sie für eine Verwaltung an?",
+          "Unter welcher Nummer erreiche ich Sie am besten?",
+        ],
+      },
+      {
+        heading: "Grün, Gelb, Rot: ein einfaches System",
+        paragraphs: [
+          "Sortieren Sie jede Anfrage in eine von drei Gruppen. Grün passt zu Gebiet und Leistung und hat einen lohnenden Umfang, diese Kunden rufen Sie zuerst zurück. Gelb kann passen, zum Beispiel ein kleiner Auftrag einer Hausverwaltung, hinter dem mehr stecken kann. Hier entscheidet ein kurzer Blick. Rot ist zu klein, zu weit weg oder gar kein Auftrag, etwa Werbung und Vertrieb.",
+          "Rot heißt nicht unhöflich. Eine kurze Absage per SMS oder eine Empfehlung an einen Kollegen hinterlässt einen guten Eindruck und kostet Sie eine Minute statt einer Anfahrt.",
+        ],
+      },
+      {
+        heading: "Website und Formular als erster Filter",
+        paragraphs: [
+          "Viele unpassende Anfragen entstehen, weil auf der Website nicht steht, was Sie machen und wo. Nennen Sie Ihr Einsatzgebiet, Ihre Leistungen und gern auch, was Sie nicht anbieten. Ein Anfrageformular mit Pflichtfeldern für Ort und Art der Arbeit liefert Ihnen die wichtigsten Angaben schon vor dem ersten Gespräch.",
+        ],
+        link: { label: "Website für Handwerker: so wird sie zum Anfrage-Filter", href: "/website-fuer-handwerker" },
+      },
+      {
+        heading: "Wenn Sie keine Zeit zum Sortieren haben",
+        paragraphs: [
+          "Das Problem: Die meisten Anrufe kommen genau dann, wenn Sie auf der Baustelle stehen. Dann bleibt keine Zeit für fünf Fragen. Ein KI Telefonassistent kann diese Arbeit übernehmen. Er nimmt an, wenn Sie nicht rangehen, stellt die Fragen nach Ihren Regeln und schickt Ihnen jede Anfrage bewertet aufs Handy.",
+          "Für einzelne Gewerke haben wir die typischen Anrufe und Beispiele zusammengestellt:",
+        ],
+        links: [
+          { label: "KI Telefonassistent für Sanitär und Heizung", href: "/ki-telefonassistent-sanitaer-heizung" },
+          { label: "KI Telefonassistent für Elektriker", href: "/ki-telefonassistent-elektriker" },
+          { label: "KI Telefonassistent für Dachdecker", href: "/ki-telefonassistent-dachdecker" },
+          { label: "KI Telefonassistent für Maler", href: "/ki-telefonassistent-maler" },
+        ],
+        hinweis: {
+          text: "Testen Sie Lena selbst: Spielen Sie einen Kunden und hören Sie, wie die Anfrage bewertet wird. Das Gespräch dauert höchstens zwei Minuten.",
+          cta: { label: "Zur Live-Demo", href: "/ki-telefonassistent-handwerker#demo" },
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: "Was heißt Anfragen qualifizieren im Handwerk?",
+        a: "Anfragen qualifizieren heißt, vor dem ersten Termin zu prüfen, ob eine Anfrage zu Ihrem Betrieb passt: Einsatzort, Leistung, Umfang, Zeitrahmen und wer entscheidet. So stecken Sie Ihre Zeit in die Aufträge, die sich lohnen.",
+      },
+      {
+        q: "Ist es unhöflich, Anfragen abzulehnen?",
+        a: "Nein, solange Sie es freundlich und schnell tun. Eine kurze Absage oder eine Empfehlung an einen Kollegen ist für den Kunden besser als ein Rückruf, der nie kommt.",
+      },
+      {
+        q: "Wie viele Fragen sollte ich am Telefon stellen?",
+        a: "Fünf reichen fast immer: was, wo, bis wann, wer entscheidet und die Rückrufnummer. Mehr Details klären Sie beim Rückruf oder bei der Besichtigung.",
+      },
+      {
+        q: "Kann eine KI Anfragen wirklich bewerten?",
+        a: "Ja, wenn sie Ihre Regeln kennt. Der Auftrags-Filter fragt die wichtigsten Punkte ab und bewertet danach mit Grün, Gelb oder Rot und einem geschätzten Auftragswert. Die Entscheidung, wen Sie zurückrufen, bleibt bei Ihnen.",
+      },
+    ],
+    related: [
+      { label: "KI Telefonassistent für Handwerker", href: "/ki-telefonassistent-handwerker" },
+      { label: "KI Telefonassistent oder Anrufbeantworter", href: "/ratgeber/ki-telefonassistent-oder-anrufbeantworter" },
+      { label: "Verpasste Anrufe im Handwerk", href: "/ratgeber/verpasste-anrufe-handwerk" },
+      { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
+    ],
+    abschluss: {
+      titel: "Sehen Sie sofort, welcher Anruf sich lohnt",
+      text: "Der Auftrags-Filter bewertet jede Anfrage nach Ihren Regeln. Probieren Sie es in zwei Minuten am Telefon aus oder fragen Sie unverbindlich an.",
+      cta: { label: "KI Telefonassistent ansehen", href: "/ki-telefonassistent-handwerker" },
+    },
+    ohneWebsiteCheck: true,
+  },
+
+  {
+    slug: "ki-telefonassistent-oder-anrufbeantworter",
+    category: "Telefon",
+    title: "KI Telefonassistent oder Anrufbeantworter? Der ehrliche Vergleich für Handwerker",
+    metaTitle: "KI Telefonassistent oder Anrufbeantworter? Vergleich",
+    description:
+      "Anrufbeantworter, Telefonservice, Bürokraft oder KI Telefonassistent: ein ehrlicher Vergleich für Handwerksbetriebe, mit Tabelle, Stärken und Schwächen.",
+    datePublished: "2026-11-11",
+    dateModified: "2026-11-11",
+    readingTime: "6 Min.",
+    intro: [
+      "Wer viel auf der Baustelle ist, kann nicht jeden Anruf selbst annehmen. Die Frage ist nur, wer es dann tut. Vier Wege gibt es: der Anrufbeantworter, ein externer Telefonservice, eine eigene Bürokraft und seit Kurzem der KI Telefonassistent.",
+      "Jeder dieser Wege hat seine Berechtigung. Dieser Vergleich zeigt ehrlich, was welcher kann und für welchen Betrieb er passt. Preise lassen wir bewusst weg, weil sie je nach Anbieter und Umfang stark schwanken.",
+    ],
+    sections: [
+      {
+        heading: "Die vier Möglichkeiten im Überblick",
+        paragraphs: [
+          "Die Tabelle zeigt die wichtigsten Unterschiede auf einen Blick. Darunter erklären wir jede Möglichkeit einzeln.",
+        ],
+        tabelle: {
+          kopf: ["", "Anrufbeantworter", "Telefonservice", "Bürokraft", "KI Telefonassistent"],
+          zeilen: [
+            ["Wer nimmt an?", "Niemand, Ansage und Aufnahme", "Externe Mitarbeiter", "Eigene Mitarbeiterin", "KI-Assistentin"],
+            ["Wann erreichbar?", "Immer", "Zu vereinbarten Zeiten", "Zu Bürozeiten", "Immer"],
+            ["Fragt gezielt nach?", "Nein", "Ja, nach Vorgabe", "Ja", "Ja, nach Ihren Regeln"],
+            ["Kennt Ihren Betrieb?", "Nein", "Teilweise", "Sehr gut", "So gut wie eingerichtet"],
+            ["Bewertet Anfragen?", "Nein", "Selten", "Ja, aus Erfahrung", "Je nach Anbieter, beim Auftrags-Filter Grün, Gelb, Rot"],
+            ["Aufwand für Sie", "Jede Nachricht abhören", "Notizen lesen und nachfragen", "Einarbeitung und Führung", "Einmal einrichten, dann lesen"],
+            ["Persönliche Note", "Keine", "Freundlich, aber fremd", "Am stärksten", "Freundlich, als KI erkennbar"],
+          ],
+          hinweis: "Stand November 2026. Die Angaben beschreiben typische Lösungen, einzelne Anbieter können abweichen.",
+        },
+      },
+      {
+        heading: "Anrufbeantworter und Mailbox",
+        paragraphs: [
+          "Der Anrufbeantworter ist immer da und kostet kaum Aufwand. Das ist seine Stärke. Seine Schwäche: Er fragt nichts. Anrufer sprechen frei drauflos oder legen gleich auf. Sie hören jede Nachricht einzeln ab und wissen erst beim Rückruf, ob sich der Anruf lohnt.",
+          "Gut geeignet ist er für Betriebe mit wenigen Anrufen, die abends ohnehin in Ruhe zurückrufen.",
+        ],
+      },
+      {
+        heading: "Externer Telefonservice",
+        paragraphs: [
+          "Bei einem Telefonservice nehmen Menschen Ihre Anrufe an, meist zu vereinbarten Zeiten. Anrufer sprechen mit einer echten Person, das schafft Vertrauen. Allerdings kennen die Mitarbeiter Ihr Gewerk nur aus der Einweisung. Rückfragen zu Technik oder Umfang landen dann doch bei Ihnen.",
+          "Gut geeignet ist ein Telefonservice für Betriebe, die viele allgemeine Anrufe haben und Wert auf eine menschliche Stimme legen.",
+        ],
+      },
+      {
+        heading: "Eigene Bürokraft",
+        paragraphs: [
+          "Eine gute Bürokraft ist durch nichts zu ersetzen. Sie kennt Ihre Kunden, Ihre Preise und Ihre Baustellen. Sie kann Termine planen, Angebote vorbereiten und schwierige Gespräche führen. Dafür braucht sie Einarbeitung, und sie ist an Bürozeiten gebunden. Für viele kleine Betriebe mit wenigen Mitarbeitern lohnt sich eine Stelle nur fürs Telefon nicht.",
+          "Gut geeignet ist sie für Betriebe, die genug Arbeit im Büro haben, um eine Stelle auszulasten.",
+        ],
+      },
+      {
+        heading: "KI Telefonassistent",
+        paragraphs: [
+          "Ein KI Telefonassistent nimmt Anrufe an, wenn Sie nicht rangehen, rund um die Uhr. Er fragt gezielt nach Anliegen, Ort und Dringlichkeit und schickt Ihnen eine Zusammenfassung. Laut Bitkom-Studie 2025 setzen bisher erst 4 Prozent der Handwerksbetriebe Künstliche Intelligenz ein, die Technik ist für die meisten also neu.",
+          "Ehrlich gesagt: Eine KI ersetzt keine erfahrene Bürokraft bei komplizierten Gesprächen, Beschwerden oder Verhandlungen. Sie muss sich laut europäischer KI-Verordnung als KI zu erkennen geben, und manche Anrufer möchten lieber mit einem Menschen sprechen. Ihre Stärke liegt woanders: Sie ist immer da, fragt immer dieselben wichtigen Punkte ab und kann, wie der Auftrags-Filter, jede Anfrage nach Ihren Regeln bewerten.",
+        ],
+        quellen: [
+          { label: "Quelle: Bitkom, Digitalisierung des Handwerks 2025", href: "https://www.bitkom.org/Presse/Presseinformation/Handwerk-Azubis-Betriebe-Digitalisierung" },
+        ],
+        link: { label: "KI Telefonassistent für Handwerker: so funktioniert der Auftrags-Filter", href: "/ki-telefonassistent-handwerker" },
+      },
+      {
+        heading: "Welche Lösung passt zu Ihrem Betrieb?",
+        paragraphs: [
+          "Wenige Anrufe und abends Zeit: Der Anrufbeantworter reicht. Viel Büroarbeit neben dem Telefon: Eine Bürokraft lohnt sich. Viele allgemeine Anrufe und Wunsch nach menschlicher Stimme: Ein Telefonservice ist eine Option. Viel unterwegs, genug Anfragen und zu wenig Zeit, um sie zu sortieren: Dann bringt ein KI Telefonassistent mit Bewertung den größten Unterschied.",
+          "Die Wege schließen sich nicht aus. Viele Betriebe kombinieren eine Bürokraft am Vormittag mit einem KI Telefonassistenten für die Zeit, in der niemand im Büro ist.",
+        ],
+        links: [
+          { label: "Zu viele unpassende Anfragen? So filtern Handwerker", href: "/ratgeber/handwerker-anfragen-filtern" },
+          { label: "Verpasste Anrufe im Handwerk: was sie kosten", href: "/ratgeber/verpasste-anrufe-handwerk" },
+        ],
+        hinweis: {
+          text: "Hören Sie selbst, wie ein KI Telefonassistent klingt: Rufen Sie Lena unter 06182 6114054 an oder testen Sie sie im Browser.",
+          cta: { label: "Zur Live-Demo", href: "/ki-telefonassistent-handwerker#demo" },
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: "Ist ein KI Telefonassistent besser als ein Anrufbeantworter?",
+        a: "Für Betriebe, die viel unterwegs sind und viele Anrufe bekommen, meist ja. Der Anrufbeantworter nimmt nur auf, der KI Telefonassistent fragt gezielt nach und schickt Ihnen eine Zusammenfassung. Bei wenigen Anrufen reicht ein Anrufbeantworter aus.",
+      },
+      {
+        q: "Merken Anrufer, dass sie mit einer KI sprechen?",
+        a: "Sie sollen es merken. Nach der europäischen KI-Verordnung muss sich ein KI-System am Telefon als solches zu erkennen geben. Der Auftrags-Filter stellt sich deshalb gleich zu Beginn als virtuelle Assistentin vor.",
+      },
+      {
+        q: "Kann ein KI Telefonassistent eine Bürokraft ersetzen?",
+        a: "Nein. Er kann die Anrufannahme übernehmen, wenn niemand rangeht. Termine planen, Angebote schreiben und schwierige Gespräche führen bleibt Aufgabe von Menschen.",
+      },
+      {
+        q: "Was kostet ein KI Telefonassistent?",
+        a: "Das hängt stark vom Anbieter und vom Umfang ab. Die Konditionen für den Auftrags-Filter besprechen wir mit Ihnen in einem kurzen Gespräch.",
+      },
+    ],
+    related: [
+      { label: "KI Telefonassistent für Handwerker", href: "/ki-telefonassistent-handwerker" },
+      { label: "So funktioniert der Auftrags-Filter", href: "/auftrags-filter" },
+      { label: "Anfragen filtern im Handwerk", href: "/ratgeber/handwerker-anfragen-filtern" },
+      { label: "Verpasste Anrufe im Handwerk", href: "/ratgeber/verpasste-anrufe-handwerk" },
+    ],
+    abschluss: {
+      titel: "Testen Sie den KI Telefonassistenten selbst",
+      text: "Zwei Minuten reichen: Spielen Sie einen Kunden und hören Sie, wie Lena Ihre Anfrage bewertet.",
+      cta: { label: "Zur Live-Demo", href: "/ki-telefonassistent-handwerker#demo" },
+    },
+    ohneWebsiteCheck: true,
+  },
+
+  {
+    slug: "verpasste-anrufe-handwerk",
+    category: "Telefon",
+    title: "Verpasste Anrufe im Handwerk: was sie wirklich kosten und was hilft",
+    metaTitle: "Verpasste Anrufe im Handwerk: Kosten und Lösungen",
+    description:
+      "Was verpasste und unpassende Anrufe einen Handwerksbetrieb kosten, mit Quellen und einer Rechnung zum Selbermachen. Plus fünf Wege, die wirklich helfen.",
+    datePublished: "2026-11-11",
+    dateModified: "2026-11-11",
+    readingTime: "6 Min.",
+    intro: [
+      "Auf dem Dach, unter dem Waschbecken, mit der Flex in der Hand: Im Handwerk klingelt das Telefon fast immer im falschen Moment. Ein Teil der Anrufer probiert es später noch einmal. Ein anderer Teil ruft beim nächsten Betrieb an.",
+      "Dazu kommt eine zweite, oft übersehene Rechnung: die Zeit, die unpassende Anrufe kosten. Dieser Ratgeber zeigt beide Seiten, mit belegten Zahlen und einer Rechnung, die Sie mit Ihren eigenen Werten machen können.",
+    ],
+    sections: [
+      {
+        heading: "Warum Handwerker so oft nicht rangehen",
+        paragraphs: [
+          "Weil sie arbeiten. Laut ZDH-Konjunkturbericht für das dritte Quartal 2026 sind die Kapazitäten im Handwerk zu 78 Prozent ausgelastet, die Aufträge reichen im Schnitt für 8,0 Wochen. Wer so ausgelastet ist, kann nicht bei jedem Klingeln die Arbeit unterbrechen. In kleinen Betrieben ohne eigenes Büro geht dann schlicht niemand ran.",
+          "Das betrifft nicht nur das Handwerk. In einer Studie des Beratungsunternehmens Matelso unter 100 Unternehmen aus Bau, Maschinenbau, IT und Kfz wurde fast jede vierte telefonische Anfrage, 23 Prozent, überhaupt nicht angenommen.",
+        ],
+        quellen: [
+          { label: "Quelle: ZDH-Konjunkturbericht 3. Quartal 2026", href: "https://www.zdh.de/ueber-uns/fachbereich-wirtschaft-energie-umwelt/konjunkturberichte/zdh-konjunkturbericht-2/2026/" },
+          { label: "Quelle: Deutsche Handwerks Zeitung über die Matelso-Studie, Oktober 2024", href: "https://www.deutsche-handwerks-zeitung.de/kundenanfragen-schneller-beantwortet-349790/" },
+        ],
+      },
+      {
+        heading: "Was ein verpasster Anruf kostet: Ihre eigene Rechnung",
+        paragraphs: [
+          "Eine allgemeingültige Zahl gibt es nicht, dafür sind Gewerke und Betriebe zu verschieden. Sie können die Rechnung aber mit drei eigenen Werten machen: Wie viele Anrufe verpassen Sie pro Woche? Wie viele davon wären ein passender Auftrag gewesen? Und wie viel ist ein solcher Auftrag bei Ihnen im Schnitt wert?",
+          "Ein Beispiel mit angenommenen Zahlen: Ein Betrieb verpasst fünf Anrufe pro Woche. Einer von zehn verpassten Anrufen wäre ein passender Auftrag gewesen, der Durchschnittswert liegt bei 2.000 Euro. Dann gehen rechnerisch im Schnitt 1.000 Euro Auftragswert pro Woche verloren, wenn diese Anrufer nicht noch einmal anrufen. Setzen Sie Ihre eigenen Zahlen ein, das Ergebnis ist oft überraschend.",
+        ],
+      },
+      {
+        heading: "Die zweite Rechnung: Was unpassende Anrufe kosten",
+        paragraphs: [
+          "Nicht jeder verpasste Anruf ist ein verlorener Auftrag. Laut einer MyHammer-Umfrage aus dem Jahr 2020 nehmen rund 40 Prozent der befragten Handwerker weniger als zehn Prozent ihrer Anfragen an. Ein großer Teil der Anrufe passt also gar nicht.",
+          "Genau das macht es teuer: Um die wenigen lohnenden Anfragen zu finden, rufen Sie alle zurück. Jeder Rückruf kostet ein paar Minuten, dazu kommen Besichtigungen, aus denen nichts wird. Ein Beispiel: Wer jede Woche zehn unpassende Anfragen zurückruft und dafür je fünf Minuten braucht, verliert rund dreieinhalb Stunden im Monat, ohne einen Euro Umsatz. Besichtigungen, aus denen nichts wird, kommen noch dazu.",
+        ],
+        quellen: [
+          { label: "Quelle: MyHammer-Umfrage 2020 bei Statista", href: "https://de.statista.com/statistik/daten/studie/1119779/umfrage/handwerksbetriebe-annahme-von-kundenanfrage/" },
+        ],
+      },
+      {
+        heading: "Fünf Wege, die wirklich helfen",
+        paragraphs: [
+          "Es gibt keine Lösung für alle. Diese fünf Wege haben sich in der Praxis bewährt und lassen sich kombinieren:",
+        ],
+        bullets: [
+          "Feste Rückrufzeiten: zum Beispiel mittags und am Nachmittag, damit kein Anruf liegen bleibt",
+          "Eine gute Mailbox-Ansage: Name des Betriebs, wann Sie zurückrufen und welche Angaben der Anrufer hinterlassen soll",
+          "Rufumleitung bei Nichtannahme: Ihr Telefon klingelt zuerst normal, erst danach übernimmt jemand anderes",
+          "Klare Website: Einsatzgebiet und Leistungen nennen, damit weniger unpassende Anrufe entstehen",
+          "Anrufe bewerten lassen: Ein KI Telefonassistent nimmt an, fragt nach und zeigt Ihnen, welcher Rückruf sich lohnt",
+        ],
+        link: { label: "Rufumleitung einrichten: so funktioniert der Auftrags-Filter", href: "/auftrags-filter" },
+      },
+      {
+        heading: "Erreichbar sein, ohne ständig ranzugehen",
+        paragraphs: [
+          "Der Auftrags-Filter verbindet die letzten beiden Wege. Gehen Sie nicht ran, übernimmt nach etwa 20 Sekunden die KI-Assistentin Lena. Sie fragt, was gemacht werden soll, wo und wie dringend, und schickt Ihnen die Anfrage per E-Mail und SMS. Jede Anfrage ist mit Grün, Gelb oder Rot bewertet und hat einen geschätzten Auftragswert. Kein Anruf geht verloren, und Sie rufen die lohnenden zuerst zurück.",
+        ],
+        links: [
+          { label: "KI Telefonassistent für Handwerker", href: "/ki-telefonassistent-handwerker" },
+          { label: "KI Telefonassistent oder Anrufbeantworter: der Vergleich", href: "/ratgeber/ki-telefonassistent-oder-anrufbeantworter" },
+          { label: "Zu viele unpassende Anfragen? So filtern Handwerker", href: "/ratgeber/handwerker-anfragen-filtern" },
+        ],
+        hinweis: {
+          text: "Rufen Sie Lena selbst an: 06182 6114054. Spielen Sie einen Kunden und hören Sie, wie Ihre Anfrage bewertet wird.",
+          cta: { label: "Zur Live-Demo", href: "/ki-telefonassistent-handwerker#demo" },
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: "Wie viele Anrufe verpassen Handwerker?",
+        a: "Belastbare Zahlen nur für das Handwerk gibt es kaum. In einer Studie unter 100 Unternehmen aus Bau, Maschinenbau, IT und Kfz wurden 23 Prozent der telefonischen Anfragen gar nicht angenommen. Zählen Sie am besten eine Woche lang Ihre eigenen verpassten Anrufe, dann haben Sie Ihre echte Zahl.",
+      },
+      {
+        q: "Rufen Kunden noch einmal an, wenn niemand rangeht?",
+        a: "Manche ja, manche nicht. Gerade bei dringenden Anliegen wählen viele Anrufer einfach den nächsten Betrieb. Wie hoch der Anteil bei Ihnen ist, hängt von Gewerk, Region und Dringlichkeit ab.",
+      },
+      {
+        q: "Lohnt sich ein Rückruf bei jedem verpassten Anruf?",
+        a: "Nein. Viele Anfragen passen nicht zu Ihrem Betrieb. Wer vor dem Rückruf weiß, worum es geht und wo, spart viel Zeit. Genau dafür ist eine Bewertung wie Grün, Gelb und Rot gedacht.",
+      },
+      {
+        q: "Was ist eine Rufumleitung bei Nichtannahme?",
+        a: "Eine Funktion Ihres Mobilfunknetzes: Nehmen Sie einen Anruf nach einer bestimmten Zeit nicht an, wird er an eine andere Nummer weitergeleitet, zum Beispiel an einen Telefonservice oder einen KI Telefonassistenten. Ihre Nummer bleibt dabei gleich.",
+      },
+    ],
+    related: [
+      { label: "KI Telefonassistent für Handwerker", href: "/ki-telefonassistent-handwerker" },
+      { label: "So funktioniert der Auftrags-Filter", href: "/auftrags-filter" },
+      { label: "KI Telefonassistent oder Anrufbeantworter", href: "/ratgeber/ki-telefonassistent-oder-anrufbeantworter" },
+      { label: "Kunden gewinnen als Handwerksbetrieb", href: "/ratgeber/kunden-gewinnen-handwerk" },
+    ],
+    abschluss: {
+      titel: "Kein Anruf verloren, die lohnenden zuerst",
+      text: "Der Auftrags-Filter nimmt an, wenn Sie nicht können, und zeigt Ihnen, welcher Rückruf sich lohnt.",
+      cta: { label: "KI Telefonassistent ansehen", href: "/ki-telefonassistent-handwerker" },
+    },
+    ohneWebsiteCheck: true,
   },
 ];
 

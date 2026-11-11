@@ -64,7 +64,7 @@ function RatgeberSchema() {
   );
 }
 
-const CATEGORY_ORDER: Category[] = ["Branchen", "Grundlagen", "Regional"];
+const CATEGORY_ORDER: Category[] = ["Branchen", "Telefon", "Grundlagen", "Regional"];
 
 export default function RatgeberPage() {
   return (
@@ -87,8 +87,9 @@ export default function RatgeberPage() {
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-400">
               Praxisnahe Tipps zu Webdesign, Google, SEO und Online-Marketing für
-              Handwerk, Gastronomie und Dienstleister, ohne Fachchinesisch und mit
-              konkreten Schritten, die Sie sofort umsetzen können.
+              Handwerk, Gastronomie und Dienstleister, dazu der richtige Umgang mit
+              Anfragen und Anrufen. Ohne Fachchinesisch und mit konkreten Schritten,
+              die Sie sofort umsetzen können.
             </p>
           </div>
         </section>

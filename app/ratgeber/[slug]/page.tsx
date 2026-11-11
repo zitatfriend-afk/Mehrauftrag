@@ -271,6 +271,50 @@ export default async function ArticlePage({
                       ))}
                     </ul>
                   )}
+                  {s.tabelle && (
+                    <div className="mt-6">
+                      <div className="-mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
+                        <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+                          <thead>
+                            <tr>
+                              {s.tabelle.kopf.map((k, kk) => (
+                                <th
+                                  key={kk}
+                                  scope="col"
+                                  className={`border-b border-white/15 px-3 py-3 font-semibold text-white ${kk === s.tabelle!.kopf.length - 1 ? "bg-[#3b82f6]/10" : ""}`}
+                                >
+                                  {k}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {s.tabelle.zeilen.map((z, zz) => (
+                              <tr key={zz} className="border-b border-white/8 align-top">
+                                {z.map((zelle, cc) =>
+                                  cc === 0 ? (
+                                    <th key={cc} scope="row" className="px-3 py-3 font-semibold text-slate-200">
+                                      {zelle}
+                                    </th>
+                                  ) : (
+                                    <td
+                                      key={cc}
+                                      className={`px-3 py-3 text-slate-300 ${cc === z.length - 1 ? "bg-[#3b82f6]/[0.06]" : ""}`}
+                                    >
+                                      {zelle}
+                                    </td>
+                                  ),
+                                )}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                      {s.tabelle.hinweis && (
+                        <p className="mt-3 text-xs leading-relaxed text-slate-500">{s.tabelle.hinweis}</p>
+                      )}
+                    </div>
+                  )}
                   {[...(s.link ? [s.link] : []), ...(s.links ?? [])].map((l, m) => (
                     <p key={m} className="mt-4 text-base leading-relaxed">
                       <Link
@@ -296,6 +340,22 @@ export default async function ArticlePage({
                       </Link>
                     </div>
                   )}
+                  {s.quellen && s.quellen.length > 0 && (
+                    <ul className="mt-4 space-y-1.5 border-l border-white/10 pl-4">
+                      {s.quellen.map((q, qq) => (
+                        <li key={qq} className="text-xs leading-relaxed text-slate-500">
+                          <a
+                            href={q.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline decoration-slate-600 underline-offset-2 hover:text-slate-300"
+                          >
+                            {q.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </section>
               ))}
             </div>
@@ -304,7 +364,7 @@ export default async function ArticlePage({
                 Fliesstext und vor den haeufigen Fragen: wer bis hierhin
                 gelesen hat, ist im Thema, und die FAQ halten den Leser
                 danach noch auf der Seite. */}
-            <WebsiteCheckBox />
+            {!article.ohneWebsiteCheck && <WebsiteCheckBox />}
 
             {/* FAQ */}
             {article.faqs.length > 0 && (
@@ -331,18 +391,19 @@ export default async function ArticlePage({
             {/* CTA */}
             <section data-messung-sicht="ratgeber_ende_erreicht" className="mt-14 rounded-3xl border border-white/8 bg-gradient-to-br from-[#0a1230] to-[#04081c] p-8 text-center">
               <h2 className="text-xl font-black tracking-[-0.02em] text-white sm:text-2xl">
-                Mehr Anfragen für Ihren Betrieb?
+                {article.abschluss ? article.abschluss.titel : "Mehr Anfragen für Ihren Betrieb?"}
               </h2>
               <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-slate-400">
-                Wir schauen uns Ihren Auftritt an und zeigen Ihnen kostenlos, wo Ihr
-                größtes Potenzial liegt, ganz unverbindlich.
+                {article.abschluss
+                  ? article.abschluss.text
+                  : "Wir schauen uns Ihren Auftritt an und zeigen Ihnen kostenlos, wo Ihr größtes Potenzial liegt, ganz unverbindlich."}
               </p>
               <Link
-                href={analyseHrefFor(article.slug)}
-                data-messung="ratgeber_klick_pruefung"
+                href={article.abschluss ? article.abschluss.cta.href : analyseHrefFor(article.slug)}
+                data-messung={article.abschluss ? "ratgeber_klick_auftragsfilter" : "ratgeber_klick_pruefung"}
                 className="shimmer-btn mt-6 inline-flex rounded-full bg-[#3b82f6] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-[#2f74e0]"
               >
-                Kostenlose Analyse anfordern
+                {article.abschluss ? article.abschluss.cta.label : "Kostenlose Analyse anfordern"}
               </Link>
             </section>
 

@@ -1286,6 +1286,22 @@ export default function HandwerkerLanding() {
               >
                 KI Telefonassistenten für Handwerker
               </Link>
+              , mit eigenen Seiten für{" "}
+              <Link href="/ki-telefonassistent-elektriker" className="font-semibold text-[#60a5fa] underline decoration-[#60a5fa]/40 underline-offset-4 hover:text-white">
+                Elektriker
+              </Link>
+              ,{" "}
+              <Link href="/ki-telefonassistent-sanitaer-heizung" className="font-semibold text-[#60a5fa] underline decoration-[#60a5fa]/40 underline-offset-4 hover:text-white">
+                Sanitär und Heizung
+              </Link>
+              ,{" "}
+              <Link href="/ki-telefonassistent-dachdecker" className="font-semibold text-[#60a5fa] underline decoration-[#60a5fa]/40 underline-offset-4 hover:text-white">
+                Dachdecker
+              </Link>{" "}
+              und{" "}
+              <Link href="/ki-telefonassistent-maler" className="font-semibold text-[#60a5fa] underline decoration-[#60a5fa]/40 underline-offset-4 hover:text-white">
+                Maler
+              </Link>
               .
             </motion.p>
           </div>
