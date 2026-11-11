@@ -85,5 +85,15 @@
       "public/webseite-fuer-trockenbau.html",
       "app/ratgeber/_shell.tsx"
     ]
+  },
+  "084d486": {
+    "grund": "07.11.2026: In diesem Commit wurde auf 16 Stadtseiten, 14 Branchenseiten, /suchmaschinenoptimierung, /website-bringt-keine-anfragen und /website-relaunch nur ein YouTube-Link in die Fusszeile gesetzt (je eine identische Zeile, geprueft am 11.11.2026). Kein neuer Seiteninhalt. Ohne diesen Eintrag truegen alle 16 Stadtseiten denselben Zeitstempel 2026-11-07T08:55:49. Gilt NICHT fuer /auftrags-filter und /ki-telefonassistent-handwerker, die im selben Commit echte Inhaltsaenderungen (Video, VideoObject) bekommen haben.",
+    "pfade": [
+      "public/webdesign-",
+      "public/webseite-fuer-",
+      "public/suchmaschinenoptimierung.html",
+      "public/website-bringt-keine-anfragen.html",
+      "public/website-relaunch.html"
+    ]
   }
 }
