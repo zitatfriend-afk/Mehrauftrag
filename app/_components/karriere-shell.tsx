@@ -533,6 +533,80 @@ export default function KarriereShell() {
           </div>
         </section>
 
+        {/* ── AUSBILDUNG SALESBANDE ── */}
+        {/* Bewerber ohne Telefonerfahrung sollen nicht abspringen. Die Setter
+            lernen das Handwerk in der Salesbande (eigene Marke von Patrick). */}
+        <section id="ausbildung" className="py-24 relative">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse 55% 50% at 30% 50%, rgba(59,130,246,0.07), transparent 60%)" }}
+          />
+          <div className="max-w-3xl mx-auto px-5 sm:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: EASE_OUT }}
+              className="rounded-2xl p-7 sm:p-10"
+              style={{ background: "rgba(59,130,246,0.07)", border: "1px solid rgba(59,130,246,0.25)" }}
+            >
+              <Badge>Ausbildung</Badge>
+              <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white mb-5 leading-tight">
+                Noch nie am Telefon verkauft? Kein Problem.
+              </h2>
+              <div className="space-y-3 mb-7">
+                <p className="text-base leading-relaxed" style={{ color: "rgba(148,163,184,0.8)" }}>
+                  Alle Setter bei Mehr Auftrag lernen das Telefonieren in der Salesbande.
+                </p>
+                <p className="text-base leading-relaxed" style={{ color: "rgba(148,163,184,0.8)" }}>
+                  Dort zeigt Patrick Sauna aus echten Calls, wie Kaltakquise funktioniert: Einstieg, Einwände, Termin setzen.
+                </p>
+                <p className="text-base leading-relaxed" style={{ color: "rgba(148,163,184,0.8)" }}>
+                  Du startest also nicht ins kalte Wasser, sondern mit einem klaren Leitfaden.
+                </p>
+              </div>
+              <ul className="space-y-3 mb-9">
+                {[
+                  "Gesprächsleitfaden aus echten Telefonaten",
+                  "Einwandbehandlung Schritt für Schritt",
+                  "Persönliche Begleitung in den ersten Wochen",
+                ].map((punkt) => (
+                  <li key={punkt} className="flex items-start gap-3 text-[15px] text-white/85">
+                    <span aria-hidden="true" className="flex-shrink-0 leading-[1.4]" style={{ color: "#3b82f6" }}>•</span>
+                    <span className="leading-[1.4]">{punkt}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://salesbande.de/setter-programm"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-base text-white"
+                  style={{
+                    background: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
+                    boxShadow: "0 4px 20px rgba(59,130,246,0.45)",
+                  }}
+                >
+                  Setter-Programm ansehen
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://salesbande.de/kaltakquise-tipps"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-base text-center"
+                  style={{ color: "rgba(255,255,255,0.75)", border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.04)" }}
+                >
+                  Gratis: 10 Kaltakquise-Strategien
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* ── WHY MEHRAUFTRAG ── */}
         <section className="py-24 relative">
           <div
