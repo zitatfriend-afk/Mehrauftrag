@@ -77,6 +77,24 @@ function Background() {
 // ── Data ──────────────────────────────────────────────────────────────────────
 const JOBS = [
   {
+    title: "Setter",
+    suffix: "(m/w/d)",
+    type: "Freelance / Provision",
+    desc: "Du rufst lokale Betriebe an, stellst Mehr Auftrag kurz vor und vereinbarst Termine für ein Erstgespräch. Das Telefonieren lernst du vorher in der Salesbande, mit Leitfaden und persönlicher Begleitung.",
+    tasks: [
+      "Kaltakquise am Telefon bei Handwerksbetrieben und lokalen Dienstleistern",
+      "Termine für Erstgespräche vereinbaren und sauber dokumentieren",
+      "Einwände ruhig und freundlich beantworten",
+      "Enge Abstimmung mit dem Vertriebsteam",
+    ],
+    requirements: [
+      "Keine Vorerfahrung nötig, das Handwerk lernst du in der Salesbande",
+      "Sehr gute Deutschkenntnisse und eine klare Stimme am Telefon",
+      "Lust, dich mit jedem Anruf zu verbessern",
+      "Zuverlässigkeit und ein ruhiger Platz zum Telefonieren",
+    ],
+  },
+  {
     title: "Webdesigner",
     suffix: "(m/w/d)",
     type: "Freelance / Festanstellung",
@@ -124,7 +142,7 @@ const JOBS = [
       "Übergabe qualifizierter Leads an das interne Team",
     ],
     requirements: [
-      "Erfahrung im Vertrieb oder in der Kundenakquise",
+      "Erfahrung im Vertrieb von Vorteil, aber kein Muss",
       "Kommunikationsstärke und Überzeugungskraft",
       "Eigenmotivation und unternehmerisches Denken",
       "Grundverständnis für digitale Marketing- und Web-Dienstleistungen",
@@ -190,6 +208,7 @@ const BENEFITS = [
 ];
 
 const POSITIONS = [
+  "Setter (m/w/d)",
   "Webdesigner (m/w/d)",
   "Kundenbetreuung & Terminkoordination (m/w/d)",
   "Vertriebsberatung (m/w/d)",
