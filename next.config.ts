@@ -131,6 +131,11 @@ const nextConfig: NextConfig = {
         destination: "/ki-telefonassistent-maler.html",
       },
       {
+        // 20.11.2026: Telefonservice fuer Handwerker (Auftrags-Filter, Suchbegriffe Telefonservice, KI Sekretaerin, virtuelle Assistentin)
+        source: "/telefonservice-handwerker",
+        destination: "/telefonservice-handwerker.html",
+      },
+      {
         source: "/webdesign-:slug",
         destination: "/webdesign-:slug.html",
       },

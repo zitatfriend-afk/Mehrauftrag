@@ -27,6 +27,7 @@
     { "pfad": "/ki-telefonassistent-elektriker", "quelle": ["public/ki-telefonassistent-elektriker.html"] },
     { "pfad": "/ki-telefonassistent-dachdecker", "quelle": ["public/ki-telefonassistent-dachdecker.html"] },
     { "pfad": "/ki-telefonassistent-maler", "quelle": ["public/ki-telefonassistent-maler.html"] },
+    { "pfad": "/telefonservice-handwerker", "quelle": ["public/telefonservice-handwerker.html"] },
     { "pfad": "/karriere", "quelle": ["app/karriere/page.tsx", "app/_components/karriere-shell.tsx"] },
     { "pfad": "/ratgeber", "quelle": ["app/ratgeber/page.tsx"] },
     { "pfad": "/referenzen", "quelle": ["app/referenzen/page.tsx", "app/referenzen/_cases.ts"] },
