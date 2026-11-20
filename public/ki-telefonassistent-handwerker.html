@@ -1396,12 +1396,20 @@
 (function(){
   // Live-Demo mit Lena. Datenschutz: Vor dem Klick auf "Gespraech mit Lena starten" wird keine
   // Verbindung zu ElevenLabs aufgebaut. Das SDK liegt selbst gehostet unter /lena/ und wird vom eigenen
-  // Server vorgeladen, sobald der Demo-Bereich in Sichtweite kommt (nur Download, nicht ausgefuehrt).
-  // LENA-TEMPO-2026-11-20: Vorladen, Mikrofon und Verbindung parallel (Patch im SDK), sofortiges Feedback,
-  // ein stiller zweiter Versuch, falls ElevenLabs die Verbindung vor dem Start schliesst.
+  // Server vorgeladen, sobald der Demo-Bereich in Sichtweite kommt (nur Download, nichts wird gestartet).
+  //
+  // LENA-SITZUNG-2026-11-20, feste Regeln:
+  // 1. Es gibt hoechstens EINE Sitzung. Der Zustand wechselt nur bereit -> startet -> laeuft -> vorbei.
+  //    Ein neuer Start ist nur aus "bereit" moeglich, und nur durch einen echten Klick.
+  // 2. Vorladen startet niemals eine Sitzung. startSession steht ausschliesslich im Klick-Pfad.
+  // 3. Nach dem Ende einer Sitzung gibt es keinen automatischen Neustart, auch keinen stillen zweiten Versuch.
+  // 4. Ablauf beim Klick: Audioausgabe sofort entsperren, Mikrofon holen, erst dann verbinden.
+  //    Im SDK (MA-PATCH-2) wartet die Wiedergabe, bis das Audio-Element wirklich spielt, plus 300 ms Stille.
+  // 5. Beim Verlassen oder Neuladen der Seite wird die Sitzung mit endSession beendet.
   var box = document.querySelector("[data-lena]");
-  if(!box) return;
-  var SDK = "/lena/lena-sdk.js?v=2";
+  if(!box || box.hasAttribute("data-lena-init")) return;
+  box.setAttribute("data-lena-init", "");
+  var SDK = "/lena/lena-sdk.js?v=3";
   var agent = box.getAttribute("data-agent");
   var startBtn = box.querySelector("[data-lena-start]");
   var stopBtn = box.querySelector("[data-lena-stop]");
@@ -1409,7 +1417,8 @@
   var status = box.querySelector("[data-lena-status]");
   var log = box.querySelector("[data-lena-log]");
   var danach = box.querySelector("[data-lena-danach]");
-  var conv = null, laeuft = false, abschied = false, sdk = null;
+  var zustand = "bereit";       // bereit | startet | laeuft | vorbei
+  var conv = null, sdk = null, mikro = null, ausgabe = null, abschied = false, abschiedTimer = null;
   var messen = /[?&]demo=messen\b/.test(location.search), tKlick = 0, tErstesWort = 0;
   // Sicherheitsnetz: Hat Lena sich verabschiedet und zu Ende gesprochen, wird das Gespraech nach kurzer Pause beendet.
   var ABSCHIED = /(schönen Tag noch|fürs Ausprobieren)/i;
@@ -1428,9 +1437,7 @@
     }
   }catch(e){}
 
-  // Vorladen vom eigenen Server, sobald der Demo-Bereich naeher als etwa eine Bildschirmhoehe ist.
-  // modulepreload laedt und kompiliert, fuehrt aber nichts aus. Zu ElevenLabs geht dabei nichts raus,
-  // nur die Namensaufloesung (dns-prefetch) beim eigenen Internetanbieter des Besuchers.
+  // Vorladen: nur Dateien vom eigenen Server. Keine Sitzung, kein Token, keine Verbindung zu ElevenLabs.
   var vorgeladen = false, mikroErlaubt = false;
   function link(rel, href, extra){
     var l = document.createElement("link"); l.rel = rel; l.href = href;
@@ -1441,10 +1448,8 @@
     if(vorgeladen) return; vorgeladen = true;
     link("modulepreload", SDK);
     link("dns-prefetch", "//api.elevenlabs.io");
-    // Nur nachsehen, ob das Mikrofon schon erlaubt ist, damit der Hinweis beim Klick stimmt. Fragt nichts ab.
     try{ navigator.permissions.query({name: "microphone"}).then(function(p){ mikroErlaubt = p.state === "granted"; }, function(){}); }catch(e){}
     try{
-      // Nur Browser ohne Abtastraten-Einstellung (vor allem Firefox) brauchen den 2-MB-Resampler.
       if(!navigator.mediaDevices.getSupportedConstraints().sampleRate){ link("prefetch", "/lena/libsamplerate.worklet.js", {as: "script"}); }
     }catch(e){}
   }
@@ -1456,22 +1461,27 @@
   } else {
     window.addEventListener("load", vorladen);
   }
-  // SDK ausfuehren, sobald der Finger auf dem Knopf liegt. Das ist nur eigener Code, er baut keine
-  // Verbindung auf, meldet aber die Audio-Freischaltung fuer iPhones noch innerhalb der Beruehrung an.
+  // Modul nur laden und ausfuehren. Das SDK startet dabei nichts.
   function sdkLaden(){ vorladen(); if(!sdk){ sdk = import(SDK); sdk.catch(function(){ sdk = null; }); } return sdk; }
-  startBtn.addEventListener("pointerdown", function(){ if(!laeuft && !schonGenutzt()){ sdkLaden(); } });
+  startBtn.addEventListener("pointerdown", function(){ if(zustand === "bereit" && !schonGenutzt()){ sdkLaden(); } });
 
-  function gesperrt(text){
-    startBtn.hidden = true; stopBtn.hidden = true; danach.hidden = false;
-    zeige(text || "Sie haben Lena bereits getestet. Danke fürs Ausprobieren!", "");
-  }
-  if(schonGenutzt()){ gesperrt(); }
-  function zeige(text, zustand){ status.textContent = text; box.setAttribute("data-state", zustand || ""); }
+  function zeige(text, z){ status.textContent = text; box.setAttribute("data-state", z || ""); }
   function knopfVerbinde(an){
     if(an){ startBtn.setAttribute("data-verbinde", ""); label.textContent = "Lena wird verbunden …"; startBtn.setAttribute("aria-busy", "true"); }
     else { startBtn.removeAttribute("data-verbinde"); startBtn.removeAttribute("aria-busy"); }
   }
+  function abschluss(text){
+    zustand = "vorbei";
+    knopfVerbinde(false);
+    startBtn.hidden = true; startBtn.disabled = true; stopBtn.hidden = true;
+    danach.hidden = false;
+    zeige(text || "Sie haben Lena bereits getestet. Danke fürs Ausprobieren!", "");
+  }
+  if(schonGenutzt()){ abschluss(); }
+
   function zeile(rolle, text){
+    // Regieanweisungen fuer die Stimme wie [Geduldig] oder [Friendly] gehoeren nicht in die Mitschrift.
+    text = String(text || "").replace(/\[[^\]]{1,40}\]\s*/g, "").trim();
     if(!text) return;
     log.hidden = false;
     var li = document.createElement("li");
@@ -1483,13 +1493,23 @@
     log.appendChild(li);
     log.scrollTop = log.scrollHeight;
   }
-  function ende(text){
-    conv = null; laeuft = false;
+  function mikroFrei(){ if(mikro){ try{ mikro.getTracks().forEach(function(t){ t.stop(); }); }catch(e){} mikro = null; } }
+  function ausgabeFrei(){ if(ausgabe && ausgabe.state !== "closed"){ try{ var z = ausgabe.close(); if(z && z.catch){ z.catch(function(){}); } }catch(e){} } ausgabe = null; }
+  // Beendet alles, was zu dieser Sitzung gehoert. Danach ist nie wieder automatisch etwas zu hoeren.
+  function beenden(text){
+    if(zustand === "vorbei") return;
+    var c = conv; conv = null;
+    if(abschiedTimer){ clearTimeout(abschiedTimer); abschiedTimer = null; }
+    mikroFrei();
+    if(c){ Promise.resolve(c.endSession()).catch(function(){}); }
+    ausgabeFrei();
+    if(schonGenutzt()){ abschluss(text || "Gespräch beendet. Danke fürs Ausprobieren!"); return; }
+    // Kein Gespraech zustande gekommen (z. B. Mikrofon abgelehnt): wieder bereit, nur per neuem Klick.
+    zustand = "bereit";
     knopfVerbinde(false);
     stopBtn.hidden = true; startBtn.hidden = false; startBtn.disabled = false;
-    label.textContent = "Neues Gespräch starten";
-    if(schonGenutzt()){ gesperrt(text || "Gespräch beendet. Danke fürs Ausprobieren!"); return; }
-    zeige(text || "Gespräch beendet.", "");
+    label.textContent = "Gespräch mit Lena starten";
+    zeige(text || "Bereit für Ihr Testgespräch", "");
   }
   function fehlertext(e){
     var t = ((e && (e.name || "")) + " " + (e && e.message ? e.message : e || "")).toLowerCase();
@@ -1499,84 +1519,99 @@
     if(t.indexOf("notfound") > -1){ return "Es wurde kein Mikrofon gefunden. Bitte schließen Sie eines an oder nutzen Sie Ihr Handy."; }
     return "Die Demo konnte gerade nicht starten. Bitte versuchen Sie es noch einmal oder rufen Sie uns an: 0152 02069625.";
   }
-  function sitzung(m){
-    return m.Conversation.startSession({
-      agentId: agent,
-      // Gemessen am 20.11.2026: Websocket bis zum ersten Wort 0,9 bis 1,2 s, WebRTC allein bis zur
-      // Verbindung 1,5 bis 1,9 s. Deshalb bewusst Websocket.
-      connectionType: "websocket",
-      // Das SDK wartet auf Android-Handys sonst pauschal 3 Sekunden. Jetzt laufen 0,8 s parallel zum
-      // Verbindungsaufbau, damit Android den Ton sauber umschalten kann und Lenas erste Silbe nicht fehlt.
-      connectionDelay: { default: 0, android: 800, ios: 0 },
-      libsampleratePath: "/lena/libsamplerate.worklet.js",
-      onConnect: function(){ merken(); danach.hidden = false; knopfVerbinde(false); if(!tErstesWort){ zeige("Lena ist dran. Einen Moment, sie begrüßt Sie gleich.", "connecting"); } },
-      onDisconnect: function(d){
-        if(!laeuft && !conv) return;
-        ende(d && d.reason === "error" ? "Die Verbindung wurde unterbrochen. Bitte starten Sie das Gespräch neu." : null);
-      },
-      onError: function(msg){ if(window.console) console.warn("Lena:", msg); },
-      onMessage: function(p){
-        var rolle = p.role || (p.source === "ai" ? "agent" : "user");
-        zeile(rolle, p.message);
-        if(rolle === "agent" && ABSCHIED.test(p.message || "")){ abschied = true; }
-      },
-      onModeChange: function(p){
-        // Lenas erstes Wort kann schon kommen, bevor startSession zurueckkehrt. Deshalb nicht auf conv warten.
-        if(!laeuft) return;
-        if(p.mode === "speaking" && !tErstesWort){
-          tErstesWort = Math.round(performance.now() - tKlick);
-          if(window.console) console.info("Lena: erstes Wort nach " + tErstesWort + " ms");
-        }
-        var text = p.mode === "speaking" ? "Lena spricht …" : "Lena hört zu. Sprechen Sie einfach.";
-        if(messen && tErstesWort){ text += " (erstes Wort nach " + (tErstesWort / 1000).toFixed(2).replace(".", ",") + " s)"; }
-        zeige(text, p.mode);
-        if(abschied && conv && p.mode === "listening"){
-          var c = conv;
-          setTimeout(function(){ if(c && conv === c){ Promise.resolve(c.endSession()).catch(function(){}).then(function(){ ende("Gespräch beendet. Danke fürs Ausprobieren!"); }); } }, 1500);
-        }
-      }
-    });
+  // Audioausgabe innerhalb des Klicks entsperren (wichtig fuer iPhone Safari): AudioContext anlegen,
+  // einen stillen Ton abspielen, resume anstossen. Muss synchron im Klick passieren.
+  function ausgabeEntsperren(){
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if(!AC) return null;
+    var ctx;
+    try{ ctx = new AC({sampleRate: 48000}); }catch(e){ ctx = new AC(); }
+    try{ var b = ctx.createBuffer(1, 1, 22050), q = ctx.createBufferSource(); q.buffer = b; q.connect(ctx.destination); q.start(0); }catch(e){}
+    try{ ctx.resume(); }catch(e){}
+    return ctx;
   }
-  // ElevenLabs schliesst die Verbindung gelegentlich, bevor das Gespraech steht (am 20.11.2026 bei
-  // einem von vier Testlaeufen). Dann einmal still neu verbinden statt eine Fehlermeldung zu zeigen.
-  function frueherAbbruch(e){ return !!(e && /before session could be established|socket error/i.test(e.message || "")); }
-  startBtn.addEventListener("click", function(){
-    if(laeuft || schonGenutzt()) return;
-    tKlick = performance.now(); tErstesWort = 0;
-    laeuft = true; abschied = false;
+
+  startBtn.addEventListener("click", function(ev){
+    // Sperre: nur aus "bereit", nur ein echter Klick, nie doppelt.
+    if(zustand !== "bereit" || schonGenutzt() || (ev && ev.isTrusted === false)) return;
+    zustand = "startet";
     startBtn.disabled = true;
     knopfVerbinde(true);
+    tKlick = performance.now(); tErstesWort = 0; abschied = false;
     log.innerHTML = ""; log.hidden = true;
     zeige(mikroErlaubt ? "Einen Moment, Lena nimmt ab." : "Bitte erlauben Sie gleich das Mikrofon.", "connecting");
     if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !window.isSecureContext){
-      ende("Ihr Browser erlaubt hier keinen Mikrofonzugriff. Bitte nutzen Sie einen aktuellen Browser.");
+      beenden("Ihr Browser erlaubt hier keinen Mikrofonzugriff. Bitte nutzen Sie einen aktuellen Browser.");
       return;
     }
-    sdkLaden().then(function(m){
-      return sitzung(m).catch(function(e){
-        if(!frueherAbbruch(e) || !laeuft) throw e;
-        return sitzung(m);
+    ausgabe = ausgabeEntsperren();
+    var sdkP = sdkLaden();
+    // Erst Mikrofon, dann Audioausgabe bereit, dann (und nur dann) die Sitzung starten.
+    navigator.mediaDevices.getUserMedia({audio: true}).then(function(s){
+      mikro = s;
+      if(zustand !== "startet"){ mikroFrei(); throw "abgebrochen"; }
+      zeige("Einen Moment, Lena nimmt ab.", "connecting");
+      return Promise.all([sdkP, ausgabe ? ausgabe.resume() : null]);
+    }).then(function(r){
+      if(zustand !== "startet") throw "abgebrochen";
+      var m = r[0];
+      return m.Conversation.startSession({
+        agentId: agent,
+        // Gemessen am 20.11.2026: Websocket schneller als WebRTC. Deshalb bewusst Websocket.
+        connectionType: "websocket",
+        // Statt pauschal 3 s auf Android: 0,8 s, das Mikrofon ist zu diesem Zeitpunkt schon offen.
+        connectionDelay: { default: 0, android: 800, ios: 0 },
+        libsampleratePath: "/lena/libsamplerate.worklet.js",
+        ausgabeKontext: ausgabe || undefined,
+        onConnect: function(){
+          if(zustand !== "startet" && zustand !== "laeuft") return;
+          merken(); danach.hidden = false;
+        },
+        onDisconnect: function(d){
+          if(zustand === "vorbei") return;
+          beenden(d && d.reason === "error" ? "Die Verbindung wurde unterbrochen. Danke fürs Ausprobieren!" : "Gespräch beendet. Danke fürs Ausprobieren!");
+        },
+        onAgentToolResponse: function(t){
+          // Lena legt auf: sofort Abschlusszustand, nichts wird mehr abgespielt.
+          if(t && t.tool_name === "end_call"){ beenden("Gespräch beendet. Danke fürs Ausprobieren!"); }
+        },
+        onError: function(msg){ if(window.console) console.warn("Lena:", msg); },
+        onMessage: function(p){
+          if(zustand === "vorbei") return;
+          var rolle = p.role || (p.source === "ai" ? "agent" : "user");
+          zeile(rolle, p.message);
+          if(rolle === "agent" && ABSCHIED.test(p.message || "")){ abschied = true; }
+        },
+        onModeChange: function(p){
+          if(zustand !== "startet" && zustand !== "laeuft") return;
+          if(p.mode === "speaking" && !tErstesWort){
+            tErstesWort = Math.round(performance.now() - tKlick) + 300; // 300 ms Stille vor dem ersten Wort
+            if(window.console) console.info("Lena: erstes Wort nach " + tErstesWort + " ms");
+          }
+          var text = p.mode === "speaking" ? "Lena spricht …" : "Lena hört zu. Sprechen Sie einfach.";
+          if(messen && tErstesWort){ text += " (erstes Wort nach " + (tErstesWort / 1000).toFixed(2).replace(".", ",") + " s)"; }
+          zeige(text, p.mode);
+          if(abschied && conv && p.mode === "listening" && !abschiedTimer){
+            abschiedTimer = setTimeout(function(){ abschiedTimer = null; beenden("Gespräch beendet. Danke fürs Ausprobieren!"); }, 1500);
+          }
+        }
       });
     }).then(function(c){
-      if(!laeuft){ Promise.resolve(c.endSession()).catch(function(){}); return; }
-      conv = c;
+      if(zustand !== "startet"){ Promise.resolve(c.endSession()).catch(function(){}); return; }
+      conv = c; zustand = "laeuft";
+      mikroFrei(); // das SDK hat jetzt seinen eigenen Mikrofonzugang
       knopfVerbinde(false);
       startBtn.hidden = true; stopBtn.hidden = false;
       if(box.getAttribute("data-state") !== "speaking"){ zeige("Lena ist dran. Einen Moment, sie begrüßt Sie gleich.", "connecting"); }
     }).catch(function(e){
+      if(e === "abgebrochen") return;
       if(window.console) console.warn("Lena:", e);
-      ende(fehlertext(e));
+      beenden(fehlertext(e));
     });
   });
-  stopBtn.addEventListener("click", function(){
-    var c = conv;
-    stopBtn.disabled = true;
-    zeige("Gespräch wird beendet …", "");
-    Promise.resolve(c && c.endSession()).catch(function(){}).then(function(){
-      stopBtn.disabled = false;
-      ende(null);
-    });
-  });
+  stopBtn.addEventListener("click", function(){ beenden("Gespräch beendet. Danke fürs Ausprobieren!"); });
+  // Seite verlassen oder neu laden: Sitzung sauber beenden.
+  window.addEventListener("pagehide", function(){ if(zustand === "startet" || zustand === "laeuft"){ beenden(); } });
 })();
 </script>
 </body>

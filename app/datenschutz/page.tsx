@@ -483,10 +483,9 @@ export default function DatenschutzPage() {
               keine Verbindung zu ElevenLabs aufgebaut und es werden keine Daten an ElevenLabs
               übertragen. Die dafür nötige Programmbibliothek liefern wir von unserem eigenen Server
               aus; damit die Demo schnell startet, lädt Ihr Browser sie bereits von unserem Server,
-              sobald der Demo-Bereich in Sichtweite kommt. Nach dem Klick baut Ihr Browser die
-              Verbindung zu ElevenLabs auf und fragt gleichzeitig, ob die Seite Ihr Mikrofon nutzen
-              darf. Ihre Stimme wird erst übertragen, wenn Sie das erlauben. Lehnen Sie ab, wird die
-              Verbindung sofort wieder getrennt.
+              sobald der Demo-Bereich in Sichtweite kommt. Nach dem Klick fragt Ihr Browser, ob die
+              Seite Ihr Mikrofon nutzen darf. Erst wenn Sie das erlauben, wird die Verbindung zu
+              ElevenLabs aufgebaut und das Gespräch beginnt.
             </LegalP>
             <LegalP>
               Während des Gesprächs werden folgende Daten an ElevenLabs übertragen und dort
