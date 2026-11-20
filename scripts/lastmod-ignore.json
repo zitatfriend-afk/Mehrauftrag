@@ -95,5 +95,16 @@
       "public/website-bringt-keine-anfragen.html",
       "public/website-relaunch.html"
     ]
+  },
+  "dc69fbe": {
+    "grund": "20.11.2026: Reine Linkpflege fuer die neue Seite /telefonservice-handwerker. Vier Gewerke-Seiten bekommen eine Kachel und einen Fusszeilenlink, /auftrags-filter einen Fusszeilenlink, der Ratgeber ki-telefonassistent-oder-anrufbeantworter einen Kontextlink im Abschnitt Externer Telefonservice. Kein neuer Seiteninhalt, deshalb soll sich kein lastmod bewegen.",
+    "pfade": [
+      "public/ki-telefonassistent-sanitaer-heizung.html",
+      "public/ki-telefonassistent-elektriker.html",
+      "public/ki-telefonassistent-dachdecker.html",
+      "public/ki-telefonassistent-maler.html",
+      "public/auftrags-filter.html",
+      "app/ratgeber/_articles.ts"
+    ]
   }
 }
