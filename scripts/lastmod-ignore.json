@@ -106,5 +106,11 @@
       "public/auftrags-filter.html",
       "app/ratgeber/_articles.ts"
     ]
+  },
+  "8744a8b": {
+    "grund": "20.11.2026: Lena-Demo startet schneller. An public/ki-telefonassistent-handwerker.html wurden nur das Demo-Skript, CSS fuer Lade- und Sprech-Animation und ein HTML-Kommentar geaendert. Kein neuer Seiteninhalt, deshalb soll sich das lastmod der Seite nicht bewegen. Die Aenderung an app/datenschutz/page.tsx im selben Commit ist echter Text und zaehlt weiter.",
+    "pfade": [
+      "public/ki-telefonassistent-handwerker.html"
+    ]
   }
 }
