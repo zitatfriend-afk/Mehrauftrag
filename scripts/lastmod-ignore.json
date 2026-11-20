@@ -112,5 +112,11 @@
     "pfade": [
       "public/ki-telefonassistent-handwerker.html"
     ]
+  },
+  "eee5542": {
+    "grund": "20.11.2026: Lena-Demo, Sitzungssteuerung und Audiofreigabe. An public/ki-telefonassistent-handwerker.html nur Demo-Skript geaendert, kein neuer Seiteninhalt. Die Aenderung an app/datenschutz/page.tsx im selben Commit ist echter Text und zaehlt weiter.",
+    "pfade": [
+      "public/ki-telefonassistent-handwerker.html"
+    ]
   }
 }
