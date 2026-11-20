@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         source: "/Website-Check-Mehr-Auftrag.pdf",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
+      {
+        // 20.11.2026: Lena-SDK und Resampler einen Tag ohne Rueckfrage aus dem Browser-Cache,
+        // danach eine Woche im Hintergrund auffrischen. Bei SDK-Aenderungen ?v= im HTML hochzaehlen.
+        source: "/lena/:datei*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      },
     ];
   },
   async redirects() {

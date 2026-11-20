@@ -482,8 +482,11 @@ export default function DatenschutzPage() {
               Die Demo startet erst, wenn Sie auf „Gespräch mit Lena starten“ klicken. Vorher wird
               keine Verbindung zu ElevenLabs aufgebaut und es werden keine Daten an ElevenLabs
               übertragen. Die dafür nötige Programmbibliothek liefern wir von unserem eigenen Server
-              aus. Nach dem Klick fragt Ihr Browser, ob die Seite Ihr Mikrofon nutzen darf. Erst
-              wenn Sie das erlauben, beginnt das Gespräch.
+              aus; damit die Demo schnell startet, lädt Ihr Browser sie bereits von unserem Server,
+              sobald der Demo-Bereich in Sichtweite kommt. Nach dem Klick baut Ihr Browser die
+              Verbindung zu ElevenLabs auf und fragt gleichzeitig, ob die Seite Ihr Mikrofon nutzen
+              darf. Ihre Stimme wird erst übertragen, wenn Sie das erlauben. Lehnen Sie ab, wird die
+              Verbindung sofort wieder getrennt.
             </LegalP>
             <LegalP>
               Während des Gesprächs werden folgende Daten an ElevenLabs übertragen und dort

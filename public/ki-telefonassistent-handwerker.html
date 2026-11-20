@@ -738,6 +738,23 @@
   @media(prefers-reduced-motion:reduce){.lena .lena-orb,.lena .lena-orb span{animation:none!important}}
   .lena .btn-primary{background:linear-gradient(135deg,var(--lena),#2f7cf0);--ma:var(--lena)}
   .lena-start{min-height:52px}
+  /* LENA-TEMPO-2026-11-20: sofortiges Feedback beim Klick, Sprech-Animation */
+  .lena-start[data-verbinde]{opacity:1;cursor:progress;background:linear-gradient(135deg,#2f6fd6,#1d4ed8)}
+  .lena-start .lena-punkt{display:none;width:10px;height:10px;border-radius:50%;background:#fff;flex:none;animation:lena-punkt 1s ease-in-out infinite}
+  .lena-start[data-verbinde] .lena-punkt{display:inline-block}
+  .lena-start[data-verbinde] .ma-i{display:none}
+  @keyframes lena-punkt{0%,100%{transform:scale(.7);opacity:.55;box-shadow:0 0 0 0 rgba(255,255,255,.55)}50%{transform:scale(1);opacity:1;box-shadow:0 0 0 7px rgba(255,255,255,0)}}
+  .lena-wellen{display:none;align-items:center;gap:3px;height:18px;margin-left:auto}
+  .lena-wellen i{display:block;width:3px;height:100%;border-radius:2px;background:var(--lena);transform-origin:center;transform:scaleY(.25)}
+  .lena[data-state=speaking] .lena-wellen{display:flex}
+  .lena[data-state=speaking] .lena-wellen i{animation:lena-welle .8s ease-in-out infinite}
+  .lena[data-state=speaking] .lena-wellen i:nth-child(2){animation-delay:.12s}
+  .lena[data-state=speaking] .lena-wellen i:nth-child(3){animation-delay:.24s}
+  .lena[data-state=speaking] .lena-wellen i:nth-child(4){animation-delay:.36s}
+  @keyframes lena-welle{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+  .lena[data-state=connecting] .lena-orb{animation:lena-atmen 1.4s ease-in-out infinite}
+  @keyframes lena-atmen{50%{transform:scale(.94);filter:brightness(1.15)}}
+  @media(prefers-reduced-motion:reduce){.lena-start .lena-punkt,.lena-wellen i{animation:none!important}.lena-wellen i{transform:scaleY(.6)}}
   .lena-danach{display:grid;gap:10px;padding:14px;border-radius:14px;background:rgba(90,162,255,.10);border:1px solid rgba(90,162,255,.32)}
   .lena-danach p{color:#e6eefb;font-size:.95rem;line-height:1.45}
   .lena-danach .lena-klein{font-size:.82rem;color:#a9b8cf;text-align:center}
@@ -871,8 +888,9 @@
           <p class="lena-tel-hinweis">Spielen Sie einen Kunden und erleben Sie, wie Lena Ihre Anrufe vorsortiert. Dauert etwa eine Minute.</p>
         </div>
       </div>
-      <!-- Sprach-Demo. Vor dem Klick wird nichts von ElevenLabs geladen. Erst der Klick laedt /lena/lena-sdk.js
-           (selbst gehostet, @elevenlabs/client) und baut die Verbindung zur Demo-Assistentin auf. -->
+      <!-- Sprach-Demo. Vor dem Klick wird keine Verbindung zu ElevenLabs aufgebaut. /lena/lena-sdk.js
+           (selbst gehostet, @elevenlabs/client) wird vom eigenen Server vorgeladen, sobald dieser Bereich
+           in Sichtweite kommt. Erst der Klick verbindet mit der Demo-Assistentin. -->
       <div class="lena" data-lena data-agent="agent_5201m70t65x6fph9ckyxvmtxg2m3" data-state="">
         <span class="lena-weg">Oder im Browser testen</span>
         <div class="lena-kopf">
@@ -881,8 +899,9 @@
             <p class="lena-name">Lena</p>
             <p class="lena-status" data-lena-status role="status" aria-live="polite">Bereit für Ihr Testgespräch</p>
           </div>
+          <span class="lena-wellen" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
         </div>
-        <button type="button" class="btn btn-primary btn-block lena-start" data-lena-start><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg> <span data-lena-label>Gespräch mit Lena starten</span></button>
+        <button type="button" class="btn btn-primary btn-block lena-start" data-lena-start><svg class="ma-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg> <span class="lena-punkt" aria-hidden="true"></span><span data-lena-label>Gespräch mit Lena starten</span></button>
         <button type="button" class="btn btn-secondary btn-block" data-lena-stop hidden>Gespräch beenden</button>
         <div class="lena-danach" data-lena-danach hidden>
           <p>Lena für Ihren Betrieb? Im kurzen Termin zeigen wir Ihnen, wie sie in Ihrem Betrieb arbeitet, und richten sie auf Ihr Gewerk ein.</p>
@@ -1375,10 +1394,14 @@
 
 <script>
 (function(){
-  // Live-Demo mit Lena. Datenschutz: Vor dem Klick auf "Gespraech mit Lena starten" wird weder
-  // ein Skript noch eine Verbindung zu ElevenLabs geladen. Das SDK liegt selbst gehostet unter /lena/.
+  // Live-Demo mit Lena. Datenschutz: Vor dem Klick auf "Gespraech mit Lena starten" wird keine
+  // Verbindung zu ElevenLabs aufgebaut. Das SDK liegt selbst gehostet unter /lena/ und wird vom eigenen
+  // Server vorgeladen, sobald der Demo-Bereich in Sichtweite kommt (nur Download, nicht ausgefuehrt).
+  // LENA-TEMPO-2026-11-20: Vorladen, Mikrofon und Verbindung parallel (Patch im SDK), sofortiges Feedback,
+  // ein stiller zweiter Versuch, falls ElevenLabs die Verbindung vor dem Start schliesst.
   var box = document.querySelector("[data-lena]");
   if(!box) return;
+  var SDK = "/lena/lena-sdk.js?v=2";
   var agent = box.getAttribute("data-agent");
   var startBtn = box.querySelector("[data-lena-start]");
   var stopBtn = box.querySelector("[data-lena-stop]");
@@ -1386,20 +1409,68 @@
   var status = box.querySelector("[data-lena-status]");
   var log = box.querySelector("[data-lena-log]");
   var danach = box.querySelector("[data-lena-danach]");
-  var conv = null, laeuft = false, abschied = false;
+  var conv = null, laeuft = false, abschied = false, sdk = null;
+  var messen = /[?&]demo=messen\b/.test(location.search), tKlick = 0, tErstesWort = 0;
   // Sicherheitsnetz: Hat Lena sich verabschiedet und zu Ende gesprochen, wird das Gespraech nach kurzer Pause beendet.
-  var ABSCHIED = /(sch\u00f6nen Tag noch|f\u00fcrs Ausprobieren)/i;
+  var ABSCHIED = /(schönen Tag noch|fürs Ausprobieren)/i;
   // Jeder Besucher kann die Demo einmal nutzen. Merker im lokalen Speicher, ohne Gespraechsinhalt.
+  // Test-Schalter fuer den Inhaber: ?demo=reset (oder das alte ?lena=neu) setzt die Sperre in diesem Browser zurueck.
   var MERKER = "lena-demo";
   function merken(){ try{ localStorage.setItem(MERKER, new Date().toISOString().slice(0,10)); }catch(e){} }
   function schonGenutzt(){ try{ return !!localStorage.getItem(MERKER); }catch(e){ return false; } }
-  try{ if(/[?&]lena=neu\b/.test(location.search)){ localStorage.removeItem(MERKER); } }catch(e){}
+  try{
+    if(/[?&](demo=reset|lena=neu)\b/.test(location.search)){
+      localStorage.removeItem(MERKER);
+      var u = new URL(location.href);
+      u.searchParams.delete("demo"); u.searchParams.delete("lena");
+      if(messen){ u.searchParams.set("demo", "messen"); }
+      history.replaceState(null, "", u.pathname + (u.search || "") + u.hash);
+    }
+  }catch(e){}
+
+  // Vorladen vom eigenen Server, sobald der Demo-Bereich naeher als etwa eine Bildschirmhoehe ist.
+  // modulepreload laedt und kompiliert, fuehrt aber nichts aus. Zu ElevenLabs geht dabei nichts raus,
+  // nur die Namensaufloesung (dns-prefetch) beim eigenen Internetanbieter des Besuchers.
+  var vorgeladen = false, mikroErlaubt = false;
+  function link(rel, href, extra){
+    var l = document.createElement("link"); l.rel = rel; l.href = href;
+    if(extra){ for(var k in extra){ l.setAttribute(k, extra[k]); } }
+    document.head.appendChild(l);
+  }
+  function vorladen(){
+    if(vorgeladen) return; vorgeladen = true;
+    link("modulepreload", SDK);
+    link("dns-prefetch", "//api.elevenlabs.io");
+    // Nur nachsehen, ob das Mikrofon schon erlaubt ist, damit der Hinweis beim Klick stimmt. Fragt nichts ab.
+    try{ navigator.permissions.query({name: "microphone"}).then(function(p){ mikroErlaubt = p.state === "granted"; }, function(){}); }catch(e){}
+    try{
+      // Nur Browser ohne Abtastraten-Einstellung (vor allem Firefox) brauchen den 2-MB-Resampler.
+      if(!navigator.mediaDevices.getSupportedConstraints().sampleRate){ link("prefetch", "/lena/libsamplerate.worklet.js", {as: "script"}); }
+    }catch(e){}
+  }
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(eintraege){
+      for(var i = 0; i < eintraege.length; i++){ if(eintraege[i].isIntersecting){ io.disconnect(); vorladen(); return; } }
+    }, {rootMargin: "100% 0px"});
+    io.observe(box);
+  } else {
+    window.addEventListener("load", vorladen);
+  }
+  // SDK ausfuehren, sobald der Finger auf dem Knopf liegt. Das ist nur eigener Code, er baut keine
+  // Verbindung auf, meldet aber die Audio-Freischaltung fuer iPhones noch innerhalb der Beruehrung an.
+  function sdkLaden(){ vorladen(); if(!sdk){ sdk = import(SDK); sdk.catch(function(){ sdk = null; }); } return sdk; }
+  startBtn.addEventListener("pointerdown", function(){ if(!laeuft && !schonGenutzt()){ sdkLaden(); } });
+
   function gesperrt(text){
     startBtn.hidden = true; stopBtn.hidden = true; danach.hidden = false;
     zeige(text || "Sie haben Lena bereits getestet. Danke fürs Ausprobieren!", "");
   }
   if(schonGenutzt()){ gesperrt(); }
   function zeige(text, zustand){ status.textContent = text; box.setAttribute("data-state", zustand || ""); }
+  function knopfVerbinde(an){
+    if(an){ startBtn.setAttribute("data-verbinde", ""); label.textContent = "Lena wird verbunden …"; startBtn.setAttribute("aria-busy", "true"); }
+    else { startBtn.removeAttribute("data-verbinde"); startBtn.removeAttribute("aria-busy"); }
+  }
   function zeile(rolle, text){
     if(!text) return;
     log.hidden = false;
@@ -1414,6 +1485,7 @@
   }
   function ende(text){
     conv = null; laeuft = false;
+    knopfVerbinde(false);
     stopBtn.hidden = true; startBtn.hidden = false; startBtn.disabled = false;
     label.textContent = "Neues Gespräch starten";
     if(schonGenutzt()){ gesperrt(text || "Gespräch beendet. Danke fürs Ausprobieren!"); return; }
@@ -1427,44 +1499,70 @@
     if(t.indexOf("notfound") > -1){ return "Es wurde kein Mikrofon gefunden. Bitte schließen Sie eines an oder nutzen Sie Ihr Handy."; }
     return "Die Demo konnte gerade nicht starten. Bitte versuchen Sie es noch einmal oder rufen Sie uns an: 0152 02069625.";
   }
+  function sitzung(m){
+    return m.Conversation.startSession({
+      agentId: agent,
+      // Gemessen am 20.11.2026: Websocket bis zum ersten Wort 0,9 bis 1,2 s, WebRTC allein bis zur
+      // Verbindung 1,5 bis 1,9 s. Deshalb bewusst Websocket.
+      connectionType: "websocket",
+      // Das SDK wartet auf Android-Handys sonst pauschal 3 Sekunden. Jetzt laufen 0,8 s parallel zum
+      // Verbindungsaufbau, damit Android den Ton sauber umschalten kann und Lenas erste Silbe nicht fehlt.
+      connectionDelay: { default: 0, android: 800, ios: 0 },
+      libsampleratePath: "/lena/libsamplerate.worklet.js",
+      onConnect: function(){ merken(); danach.hidden = false; knopfVerbinde(false); if(!tErstesWort){ zeige("Lena ist dran. Einen Moment, sie begrüßt Sie gleich.", "connecting"); } },
+      onDisconnect: function(d){
+        if(!laeuft && !conv) return;
+        ende(d && d.reason === "error" ? "Die Verbindung wurde unterbrochen. Bitte starten Sie das Gespräch neu." : null);
+      },
+      onError: function(msg){ if(window.console) console.warn("Lena:", msg); },
+      onMessage: function(p){
+        var rolle = p.role || (p.source === "ai" ? "agent" : "user");
+        zeile(rolle, p.message);
+        if(rolle === "agent" && ABSCHIED.test(p.message || "")){ abschied = true; }
+      },
+      onModeChange: function(p){
+        // Lenas erstes Wort kann schon kommen, bevor startSession zurueckkehrt. Deshalb nicht auf conv warten.
+        if(!laeuft) return;
+        if(p.mode === "speaking" && !tErstesWort){
+          tErstesWort = Math.round(performance.now() - tKlick);
+          if(window.console) console.info("Lena: erstes Wort nach " + tErstesWort + " ms");
+        }
+        var text = p.mode === "speaking" ? "Lena spricht …" : "Lena hört zu. Sprechen Sie einfach.";
+        if(messen && tErstesWort){ text += " (erstes Wort nach " + (tErstesWort / 1000).toFixed(2).replace(".", ",") + " s)"; }
+        zeige(text, p.mode);
+        if(abschied && conv && p.mode === "listening"){
+          var c = conv;
+          setTimeout(function(){ if(c && conv === c){ Promise.resolve(c.endSession()).catch(function(){}).then(function(){ ende("Gespräch beendet. Danke fürs Ausprobieren!"); }); } }, 1500);
+        }
+      }
+    });
+  }
+  // ElevenLabs schliesst die Verbindung gelegentlich, bevor das Gespraech steht (am 20.11.2026 bei
+  // einem von vier Testlaeufen). Dann einmal still neu verbinden statt eine Fehlermeldung zu zeigen.
+  function frueherAbbruch(e){ return !!(e && /before session could be established|socket error/i.test(e.message || "")); }
   startBtn.addEventListener("click", function(){
     if(laeuft || schonGenutzt()) return;
+    tKlick = performance.now(); tErstesWort = 0;
     laeuft = true; abschied = false;
     startBtn.disabled = true;
+    knopfVerbinde(true);
     log.innerHTML = ""; log.hidden = true;
-    zeige("Verbindung wird aufgebaut …", "connecting");
+    zeige(mikroErlaubt ? "Einen Moment, Lena nimmt ab." : "Bitte erlauben Sie gleich das Mikrofon.", "connecting");
     if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !window.isSecureContext){
       ende("Ihr Browser erlaubt hier keinen Mikrofonzugriff. Bitte nutzen Sie einen aktuellen Browser.");
       return;
     }
-    import("/lena/lena-sdk.js?v=1").then(function(m){
-      return m.Conversation.startSession({
-        agentId: agent,
-        connectionType: "websocket",
-        libsampleratePath: "/lena/libsamplerate.worklet.js",
-        onConnect: function(){ merken(); danach.hidden = false; zeige("Lena ist dran. Sprechen Sie einfach.", "listening"); },
-        onDisconnect: function(d){
-          if(!laeuft && !conv) return;
-          ende(d && d.reason === "error" ? "Die Verbindung wurde unterbrochen. Bitte starten Sie das Gespräch neu." : null);
-        },
-        onError: function(msg){ if(window.console) console.warn("Lena:", msg); },
-        onMessage: function(p){
-          var rolle = p.role || (p.source === "ai" ? "agent" : "user");
-          zeile(rolle, p.message);
-          if(rolle === "agent" && ABSCHIED.test(p.message || "")){ abschied = true; }
-        },
-        onModeChange: function(p){
-          if(!conv) return;
-          zeige(p.mode === "speaking" ? "Lena spricht …" : "Lena hört zu. Sprechen Sie einfach.", p.mode);
-          if(abschied && p.mode === "listening"){
-            var c = conv;
-            setTimeout(function(){ if(c && conv === c){ Promise.resolve(c.endSession()).catch(function(){}).then(function(){ ende("Gespräch beendet. Danke fürs Ausprobieren!"); }); } }, 1500);
-          }
-        }
+    sdkLaden().then(function(m){
+      return sitzung(m).catch(function(e){
+        if(!frueherAbbruch(e) || !laeuft) throw e;
+        return sitzung(m);
       });
     }).then(function(c){
+      if(!laeuft){ Promise.resolve(c.endSession()).catch(function(){}); return; }
       conv = c;
+      knopfVerbinde(false);
       startBtn.hidden = true; stopBtn.hidden = false;
+      if(box.getAttribute("data-state") !== "speaking"){ zeige("Lena ist dran. Einen Moment, sie begrüßt Sie gleich.", "connecting"); }
     }).catch(function(e){
       if(window.console) console.warn("Lena:", e);
       ende(fehlertext(e));
