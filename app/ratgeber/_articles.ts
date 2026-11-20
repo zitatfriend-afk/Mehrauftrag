@@ -2875,6 +2875,7 @@ export const ARTICLES: Article[] = [
           "Bei einem Telefonservice nehmen Menschen Ihre Anrufe an, meist zu vereinbarten Zeiten. Anrufer sprechen mit einer echten Person, das schafft Vertrauen. Allerdings kennen die Mitarbeiter Ihr Gewerk nur aus der Einweisung. Rückfragen zu Technik oder Umfang landen dann doch bei Ihnen.",
           "Gut geeignet ist ein Telefonservice für Betriebe, die viele allgemeine Anrufe haben und Wert auf eine menschliche Stimme legen.",
         ],
+        link: { label: "Telefonservice für Handwerker: Büroservice, Mailbox oder KI im Vergleich", href: "/telefonservice-handwerker" },
       },
       {
         heading: "Eigene Bürokraft",
