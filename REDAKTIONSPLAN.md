@@ -50,15 +50,41 @@ Die ursprünglichen Nummern 7 und 8 wurden vor dem Schreiben gegengeprüft und g
 
 Dritter Inhalt im November nur, wenn die Messung am 16.11. dafür spricht. Kandidat mit belegter Nachfrage: `website erstellen lassen <Ort>` (zusammen 371 Impressionen in 90 Tagen, verteilt auf Startseite und Stadtseiten). Keine neuen Stadtseiten.
 
-## Monat 4: Dezember 2026. Metall und Schweißen vertiefen.
+## Monat 3 plus: November 2026. Auftrags-Filter-Offensive, nachgetragen am 24.11.2026.
 
-Der stärkste Bereich der Domain. `/webseite-fuer-schweisser` ist die einzige Seite mit einer Klickrate über 3 Prozent.
+Außerhalb des ursprünglichen Plans entstanden, für die neue Dienstleistung Auftrags-Filter (KI-Telefonassistentin für Handwerksbetriebe). Nachgetragen, damit der Plan der Wirklichkeit entspricht. Startwerte aus der Search Console, 28 Tage bis 22.11.2026 (Impressionen / Position, Klicks jeweils 0).
 
-| # | Arbeitstitel | Zielkeyword | Intention | Verlinkt auf |
+| Live seit | Seite | Art | Startwert | Index 24.11.2026 |
 |---|---|---|---|---|
-| 9 | Wo Aufträge im Metallbau wirklich vergeben werden | `metallbau aufträge` (22 / 26,1), `auftragsvergabe metallbau` (3 / 23,3), `aufträge metallverarbeitung` (4 / 29,5) | informativ | `/webseite-fuer-schweisser` |
-| 10 | Lohnschweißen: wie mobile Schweißer an Industrieaufträge kommen | `lohnschweißer aufträge` (2 / 22,5), `aufträge schweißarbeiten` (5 / 14,6), `ausschreibung schweißarbeiten` (1 / 24,0) | informativ | `/webseite-fuer-schweisser` |
-| 11 | Aufträge für Elektriker: woher die Anfragen heute kommen | `elektriker aufträge frankfurt` (2 / 22,5) | informativ | `/elektriker` |
+| 05.11.2026 | `/ki-telefonassistent-handwerker` | Geldseite | 134 / 34,1 | indexiert |
+| 05.11.2026 | `/auftrags-filter` | Geldseite | 15 / 6,0 | indexiert |
+| 11.11.2026 | `/ki-telefonassistent-sanitaer-heizung` | Gewerke-Seite | 41 / 19,4 | indexiert |
+| 11.11.2026 | `/ki-telefonassistent-elektriker` | Gewerke-Seite | 5 / 19,4 | indexiert |
+| 11.11.2026 | `/ki-telefonassistent-dachdecker` | Gewerke-Seite | 8 / 5,8 | indexiert |
+| 11.11.2026 | `/ki-telefonassistent-maler` | Gewerke-Seite | 6 / 5,7 | indexiert |
+| 11.11.2026 | `/ratgeber/handwerker-anfragen-filtern` | Ratgeber | 27 / 8,7 | indexiert |
+| 11.11.2026 | `/ratgeber/ki-telefonassistent-oder-anrufbeantworter` | Ratgeber | 11 / 47,7 | indexiert |
+| 11.11.2026 | `/ratgeber/verpasste-anrufe-handwerk` | Ratgeber | 33 / 8,1 | indexiert |
+| 20.11.2026 | `/telefonservice-handwerker` | Vergleichsseite | noch keine Daten | Gefunden, nicht indexiert, Antrag 24.11.2026 |
+
+## Monat 3 plus, Nachtrag: zwei Überarbeitungen am 24.11.2026
+
+Nach dem großen Vergleich vom 24.11. (28 Tage bis 22.11.2026) die zwei Bestandsartikel mit der größten Lücke zwischen Sichtbarkeit und Klicks überarbeitet. Beides Überarbeitungen, keine neuen URLs, also kein Kannibalisierungsrisiko.
+
+| # | Seite | Ausgangswert 28 Tage bis 22.11.2026 | Was geändert wurde |
+|---|---|---|---|
+| A | `/ratgeber/website-nicht-bei-google-gefunden` | 2.908 Impressionen, Position 21,3, 1 Klick. `bei google gefunden werden` 334 / 20,9, `warum findet google meine homepage nicht` 233 / 20,3, `website bei google finden` 197 / 25,6 | Abschnitte „Neue Website bei Google sichtbar machen“ und „Wenn die Website plötzlich nicht mehr gefunden wird“, zwei Überschriften auf gesuchte Fragen umgestellt, zwei neue FAQ, neue Description |
+| B | `/ratgeber/kunden-gewinnen-handwerk` | 654 Impressionen, Position 29,9, 0 Klicks. `kundengewinnung handwerk` 118 / 41,1, `kundenakquise handwerk` 56 / 40,7, `neukundengewinnung handwerk` 46 / 57,3 | Neuer Title und H1 „Kundengewinnung im Handwerk“, sechs neue Abschnitte (Wege im Überblick, Kundenakquise, Leads kaufen oder selbst generieren, Wunschkunden, bekannter werden, Kundenbindung), vier neue FAQ, Angebotsbox mit Website-Check |
+
+## Monat 4: Dezember 2026. Neu zugeschnitten am 24.11.2026.
+
+Der alte Zuschnitt ist überholt. Nummer 9 (Metallbau-Aufträge) existiert seit 11.08.2026 als `/ratgeber/auftraege-schweisser-metallbau`, Nummer 10 (Lohnschweißen) seit 19.09.2026 als `/ratgeber/lohnschweissen-industrieauftraege`, das ist die klickstärkste Seite der Domain. Neue Texte dazu würden die eigenen besten Seiten kannibalisieren. Nummer 11 sollte auf `/elektriker` verlinken, das seit 06.10.2026 per 301 weiterleitet. Deshalb Überarbeitungen statt neuer URLs:
+
+| # | Arbeitstitel | Beleg (28 Tage bis 22.11.2026) | Art | Verlinkt auf |
+|---|---|---|---|---|
+| 9 | **Überarbeitung** `/ratgeber/auftraege-schweisser-metallbau`: Ausschreibungen im Stahl- und Metallbau vertiefen | `stahlbau ausschreibung` 70 / 33,9, `metallbau ausschreibung` 24 / 32,0, `ausschreibungen metallbau` 29 / 15,2. Seite 990 Impressionen, Position 14,8, 4 Klicks | Überarbeitung | `/webseite-fuer-schweisser` |
+| 10 | **Überarbeitung** `/ratgeber/lohnschweissen-industrieauftraege`: Suchbegriffe am 01.12. prüfen, Klickrate verbessern | Seite 830 Impressionen, Position 7,3, 13 Klicks | Überarbeitung | `/webseite-fuer-schweisser` |
+| 11 | Offen, wird nach der Messung am 01.12. aus den Daten bestimmt. Kandidat: `/website-bringt-keine-anfragen`, falls die Ursache für den Rückgang belegbar wird | „website bringt keine anfragen“ 48,9, „webseite bringt keine kunden“ 50,5, Seite 442 / 24,9 | offen | offen |
 
 ## Monat 5: Januar 2027. Hausmeisterservice und Gebäudereinigung.
 

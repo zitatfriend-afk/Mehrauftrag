@@ -160,18 +160,71 @@ export const ARTICLES: Article[] = [
   {
     slug: "kunden-gewinnen-handwerk",
     category: "Branchen",
-    title: "Kunden gewinnen als Handwerksbetrieb: der Praxis-Leitfaden",
-    metaTitle: "Kunden gewinnen als Handwerker: Leitfaden | Ratgeber",
+    title: "Kundengewinnung im Handwerk: wie Handwerksbetriebe neue Kunden gewinnen",
+    metaTitle: "Kundengewinnung im Handwerk: so gewinnen Sie neue Kunden",
     description:
-      "Wie Handwerksbetriebe online neue Kunden gewinnen: Website, lokale Google-Sichtbarkeit, Bewertungen und die richtige Anfrage-Strecke.",
+      "Kundengewinnung und Kundenakquise im Handwerk: welche Wege neue Kunden bringen, ob sich gekaufte Leads lohnen und wie keine Anfrage verloren geht.",
     datePublished: "2026-08-02",
-    dateModified: "2026-11-11",
-    readingTime: "7 Min.",
+    dateModified: "2026-11-24",
+    readingTime: "11 Min.",
     intro: [
       "Viele Handwerksbetriebe leben seit Jahren von Empfehlungen und haben nie Werbung gebraucht. Trotzdem verändert sich der Markt: Auch wer eine Empfehlung bekommt, googelt heute erst einmal den Namen, bevor er anruft. Findet er dann nichts oder nur einen veralteten Auftritt, entsteht Zweifel, und der Anruf bleibt aus.",
-      "Gleichzeitig suchen immer mehr Menschen direkt online nach einem Betrieb in ihrer Nähe. Dieser Leitfaden zeigt, wie ein Handwerksbetrieb diese Anfragen zuverlässig abholt, ohne dabei die Stammkundschaft aus dem Blick zu verlieren.",
+      "Gleichzeitig suchen immer mehr Menschen direkt online nach einem Betrieb in ihrer Nähe. Dieser Leitfaden zeigt die Wege der Kundengewinnung im Handwerk im Überblick, von der Empfehlung über Google bis zur aktiven Kundenakquise bei Hausverwaltungen und Bauunternehmen, und wie ein Betrieb die Anfragen zuverlässig abholt, ohne dabei die Stammkundschaft aus dem Blick zu verlieren.",
     ],
     sections: [
+      {
+        heading: "Kundengewinnung im Handwerk: die Wege im Überblick",
+        paragraphs: [
+          "Neue Kunden kommen im Handwerk über wenige, immer gleiche Wege. Entscheidend ist nicht, möglichst viele davon gleichzeitig zu bespielen, sondern die zwei oder drei zu pflegen, die zu Ihrem Betrieb und zu Ihren Wunschaufträgen passen.",
+          "Ein Betrieb, der Bäder für Privatkunden saniert, gewinnt seine Kunden anders als einer, der für Generalunternehmer im Trockenbau arbeitet. Deshalb lohnt es sich, vorher klar zu sagen, wer der ideale Auftraggeber ist und wo dieser Mensch sucht, wenn er einen Betrieb braucht.",
+        ],
+        bullets: [
+          "Empfehlungen und Stammkunden, gezielt angestoßen statt dem Zufall überlassen",
+          "Das Google-Unternehmensprofil für Suchen in der Nähe",
+          "Eine Website mit einer eigenen Seite für jede wichtige Leistung",
+          "Bewertungen, die nach jedem Auftrag eingesammelt werden",
+          "Gewerbliche Auftraggeber wie Hausverwaltungen, Bauträger und Generalunternehmer",
+          "Vermittlungsportale und bezahlte Werbung als Ergänzung, nicht als Fundament",
+        ],
+      },
+      {
+        heading: "Kundenakquise im Handwerk: aktiv werden statt abwarten",
+        paragraphs: [
+          "Kundenakquise heißt, nicht nur auf Anfragen zu warten, sondern selbst auf mögliche Auftraggeber zuzugehen. Bei Privatkunden ist das selten sinnvoll, bei gewerblichen Auftraggebern dagegen oft der direkteste Weg zu planbaren Aufträgen.",
+          "Hausverwaltungen, Wohnungsbaugesellschaften, Bauträger und Generalunternehmer brauchen laufend verlässliche Betriebe. Ein kurzer Anruf beim richtigen Ansprechpartner, eine Vorstellung per E-Mail mit Leistungen, Einsatzgebiet und Referenzen und ein freundliches Nachfassen nach einigen Wochen bringen hier mehr als jede Anzeige. Wichtig ist, dass der Angesprochene danach auf Ihrer Website findet, was er prüft: Gewerke, Einsatzgebiet, Erreichbarkeit und Beispiele echter Arbeit.",
+          "Auch auf der Baustelle selbst passiert Akquise. Ein sauberes Bauschild, ein beschriftetes Fahrzeug und ein ordentlicher Auftritt sorgen dafür, dass Nachbarn fragen, wer da arbeitet. Wer Ihren Namen dann googelt, sollte sofort fündig werden.",
+        ],
+      },
+      {
+        heading: "Leads für Handwerker kaufen oder selbst generieren?",
+        paragraphs: [
+          "Vermittlungsportale versprechen Anfragen auf Knopfdruck. Bezahlt wird je nach Portal pro Kontakt, pro Auftrag oder über ein Abo, und dieselbe Anfrage geht oft an mehrere Betriebe gleichzeitig. Den Auftrag bekommt dann häufig, wer am schnellsten anruft oder am günstigsten anbietet.",
+          "Zum Einstieg oder um ruhige Wochen aufzufüllen, kann das sinnvoll sein. Als einzige Quelle macht es abhängig, weil die Kosten mit jeder Anfrage weiterlaufen und nichts bleibt, sobald Sie aufhören zu zahlen.",
+          "Selbst generierte Anfragen über die eigene Website und das Google-Profil kommen dagegen nur zu Ihnen. Sie brauchen länger, bis sie fließen. Dafür kostet die einzelne Anfrage später nichts extra, und der Anrufer hat sich schon für Ihren Betrieb entschieden, bevor er wählt.",
+        ],
+        link: { label: "Website für Handwerker erstellen lassen: Aufbau, Ablauf und Preis", href: "/website-fuer-handwerker" },
+      },
+      {
+        heading: "Wunschkunden statt Preisjäger",
+        paragraphs: [
+          "Mehr Anfragen sind nicht automatisch besser. Wer jede Anfrage annimmt, verbringt viel Zeit mit Besichtigungen und Angeboten für Aufträge, die nie zustande kommen oder sich nicht rechnen.",
+          "Wunschkunden gewinnen Sie, indem Sie klar sagen, was Sie machen und was nicht. Eine Website, die Ihre Spezialgebiete, Ihr Einsatzgebiet und typische Projekte zeigt, zieht genau die Menschen an, die so etwas suchen, und hält die fern, die nur den niedrigsten Preis wollen. Zeigen Sie Qualität mit echten Fotos und Beispielen statt mit Rabatten.",
+        ],
+      },
+      {
+        heading: "Den Handwerksbetrieb bekannter machen",
+        paragraphs: [
+          "Bekanntheit entsteht im Handwerk vor allem vor Ort und über Wiederholung. Wer in seiner Gegend immer wieder auftaucht, auf Fahrzeugen, auf Bauschildern, im Google-Profil und mit guten Bewertungen, wird zu dem Betrieb, an den man zuerst denkt.",
+          "Online heißt das: ein vollständiges Google-Unternehmensprofil mit aktuellen Fotos, regelmäßig neue Bewertungen und Einträge in den wichtigsten Branchenverzeichnissen, überall mit demselben Namen, derselben Adresse und derselben Telefonnummer.",
+        ],
+      },
+      {
+        heading: "Kundenbindung: Stammkunden bringen die nächsten Aufträge",
+        paragraphs: [
+          "Ein zufriedener Kunde ruft wieder an und empfiehlt Sie weiter, aber nur, wenn er Sie nicht vergisst. Kundenbindung im Handwerk ist deshalb vor allem Erreichbarkeit und Erinnerung.",
+          "Bieten Sie bei passenden Gewerken Wartung oder regelmäßige Prüfungen an, melden Sie sich nach einem größeren Auftrag einige Wochen später kurz, ob alles passt, und bitten Sie bei dieser Gelegenheit um eine Bewertung oder eine Empfehlung. Wer so arbeitet, braucht weniger neue Kunden, weil die bestehenden bleiben.",
+        ],
+      },
       {
         heading: "In der Nähe gefunden werden: lokale Sichtbarkeit",
         paragraphs: [
@@ -223,6 +276,22 @@ export const ARTICLES: Article[] = [
     ],
     faqs: [
       {
+        q: "Was gehört zur Kundengewinnung im Handwerk?",
+        a: "Alle Wege, über die neue Auftraggeber auf Ihren Betrieb aufmerksam werden und Kontakt aufnehmen: Empfehlungen, das Google-Unternehmensprofil, die eigene Website, Bewertungen, die aktive Ansprache gewerblicher Auftraggeber sowie Portale und Werbung. Bei den meisten Betrieben tragen zwei oder drei dieser Wege den Großteil der Aufträge.",
+      },
+      {
+        q: "Wie funktioniert Kundenakquise für Handwerker?",
+        a: "Am besten bei gewerblichen Auftraggebern wie Hausverwaltungen, Bauträgern und Generalunternehmern: den richtigen Ansprechpartner finden, sich kurz mit Leistungen, Einsatzgebiet und Referenzen vorstellen und nach einigen Wochen freundlich nachfassen. Die Website muss dabei zeigen, was der Angesprochene prüft.",
+      },
+      {
+        q: "Lohnt es sich, Leads für Handwerker zu kaufen?",
+        a: "Als Ergänzung in ruhigen Phasen kann es sich lohnen, als einzige Quelle eher nicht. Gekaufte Anfragen gehen oft an mehrere Betriebe gleichzeitig, und die Kosten laufen weiter, solange Sie das Portal nutzen. Anfragen über die eigene Website und das Google-Profil kommen nur zu Ihnen.",
+      },
+      {
+        q: "Wie mache ich meinen Handwerksbetrieb bekannter?",
+        a: "Durch Wiederholung in Ihrer Gegend: beschriftete Fahrzeuge, Bauschilder, ein gepflegtes Google-Profil mit aktuellen Fotos, regelmäßige Bewertungen und einheitliche Einträge in Branchenverzeichnissen. Wer Ihren Namen dann googelt, sollte eine aktuelle Website finden.",
+      },
+      {
         q: "Brauche ich als Handwerker überhaupt eine Website, wenn ich von Empfehlungen lebe?",
         a: "Ja, gerade dann. Wer eine Empfehlung bekommt, prüft Sie heute trotzdem online, bevor er anruft. Ohne aktuellen Auftritt entsteht Zweifel. Eine Website bestätigt die Empfehlung und fängt zusätzlich die vielen Menschen ab, die direkt online nach einem Betrieb suchen.",
       },
@@ -242,6 +311,19 @@ export const ARTICLES: Article[] = [
       { label: "Website für Hausmeisterservice", href: "/webseite-fuer-hausmeisterservice" },
       { label: "Kostenlose Analyse anfordern", href: "/kostenlose-analyse" },
     ],
+    angebot: {
+      titel: "Sie wollen mehr Aufträge über Ihre Website?",
+      text:
+        "Wir sehen uns Ihren Auftritt kostenlos an und sagen Ihnen ehrlich, ob Interessenten Sie finden, ob sie Ihnen vertrauen und ob der Weg zur Anfrage leicht genug ist. Alles läuft aus der Ferne, Sie brauchen nur Ihre Adresse.",
+      punkte: [
+        "Kostenlose und unverbindliche Prüfung Ihres Auftritts",
+        "Abstimmung komplett per Telefon, WhatsApp und Videocall",
+        "Rückmeldung innerhalb von 24 Stunden",
+      ],
+      pruefung: { label: "Website kostenlos prüfen lassen", href: "/analyse/kunden-gewinnen-handwerk" },
+      telefon: true,
+      cta: { label: "Oder gleich einen kostenlosen Entwurf anfordern", href: "/website-fuer-handwerker#anfrage" },
+    },
   },
 
   {
@@ -1896,10 +1978,10 @@ export const ARTICLES: Article[] = [
     title: "Warum wird meine Website bei Google nicht gefunden?",
     metaTitle: "Website wird bei Google nicht gefunden? 9 Gründe und Lösungen",
     description:
-      "Ihre Website erscheint nicht bei Google? Wie Google Seiten findet, neun Gründe zum Selbstprüfen und was in der Search Console zu tun ist.",
+      "Ihre Website wird bei Google nicht gefunden? So prüfen Sie, ob Ihre Seite gelistet ist, neun Gründe zum Selbstprüfen und wie Sie bei Google gefunden werden.",
     datePublished: "2026-09-08",
-    dateModified: "2026-10-19",
-    readingTime: "10 Min.",
+    dateModified: "2026-11-24",
+    readingTime: "12 Min.",
     intro: [
       "Die Seite ist fertig, sie ist online, sie sieht gut aus. Sie tippen Ihre Leistung und Ihren Ort bei Google ein und finden alles Mögliche, nur sich selbst nicht.",
       "Das ist einer der häufigsten Anrufe, die wir bekommen, und in den meisten Fällen steckt kein großes Rätsel dahinter, sondern einer von wenigen konkreten Gründen. Dieser Ratgeber geht sie der Reihe nach durch, jeweils mit einer Prüfung, die Sie selbst machen können.",
@@ -1918,7 +2000,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        heading: "Zuerst die eine Prüfung, die alles andere entscheidet",
+        heading: "Ist meine Seite bei Google gelistet? Die eine Prüfung zuerst",
         paragraphs: [
           "Bevor Sie irgendetwas anderes tun, klären Sie, ob Google Ihre Seite überhaupt kennt. Tippen Sie dazu in die Suche site:ihre-adresse.de, also das Wort site, einen Doppelpunkt, dann Ihre Adresse, ohne Leerzeichen dazwischen.",
           "Erscheinen Ergebnisse, kennt Google Ihre Seite. Ihr Problem ist dann nicht die Aufnahme, sondern die Platzierung, und Sie springen direkt zu den Gründen fünf bis neun. Erscheint nichts, hat Google Ihre Seite nicht im Verzeichnis, und es liegt an einem der Gründe eins bis vier. Das sind die technischen.",
@@ -2020,7 +2102,22 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        heading: "Was die Meldungen in der Search Console bedeuten",
+        heading: "Neue Website bei Google sichtbar machen: so wird sie gefunden",
+        paragraphs: [
+          "Eine neue Website wird bei Google gefunden, wenn drei Dinge zusammenkommen: Google erfährt von ihr, kann sie ohne Hindernis lesen und findet auf ihr Inhalte, die zu dem passen, was Menschen eintippen. Ein Eintragen wie in ein Telefonbuch gibt es nicht. Die Anmeldung in der Search Console kommt dem am nächsten, ersetzt aber die anderen beiden Punkte nicht.",
+          "Diese Reihenfolge hat sich bewährt:",
+        ],
+        bullets: [
+          "Search Console einrichten und die Sitemap einreichen",
+          "Startseite und wichtigste Leistungsseiten über die URL-Prüfung zur Indexierung anmelden",
+          "Jede Unterseite aus mindestens einer anderen Seite im Text verlinken, nicht nur aus dem Menü",
+          "Für jede Leistung eine eigene Seite, mit Leistung und Ort in Überschrift und Seitentitel",
+          "Das Google-Unternehmensprofil anlegen und mit der Website verknüpfen",
+          "Einige Wochen später in der Search Console unter Leistung nachsehen, bei welchen Suchbegriffen die Seite schon erscheint",
+        ],
+      },
+      {
+        heading: "Warum werden Seiten nicht indexiert? Die Meldungen in der Search Console",
         paragraphs: [
           "Die Gründe im Bericht klingen technisch, sagen aber Klares. Gefunden, zurzeit nicht indexiert heißt: Google kennt die Adresse, hat die Seite aber noch nicht abgerufen. Gecrawlt, zurzeit nicht indexiert heißt: Google hat die Seite gelesen und vorerst nicht aufgenommen, meist weil sie zu wenig Eigenes bietet oder einer anderen Seite zu ähnlich ist. Durch noindex-Tag ausgeschlossen heißt: Die Seite verbietet die Aufnahme selbst, siehe Grund zwei.",
           "Ein Beispiel aus unserer eigenen Arbeit: Als wir neue Unterseiten nur über eine einzige Übersichtsseite verlinkt hatten, meldete die URL-Prüfung, die Adresse sei Google nicht bekannt, obwohl der Link sauber im Quelltext stand. Erst als jede neue Seite zusätzlich aus mehreren bestehenden Seiten verlinkt war, wurde sie zuverlässig gefunden. Eine neue Seite braucht deshalb Links aus Seiten, die Google schon kennt, nicht nur einen Eintrag in der Sitemap.",
@@ -2037,6 +2134,14 @@ export const ARTICLES: Article[] = [
           { label: "Was sich mit der KI-Suche für Betriebe ändert", href: "/ratgeber/ki-suche-google-2026" },
           { label: "Wie Sie bei der lokalen Suche und in Google Maps sichtbar werden", href: "/ratgeber/lokale-seo-google-maps" },
         ],
+      },
+      {
+        heading: "Wenn die Website plötzlich nicht mehr gefunden wird",
+        paragraphs: [
+          "War Ihre Seite früher gut zu finden und ist jetzt verschwunden, ist das ein anderer Fall als bei einer neuen Website. Meist steckt eine Änderung dahinter: ein Relaunch, bei dem alte Adressen ohne Weiterleitung weggefallen sind, ein Umzug zu einem anderen Anbieter, ein abgelaufenes Sicherheitszertifikat oder ein noindex, das bei Arbeiten an der Seite gesetzt und nicht wieder entfernt wurde.",
+          "Gehen Sie so vor: zuerst die site-Abfrage, dann in der Search Console unter Indexierung und Seiten nachsehen, ob die Zahl der indexierten Seiten gefallen ist und mit welchem Grund. Unter Sicherheit und manuelle Maßnahmen sehen Sie außerdem, ob Google selbst ein Problem meldet. Erst wenn all das unauffällig ist, liegt es an der Platzierung, etwa weil Mitbewerber ihre Seiten verbessert haben.",
+        ],
+        link: { label: "Website-Relaunch, ohne die Platzierungen zu verlieren", href: "/website-relaunch" },
       },
       {
         heading: "Wenn Sie es nicht selbst machen wollen",
@@ -2058,6 +2163,14 @@ export const ARTICLES: Article[] = [
       },
     ],
     faqs: [
+      {
+        q: "Wie werde ich auf Google gefunden?",
+        a: "Indem Google Ihre Seite kennt, sie lesen darf und auf ihr Inhalte findet, die zu Ihren Suchbegriffen passen. Praktisch heißt das: Search Console einrichten, Sitemap einreichen, für jede Leistung eine eigene Seite mit Leistung und Ort anlegen und das Google-Unternehmensprofil pflegen.",
+      },
+      {
+        q: "Wie prüfe ich, ob meine Seite bei Google gelistet ist?",
+        a: "Geben Sie in die Google-Suche site: gefolgt von Ihrer Adresse ein, ohne Leerzeichen. Jedes Ergebnis ist eine Seite, die Google aufgenommen hat. Genauer zeigt es die URL-Prüfung in der Search Console, dort für jede einzelne Adresse mit Datum des letzten Abrufs.",
+      },
       {
         q: "Wie wird eine Webseite bei Google gefunden?",
         a:
